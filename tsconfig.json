@@ -20,7 +20,10 @@
     "rootDir": "src"
   },
   "include": [
-    "src/*"
+    "src/*",
+    "src/core-schema/*.ts",
+    "src/core-schema/*.json",
+    "src/core-schema/**/*.json",
   ],
   "exclude": [
     "node_modules",

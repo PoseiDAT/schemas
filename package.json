@@ -6,7 +6,8 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "build:compile": "tsc -b --verbose",
-    "build": "npm-run-all build:compile",
+    "build:copy-schema": "cp -r src/core-schema lib && rm lib/core-schema/index.ts",
+    "build": "npm-run-all build:copy-schema build:compile",
     "clean": "rimraf lib",
     "lint": "eslint .",
     "rebuild": "npm-run-all clean build:compile",
