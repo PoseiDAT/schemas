@@ -2,8 +2,6 @@ import Ajv from 'ajv';
 import AjvKeywords from 'ajv-keywords';
 import { JSONSchema7 } from 'json-schema';
 
-import * as jsonSchemaDraft07 from 'ajv/lib/refs/json-schema-draft-07.json';
-
 const validator = new Ajv({
   $data: true,
   allErrors: true,
@@ -12,10 +10,6 @@ const validator = new Ajv({
 // Extend AJV with extra keyword validation
 //
 AjvKeywords(validator);
-
-// Add the Draft-07 schema to the validator
-//
-validator.addMetaSchema(jsonSchemaDraft07);
 
 /**
  * Validate a single object with a provided schema
