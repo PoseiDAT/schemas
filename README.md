@@ -75,6 +75,14 @@ These will evolve as the project continues.
 
 This repository is setup to help develop and validate new and existing schemas for PoseiDAT.
 
+If you want to get involved with developing the PoseiDAT schemas you can clone this repository.
+You will need to have  NodeJS v12 installed
+
+```bash
+git clone git@github.com:PoseiDAT/schemas.git
+npm install
+```
+
 The schemas themselves are found in `src/core-schema`.
 The `src/core-schema/index.ts` needs to be updated to export new schemas when they are added.
 The `src/core-schema/types.ts` is generated form the json schemas when doing an `npm run test` or an `npm run build`.
@@ -83,3 +91,8 @@ Should the need arise to only update the typings run `npm run build:typings`
 Please be liberal in adding unit tests in the `test` folder for your schemas and data validation.
 All the code and unit tests are written in TypeScript targeted for NodeJS.
 You can check the line based coverage after running `npm run test` by opening `coverage/lcov-report/index.html` in a web browser.
+
+## Usage
+
+Once the schemas have reached a usable state this repository can be published to NPM for usage in other applications.
+At that time we can also look into exporting the json-schemas through other package manager and for other development languages.
