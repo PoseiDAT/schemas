@@ -1,3 +1,5 @@
+import { v4 } from 'uuid';
+import { IJournal } from '../src/core-schema/types';
 import { Journal } from '../src/index';
 
 describe('Journal', () => {
@@ -7,12 +9,12 @@ describe('Journal', () => {
   });
 
   test('Create an empty Journal', () => {
-    const journal = new Journal;
+    const journal = new Journal({} as IJournal);
     expect(journal).toBeDefined();
   });
 
   test('Validating an empty Journal should fail', () => {
-    const journal = new Journal;
+    const journal = new Journal({} as IJournal);
 
     const validationErrors = journal.validate();
     expect(validationErrors).toBeDefined();
@@ -21,7 +23,23 @@ describe('Journal', () => {
     expect(validationErrors[0].schemaPath).toEqual('#/required');
     expect(validationErrors[1].message).toEqual('should have required property \'vessel\'');
     expect(validationErrors[1].schemaPath).toEqual('#/required');
+  });
 
-    expect(journal).toBeDefined();
+  test('Validating an minimal Journal should succeed', () => {
+    const data: IJournal = {
+      journal_id: v4(),
+      vessel: {
+        name: 'SeaDragon',
+        cfr: 'NLD000000042',
+        flag_state: 'NLD',
+        hull_number: 'Q-42'
+      }
+    }
+
+    const journal = new Journal(data);
+
+    const validationErrors = journal.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
   });
 });

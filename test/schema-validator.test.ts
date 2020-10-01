@@ -1,5 +1,5 @@
 import { JSONSchema7 } from 'json-schema';
-import { validateSchema } from '../src/schema-validator';
+import { validateSchema } from '../src/index';
 
 const minimalSchema: JSONSchema7 = {
   $schema: 'http://json-schema.org/draft-07/schema#',
