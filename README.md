@@ -60,8 +60,22 @@ So even though a new revision can be made the original entry is not modified but
 These will be amended as the project continues.
 
 * Schemas must be a v7 [json-schema](https://json-schema.org)
-* Identifiers should preferably be UUID v4
+* Identifiers should be UUID v4
 * All date times must be in UTC
 * All date time must be RFC3339 formatted strings
+* All schema properties must have descriptions
 * Property descriptions should note their unit of measurement
-* Unit test should exist for every schema
+* Unit test should cover every schema
+
+## Development
+
+This repository is setup to help develop and validate new and existing schemas for PoseiDAT.
+
+The schemas themselves are found in `src/core-schema`.
+The `src/core-schema/index.ts` needs to be updated to export new schemas when they are added.
+The `src/core-schema/types.ts` is generated form the json schemas when doing an `npm run test` or an `npm run build`.
+Should the need arise to only update the typings run `npm run build:typings`
+
+Please be liberal in adding unit tests in the `test` folder for your schemas and data variations.
+All the code and unit tests are written in TypeScript targeted for NodeJS.
+You can check the line based coverage after running `npm run test` by opening `coverage/lcov-report/index.html` in a web browser.
