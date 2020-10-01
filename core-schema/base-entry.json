@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/core-schema/base-entry.json",
+  "title": "BaseEntry",
+  "description": "The shared properties for all entries",
+  "properties": {
+    "journal_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The unique identifier of the journal (UUID v4) this entry belongs to"
+    },
+    "entry_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The unique identifier for the entry (UUID v4)"
+    },
+    "revision": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The revision timestamp of this entry. Should be the time it was created."
+    },
+    "immutable": {
+      "description": "Indicates this entry cannot be replaced with future revisions (default)",
+      "type": "boolean",
+      "default": false
+    }
+ },
+  "required": [
+    "journal_id",
+    "entry_id",
+    "revision",
+    "immutable"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

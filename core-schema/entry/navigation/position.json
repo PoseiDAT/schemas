@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/core-schema/navigation/position.json",
+  "title": "NavigationPosition",
+  "description": "A navigational position journal entry",
+  "properties": {
+    "latitude": {
+      "description": "The latitude of the geographical location",
+      "type": "number"
+    },
+    "longitude": {
+      "description": "The longitude of the geographical location",
+      "type": "number"
+    },
+    "heading": {
+      "description": "The compass heading of the vessel in degrees",
+      "type": "number"
+    },
+    "velocity": {
+      "description": "The velocity of the vessel in meters per second (m/s)",
+      "type": "number"
+    }
+ },
+  "required": [
+    "latitude",
+    "longitude"
+  ],
+  "allOf": [
+    { "$ref": "https://poseidat.org/core-schema/base-entry.json" }
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

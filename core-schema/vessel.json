@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/core-schema/vessel.json",
+  "title": "Vessel",
+  "description": "The vessel information",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The display name for the vessel"
+    },
+    "flag_state": {
+      "type": "string",
+      "description": "The vessels flag state and country to report ERS messages to. Should be a 3 letter ISO code."
+    },
+    "cfr": {
+      "type": "string",
+      "description": "The vessel's Community Fleet Registration number. Fixed format defined by the pattern: \"AAAXXXXXXXXX\" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.). Known as CFR or IR"
+    },
+    "call_sign": {
+      "type": "string",
+      "description": "The vessels international radio call sign (RC)"
+    },
+    "hull_number": {
+      "type": "string",
+      "description": "The vessel's side (hull) registration number. Also known as XR or PLN. May contain dots or dashes"
+    },
+    "gbr_rss": {
+      "type": "string",
+      "description": "GBR ONLY: The vessel's unique identity number as recorded by the UK Registrar of Seamen and Shipping"
+    },
+    "iccat": {
+      "type": "string",
+      "description": "International Commission for the Conservation of Atlantic Tuna identifier"
+    },
+    "gfcm": {
+      "type": "string",
+      "description": "Global Fisheries Council of the Mediterranean identifier"
+    },
+    "uvi": {
+      "type": "string",
+      "description": "Unique Vessel Identifier (IMO number). A number issued by the tuna RFMOs or by ISSF."
+    },
+    "imo_code": {
+      "type": "string",
+      "description": "The unique identification of a vessel according to Lloyds register"
+    },
+    "net_tonnage": {
+      "type": "number",
+      "description": "The net loading capacity of the vessel, expressed in tons"
+    },
+    "gross_tonnage": {
+      "type": "number",
+      "description": "The gross loading capacity of the vessel, expressed in tons"
+    },
+    "registration_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the vessel was registered"
+    },
+    "full_length": {
+      "type": "number",
+      "description": "The full length of the vessel in meters"
+    }
+  },
+  "required": [
+    "name",
+    "cfr",
+    "hull_number",
+    "flag_state"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

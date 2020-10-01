@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/core-schema/sensor/measurement.json",
+  "title": "SensorMeasurement",
+  "description": "A sensor measurement journal entry",
+  "properties": {
+    "sensor_id": {
+      "type": "string",
+      "description": "The unique identifier for the sensor"
+    },
+    "value": {
+      "type": "number",
+      "description": "The registered measurement for the sensor"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time the sensor value was recorded at in UTC in RFC3339 format"
+    }
+ },
+  "required": [
+    "sensor_id",
+    "value"
+  ],
+  "allOf": [
+    { "$ref": "https://poseidat.org/core-schema/base-entry.json" }
+  ],
+  "type": "object",
+  "additionalProperties": false
+}
