@@ -94,5 +94,5 @@ You can check the line based coverage after running `npm run test` by opening `c
 
 ## Usage
 
-Once the schemas have reached a usable state this repository can be published to NPM for usage in other applications.
-At that time we can also look into exporting the json-schemas through other package manager and for other development languages.
+Once the schemas have reached a usable state this repository can be published to NPM for direct consumption in other applications.
+At that time we can also export the json-schemas to other package managers and consider support libraries for other languages.
