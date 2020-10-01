@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+*.log
+.vscode
+.idea
+.eslintcache
+
+# Test coverage
+coverage
+
+# Ignore TS output
+lib
+tsconfig.tsbuildinfo

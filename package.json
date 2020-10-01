@@ -1,0 +1,59 @@
+{
+  "name": "@poseidat/schemas",
+  "version": "0.0.1",
+  "description": "The core schemas for the PoseiDAT data interchange formats",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build:compile": "tsc -b --verbose",
+    "build": "npm-run-all build:compile",
+    "clean": "rimraf lib",
+    "lint": "eslint .",
+    "rebuild": "npm-run-all clean build:compile",
+    "test:jest": "jest --silent --coverage test/",
+    "test": "npm-run-all test:jest",
+    "watch": "tsc -b src/ --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PoseiDAT/schemas.git"
+  },
+  "keywords": [
+    "PoseiDAT",
+    "maritime",
+    "fishing",
+    "scientific",
+    "ERS"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PoseiDAT/schemas/issues"
+  },
+  "homepage": "https://github.com/PoseiDAT/schemas#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/json-schema": "^7.0.6",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.10.0",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.23.0",
+    "rollup-plugin-async": "^1.2.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.6.2",
+    "ts-jest": "^26.4.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "ajv": "^6.12.5",
+    "ajv-keywords": "^3.5.2"
+  }
+}
