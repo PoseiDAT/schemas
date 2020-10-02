@@ -11,3 +11,6 @@ export { Journal } from './journal';
 // The entry type classes
 //
 export { BaseEntry } from './base-entry';
+export * from './entry-logbook';
+export * from './entry-navigation';
+export * from './entry-sensor';

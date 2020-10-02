@@ -1,5 +1,5 @@
 /** The shared properties for all entries */
-export interface IBaseEntry {
+export interface ICoreSchemaBaseEntry {
   /** The unique identifier of the journal (UUID v4) this entry belongs to */ journal_id: string;
   /** The unique identifier for the entry (UUID v4) */ entry_id: string;
   /** The revision timestamp of this entry. Should be the time it was created. */ revision: string;
@@ -7,13 +7,13 @@ export interface IBaseEntry {
 }
 
 /** A trip journal */
-export interface IJournal {
+export interface ICoreSchemaJournal {
   /** The unique identifier for the journal (UUID v4) */ journal_id: string;
-  /** The vessel this journal belongs to */ vessel: IVessel;
+  /** The vessel this journal belongs to */ vessel: ICoreSchemaVessel;
 }
 
 /** The vessel information */
-export interface IVessel {
+export interface ICoreSchemaVessel {
   /** The display name for the vessel */ name: string;
   /** The vessels flag state and country to report ERS messages to. Should be a 3 letter ISO code. */ flag_state: string;
   /** The vessel's Community Fleet Registration number. Fixed format defined by the pattern: "AAAXXXXXXXXX" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.). Known as CFR or IR */ cfr: string;
@@ -30,17 +30,17 @@ export interface IVessel {
   /** The full length of the vessel in meters */ full_length?: number;
 }
 
-export type TDepartureAnticipatedActivity = "STE" | "FIS" | "GUD" | "OTH" | "SCR" | "TST";
+export type TLogbookDepartureAnticipatedActivity = "STE" | "FIS" | "GUD" | "OTH" | "SCR" | "TST";
 /** A departure journal entry */
-export interface IDeparture extends IBaseEntry {
+export interface ILogbookDeparture extends ICoreSchemaBaseEntry {
   /** The date and time of departure in UTC in RFC3339 format */ activity_date?: string;
   /** The code of the port of departure. These are 5 letter codes prefixed with a 2 letter country code and a 3 letter port identifier. Example: NLURK, BEANR */ port?: string;
-  /** The anticipated activity for the fishing trip. Please check the wiki for the meaning of these codes. */ anticipated_activity?: TDepartureAnticipatedActivity;
-  /** The location of the vessel at the time of departure */ position?: IPosition;
+  /** The anticipated activity for the fishing trip. Please check the wiki for the meaning of these codes. */ anticipated_activity?: TLogbookDepartureAnticipatedActivity;
+  /** The location of the vessel at the time of departure */ position?: INavigationPosition;
 }
 
 /** A navigational position journal entry */
-export interface IPosition extends IBaseEntry {
+export interface INavigationPosition extends ICoreSchemaBaseEntry {
   /** The latitude of the geographical location */ latitude: number;
   /** The longitude of the geographical location */ longitude: number;
   /** The compass heading of the vessel in degrees */ heading?: number;
@@ -48,14 +48,14 @@ export interface IPosition extends IBaseEntry {
 }
 
 /** A sensor measurement journal entry */
-export interface IMeasurement extends IBaseEntry {
+export interface ISensorMeasurement extends ICoreSchemaBaseEntry {
   /** The unique identifier for the sensor */ sensor_id: string;
   /** The registered measurement for the sensor */ value: number;
   /** The date and time the sensor value was recorded at in UTC in RFC3339 format */ timestamp?: string;
 }
 
 /** A sensor state journal entry */
-export interface IState extends IBaseEntry {
+export interface ISensorState extends ICoreSchemaBaseEntry {
   /** The unique identifier for the sensor */ sensor_id: string;
   /** The registered state for the sensor */ value: string;
   /** The date and time the sensor value was recorded at in UTC in RFC3339 format */ timestamp?: string;

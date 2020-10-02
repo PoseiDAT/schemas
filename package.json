@@ -7,7 +7,7 @@
   "scripts": {
     "build:compile": "tsc -b --verbose",
     "build:copy-schema": "cp -r src/core-schema lib && rm lib/core-schema/*.ts",
-    "build:typings": "jsonschema2typings --export -o src/core-schema/types.ts ./src/core-schema/*.json ./src/core-schema/entry/**/*.json",
+    "build:typings": "jsonschema2typings --path-depth 2 --export -o src/core-schema/types.ts ./src/core-schema/*.json ./src/core-schema/entry/**/*.json",
     "build": "npm-run-all build:copy-schema build:typings build:compile",
     "clean": "rimraf lib",
     "lint": "eslint .",
