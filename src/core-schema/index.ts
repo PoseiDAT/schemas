@@ -2,6 +2,8 @@
 // The schema-validator will pre-load these
 // This file will need to be updated with all schemas that are ready for consumption
 //
+import { JSONSchema7 } from 'json-schema';
+
 // Base schemas
 //
 import * as journal from './journal.json';
@@ -23,14 +25,23 @@ import * as sensorState from './entry/sensor/state.json';
 
 
 export const schemas = {
-  journal,
-  baseEntry,
-  vessel,
 
-  logbookDeparture,
+  // Base schemas
+  //
+  journal: journal as JSONSchema7,
+  baseEntry: baseEntry as JSONSchema7,
+  vessel: vessel as JSONSchema7,
 
-  navigationPosition,
+  // Logbook entry schemas
+  //
+  logbookDeparture: logbookDeparture as JSONSchema7,
 
-  sensorMeasurement,
-  sensorState,
+  // Navigation entry schemas
+  //
+  navigationPosition: navigationPosition as JSONSchema7,
+
+  // Sensor entry schemas
+  //
+  sensorMeasurement: sensorMeasurement as JSONSchema7,
+  sensorState: sensorState as JSONSchema7,
 }

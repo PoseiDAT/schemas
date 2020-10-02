@@ -1,29 +1,13 @@
-import ajv from 'ajv';
-import { IJournal } from './core-schema/types';
-import { validateSchema } from './schema-validator';
+// Export the lower level schema validator for lower level schema validation
+// Could be handy when people are building parts of an entry and want to validate
+// them before creating the entire entry
+//
 export { validateSchema } from './schema-validator';
 
-/**
- * Convience class for constructing and validating a Journal
- *
- * @export
- * @class Journal
- */
-export class Journal {
+// The main journal class
+//
+export { Journal } from './journal';
 
-  /**
-   * Creates an instance of Journal
-   *
-   * @param {Record<string, unknown>} [data={}] The data to initialize the Journal with
-   */
-  constructor( public data: IJournal ) {}
-
-  /**
-   * Validates the current Journal data against the core schema
-   *
-   * @returns {ajv.ErrorObject[]}
-   */
-  public validate(): ajv.ErrorObject[] {
-    return validateSchema( { object: this.data as unknown as Record<string, unknown> } );
-  }
-}
+// The entry type classes
+//
+export { BaseEntry } from './base-entry';

@@ -2,6 +2,7 @@ import Ajv from 'ajv';
 import AjvKeywords from 'ajv-keywords';
 import { JSONSchema7 } from 'json-schema';
 import { schemas } from './core-schema';
+import { IBaseEntry, IJournal } from './core-schema/types';
 
 // We will pre-load all the Journal related schemas into our validator
 //
@@ -36,7 +37,7 @@ export function validateSchema(
     schema
   }:
   {
-    object: Record<string, unknown>,
+    object: Record<string, unknown>|IJournal|IBaseEntry,
     schema?: JSONSchema7
   }
 ): Ajv.ErrorObject[] {
