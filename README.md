@@ -92,6 +92,8 @@ Please be liberal in adding unit tests in the `test` folder for your schemas and
 All the code and unit tests are written in TypeScript targeted for NodeJS.
 You can check the line based coverage after running `npm run test` by opening `coverage/lcov-report/index.html` in a web browser.
 
+Documentation is generated on each build and hosted on [github pages](https://poseidat.github.io/schemas/). You can locally test them with `npm run docs`.
+
 ## Usage
 
 Once the schemas have reached a usable state this repository can be published to NPM for direct consumption in other applications.
