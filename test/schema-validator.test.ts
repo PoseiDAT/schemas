@@ -3,7 +3,7 @@ import { validateSchema } from '../src/index';
 
 const minimalSchema: JSONSchema7 = {
   $schema: 'http://json-schema.org/draft-07/schema#',
-  $id: 'https://poseidat.org/core-schema/unit-test.json',
+  $id: 'https://poseidat.org/schema/unit-test.json',
   title: 'UnitTest',
   description: 'A minimal schema for unit testing purposes',
   properties: {

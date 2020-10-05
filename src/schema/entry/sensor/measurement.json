@@ -1,16 +1,16 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://poseidat.org/core-schema/sensor/state.json",
-  "title": "SensorState",
-  "description": "A sensor state journal entry",
+  "$id": "https://poseidat.org/core-schema/sensor/measurement.json",
+  "title": "SensorMeasurement",
+  "description": "A sensor measurement journal entry",
   "properties": {
     "sensor_id": {
       "type": "string",
       "description": "The unique identifier for the sensor"
     },
     "value": {
-      "type": "string",
-      "description": "The registered state for the sensor"
+      "type": "number",
+      "description": "The registered measurement for the sensor"
     },
     "timestamp": {
       "type": "string",
@@ -23,7 +23,7 @@
     "value"
   ],
   "allOf": [
-    { "$ref": "https://poseidat.org/core-schema/base-entry.json" }
+    { "$ref": "https://poseidat.org/schema/core/base-entry.json" }
   ],
   "type": "object",
   "additionalProperties": false

@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import { ICoreSchemaBaseEntry } from '../src/core-schema/types';
+import { ICoreBaseEntry } from '../src/schema/types';
 import { BaseEntry } from '../src/base-entry';
 
 describe('BaseEntry', () => {
@@ -9,12 +9,12 @@ describe('BaseEntry', () => {
   });
 
   test('Create an empty BaseEntry', () => {
-    const baseEntry = new BaseEntry({} as ICoreSchemaBaseEntry);
+    const baseEntry = new BaseEntry({} as ICoreBaseEntry);
     expect(baseEntry).toBeDefined();
   });
 
   test('Validating an empty BaseEntry should fail', () => {
-    const baseEntry = new BaseEntry({} as ICoreSchemaBaseEntry);
+    const baseEntry = new BaseEntry({} as ICoreBaseEntry);
 
     const validationErrors = baseEntry.validate();
     expect(validationErrors).toBeDefined();
@@ -30,7 +30,7 @@ describe('BaseEntry', () => {
   });
 
   test('Validating a minimal BaseEntry should succeed', () => {
-    const data: ICoreSchemaBaseEntry = {
+    const data: ICoreBaseEntry = {
       journal_id: v4(),
       entry_id: v4(),
       revision: '2020-01-01T00:00:00Z',

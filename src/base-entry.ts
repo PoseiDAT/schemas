@@ -1,7 +1,7 @@
 import ajv from 'ajv';
-import { ICoreSchemaBaseEntry } from './core-schema/types';
+import { ICoreBaseEntry } from './schema/types';
 import { validateSchema } from './schema-validator';
-import { schemas } from './core-schema';
+import { schemas } from './schema';
 
 /**
  * Convenience class for constructing and validating an Entry
@@ -15,10 +15,10 @@ export class BaseEntry {
   /**
    * Creates an instance of Entry
    *
-   * @param {ICoreSchemaBaseEntry} [data={}] The data to initialize the Entry with
+   * @param {ICoreBaseEntry} [data={}] The data to initialize the Entry with
    */
   constructor(
-    public data: ICoreSchemaBaseEntry,
+    public data: ICoreBaseEntry,
     protected schema = schemas.baseEntry,
   ) {}
 

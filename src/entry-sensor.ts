@@ -1,6 +1,6 @@
 import { BaseEntry } from './base-entry';
-import { schemas } from './core-schema';
-import { ISensorMeasurement, ISensorState } from './core-schema/types';
+import { schemas } from './schema';
+import { ISensorMeasurement, ISensorState } from './schema/types';
 
 export class SensorMeasurement extends BaseEntry {
   constructor(

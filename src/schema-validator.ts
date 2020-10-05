@@ -1,8 +1,8 @@
 import Ajv from 'ajv';
 import AjvKeywords from 'ajv-keywords';
 import { JSONSchema7 } from 'json-schema';
-import { schemas } from './core-schema';
-import { ICoreSchemaBaseEntry, ICoreSchemaJournal } from './core-schema/types';
+import { schemas } from './schema';
+import { ICoreBaseEntry, ICoreJournal } from './schema/types';
 
 // We will pre-load all the Journal related schemas into our validator
 //
@@ -37,7 +37,7 @@ export function validateSchema(
     schema
   }:
   {
-    object: Record<string, unknown>|ICoreSchemaJournal|ICoreSchemaBaseEntry,
+    object: Record<string, unknown>|ICoreJournal|ICoreBaseEntry,
     schema?: JSONSchema7
   }
 ): Ajv.ErrorObject[] {

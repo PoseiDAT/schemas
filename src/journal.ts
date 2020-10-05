@@ -1,5 +1,5 @@
 import ajv from 'ajv';
-import { ICoreSchemaJournal } from './core-schema/types';
+import { ICoreJournal } from './schema/types';
 import { validateSchema } from './schema-validator';
 
 /**
@@ -13,9 +13,9 @@ export class Journal {
   /**
    * Creates an instance of Journal
    *
-   * @param {ICoreSchemaJournal} [data={}] The data to initialize the Journal with
+   * @param {ICoreJournal} [data={}] The data to initialize the Journal with
    */
-  constructor( public data: ICoreSchemaJournal ) {}
+  constructor( public data: ICoreJournal ) {}
 
   /**
    * Validates the current Journal data against the core schema

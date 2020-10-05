@@ -6,9 +6,9 @@ import { JSONSchema7 } from 'json-schema';
 
 // Base schemas
 //
-import * as journal from './journal.json';
-import * as baseEntry from './base-entry.json';
-import * as vessel from './vessel.json';
+import * as journal from './core/journal.json';
+import * as baseEntry from './core/base-entry.json';
+import * as vessel from './core/vessel.json';
 
 // Logbook entry schemas
 //

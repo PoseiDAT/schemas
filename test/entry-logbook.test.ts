@@ -1,4 +1,4 @@
-import { ILogbookDeparture } from '../src/core-schema/types';
+import { ILogbookDeparture } from '../src/schema/types';
 import { LogbookDeparture } from '../src/index';
 
 describe('LogbookDeparture', () => {

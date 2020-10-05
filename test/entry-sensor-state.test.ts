@@ -1,4 +1,4 @@
-import { ISensorState } from '../src/core-schema/types';
+import { ISensorState } from '../src/schema/types';
 import { SensorState } from '../src/index';
 
 describe('SensorState', () => {

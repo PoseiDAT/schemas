@@ -1,4 +1,4 @@
-import { ISensorMeasurement } from '../src/core-schema/types';
+import { ISensorMeasurement } from '../src/schema/types';
 import { SensorMeasurement } from '../src/index';
 
 describe('SensorMeasurement', () => {

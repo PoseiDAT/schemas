@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import { ICoreSchemaJournal } from '../src/core-schema/types';
+import { ICoreJournal } from '../src/schema/types';
 import { Journal } from '../src/index';
 
 describe('Journal', () => {
@@ -9,12 +9,12 @@ describe('Journal', () => {
   });
 
   test('Create an empty Journal', () => {
-    const journal = new Journal({} as ICoreSchemaJournal);
+    const journal = new Journal({} as ICoreJournal);
     expect(journal).toBeDefined();
   });
 
   test('Validating an empty Journal should fail', () => {
-    const journal = new Journal({} as ICoreSchemaJournal);
+    const journal = new Journal({} as ICoreJournal);
 
     const validationErrors = journal.validate();
     expect(validationErrors).toBeDefined();
@@ -26,7 +26,7 @@ describe('Journal', () => {
   });
 
   test('Validating an minimal Journal should succeed', () => {
-    const data: ICoreSchemaJournal = {
+    const data: ICoreJournal = {
       journal_id: v4(),
       vessel: {
         name: 'SeaDragon',

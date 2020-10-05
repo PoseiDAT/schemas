@@ -1,6 +1,6 @@
 import { BaseEntry } from './base-entry';
-import { schemas } from './core-schema';
-import { INavigationPosition } from './core-schema/types';
+import { schemas } from './schema';
+import { INavigationPosition } from './schema/types';
 
 export class NavigationPosition extends BaseEntry {
   constructor(

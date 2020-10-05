@@ -26,7 +26,7 @@
     "longitude"
   ],
   "allOf": [
-    { "$ref": "https://poseidat.org/core-schema/base-entry.json" }
+    { "$ref": "https://poseidat.org/schema/core/base-entry.json" }
   ],
   "type": "object",
   "additionalProperties": false

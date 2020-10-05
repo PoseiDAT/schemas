@@ -1,4 +1,4 @@
-import { INavigationPosition } from '../src/core-schema/types';
+import { INavigationPosition } from '../src/schema/types';
 import { NavigationPosition } from '../src/index';
 
 describe('NavigationPosition', () => {
