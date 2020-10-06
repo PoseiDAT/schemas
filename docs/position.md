@@ -28,6 +28,8 @@ all of
 | [heading](#heading)     | `number` | Optional | cannot be null | [NavigationPosition](position-properties-heading.md "https&#x3A;//poseidat.org/core-schema/navigation/position.json#/properties/heading")     |
 | [velocity](#velocity)   | `number` | Optional | cannot be null | [NavigationPosition](position-properties-velocity.md "https&#x3A;//poseidat.org/core-schema/navigation/position.json#/properties/velocity")   |
 
+## Cooper: Lat and Lon we need to spec decimal degree vs hours minutes seconds? Also for Longitude we should make sure it's spec'd +/- 180 E W rather than 0-360? (sometimes people in New Zealand do the 0-360)
+
 ## latitude
 
 The latitude of the geographical location
