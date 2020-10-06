@@ -22,6 +22,8 @@ A trip journal
 | [journal_id](#journal_id) | `string` | Required | cannot be null | [Journal](journal-properties-journal_id.md "https&#x3A;//poseidat.org/schema/core/journal.json#/properties/journal_id") |
 | [vessel](#vessel)         | `object` | Required | cannot be null | [Journal](journal-properties-vessel.md "https&#x3A;//poseidat.org/schema/core/vessel.json#/properties/vessel")          |
 
+### Cooper: We need to put some gear type classification as many vessels switch gear types. It seems to me this is the initial place where gear type should go, although we may eventually want to put in a seperate schema that is referenced in journal for tracking mesh size, spread, ground gear, etc?
+
 ## journal_id
 
 The unique identifier for the journal (UUID v4)
