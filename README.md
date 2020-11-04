@@ -47,15 +47,15 @@ The entry itself is a collection of events that occurred during that day at that
 An entry should at least contains the following:
 
 * a unique identifier
+* revision identifier
 * a date and time in UTC
-* a geographical location
-* one or more events
+* some entry type specific data
 
 We currently support the following entry types:
 
 * EquipmentInventory (1)
 * ServiceHistory (1...n)
-* CrewRoster (1)
+* PersonalRoster (1)
 * Events (1...n)
 
 ### EquipmentInventory
@@ -69,7 +69,13 @@ Every time vessel or equipment maintenance is carried out a `ServiceHistory` ent
 The service entry will reference any equipment and/or devices involved and who performed the work.
 This entry can also be used to mark the next maintenance interval (if applicable).
 
-### Event
+### PersonalRoster
+
+The person roster details the current human beings involved with the vessel in some capacity.
+Involvement could be anything from captain to passenger.
+There should only be 1 `PersonalRoster` which will be updated with new revisions when a persons involvement changes.
+
+### Events
 
 The flexibility of the PoseiDAT schema lies in the event types we collect and support.
 By having structured and well defined event schemas they can be consumed and interpreted by other systems.
