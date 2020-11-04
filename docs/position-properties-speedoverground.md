@@ -1,16 +1,16 @@
 # Untitled number in NavigationPosition Schema
 
 ```txt
-https://poseidat.org/schema/core/position.json#/properties/latitude
+https://poseidat.org/schema/core/position.json#/properties/speedOverGround
 ```
 
-The latitude of the geographical location
+The velocity of the vessel in meters per second (m/s) over the ground
 
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                           |
 | :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | -------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [position.json\*](schemas/core/position.json "open original schema") |
 
-## latitude Type
+## speedOverGround Type
 
 `number`

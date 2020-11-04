@@ -1,19 +1,19 @@
 # NavigationPosition Schema
 
 ```txt
-https://poseidat.org/schema/core/position.json
+https://poseidat.org/schema/core/position.json#/properties/position
 ```
 
 A navigational position journal entry
 
 
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                         |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------ |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [position.json](schemas/core/position.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                              |
+| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ----------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [departure.json\*](schemas/entry/departure.json "open original schema") |
 
-## NavigationPosition Type
+## position Type
 
-`object` ([NavigationPosition](position.md))
+`object` ([NavigationPosition](departure-properties-navigationposition.md))
 
 all of
 

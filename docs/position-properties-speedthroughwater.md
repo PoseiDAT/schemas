@@ -1,16 +1,16 @@
 # Untitled number in NavigationPosition Schema
 
 ```txt
-https://poseidat.org/schema/core/position.json#/properties/latitude
+https://poseidat.org/schema/core/position.json#/properties/speedThroughWater
 ```
 
-The latitude of the geographical location
+The velocity of the vessel in meters per second (m/s) through the water
 
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                           |
 | :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | -------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [position.json\*](schemas/core/position.json "open original schema") |
 
-## latitude Type
+## speedThroughWater Type
 
 `number`
