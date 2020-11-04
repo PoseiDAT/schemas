@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://poseidat.org/core-schema/navigation/position.json",
+  "$id": "https://poseidat.org/schema/core/position.json",
   "title": "NavigationPosition",
   "description": "A navigational position journal entry",
   "properties": {
@@ -28,7 +28,7 @@
       "description": "The velocity of the vessel in meters per second (m/s) through the water",
       "type": "number"
     },
-    "numSats": {
+    "numberOfSatellites": {
       "description": "The number of satellites used to calculate the position",
       "type": "number"
     }

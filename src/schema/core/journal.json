@@ -10,10 +10,10 @@
       "description": "The unique identifier for the journal (UUID v4)"
     },
     "vessel": {
-      "description": "The vessel this journal belongs to",
+      "description": "The identification details of the vessel this journal belongs to",
       "$ref": "https://poseidat.org/schema/core/vessel.json"
     }
- },
+  },
   "required": [
     "journal_id",
     "vessel"

@@ -19,7 +19,7 @@ export class BaseEntry {
    */
   constructor(
     public data: ICoreBaseEntry,
-    protected schema = schemas.baseEntry,
+    protected schema = schemas.core.baseEntry,
   ) {}
 
   /**

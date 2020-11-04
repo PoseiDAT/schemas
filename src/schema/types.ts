@@ -2,6 +2,7 @@
 export interface ICoreBaseEntry {
   /** The unique identifier of the journal (UUID v4) this entry belongs to */ journal_id: string;
   /** The unique identifier for the entry (UUID v4) */ entry_id: string;
+  /** The date and time the entry was logged in UTC in RFC3339 format */ entry_datetime?: string;
   /** The revision timestamp of this entry. Should be the time it was created. */ revision: string;
   /** Indicates this entry cannot be replaced with future revisions (default) */ immutable: boolean;
 }
@@ -9,7 +10,18 @@ export interface ICoreBaseEntry {
 /** A trip journal */
 export interface ICoreJournal {
   /** The unique identifier for the journal (UUID v4) */ journal_id: string;
-  /** The vessel this journal belongs to */ vessel: ICoreVessel;
+  /** The identification details of the vessel this journal belongs to */ vessel: ICoreVessel;
+}
+
+/** A navigational position journal entry */
+export interface ICorePosition extends ICoreBaseEntry {
+  /** The latitude of the geographical location */ latitude: number;
+  /** The longitude of the geographical location */ longitude: number;
+  /** The compass heading of the vessel in degrees */ heading?: number;
+  /** The direction in which the vessel is traveling, in degrees */ courseMadeGood?: number;
+  /** The velocity of the vessel in meters per second (m/s) over the ground */ speedOverGround?: number;
+  /** The velocity of the vessel in meters per second (m/s) through the water */ speedThroughWater?: number;
+  /** The number of satellites used to calculate the position */ numberOfSatellites?: number;
 }
 
 /** The vessel information */
@@ -30,33 +42,33 @@ export interface ICoreVessel {
   /** The full length of the vessel in meters */ full_length?: number;
 }
 
-export type TLogbookDepartureAnticipatedActivity = "STE" | "FIS" | "GUD" | "OTH" | "SCR" | "TST";
-/** A departure journal entry */
-export interface ILogbookDeparture extends ICoreBaseEntry {
-  /** The date and time of departure in UTC in RFC3339 format */ activity_date?: string;
-  /** The code of the port of departure. These are 5 letter codes prefixed with a 2 letter country code and a 3 letter port identifier. Example: NLURK, BEANR */ port?: string;
-  /** The anticipated activity for the fishing trip. Please check the wiki for the meaning of these codes. */ anticipated_activity?: TLogbookDepartureAnticipatedActivity;
-  /** The location of the vessel at the time of departure */ position?: INavigationPosition;
+export type TEntryDepartureAnticipatedActivity = "STE" | "FIS" | "GUD" | "OTH" | "SCR" | "TST";
+/** A departure from port event */
+export interface IEntryDeparture extends ICoreBaseEntry {
+  /** The date and time of departure in UTC in RFC3339 format */ departure_date: string;
+  /** The code of the port of departure. These are 5 letter codes prefixed with a 2 letter country code and a 3 letter port identifier. Example: NLURK, BEANR */ port: string;
+  /** The anticipated activity for the fishing trip. Please check the wiki for the meaning of these codes. */ anticipated_activity?: TEntryDepartureAnticipatedActivity;
+  /** The location of the vessel at the time of departure */ position?: ICorePosition;
 }
 
-/** A navigational position journal entry */
-export interface INavigationPosition extends ICoreBaseEntry {
-  /** The latitude of the geographical location */ latitude: number;
-  /** The longitude of the geographical location */ longitude: number;
-  /** The compass heading of the vessel in degrees */ heading?: number;
-  /** The velocity of the vessel in meters per second (m/s) */ velocity?: number;
+/** A device measurement journal entry */
+export interface IEntryDeviceMeasurement extends ICoreBaseEntry {
+  /** The unique identifier for the device */ device_id: string;
+  /** The registered measurement for the device */ value: number;
+  /** The date and time the value was recorded in UTC in RFC3339 format */ timestamp: string;
 }
 
-/** A sensor measurement journal entry */
-export interface ISensorMeasurement extends ICoreBaseEntry {
-  /** The unique identifier for the sensor */ sensor_id: string;
-  /** The registered measurement for the sensor */ value: number;
-  /** The date and time the sensor value was recorded at in UTC in RFC3339 format */ timestamp?: string;
+/** An entry detailing the equipment installed on a vessel. One 1 should exist per journal */
+export interface IEntryEquipmentInventory extends ICoreBaseEntry {
+  /** The collection of equipment for the vessel */ equipment: IEquipmentInventoryEquipment[];
 }
 
-/** A sensor state journal entry */
-export interface ISensorState extends ICoreBaseEntry {
-  /** The unique identifier for the sensor */ sensor_id: string;
-  /** The registered state for the sensor */ value: string;
-  /** The date and time the sensor value was recorded at in UTC in RFC3339 format */ timestamp?: string;
+/** A device which is a part of a piece of equipment installed on a vessel */
+export interface IEquipmentInventoryDevice {
+  /** The unique identifier for the device (UUID v4) */ device_id: string;
+}
+
+/** A piece of equipment installed on a vessel */
+export interface IEquipmentInventoryEquipment {
+  /** The collection of devices that are a part of this piece of equipment */ device: IEquipmentInventoryDevice[];
 }

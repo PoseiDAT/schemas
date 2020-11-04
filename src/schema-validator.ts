@@ -41,7 +41,7 @@ export function validateSchema(
     schema?: JSONSchema7
   }
 ): Ajv.ErrorObject[] {
-  const validate = validator.compile(schema || schemas.journal);
+  const validate = validator.compile(schema || schemas.core.journal);
   validate(object);
   return validate.errors || [];
 }

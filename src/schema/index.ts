@@ -4,44 +4,35 @@
 //
 import { JSONSchema7 } from 'json-schema';
 
-// Base schemas
+// Core schemas
 //
-import * as journal from './core/journal.json';
 import * as baseEntry from './core/base-entry.json';
+import * as journal from './core/journal.json';
+import * as position from './core/position.json';
 import * as vessel from './core/vessel.json';
 
-// Logbook entry schemas
+// Entry schemas
 //
-import * as logbookDeparture from './entry/logbook/departure.json';
-
-// Navigation entry schemas
-//
-import * as navigationPosition from './entry/navigation/position.json';
-
-// Sensor entry schemas
-//
-import * as sensorMeasurement from './entry/sensor/measurement.json';
-import * as sensorState from './entry/sensor/state.json';
-
+import * as entryDeparture from './entry/departure.json';
+import * as entryDeviceMeasurement from './entry/device-measurement.json';
+import * as entryEquipmentInventory from './entry/device-measurement.json';
 
 export const schemas = {
 
   // Base schemas
   //
-  journal: journal as JSONSchema7,
-  baseEntry: baseEntry as JSONSchema7,
-  vessel: vessel as JSONSchema7,
+  core: {
+    journal: journal as JSONSchema7,
+    baseEntry: baseEntry as JSONSchema7,
+    position: position as JSONSchema7,
+    vessel: vessel as JSONSchema7,
+  },
 
-  // Logbook entry schemas
+  // Entry schemas
   //
-  logbookDeparture: logbookDeparture as JSONSchema7,
-
-  // Navigation entry schemas
-  //
-  navigationPosition: navigationPosition as JSONSchema7,
-
-  // Sensor entry schemas
-  //
-  sensorMeasurement: sensorMeasurement as JSONSchema7,
-  sensorState: sensorState as JSONSchema7,
+  entry: {
+    departure: entryDeparture as JSONSchema7,
+    deviceMeasurement: entryDeviceMeasurement as JSONSchema7,
+    equipmentInventory: entryEquipmentInventory as JSONSchema7,
+  }
 }

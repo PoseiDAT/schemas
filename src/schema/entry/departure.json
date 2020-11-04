@@ -1,10 +1,10 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://poseidat.org/core-schema/logbook/departure.json",
-  "title": "LogbookDeparture",
-  "description": "A departure journal entry",
+  "$id": "https://poseidat.org/schema/entry/departure.json",
+  "title": "DepartureEntry",
+  "description": "A departure from port event",
   "properties": {
-    "activity_date": {
+    "departure_date": {
       "description": "The date and time of departure in UTC in RFC3339 format",
       "type": "string",
       "format": "date-time"
@@ -30,11 +30,13 @@
     },
     "position": {
       "description": "The location of the vessel at the time of departure",
-      "$ref": "https://poseidat.org/core-schema/navigation/position.json"
+      "$ref": "https://poseidat.org/schema/core/position.json"
     }
- },
+  },
   "required": [
- ],
+    "departure_date",
+    "port"
+  ],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/base-entry.json" }
   ],
