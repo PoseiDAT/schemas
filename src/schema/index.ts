@@ -15,7 +15,7 @@ import * as vessel from './core/vessel.json';
 //
 import * as entryDeparture from './entry/departure.json';
 import * as entryDeviceMeasurement from './entry/device-measurement.json';
-import * as entryEquipmentInventory from './entry/device-measurement.json';
+import * as entryEquipmentInventory from './entry/equipment-inventory.json';
 
 export const schemas = {
 

@@ -7,7 +7,10 @@ import { ICoreBaseEntry, ICoreJournal } from './schema/types';
 // We will pre-load all the Journal related schemas into our validator
 //
 const jsonSchemas = [];
-for (const [, schema] of Object.entries(schemas)) {
+for (const [, schema] of Object.entries(schemas.core)) {
+  jsonSchemas.push(schema);
+}
+for (const [, schema] of Object.entries(schemas.entry)) {
   jsonSchemas.push(schema);
 }
 
@@ -38,10 +41,10 @@ export function validateSchema(
   }:
   {
     object: Record<string, unknown>|ICoreJournal|ICoreBaseEntry,
-    schema?: JSONSchema7
+    schema: JSONSchema7
   }
 ): Ajv.ErrorObject[] {
-  const validate = validator.compile(schema || schemas.core.journal);
+  const validate = validator.compile(schema);
   validate(object);
   return validate.errors || [];
 }
