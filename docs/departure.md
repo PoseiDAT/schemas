@@ -1,4 +1,4 @@
-# DepartureEntry Schema
+# Departure Schema
 
 ```txt
 https://poseidat.org/schema/entry/departure.json
@@ -11,22 +11,22 @@ A departure from port event
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | --------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [departure.json](schemas/entry/departure.json "open original schema") |
 
-## DepartureEntry Type
+## Departure Type
 
-`object` ([DepartureEntry](departure.md))
+`object` ([Departure](departure.md))
 
 all of
 
--   [BaseEntry](position-allof-baseentry.md "check type definition")
+-   [BaseEntry](departure-allof-baseentry.md "check type definition")
 
-# DepartureEntry Properties
+# Departure Properties
 
-| Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                              |
-| :-------------------------------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [departure_date](#departure_date)             | `string` | Required | cannot be null | [DepartureEntry](departure-properties-departure_date.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/departure_date")             |
-| [port](#port)                                 | `string` | Required | cannot be null | [DepartureEntry](departure-properties-port.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/port")                                 |
-| [anticipated_activity](#anticipated_activity) | `string` | Optional | cannot be null | [DepartureEntry](departure-properties-anticipated_activity.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/anticipated_activity") |
-| [position](#position)                         | Merged   | Optional | cannot be null | [DepartureEntry](departure-properties-navigationposition.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/position")                 |
+| Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                         |
+| :-------------------------------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [departure_date](#departure_date)             | `string` | Required | cannot be null | [Departure](departure-properties-departure_date.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/departure_date")             |
+| [port](#port)                                 | `string` | Required | cannot be null | [Departure](departure-properties-port.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/port")                                 |
+| [anticipated_activity](#anticipated_activity) | `string` | Optional | cannot be null | [Departure](departure-properties-anticipated_activity.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/anticipated_activity") |
+| [position](#position)                         | `object` | Optional | cannot be null | [Departure](departure-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/position")                           |
 
 ## departure_date
 
@@ -38,7 +38,7 @@ The date and time of departure in UTC in RFC3339 format
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [DepartureEntry](departure-properties-departure_date.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/departure_date")
+-   defined in: [Departure](departure-properties-departure_date.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/departure_date")
 
 ### departure_date Type
 
@@ -58,7 +58,7 @@ The code of the port of departure. These are 5 letter codes prefixed with a 2 le
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [DepartureEntry](departure-properties-port.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/port")
+-   defined in: [Departure](departure-properties-port.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/port")
 
 ### port Type
 
@@ -88,7 +88,7 @@ The anticipated activity for the fishing trip. Please check the wiki for the mea
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [DepartureEntry](departure-properties-anticipated_activity.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/anticipated_activity")
+-   defined in: [Departure](departure-properties-anticipated_activity.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/anticipated_activity")
 
 ### anticipated_activity Type
 
@@ -109,20 +109,16 @@ The anticipated activity for the fishing trip. Please check the wiki for the mea
 
 ## position
 
-A navigational position journal entry
+A navigational position that can be used in an entry
 
 
 `position`
 
 -   is optional
--   Type: `object` ([NavigationPosition](departure-properties-navigationposition.md))
+-   Type: `object` ([Position](departure-properties-position.md))
 -   cannot be null
--   defined in: [DepartureEntry](departure-properties-navigationposition.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/position")
+-   defined in: [Departure](departure-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/position")
 
 ### position Type
 
-`object` ([NavigationPosition](departure-properties-navigationposition.md))
-
-all of
-
--   [BaseEntry](position-allof-baseentry.md "check type definition")
+`object` ([Position](departure-properties-position.md))

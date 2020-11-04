@@ -1,4 +1,4 @@
-# Untitled undefined type in DepartureEntry Schema
+# Untitled undefined type in Departure Schema
 
 ```txt
 https://poseidat.org/schema/entry/departure.json#/properties

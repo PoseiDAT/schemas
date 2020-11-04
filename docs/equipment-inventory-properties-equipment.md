@@ -1,4 +1,4 @@
-# Untitled array in EquipmentInventoryEntry Schema
+# Untitled array in EquipmentInventory Schema
 
 ```txt
 https://poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment

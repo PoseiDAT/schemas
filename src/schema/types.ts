@@ -13,8 +13,8 @@ export interface ICoreJournal {
   /** The identification details of the vessel this journal belongs to */ vessel: ICoreVessel;
 }
 
-/** A navigational position journal entry */
-export interface ICorePosition extends ICoreBaseEntry {
+/** A navigational position that can be used in an entry */
+export interface ICorePosition {
   /** The latitude of the geographical location */ latitude: number;
   /** The longitude of the geographical location */ longitude: number;
   /** The compass heading of the vessel in degrees */ heading?: number;

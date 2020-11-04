@@ -6,6 +6,6 @@ export class EquipmentInventoryEntry extends BaseEntry {
   constructor(
     public data: IEntryEquipmentInventory,
   ) {
-    super(data, schemas.entry.departure);
+    super(data, schemas.entry.equipmentInventory);
   }
 }

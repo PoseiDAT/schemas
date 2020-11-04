@@ -17,7 +17,7 @@ A device measurement journal entry
 
 all of
 
--   [BaseEntry](position-allof-baseentry.md "check type definition")
+-   [BaseEntry](departure-allof-baseentry.md "check type definition")
 
 # DeviceMeasurement Properties
 

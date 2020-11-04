@@ -1,4 +1,4 @@
-# Untitled string in DepartureEntry Schema
+# Untitled string in Departure Schema
 
 ```txt
 https://poseidat.org/schema/entry/departure.json#/properties/port

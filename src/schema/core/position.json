@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/position.json",
-  "title": "NavigationPosition",
-  "description": "A navigational position journal entry",
+  "title": "Position",
+  "description": "A navigational position that can be used in an entry",
   "properties": {
     "latitude": {
       "description": "The latitude of the geographical location",
@@ -36,9 +36,6 @@
   "required": [
     "latitude",
     "longitude"
-  ],
-  "allOf": [
-    { "$ref": "https://poseidat.org/schema/core/base-entry.json" }
   ],
   "type": "object",
   "additionalProperties": false

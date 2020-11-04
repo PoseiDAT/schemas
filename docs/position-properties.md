@@ -1,4 +1,4 @@
-# Untitled undefined type in NavigationPosition Schema
+# Untitled undefined type in Position Schema
 
 ```txt
 https://poseidat.org/schema/core/position.json#/properties

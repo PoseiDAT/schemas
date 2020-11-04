@@ -1,4 +1,4 @@
-# Untitled undefined type in EquipmentInventoryEntry Schema
+# Untitled undefined type in EquipmentInventory Schema
 
 ```txt
 https://poseidat.org/schema/entry/equipment-inventory.json#/properties

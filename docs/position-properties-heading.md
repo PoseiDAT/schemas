@@ -1,4 +1,4 @@
-# Untitled number in NavigationPosition Schema
+# Untitled number in Position Schema
 
 ```txt
 https://poseidat.org/schema/core/position.json#/properties/heading

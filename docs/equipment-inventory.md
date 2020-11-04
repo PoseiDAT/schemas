@@ -1,4 +1,4 @@
-# EquipmentInventoryEntry Schema
+# EquipmentInventory Schema
 
 ```txt
 https://poseidat.org/schema/entry/equipment-inventory.json
@@ -11,19 +11,19 @@ An entry detailing the equipment installed on a vessel. One 1 should exist per j
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ----------------------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [equipment-inventory.json](schemas/entry/equipment-inventory.json "open original schema") |
 
-## EquipmentInventoryEntry Type
+## EquipmentInventory Type
 
-`object` ([EquipmentInventoryEntry](equipment-inventory.md))
+`object` ([EquipmentInventory](equipment-inventory.md))
 
 all of
 
--   [BaseEntry](position-allof-baseentry.md "check type definition")
+-   [BaseEntry](departure-allof-baseentry.md "check type definition")
 
-# EquipmentInventoryEntry Properties
+# EquipmentInventory Properties
 
-| Property                | Type    | Required | Nullable       | Defined by                                                                                                                                                     |
-| :---------------------- | ------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [equipment](#equipment) | `array` | Required | cannot be null | [EquipmentInventoryEntry](equipment-inventory-properties-equipment.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment") |
+| Property                | Type    | Required | Nullable       | Defined by                                                                                                                                                |
+| :---------------------- | ------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [equipment](#equipment) | `array` | Required | cannot be null | [EquipmentInventory](equipment-inventory-properties-equipment.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment") |
 
 ## equipment
 
@@ -35,7 +35,7 @@ The collection of equipment for the vessel
 -   is required
 -   Type: `object[]` ([Equipment](equipment-inventory-properties-equipment-equipment.md))
 -   cannot be null
--   defined in: [EquipmentInventoryEntry](equipment-inventory-properties-equipment.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment")
+-   defined in: [EquipmentInventory](equipment-inventory-properties-equipment.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment")
 
 ### equipment Type
 

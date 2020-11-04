@@ -6,6 +6,6 @@ export class DeviceMeasurementEntry extends BaseEntry {
   constructor(
     public data: IEntryDeviceMeasurement,
   ) {
-    super(data, schemas.entry.departure);
+    super(data, schemas.entry.deviceMeasurement);
   }
 }

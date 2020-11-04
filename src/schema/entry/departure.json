@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/entry/departure.json",
-  "title": "DepartureEntry",
+  "title": "Departure",
   "description": "A departure from port event",
   "properties": {
     "departure_date": {
