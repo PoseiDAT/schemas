@@ -7,11 +7,10 @@ import { ICoreBaseEntry, ICoreJournal } from './schema/types';
 // We will pre-load all the Journal related schemas into our validator
 //
 const jsonSchemas = [];
-for (const [, schema] of Object.entries(schemas.core)) {
-  jsonSchemas.push(schema);
-}
-for (const [, schema] of Object.entries(schemas.entry)) {
-  jsonSchemas.push(schema);
+for (const [, schemaSection] of Object.entries(schemas)) {
+  for (const [, schema] of Object.entries(schemaSection)) {
+    jsonSchemas.push(schema);
+  }
 }
 
 // Our validator instance
