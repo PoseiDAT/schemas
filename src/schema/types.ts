@@ -130,8 +130,8 @@ export interface IEntryEquipmentInventory extends ICoreBaseEntry {
   /** The collection of equipment for the vessel */ equipment: IEquipmentInventoryEquipment[];
 }
 
-/** Entry declaration of a fishing zone */
-export interface IEntryZoneEntry {
+/** Enter declaration of a fishing zone */
+export interface IEntryZoneEnter extends ICoreBaseEntry {
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The zone being entered */ zone: ICoreFishingZone;
   /** The geographical location where the entry took place */ location: ICorePosition;
@@ -143,7 +143,7 @@ export interface IEntryZoneEntry {
 }
 
 /** Exit declaration of a fishing zone */
-export interface IEntryZoneExit {
+export interface IEntryZoneExit extends ICoreBaseEntry {
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The zone being entered */ zone: ICoreFishingZone;
   /** The geographical location where the entry took place */ location: ICorePosition;

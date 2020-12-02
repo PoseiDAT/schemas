@@ -48,5 +48,9 @@
     "location",
     "zone"
   ],
-  "type": "object"
+  "allOf": [
+    { "$ref": "https://poseidat.org/schema/core/base-entry.json" }
+  ],
+  "type": "object",
+  "additionalProperties": false
 }

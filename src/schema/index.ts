@@ -25,7 +25,7 @@ import * as entryEndOfFishing from './entry/end-of-fishing.json';
 import * as entryEquipmentInventory from './entry/equipment-inventory.json';
 import * as entryEquipmentInventoryDevice from './entry/equipment-inventory/device.json';
 import * as entryEquipmentInventoryEquipment from './entry/equipment-inventory/equipment.json';
-import * as entryZoneEntry from './entry/zone-entry.json';
+import * as entryZoneEnter from './entry/zone-enter.json';
 import * as entryZoneExit from './entry/zone-exit.json';
 
 // Enum schemas
@@ -58,7 +58,7 @@ export const schemas = {
     deviceMeasurement: entryDeviceMeasurement as JSONSchema7,
     endOfFishing: entryEndOfFishing as JSONSchema7,
     equipmentInventory: entryEquipmentInventory as JSONSchema7,
-    zoneEntry: entryZoneEntry as JSONSchema7,
+    zoneEnter: entryZoneEnter as JSONSchema7,
     zoneExit: entryZoneExit as JSONSchema7,
   },
 
