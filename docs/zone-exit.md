@@ -9,22 +9,26 @@ Exit declaration of a fishing zone
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                            |
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | --------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [zone-exit.json](schemas/entry/zone-exit.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [zone-exit.json](schemas/entry/zone-exit.json "open original schema") |
 
 ## Untitled object in undefined Type
 
 `object` ([Details](zone-exit.md))
+
+all of
+
+-   [BaseEntry](arrival-allof-baseentry.md "check type definition")
 
 # undefined Properties
 
 | Property                                                | Type      | Required | Nullable       | Defined by                                                                                                                                                         |
 | :------------------------------------------------------ | --------- | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [activity_date](#activity_date)                         | `string`  | Required | cannot be null | [Untitled schema](zone-exit-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/zone-exit.json#/properties/activity_date")                         |
-| [zone](#zone)                                           | `object`  | Required | cannot be null | [Untitled schema](zone-entry-properties-zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/zone")                                        |
+| [zone](#zone)                                           | `object`  | Required | cannot be null | [Untitled schema](zone-enter-properties-zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/zone")                                        |
 | [location](#location)                                   | `object`  | Required | cannot be null | [Untitled schema](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")                                    |
 | [catch_on_board](#catch_on_board)                       | `array`   | Optional | cannot be null | [Untitled schema](zone-exit-properties-catch_on_board.md "https&#x3A;//poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board")                       |
 | [target_species](#target_species)                       | `string`  | Optional | cannot be null | [Untitled schema](zone-exit-properties-target_species.md "https&#x3A;//poseidat.org/schema/entry/zone-exit.json#/properties/target_species")                       |
-| [effort_zone](#effort_zone)                             | `string`  | Optional | cannot be null | [Untitled schema](zone-entry-properties-effort_zone.md "https&#x3A;//poseidat.org/schema/enum/effort-zone.json#/properties/effort_zone")                           |
+| [effort_zone](#effort_zone)                             | `string`  | Optional | cannot be null | [Untitled schema](zone-enter-properties-effort_zone.md "https&#x3A;//poseidat.org/schema/enum/effort-zone.json#/properties/effort_zone")                           |
 | [trans_zonal_fishing](#trans_zonal_fishing)             | `boolean` | Optional | cannot be null | [Untitled schema](zone-exit-properties-trans_zonal_fishing.md "https&#x3A;//poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing")             |
 | [trans_zonal_fishing_zones](#trans_zonal_fishing_zones) | `array`   | Optional | cannot be null | [Untitled schema](zone-exit-properties-trans_zonal_fishing_zones.md "https&#x3A;//poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones") |
 
@@ -56,13 +60,13 @@ Geographical zone for fishing activities
 `zone`
 
 -   is required
--   Type: `object` ([Details](zone-entry-properties-zone.md))
+-   Type: `object` ([Details](zone-enter-properties-zone.md))
 -   cannot be null
--   defined in: [Untitled schema](zone-entry-properties-zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/zone")
+-   defined in: [Untitled schema](zone-enter-properties-zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/zone")
 
 ### zone Type
 
-`object` ([Details](zone-entry-properties-zone.md))
+`object` ([Details](zone-enter-properties-zone.md))
 
 ## location
 
@@ -122,7 +126,7 @@ The fishing effort zone. Example: A (ICES V-VI)
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](zone-entry-properties-effort_zone.md "https&#x3A;//poseidat.org/schema/enum/effort-zone.json#/properties/effort_zone")
+-   defined in: [Untitled schema](zone-enter-properties-effort_zone.md "https&#x3A;//poseidat.org/schema/enum/effort-zone.json#/properties/effort_zone")
 
 ### effort_zone Type
 
@@ -183,10 +187,10 @@ The zones involved in trans-zonal fishing. NLD: NLTRZ
 `trans_zonal_fishing_zones`
 
 -   is optional
--   Type: `object[]` ([Details](zone-entry-properties-zone.md))
+-   Type: `object[]` ([Details](zone-enter-properties-zone.md))
 -   cannot be null
 -   defined in: [Untitled schema](zone-exit-properties-trans_zonal_fishing_zones.md "https&#x3A;//poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones")
 
 ### trans_zonal_fishing_zones Type
 
-`object[]` ([Details](zone-entry-properties-zone.md))
+`object[]` ([Details](zone-enter-properties-zone.md))

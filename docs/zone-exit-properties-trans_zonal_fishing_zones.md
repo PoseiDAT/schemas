@@ -13,4 +13,4 @@ The zones involved in trans-zonal fishing. NLD: NLTRZ
 
 ## trans_zonal_fishing_zones Type
 
-`object[]` ([Details](zone-entry-properties-zone.md))
+`object[]` ([Details](zone-enter-properties-zone.md))

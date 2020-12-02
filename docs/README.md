@@ -12,7 +12,7 @@
 -   [EquipmentInventory](./equipment-inventory.md "An entry detailing the equipment installed on a vessel") – `https://poseidat.org/schema/entry/equipment-inventory.json`
 -   [Journal](./journal.md "A trip journal") – `https://poseidat.org/schema/core/journal.json`
 -   [Position](./position.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/position.json`
--   [Untitled object in undefined](./zone-entry.md "Entry declaration of a fishing zone") – `https://poseidat.org/schema/entry/zone-entry.json`
+-   [Untitled object in undefined](./zone-enter.md "Enter declaration of a fishing zone") – `https://poseidat.org/schema/entry/zone-enter.json`
 -   [Untitled object in undefined](./zone-exit.md "Exit declaration of a fishing zone") – `https://poseidat.org/schema/entry/zone-exit.json`
 -   [Untitled object in undefined](./fishing-gear.md "Fishing gear details") – `https://poseidat.org/schema/core/fishing-gear.json`
 -   [Untitled object in undefined](./fishing-zone.md "Geographical zone for fishing activities") – `https://poseidat.org/schema/core/fishing-zone.json`
@@ -37,8 +37,8 @@
 -   [Untitled object in Arrival](./arrival-properties-catch_on_board-items.md) – `https://poseidat.org/schema/entry/arrival.json#/properties/catch_on_board/items`
 -   [Untitled object in Departure](./departure-properties-gear_on_board-items.md "Fishing gear details") – `https://poseidat.org/schema/core/fishing-gear.json#/properties/gear_on_board/items`
 -   [Untitled object in Departure](./departure-properties-catch_on_board-items.md) – `https://poseidat.org/schema/entry/departure.json#/properties/catch_on_board/items`
--   [Untitled object in undefined](./zone-entry-properties-zone.md "Geographical zone for fishing activities") – `https://poseidat.org/schema/core/fishing-zone.json#/properties/zone`
--   [Untitled object in undefined](./zone-entry-properties-catch_on_board-items.md) – `https://poseidat.org/schema/entry/zone-entry.json#/properties/catch_on_board/items`
+-   [Untitled object in undefined](./zone-enter-properties-zone.md "Geographical zone for fishing activities") – `https://poseidat.org/schema/core/fishing-zone.json#/properties/zone`
+-   [Untitled object in undefined](./zone-enter-properties-catch_on_board-items.md) – `https://poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board/items`
 -   [Untitled object in undefined](./zone-exit-properties-catch_on_board-items.md) – `https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board/items`
 -   [Vessel](./journal-properties-vessel.md "The vessel information") – `https://poseidat.org/schema/core/vessel.json#/properties/vessel`
 
@@ -50,7 +50,7 @@
 -   [Untitled array in Equipment](./equipment-properties-device.md "The collection of devices that are a part of this piece of equipment") – `https://poseidat.org/schema/entry/equipment-inventory/equipment.json#/properties/device`
 -   [Untitled array in Equipment](./equipment-properties-device.md "The collection of devices that are a part of this piece of equipment") – `https://poseidat.org/schema/entry/equipment-inventory/equipment.json#/properties/device`
 -   [Untitled array in EquipmentInventory](./equipment-inventory-properties-equipment.md "The collection of equipment for the vessel") – `https://poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment`
--   [Untitled array in undefined](./zone-entry-properties-catch_on_board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-entry.json#/properties/catch_on_board`
+-   [Untitled array in undefined](./zone-enter-properties-catch_on_board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board`
 -   [Untitled array in undefined](./zone-exit-properties-catch_on_board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board`
 -   [Untitled array in undefined](./zone-exit-properties-trans_zonal_fishing_zones.md "The zones involved in trans-zonal fishing") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
 
