@@ -19,6 +19,12 @@ import * as entryEquipmentInventory from './entry/equipment-inventory.json';
 import * as entryEquipmentInventoryDevice from './entry/equipment-inventory/device.json';
 import * as entryEquipmentInventoryEquipment from './entry/equipment-inventory/equipment.json';
 
+// Enum schemas
+//
+import * as enumAnticipatedActivity from './enum/anticipated-activity.json';
+import * as enumEffortZone from './enum/effort-zone.json';
+import * as enumReasonArrival from './enum/reason-arrival.json';
+
 export const schemas = {
 
   // Base schemas
@@ -36,6 +42,15 @@ export const schemas = {
     departure: entryDeparture as JSONSchema7,
     deviceMeasurement: entryDeviceMeasurement as JSONSchema7,
     equipmentInventory: entryEquipmentInventory as JSONSchema7,
+  },
+
+  // Enum schemas
+  //
+  enum:
+  {
+    anticipatedActivity: enumAnticipatedActivity,
+    effortZone: enumEffortZone,
+    reasonArrival: enumReasonArrival,
   },
 
   // Supporting schemas: EquipmentInventory
