@@ -5,14 +5,14 @@
   "description": "The shared properties for all entries",
   "properties": {
     "journal_id": {
+      "description": "The unique identifier of the journal (UUID v4) this entry belongs to",
       "type": "string",
-      "format": "uuid",
-      "description": "The unique identifier of the journal (UUID v4) this entry belongs to"
+      "format": "uuid"
     },
     "entry_id": {
+      "description": "The unique identifier for the entry (UUID v4)",
       "type": "string",
-      "format": "uuid",
-      "description": "The unique identifier for the entry (UUID v4)"
+      "format": "uuid"
     },
     "entry_datetime": {
       "description": "The date and time the entry was logged in UTC in RFC3339 format",
@@ -20,14 +20,18 @@
       "format": "date-time"
     },
     "revision": {
+      "description": "The revision timestamp of this entry. Should be the time it was created.",
       "type": "string",
-      "format": "date-time",
-      "description": "The revision timestamp of this entry. Should be the time it was created."
+      "format": "date-time"
     },
     "immutable": {
       "description": "Indicates this entry cannot be replaced with future revisions (default)",
       "type": "boolean",
       "default": false
+    },
+    "remarks": {
+      "description": "Free form remarks that are to be added to this journal entry",
+      "type": "string"
     }
  },
   "required": [
