@@ -1,20 +1,16 @@
-# Untitled string in Departure Schema
+# Untitled object in Departure Schema
 
 ```txt
-https://poseidat.org/schema/entry/departure.json#/properties/activity_date
+https://poseidat.org/schema/entry/departure.json#/properties/catch_on_board/items
 ```
 
-The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA
+
 
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                              |
 | :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ----------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [departure.json\*](schemas/entry/departure.json "open original schema") |
 
-## activity_date Type
+## items Type
 
-`string`
-
-## activity_date Constraints
-
-**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+`object` ([Details](departure-properties-catch_on_board-items.md))

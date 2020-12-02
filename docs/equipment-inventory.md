@@ -17,7 +17,7 @@ An entry detailing the equipment installed on a vessel. One 1 should exist per j
 
 all of
 
--   [BaseEntry](departure-allof-baseentry.md "check type definition")
+-   [BaseEntry](arrival-allof-baseentry.md "check type definition")
 
 # EquipmentInventory Properties
 

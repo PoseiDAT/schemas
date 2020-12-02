@@ -1,19 +1,19 @@
 # BaseEntry Schema
 
 ```txt
-https://poseidat.org/schema/core/base-entry.json
+https://poseidat.org/schema/core/base-entry.json#/allOf/0
 ```
 
 The shared properties for all entries
 
 
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ---------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [base-entry.json](schemas/core/base-entry.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                          |
+| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [arrival.json\*](schemas/entry/arrival.json "open original schema") |
 
-## BaseEntry Type
+## 0 Type
 
-`object` ([BaseEntry](base-entry.md))
+`object` ([BaseEntry](arrival-allof-baseentry.md))
 
 # BaseEntry Properties
 
