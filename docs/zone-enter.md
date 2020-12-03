@@ -23,14 +23,47 @@ all of
 
 | Property                                    | Type      | Required | Nullable       | Defined by                                                                                                                                               |
 | :------------------------------------------ | --------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [entry_type](#entry_type)                   | `string`  | Required | cannot be null | [Untitled schema](zone-enter-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/entry_type")                   |
 | [activity_date](#activity_date)             | `string`  | Required | cannot be null | [Untitled schema](zone-enter-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/activity_date")             |
-| [zone](#zone)                               | `object`  | Required | cannot be null | [Untitled schema](zone-enter-properties-zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/zone")                              |
+| [zone](#zone)                               | `object`  | Required | cannot be null | [Untitled schema](fishing-tow-properties-zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/zone")                             |
 | [location](#location)                       | `object`  | Required | cannot be null | [Untitled schema](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")                          |
 | [catch_on_board](#catch_on_board)           | `array`   | Optional | cannot be null | [Untitled schema](zone-enter-properties-catch_on_board.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board")           |
 | [target_species](#target_species)           | `string`  | Optional | cannot be null | [Untitled schema](zone-enter-properties-target_species.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/target_species")           |
 | [directed_species](#directed_species)       | `string`  | Optional | cannot be null | [Untitled schema](zone-enter-properties-directed_species.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/directed_species")       |
 | [effort_zone](#effort_zone)                 | `string`  | Optional | cannot be null | [Untitled schema](zone-enter-properties-effort_zone.md "https&#x3A;//poseidat.org/schema/enum/effort-zone.json#/properties/effort_zone")                 |
 | [trans_zonal_fishing](#trans_zonal_fishing) | `boolean` | Optional | cannot be null | [Untitled schema](zone-enter-properties-trans_zonal_fishing.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/trans_zonal_fishing") |
+
+## entry_type
+
+The journal entry type identifer
+
+
+`entry_type`
+
+-   is required
+-   Type: `string`
+-   cannot be null
+-   defined in: [Untitled schema](zone-enter-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/entry_type")
+
+### entry_type Type
+
+`string`
+
+### entry_type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value          | Explanation |
+| :------------- | ----------- |
+| `"zone-enter"` |             |
+
+### entry_type Default Value
+
+The default value is:
+
+```json
+"zone-enter"
+```
 
 ## activity_date
 
@@ -60,13 +93,13 @@ Geographical zone for fishing activities
 `zone`
 
 -   is required
--   Type: `object` ([Details](zone-enter-properties-zone.md))
+-   Type: `object` ([Details](fishing-tow-properties-zone.md))
 -   cannot be null
--   defined in: [Untitled schema](zone-enter-properties-zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/zone")
+-   defined in: [Untitled schema](fishing-tow-properties-zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/zone")
 
 ### zone Type
 
-`object` ([Details](zone-enter-properties-zone.md))
+`object` ([Details](fishing-tow-properties-zone.md))
 
 ## location
 

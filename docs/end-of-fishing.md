@@ -23,8 +23,41 @@ all of
 
 | Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                   |
 | :------------------------------ | -------- | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [entry_type](#entry_type)       | `string` | Required | cannot be null | [End of fishing activity](end-of-fishing-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/end-of-fishing.json#/properties/entry_type")       |
 | [trip](#trip)                   | `object` | Required | cannot be null | [End of fishing activity](arrival-properties-trip.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")                               |
 | [activity_date](#activity_date) | `string` | Required | cannot be null | [End of fishing activity](end-of-fishing-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/end-of-fishing.json#/properties/activity_date") |
+
+## entry_type
+
+The journal entry type identifer
+
+
+`entry_type`
+
+-   is required
+-   Type: `string`
+-   cannot be null
+-   defined in: [End of fishing activity](end-of-fishing-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/end-of-fishing.json#/properties/entry_type")
+
+### entry_type Type
+
+`string`
+
+### entry_type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value              | Explanation |
+| :----------------- | ----------- |
+| `"end-of-fishing"` |             |
+
+### entry_type Default Value
+
+The default value is:
+
+```json
+"end-of-fishing"
+```
 
 ## trip
 

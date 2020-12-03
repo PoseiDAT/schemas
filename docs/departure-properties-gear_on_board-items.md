@@ -19,14 +19,14 @@ Fishing gear details
 
 | Property                | Type     | Required | Nullable       | Defined by                                                                                                                              |
 | :---------------------- | -------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| [code](#code)           | `string` | Required | cannot be null | [Untitled schema](fishing-gear-properties-code.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/code")           |
+| [code](#code)           | `string` | Required | cannot be null | [Untitled schema](fishing-gear-properties-code.md "https&#x3A;//poseidat.org/schema/enum/fishing-gear-type.json#/properties/code")      |
 | [mesh_size](#mesh_size) | `number` | Optional | cannot be null | [Untitled schema](fishing-gear-properties-mesh_size.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/mesh_size") |
 | [amount](#amount)       | `number` | Optional | cannot be null | [Untitled schema](fishing-gear-properties-amount.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/amount")       |
 | [length](#length)       | `number` | Optional | cannot be null | [Untitled schema](fishing-gear-properties-length.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/length")       |
 
 ## code
 
-Gear code corresponding to the FAO’s International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE
+Fishing gear type codes. Example: TBB, PS
 
 
 `code`
@@ -34,11 +34,60 @@ Gear code corresponding to the FAO’s International Standard Statistical Classi
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-gear-properties-code.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/code")
+-   defined in: [Untitled schema](fishing-gear-properties-code.md "https&#x3A;//poseidat.org/schema/enum/fishing-gear-type.json#/properties/code")
 
 ### code Type
 
 `string`
+
+### code Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value   | Explanation |
+| :------ | ----------- |
+| `"DRB"` |             |
+| `"FIX"` |             |
+| `"FPO"` |             |
+| `"GEN"` |             |
+| `"GN"`  |             |
+| `"GNC"` |             |
+| `"GND"` |             |
+| `"GNF"` |             |
+| `"GNS"` |             |
+| `"GTN"` |             |
+| `"GTR"` |             |
+| `"HMD"` |             |
+| `"KRK"` |             |
+| `"LA"`  |             |
+| `"LHM"` |             |
+| `"LHP"` |             |
+| `"LL"`  |             |
+| `"LLD"` |             |
+| `"LLS"` |             |
+| `"LTL"` |             |
+| `"LX"`  |             |
+| `"MIS"` |             |
+| `"NK"`  |             |
+| `"OTB"` |             |
+| `"OTM"` |             |
+| `"OTT"` |             |
+| `"PS"`  |             |
+| `"PS1"` |             |
+| `"PS2"` |             |
+| `"PTB"` |             |
+| `"PTM"` |             |
+| `"PUL"` |             |
+| `"RG"`  |             |
+| `"SDN"` |             |
+| `"SPR"` |             |
+| `"SSC"` |             |
+| `"SV"`  |             |
+| `"SX"`  |             |
+| `"TB"`  |             |
+| `"TBB"` |             |
+| `"TBN"` |             |
+| `"TBS"` |             |
 
 ## mesh_size
 

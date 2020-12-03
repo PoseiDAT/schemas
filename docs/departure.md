@@ -21,14 +21,47 @@ all of
 
 # Departure Properties
 
-| Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                                   |
-| :-------------------------------------------- | -------- | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [trip](#trip)                                 | `object` | Required | cannot be null | [Departure](arrival-properties-trip.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")                                             |
-| [activity_date](#activity_date)               | `string` | Required | cannot be null | [Departure](departure-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/activity_date")                         |
-| [port](#port)                                 | `object` | Required | cannot be null | [Departure](arrival-properties-port.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/port")                                                   |
-| [anticipated_activity](#anticipated_activity) | `string` | Optional | cannot be null | [Departure](departure-properties-anticipated_activity.md "https&#x3A;//poseidat.org/schema/enum/anticipated-activity.json#/properties/anticipated_activity") |
-| [gear_on_board](#gear_on_board)               | `array`  | Optional | cannot be null | [Departure](departure-properties-gear_on_board.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/gear_on_board")                         |
-| [catch_on_board](#catch_on_board)             | `array`  | Optional | cannot be null | [Departure](departure-properties-catch_on_board.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/catch_on_board")                       |
+| Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                               |
+| :-------------------------------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [entry_type](#entry_type)                     | `string` | Required | cannot be null | [Departure](departure-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/entry_type")                           |
+| [trip](#trip)                                 | `object` | Required | cannot be null | [Departure](arrival-properties-trip.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")                                         |
+| [activity_date](#activity_date)               | `string` | Required | cannot be null | [Departure](departure-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/activity_date")                     |
+| [port](#port)                                 | `object` | Required | cannot be null | [Departure](arrival-properties-port.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/port")                                               |
+| [anticipated_activity](#anticipated_activity) | `string` | Optional | cannot be null | [Departure](departure-properties-anticipated_activity.md "https&#x3A;//poseidat.org/schema/enum/reason-departure.json#/properties/anticipated_activity") |
+| [gear_on_board](#gear_on_board)               | `array`  | Optional | cannot be null | [Departure](departure-properties-gear_on_board.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/gear_on_board")                     |
+| [catch_on_board](#catch_on_board)             | `array`  | Optional | cannot be null | [Departure](departure-properties-catch_on_board.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/catch_on_board")                   |
+
+## entry_type
+
+The journal entry type identifer
+
+
+`entry_type`
+
+-   is required
+-   Type: `string`
+-   cannot be null
+-   defined in: [Departure](departure-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/departure.json#/properties/entry_type")
+
+### entry_type Type
+
+`string`
+
+### entry_type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value         | Explanation |
+| :------------ | ----------- |
+| `"departure"` |             |
+
+### entry_type Default Value
+
+The default value is:
+
+```json
+"departure"
+```
 
 ## trip
 
@@ -84,7 +117,7 @@ Fishing port details
 
 ## anticipated_activity
 
-The anticipated activity for the fishing trip. Please check the wiki for the meaning of these codes.
+The reason for the vessel to depart from port. Please check the wiki for the meaning of these codes.
 
 
 `anticipated_activity`
@@ -92,7 +125,7 @@ The anticipated activity for the fishing trip. Please check the wiki for the mea
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Departure](departure-properties-anticipated_activity.md "https&#x3A;//poseidat.org/schema/enum/anticipated-activity.json#/properties/anticipated_activity")
+-   defined in: [Departure](departure-properties-anticipated_activity.md "https&#x3A;//poseidat.org/schema/enum/reason-departure.json#/properties/anticipated_activity")
 
 ### anticipated_activity Type
 
@@ -104,11 +137,11 @@ The anticipated activity for the fishing trip. Please check the wiki for the mea
 
 | Value   | Explanation |
 | :------ | ----------- |
-| `"STE"` |             |
 | `"FIS"` |             |
 | `"GUD"` |             |
 | `"OTH"` |             |
 | `"SCR"` |             |
+| `"STE"` |             |
 | `"TST"` |             |
 
 ## gear_on_board

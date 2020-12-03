@@ -21,6 +21,7 @@ The shared properties for all entries
 | :-------------------------------- | --------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
 | [journal_id](#journal_id)         | `string`  | Required | cannot be null | [BaseEntry](base-entry-properties-journal_id.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/journal_id")         |
 | [entry_id](#entry_id)             | `string`  | Required | cannot be null | [BaseEntry](base-entry-properties-entry_id.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_id")             |
+| [entry_type](#entry_type)         | `string`  | Required | cannot be null | [BaseEntry](base-entry-properties-entry_type.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_type")         |
 | [entry_datetime](#entry_datetime) | `string`  | Optional | cannot be null | [BaseEntry](base-entry-properties-entry_datetime.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_datetime") |
 | [revision](#revision)             | `string`  | Required | cannot be null | [BaseEntry](base-entry-properties-revision.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/revision")             |
 | [immutable](#immutable)           | `boolean` | Required | cannot be null | [BaseEntry](base-entry-properties-immutable.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/immutable")           |
@@ -65,6 +66,22 @@ The unique identifier for the entry (UUID v4)
 ### entry_id Constraints
 
 **UUID**: the string must be a UUID, according to [RFC 4122](https://tools.ietf.org/html/rfc4122 "check the specification")
+
+## entry_type
+
+The journal entry type identifer
+
+
+`entry_type`
+
+-   is required
+-   Type: `string`
+-   cannot be null
+-   defined in: [BaseEntry](base-entry-properties-entry_type.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_type")
+
+### entry_type Type
+
+`string`
 
 ## entry_datetime
 

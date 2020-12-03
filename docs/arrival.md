@@ -23,11 +23,44 @@ all of
 
 | Property                          | Type     | Required | Nullable       | Defined by                                                                                                                             |
 | :-------------------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
+| [entry_type](#entry_type)         | `string` | Required | cannot be null | [Arrival](arrival-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/arrival.json#/properties/entry_type")               |
 | [trip](#trip)                     | `object` | Required | cannot be null | [Arrival](arrival-properties-trip.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")                         |
 | [activity_date](#activity_date)   | `string` | Required | cannot be null | [Arrival](arrival-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/arrival.json#/properties/activity_date")         |
 | [port](#port)                     | `object` | Required | cannot be null | [Arrival](arrival-properties-port.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/port")                               |
 | [reason_arrival](#reason_arrival) | `string` | Required | cannot be null | [Arrival](arrival-properties-reason_arrival.md "https&#x3A;//poseidat.org/schema/enum/reason-arrival.json#/properties/reason_arrival") |
 | [catch_on_board](#catch_on_board) | `array`  | Optional | cannot be null | [Arrival](arrival-properties-catch_on_board.md "https&#x3A;//poseidat.org/schema/entry/arrival.json#/properties/catch_on_board")       |
+
+## entry_type
+
+The journal entry type identifer
+
+
+`entry_type`
+
+-   is required
+-   Type: `string`
+-   cannot be null
+-   defined in: [Arrival](arrival-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/arrival.json#/properties/entry_type")
+
+### entry_type Type
+
+`string`
+
+### entry_type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value       | Explanation |
+| :---------- | ----------- |
+| `"arrival"` |             |
+
+### entry_type Default Value
+
+The default value is:
+
+```json
+"arrival"
+```
 
 ## trip
 
