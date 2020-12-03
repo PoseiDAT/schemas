@@ -17,15 +17,48 @@ A device measurement journal entry
 
 all of
 
--   [BaseEntry](departure-allof-baseentry.md "check type definition")
+-   [BaseEntry](arrival-allof-baseentry.md "check type definition")
 
 # DeviceMeasurement Properties
 
-| Property                | Type     | Required | Nullable       | Defined by                                                                                                                                             |
-| :---------------------- | -------- | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [device_id](#device_id) | `string` | Required | cannot be null | [DeviceMeasurement](device-measurement-properties-device_id.md "https&#x3A;//poseidat.org/schema/entry/device-measurement.json#/properties/device_id") |
-| [value](#value)         | `number` | Required | cannot be null | [DeviceMeasurement](device-measurement-properties-value.md "https&#x3A;//poseidat.org/schema/entry/device-measurement.json#/properties/value")         |
-| [timestamp](#timestamp) | `string` | Required | cannot be null | [DeviceMeasurement](device-measurement-properties-timestamp.md "https&#x3A;//poseidat.org/schema/entry/device-measurement.json#/properties/timestamp") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                               |
+| :------------------------ | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [entry_type](#entry_type) | `string` | Required | cannot be null | [DeviceMeasurement](device-measurement-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/device-measurement.json#/properties/entry_type") |
+| [device_id](#device_id)   | `string` | Required | cannot be null | [DeviceMeasurement](device-measurement-properties-device_id.md "https&#x3A;//poseidat.org/schema/entry/device-measurement.json#/properties/device_id")   |
+| [value](#value)           | `number` | Required | cannot be null | [DeviceMeasurement](device-measurement-properties-value.md "https&#x3A;//poseidat.org/schema/entry/device-measurement.json#/properties/value")           |
+| [timestamp](#timestamp)   | `string` | Required | cannot be null | [DeviceMeasurement](device-measurement-properties-timestamp.md "https&#x3A;//poseidat.org/schema/entry/device-measurement.json#/properties/timestamp")   |
+
+## entry_type
+
+The journal entry type identifer
+
+
+`entry_type`
+
+-   is required
+-   Type: `string`
+-   cannot be null
+-   defined in: [DeviceMeasurement](device-measurement-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/device-measurement.json#/properties/entry_type")
+
+### entry_type Type
+
+`string`
+
+### entry_type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                  | Explanation |
+| :--------------------- | ----------- |
+| `"device-measurement"` |             |
+
+### entry_type Default Value
+
+The default value is:
+
+```json
+"device-measurement"
+```
 
 ## device_id
 

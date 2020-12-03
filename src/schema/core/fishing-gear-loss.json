@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/fishing-gear-loss.json",
+  "description": "A gear loss event details",
+  "properties": {
+    "date": {
+      "description": "The datetime the gear loss took place",
+      "type": "string",
+      "format": "date-time"
+    },
+    "location": {
+      "$ref": "https://poseidat.org/schema/core/position.json",
+      "description": "The geographical location where the gear loss took place"
+    },
+    "identifier": {
+      "description": "The identification tag attached to the lost gear. NLD: NI, GBR: GBRGNFN",
+      "type": "string"
+    },
+    "remarks": {
+      "description": "Free form text to describe the reason of the gear loss. NLD: VT, GBR: GBRCOM",
+      "type": "string"
+    },
+    "amount_lost": {
+      "description": "The amount of gear items lost, GBR: NN",
+      "type": "number"
+    }
+  },
+  "required": [
+    "data",
+    "location",
+    "identifier"
+  ],
+  "type": "object"
+}

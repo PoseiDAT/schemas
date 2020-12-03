@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/entry/zone-enter.json",
+  "description": "Enter declaration of a fishing zone",
+  "properties": {
+    "entry_type": {
+      "description": "The journal entry type identifer",
+      "type": "string",
+      "enum": [
+        "zone-enter"
+      ],
+      "default": "zone-enter"
+    },
+    "activity_date": {
+      "description": "The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA",
+      "type": "string",
+      "format": "date-time"
+    },
+    "zone": {
+      "description": "The zone being entered",
+      "$ref": "https://poseidat.org/schema/core/fishing-zone.json"
+    },
+    "location": {
+      "description": "The geographical location where the entry took place",
+      "$ref": "https://poseidat.org/schema/core/position.json"
+    },
+    "catch_on_board": {
+      "description": "The previously caught fish present on the vessel at the time of entry",
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "target_species": {
+      "description": "An indication of the target species for the fishing activity. NLD: TS, GBR: TS",
+      "type": "string"
+    },
+    "directed_species": {
+      "description": "An indication of the directed species for the fishing activity. GBR: GBRDS",
+      "type": "string"
+    },
+    "effort_zone": {
+      "description": "The fishing effort zone. Example: A (ICES V-VI). GBR: GBRFE",
+      "$ref": "https://poseidat.org/schema/enum/effort-zone.json"
+    },
+    "trans_zonal_fishing": {
+      "description": "Indicates the vessel has engaged in trans-zonal fishing: GRB: GBRTRZ",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "entry_type",
+    "activity_date",
+    "location",
+    "zone"
+  ],
+  "allOf": [
+    { "$ref": "https://poseidat.org/schema/core/base-entry.json" }
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

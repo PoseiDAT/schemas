@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/fishing-zone.json",
+  "description": "Geographical zone for fishing activities",
+  "properties": {
+    "economical_zone": {
+      "description": "The economical zone. This is a 3 letter ISO country code",
+      "type": "string"
+    },
+    "fao_area": {
+      "description": "The FAO area. Example: 27.3.d.28.2. This is the 1st value: 27",
+      "type": "string"
+    },
+    "fao_subarea": {
+      "description": "The FAO sub-area. Example: 27.3.d.28.2. This is the 2nd value: 3",
+      "type": "string"
+    },
+    "fao_division": {
+      "description": "The FAO division. Example: 27.3.d.28.2. This is the 3rd value: d",
+      "type": "string"
+    },
+    "fao_subdivision": {
+      "description": "The FAO subdivision. Example: 27.3.d.28.2. This is the 4th value: 28",
+      "type": "string"
+    },
+    "fao_unit": {
+      "description": "The FAO unit. Example: 27.3.d.28.2. This is the 5th value: 2",
+      "type": "string"
+    },
+    "ices_rectangle": {
+      "description": "The ICES statistical rectangle. Example: 26A0",
+      "type": "string"
+    },
+    "effort_zone": {
+      "description": "The fishing effort zone. Example: A (ICES V-VI)",
+      "type": "string"
+    },
+    "regional_body": {
+      "description": "The regional fishery body. Example: AIDCP (Agreement on the International Dolphin Conservation Program)",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

@@ -17,13 +17,46 @@ An entry detailing the equipment installed on a vessel. One 1 should exist per j
 
 all of
 
--   [BaseEntry](departure-allof-baseentry.md "check type definition")
+-   [BaseEntry](arrival-allof-baseentry.md "check type definition")
 
 # EquipmentInventory Properties
 
-| Property                | Type    | Required | Nullable       | Defined by                                                                                                                                                |
-| :---------------------- | ------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [equipment](#equipment) | `array` | Required | cannot be null | [EquipmentInventory](equipment-inventory-properties-equipment.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                  |
+| :------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [entry_type](#entry_type) | `string` | Required | cannot be null | [EquipmentInventory](equipment-inventory-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type") |
+| [equipment](#equipment)   | `array`  | Required | cannot be null | [EquipmentInventory](equipment-inventory-properties-equipment.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment")   |
+
+## entry_type
+
+The journal entry type identifer
+
+
+`entry_type`
+
+-   is required
+-   Type: `string`
+-   cannot be null
+-   defined in: [EquipmentInventory](equipment-inventory-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type")
+
+### entry_type Type
+
+`string`
+
+### entry_type Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                   | Explanation |
+| :---------------------- | ----------- |
+| `"equipment-inventory"` |             |
+
+### entry_type Default Value
+
+The default value is:
+
+```json
+"equipment-inventory"
+```
 
 ## equipment
 

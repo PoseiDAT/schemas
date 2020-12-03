@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/vessel-inspection.json",
+  "description": "Vessel inspection details",
+  "properties": {
+    "date": {
+      "description": "The datetime the inspection took place",
+      "type": "string",
+      "format": "date-time"
+    },
+    "location": {
+      "$ref": "https://poseidat.org/schema/core/position.json",
+      "description": "The geographical location of the inspection"
+    },
+    "country": {
+      "description": "The country performing the inspection as a 3 letter ISO code. Example: NLD, BEL, GBR. NLD: IC",
+      "type": "string"
+    },
+    "identifier": {
+      "description": "The identification of the inspecting official. NLD: IA",
+      "type": "string"
+    }
+  },
+  "required": [
+    "date",
+    "location",
+    "identifier"
+  ],
+  "type": "object"
+}

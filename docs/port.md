@@ -1,0 +1,61 @@
+# Untitled object in undefined Schema
+
+```txt
+https://poseidat.org/schema/core/port.json
+```
+
+Fishing port details
+
+
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                 |
+| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ---------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [port.json](schemas/core/port.json "open original schema") |
+
+## Untitled object in undefined Type
+
+`object` ([Details](port.md))
+
+# undefined Properties
+
+| Property              | Type     | Required | Nullable       | Defined by                                                                                                                      |
+| :-------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------ |
+| [code](#code)         | `string` | Required | cannot be null | [Untitled schema](port-properties-code.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/code")                   |
+| [location](#location) | `object` | Optional | cannot be null | [Untitled schema](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location") |
+
+## code
+
+The international port code. Format is 2 letter country code and 3 letter port code. Example: NLURK, BEANR, GBHUL
+
+
+`code`
+
+-   is required
+-   Type: `string`
+-   cannot be null
+-   defined in: [Untitled schema](port-properties-code.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/code")
+
+### code Type
+
+`string`
+
+### code Constraints
+
+**maximum length**: the maximum number of characters for this string is: `5`
+
+**minimum length**: the minimum number of characters for this string is: `5`
+
+## location
+
+A navigational position that can be used in an entry
+
+
+`location`
+
+-   is optional
+-   Type: `object` ([Position](trip-entry-properties-position.md))
+-   cannot be null
+-   defined in: [Untitled schema](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
+
+### location Type
+
+`object` ([Position](trip-entry-properties-position.md))
