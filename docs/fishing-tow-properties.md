@@ -1,4 +1,4 @@
-# Untitled schema Schema
+# Untitled undefined type in Fishing tow Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-tow.json#/properties

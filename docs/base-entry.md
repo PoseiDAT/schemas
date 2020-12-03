@@ -1,4 +1,4 @@
-# BaseEntry Schema
+# Base entry Schema
 
 ```txt
 https://poseidat.org/schema/core/base-entry.json
@@ -11,21 +11,21 @@ The shared properties for all entries
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ---------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [base-entry.json](schemas/core/base-entry.json "open original schema") |
 
-## BaseEntry Type
+## Base entry Type
 
-`object` ([BaseEntry](base-entry.md))
+`object` ([Base entry](base-entry.md))
 
-# BaseEntry Properties
+# Base entry Properties
 
-| Property                          | Type      | Required | Nullable       | Defined by                                                                                                                              |
-| :-------------------------------- | --------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| [journal_id](#journal_id)         | `string`  | Required | cannot be null | [BaseEntry](base-entry-properties-journal_id.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/journal_id")         |
-| [entry_id](#entry_id)             | `string`  | Required | cannot be null | [BaseEntry](base-entry-properties-entry_id.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_id")             |
-| [entry_type](#entry_type)         | `string`  | Required | cannot be null | [BaseEntry](base-entry-properties-entry_type.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_type")         |
-| [entry_datetime](#entry_datetime) | `string`  | Optional | cannot be null | [BaseEntry](base-entry-properties-entry_datetime.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_datetime") |
-| [revision](#revision)             | `string`  | Required | cannot be null | [BaseEntry](base-entry-properties-revision.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/revision")             |
-| [immutable](#immutable)           | `boolean` | Required | cannot be null | [BaseEntry](base-entry-properties-immutable.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/immutable")           |
-| [remarks](#remarks)               | `string`  | Optional | cannot be null | [BaseEntry](base-entry-properties-remarks.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/remarks")               |
+| Property                          | Type      | Required | Nullable       | Defined by                                                                                                                               |
+| :-------------------------------- | --------- | -------- | -------------- | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| [journal_id](#journal_id)         | `string`  | Required | cannot be null | [Base entry](base-entry-properties-journal_id.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/journal_id")         |
+| [entry_id](#entry_id)             | `string`  | Required | cannot be null | [Base entry](base-entry-properties-entry_id.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_id")             |
+| [entry_type](#entry_type)         | `string`  | Required | cannot be null | [Base entry](base-entry-properties-entry_type.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_type")         |
+| [entry_datetime](#entry_datetime) | `string`  | Optional | cannot be null | [Base entry](base-entry-properties-entry_datetime.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_datetime") |
+| [revision](#revision)             | `string`  | Required | cannot be null | [Base entry](base-entry-properties-revision.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/revision")             |
+| [immutable](#immutable)           | `boolean` | Required | cannot be null | [Base entry](base-entry-properties-immutable.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/immutable")           |
+| [remarks](#remarks)               | `string`  | Optional | cannot be null | [Base entry](base-entry-properties-remarks.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/remarks")               |
 
 ## journal_id
 
@@ -37,7 +37,7 @@ The unique identifier of the journal (UUID v4) this entry belongs to
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [BaseEntry](base-entry-properties-journal_id.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/journal_id")
+-   defined in: [Base entry](base-entry-properties-journal_id.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/journal_id")
 
 ### journal_id Type
 
@@ -57,7 +57,7 @@ The unique identifier for the entry (UUID v4)
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [BaseEntry](base-entry-properties-entry_id.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_id")
+-   defined in: [Base entry](base-entry-properties-entry_id.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_id")
 
 ### entry_id Type
 
@@ -77,7 +77,7 @@ The journal entry type identifer
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [BaseEntry](base-entry-properties-entry_type.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_type")
+-   defined in: [Base entry](base-entry-properties-entry_type.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_type")
 
 ### entry_type Type
 
@@ -93,7 +93,7 @@ The date and time the entry was logged in UTC in RFC3339 format
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [BaseEntry](base-entry-properties-entry_datetime.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_datetime")
+-   defined in: [Base entry](base-entry-properties-entry_datetime.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/entry_datetime")
 
 ### entry_datetime Type
 
@@ -113,7 +113,7 @@ The revision timestamp of this entry. Should be the time it was created.
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [BaseEntry](base-entry-properties-revision.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/revision")
+-   defined in: [Base entry](base-entry-properties-revision.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/revision")
 
 ### revision Type
 
@@ -133,7 +133,7 @@ Indicates this entry cannot be replaced with future revisions (default)
 -   is required
 -   Type: `boolean`
 -   cannot be null
--   defined in: [BaseEntry](base-entry-properties-immutable.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/immutable")
+-   defined in: [Base entry](base-entry-properties-immutable.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/immutable")
 
 ### immutable Type
 
@@ -149,7 +149,7 @@ Free form remarks that are to be added to this journal entry
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [BaseEntry](base-entry-properties-remarks.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/remarks")
+-   defined in: [Base entry](base-entry-properties-remarks.md "https&#x3A;//poseidat.org/schema/core/base-entry.json#/properties/remarks")
 
 ### remarks Type
 

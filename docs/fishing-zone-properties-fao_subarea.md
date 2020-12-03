@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in Fishing zone Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-zone.json#/properties/fao_subarea

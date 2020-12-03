@@ -1,4 +1,4 @@
-# Untitled object in undefined Schema
+# Port Schema
 
 ```txt
 https://poseidat.org/schema/core/port.json
@@ -11,16 +11,16 @@ Fishing port details
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ---------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [port.json](schemas/core/port.json "open original schema") |
 
-## Untitled object in undefined Type
+## Port Type
 
-`object` ([Details](port.md))
+`object` ([Port](port.md))
 
-# undefined Properties
+# Port Properties
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                                      |
-| :-------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------ |
-| [code](#code)         | `string` | Required | cannot be null | [Untitled schema](port-properties-code.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/code")                   |
-| [location](#location) | `object` | Optional | cannot be null | [Untitled schema](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location") |
+| Property              | Type     | Required | Nullable       | Defined by                                                                                                           |
+| :-------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------- |
+| [code](#code)         | `string` | Required | cannot be null | [Port](port-properties-code.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/code")                   |
+| [location](#location) | `object` | Optional | cannot be null | [Port](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location") |
 
 ## code
 
@@ -32,7 +32,7 @@ The international port code. Format is 2 letter country code and 3 letter port c
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](port-properties-code.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/code")
+-   defined in: [Port](port-properties-code.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/code")
 
 ### code Type
 
@@ -54,7 +54,7 @@ A navigational position that can be used in an entry
 -   is optional
 -   Type: `object` ([Position](trip-entry-properties-position.md))
 -   cannot be null
--   defined in: [Untitled schema](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
+-   defined in: [Port](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
 
 ### location Type
 

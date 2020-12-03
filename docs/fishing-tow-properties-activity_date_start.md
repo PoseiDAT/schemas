@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in Fishing tow Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-tow.json#/properties/activity_date_start

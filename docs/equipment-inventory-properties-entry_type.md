@@ -1,4 +1,4 @@
-# Untitled string in EquipmentInventory Schema
+# Untitled string in Equipment inventory Schema
 
 ```txt
 https://poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type

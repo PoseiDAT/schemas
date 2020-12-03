@@ -17,14 +17,14 @@ Notification of intent to cease all fishing activity for the trip
 
 all of
 
--   [BaseEntry](arrival-allof-baseentry.md "check type definition")
+-   [Base entry](arrival-allof-base-entry.md "check type definition")
 
 # End of fishing activity Properties
 
 | Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                   |
 | :------------------------------ | -------- | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [entry_type](#entry_type)       | `string` | Required | cannot be null | [End of fishing activity](end-of-fishing-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/end-of-fishing.json#/properties/entry_type")       |
-| [trip](#trip)                   | `object` | Required | cannot be null | [End of fishing activity](arrival-properties-trip.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")                               |
+| [trip](#trip)                   | `object` | Required | cannot be null | [End of fishing activity](arrival-properties-trip-entry.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")                         |
 | [activity_date](#activity_date) | `string` | Required | cannot be null | [End of fishing activity](end-of-fishing-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/end-of-fishing.json#/properties/activity_date") |
 
 ## entry_type
@@ -67,13 +67,13 @@ The trip related details of a journal entry
 `trip`
 
 -   is required
--   Type: `object` ([Details](arrival-properties-trip.md))
+-   Type: `object` ([Trip entry](arrival-properties-trip-entry.md))
 -   cannot be null
--   defined in: [End of fishing activity](arrival-properties-trip.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")
+-   defined in: [End of fishing activity](arrival-properties-trip-entry.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")
 
 ### trip Type
 
-`object` ([Details](arrival-properties-trip.md))
+`object` ([Trip entry](arrival-properties-trip-entry.md))
 
 ## activity_date
 

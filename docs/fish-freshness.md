@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Fish freshness Schema
 
 ```txt
 https://poseidat.org/schema/enum/fish-freshness.json
@@ -11,11 +11,11 @@ The freshness indication for processed fish species. Please check the wiki for t
 | :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------ |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [fish-freshness.json](schemas/enum/fish-freshness.json "open original schema") |
 
-## Untitled string in undefined Type
+## Fish freshness Type
 
-`string`
+`string` ([Fish freshness](fish-freshness.md))
 
-## Untitled string in undefined Constraints
+## Fish freshness Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

@@ -1,4 +1,4 @@
-# Untitled number in undefined Schema
+# Untitled number in Fishing gear Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear.json#/properties/length

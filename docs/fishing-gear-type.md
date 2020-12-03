@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Fishing gear type Schema
 
 ```txt
 https://poseidat.org/schema/enum/fishing-gear-type.json
@@ -11,11 +11,11 @@ Fishing gear type codes. Example: TBB, PS
 | :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------------ |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [fishing-gear-type.json](schemas/enum/fishing-gear-type.json "open original schema") |
 
-## Untitled string in undefined Type
+## Fishing gear type Type
 
-`string`
+`string` ([Fishing gear type](fishing-gear-type.md))
 
-## Untitled string in undefined Constraints
+## Fishing gear type Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

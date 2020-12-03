@@ -1,4 +1,4 @@
-# Untitled number in undefined Schema
+# Untitled number in Fishing gear gill net Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/number_of_nets

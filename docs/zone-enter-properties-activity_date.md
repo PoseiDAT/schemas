@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in ZoneEnter Schema
 
 ```txt
 https://poseidat.org/schema/entry/zone-enter.json#/properties/activity_date

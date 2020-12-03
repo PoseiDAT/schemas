@@ -1,4 +1,4 @@
-# Untitled number in undefined Schema
+# Untitled number in Fishing gear deployment Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/duration

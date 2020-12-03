@@ -221,23 +221,23 @@ export type IEntryArrivalEntryType = "arrival";
 /** A return to port event */
 export interface IEntryArrival extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryArrivalEntryType;
-  /** Trip related details for this entry */ trip: ICoreTripEntry;
+  /** Trip related details for this  entry */ trip: ICoreTripEntry;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The code of the port of arrival. These are 5 letter codes prefixed with a 2 letter country code and a 3 letter port identifier. Example: NLURK, BEANR */ port: ICorePort;
   /** The reason for the vessel to return to port. Please check the wiki for the meaning of these codes. */ reason_arrival: IEnumReasonArrival;
-  /** The caught fish present on board the vessel */ catch_on_board?: any[];
+  /** The caught fish present on board the vessel */ catch_on_board?: ICoreFishingCatch[];
 }
 
 export type IEntryDepartureEntryType = "departure";
 /** A departure from port event */
 export interface IEntryDeparture extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryDepartureEntryType;
-  /** Trip related details for this entry */ trip: ICoreTripEntry;
+  /** Trip related details for this  entry */ trip: ICoreTripEntry;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The code of the port of departure. These are 5 letter codes prefixed with a 2 letter country code and a 3 letter port identifier. Example: NLURK, BEANR */ port: ICorePort;
   /** The anticipated activity for the fishing trip. Please check the wiki for the meaning of these codes. */ anticipated_activity?: IEnumReasonDeparture;
   /** The gear present on board the vessel */ gear_on_board?: ICoreFishingGear[];
-  /** The previously caught fish present on board the vessel */ catch_on_board?: any[];
+  /** The previously caught fish present on board the vessel */ catch_on_board?: ICoreFishingCatch[];
 }
 
 export type IEntryDeviceMeasurementEntryType = "device-measurement";
@@ -279,7 +279,7 @@ export interface IEntryZoneEnter extends ICoreBaseEntry {
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The zone being entered */ zone: ICoreFishingZone;
   /** The geographical location where the entry took place */ location: ICorePosition;
-  /** The previously caught fish present on the vessel at the time of entry */ catch_on_board?: any[];
+  /** The previously caught fish present on the vessel at the time of entry */ catch_on_board?: ICoreFishingCatch[];
   /** An indication of the target species for the fishing activity. NLD: TS, GBR: TS */ target_species?: string;
   /** An indication of the directed species for the fishing activity. GBR: GBRDS */ directed_species?: string;
   /** The fishing effort zone. Example: A (ICES V-VI). GBR: GBRFE */ effort_zone?: IEnumEffortZone;
@@ -293,7 +293,7 @@ export interface IEntryZoneExit extends ICoreBaseEntry {
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The zone being entered */ zone: ICoreFishingZone;
   /** The geographical location where the entry took place */ location: ICorePosition;
-  /** The previously caught fish present on the vessel at the time of entry */ catch_on_board?: any[];
+  /** The previously caught fish present on the vessel at the time of entry */ catch_on_board?: ICoreFishingCatch[];
   /** An indication of the target species for the fishing activity. Only GBR: TS */ target_species?: string;
   /** The fishing effort zone. Example: A (ICES V-VI). GBR: GBRFE */ effort_zone?: IEnumEffortZone;
   /** Indicates the vessel has engaged in trans-zonal fishing: GRB: GBRTRZ */ trans_zonal_fishing?: boolean;

@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Fish package type Schema
 
 ```txt
 https://poseidat.org/schema/enum/fish-package-type.json
@@ -11,11 +11,11 @@ The package types for processed fish species. Please check the wiki for the mean
 | :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------------ |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [fish-package-type.json](schemas/enum/fish-package-type.json "open original schema") |
 
-## Untitled string in undefined Type
+## Fish package type Type
 
-`string`
+`string` ([Fish package type](fish-package-type.md))
 
-## Untitled string in undefined Constraints
+## Fish package type Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

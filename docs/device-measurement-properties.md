@@ -1,4 +1,4 @@
-# Untitled undefined type in DeviceMeasurement Schema
+# Untitled undefined type in Device measurement Schema
 
 ```txt
 https://poseidat.org/schema/entry/device-measurement.json#/properties

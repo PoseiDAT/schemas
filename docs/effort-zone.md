@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Effort zone Schema
 
 ```txt
 https://poseidat.org/schema/enum/effort-zone.json
@@ -11,11 +11,11 @@ The fishing effort zone. Example: A (ICES V-VI)
 | :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------ |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [effort-zone.json](schemas/enum/effort-zone.json "open original schema") |
 
-## Untitled string in undefined Type
+## Effort zone Type
 
-`string`
+`string` ([Effort zone](effort-zone.md))
 
-## Untitled string in undefined Constraints
+## Effort zone Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

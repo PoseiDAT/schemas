@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in ZoneExit Schema
 
 ```txt
 https://poseidat.org/schema/entry/zone-exit.json#/properties/target_species

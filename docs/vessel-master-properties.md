@@ -1,4 +1,4 @@
-# Untitled schema Schema
+# Untitled undefined type in Vessel master Schema
 
 ```txt
 https://poseidat.org/schema/core/vessel-master.json#/properties

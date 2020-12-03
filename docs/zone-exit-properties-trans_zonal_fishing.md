@@ -1,4 +1,4 @@
-# Untitled boolean in undefined Schema
+# Untitled boolean in ZoneExit Schema
 
 ```txt
 https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing

@@ -1,4 +1,4 @@
-# Untitled number in DeviceMeasurement Schema
+# Untitled number in Device measurement Schema
 
 ```txt
 https://poseidat.org/schema/entry/device-measurement.json#/properties/value

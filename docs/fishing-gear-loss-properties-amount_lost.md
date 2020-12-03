@@ -1,4 +1,4 @@
-# Untitled number in undefined Schema
+# Untitled number in Fishing gear loss Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/amount_lost

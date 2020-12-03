@@ -1,4 +1,4 @@
-# Untitled array in undefined Schema
+# Untitled array in ZoneExit Schema
 
 ```txt
 https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones
@@ -13,4 +13,4 @@ The zones involved in trans-zonal fishing. NLD: NLTRZ
 
 ## trans_zonal_fishing_zones Type
 
-`object[]` ([Details](fishing-tow-properties-zone.md))
+`object[]` ([Fishing zone](fishing-tow-properties-fishing-zone.md))

@@ -1,4 +1,4 @@
-# Untitled schema Schema
+# Untitled undefined type in ZoneExit Schema
 
 ```txt
 https://poseidat.org/schema/entry/zone-exit.json#/properties

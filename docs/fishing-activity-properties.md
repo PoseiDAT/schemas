@@ -1,4 +1,4 @@
-# Untitled undefined type in End of fishing activity Schema
+# Untitled undefined type in Fishing activity Schema
 
 ```txt
 https://poseidat.org/schema/entry/fishing-activity.json#/properties

@@ -1,4 +1,4 @@
-# Untitled object in undefined Schema
+# Untitled object in ZoneEnter Schema
 
 ```txt
 https://poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board/items

@@ -1,4 +1,4 @@
-# Untitled object in undefined Schema
+# Fishing zone Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-zone.json
@@ -11,23 +11,23 @@ Geographical zone for fishing activities
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | -------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [fishing-zone.json](schemas/core/fishing-zone.json "open original schema") |
 
-## Untitled object in undefined Type
+## Fishing zone Type
 
-`object` ([Details](fishing-zone.md))
+`object` ([Fishing zone](fishing-zone.md))
 
-# undefined Properties
+# Fishing zone Properties
 
-| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                          |
-| :---------------------------------- | -------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [economical_zone](#economical_zone) | `string` | Optional | cannot be null | [Untitled schema](fishing-zone-properties-economical_zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/economical_zone") |
-| [fao_area](#fao_area)               | `string` | Optional | cannot be null | [Untitled schema](fishing-zone-properties-fao_area.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_area")               |
-| [fao_subarea](#fao_subarea)         | `string` | Optional | cannot be null | [Untitled schema](fishing-zone-properties-fao_subarea.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_subarea")         |
-| [fao_division](#fao_division)       | `string` | Optional | cannot be null | [Untitled schema](fishing-zone-properties-fao_division.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_division")       |
-| [fao_subdivision](#fao_subdivision) | `string` | Optional | cannot be null | [Untitled schema](fishing-zone-properties-fao_subdivision.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_subdivision") |
-| [fao_unit](#fao_unit)               | `string` | Optional | cannot be null | [Untitled schema](fishing-zone-properties-fao_unit.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_unit")               |
-| [ices_rectangle](#ices_rectangle)   | `string` | Optional | cannot be null | [Untitled schema](fishing-zone-properties-ices_rectangle.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/ices_rectangle")   |
-| [effort_zone](#effort_zone)         | `string` | Optional | cannot be null | [Untitled schema](fishing-zone-properties-effort_zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/effort_zone")         |
-| [regional_body](#regional_body)     | `string` | Optional | cannot be null | [Untitled schema](fishing-zone-properties-regional_body.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/regional_body")     |
+| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                       |
+| :---------------------------------- | -------- | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| [economical_zone](#economical_zone) | `string` | Optional | cannot be null | [Fishing zone](fishing-zone-properties-economical_zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/economical_zone") |
+| [fao_area](#fao_area)               | `string` | Optional | cannot be null | [Fishing zone](fishing-zone-properties-fao_area.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_area")               |
+| [fao_subarea](#fao_subarea)         | `string` | Optional | cannot be null | [Fishing zone](fishing-zone-properties-fao_subarea.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_subarea")         |
+| [fao_division](#fao_division)       | `string` | Optional | cannot be null | [Fishing zone](fishing-zone-properties-fao_division.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_division")       |
+| [fao_subdivision](#fao_subdivision) | `string` | Optional | cannot be null | [Fishing zone](fishing-zone-properties-fao_subdivision.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_subdivision") |
+| [fao_unit](#fao_unit)               | `string` | Optional | cannot be null | [Fishing zone](fishing-zone-properties-fao_unit.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_unit")               |
+| [ices_rectangle](#ices_rectangle)   | `string` | Optional | cannot be null | [Fishing zone](fishing-zone-properties-ices_rectangle.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/ices_rectangle")   |
+| [effort_zone](#effort_zone)         | `string` | Optional | cannot be null | [Fishing zone](fishing-zone-properties-effort_zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/effort_zone")         |
+| [regional_body](#regional_body)     | `string` | Optional | cannot be null | [Fishing zone](fishing-zone-properties-regional_body.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/regional_body")     |
 
 ## economical_zone
 
@@ -39,7 +39,7 @@ The economical zone. This is a 3 letter ISO country code
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-zone-properties-economical_zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/economical_zone")
+-   defined in: [Fishing zone](fishing-zone-properties-economical_zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/economical_zone")
 
 ### economical_zone Type
 
@@ -55,7 +55,7 @@ The FAO area. Example: 27.3.d.28.2. This is the 1st value: 27
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-zone-properties-fao_area.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_area")
+-   defined in: [Fishing zone](fishing-zone-properties-fao_area.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_area")
 
 ### fao_area Type
 
@@ -71,7 +71,7 @@ The FAO sub-area. Example: 27.3.d.28.2. This is the 2nd value: 3
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-zone-properties-fao_subarea.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_subarea")
+-   defined in: [Fishing zone](fishing-zone-properties-fao_subarea.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_subarea")
 
 ### fao_subarea Type
 
@@ -87,7 +87,7 @@ The FAO division. Example: 27.3.d.28.2. This is the 3rd value: d
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-zone-properties-fao_division.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_division")
+-   defined in: [Fishing zone](fishing-zone-properties-fao_division.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_division")
 
 ### fao_division Type
 
@@ -103,7 +103,7 @@ The FAO subdivision. Example: 27.3.d.28.2. This is the 4th value: 28
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-zone-properties-fao_subdivision.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_subdivision")
+-   defined in: [Fishing zone](fishing-zone-properties-fao_subdivision.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_subdivision")
 
 ### fao_subdivision Type
 
@@ -119,7 +119,7 @@ The FAO unit. Example: 27.3.d.28.2. This is the 5th value: 2
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-zone-properties-fao_unit.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_unit")
+-   defined in: [Fishing zone](fishing-zone-properties-fao_unit.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/fao_unit")
 
 ### fao_unit Type
 
@@ -135,7 +135,7 @@ The ICES statistical rectangle. Example: 26A0
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-zone-properties-ices_rectangle.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/ices_rectangle")
+-   defined in: [Fishing zone](fishing-zone-properties-ices_rectangle.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/ices_rectangle")
 
 ### ices_rectangle Type
 
@@ -151,7 +151,7 @@ The fishing effort zone. Example: A (ICES V-VI)
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-zone-properties-effort_zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/effort_zone")
+-   defined in: [Fishing zone](fishing-zone-properties-effort_zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/effort_zone")
 
 ### effort_zone Type
 
@@ -167,7 +167,7 @@ The regional fishery body. Example: AIDCP (Agreement on the International Dolphi
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-zone-properties-regional_body.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/regional_body")
+-   defined in: [Fishing zone](fishing-zone-properties-regional_body.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/regional_body")
 
 ### regional_body Type
 

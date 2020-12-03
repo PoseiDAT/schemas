@@ -17,18 +17,18 @@ A return to port event
 
 all of
 
--   [BaseEntry](arrival-allof-baseentry.md "check type definition")
+-   [Base entry](arrival-allof-base-entry.md "check type definition")
 
 # Arrival Properties
 
 | Property                          | Type     | Required | Nullable       | Defined by                                                                                                                             |
 | :-------------------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
 | [entry_type](#entry_type)         | `string` | Required | cannot be null | [Arrival](arrival-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/arrival.json#/properties/entry_type")               |
-| [trip](#trip)                     | `object` | Required | cannot be null | [Arrival](arrival-properties-trip.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")                         |
+| [trip](#trip)                     | `object` | Required | cannot be null | [Arrival](arrival-properties-trip-entry.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")                   |
 | [activity_date](#activity_date)   | `string` | Required | cannot be null | [Arrival](arrival-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/arrival.json#/properties/activity_date")         |
 | [port](#port)                     | `object` | Required | cannot be null | [Arrival](arrival-properties-port.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/port")                               |
-| [reason_arrival](#reason_arrival) | `string` | Required | cannot be null | [Arrival](arrival-properties-reason_arrival.md "https&#x3A;//poseidat.org/schema/enum/reason-arrival.json#/properties/reason_arrival") |
-| [catch_on_board](#catch_on_board) | `array`  | Optional | cannot be null | [Arrival](arrival-properties-catch_on_board.md "https&#x3A;//poseidat.org/schema/entry/arrival.json#/properties/catch_on_board")       |
+| [reason_arrival](#reason_arrival) | `string` | Required | cannot be null | [Arrival](arrival-properties-reason-arrival.md "https&#x3A;//poseidat.org/schema/enum/reason-arrival.json#/properties/reason_arrival") |
+| [catch_on_board](#catch_on_board) | `array`  | Optional | cannot be null | [Arrival](arrival-properties-catch-on-board.md "https&#x3A;//poseidat.org/schema/entry/arrival.json#/properties/catch_on_board")       |
 
 ## entry_type
 
@@ -70,13 +70,13 @@ The trip related details of a journal entry
 `trip`
 
 -   is required
--   Type: `object` ([Details](arrival-properties-trip.md))
+-   Type: `object` ([Trip entry](arrival-properties-trip-entry.md))
 -   cannot be null
--   defined in: [Arrival](arrival-properties-trip.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")
+-   defined in: [Arrival](arrival-properties-trip-entry.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")
 
 ### trip Type
 
-`object` ([Details](arrival-properties-trip.md))
+`object` ([Trip entry](arrival-properties-trip-entry.md))
 
 ## activity_date
 
@@ -106,13 +106,13 @@ Fishing port details
 `port`
 
 -   is required
--   Type: `object` ([Details](arrival-properties-port.md))
+-   Type: `object` ([Port](arrival-properties-port.md))
 -   cannot be null
 -   defined in: [Arrival](arrival-properties-port.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/port")
 
 ### port Type
 
-`object` ([Details](arrival-properties-port.md))
+`object` ([Port](arrival-properties-port.md))
 
 ## reason_arrival
 
@@ -122,13 +122,13 @@ The reason for the vessel to return to port. Please check the wiki for the meani
 `reason_arrival`
 
 -   is required
--   Type: `string`
+-   Type: `string` ([Reason arrival](arrival-properties-reason-arrival.md))
 -   cannot be null
--   defined in: [Arrival](arrival-properties-reason_arrival.md "https&#x3A;//poseidat.org/schema/enum/reason-arrival.json#/properties/reason_arrival")
+-   defined in: [Arrival](arrival-properties-reason-arrival.md "https&#x3A;//poseidat.org/schema/enum/reason-arrival.json#/properties/reason_arrival")
 
 ### reason_arrival Type
 
-`string`
+`string` ([Reason arrival](arrival-properties-reason-arrival.md))
 
 ### reason_arrival Constraints
 
@@ -155,10 +155,10 @@ The caught fish present on board the vessel
 `catch_on_board`
 
 -   is optional
--   Type: `object[]` ([Details](arrival-properties-catch_on_board-items.md))
+-   Type: `object[]` ([Fishing catch](arrival-properties-catch-on-board-fishing-catch.md))
 -   cannot be null
--   defined in: [Arrival](arrival-properties-catch_on_board.md "https&#x3A;//poseidat.org/schema/entry/arrival.json#/properties/catch_on_board")
+-   defined in: [Arrival](arrival-properties-catch-on-board.md "https&#x3A;//poseidat.org/schema/entry/arrival.json#/properties/catch_on_board")
 
 ### catch_on_board Type
 
-`object[]` ([Details](arrival-properties-catch_on_board-items.md))
+`object[]` ([Fishing catch](arrival-properties-catch-on-board-fishing-catch.md))

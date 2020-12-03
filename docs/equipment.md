@@ -17,9 +17,9 @@ A piece of equipment installed on a vessel
 
 # Equipment Properties
 
-| Property          | Type    | Required | Nullable       | Defined by                                                                                                                                 |
-| :---------------- | ------- | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| [device](#device) | `array` | Required | cannot be null | [Equipment](equipment-properties-device.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory/equipment.json#/properties/device") |
+| Property          | Type    | Required | Nullable       | Defined by                                                                                                                                  |
+| :---------------- | ------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
+| [device](#device) | `array` | Required | cannot be null | [Equipment](equipment-properties-devices.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory/equipment.json#/properties/device") |
 
 ## device
 
@@ -29,13 +29,13 @@ The collection of devices that are a part of this piece of equipment
 `device`
 
 -   is required
--   Type: `object[]` ([Device](equipment-properties-device-device.md))
+-   Type: `object[]` ([Device](equipment-properties-devices-device.md))
 -   cannot be null
--   defined in: [Equipment](equipment-properties-device.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory/equipment.json#/properties/device")
+-   defined in: [Equipment](equipment-properties-devices.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory/equipment.json#/properties/device")
 
 ### device Type
 
-`object[]` ([Device](equipment-properties-device-device.md))
+`object[]` ([Device](equipment-properties-devices-device.md))
 
 ### device Constraints
 

@@ -1,4 +1,4 @@
-# Untitled array in undefined Schema
+# Untitled array in Fishing gear deployment Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/partnered_fishing_vessel
@@ -13,4 +13,4 @@ Details of partner vessels for pair fishing. BR: PFP, NLD: NLSPN
 
 ## partnered_fishing_vessel Type
 
-`object[]` ([Details](fishing-gear-deployment-properties-partnered_fishing_vessel-items.md))
+`object[]` ([Vessel partner](fishing-gear-deployment-properties-partnered_fishing_vessel-vessel-partner.md))

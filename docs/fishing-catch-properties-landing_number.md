@@ -1,4 +1,4 @@
-# Untitled number in undefined Schema
+# Untitled number in Fishing catch Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-catch.json#/properties/landing_number

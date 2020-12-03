@@ -1,4 +1,4 @@
-# Untitled array in undefined Schema
+# Untitled array in Fishing gear deployment Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_retrieve
@@ -13,4 +13,4 @@ All gear retrieve even details. NLD: GER, GBR: GER
 
 ## gear_retrieve Type
 
-`object[]` ([Details](fishing-gear-deployment-properties-gear_retrieve-items.md))
+`object[]` ([Fishing gear retrieve](fishing-gear-deployment-properties-gear_retrieve-fishing-gear-retrieve.md))

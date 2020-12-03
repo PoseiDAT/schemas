@@ -1,4 +1,4 @@
-# Untitled undefined type in BaseEntry Schema
+# Untitled undefined type in Base entry Schema
 
 ```txt
 https://poseidat.org/schema/core/base-entry.json#/properties

@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Fish state Schema
 
 ```txt
 https://poseidat.org/schema/enum/fish-state.json
@@ -11,11 +11,11 @@ The preservation states for processed fish species. Please check the wiki for th
 | :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ---------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [fish-state.json](schemas/enum/fish-state.json "open original schema") |
 
-## Untitled string in undefined Type
+## Fish state Type
 
-`string`
+`string` ([Fish state](fish-state.md))
 
-## Untitled string in undefined Constraints
+## Fish state Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

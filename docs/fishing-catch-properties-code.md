@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in Fishing catch Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-catch.json#/properties/code

@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Fish presentation Schema
 
 ```txt
 https://poseidat.org/schema/enum/fish-presentation.json
@@ -11,11 +11,11 @@ The presentation formats for processed fish species. Please check the wiki for t
 | :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------------ |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [fish-presentation.json](schemas/enum/fish-presentation.json "open original schema") |
 
-## Untitled string in undefined Type
+## Fish presentation Type
 
-`string`
+`string` ([Fish presentation](fish-presentation.md))
 
-## Untitled string in undefined Constraints
+## Fish presentation Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

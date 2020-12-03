@@ -1,4 +1,4 @@
-# Untitled array in undefined Schema
+# Untitled array in Fishing gear deployment Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_loss
@@ -13,4 +13,4 @@ All gear loss even details. NLD: GLS, GBR: GLS
 
 ## gear_loss Type
 
-`object[]` ([Details](fishing-gear-deployment-properties-gear_loss-items.md))
+`object[]` ([Fishing gear loss](fishing-gear-deployment-properties-gear_loss-fishing-gear-loss.md))

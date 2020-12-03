@@ -1,4 +1,4 @@
-# Untitled array in undefined Schema
+# Waypoints Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-tow.json#/properties/waypoints

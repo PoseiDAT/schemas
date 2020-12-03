@@ -1,4 +1,4 @@
-# Untitled schema Schema
+# Untitled undefined type in ZoneEnter Schema
 
 ```txt
 https://poseidat.org/schema/entry/zone-enter.json#/properties

@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in Vessel inspection Schema
 
 ```txt
 https://poseidat.org/schema/core/vessel-inspection.json#/properties/country

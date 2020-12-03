@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in Trip entry Schema
 
 ```txt
 https://poseidat.org/schema/core/trip-entry.json#/properties/trip_nr

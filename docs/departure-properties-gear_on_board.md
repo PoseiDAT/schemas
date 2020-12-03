@@ -13,7 +13,7 @@ The gear present on board the vessel
 
 ## gear_on_board Type
 
-`object[]` ([Details](departure-properties-gear_on_board-items.md))
+`object[]` ([Fishing gear](departure-properties-gear_on_board-fishing-gear.md))
 
 ## gear_on_board Constraints
 

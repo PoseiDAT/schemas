@@ -13,4 +13,4 @@ The caught fish present on board the vessel
 
 ## catch_on_board Type
 
-`object[]` ([Details](arrival-properties-catch_on_board-items.md))
+`object[]` ([Fishing catch](arrival-properties-catch_on_board-fishing-catch.md))

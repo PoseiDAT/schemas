@@ -1,4 +1,4 @@
-# Untitled string in BaseEntry Schema
+# Untitled string in Base entry Schema
 
 ```txt
 https://poseidat.org/schema/core/base-entry.json#/properties/journal_id

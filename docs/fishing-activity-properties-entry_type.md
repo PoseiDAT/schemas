@@ -1,4 +1,4 @@
-# Untitled string in End of fishing activity Schema
+# Untitled string in Fishing activity Schema
 
 ```txt
 https://poseidat.org/schema/entry/fishing-activity.json#/properties/entry_type

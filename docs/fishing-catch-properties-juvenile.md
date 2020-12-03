@@ -1,4 +1,4 @@
-# Untitled boolean in undefined Schema
+# Untitled boolean in Fishing catch Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-catch.json#/properties/juvenile

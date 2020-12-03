@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Reason arrival Schema
 
 ```txt
 https://poseidat.org/schema/enum/reason-arrival.json
@@ -11,11 +11,11 @@ The reason for the vessel to return to port. Please check the wiki for the meani
 | :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------ |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [reason-arrival.json](schemas/enum/reason-arrival.json "open original schema") |
 
-## Untitled string in undefined Type
+## Reason arrival Type
 
-`string`
+`string` ([Reason arrival](reason-arrival.md))
 
-## Untitled string in undefined Constraints
+## Reason arrival Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

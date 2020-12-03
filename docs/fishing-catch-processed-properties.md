@@ -1,4 +1,4 @@
-# Untitled schema Schema
+# Untitled undefined type in Fishing catch processed Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-catch-processed.json#/properties

@@ -1,4 +1,4 @@
-# Untitled object in undefined Schema
+# Fishing gear loss Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-loss.json
@@ -11,19 +11,19 @@ A gear loss event details
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------------ |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [fishing-gear-loss.json](schemas/core/fishing-gear-loss.json "open original schema") |
 
-## Untitled object in undefined Type
+## Fishing gear loss Type
 
-`object` ([Details](fishing-gear-loss.md))
+`object` ([Fishing gear loss](fishing-gear-loss.md))
 
-# undefined Properties
+# Fishing gear loss Properties
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                            |
-| :-------------------------- | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [date](#date)               | `string` | Optional | cannot be null | [Untitled schema](fishing-gear-loss-properties-date.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/date")               |
-| [location](#location)       | `object` | Required | cannot be null | [Untitled schema](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")                       |
-| [identifier](#identifier)   | `string` | Required | cannot be null | [Untitled schema](fishing-gear-loss-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/identifier")   |
-| [remarks](#remarks)         | `string` | Optional | cannot be null | [Untitled schema](fishing-gear-loss-properties-remarks.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/remarks")         |
-| [amount_lost](#amount_lost) | `number` | Optional | cannot be null | [Untitled schema](fishing-gear-loss-properties-amount_lost.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/amount_lost") |
+| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                              |
+| :-------------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [date](#date)               | `string` | Optional | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-date.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/date")               |
+| [location](#location)       | `object` | Required | cannot be null | [Fishing gear loss](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")                       |
+| [identifier](#identifier)   | `string` | Required | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/identifier")   |
+| [remarks](#remarks)         | `string` | Optional | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-remarks.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/remarks")         |
+| [amount_lost](#amount_lost) | `number` | Optional | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-amount_lost.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/amount_lost") |
 
 ## date
 
@@ -35,7 +35,7 @@ The datetime the gear loss took place
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-gear-loss-properties-date.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/date")
+-   defined in: [Fishing gear loss](fishing-gear-loss-properties-date.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/date")
 
 ### date Type
 
@@ -55,7 +55,7 @@ A navigational position that can be used in an entry
 -   is required
 -   Type: `object` ([Position](trip-entry-properties-position.md))
 -   cannot be null
--   defined in: [Untitled schema](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
+-   defined in: [Fishing gear loss](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
 
 ### location Type
 
@@ -71,7 +71,7 @@ The identification tag attached to the lost gear. NLD: NI, GBR: GBRGNFN
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-gear-loss-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/identifier")
+-   defined in: [Fishing gear loss](fishing-gear-loss-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/identifier")
 
 ### identifier Type
 
@@ -87,7 +87,7 @@ Free form text to describe the reason of the gear loss. NLD: VT, GBR: GBRCOM
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-gear-loss-properties-remarks.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/remarks")
+-   defined in: [Fishing gear loss](fishing-gear-loss-properties-remarks.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/remarks")
 
 ### remarks Type
 
@@ -103,7 +103,7 @@ The amount of gear items lost, GBR: NN
 -   is optional
 -   Type: `number`
 -   cannot be null
--   defined in: [Untitled schema](fishing-gear-loss-properties-amount_lost.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/amount_lost")
+-   defined in: [Fishing gear loss](fishing-gear-loss-properties-amount_lost.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-loss.json#/properties/amount_lost")
 
 ### amount_lost Type
 

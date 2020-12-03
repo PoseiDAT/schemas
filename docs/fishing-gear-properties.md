@@ -1,4 +1,4 @@
-# Untitled schema Schema
+# Untitled undefined type in Fishing gear Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear.json#/properties

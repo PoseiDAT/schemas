@@ -1,4 +1,4 @@
-# Untitled object in undefined Schema
+# Fishing catch Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-catch.json
@@ -11,32 +11,32 @@ Details of caught fish
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ---------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [fishing-catch.json](schemas/core/fishing-catch.json "open original schema") |
 
-## Untitled object in undefined Type
+## Fishing catch Type
 
-`object` ([Details](fishing-catch.md))
+`object` ([Fishing catch](fishing-catch.md))
 
 one (and only one) of
 
--   [Untitled schema](fishing-catch-oneof-0.md "check type definition")
--   [Untitled schema](fishing-catch-oneof-1.md "check type definition")
+-   [Untitled undefined type in Fishing catch](fishing-catch-oneof-0.md "check type definition")
+-   [Untitled undefined type in Fishing catch](fishing-catch-oneof-1.md "check type definition")
 
-# undefined Properties
+# Fishing catch Properties
 
-| Property                                          | Type      | Required | Nullable       | Defined by                                                                                                                                                          |
-| :------------------------------------------------ | --------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [code](#code)                                     | `string`  | Required | cannot be null | [Untitled schema](fishing-catch-properties-code.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/code")                                     |
-| [weight](#weight)                                 | `number`  | Optional | cannot be null | [Untitled schema](fishing-catch-properties-weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/weight")                                 |
-| [number_of_fish](#number_of_fish)                 | `number`  | Optional | cannot be null | [Untitled schema](fishing-catch-properties-number_of_fish.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/number_of_fish")                 |
-| [weight_in_nets](#weight_in_nets)                 | `number`  | Optional | cannot be null | [Untitled schema](fishing-catch-properties-weight_in_nets.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/weight_in_nets")                 |
-| [number_of_fish_in_nets](#number_of_fish_in_nets) | `number`  | Optional | cannot be null | [Untitled schema](fishing-catch-properties-number_of_fish_in_nets.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/number_of_fish_in_nets") |
-| [landing_weight](#landing_weight)                 | `number`  | Optional | cannot be null | [Untitled schema](fishing-catch-properties-landing_weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/landing_weight")                 |
-| [landing_number](#landing_number)                 | `number`  | Optional | cannot be null | [Untitled schema](fishing-catch-properties-landing_number.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/landing_number")                 |
-| [juvenile](#juvenile)                             | `boolean` | Optional | cannot be null | [Untitled schema](fishing-catch-properties-juvenile.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/juvenile")                             |
-| [fish_farming](#fish_farming)                     | `boolean` | Optional | cannot be null | [Untitled schema](fishing-catch-properties-fish_farming.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/fish_farming")                     |
-| [means_of_measuring](#means_of_measuring)         | `string`  | Optional | cannot be null | [Untitled schema](fishing-catch-properties-means_of_measuring.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/means_of_measuring")         |
-| [measured_weight](#measured_weight)               | `string`  | Optional | cannot be null | [Untitled schema](fishing-catch-properties-measured_weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/measured_weight")               |
-| [fish_size](#fish_size)                           | `string`  | Optional | cannot be null | [Untitled schema](fishing-catch-properties-fish_size.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/fish_size")                           |
-| [processed](#processed)                           | `object`  | Optional | cannot be null | [Untitled schema](fishing-catch-properties-processed.md "https&#x3A;//poseidat.org/schema/core/fishing-catch-processed.json#/properties/processed")                 |
+| Property                                          | Type      | Required | Nullable       | Defined by                                                                                                                                                        |
+| :------------------------------------------------ | --------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [code](#code)                                     | `string`  | Required | cannot be null | [Fishing catch](fishing-catch-properties-code.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/code")                                     |
+| [weight](#weight)                                 | `number`  | Optional | cannot be null | [Fishing catch](fishing-catch-properties-weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/weight")                                 |
+| [number_of_fish](#number_of_fish)                 | `number`  | Optional | cannot be null | [Fishing catch](fishing-catch-properties-number_of_fish.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/number_of_fish")                 |
+| [weight_in_nets](#weight_in_nets)                 | `number`  | Optional | cannot be null | [Fishing catch](fishing-catch-properties-weight_in_nets.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/weight_in_nets")                 |
+| [number_of_fish_in_nets](#number_of_fish_in_nets) | `number`  | Optional | cannot be null | [Fishing catch](fishing-catch-properties-number_of_fish_in_nets.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/number_of_fish_in_nets") |
+| [landing_weight](#landing_weight)                 | `number`  | Optional | cannot be null | [Fishing catch](fishing-catch-properties-landing_weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/landing_weight")                 |
+| [landing_number](#landing_number)                 | `number`  | Optional | cannot be null | [Fishing catch](fishing-catch-properties-landing_number.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/landing_number")                 |
+| [juvenile](#juvenile)                             | `boolean` | Optional | cannot be null | [Fishing catch](fishing-catch-properties-juvenile.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/juvenile")                             |
+| [fish_farming](#fish_farming)                     | `boolean` | Optional | cannot be null | [Fishing catch](fishing-catch-properties-fish_farming.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/fish_farming")                     |
+| [means_of_measuring](#means_of_measuring)         | `string`  | Optional | cannot be null | [Fishing catch](fishing-catch-properties-means_of_measuring.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/means_of_measuring")         |
+| [measured_weight](#measured_weight)               | `string`  | Optional | cannot be null | [Fishing catch](fishing-catch-properties-measured_weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/measured_weight")               |
+| [fish_size](#fish_size)                           | `string`  | Optional | cannot be null | [Fishing catch](fishing-catch-properties-fish_size.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/fish_size")                           |
+| [processed](#processed)                           | `object`  | Optional | cannot be null | [Fishing catch](fishing-catch-properties-fishing-catch-processed.md "https&#x3A;//poseidat.org/schema/core/fishing-catch-processed.json#/properties/processed")   |
 
 ## code
 
@@ -48,7 +48,7 @@ The fish species code. NLD: SN, GBR: SN
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-code.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/code")
+-   defined in: [Fishing catch](fishing-catch-properties-code.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/code")
 
 ### code Type
 
@@ -64,7 +64,7 @@ Weight of fish in kg (see context) Depending on context this item will be either
 -   is optional
 -   Type: `number`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/weight")
+-   defined in: [Fishing catch](fishing-catch-properties-weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/weight")
 
 ### weight Type
 
@@ -80,7 +80,7 @@ The number of fish. NLD: NF, GBR: NF
 -   is optional
 -   Type: `number`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-number_of_fish.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/number_of_fish")
+-   defined in: [Fishing catch](fishing-catch-properties-number_of_fish.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/number_of_fish")
 
 ### number_of_fish Type
 
@@ -96,7 +96,7 @@ Weight of fish kept in nets outside the hold. NLD: NQ, EU3: NQ
 -   is optional
 -   Type: `number`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-weight_in_nets.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/weight_in_nets")
+-   defined in: [Fishing catch](fishing-catch-properties-weight_in_nets.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/weight_in_nets")
 
 ### weight_in_nets Type
 
@@ -112,7 +112,7 @@ The number of fish held in nets outside the hold. NLD: NV, EU3: NB
 -   is optional
 -   Type: `number`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-number_of_fish_in_nets.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/number_of_fish_in_nets")
+-   defined in: [Fishing catch](fishing-catch-properties-number_of_fish_in_nets.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/number_of_fish_in_nets")
 
 ### number_of_fish_in_nets Type
 
@@ -128,7 +128,7 @@ Estimate live weight, in kilograms, of fish to be landed or transshipped. If no 
 -   is optional
 -   Type: `number`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-landing_weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/landing_weight")
+-   defined in: [Fishing catch](fishing-catch-properties-landing_weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/landing_weight")
 
 ### landing_weight Type
 
@@ -144,7 +144,7 @@ Total number of fish to be landed or transshipped. NLD: NF, GBR: LNF, EU3: FL
 -   is optional
 -   Type: `number`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-landing_number.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/landing_number")
+-   defined in: [Fishing catch](fishing-catch-properties-landing_number.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/landing_number")
 
 ### landing_number Type
 
@@ -160,7 +160,7 @@ Indicates the catch is considered a juvenile. NLD3.3+: MV, GBR: GBRJUV
 -   is optional
 -   Type: `boolean`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-juvenile.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/juvenile")
+-   defined in: [Fishing catch](fishing-catch-properties-juvenile.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/juvenile")
 
 ### juvenile Type
 
@@ -176,7 +176,7 @@ Indicator for farmed fish (Dutch: kweekvis). NLD: KV
 -   is optional
 -   Type: `boolean`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-fish_farming.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/fish_farming")
+-   defined in: [Fishing catch](fishing-catch-properties-fish_farming.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/fish_farming")
 
 ### fish_farming Type
 
@@ -192,7 +192,7 @@ Means of weight measuring: estimation (EST), weighing on board (WGH). EU3: MM
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-means_of_measuring.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/means_of_measuring")
+-   defined in: [Fishing catch](fishing-catch-properties-means_of_measuring.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/means_of_measuring")
 
 ### means_of_measuring Type
 
@@ -217,7 +217,7 @@ The weighed or measured weight. Type depends on means_of_measuring value. NLD3.3
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-measured_weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/measured_weight")
+-   defined in: [Fishing catch](fishing-catch-properties-measured_weight.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/measured_weight")
 
 ### measured_weight Type
 
@@ -233,7 +233,7 @@ Fish size category (1-8; one size or kg, g, cm, mm or number of fish per kg as a
 -   is optional
 -   Type: `string`
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-fish_size.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/fish_size")
+-   defined in: [Fishing catch](fishing-catch-properties-fish_size.md "https&#x3A;//poseidat.org/schema/core/fishing-catch.json#/properties/fish_size")
 
 ### fish_size Type
 
@@ -247,10 +247,10 @@ Details of caught fish after it has been processed
 `processed`
 
 -   is optional
--   Type: `object` ([Details](fishing-catch-properties-processed.md))
+-   Type: `object` ([Fishing catch processed](fishing-catch-properties-fishing-catch-processed.md))
 -   cannot be null
--   defined in: [Untitled schema](fishing-catch-properties-processed.md "https&#x3A;//poseidat.org/schema/core/fishing-catch-processed.json#/properties/processed")
+-   defined in: [Fishing catch](fishing-catch-properties-fishing-catch-processed.md "https&#x3A;//poseidat.org/schema/core/fishing-catch-processed.json#/properties/processed")
 
 ### processed Type
 
-`object` ([Details](fishing-catch-properties-processed.md))
+`object` ([Fishing catch processed](fishing-catch-properties-fishing-catch-processed.md))

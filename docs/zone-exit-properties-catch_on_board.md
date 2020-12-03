@@ -1,4 +1,4 @@
-# Untitled array in undefined Schema
+# Untitled array in ZoneExit Schema
 
 ```txt
 https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board
@@ -13,4 +13,4 @@ The previously caught fish present on the vessel at the time of entry
 
 ## catch_on_board Type
 
-`object[]` ([Details](zone-exit-properties-catch_on_board-items.md))
+`object[]` ([Fishing catch](arrival-properties-catch-on-board-fishing-catch.md))

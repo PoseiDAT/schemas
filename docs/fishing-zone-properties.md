@@ -1,4 +1,4 @@
-# Untitled schema Schema
+# Untitled undefined type in Fishing zone Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-zone.json#/properties

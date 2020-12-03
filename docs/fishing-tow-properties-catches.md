@@ -1,4 +1,4 @@
-# Untitled array in undefined Schema
+# Untitled array in Fishing tow Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-tow.json#/properties/catches
@@ -13,4 +13,4 @@ The fish caught in this tow
 
 ## catches Type
 
-`object[]` ([Details](fishing-tow-properties-catches-items.md))
+`object[]` ([Fishing catch](arrival-properties-catch-on-board-fishing-catch.md))

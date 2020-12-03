@@ -1,4 +1,4 @@
-# Untitled schema Schema
+# Untitled undefined type in Vessel inspection Schema
 
 ```txt
 https://poseidat.org/schema/core/vessel-inspection.json#/properties

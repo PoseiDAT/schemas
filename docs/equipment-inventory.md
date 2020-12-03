@@ -1,4 +1,4 @@
-# EquipmentInventory Schema
+# Equipment inventory Schema
 
 ```txt
 https://poseidat.org/schema/entry/equipment-inventory.json
@@ -11,20 +11,20 @@ An entry detailing the equipment installed on a vessel. One 1 should exist per j
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ----------------------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [equipment-inventory.json](schemas/entry/equipment-inventory.json "open original schema") |
 
-## EquipmentInventory Type
+## Equipment inventory Type
 
-`object` ([EquipmentInventory](equipment-inventory.md))
+`object` ([Equipment inventory](equipment-inventory.md))
 
 all of
 
--   [BaseEntry](arrival-allof-baseentry.md "check type definition")
+-   [Base entry](arrival-allof-base-entry.md "check type definition")
 
-# EquipmentInventory Properties
+# Equipment inventory Properties
 
-| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                  |
-| :------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [entry_type](#entry_type) | `string` | Required | cannot be null | [EquipmentInventory](equipment-inventory-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type") |
-| [equipment](#equipment)   | `array`  | Required | cannot be null | [EquipmentInventory](equipment-inventory-properties-equipment.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment")   |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                          |
+| :------------------------ | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [entry_type](#entry_type) | `string` | Required | cannot be null | [Equipment inventory](equipment-inventory-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type")        |
+| [equipment](#equipment)   | `array`  | Required | cannot be null | [Equipment inventory](equipment-inventory-properties-equipment-on-board.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment") |
 
 ## entry_type
 
@@ -36,7 +36,7 @@ The journal entry type identifer
 -   is required
 -   Type: `string`
 -   cannot be null
--   defined in: [EquipmentInventory](equipment-inventory-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type")
+-   defined in: [Equipment inventory](equipment-inventory-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type")
 
 ### entry_type Type
 
@@ -66,13 +66,13 @@ The collection of equipment for the vessel
 `equipment`
 
 -   is required
--   Type: `object[]` ([Equipment](equipment-inventory-properties-equipment-equipment.md))
+-   Type: `object[]` ([Equipment](equipment-inventory-properties-equipment-on-board-equipment.md))
 -   cannot be null
--   defined in: [EquipmentInventory](equipment-inventory-properties-equipment.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment")
+-   defined in: [Equipment inventory](equipment-inventory-properties-equipment-on-board.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment")
 
 ### equipment Type
 
-`object[]` ([Equipment](equipment-inventory-properties-equipment-equipment.md))
+`object[]` ([Equipment](equipment-inventory-properties-equipment-on-board-equipment.md))
 
 ### equipment Constraints
 

@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in Port Schema
 
 ```txt
 https://poseidat.org/schema/core/port.json#/properties/code

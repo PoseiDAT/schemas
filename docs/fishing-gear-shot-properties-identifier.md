@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in Fishing gear shot Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-shot.json#/properties/identifier

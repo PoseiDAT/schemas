@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in Fishing gear deployment Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_capacity

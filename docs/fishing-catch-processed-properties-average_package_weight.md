@@ -1,4 +1,4 @@
-# Untitled number in undefined Schema
+# Untitled number in Fishing catch processed Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/average_package_weight

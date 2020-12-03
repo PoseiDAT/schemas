@@ -1,4 +1,4 @@
-# Untitled object in undefined Schema
+# Fishing gear Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear.json
@@ -11,18 +11,18 @@ Fishing gear details
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | -------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [fishing-gear.json](schemas/core/fishing-gear.json "open original schema") |
 
-## Untitled object in undefined Type
+## Fishing gear Type
 
-`object` ([Details](fishing-gear.md))
+`object` ([Fishing gear](fishing-gear.md))
 
-# undefined Properties
+# Fishing gear Properties
 
-| Property                | Type     | Required | Nullable       | Defined by                                                                                                                              |
-| :---------------------- | -------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| [code](#code)           | `string` | Required | cannot be null | [Untitled schema](fishing-gear-properties-code.md "https&#x3A;//poseidat.org/schema/enum/fishing-gear-type.json#/properties/code")      |
-| [mesh_size](#mesh_size) | `number` | Optional | cannot be null | [Untitled schema](fishing-gear-properties-mesh_size.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/mesh_size") |
-| [amount](#amount)       | `number` | Optional | cannot be null | [Untitled schema](fishing-gear-properties-amount.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/amount")       |
-| [length](#length)       | `number` | Optional | cannot be null | [Untitled schema](fishing-gear-properties-length.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/length")       |
+| Property                | Type     | Required | Nullable       | Defined by                                                                                                                                   |
+| :---------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| [code](#code)           | `string` | Required | cannot be null | [Fishing gear](fishing-gear-properties-fishing-gear-type.md "https&#x3A;//poseidat.org/schema/enum/fishing-gear-type.json#/properties/code") |
+| [mesh_size](#mesh_size) | `number` | Optional | cannot be null | [Fishing gear](fishing-gear-properties-mesh_size.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/mesh_size")         |
+| [amount](#amount)       | `number` | Optional | cannot be null | [Fishing gear](fishing-gear-properties-amount.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/amount")               |
+| [length](#length)       | `number` | Optional | cannot be null | [Fishing gear](fishing-gear-properties-length.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/length")               |
 
 ## code
 
@@ -32,13 +32,13 @@ Fishing gear type codes. Example: TBB, PS
 `code`
 
 -   is required
--   Type: `string`
+-   Type: `string` ([Fishing gear type](fishing-gear-properties-fishing-gear-type.md))
 -   cannot be null
--   defined in: [Untitled schema](fishing-gear-properties-code.md "https&#x3A;//poseidat.org/schema/enum/fishing-gear-type.json#/properties/code")
+-   defined in: [Fishing gear](fishing-gear-properties-fishing-gear-type.md "https&#x3A;//poseidat.org/schema/enum/fishing-gear-type.json#/properties/code")
 
 ### code Type
 
-`string`
+`string` ([Fishing gear type](fishing-gear-properties-fishing-gear-type.md))
 
 ### code Constraints
 
@@ -99,7 +99,7 @@ The fishing gear mesh size measured in millimeters. NLD: ME, GBR: ME
 -   is optional
 -   Type: `number`
 -   cannot be null
--   defined in: [Untitled schema](fishing-gear-properties-mesh_size.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/mesh_size")
+-   defined in: [Fishing gear](fishing-gear-properties-mesh_size.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/mesh_size")
 
 ### mesh_size Type
 
@@ -115,7 +115,7 @@ The number of fishing gear items. NLD: NN, GBR: GBRGNL
 -   is optional
 -   Type: `number`
 -   cannot be null
--   defined in: [Untitled schema](fishing-gear-properties-amount.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/amount")
+-   defined in: [Fishing gear](fishing-gear-properties-amount.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/amount")
 
 ### amount Type
 
@@ -131,7 +131,7 @@ The total length of the fishing gear in meters. NLD: TL, GBR: GBRGNT
 -   is optional
 -   Type: `number`
 -   cannot be null
--   defined in: [Untitled schema](fishing-gear-properties-length.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/length")
+-   defined in: [Fishing gear](fishing-gear-properties-length.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/length")
 
 ### length Type
 

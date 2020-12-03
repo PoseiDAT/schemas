@@ -1,4 +1,4 @@
-# Untitled schema Schema
+# Untitled undefined type in Fishing gear gill net Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties

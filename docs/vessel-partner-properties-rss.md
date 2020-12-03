@@ -1,4 +1,4 @@
-# Untitled string in undefined Schema
+# Untitled string in Vessel partner Schema
 
 ```txt
 https://poseidat.org/schema/core/vessel-partner.json#/properties/rss
