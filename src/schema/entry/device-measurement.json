@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/entry/device-measurement.json",
-  "title": "DeviceMeasurement",
+  "title": "Device measurement",
   "description": "A device measurement journal entry",
   "properties": {
     "entry_type": {

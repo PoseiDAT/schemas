@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/entry/fishing-activity.json",
-  "title": "End of fishing activity",
+  "title": "Fishing activity",
   "description": "Notification of intent to cease all fishing activity for the trip",
   "properties": {
     "entry_type": {

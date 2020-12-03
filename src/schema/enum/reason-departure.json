@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/enum/reason-departure.json",
   "description": "The reason for the vessel to depart from port. Please check the wiki for the meaning of these codes.",
+  "title": "Reason departure",
   "type": "string",
   "enum": [
     "FIS",

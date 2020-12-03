@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/fishing-gear.json",
   "description": "Fishing gear details",
+  "title": "Fishing gear",
   "properties": {
     "code": {
       "description": "Gear code corresponding to the FAO’s International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE",

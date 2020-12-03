@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/entry/zone-enter.json",
+  "title": "ZoneEnter",
   "description": "Enter declaration of a fishing zone",
   "properties": {
     "entry_type": {

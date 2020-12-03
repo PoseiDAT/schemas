@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/fishing-catch-processed.json",
   "description": "Details of caught fish after it has been processed",
+  "title": "Fishing catch processed",
   "properties": {
     "fish_presentation": {
       "description": "The fish presentation code. Known as PR. Examples: WHL, GUT, FIL",

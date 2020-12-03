@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/vessel-partner.json",
   "description": "Fishing vessel details for partnered fishing",
+  "title": "Vessel partner",
   "properties": {
     "hull_number": {
       "description": "The external markings of the vessel. NLD2+: XR, GBR: PXR",

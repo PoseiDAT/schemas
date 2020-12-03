@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/enum/fishing-gear-type.json",
   "description": "Fishing gear type codes. Example: TBB, PS",
+  "title": "Fishing gear type",
   "type": "string",
   "enum": [
     "DRB",

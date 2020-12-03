@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/fishing-gear-loss.json",
   "description": "A gear loss event details",
+  "title": "Fishing gear loss",
   "properties": {
     "date": {
       "description": "The datetime the gear loss took place",

@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/fishing-gear-retrieve.json",
   "description": "A gear retrieve event details",
+  "title": "Fishing gear retrieve",
   "properties": {
     "date": {
       "description": "The datetime the gear retrieve took place. GBR: DATI, NLD2: DA + TI, NLD3: DA",

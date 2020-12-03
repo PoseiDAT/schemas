@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/fishing-gear-shot.json",
   "description": "A gear shot event details",
+  "title": "Fishing gear shot",
   "properties": {
     "date": {
       "description": "The datetime the gear shot took place. GBR: DATI, NLD2: DA + TI, NLD3: DA",

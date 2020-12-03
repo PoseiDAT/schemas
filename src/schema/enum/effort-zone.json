@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/enum/effort-zone.json",
   "description": "The fishing effort zone. Example: A (ICES V-VI)",
+  "title": "Effort zone",
   "type": "string",
   "enum": [
     "A",

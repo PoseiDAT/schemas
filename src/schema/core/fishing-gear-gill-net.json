@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/fishing-gear-gill-net.json",
   "description": "Deep Sea Permit requirements when using gill nets",
+  "title": "Fishing gear gill net",
   "properties": {
     "average_gear_length": {
       "description": "Average length of fishing nets in meters. NLD: GL, GBR: GNGL",
