@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/enum/fish-package-type.json",
+  "description": "The package types for processed fish species. Please check the wiki for the meaning of these codes.",
+  "type": "string",
+  "enum": [
+    "CNT",
+    "EC",
+    "OK",
+    "QS",
+    "CN",
+    "CT",
+    "VO",
+    "4H",
+    "BX",
+    "5H",
+    "QR",
+    "TB",
+    "NF",
+    "NG",
+    "ZB"
+  ]
+}

@@ -32,6 +32,10 @@ import * as entryZoneExit from './entry/zone-exit.json';
 //
 import * as enumAnticipatedActivity from './enum/anticipated-activity.json';
 import * as enumEffortZone from './enum/effort-zone.json';
+import * as enumFishFreshness from './enum/fish-freshness.json';
+import * as enumFishPackageType from './enum/fish-package-type.json';
+import * as enumFishPresentation from './enum/fish-presentation.json';
+import * as enumFishState from './enum/fish-state.json';
 import * as enumReasonArrival from './enum/reason-arrival.json';
 
 export const schemas = {
@@ -68,6 +72,10 @@ export const schemas = {
   {
     anticipatedActivity: enumAnticipatedActivity as JSONSchema7,
     effortZone: enumEffortZone as JSONSchema7,
+    fishFreshness: enumFishFreshness as JSONSchema7,
+    fishPackageType: enumFishPackageType as JSONSchema7,
+    fishPresentation: enumFishPresentation as JSONSchema7,
+    fishState: enumFishState as JSONSchema7,
     reasonArrival: enumReasonArrival as JSONSchema7,
   },
 
