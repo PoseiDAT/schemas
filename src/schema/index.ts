@@ -7,6 +7,7 @@ import { JSONSchema7 } from 'json-schema';
 // Core schemas
 //
 import * as baseEntry from './core/base-entry.json';
+import * as baseFishingCatchProcessed from './core/fishing-catch-processed.json';
 import * as baseFishingGear from './core/fishing-gear.json';
 import * as baseFishingZone from './core/fishing-zone.json';
 import * as baseJournal from './core/journal.json';
@@ -44,6 +45,7 @@ export const schemas = {
   //
   core: {
     baseEntry: baseEntry as JSONSchema7,
+    fishingCatchProcessed: baseFishingCatchProcessed as JSONSchema7,
     fishingGear: baseFishingGear as JSONSchema7,
     fishingZone: baseFishingZone as JSONSchema7,
     journal: baseJournal as JSONSchema7,
