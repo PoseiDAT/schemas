@@ -7,8 +7,15 @@ import { JSONSchema7 } from 'json-schema';
 // Core schemas
 //
 import * as baseEntry from './core/base-entry.json';
+import * as baseFishingCatch from './core/fishing-catch.json';
 import * as baseFishingCatchProcessed from './core/fishing-catch-processed.json';
 import * as baseFishingGear from './core/fishing-gear.json';
+import * as baseFishingGearDeployment from './core/fishing-gear-deployment.json';
+import * as baseFishingGearGillNet from './core/fishing-gear-gill-net.json';
+import * as baseFishingGearLoss from './core/fishing-gear-loss.json';
+import * as baseFishingGearRetrieve from './core/fishing-gear-retrieve.json';
+import * as baseFishingGearShot from './core/fishing-gear-shot.json';
+import * as baseFishingTow from './core/fishing-tow.json';
 import * as baseFishingZone from './core/fishing-zone.json';
 import * as baseJournal from './core/journal.json';
 import * as basePort from './core/port.json';
@@ -16,6 +23,8 @@ import * as basePosition from './core/position.json';
 import * as baseTripEntry from './core/trip-entry.json';
 import * as baseVessel from './core/vessel.json';
 import * as baseVesselInspection from './core/vessel-inspection.json';
+import * as baseVesselMaster from './core/vessel-master.json';
+import * as baseVesselPartner from './core/vessel-partner.json';
 
 // Entry schemas
 //
@@ -26,6 +35,7 @@ import * as entryEndOfFishing from './entry/end-of-fishing.json';
 import * as entryEquipmentInventory from './entry/equipment-inventory.json';
 import * as entryEquipmentInventoryDevice from './entry/equipment-inventory/device.json';
 import * as entryEquipmentInventoryEquipment from './entry/equipment-inventory/equipment.json';
+import * as entryFishingActivity from './entry/fishing-activity.json';
 import * as entryZoneEnter from './entry/zone-enter.json';
 import * as entryZoneExit from './entry/zone-exit.json';
 
@@ -47,8 +57,15 @@ export const schemas = {
   //
   core: {
     baseEntry: baseEntry as JSONSchema7,
+    fishingCatch: baseFishingCatch as JSONSchema7,
     fishingCatchProcessed: baseFishingCatchProcessed as JSONSchema7,
     fishingGear: baseFishingGear as JSONSchema7,
+    fishingGearDeployment: baseFishingGearDeployment as JSONSchema7,
+    fishingGearGillNet: baseFishingGearGillNet as JSONSchema7,
+    fishingGearLoss: baseFishingGearLoss as JSONSchema7,
+    fishingGearRetrieve: baseFishingGearRetrieve as JSONSchema7,
+    fishingGearShot: baseFishingGearShot as JSONSchema7,
+    fishingTow: baseFishingTow as JSONSchema7,
     fishingZone: baseFishingZone as JSONSchema7,
     journal: baseJournal as JSONSchema7,
     port: basePort as JSONSchema7,
@@ -56,6 +73,8 @@ export const schemas = {
     tripEntry: baseTripEntry as JSONSchema7,
     vessel: baseVessel as JSONSchema7,
     vesselInspection: baseVesselInspection as JSONSchema7,
+    vesselMaster: baseVesselMaster as JSONSchema7,
+    vessePartner: baseVesselPartner as JSONSchema7,
   },
 
   // Entry schemas
@@ -66,6 +85,7 @@ export const schemas = {
     deviceMeasurement: entryDeviceMeasurement as JSONSchema7,
     endOfFishing: entryEndOfFishing as JSONSchema7,
     equipmentInventory: entryEquipmentInventory as JSONSchema7,
+    fishingActivity: entryFishingActivity as JSONSchema7,
     zoneEnter: entryZoneEnter as JSONSchema7,
     zoneExit: entryZoneExit as JSONSchema7,
   },

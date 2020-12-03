@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://poseidat.org/schema/entry/end-of-fishing.json",
+  "$id": "https://poseidat.org/schema/entry/fishing-activity.json",
   "title": "End of fishing activity",
   "description": "Notification of intent to cease all fishing activity for the trip",
   "properties": {
@@ -8,24 +8,23 @@
       "description": "The journal entry type identifer",
       "type": "string",
       "enum": [
-        "end-of-fishing"
+        "fishing-activity"
       ],
-      "default": "end-of-fishing"
+      "default": "fishing-activity"
     },
     "trip": {
       "description": "Trip related details for this entry",
       "$ref": "https://poseidat.org/schema/core/trip-entry.json"
     },
-    "activity_date": {
-      "description": "The datetime of end of fishing in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA",
-      "type": "string",
-      "format": "date-time"
+    "tow": {
+      "description": "The fishing tow details",
+      "$ref": "https://poseidat.org/schema/core/fishing-tow.json"
     }
   },
   "required": [
     "entry_type",
     "trip",
-    "activity_date"
+    "tow"
   ],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/base-entry.json" }
