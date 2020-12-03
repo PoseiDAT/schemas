@@ -63,6 +63,7 @@
     },
     "gear_shot": {
       "description": "All gear shot event details. NLD: GES, GBR: GES",
+      "title": "Gear shot details",
       "items": {
         "$ref": "https://poseidat.org/schema/core/fishing-gear-shot.json"
       },
@@ -70,6 +71,7 @@
     },
     "gear_retrieve": {
       "description": "All gear retrieve even details. NLD: GER, GBR: GER",
+      "title": "Gear retrieve details",
       "items": {
         "$ref": "https://poseidat.org/schema/core/fishing-gear-retrieve.json"
       },
@@ -77,6 +79,7 @@
     },
     "gear_loss": {
       "description": "All gear loss even details. NLD: GLS, GBR: GLS",
+      "title": "Gear loss details",
       "items": {
         "$ref": "https://poseidat.org/schema/core/fishing-gear-loss.json"
       },
@@ -84,6 +87,7 @@
     },
     "partnered_fishing_vessel": {
       "description": "Details of partner vessels for pair fishing. BR: PFP, NLD: NLSPN",
+      "title": "Partnered fishing vessels",
       "items": {
         "$ref": "https://poseidat.org/schema/core/vessel-partner.json"
       },

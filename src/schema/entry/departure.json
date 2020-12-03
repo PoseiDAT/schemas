@@ -31,6 +31,7 @@
     },
     "gear_on_board": {
       "description": "The gear present on board the vessel",
+      "title": "Gear on board",
       "items": {
         "$ref": "https://poseidat.org/schema/core/fishing-gear.json"
       },
@@ -39,6 +40,7 @@
     },
     "catch_on_board": {
       "description": "The previously caught fish present on board the vessel",
+      "title": "Catch on board",
       "items": {
         "$ref": "https://poseidat.org/schema/core/fishing-catch.json"
       },

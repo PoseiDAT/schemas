@@ -24,6 +24,7 @@
     },
     "waypoints": {
       "description": "The collection of geographical locations logged during the tow",
+      "title": "Waypoints",
       "items": {
         "$ref": "https://poseidat.org/schema/core/position.json"
       },
@@ -43,6 +44,7 @@
     },
     "catches": {
       "description": "The fish caught in this tow",
+      "title": "Caught fish",
       "items": {
         "$ref": "https://poseidat.org/schema/core/fishing-catch.json"
       },

@@ -27,6 +27,7 @@
     },
     "catch_on_board": {
       "description": "The previously caught fish present on the vessel at the time of entry",
+      "title": "Catch on board",
       "items": {
         "$ref": "https://poseidat.org/schema/core/fishing-catch.json"
       },
@@ -46,6 +47,7 @@
     },
     "trans_zonal_fishing_zones": {
       "description": "The zones involved in trans-zonal fishing. NLD: NLTRZ",
+      "title": "Trans zonal fishing areas",
       "items": {
         "$ref": "https://poseidat.org/schema/core/fishing-zone.json"
       },

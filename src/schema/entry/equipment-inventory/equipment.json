@@ -7,6 +7,7 @@
     "device": {
       "type": "array",
       "description": "The collection of devices that are a part of this piece of equipment",
+      "title": "Devices",
       "items": {
         "$ref": "https://poseidat.org/schema/entry/equipment-inventory/device.json"
       },
