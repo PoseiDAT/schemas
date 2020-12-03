@@ -27,7 +27,7 @@
     },
     "anticipated_activity": {
       "description": "The anticipated activity for the fishing trip. Please check the wiki for the meaning of these codes.",
-      "$ref": "https://poseidat.org/schema/enum/anticipated-activity.json"
+      "$ref": "https://poseidat.org/schema/enum/reason-departure.json"
     },
     "gear_on_board": {
       "description": "The gear present on board the vessel",

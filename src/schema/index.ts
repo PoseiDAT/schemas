@@ -31,13 +31,15 @@ import * as entryZoneExit from './entry/zone-exit.json';
 
 // Enum schemas
 //
-import * as enumAnticipatedActivity from './enum/anticipated-activity.json';
 import * as enumEffortZone from './enum/effort-zone.json';
 import * as enumFishFreshness from './enum/fish-freshness.json';
 import * as enumFishPackageType from './enum/fish-package-type.json';
 import * as enumFishPresentation from './enum/fish-presentation.json';
 import * as enumFishState from './enum/fish-state.json';
+import * as enumFishingGearType from './enum/fishing-gear-type.json';
 import * as enumReasonArrival from './enum/reason-arrival.json';
+import * as enumReasonDeparture from './enum/reason-departure.json';
+import * as enumReasonDiscard from './enum/reason-discard.json';
 
 export const schemas = {
 
@@ -72,13 +74,15 @@ export const schemas = {
   //
   enum:
   {
-    anticipatedActivity: enumAnticipatedActivity as JSONSchema7,
     effortZone: enumEffortZone as JSONSchema7,
     fishFreshness: enumFishFreshness as JSONSchema7,
     fishPackageType: enumFishPackageType as JSONSchema7,
     fishPresentation: enumFishPresentation as JSONSchema7,
     fishState: enumFishState as JSONSchema7,
+    fishingGearType: enumFishingGearType as JSONSchema7,
     reasonArrival: enumReasonArrival as JSONSchema7,
+    reasonDeparture: enumReasonDeparture as JSONSchema7,
+    reasonDiscard: enumReasonDiscard as JSONSchema7,
   },
 
   // Supporting schemas: EquipmentInventory

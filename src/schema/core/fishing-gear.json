@@ -5,7 +5,7 @@
   "properties": {
     "code": {
       "description": "Gear code corresponding to the FAO’s International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE",
-      "type": "string"
+      "$ref": "https://poseidat.org/schema/enum/fishing-gear-type.json"
     },
     "mesh_size": {
       "description": "The fishing gear mesh size measured in millimeters. NLD: ME, GBR: ME",
