@@ -4,6 +4,14 @@
   "title": "EquipmentInventory",
   "description": "An entry detailing the equipment installed on a vessel. One 1 should exist per journal",
   "properties": {
+    "entry_type": {
+      "description": "The journal entry type identifer",
+      "type": "string",
+      "enum": [
+        "equipment-inventory"
+      ],
+      "default": "equipment-inventory"
+    },
     "equipment": {
       "type": "array",
       "description": "The collection of equipment for the vessel",
@@ -15,6 +23,7 @@
     }
   },
   "required": [
+    "entry_type",
     "equipment"
   ],
   "allOf": [

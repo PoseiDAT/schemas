@@ -4,6 +4,14 @@
   "title": "Arrival",
   "description": "A return to port event",
   "properties": {
+    "entry_type": {
+      "description": "The journal entry type identifer",
+      "type": "string",
+      "enum": [
+        "arrival"
+      ],
+      "default": "arrival"
+    },
     "trip": {
       "description": "Trip related details for this  entry",
       "$ref": "https://poseidat.org/schema/core/trip-entry.json"
@@ -30,6 +38,7 @@
     }
   },
   "required": [
+    "entry_type",
     "trip",
     "activity_date",
     "port",

@@ -6,6 +6,6 @@ export class EndOfFishingEntry extends BaseEntry {
   constructor(
     public data: IEntryEndOfFishing,
   ) {
-    super(data, schemas.entry.endOfFishing);
+    super(data, schemas.entry.endOfFishing, 'end-of-fishing');
   }
 }

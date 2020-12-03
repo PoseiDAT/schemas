@@ -6,6 +6,6 @@ export class DepartureEntry extends BaseEntry {
   constructor(
     public data: IEntryDeparture,
   ) {
-    super(data, schemas.entry.departure);
+    super(data, schemas.entry.departure, 'departure');
   }
 }

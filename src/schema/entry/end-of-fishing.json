@@ -4,6 +4,14 @@
   "title": "End of fishing activity",
   "description": "Notification of intent to cease all fishing activity for the trip",
   "properties": {
+    "entry_type": {
+      "description": "The journal entry type identifer",
+      "type": "string",
+      "enum": [
+        "end-of-fishing"
+      ],
+      "default": "end-of-fishing"
+    },
     "trip": {
       "description": "Trip related details for this  entry",
       "$ref": "https://poseidat.org/schema/core/trip-entry.json"
@@ -15,6 +23,7 @@
     }
   },
   "required": [
+    "entry_type",
     "trip",
     "activity_date"
   ],

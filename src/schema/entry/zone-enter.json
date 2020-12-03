@@ -3,6 +3,14 @@
   "$id": "https://poseidat.org/schema/entry/zone-enter.json",
   "description": "Enter declaration of a fishing zone",
   "properties": {
+    "entry_type": {
+      "description": "The journal entry type identifer",
+      "type": "string",
+      "enum": [
+        "zone-enter"
+      ],
+      "default": "zone-enter"
+    },
     "activity_date": {
       "description": "The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA",
       "type": "string",
@@ -41,6 +49,7 @@
     }
   },
   "required": [
+    "entry_type",
     "activity_date",
     "location",
     "zone"

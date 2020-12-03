@@ -6,6 +6,6 @@ export class ZoneExitEntry extends BaseEntry {
   constructor(
     public data: IEntryZoneExit,
   ) {
-    super(data, schemas.entry.arrival);
+    super(data, schemas.entry.arrival, 'zone-exit');
   }
 }

@@ -4,6 +4,14 @@
   "title": "DeviceMeasurement",
   "description": "A device measurement journal entry",
   "properties": {
+    "entry_type": {
+      "description": "The journal entry type identifer",
+      "type": "string",
+      "enum": [
+        "device-measurement"
+      ],
+      "default": "device-measurement"
+    },
     "device_id": {
       "type": "string",
       "description": "The unique identifier for the device"
@@ -19,6 +27,7 @@
     }
  },
   "required": [
+    "entry_type",
     "device_id",
     "timestamp",
     "value"
