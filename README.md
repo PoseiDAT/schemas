@@ -39,8 +39,8 @@ You can think of the journal much like its paper equivalent.
 On the cover the name identifying the vessel is shown.
 The first couple of pages are reserved for a description of the vessel and contains a listing of the equipment on board.
 There are also some pages dedicated to logging services performed on the vessel much like the maintenance booklet of your car.
-Next the entries begin with a header detailing the date, time and location the entry was made.
-The entry itself is a collection of events that occurred during that day at that specific location.
+Next the entries begin with a header detailing the exact date and time the entry was made.
+The entry itself is a collection of events that occurred at that specific moment in time.
 
 ### Entries
 
