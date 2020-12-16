@@ -19,8 +19,11 @@ export class BaseEntry {
    */
   constructor(
     public data: ICoreBaseEntry,
-    protected schema = schemas.baseEntry,
-  ) {}
+    protected schema = schemas.core.baseEntry,
+    entryType = 'base-entry',
+  ) {
+    this.data.entry_type = entryType;
+  }
 
   /**
    * Validates the current Entry data against the core schema

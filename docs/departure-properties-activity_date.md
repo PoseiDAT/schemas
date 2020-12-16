@@ -1,15 +1,15 @@
-# Untitled string in LogbookDeparture Schema
+# Untitled string in Departure Schema
 
 ```txt
-https://poseidat.org/core-schema/logbook/departure.json#/properties/activity_date
+https://poseidat.org/schema/entry/departure.json#/properties/activity_date
 ```
 
-The date and time of departure in UTC in RFC3339 format
+The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA
 
 
-| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                      |
-| :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [departure.json\*](schemas/entry/logbook/departure.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                              |
+| :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ----------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [departure.json\*](schemas/entry/departure.json "open original schema") |
 
 ## activity_date Type
 

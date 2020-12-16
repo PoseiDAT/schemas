@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://poseidat.org/schema/enum/fish-state.json","description":"The preservation states for processed fish species. Please check the wiki for the meaning of these codes.","title":"Fish state","type":"string","enum":["ALI","BOI","DRI","FRE","FRO","SAL","SMO"]}

@@ -1,4 +1,4 @@
-# Untitled boolean in BaseEntry Schema
+# Untitled boolean in Base entry Schema
 
 ```txt
 https://poseidat.org/schema/core/base-entry.json#/properties/immutable

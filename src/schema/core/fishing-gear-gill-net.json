@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/fishing-gear-gill-net.json",
+  "description": "Deep Sea Permit requirements when using gill nets",
+  "title": "Fishing gear gill net",
+  "properties": {
+    "average_gear_length": {
+      "description": "Average length of fishing nets in meters. NLD: GL, GBR: GNGL",
+      "type": "number"
+    },
+    "average_gear_height": {
+      "description": "Average height of fishing nets in meters. NLD: GD, GBR: GNGD",
+      "type": "number"
+    },
+    "nominal_gear_length": {
+      "description": "The nominal length of one fishing net in meters. GBR: GNNL",
+      "type": "number"
+    },
+    "number_of_nets": {
+      "description": "Number of nets present in the fleet. NLD: VN, GBR: GNNN",
+      "type": "number"
+    }
+  },
+  "required": [
+    "average_gear_length",
+    "average_gear_height",
+    "number_of_nets"
+  ],
+  "type": "object"
+}

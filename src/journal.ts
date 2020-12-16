@@ -1,4 +1,5 @@
 import ajv from 'ajv';
+import { schemas } from './schema';
 import { ICoreJournal } from './schema/types';
 import { validateSchema } from './schema-validator';
 
@@ -23,6 +24,6 @@ export class Journal {
    * @returns {ajv.ErrorObject[]}
    */
   public validate(): ajv.ErrorObject[] {
-    return validateSchema( { object: this.data } );
+    return validateSchema( { object: this.data, schema: schemas.core.journal } );
   }
 }
