@@ -26,7 +26,7 @@ all of
 | [entry_type](#entry_type)                   | `string`  | Required | cannot be null | [ZoneEnter](zone-enter-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/entry_type")                   |
 | [activity_date](#activity_date)             | `string`  | Required | cannot be null | [ZoneEnter](zone-enter-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/activity_date")             |
 | [zone](#zone)                               | `object`  | Required | cannot be null | [ZoneEnter](fishing-tow-properties-fishing-zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/zone")                     |
-| [location](#location)                       | `object`  | Required | cannot be null | [ZoneEnter](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")                          |
+| [location](#location)                       | `object`  | Required | cannot be null | [ZoneEnter](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")              |
 | [catch_on_board](#catch_on_board)           | `array`   | Optional | cannot be null | [ZoneEnter](zone-enter-properties-catch-on-board.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board")           |
 | [target_species](#target_species)           | `string`  | Optional | cannot be null | [ZoneEnter](zone-enter-properties-target_species.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/target_species")           |
 | [directed_species](#directed_species)       | `string`  | Optional | cannot be null | [ZoneEnter](zone-enter-properties-directed_species.md "https&#x3A;//poseidat.org/schema/entry/zone-enter.json#/properties/directed_species")       |
@@ -111,7 +111,7 @@ A navigational position that can be used in an entry
 -   is required
 -   Type: `object` ([Position](trip-entry-properties-position.md))
 -   cannot be null
--   defined in: [ZoneEnter](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
+-   defined in: [ZoneEnter](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")
 
 ### location Type
 

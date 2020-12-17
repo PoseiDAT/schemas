@@ -20,7 +20,7 @@ A gear retrieve event details
 | Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                        |
 | :------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [date](#date)             | `string` | Optional | cannot be null | [Fishing gear retrieve](fishing-gear-retrieve-properties-date.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/date")             |
-| [location](#location)     | `object` | Required | cannot be null | [Fishing gear retrieve](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")                             |
+| [location](#location)     | `object` | Required | cannot be null | [Fishing gear retrieve](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")                 |
 | [identifier](#identifier) | `string` | Required | cannot be null | [Fishing gear retrieve](fishing-gear-retrieve-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/identifier") |
 
 ## date
@@ -53,7 +53,7 @@ A navigational position that can be used in an entry
 -   is required
 -   Type: `object` ([Position](trip-entry-properties-position.md))
 -   cannot be null
--   defined in: [Fishing gear retrieve](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
+-   defined in: [Fishing gear retrieve](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")
 
 ### location Type
 

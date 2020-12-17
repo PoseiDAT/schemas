@@ -16,17 +16,17 @@
     },
     "location_start": {
       "description": "The geographical location where the tow started (if applicable)",
-      "$ref": "https://poseidat.org/schema/core/position.json"
+      "$ref": "https://poseidat.org/schema/core/measurement/position.json"
     },
     "location_end": {
       "description": "The geographical location where the tow ended (if applicable)",
-      "$ref": "https://poseidat.org/schema/core/position.json"
+      "$ref": "https://poseidat.org/schema/core/measurement/position.json"
     },
     "waypoints": {
       "description": "The collection of geographical locations logged during the tow",
       "title": "Waypoints",
       "items": {
-        "$ref": "https://poseidat.org/schema/core/position.json"
+        "$ref": "https://poseidat.org/schema/core/measurement/position.json"
       },
       "type": "array"
     },
