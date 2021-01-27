@@ -8,18 +8,19 @@
       "description": "The type of measurement",
       "$ref": "https://poseidat.org/schema/enum/measurement-type.json"
     },
-    "value": {
-      "description": "The value of the measurement",
-      "oneOf": [
-        { "$ref": "https://poseidat.org/schema/core/measurement/position.json" },
-        { "$ref": "https://poseidat.org/schema/core/measurement/number.json" }
-      ]
+    "position": {
+      "description": "A positional measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/position.json"
+    },
+    "numeric": {
+      "description": "A numerical measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
     }
  },
-  "required": [
-    "type",
-    "value"
-  ],
+ "oneOf": [
+   { "required": [ "type", "numeric" ] },
+   { "required": [ "type", "position" ] }
+ ],
   "type": "object",
   "additionalProperties": false
 }
