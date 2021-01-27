@@ -17,10 +17,10 @@ Fishing port details
 
 # Port Properties
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                           |
-| :-------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------- |
-| [code](#code)         | `string` | Required | cannot be null | [Port](port-properties-code.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/code")                   |
-| [location](#location) | `object` | Optional | cannot be null | [Port](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location") |
+| Property              | Type     | Required | Nullable       | Defined by                                                                                                                       |
+| :-------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| [code](#code)         | `string` | Required | cannot be null | [Port](port-properties-code.md "https&#x3A;//poseidat.org/schema/core/port.json#/properties/code")                               |
+| [location](#location) | `object` | Optional | cannot be null | [Port](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location") |
 
 ## code
 
@@ -54,7 +54,7 @@ A navigational position that can be used in an entry
 -   is optional
 -   Type: `object` ([Position](trip-entry-properties-position.md))
 -   cannot be null
--   defined in: [Port](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
+-   defined in: [Port](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")
 
 ### location Type
 

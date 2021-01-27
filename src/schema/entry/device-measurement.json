@@ -17,19 +17,13 @@
       "description": "The unique identifier for the device"
     },
     "value": {
-      "type": "number",
-      "description": "The registered measurement for the device"
-    },
-    "timestamp": {
-      "type": "string",
-      "format": "date-time",
-      "description": "The date and time the value was recorded in UTC in RFC3339 format"
+      "description": "The registered measurement for the device",
+      "$ref": "https://poseidat.org/schema/core/measurement/measurement-value.json"
     }
  },
   "required": [
     "entry_type",
     "device_id",
-    "timestamp",
     "value"
   ],
   "allOf": [

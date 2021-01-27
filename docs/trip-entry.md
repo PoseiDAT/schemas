@@ -17,13 +17,13 @@ The trip related details of a journal entry
 
 # Trip entry Properties
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                         |
-| :-------------------------- | -------- | -------- | -------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
-| [date](#date)               | `string` | Required | cannot be null | [Trip entry](trip-entry-properties-date.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/date")               |
-| [trip_nr](#trip_nr)         | `string` | Required | cannot be null | [Trip entry](trip-entry-properties-trip_nr.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip_nr")         |
-| [record_nr](#record_nr)     | `string` | Required | cannot be null | [Trip entry](trip-entry-properties-record_nr.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/record_nr")     |
-| [sequence_nr](#sequence_nr) | `string` | Optional | cannot be null | [Trip entry](trip-entry-properties-sequence_nr.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/sequence_nr") |
-| [location](#location)       | `object` | Optional | cannot be null | [Trip entry](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")         |
+| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                             |
+| :-------------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
+| [date](#date)               | `string` | Required | cannot be null | [Trip entry](trip-entry-properties-date.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/date")                   |
+| [trip_nr](#trip_nr)         | `string` | Required | cannot be null | [Trip entry](trip-entry-properties-trip_nr.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip_nr")             |
+| [record_nr](#record_nr)     | `string` | Required | cannot be null | [Trip entry](trip-entry-properties-record_nr.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/record_nr")         |
+| [sequence_nr](#sequence_nr) | `string` | Optional | cannot be null | [Trip entry](trip-entry-properties-sequence_nr.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/sequence_nr")     |
+| [location](#location)       | `object` | Optional | cannot be null | [Trip entry](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location") |
 
 ## date
 
@@ -103,7 +103,7 @@ A navigational position that can be used in an entry
 -   is optional
 -   Type: `object` ([Position](trip-entry-properties-position.md))
 -   cannot be null
--   defined in: [Trip entry](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
+-   defined in: [Trip entry](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")
 
 ### location Type
 

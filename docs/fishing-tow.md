@@ -21,8 +21,8 @@ Fishing tow details
 | :------------------------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [activity_date_start](#activity_date_start) | `string` | Optional | cannot be null | [Fishing tow](fishing-tow-properties-activity_date_start.md "https&#x3A;//poseidat.org/schema/core/fishing-tow.json#/properties/activity_date_start")             |
 | [activity_date_end](#activity_date_end)     | `string` | Optional | cannot be null | [Fishing tow](fishing-tow-properties-activity_date_end.md "https&#x3A;//poseidat.org/schema/core/fishing-tow.json#/properties/activity_date_end")                 |
-| [location_start](#location_start)           | `object` | Optional | cannot be null | [Fishing tow](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location_start")                                 |
-| [location_end](#location_end)               | `object` | Optional | cannot be null | [Fishing tow](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location_end")                                   |
+| [location_start](#location_start)           | `object` | Optional | cannot be null | [Fishing tow](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location_start")                     |
+| [location_end](#location_end)               | `object` | Optional | cannot be null | [Fishing tow](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location_end")                       |
 | [waypoints](#waypoints)                     | `array`  | Optional | cannot be null | [Fishing tow](fishing-tow-properties-waypoints.md "https&#x3A;//poseidat.org/schema/core/fishing-tow.json#/properties/waypoints")                                 |
 | [zone](#zone)                               | `object` | Required | cannot be null | [Fishing tow](fishing-tow-properties-fishing-zone.md "https&#x3A;//poseidat.org/schema/core/fishing-zone.json#/properties/zone")                                  |
 | [fishing_gear](#fishing_gear)               | `object` | Optional | cannot be null | [Fishing tow](departure-properties-gear-on-board-fishing-gear.md "https&#x3A;//poseidat.org/schema/core/fishing-gear.json#/properties/fishing_gear")              |
@@ -79,7 +79,7 @@ A navigational position that can be used in an entry
 -   is optional
 -   Type: `object` ([Position](trip-entry-properties-position.md))
 -   cannot be null
--   defined in: [Fishing tow](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location_start")
+-   defined in: [Fishing tow](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location_start")
 
 ### location_start Type
 
@@ -95,7 +95,7 @@ A navigational position that can be used in an entry
 -   is optional
 -   Type: `object` ([Position](trip-entry-properties-position.md))
 -   cannot be null
--   defined in: [Fishing tow](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location_end")
+-   defined in: [Fishing tow](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location_end")
 
 ### location_end Type
 
