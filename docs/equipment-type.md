@@ -19,24 +19,24 @@ The types of supported technical vessel equipment.
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value              | Explanation |
-| :----------------- | ----------- |
-| `"ENGINE"`         |             |
-| `"GNSS"`           |             |
-| `"ECHOSOUNDER"`    |             |
-| `"FISHFINDER"`     |             |
-| `"AIS"`            |             |
-| `"ECONOMETER"`     |             |
-| `"TANKLEVELMETER"` |             |
-| `"TENSIOMETER"`    |             |
-| `"CHARGER"`        |             |
-| `"SEPARATOR"`      |             |
-| `"COMPASS"`        |             |
-| `"VSAT"`           |             |
-| `"REFRIDGERATOR"`  |             |
-| `"ICEMAKER"`       |             |
-| `"WINCH"`          |             |
-| `"RUDDER"`         |             |
-| `"PROPELLER"`      |             |
-| `"PUMP"`           |             |
-| `"SENSOR"`         |             |
+| Value                | Explanation |
+| :------------------- | ----------- |
+| `"ENGINE"`           |             |
+| `"GNSS"`             |             |
+| `"ECHO_SOUNDER"`     |             |
+| `"FISH_FINDER"`      |             |
+| `"AIS"`              |             |
+| `"ECONOMETER"`       |             |
+| `"TANK_LEVEL_METER"` |             |
+| `"TENSIOMETER"`      |             |
+| `"CHARGER"`          |             |
+| `"SEPARATOR"`        |             |
+| `"COMPASS"`          |             |
+| `"V_SAT"`            |             |
+| `"REFRIGERATOR"`     |             |
+| `"ICE_MAKER"`        |             |
+| `"WINCH"`            |             |
+| `"RUDDER"`           |             |
+| `"PROPELLER"`        |             |
+| `"PUMP"`             |             |
+| `"SENSOR"`           |             |

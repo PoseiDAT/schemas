@@ -19,13 +19,13 @@ The different compartments in a vessel.
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value          | Explanation |
-| :------------- | ----------- |
-| `"DECK"`       |             |
-| `"BRIDGE"`     |             |
-| `"GALLEY"`     |             |
-| `"ENGINEROOM"` |             |
-| `"FISHHOLD"`   |             |
-| `"CABIN"`      |             |
-| `"BOW"`        |             |
-| `"STERN"`      |             |
+| Value           | Explanation |
+| :-------------- | ----------- |
+| `"DECK"`        |             |
+| `"BRIDGE"`      |             |
+| `"GALLEY"`      |             |
+| `"ENGINE_ROOM"` |             |
+| `"FISH_HOLD"`   |             |
+| `"CABIN"`       |             |
+| `"BOW"`         |             |
+| `"STERN"`       |             |

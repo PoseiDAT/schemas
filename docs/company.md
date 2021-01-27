@@ -4,7 +4,7 @@
 https://poseidat.org/schema/core/persona/company.json
 ```
 
-A company involved with the vessel
+The details of a (commercial) company
 
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                               |
@@ -17,13 +17,12 @@ A company involved with the vessel
 
 # Company Properties
 
-| Property            | Type     | Required | Nullable       | Defined by                                                                                                            |
-| :------------------ | -------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------- |
-| [id](#id)           | `string` | Required | cannot be null | [Company](company-properties-id.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/id")       |
-| [name](#name)       | `string` | Required | cannot be null | [Company](company-properties-name.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/name")   |
-| [address](#address) | `object` | Optional | cannot be null | [Company](company-properties-address.md "https&#x3A;//poseidat.org/schema/core/address.json#/properties/address")     |
-| [phone](#phone)     | `string` | Optional | cannot be null | [Company](company-properties-phone.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/phone") |
-| [email](#email)     | `string` | Optional | cannot be null | [Company](company-properties-email.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/email") |
+| Property            | Type     | Required | Nullable       | Defined by                                                                                                                       |
+| :------------------ | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| [id](#id)           | `string` | Required | cannot be null | [Company](company-properties-id.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/id")                  |
+| [name](#name)       | `string` | Required | cannot be null | [Company](company-properties-name.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/name")              |
+| [address](#address) | `object` | Optional | cannot be null | [Company](company-properties-address.md "https&#x3A;//poseidat.org/schema/core/address.json#/properties/address")                |
+| [contact](#contact) | `object` | Optional | cannot be null | [Company](company-properties-contactdetails.md "https&#x3A;//poseidat.org/schema/core/contact-details.json#/properties/contact") |
 
 ## id
 
@@ -77,34 +76,18 @@ A street address
 
 `object` ([Address](company-properties-address.md))
 
-## phone
+## contact
 
-The phone number of the company
-
-
-`phone`
-
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Company](company-properties-phone.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/phone")
-
-### phone Type
-
-`string`
-
-## email
-
-The email address of the company
+Contact information for persona
 
 
-`email`
+`contact`
 
 -   is optional
--   Type: `string`
+-   Type: `object` ([ContactDetails](company-properties-contactdetails.md))
 -   cannot be null
--   defined in: [Company](company-properties-email.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/email")
+-   defined in: [Company](company-properties-contactdetails.md "https&#x3A;//poseidat.org/schema/core/contact-details.json#/properties/contact")
 
-### email Type
+### contact Type
 
-`string`
+`object` ([ContactDetails](company-properties-contactdetails.md))

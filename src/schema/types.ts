@@ -19,6 +19,12 @@ export interface ICoreBaseEntry {
   /** Free form remarks that are to be added to this journal entry */ remarks?: string;
 }
 
+/** Contact information for persona */
+export interface ICoreContactDetails {
+  /** The phone number of the contact */ phone?: string;
+  /** The email address of the contact */ email?: string;
+}
+
 /** Details of caught fish after it has been processed */
 export interface ICoreFishingCatchProcessed {
   /** The fish presentation code. Known as PR. Examples: WHL, GUT, FIL */ fish_presentation: IEnumFishPresentation;
@@ -162,17 +168,6 @@ export interface ICoreVesselInspection {
   /** The identification of the inspecting official. NLD: IA */ identifier: string;
 }
 
-/** A location on a vessel, used to locate objects on the vessel */
-export interface ICoreVesselLocation {
-  /** The unique identifier for the location (UUID v4) */ id: string;
-  /** The compartment this location is in */ compartment: IEnumVesselCompartment;
-  /** The name of this location */ name?: string;
-  /** The description of this location in the compartment */ description?: string;
-  /** The x position in cm, the position which is closest to the port side is 0cm */ pos_x?: number;
-  /** The y position in cm, the position which is closest to the stern is 0cm */ pos_y?: number;
-  /** The z position in cm, the position which is closest to the keel is 0cm */ pos_z?: number;
-}
-
 /** The vessel master details. Usually one per entry but can differ in a single trip */
 export interface ICoreVesselMaster {
   /** The name of the vessel master */ name: string;
@@ -189,6 +184,17 @@ export interface ICoreVesselPartner {
   /** Flag state of vessel registration. NLD2+: FS, GBR: PFS */ flag_state: string;
   /** The name of the vessel. NLD3+: NA, GBR: PNA */ name?: string;
   /** The vessel master (captain) */ master?: ICoreVesselMaster;
+}
+
+/** A section off a vessel, used to detail where objects are on the vessel */
+export interface ICoreVesselSection {
+  /** The unique identifier for the section (UUID v4) */ id: string;
+  /** The compartment this section is in */ compartment: IEnumVesselCompartment;
+  /** The name of this section */ name?: string;
+  /** The description of this section in the compartment */ description?: string;
+  /** The x position in cm, the position which is closest to the port side is 0cm */ pos_x?: number;
+  /** The y position in cm, the position which is closest to the stern is 0cm */ pos_y?: number;
+  /** The z position in cm, the position which is closest to the keel is 0cm */ pos_z?: number;
 }
 
 /** The vessel information */
@@ -235,12 +241,13 @@ export interface IEquipmentEquipment {
 
 /** The value of a certain type of measurement */
 export interface IMeasurementMeasurementValue {
-  /** The type of measurement */ type: IEnumMeasurementType;
-  /** The value of the measurement */ value: IMeasurementPosition | IMeasurementNumber;
+  /** The type of measurement */ type?: IEnumMeasurementType;
+  /** A positional measurement */ position?: IMeasurementPosition;
+  /** A numerical measurement */ numeric?: IMeasurementNumeric;
 }
 
 /** A number representing a measurement from a sensor */
-export interface IMeasurementNumber {
+export interface IMeasurementNumeric {
   /** The absolute measured value */ value: number;
   /** The positive error on the measurement */ positiveError?: number;
   /** The negative error on the measurement */ negativeError?: number;
@@ -257,20 +264,19 @@ export interface IMeasurementPosition {
   /** The number of satellites used to calculate the position */ numberOfSatellites?: number;
 }
 
-/** A company involved with the vessel */
+/** The details of a (commercial) company */
 export interface IPersonaCompany {
   /** The unique identifier for the company (UUID v4) */ id: string;
   /** The name of the company */ name: string;
-  /** The address of the company headquarters */ address?: ICoreAddress;
-  /** The phone number of the company */ phone?: string;
-  /** The email address of the company */ email?: string;
+  /** The address of the company */ address?: ICoreAddress;
+  /** The contact details of the company */ contact?: ICoreContactDetails;
 }
 
-export type IEnumDeviceType = "ANTENNA" | "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUITBRAKER";
+export type IEnumDeviceType = "ANTENNA" | "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER";
 
 export type IEnumEffortZone = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y";
 
-export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHOSOUNDER" | "FISHFINDER" | "AIS" | "ECONOMETER" | "TANKLEVELMETER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "VSAT" | "REFRIDGERATOR" | "ICEMAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR";
+export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "ECONOMETER" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR";
 
 export type IEnumFishFreshness = "A" | "B" | "E" | "SO" | "V";
 
@@ -282,7 +288,7 @@ export type IEnumFishState = "ALI" | "BOI" | "DRI" | "FRE" | "FRO" | "SAL" | "SM
 
 export type IEnumFishingGearType = "DRB" | "FIX" | "FPO" | "GEN" | "GN" | "GNC" | "GND" | "GNF" | "GNS" | "GTN" | "GTR" | "HMD" | "KRK" | "LA" | "LHM" | "LHP" | "LL" | "LLD" | "LLS" | "LTL" | "LX" | "MIS" | "NK" | "OTB" | "OTM" | "OTT" | "PS" | "PS1" | "PS2" | "PTB" | "PTM" | "PUL" | "RG" | "SDN" | "SPR" | "SSC" | "SV" | "SX" | "TB" | "TBB" | "TBN" | "TBS";
 
-export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUELCONSUMPTION" | "DEPTH" | "ACCELLERATION" | "MAGNETISM" | "ANGULARVELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGYCONSUMPTION" | "TRAWLTENSION";
+export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 
@@ -290,7 +296,7 @@ export type IEnumReasonDeparture = "FIS" | "GUD" | "OTH" | "SCR" | "STE" | "TST"
 
 export type IEnumReasonDiscard = "BAI" | "HSV" | "OTH" | "PDM" | "PRO" | "QEX";
 
-export type IEnumVesselCompartment = "DECK" | "BRIDGE" | "GALLEY" | "ENGINEROOM" | "FISHHOLD" | "CABIN" | "BOW" | "STERN";
+export type IEnumVesselCompartment = "DECK" | "BRIDGE" | "GALLEY" | "ENGINE_ROOM" | "FISH_HOLD" | "CABIN" | "BOW" | "STERN";
 
 export type IEntryArrivalEntryType = "arrival";
 /** A return to port event */

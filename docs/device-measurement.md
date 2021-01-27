@@ -25,7 +25,7 @@ all of
 | :------------------------ | -------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [entry_type](#entry_type) | `string` | Required | cannot be null | [Device measurement](device-measurement-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/device-measurement.json#/properties/entry_type")             |
 | [device_id](#device_id)   | `string` | Required | cannot be null | [Device measurement](device-measurement-properties-device_id.md "https&#x3A;//poseidat.org/schema/entry/device-measurement.json#/properties/device_id")               |
-| [value](#value)           | `object` | Required | cannot be null | [Device measurement](device-measurement-properties-measurement-value.md "https&#x3A;//poseidat.org/schema/core/measurement/measurement-value.json#/properties/value") |
+| [value](#value)           | Merged   | Required | cannot be null | [Device measurement](device-measurement-properties-measurement-value.md "https&#x3A;//poseidat.org/schema/core/measurement/measurement-value.json#/properties/value") |
 
 ## entry_type
 
@@ -90,3 +90,8 @@ The value of a certain type of measurement
 ### value Type
 
 `object` ([Measurement value](device-measurement-properties-measurement-value.md))
+
+one (and only one) of
+
+-   [Untitled undefined type in Measurement value](measurement-value-oneof-0.md "check type definition")
+-   [Untitled undefined type in Measurement value](measurement-value-oneof-1.md "check type definition")

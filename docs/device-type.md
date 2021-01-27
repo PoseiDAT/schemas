@@ -19,19 +19,19 @@ The types of supported technical vessel devices.
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value             | Explanation |
-| :---------------- | ----------- |
-| `"ANTENNA"`       |             |
-| `"PUMP"`          |             |
-| `"PROCESSOR"`     |             |
-| `"DISPLAY"`       |             |
-| `"HID"`           |             |
-| `"ROUTER"`        |             |
-| `"SWITCH"`        |             |
-| `"MODEM"`         |             |
-| `"SENSOR"`        |             |
-| `"BRAKE"`         |             |
-| `"ACTUATOR"`      |             |
-| `"CABLE"`         |             |
-| `"ENCLOSURE"`     |             |
-| `"CIRCUITBRAKER"` |             |
+| Value               | Explanation |
+| :------------------ | ----------- |
+| `"ANTENNA"`         |             |
+| `"PUMP"`            |             |
+| `"PROCESSOR"`       |             |
+| `"DISPLAY"`         |             |
+| `"HID"`             |             |
+| `"ROUTER"`          |             |
+| `"SWITCH"`          |             |
+| `"MODEM"`           |             |
+| `"SENSOR"`          |             |
+| `"BRAKE"`           |             |
+| `"ACTUATOR"`        |             |
+| `"CABLE"`           |             |
+| `"ENCLOSURE"`       |             |
+| `"CIRCUIT_BREAKER"` |             |

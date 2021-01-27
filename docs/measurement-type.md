@@ -19,22 +19,22 @@ The measurement types
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                 | Explanation |
-| :-------------------- | ----------- |
-| `"POSITION"`          |             |
-| `"TEMPERATURE"`       |             |
-| `"HUMIDITY"`          |             |
-| `"PRESSURE"`          |             |
-| `"SPEED"`             |             |
-| `"ONOFF"`             |             |
-| `"FORCE"`             |             |
-| `"FUELCONSUMPTION"`   |             |
-| `"DEPTH"`             |             |
-| `"ACCELLERATION"`     |             |
-| `"MAGNETISM"`         |             |
-| `"ANGULARVELOCITY"`   |             |
-| `"VOLTAGE"`           |             |
-| `"CURRENT"`           |             |
-| `"POWER"`             |             |
-| `"ENERGYCONSUMPTION"` |             |
-| `"TRAWLTENSION"`      |             |
+| Value                  | Explanation |
+| :--------------------- | ----------- |
+| `"POSITION"`           |             |
+| `"TEMPERATURE"`        |             |
+| `"HUMIDITY"`           |             |
+| `"PRESSURE"`           |             |
+| `"SPEED"`              |             |
+| `"ONOFF"`              |             |
+| `"FORCE"`              |             |
+| `"FUEL_CONSUMPTION"`   |             |
+| `"DEPTH"`              |             |
+| `"ACCELERATION"`       |             |
+| `"MAGNETISM"`          |             |
+| `"ANGULAR_VELOCITY"`   |             |
+| `"VOLTAGE"`            |             |
+| `"CURRENT"`            |             |
+| `"POWER"`              |             |
+| `"ENERGY_CONSUMPTION"` |             |
+| `"TRAWL_TENSION"`      |             |
