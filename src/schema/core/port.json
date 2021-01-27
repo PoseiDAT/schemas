@@ -11,7 +11,7 @@
       "minLength": 5
     },
     "location": {
-      "$ref": "https://poseidat.org/schema/core/position.json",
+      "$ref": "https://poseidat.org/schema/core/measurement/position.json",
       "description": "The geographical location of the port"
     }
   },

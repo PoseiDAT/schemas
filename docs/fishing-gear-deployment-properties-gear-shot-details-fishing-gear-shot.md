@@ -20,7 +20,7 @@ A gear shot event details
 | Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                  |
 | :------------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [date](#date)                   | `string` | Optional | cannot be null | [Fishing gear shot](fishing-gear-shot-properties-date.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-shot.json#/properties/date")                   |
-| [location](#location)           | `object` | Required | cannot be null | [Fishing gear shot](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")                           |
+| [location](#location)           | `object` | Required | cannot be null | [Fishing gear shot](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")               |
 | [identifier](#identifier)       | `string` | Optional | cannot be null | [Fishing gear shot](fishing-gear-shot-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-shot.json#/properties/identifier")       |
 | [country_zones](#country_zones) | `string` | Optional | cannot be null | [Fishing gear shot](fishing-gear-shot-properties-country_zones.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-shot.json#/properties/country_zones") |
 
@@ -54,7 +54,7 @@ A navigational position that can be used in an entry
 -   is required
 -   Type: `object` ([Position](trip-entry-properties-position.md))
 -   cannot be null
--   defined in: [Fishing gear shot](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
+-   defined in: [Fishing gear shot](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")
 
 ### location Type
 

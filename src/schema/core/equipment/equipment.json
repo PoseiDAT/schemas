@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/equipment/equipment.json",
+  "title": "Equipment",
+  "description": "A piece of equipment installed on a vessel. Equipment is composed out of different devices",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the equipment (UUID v4)",
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "description": "Name of the equipment",
+      "type": "string"
+    },
+    "type": {
+      "description": "The type of equipment",
+      "$ref" : "https://poseidat.org/schema/enum/equipment-type.json"
+    },
+    "supplier": {
+      "description": "The company which supplied the equipment",
+      "$ref": "https://poseidat.org/schema/core/persona/company.json"
+    },
+    "installer": {
+      "description": "The company which has installed the equipment",
+      "$ref": "https://poseidat.org/schema/core/persona/company.json"
+    },
+    "maintainer": {
+      "description": "The company which maintains the equipment",
+      "$ref": "https://poseidat.org/schema/core/persona/company.json"
+    },
+    "devices": {
+      "description": "The collection of devices of which this equipment is composed",
+      "type": "array",
+      "minItems": 2,
+      "title": "Devices",
+      "items": {
+        "$ref": "https://poseidat.org/schema/core/equipment/device.json"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "type",
+    "devices"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

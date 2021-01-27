@@ -20,7 +20,7 @@ Vessel inspection details
 | Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                            |
 | :------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [date](#date)             | `string` | Required | cannot be null | [Vessel inspection](vessel-inspection-properties-date.md "https&#x3A;//poseidat.org/schema/core/vessel-inspection.json#/properties/date")             |
-| [location](#location)     | `object` | Required | cannot be null | [Vessel inspection](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")                     |
+| [location](#location)     | `object` | Required | cannot be null | [Vessel inspection](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")         |
 | [country](#country)       | `string` | Optional | cannot be null | [Vessel inspection](vessel-inspection-properties-country.md "https&#x3A;//poseidat.org/schema/core/vessel-inspection.json#/properties/country")       |
 | [identifier](#identifier) | `string` | Required | cannot be null | [Vessel inspection](vessel-inspection-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/vessel-inspection.json#/properties/identifier") |
 
@@ -54,7 +54,7 @@ A navigational position that can be used in an entry
 -   is required
 -   Type: `object` ([Position](trip-entry-properties-position.md))
 -   cannot be null
--   defined in: [Vessel inspection](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/position.json#/properties/location")
+-   defined in: [Vessel inspection](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")
 
 ### location Type
 

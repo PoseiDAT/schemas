@@ -1,3 +1,13 @@
+/** A street address */
+export interface ICoreAddress {
+  /** The street and number */ streetAddress: string;
+  /** An optional street and number extension */ streetAddressExtension?: string;
+  /** The postal or ZIP code of the city */ postalCode: string;
+  /** The city or town */ city: string;
+  /** The region or province */ region?: string;
+  /** The country */ country: string;
+}
+
 /** The shared properties for all entries */
 export interface ICoreBaseEntry {
   /** The unique identifier of the journal (UUID v4) this entry belongs to */ journal_id: string;
@@ -7,6 +17,12 @@ export interface ICoreBaseEntry {
   /** The revision timestamp of this entry. Should be the time it was created. */ revision: string;
   /** Indicates this entry cannot be replaced with future revisions (default) */ immutable: boolean;
   /** Free form remarks that are to be added to this journal entry */ remarks?: string;
+}
+
+/** Contact information for persona */
+export interface ICoreContactDetails {
+  /** The phone number of the contact */ phone?: string;
+  /** The email address of the contact */ email?: string;
 }
 
 /** Details of caught fish after it has been processed */
@@ -68,7 +84,7 @@ export interface ICoreFishingGearGillNet {
 /** A gear loss event details */
 export interface ICoreFishingGearLoss {
   /** The datetime the gear loss took place */ date?: string;
-  /** The geographical location where the gear loss took place */ location: ICorePosition;
+  /** The geographical location where the gear loss took place */ location: IMeasurementPosition;
   /** The identification tag attached to the lost gear. NLD: NI, GBR: GBRGNFN */ identifier: string;
   /** Free form text to describe the reason of the gear loss. NLD: VT, GBR: GBRCOM */ remarks?: string;
   /** The amount of gear items lost, GBR: NN */ amount_lost?: number;
@@ -77,14 +93,14 @@ export interface ICoreFishingGearLoss {
 /** A gear retrieve event details */
 export interface ICoreFishingGearRetrieve {
   /** The datetime the gear retrieve took place. GBR: DATI, NLD2: DA + TI, NLD3: DA */ date?: string;
-  /** The geographical location where the gear retrieve took place */ location: ICorePosition;
+  /** The geographical location where the gear retrieve took place */ location: IMeasurementPosition;
   /** The identification tag attached to the retrieved gear. NLD: NI, GBR: GBRGNFN */ identifier: string;
 }
 
 /** A gear shot event details */
 export interface ICoreFishingGearShot {
   /** The datetime the gear shot took place. GBR: DATI, NLD2: DA + TI, NLD3: DA */ date?: string;
-  /** The geographical location where the gear shot took place */ location: ICorePosition;
+  /** The geographical location where the gear shot took place */ location: IMeasurementPosition;
   /** The identification tag attached to the retrieved gear. NLD: NI, GBR: GBRGNFN */ identifier?: string;
   /** Indicator of where zone fishing will be commencing. Data recorded in accordance with Norwegian requirements. Known as GBRZO */ country_zones?: string;
 }
@@ -101,9 +117,9 @@ export interface ICoreFishingGear {
 export interface ICoreFishingTow {
   /** The datetime the tow started in UTC */ activity_date_start?: string;
   /** The datetime the tow ended in UTC */ activity_date_end?: string;
-  /** The geographical location where the tow started (if applicable) */ location_start?: ICorePosition;
-  /** The geographical location where the tow ended (if applicable) */ location_end?: ICorePosition;
-  /** The collection of geographical locations logged during the tow */ waypoints?: ICorePosition[];
+  /** The geographical location where the tow started (if applicable) */ location_start?: IMeasurementPosition;
+  /** The geographical location where the tow ended (if applicable) */ location_end?: IMeasurementPosition;
+  /** The collection of geographical locations logged during the tow */ waypoints?: IMeasurementPosition[];
   /** The zone the tow took place in */ zone: ICoreFishingZone;
   /** The fishing gear used for this tow */ fishing_gear?: ICoreFishingGear;
   /** The details of how the gear was used for the tow */ gear_deployment?: ICoreFishingGearDeployment;
@@ -132,18 +148,7 @@ export interface ICoreJournal {
 /** Fishing port details */
 export interface ICorePort {
   /** The international port code. Format is 2 letter country code and 3 letter port code. Example: NLURK, BEANR, GBHUL */ code: string;
-  /** The geographical location of the port */ location?: ICorePosition;
-}
-
-/** A navigational position that can be used in an entry */
-export interface ICorePosition {
-  /** The latitude of the geographical location */ latitude: number;
-  /** The longitude of the geographical location */ longitude: number;
-  /** The compass heading of the vessel in degrees */ heading?: number;
-  /** The direction in which the vessel is traveling, in degrees */ courseMadeGood?: number;
-  /** The velocity of the vessel in meters per second (m/s) over the ground */ speedOverGround?: number;
-  /** The velocity of the vessel in meters per second (m/s) through the water */ speedThroughWater?: number;
-  /** The number of satellites used to calculate the position */ numberOfSatellites?: number;
+  /** The geographical location of the port */ location?: IMeasurementPosition;
 }
 
 /** The trip related details of a journal entry */
@@ -152,13 +157,13 @@ export interface ICoreTripEntry {
   /** The trip number this entry belongs to. NLD: TN, GBR: GBRLOGNO */ trip_nr: string;
   /** The unique record number for the trip entry. Formats differ between ERS dialects. NLD: RN GBR: GBRLOGNO */ record_nr: string;
   /** The unique sequence number for the  entry. GBR: GBRLOGSEQ */ sequence_nr?: string;
-  /** The geographical location where the entry was created (for) */ location?: ICorePosition;
+  /** The geographical location where the entry was created (for) */ location?: IMeasurementPosition;
 }
 
 /** Vessel inspection details */
 export interface ICoreVesselInspection {
   /** The datetime the inspection took place */ date: string;
-  /** The geographical location of the inspection */ location: ICorePosition;
+  /** The geographical location of the inspection */ location: IMeasurementPosition;
   /** The country performing the inspection as a 3 letter ISO code. Example: NLD, BEL, GBR. NLD: IC */ country?: string;
   /** The identification of the inspecting official. NLD: IA */ identifier: string;
 }
@@ -181,6 +186,17 @@ export interface ICoreVesselPartner {
   /** The vessel master (captain) */ master?: ICoreVesselMaster;
 }
 
+/** A section off a vessel, used to detail where objects are on the vessel */
+export interface ICoreVesselSection {
+  /** The unique identifier for the section (UUID v4) */ id: string;
+  /** The compartment this section is in */ compartment: IEnumVesselCompartment;
+  /** The name of this section */ name?: string;
+  /** The description of this section in the compartment */ description?: string;
+  /** The x position in cm, the position which is closest to the port side is 0cm */ pos_x?: number;
+  /** The y position in cm, the position which is closest to the stern is 0cm */ pos_y?: number;
+  /** The z position in cm, the position which is closest to the keel is 0cm */ pos_z?: number;
+}
+
 /** The vessel information */
 export interface ICoreVessel {
   /** The display name for the vessel */ name: string;
@@ -199,7 +215,68 @@ export interface ICoreVessel {
   /** The full length of the vessel in meters */ full_length?: number;
 }
 
+/** A device which is a part of a piece of equipment installed on a vessel */
+export interface IEquipmentDevice {
+  /** The unique identifier for the device (UUID v4) */ id: string;
+  /** Name of the device */ name: string;
+  /** The type of device */ type: IEnumDeviceType;
+  /** The brand of the device */ brand?: string;
+  /** The product number of the device */ productNo?: string;
+  /** The serial number of the device */ serialNo?: string;
+  /** The company which supplied the device */ supplier?: IPersonaCompany;
+  /** The company which has installed the device */ installer?: IPersonaCompany;
+  /** The company which maintains the device */ maintainer?: IPersonaCompany;
+}
+
+/** A piece of equipment installed on a vessel. Equipment is composed out of different devices */
+export interface IEquipmentEquipment {
+  /** The unique identifier for the equipment (UUID v4) */ id: string;
+  /** Name of the equipment */ name: string;
+  /** The type of equipment */ type: IEnumEquipmentType;
+  /** The company which supplied the equipment */ supplier?: IPersonaCompany;
+  /** The company which has installed the equipment */ installer?: IPersonaCompany;
+  /** The company which maintains the equipment */ maintainer?: IPersonaCompany;
+  /** The collection of devices of which this equipment is composed */ devices: IEquipmentDevice[];
+}
+
+/** The value of a certain type of measurement */
+export interface IMeasurementMeasurementValue {
+  /** The type of measurement */ type?: IEnumMeasurementType;
+  /** A positional measurement */ position?: IMeasurementPosition;
+  /** A numerical measurement */ numeric?: IMeasurementNumeric;
+}
+
+/** A number representing a measurement from a sensor */
+export interface IMeasurementNumeric {
+  /** The absolute measured value */ value: number;
+  /** The positive error on the measurement */ positiveError?: number;
+  /** The negative error on the measurement */ negativeError?: number;
+}
+
+/** A navigational position that can be used in an entry */
+export interface IMeasurementPosition {
+  /** The latitude of the geographical location */ latitude: number;
+  /** The longitude of the geographical location */ longitude: number;
+  /** The compass heading of the vessel in degrees */ heading?: number;
+  /** The direction in which the vessel is traveling, in degrees */ courseMadeGood?: number;
+  /** The velocity of the vessel in meters per second (m/s) over the ground */ speedOverGround?: number;
+  /** The velocity of the vessel in meters per second (m/s) through the water */ speedThroughWater?: number;
+  /** The number of satellites used to calculate the position */ numberOfSatellites?: number;
+}
+
+/** The details of a (commercial) company */
+export interface IPersonaCompany {
+  /** The unique identifier for the company (UUID v4) */ id: string;
+  /** The name of the company */ name: string;
+  /** The address of the company */ address?: ICoreAddress;
+  /** The contact details of the company */ contact?: ICoreContactDetails;
+}
+
+export type IEnumDeviceType = "ANTENNA" | "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER";
+
 export type IEnumEffortZone = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y";
+
+export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "ECONOMETER" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR";
 
 export type IEnumFishFreshness = "A" | "B" | "E" | "SO" | "V";
 
@@ -211,11 +288,15 @@ export type IEnumFishState = "ALI" | "BOI" | "DRI" | "FRE" | "FRO" | "SAL" | "SM
 
 export type IEnumFishingGearType = "DRB" | "FIX" | "FPO" | "GEN" | "GN" | "GNC" | "GND" | "GNF" | "GNS" | "GTN" | "GTR" | "HMD" | "KRK" | "LA" | "LHM" | "LHP" | "LL" | "LLD" | "LLS" | "LTL" | "LX" | "MIS" | "NK" | "OTB" | "OTM" | "OTT" | "PS" | "PS1" | "PS2" | "PTB" | "PTM" | "PUL" | "RG" | "SDN" | "SPR" | "SSC" | "SV" | "SX" | "TB" | "TBB" | "TBN" | "TBS";
 
+export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION";
+
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 
 export type IEnumReasonDeparture = "FIS" | "GUD" | "OTH" | "SCR" | "STE" | "TST";
 
 export type IEnumReasonDiscard = "BAI" | "HSV" | "OTH" | "PDM" | "PRO" | "QEX";
+
+export type IEnumVesselCompartment = "DECK" | "BRIDGE" | "GALLEY" | "ENGINE_ROOM" | "FISH_HOLD" | "CABIN" | "BOW" | "STERN";
 
 export type IEntryArrivalEntryType = "arrival";
 /** A return to port event */
@@ -245,8 +326,7 @@ export type IEntryDeviceMeasurementEntryType = "device-measurement";
 export interface IEntryDeviceMeasurement extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryDeviceMeasurementEntryType;
   /** The unique identifier for the device */ device_id: string;
-  /** The registered measurement for the device */ value: number;
-  /** The date and time the value was recorded in UTC in RFC3339 format */ timestamp: string;
+  /** The registered measurement for the device */ value: IMeasurementMeasurementValue;
 }
 
 export type IEntryEndOfFishingEntryType = "end-of-fishing";
@@ -261,7 +341,7 @@ export type IEntryEquipmentInventoryEntryType = "equipment-inventory";
 /** An entry detailing the equipment installed on a vessel. One 1 should exist per journal */
 export interface IEntryEquipmentInventory extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryEquipmentInventoryEntryType;
-  /** The collection of equipment for the vessel */ equipment: IEquipmentInventoryEquipment[];
+  /** The collection of equipment for the vessel */ equipment: IEquipmentEquipment[];
 }
 
 export type IEntryFishingActivityEntryType = "fishing-activity";
@@ -278,7 +358,7 @@ export interface IEntryZoneEnter extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryZoneEnterEntryType;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The zone being entered */ zone: ICoreFishingZone;
-  /** The geographical location where the entry took place */ location: ICorePosition;
+  /** The geographical location where the entry took place */ location: IMeasurementPosition;
   /** The previously caught fish present on the vessel at the time of entry */ catch_on_board?: ICoreFishingCatch[];
   /** An indication of the target species for the fishing activity. NLD: TS, GBR: TS */ target_species?: string;
   /** An indication of the directed species for the fishing activity. GBR: GBRDS */ directed_species?: string;
@@ -292,20 +372,10 @@ export interface IEntryZoneExit extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryZoneExitEntryType;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The zone being entered */ zone: ICoreFishingZone;
-  /** The geographical location where the entry took place */ location: ICorePosition;
+  /** The geographical location where the entry took place */ location: IMeasurementPosition;
   /** The previously caught fish present on the vessel at the time of entry */ catch_on_board?: ICoreFishingCatch[];
   /** An indication of the target species for the fishing activity. Only GBR: TS */ target_species?: string;
   /** The fishing effort zone. Example: A (ICES V-VI). GBR: GBRFE */ effort_zone?: IEnumEffortZone;
   /** Indicates the vessel has engaged in trans-zonal fishing: GRB: GBRTRZ */ trans_zonal_fishing?: boolean;
   /** The zones involved in trans-zonal fishing. NLD: NLTRZ */ trans_zonal_fishing_zones?: ICoreFishingZone[];
-}
-
-/** A device which is a part of a piece of equipment installed on a vessel */
-export interface IEquipmentInventoryDevice {
-  /** The unique identifier for the device (UUID v4) */ device_id: string;
-}
-
-/** A piece of equipment installed on a vessel */
-export interface IEquipmentInventoryEquipment {
-  /** The collection of devices that are a part of this piece of equipment */ device: IEquipmentInventoryDevice[];
 }
