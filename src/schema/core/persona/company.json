@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/persona/company.json",
   "title": "Company",
-  "description": "A company involved with the vessel",
+  "description": "The details of a (commercial) company",
   "properties": {
     "id": {
       "description": "The unique identifier for the company (UUID v4)",
@@ -14,16 +14,12 @@
       "type": "string"
     },
     "address": {
-      "description": "The address of the company headquarters",
+      "description": "The address of the company",
       "$ref" : "https://poseidat.org/schema/core/address.json"
     },
-    "phone": {
-      "description": "The phone number of the company",
-      "type": "string"
-    },
-    "email": {
-      "description": "The email address of the company",
-      "type": "string"
+    "contact": {
+      "description": "The contact details of the company",
+      "$ref" : "https://poseidat.org/schema/core/contact-details.json"
     }
   },
   "required": [

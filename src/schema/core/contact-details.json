@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/contact-details.json",
+  "title": "ContactDetails",
+  "description": "Contact information for persona",
+  "properties": {
+    "phone": {
+      "description": "The phone number of the contact",
+      "type": "string"
+    },
+    "email": {
+      "description": "The email address of the contact",
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "additionalProperties": false
+}
