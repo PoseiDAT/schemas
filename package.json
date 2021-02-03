@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "ajv": "^7.0.4",
+    "ajv-formats": "^1.5.1",
     "ajv-keywords": "^4.0.0"
   }
 }
