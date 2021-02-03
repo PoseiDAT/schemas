@@ -35,6 +35,7 @@ describe('BaseEntry', () => {
       entry_id: v4(),
       revision: '2020-01-01T00:00:00Z',
       immutable: false,
+      entry_type: 'test',
     }
 
     const baseEntry = new BaseEntry(data);
