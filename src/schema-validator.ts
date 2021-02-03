@@ -1,4 +1,4 @@
-import Ajv from 'ajv';
+import Ajv, { ErrorObject } from 'ajv';
 import AjvKeywords from 'ajv-keywords';
 import { JSONSchema7 } from 'json-schema';
 import { schemas } from './schema';
@@ -42,7 +42,7 @@ export function validateSchema(
     object: Record<string, unknown>|ICoreJournal|ICoreBaseEntry,
     schema: JSONSchema7
   }
-): Ajv.ErrorObject[] {
+): ErrorObject[] {
   const validate = validator.compile(schema);
   validate(object);
   return validate.errors || [];

@@ -1,4 +1,4 @@
-import ajv from 'ajv';
+import { ErrorObject } from 'ajv';
 import { schemas } from './schema';
 import { ICoreJournal } from './schema/types';
 import { validateSchema } from './schema-validator';
@@ -23,7 +23,7 @@ export class Journal {
    *
    * @returns {ajv.ErrorObject[]}
    */
-  public validate(): ajv.ErrorObject[] {
+  public validate(): ErrorObject[] {
     return validateSchema( { object: this.data, schema: schemas.core.journal } );
   }
 }

@@ -1,4 +1,4 @@
-import ajv from 'ajv';
+import { ErrorObject } from 'ajv';
 import { ICoreBaseEntry } from './schema/types';
 import { validateSchema } from './schema-validator';
 import { schemas } from './schema';
@@ -30,7 +30,7 @@ export class BaseEntry {
    *
    * @returns {ajv.ErrorObject[]}
    */
-  public validate(): ajv.ErrorObject[] {
+  public validate(): ErrorObject[] {
     return validateSchema( { object: this.data, schema: this.schema } );
   }
 }
