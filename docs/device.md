@@ -6,9 +6,8 @@ https://poseidat.org/schema/core/equipment/device.json
 
 A device which is a part of a piece of equipment installed on a vessel
 
-
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                               |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------ |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [device.json](schemas/core/equipment/device.json "open original schema") |
 
 ## Device Type
@@ -17,29 +16,31 @@ A device which is a part of a piece of equipment installed on a vessel
 
 # Device Properties
 
-| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                    |
-| :------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| [id](#id)                 | `string` | Required | cannot be null | [Device](device-properties-id.md "https&#x3A;//poseidat.org/schema/core/equipment/device.json#/properties/id")                |
-| [name](#name)             | `string` | Required | cannot be null | [Device](device-properties-name.md "https&#x3A;//poseidat.org/schema/core/equipment/device.json#/properties/name")            |
-| [type](#type)             | `string` | Required | cannot be null | [Device](device-properties-device-type.md "https&#x3A;//poseidat.org/schema/enum/device-type.json#/properties/type")          |
-| [brand](#brand)           | `string` | Optional | cannot be null | [Device](device-properties-brand.md "https&#x3A;//poseidat.org/schema/core/equipment/device.json#/properties/brand")          |
-| [productNo](#productNo)   | `string` | Optional | cannot be null | [Device](device-properties-productno.md "https&#x3A;//poseidat.org/schema/core/equipment/device.json#/properties/productNo")  |
-| [serialNo](#serialNo)     | `string` | Optional | cannot be null | [Device](device-properties-serialno.md "https&#x3A;//poseidat.org/schema/core/equipment/device.json#/properties/serialNo")    |
-| [supplier](#supplier)     | `object` | Optional | cannot be null | [Device](equipment-properties-company.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/supplier")   |
-| [installer](#installer)   | `object` | Optional | cannot be null | [Device](equipment-properties-company.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/installer")  |
-| [maintainer](#maintainer) | `object` | Optional | cannot be null | [Device](equipment-properties-company.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/maintainer") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                               |
+| :------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------- |
+| [id](#id)                 | `string` | Required | cannot be null | [Device](device-properties-id.md "https://poseidat.org/schema/core/equipment/device.json#/properties/id")                |
+| [name](#name)             | `string` | Required | cannot be null | [Device](device-properties-name.md "https://poseidat.org/schema/core/equipment/device.json#/properties/name")            |
+| [type](#type)             | `string` | Required | cannot be null | [Device](device-properties-device-type.md "https://poseidat.org/schema/enum/device-type.json#/properties/type")          |
+| [brand](#brand)           | `string` | Optional | cannot be null | [Device](device-properties-brand.md "https://poseidat.org/schema/core/equipment/device.json#/properties/brand")          |
+| [productNo](#productno)   | `string` | Optional | cannot be null | [Device](device-properties-productno.md "https://poseidat.org/schema/core/equipment/device.json#/properties/productNo")  |
+| [serialNo](#serialno)     | `string` | Optional | cannot be null | [Device](device-properties-serialno.md "https://poseidat.org/schema/core/equipment/device.json#/properties/serialNo")    |
+| [supplier](#supplier)     | `object` | Optional | cannot be null | [Device](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/supplier")   |
+| [installer](#installer)   | `object` | Optional | cannot be null | [Device](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/installer")  |
+| [maintainer](#maintainer) | `object` | Optional | cannot be null | [Device](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/maintainer") |
 
 ## id
 
 The unique identifier for the device (UUID v4)
 
-
 `id`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [Device](device-properties-id.md "https&#x3A;//poseidat.org/schema/core/equipment/device.json#/properties/id")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Device](device-properties-id.md "https://poseidat.org/schema/core/equipment/device.json#/properties/id")
 
 ### id Type
 
@@ -53,13 +54,15 @@ The unique identifier for the device (UUID v4)
 
 Name of the device
 
-
 `name`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [Device](device-properties-name.md "https&#x3A;//poseidat.org/schema/core/equipment/device.json#/properties/name")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Device](device-properties-name.md "https://poseidat.org/schema/core/equipment/device.json#/properties/name")
 
 ### name Type
 
@@ -69,13 +72,15 @@ Name of the device
 
 The types of supported technical vessel devices.
 
-
 `type`
 
--   is required
--   Type: `string` ([Device type](device-properties-device-type.md))
--   cannot be null
--   defined in: [Device](device-properties-device-type.md "https&#x3A;//poseidat.org/schema/enum/device-type.json#/properties/type")
+*   is required
+
+*   Type: `string` ([Device type](device-properties-device-type.md))
+
+*   cannot be null
+
+*   defined in: [Device](device-properties-device-type.md "https://poseidat.org/schema/enum/device-type.json#/properties/type")
 
 ### type Type
 
@@ -86,7 +91,7 @@ The types of supported technical vessel devices.
 **enum**: the value of this property must be equal to one of the following values:
 
 | Value               | Explanation |
-| :------------------ | ----------- |
+| :------------------ | :---------- |
 | `"ANTENNA"`         |             |
 | `"PUMP"`            |             |
 | `"PROCESSOR"`       |             |
@@ -106,13 +111,15 @@ The types of supported technical vessel devices.
 
 The brand of the device
 
-
 `brand`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Device](device-properties-brand.md "https&#x3A;//poseidat.org/schema/core/equipment/device.json#/properties/brand")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Device](device-properties-brand.md "https://poseidat.org/schema/core/equipment/device.json#/properties/brand")
 
 ### brand Type
 
@@ -122,13 +129,15 @@ The brand of the device
 
 The product number of the device
 
-
 `productNo`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Device](device-properties-productno.md "https&#x3A;//poseidat.org/schema/core/equipment/device.json#/properties/productNo")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Device](device-properties-productno.md "https://poseidat.org/schema/core/equipment/device.json#/properties/productNo")
 
 ### productNo Type
 
@@ -138,13 +147,15 @@ The product number of the device
 
 The serial number of the device
 
-
 `serialNo`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Device](device-properties-serialno.md "https&#x3A;//poseidat.org/schema/core/equipment/device.json#/properties/serialNo")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Device](device-properties-serialno.md "https://poseidat.org/schema/core/equipment/device.json#/properties/serialNo")
 
 ### serialNo Type
 
@@ -154,13 +165,15 @@ The serial number of the device
 
 The details of a (commercial) company
 
-
 `supplier`
 
--   is optional
--   Type: `object` ([Company](equipment-properties-company.md))
--   cannot be null
--   defined in: [Device](equipment-properties-company.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/supplier")
+*   is optional
+
+*   Type: `object` ([Company](equipment-properties-company.md))
+
+*   cannot be null
+
+*   defined in: [Device](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/supplier")
 
 ### supplier Type
 
@@ -170,13 +183,15 @@ The details of a (commercial) company
 
 The details of a (commercial) company
 
-
 `installer`
 
--   is optional
--   Type: `object` ([Company](equipment-properties-company.md))
--   cannot be null
--   defined in: [Device](equipment-properties-company.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/installer")
+*   is optional
+
+*   Type: `object` ([Company](equipment-properties-company.md))
+
+*   cannot be null
+
+*   defined in: [Device](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/installer")
 
 ### installer Type
 
@@ -186,13 +201,15 @@ The details of a (commercial) company
 
 The details of a (commercial) company
 
-
 `maintainer`
 
--   is optional
--   Type: `object` ([Company](equipment-properties-company.md))
--   cannot be null
--   defined in: [Device](equipment-properties-company.md "https&#x3A;//poseidat.org/schema/core/persona/company.json#/properties/maintainer")
+*   is optional
+
+*   Type: `object` ([Company](equipment-properties-company.md))
+
+*   cannot be null
+
+*   defined in: [Device](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/maintainer")
 
 ### maintainer Type
 

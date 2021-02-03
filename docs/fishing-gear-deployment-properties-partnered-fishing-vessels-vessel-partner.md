@@ -6,38 +6,39 @@ https://poseidat.org/schema/core/vessel-partner.json#/properties/partnered_fishi
 
 Fishing vessel details for partnered fishing
 
-
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                         |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | -------------------------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [fishing-gear-deployment.json\*](schemas/core/fishing-gear-deployment.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                        |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------------------------ |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [fishing-gear-deployment.json*](schemas/core/fishing-gear-deployment.json "open original schema") |
 
 ## items Type
 
 `object` ([Vessel partner](fishing-gear-deployment-properties-partnered-fishing-vessels-vessel-partner.md))
 
-# Vessel partner Properties
+# items Properties
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                     |
-| :-------------------------- | -------- | -------- | -------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| [hull_number](#hull_number) | `string` | Required | cannot be null | [Vessel partner](vessel-partner-properties-hull_number.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/hull_number") |
-| [rss](#rss)                 | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-rss.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/rss")                 |
-| [cfr](#cfr)                 | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-cfr.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/cfr")                 |
-| [call_sign](#call_sign)     | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-call_sign.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/call_sign")     |
-| [flag_state](#flag_state)   | `string` | Required | cannot be null | [Vessel partner](vessel-partner-properties-flag_state.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/flag_state")   |
-| [name](#name)               | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-name.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/name")               |
-| [master](#master)           | `object` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-vessel-master.md "https&#x3A;//poseidat.org/schema/core/vessel-master.json#/properties/master")     |
+| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                |
+| :-------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| [hull_number](#hull_number) | `string` | Required | cannot be null | [Vessel partner](vessel-partner-properties-hull_number.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/hull_number") |
+| [rss](#rss)                 | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-rss.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/rss")                 |
+| [cfr](#cfr)                 | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-cfr.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/cfr")                 |
+| [call_sign](#call_sign)     | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-call_sign.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/call_sign")     |
+| [flag_state](#flag_state)   | `string` | Required | cannot be null | [Vessel partner](vessel-partner-properties-flag_state.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/flag_state")   |
+| [name](#name)               | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-name.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/name")               |
+| [master](#master)           | `object` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-vessel-master.md "https://poseidat.org/schema/core/vessel-master.json#/properties/master")     |
 
 ## hull_number
 
 The external markings of the vessel. NLD2+: XR, GBR: PXR
 
-
 `hull_number`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [Vessel partner](vessel-partner-properties-hull_number.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/hull_number")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Vessel partner](vessel-partner-properties-hull_number.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/hull_number")
 
 ### hull_number Type
 
@@ -47,13 +48,15 @@ The external markings of the vessel. NLD2+: XR, GBR: PXR
 
 The RSS identification code for the vessel. GBR: GBRPRSSNO
 
-
 `rss`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Vessel partner](vessel-partner-properties-rss.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/rss")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Vessel partner](vessel-partner-properties-rss.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/rss")
 
 ### rss Type
 
@@ -63,13 +66,15 @@ The RSS identification code for the vessel. GBR: GBRPRSSNO
 
 The code of federal regulation for the vessel. GBR: PIR
 
-
 `cfr`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Vessel partner](vessel-partner-properties-cfr.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/cfr")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Vessel partner](vessel-partner-properties-cfr.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/cfr")
 
 ### cfr Type
 
@@ -79,13 +84,15 @@ The code of federal regulation for the vessel. GBR: PIR
 
 The international radio call sign for the vessel. GBR: PRC
 
-
 `call_sign`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Vessel partner](vessel-partner-properties-call_sign.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/call_sign")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Vessel partner](vessel-partner-properties-call_sign.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/call_sign")
 
 ### call_sign Type
 
@@ -95,13 +102,15 @@ The international radio call sign for the vessel. GBR: PRC
 
 Flag state of vessel registration. NLD2+: FS, GBR: PFS
 
-
 `flag_state`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [Vessel partner](vessel-partner-properties-flag_state.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/flag_state")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Vessel partner](vessel-partner-properties-flag_state.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/flag_state")
 
 ### flag_state Type
 
@@ -111,13 +120,15 @@ Flag state of vessel registration. NLD2+: FS, GBR: PFS
 
 The name of the vessel. NLD3+: NA, GBR: PNA
 
-
 `name`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Vessel partner](vessel-partner-properties-name.md "https&#x3A;//poseidat.org/schema/core/vessel-partner.json#/properties/name")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Vessel partner](vessel-partner-properties-name.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/name")
 
 ### name Type
 
@@ -127,13 +138,15 @@ The name of the vessel. NLD3+: NA, GBR: PNA
 
 The vessel master details. Usually one per entry but can differ in a single trip
 
-
 `master`
 
--   is optional
--   Type: `object` ([Vessel master](vessel-partner-properties-vessel-master.md))
--   cannot be null
--   defined in: [Vessel partner](vessel-partner-properties-vessel-master.md "https&#x3A;//poseidat.org/schema/core/vessel-master.json#/properties/master")
+*   is optional
+
+*   Type: `object` ([Vessel master](vessel-partner-properties-vessel-master.md))
+
+*   cannot be null
+
+*   defined in: [Vessel partner](vessel-partner-properties-vessel-master.md "https://poseidat.org/schema/core/vessel-master.json#/properties/master")
 
 ### master Type
 

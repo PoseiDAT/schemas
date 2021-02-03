@@ -6,9 +6,8 @@ https://poseidat.org/schema/core/vessel-section.json
 
 A section off a vessel, used to detail where objects are on the vessel
 
-
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                     |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------ |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [vessel-section.json](schemas/core/vessel-section.json "open original schema") |
 
 ## Vessel section Type
@@ -17,27 +16,29 @@ A section off a vessel, used to detail where objects are on the vessel
 
 # Vessel section Properties
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                                |
-| :-------------------------- | -------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [id](#id)                   | `string` | Required | cannot be null | [Vessel section](vessel-section-properties-id.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/id")                              |
-| [compartment](#compartment) | `string` | Required | cannot be null | [Vessel section](vessel-section-properties-vessel-compartment.md "https&#x3A;//poseidat.org/schema/enum/vessel-compartment.json#/properties/compartment") |
-| [name](#name)               | `string` | Optional | cannot be null | [Vessel section](vessel-section-properties-name.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/name")                          |
-| [description](#description) | `string` | Optional | cannot be null | [Vessel section](vessel-section-properties-description.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/description")            |
-| [pos_x](#pos_x)             | `number` | Optional | cannot be null | [Vessel section](vessel-section-properties-pos_x.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/pos_x")                        |
-| [pos_y](#pos_y)             | `number` | Optional | cannot be null | [Vessel section](vessel-section-properties-pos_y.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/pos_y")                        |
-| [pos_z](#pos_z)             | `number` | Optional | cannot be null | [Vessel section](vessel-section-properties-pos_z.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/pos_z")                        |
+| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                           |
+| :-------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [id](#id)                   | `string` | Required | cannot be null | [Vessel section](vessel-section-properties-id.md "https://poseidat.org/schema/core/vessel-section.json#/properties/id")                              |
+| [compartment](#compartment) | `string` | Required | cannot be null | [Vessel section](vessel-section-properties-vessel-compartment.md "https://poseidat.org/schema/enum/vessel-compartment.json#/properties/compartment") |
+| [name](#name)               | `string` | Optional | cannot be null | [Vessel section](vessel-section-properties-name.md "https://poseidat.org/schema/core/vessel-section.json#/properties/name")                          |
+| [description](#description) | `string` | Optional | cannot be null | [Vessel section](vessel-section-properties-description.md "https://poseidat.org/schema/core/vessel-section.json#/properties/description")            |
+| [pos_x](#pos_x)             | `number` | Optional | cannot be null | [Vessel section](vessel-section-properties-pos_x.md "https://poseidat.org/schema/core/vessel-section.json#/properties/pos_x")                        |
+| [pos_y](#pos_y)             | `number` | Optional | cannot be null | [Vessel section](vessel-section-properties-pos_y.md "https://poseidat.org/schema/core/vessel-section.json#/properties/pos_y")                        |
+| [pos_z](#pos_z)             | `number` | Optional | cannot be null | [Vessel section](vessel-section-properties-pos_z.md "https://poseidat.org/schema/core/vessel-section.json#/properties/pos_z")                        |
 
 ## id
 
 The unique identifier for the section (UUID v4)
 
-
 `id`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [Vessel section](vessel-section-properties-id.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/id")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Vessel section](vessel-section-properties-id.md "https://poseidat.org/schema/core/vessel-section.json#/properties/id")
 
 ### id Type
 
@@ -51,13 +52,15 @@ The unique identifier for the section (UUID v4)
 
 The different compartments in a vessel.
 
-
 `compartment`
 
--   is required
--   Type: `string` ([Vessel compartment](vessel-section-properties-vessel-compartment.md))
--   cannot be null
--   defined in: [Vessel section](vessel-section-properties-vessel-compartment.md "https&#x3A;//poseidat.org/schema/enum/vessel-compartment.json#/properties/compartment")
+*   is required
+
+*   Type: `string` ([Vessel compartment](vessel-section-properties-vessel-compartment.md))
+
+*   cannot be null
+
+*   defined in: [Vessel section](vessel-section-properties-vessel-compartment.md "https://poseidat.org/schema/enum/vessel-compartment.json#/properties/compartment")
 
 ### compartment Type
 
@@ -68,7 +71,7 @@ The different compartments in a vessel.
 **enum**: the value of this property must be equal to one of the following values:
 
 | Value           | Explanation |
-| :-------------- | ----------- |
+| :-------------- | :---------- |
 | `"DECK"`        |             |
 | `"BRIDGE"`      |             |
 | `"GALLEY"`      |             |
@@ -82,13 +85,15 @@ The different compartments in a vessel.
 
 The name of this section
 
-
 `name`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Vessel section](vessel-section-properties-name.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/name")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Vessel section](vessel-section-properties-name.md "https://poseidat.org/schema/core/vessel-section.json#/properties/name")
 
 ### name Type
 
@@ -98,13 +103,15 @@ The name of this section
 
 The description of this section in the compartment
 
-
 `description`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Vessel section](vessel-section-properties-description.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/description")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Vessel section](vessel-section-properties-description.md "https://poseidat.org/schema/core/vessel-section.json#/properties/description")
 
 ### description Type
 
@@ -114,13 +121,15 @@ The description of this section in the compartment
 
 The x position in cm, the position which is closest to the port side is 0cm
 
-
 `pos_x`
 
--   is optional
--   Type: `number`
--   cannot be null
--   defined in: [Vessel section](vessel-section-properties-pos_x.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/pos_x")
+*   is optional
+
+*   Type: `number`
+
+*   cannot be null
+
+*   defined in: [Vessel section](vessel-section-properties-pos_x.md "https://poseidat.org/schema/core/vessel-section.json#/properties/pos_x")
 
 ### pos_x Type
 
@@ -130,13 +139,15 @@ The x position in cm, the position which is closest to the port side is 0cm
 
 The y position in cm, the position which is closest to the stern is 0cm
 
-
 `pos_y`
 
--   is optional
--   Type: `number`
--   cannot be null
--   defined in: [Vessel section](vessel-section-properties-pos_y.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/pos_y")
+*   is optional
+
+*   Type: `number`
+
+*   cannot be null
+
+*   defined in: [Vessel section](vessel-section-properties-pos_y.md "https://poseidat.org/schema/core/vessel-section.json#/properties/pos_y")
 
 ### pos_y Type
 
@@ -146,13 +157,15 @@ The y position in cm, the position which is closest to the stern is 0cm
 
 The z position in cm, the position which is closest to the keel is 0cm
 
-
 `pos_z`
 
--   is optional
--   Type: `number`
--   cannot be null
--   defined in: [Vessel section](vessel-section-properties-pos_z.md "https&#x3A;//poseidat.org/schema/core/vessel-section.json#/properties/pos_z")
+*   is optional
+
+*   Type: `number`
+
+*   cannot be null
+
+*   defined in: [Vessel section](vessel-section-properties-pos_z.md "https://poseidat.org/schema/core/vessel-section.json#/properties/pos_z")
 
 ### pos_z Type
 

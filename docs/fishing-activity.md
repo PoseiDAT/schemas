@@ -6,9 +6,8 @@ https://poseidat.org/schema/entry/fishing-activity.json
 
 Notification of intent to cease all fishing activity for the trip
 
-
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                          |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ----------------------------------------------------------------------------------- |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :---------------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [fishing-activity.json](schemas/entry/fishing-activity.json "open original schema") |
 
 ## Fishing activity Type
@@ -17,27 +16,29 @@ Notification of intent to cease all fishing activity for the trip
 
 all of
 
--   [Base entry](arrival-allof-base-entry.md "check type definition")
+*   [Base entry](arrival-allof-base-entry.md "check type definition")
 
 # Fishing activity Properties
 
-| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                          |
-| :------------------------ | -------- | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [entry_type](#entry_type) | `string` | Required | cannot be null | [Fishing activity](fishing-activity-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/fishing-activity.json#/properties/entry_type") |
-| [trip](#trip)             | `object` | Required | cannot be null | [Fishing activity](arrival-properties-trip-entry.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")                       |
-| [tow](#tow)               | `object` | Required | cannot be null | [Fishing activity](fishing-activity-properties-fishing-tow.md "https&#x3A;//poseidat.org/schema/core/fishing-tow.json#/properties/tow")             |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                     |
+| :------------------------ | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
+| [entry_type](#entry_type) | `string` | Required | cannot be null | [Fishing activity](fishing-activity-properties-entry_type.md "https://poseidat.org/schema/entry/fishing-activity.json#/properties/entry_type") |
+| [trip](#trip)             | `object` | Required | cannot be null | [Fishing activity](arrival-properties-trip-entry.md "https://poseidat.org/schema/core/trip-entry.json#/properties/trip")                       |
+| [tow](#tow)               | `object` | Required | cannot be null | [Fishing activity](fishing-activity-properties-fishing-tow.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/tow")             |
 
 ## entry_type
 
 The journal entry type identifer
 
-
 `entry_type`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [Fishing activity](fishing-activity-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/fishing-activity.json#/properties/entry_type")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Fishing activity](fishing-activity-properties-entry_type.md "https://poseidat.org/schema/entry/fishing-activity.json#/properties/entry_type")
 
 ### entry_type Type
 
@@ -48,7 +49,7 @@ The journal entry type identifer
 **enum**: the value of this property must be equal to one of the following values:
 
 | Value                | Explanation |
-| :------------------- | ----------- |
+| :------------------- | :---------- |
 | `"fishing-activity"` |             |
 
 ### entry_type Default Value
@@ -63,13 +64,15 @@ The default value is:
 
 The trip related details of a journal entry
 
-
 `trip`
 
--   is required
--   Type: `object` ([Trip entry](arrival-properties-trip-entry.md))
--   cannot be null
--   defined in: [Fishing activity](arrival-properties-trip-entry.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")
+*   is required
+
+*   Type: `object` ([Trip entry](arrival-properties-trip-entry.md))
+
+*   cannot be null
+
+*   defined in: [Fishing activity](arrival-properties-trip-entry.md "https://poseidat.org/schema/core/trip-entry.json#/properties/trip")
 
 ### trip Type
 
@@ -79,13 +82,15 @@ The trip related details of a journal entry
 
 Fishing tow details
 
-
 `tow`
 
--   is required
--   Type: `object` ([Fishing tow](fishing-activity-properties-fishing-tow.md))
--   cannot be null
--   defined in: [Fishing activity](fishing-activity-properties-fishing-tow.md "https&#x3A;//poseidat.org/schema/core/fishing-tow.json#/properties/tow")
+*   is required
+
+*   Type: `object` ([Fishing tow](fishing-activity-properties-fishing-tow.md))
+
+*   cannot be null
+
+*   defined in: [Fishing activity](fishing-activity-properties-fishing-tow.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/tow")
 
 ### tow Type
 

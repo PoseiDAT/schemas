@@ -6,10 +6,9 @@ https://poseidat.org/schema/entry/end-of-fishing.json#/properties/activity_date
 
 The datetime of end of fishing in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA
 
-
-| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                        |
-| :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | --------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [end-of-fishing.json\*](schemas/entry/end-of-fishing.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                       |
+| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [end-of-fishing.json*](schemas/entry/end-of-fishing.json "open original schema") |
 
 ## activity_date Type
 

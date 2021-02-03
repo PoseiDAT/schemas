@@ -6,9 +6,8 @@ https://poseidat.org/schema/core/journal.json
 
 A trip journal
 
-
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                       |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ---------------------------------------------------------------- |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [journal.json](schemas/core/journal.json "open original schema") |
 
 ## Journal Type
@@ -17,22 +16,24 @@ A trip journal
 
 # Journal Properties
 
-| Property                  | Type     | Required | Nullable       | Defined by                                                                                                              |
-| :------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| [journal_id](#journal_id) | `string` | Required | cannot be null | [Journal](journal-properties-journal_id.md "https&#x3A;//poseidat.org/schema/core/journal.json#/properties/journal_id") |
-| [vessel](#vessel)         | `object` | Required | cannot be null | [Journal](journal-properties-vessel.md "https&#x3A;//poseidat.org/schema/core/vessel.json#/properties/vessel")          |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                         |
+| :------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------- |
+| [journal_id](#journal_id) | `string` | Required | cannot be null | [Journal](journal-properties-journal_id.md "https://poseidat.org/schema/core/journal.json#/properties/journal_id") |
+| [vessel](#vessel)         | `object` | Required | cannot be null | [Journal](journal-properties-vessel.md "https://poseidat.org/schema/core/vessel.json#/properties/vessel")          |
 
 ## journal_id
 
 The unique identifier for the journal (UUID v4)
 
-
 `journal_id`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [Journal](journal-properties-journal_id.md "https&#x3A;//poseidat.org/schema/core/journal.json#/properties/journal_id")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Journal](journal-properties-journal_id.md "https://poseidat.org/schema/core/journal.json#/properties/journal_id")
 
 ### journal_id Type
 
@@ -46,13 +47,15 @@ The unique identifier for the journal (UUID v4)
 
 The vessel information
 
-
 `vessel`
 
--   is required
--   Type: `object` ([Vessel](journal-properties-vessel.md))
--   cannot be null
--   defined in: [Journal](journal-properties-vessel.md "https&#x3A;//poseidat.org/schema/core/vessel.json#/properties/vessel")
+*   is required
+
+*   Type: `object` ([Vessel](journal-properties-vessel.md))
+
+*   cannot be null
+
+*   defined in: [Journal](journal-properties-vessel.md "https://poseidat.org/schema/core/vessel.json#/properties/vessel")
 
 ### vessel Type
 

@@ -6,9 +6,8 @@ https://poseidat.org/schema/entry/equipment-inventory.json
 
 An entry detailing the equipment installed on a vessel. One 1 should exist per journal
 
-
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ----------------------------------------------------------------------------------------- |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :---------------------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [equipment-inventory.json](schemas/entry/equipment-inventory.json "open original schema") |
 
 ## Equipment inventory Type
@@ -17,26 +16,28 @@ An entry detailing the equipment installed on a vessel. One 1 should exist per j
 
 all of
 
--   [Base entry](arrival-allof-base-entry.md "check type definition")
+*   [Base entry](arrival-allof-base-entry.md "check type definition")
 
 # Equipment inventory Properties
 
-| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                          |
-| :------------------------ | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [entry_type](#entry_type) | `string` | Required | cannot be null | [Equipment inventory](equipment-inventory-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type")        |
-| [equipment](#equipment)   | `array`  | Required | cannot be null | [Equipment inventory](equipment-inventory-properties-equipment-on-board.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                     |
+| :------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [entry_type](#entry_type) | `string` | Required | cannot be null | [Equipment inventory](equipment-inventory-properties-entry_type.md "https://poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type")        |
+| [equipment](#equipment)   | `array`  | Required | cannot be null | [Equipment inventory](equipment-inventory-properties-equipment-on-board.md "https://poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment") |
 
 ## entry_type
 
 The journal entry type identifer
 
-
 `entry_type`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [Equipment inventory](equipment-inventory-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Equipment inventory](equipment-inventory-properties-entry_type.md "https://poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type")
 
 ### entry_type Type
 
@@ -47,7 +48,7 @@ The journal entry type identifer
 **enum**: the value of this property must be equal to one of the following values:
 
 | Value                   | Explanation |
-| :---------------------- | ----------- |
+| :---------------------- | :---------- |
 | `"equipment-inventory"` |             |
 
 ### entry_type Default Value
@@ -62,13 +63,15 @@ The default value is:
 
 The collection of equipment for the vessel
 
-
 `equipment`
 
--   is required
--   Type: `object[]` ([Equipment](equipment-inventory-properties-equipment-on-board-equipment.md))
--   cannot be null
--   defined in: [Equipment inventory](equipment-inventory-properties-equipment-on-board.md "https&#x3A;//poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment")
+*   is required
+
+*   Type: `object[]` ([Equipment](equipment-inventory-properties-equipment-on-board-equipment.md))
+
+*   cannot be null
+
+*   defined in: [Equipment inventory](equipment-inventory-properties-equipment-on-board.md "https://poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment")
 
 ### equipment Type
 

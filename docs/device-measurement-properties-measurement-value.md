@@ -6,10 +6,9 @@ https://poseidat.org/schema/core/measurement/measurement-value.json#/properties/
 
 The value of a certain type of measurement
 
-
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ----------------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [device-measurement.json\*](schemas/entry/device-measurement.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                               |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [device-measurement.json*](schemas/entry/device-measurement.json "open original schema") |
 
 ## value Type
 
@@ -17,28 +16,31 @@ The value of a certain type of measurement
 
 one (and only one) of
 
--   [Untitled undefined type in Measurement value](measurement-value-oneof-0.md "check type definition")
--   [Untitled undefined type in Measurement value](measurement-value-oneof-1.md "check type definition")
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-0.md "check type definition")
 
-# Measurement value Properties
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-1.md "check type definition")
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                           |
-| :-------------------- | -------- | -------- | -------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [type](#type)         | `string` | Optional | cannot be null | [Measurement value](measurement-value-properties-measurement-type.md "https&#x3A;//poseidat.org/schema/enum/measurement-type.json#/properties/type") |
-| [position](#position) | `object` | Optional | cannot be null | [Measurement value](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/position")        |
-| [numeric](#numeric)   | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-numeric.md "https&#x3A;//poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")    |
+# value Properties
+
+| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                      |
+| :-------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
+| [type](#type)         | `string` | Optional | cannot be null | [Measurement value](measurement-value-properties-measurement-type.md "https://poseidat.org/schema/enum/measurement-type.json#/properties/type") |
+| [position](#position) | `object` | Optional | cannot be null | [Measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")        |
+| [numeric](#numeric)   | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")    |
 
 ## type
 
 The measurement types
 
-
 `type`
 
--   is optional
--   Type: `string` ([Measurement type](measurement-value-properties-measurement-type.md))
--   cannot be null
--   defined in: [Measurement value](measurement-value-properties-measurement-type.md "https&#x3A;//poseidat.org/schema/enum/measurement-type.json#/properties/type")
+*   is optional
+
+*   Type: `string` ([Measurement type](measurement-value-properties-measurement-type.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](measurement-value-properties-measurement-type.md "https://poseidat.org/schema/enum/measurement-type.json#/properties/type")
 
 ### type Type
 
@@ -49,7 +51,7 @@ The measurement types
 **enum**: the value of this property must be equal to one of the following values:
 
 | Value                  | Explanation |
-| :--------------------- | ----------- |
+| :--------------------- | :---------- |
 | `"POSITION"`           |             |
 | `"TEMPERATURE"`        |             |
 | `"HUMIDITY"`           |             |
@@ -72,13 +74,15 @@ The measurement types
 
 A navigational position that can be used in an entry
 
-
 `position`
 
--   is optional
--   Type: `object` ([Position](trip-entry-properties-position.md))
--   cannot be null
--   defined in: [Measurement value](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/position")
+*   is optional
+
+*   Type: `object` ([Position](trip-entry-properties-position.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")
 
 ### position Type
 
@@ -88,13 +92,15 @@ A navigational position that can be used in an entry
 
 A number representing a measurement from a sensor
 
-
 `numeric`
 
--   is optional
--   Type: `object` ([Numeric](measurement-value-properties-numeric.md))
--   cannot be null
--   defined in: [Measurement value](measurement-value-properties-numeric.md "https&#x3A;//poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")
+*   is optional
+
+*   Type: `object` ([Numeric](measurement-value-properties-numeric.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")
 
 ### numeric Type
 

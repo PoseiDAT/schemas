@@ -6,34 +6,35 @@ https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric
 
 A number representing a measurement from a sensor
 
-
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                         |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | -------------------------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [measurement-value.json\*](schemas/core/measurement/measurement-value.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                        |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------------------------ |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [measurement-value.json*](schemas/core/measurement/measurement-value.json "open original schema") |
 
 ## numeric Type
 
 `object` ([Numeric](measurement-value-properties-numeric.md))
 
-# Numeric Properties
+# numeric Properties
 
-| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                |
-| :------------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
-| [value](#value)                 | `number` | Required | cannot be null | [Numeric](numeric-properties-value.md "https&#x3A;//poseidat.org/schema/core/measurement/numeric.json#/properties/value")                 |
-| [positiveError](#positiveError) | `number` | Optional | cannot be null | [Numeric](numeric-properties-positiveerror.md "https&#x3A;//poseidat.org/schema/core/measurement/numeric.json#/properties/positiveError") |
-| [negativeError](#negativeError) | `number` | Optional | cannot be null | [Numeric](numeric-properties-negativeerror.md "https&#x3A;//poseidat.org/schema/core/measurement/numeric.json#/properties/negativeError") |
+| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                           |
+| :------------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| [value](#value)                 | `number` | Required | cannot be null | [Numeric](numeric-properties-value.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/value")                 |
+| [positiveError](#positiveerror) | `number` | Optional | cannot be null | [Numeric](numeric-properties-positiveerror.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/positiveError") |
+| [negativeError](#negativeerror) | `number` | Optional | cannot be null | [Numeric](numeric-properties-negativeerror.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/negativeError") |
 
 ## value
 
 The absolute measured value
 
-
 `value`
 
--   is required
--   Type: `number`
--   cannot be null
--   defined in: [Numeric](numeric-properties-value.md "https&#x3A;//poseidat.org/schema/core/measurement/numeric.json#/properties/value")
+*   is required
+
+*   Type: `number`
+
+*   cannot be null
+
+*   defined in: [Numeric](numeric-properties-value.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/value")
 
 ### value Type
 
@@ -43,13 +44,15 @@ The absolute measured value
 
 The positive error on the measurement
 
-
 `positiveError`
 
--   is optional
--   Type: `number`
--   cannot be null
--   defined in: [Numeric](numeric-properties-positiveerror.md "https&#x3A;//poseidat.org/schema/core/measurement/numeric.json#/properties/positiveError")
+*   is optional
+
+*   Type: `number`
+
+*   cannot be null
+
+*   defined in: [Numeric](numeric-properties-positiveerror.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/positiveError")
 
 ### positiveError Type
 
@@ -59,13 +62,15 @@ The positive error on the measurement
 
 The negative error on the measurement
 
-
 `negativeError`
 
--   is optional
--   Type: `number`
--   cannot be null
--   defined in: [Numeric](numeric-properties-negativeerror.md "https&#x3A;//poseidat.org/schema/core/measurement/numeric.json#/properties/negativeError")
+*   is optional
+
+*   Type: `number`
+
+*   cannot be null
+
+*   defined in: [Numeric](numeric-properties-negativeerror.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/negativeError")
 
 ### negativeError Type
 

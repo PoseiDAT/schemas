@@ -6,10 +6,9 @@ https://poseidat.org/schema/entry/zone-exit.json#/properties/activity_date
 
 The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA
 
-
-| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                              |
-| :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ----------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [zone-exit.json\*](schemas/entry/zone-exit.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
+| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [zone-exit.json*](schemas/entry/zone-exit.json "open original schema") |
 
 ## activity_date Type
 

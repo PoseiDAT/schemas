@@ -6,10 +6,9 @@ https://poseidat.org/schema/entry/arrival.json#/properties/activity_date
 
 The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA
 
-
-| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                          |
-| :------------------ | ---------- | -------------- | ----------------------- | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [arrival.json\*](schemas/entry/arrival.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                         |
+| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [arrival.json*](schemas/entry/arrival.json "open original schema") |
 
 ## activity_date Type
 

@@ -6,9 +6,8 @@ https://poseidat.org/schema/core/fishing-gear-shot.json
 
 A gear shot event details
 
-
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                           |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------------ |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [fishing-gear-shot.json](schemas/core/fishing-gear-shot.json "open original schema") |
 
 ## Fishing gear shot Type
@@ -17,24 +16,26 @@ A gear shot event details
 
 # Fishing gear shot Properties
 
-| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                  |
-| :------------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [date](#date)                   | `string` | Optional | cannot be null | [Fishing gear shot](fishing-gear-shot-properties-date.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-shot.json#/properties/date")                   |
-| [location](#location)           | `object` | Required | cannot be null | [Fishing gear shot](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")               |
-| [identifier](#identifier)       | `string` | Optional | cannot be null | [Fishing gear shot](fishing-gear-shot-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-shot.json#/properties/identifier")       |
-| [country_zones](#country_zones) | `string` | Optional | cannot be null | [Fishing gear shot](fishing-gear-shot-properties-country_zones.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-shot.json#/properties/country_zones") |
+| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                             |
+| :------------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [date](#date)                   | `string` | Optional | cannot be null | [Fishing gear shot](fishing-gear-shot-properties-date.md "https://poseidat.org/schema/core/fishing-gear-shot.json#/properties/date")                   |
+| [location](#location)           | `object` | Required | cannot be null | [Fishing gear shot](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location")               |
+| [identifier](#identifier)       | `string` | Optional | cannot be null | [Fishing gear shot](fishing-gear-shot-properties-identifier.md "https://poseidat.org/schema/core/fishing-gear-shot.json#/properties/identifier")       |
+| [country_zones](#country_zones) | `string` | Optional | cannot be null | [Fishing gear shot](fishing-gear-shot-properties-country_zones.md "https://poseidat.org/schema/core/fishing-gear-shot.json#/properties/country_zones") |
 
 ## date
 
 The datetime the gear shot took place. GBR: DATI, NLD2: DA + TI, NLD3: DA
 
-
 `date`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Fishing gear shot](fishing-gear-shot-properties-date.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-shot.json#/properties/date")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Fishing gear shot](fishing-gear-shot-properties-date.md "https://poseidat.org/schema/core/fishing-gear-shot.json#/properties/date")
 
 ### date Type
 
@@ -48,13 +49,15 @@ The datetime the gear shot took place. GBR: DATI, NLD2: DA + TI, NLD3: DA
 
 A navigational position that can be used in an entry
 
-
 `location`
 
--   is required
--   Type: `object` ([Position](trip-entry-properties-position.md))
--   cannot be null
--   defined in: [Fishing gear shot](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")
+*   is required
+
+*   Type: `object` ([Position](trip-entry-properties-position.md))
+
+*   cannot be null
+
+*   defined in: [Fishing gear shot](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location")
 
 ### location Type
 
@@ -64,13 +67,15 @@ A navigational position that can be used in an entry
 
 The identification tag attached to the retrieved gear. NLD: NI, GBR: GBRGNFN
 
-
 `identifier`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Fishing gear shot](fishing-gear-shot-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-shot.json#/properties/identifier")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Fishing gear shot](fishing-gear-shot-properties-identifier.md "https://poseidat.org/schema/core/fishing-gear-shot.json#/properties/identifier")
 
 ### identifier Type
 
@@ -80,13 +85,15 @@ The identification tag attached to the retrieved gear. NLD: NI, GBR: GBRGNFN
 
 Indicator of where zone fishing will be commencing. Data recorded in accordance with Norwegian requirements. Known as GBRZO
 
-
 `country_zones`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Fishing gear shot](fishing-gear-shot-properties-country_zones.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-shot.json#/properties/country_zones")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Fishing gear shot](fishing-gear-shot-properties-country_zones.md "https://poseidat.org/schema/core/fishing-gear-shot.json#/properties/country_zones")
 
 ### country_zones Type
 

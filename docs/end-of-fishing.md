@@ -6,9 +6,8 @@ https://poseidat.org/schema/entry/end-of-fishing.json
 
 Notification of intent to cease all fishing activity for the trip
 
-
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                      |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | ------------------------------------------------------------------------------- |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------ |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [end-of-fishing.json](schemas/entry/end-of-fishing.json "open original schema") |
 
 ## End of fishing activity Type
@@ -17,27 +16,29 @@ Notification of intent to cease all fishing activity for the trip
 
 all of
 
--   [Base entry](arrival-allof-base-entry.md "check type definition")
+*   [Base entry](arrival-allof-base-entry.md "check type definition")
 
 # End of fishing activity Properties
 
-| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                   |
-| :------------------------------ | -------- | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [entry_type](#entry_type)       | `string` | Required | cannot be null | [End of fishing activity](end-of-fishing-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/end-of-fishing.json#/properties/entry_type")       |
-| [trip](#trip)                   | `object` | Required | cannot be null | [End of fishing activity](arrival-properties-trip-entry.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")                         |
-| [activity_date](#activity_date) | `string` | Required | cannot be null | [End of fishing activity](end-of-fishing-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/end-of-fishing.json#/properties/activity_date") |
+| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                              |
+| :------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [entry_type](#entry_type)       | `string` | Required | cannot be null | [End of fishing activity](end-of-fishing-properties-entry_type.md "https://poseidat.org/schema/entry/end-of-fishing.json#/properties/entry_type")       |
+| [trip](#trip)                   | `object` | Required | cannot be null | [End of fishing activity](arrival-properties-trip-entry.md "https://poseidat.org/schema/core/trip-entry.json#/properties/trip")                         |
+| [activity_date](#activity_date) | `string` | Required | cannot be null | [End of fishing activity](end-of-fishing-properties-activity_date.md "https://poseidat.org/schema/entry/end-of-fishing.json#/properties/activity_date") |
 
 ## entry_type
 
 The journal entry type identifer
 
-
 `entry_type`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [End of fishing activity](end-of-fishing-properties-entry_type.md "https&#x3A;//poseidat.org/schema/entry/end-of-fishing.json#/properties/entry_type")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [End of fishing activity](end-of-fishing-properties-entry_type.md "https://poseidat.org/schema/entry/end-of-fishing.json#/properties/entry_type")
 
 ### entry_type Type
 
@@ -48,7 +49,7 @@ The journal entry type identifer
 **enum**: the value of this property must be equal to one of the following values:
 
 | Value              | Explanation |
-| :----------------- | ----------- |
+| :----------------- | :---------- |
 | `"end-of-fishing"` |             |
 
 ### entry_type Default Value
@@ -63,13 +64,15 @@ The default value is:
 
 The trip related details of a journal entry
 
-
 `trip`
 
--   is required
--   Type: `object` ([Trip entry](arrival-properties-trip-entry.md))
--   cannot be null
--   defined in: [End of fishing activity](arrival-properties-trip-entry.md "https&#x3A;//poseidat.org/schema/core/trip-entry.json#/properties/trip")
+*   is required
+
+*   Type: `object` ([Trip entry](arrival-properties-trip-entry.md))
+
+*   cannot be null
+
+*   defined in: [End of fishing activity](arrival-properties-trip-entry.md "https://poseidat.org/schema/core/trip-entry.json#/properties/trip")
 
 ### trip Type
 
@@ -79,13 +82,15 @@ The trip related details of a journal entry
 
 The datetime of end of fishing in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA
 
-
 `activity_date`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [End of fishing activity](end-of-fishing-properties-activity_date.md "https&#x3A;//poseidat.org/schema/entry/end-of-fishing.json#/properties/activity_date")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [End of fishing activity](end-of-fishing-properties-activity_date.md "https://poseidat.org/schema/entry/end-of-fishing.json#/properties/activity_date")
 
 ### activity_date Type
 

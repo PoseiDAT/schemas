@@ -6,9 +6,8 @@ https://poseidat.org/schema/core/fishing-gear-retrieve.json
 
 A gear retrieve event details
 
-
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                   |
-| :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | -------------------------------------------------------------------------------------------- |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [fishing-gear-retrieve.json](schemas/core/fishing-gear-retrieve.json "open original schema") |
 
 ## Fishing gear retrieve Type
@@ -17,23 +16,25 @@ A gear retrieve event details
 
 # Fishing gear retrieve Properties
 
-| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                        |
-| :------------------------ | -------- | -------- | -------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [date](#date)             | `string` | Optional | cannot be null | [Fishing gear retrieve](fishing-gear-retrieve-properties-date.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/date")             |
-| [location](#location)     | `object` | Required | cannot be null | [Fishing gear retrieve](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")                 |
-| [identifier](#identifier) | `string` | Required | cannot be null | [Fishing gear retrieve](fishing-gear-retrieve-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/identifier") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                   |
+| :------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [date](#date)             | `string` | Optional | cannot be null | [Fishing gear retrieve](fishing-gear-retrieve-properties-date.md "https://poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/date")             |
+| [location](#location)     | `object` | Required | cannot be null | [Fishing gear retrieve](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location")                 |
+| [identifier](#identifier) | `string` | Required | cannot be null | [Fishing gear retrieve](fishing-gear-retrieve-properties-identifier.md "https://poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/identifier") |
 
 ## date
 
 The datetime the gear retrieve took place. GBR: DATI, NLD2: DA + TI, NLD3: DA
 
-
 `date`
 
--   is optional
--   Type: `string`
--   cannot be null
--   defined in: [Fishing gear retrieve](fishing-gear-retrieve-properties-date.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/date")
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Fishing gear retrieve](fishing-gear-retrieve-properties-date.md "https://poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/date")
 
 ### date Type
 
@@ -47,13 +48,15 @@ The datetime the gear retrieve took place. GBR: DATI, NLD2: DA + TI, NLD3: DA
 
 A navigational position that can be used in an entry
 
-
 `location`
 
--   is required
--   Type: `object` ([Position](trip-entry-properties-position.md))
--   cannot be null
--   defined in: [Fishing gear retrieve](trip-entry-properties-position.md "https&#x3A;//poseidat.org/schema/core/measurement/position.json#/properties/location")
+*   is required
+
+*   Type: `object` ([Position](trip-entry-properties-position.md))
+
+*   cannot be null
+
+*   defined in: [Fishing gear retrieve](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location")
 
 ### location Type
 
@@ -63,13 +66,15 @@ A navigational position that can be used in an entry
 
 The identification tag attached to the retrieved gear. NLD: NI, GBR: GBRGNFN
 
-
 `identifier`
 
--   is required
--   Type: `string`
--   cannot be null
--   defined in: [Fishing gear retrieve](fishing-gear-retrieve-properties-identifier.md "https&#x3A;//poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/identifier")
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Fishing gear retrieve](fishing-gear-retrieve-properties-identifier.md "https://poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/identifier")
 
 ### identifier Type
 
