@@ -8,7 +8,7 @@ An entry detailing the equipment installed on a vessel. One 1 should exist per j
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :---------------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [equipment-inventory.json](schemas/entry/equipment-inventory.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [equipment-inventory.json](schemas/entry/equipment-inventory.json "open original schema") |
 
 ## Equipment inventory Type
 
@@ -24,6 +24,7 @@ all of
 | :------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [entry_type](#entry_type) | `string` | Required | cannot be null | [Equipment inventory](equipment-inventory-properties-entry_type.md "https://poseidat.org/schema/entry/equipment-inventory.json#/properties/entry_type")        |
 | [equipment](#equipment)   | `array`  | Required | cannot be null | [Equipment inventory](equipment-inventory-properties-equipment-on-board.md "https://poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment") |
+| Additional Properties     | Any      | Optional | can be null    |                                                                                                                                                                |
 
 ## entry_type
 
@@ -82,3 +83,7 @@ The collection of equipment for the vessel
 **minimum number of items**: the minimum number of items for this array is: `1`
 
 **unique items**: all items in this array must be unique. Duplicates are not allowed.
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

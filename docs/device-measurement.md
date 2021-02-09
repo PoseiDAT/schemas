@@ -8,7 +8,7 @@ A device measurement journal entry
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                              |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :-------------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [device-measurement.json](schemas/entry/device-measurement.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [device-measurement.json](schemas/entry/device-measurement.json "open original schema") |
 
 ## Device measurement Type
 
@@ -25,6 +25,7 @@ all of
 | [entry_type](#entry_type) | `string` | Required | cannot be null | [Device measurement](device-measurement-properties-entry_type.md "https://poseidat.org/schema/entry/device-measurement.json#/properties/entry_type")             |
 | [device_id](#device_id)   | `string` | Required | cannot be null | [Device measurement](device-measurement-properties-device_id.md "https://poseidat.org/schema/entry/device-measurement.json#/properties/device_id")               |
 | [value](#value)           | Merged   | Required | cannot be null | [Device measurement](device-measurement-properties-measurement-value.md "https://poseidat.org/schema/core/measurement/measurement-value.json#/properties/value") |
+| Additional Properties     | Any      | Optional | can be null    |                                                                                                                                                                  |
 
 ## entry_type
 
@@ -101,3 +102,7 @@ one (and only one) of
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-0.md "check type definition")
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-1.md "check type definition")
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

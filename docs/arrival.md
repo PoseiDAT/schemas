@@ -8,7 +8,7 @@ A return to port event
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                        |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :---------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [arrival.json](schemas/entry/arrival.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [arrival.json](schemas/entry/arrival.json "open original schema") |
 
 ## Arrival Type
 
@@ -28,6 +28,7 @@ all of
 | [port](#port)                     | `object` | Required | cannot be null | [Arrival](arrival-properties-port.md "https://poseidat.org/schema/core/port.json#/properties/port")                               |
 | [reason_arrival](#reason_arrival) | `string` | Required | cannot be null | [Arrival](arrival-properties-reason-arrival.md "https://poseidat.org/schema/enum/reason-arrival.json#/properties/reason_arrival") |
 | [catch_on_board](#catch_on_board) | `array`  | Optional | cannot be null | [Arrival](arrival-properties-catch-on-board.md "https://poseidat.org/schema/entry/arrival.json#/properties/catch_on_board")       |
+| Additional Properties             | Any      | Optional | can be null    |                                                                                                                                   |
 
 ## entry_type
 
@@ -173,3 +174,7 @@ The caught fish present on board the vessel
 ### catch_on_board Type
 
 `object[]` ([Fishing catch](arrival-properties-catch-on-board-fishing-catch.md))
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

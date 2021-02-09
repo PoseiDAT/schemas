@@ -8,7 +8,7 @@ The shared properties for all entries
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                         |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [arrival.json*](schemas/entry/arrival.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [arrival.json*](schemas/entry/arrival.json "open original schema") |
 
 ## 0 Type
 
@@ -25,6 +25,7 @@ The shared properties for all entries
 | [revision](#revision)             | `string`  | Required | cannot be null | [Base entry](base-entry-properties-revision.md "https://poseidat.org/schema/core/base-entry.json#/properties/revision")             |
 | [immutable](#immutable)           | `boolean` | Required | cannot be null | [Base entry](base-entry-properties-immutable.md "https://poseidat.org/schema/core/base-entry.json#/properties/immutable")           |
 | [remarks](#remarks)               | `string`  | Optional | cannot be null | [Base entry](base-entry-properties-remarks.md "https://poseidat.org/schema/core/base-entry.json#/properties/remarks")               |
+| Additional Properties             | Any       | Optional | can be null    |                                                                                                                                     |
 
 ## journal_id
 
@@ -167,3 +168,7 @@ Free form remarks that are to be added to this journal entry
 ### remarks Type
 
 `string`
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

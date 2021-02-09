@@ -8,7 +8,7 @@ A departure from port event
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                            |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :-------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [departure.json](schemas/entry/departure.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [departure.json](schemas/entry/departure.json "open original schema") |
 
 ## Departure Type
 
@@ -29,6 +29,7 @@ all of
 | [anticipated_activity](#anticipated_activity) | `string` | Optional | cannot be null | [Departure](departure-properties-reason-departure.md "https://poseidat.org/schema/enum/reason-departure.json#/properties/anticipated_activity") |
 | [gear_on_board](#gear_on_board)               | `array`  | Optional | cannot be null | [Departure](departure-properties-gear-on-board.md "https://poseidat.org/schema/entry/departure.json#/properties/gear_on_board")                 |
 | [catch_on_board](#catch_on_board)             | `array`  | Optional | cannot be null | [Departure](departure-properties-catch-on-board.md "https://poseidat.org/schema/entry/departure.json#/properties/catch_on_board")               |
+| Additional Properties                         | Any      | Optional | can be null    |                                                                                                                                                 |
 
 ## entry_type
 
@@ -192,3 +193,7 @@ The previously caught fish present on board the vessel
 ### catch_on_board Type
 
 `object[]` ([Fishing catch](arrival-properties-catch-on-board-fishing-catch.md))
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

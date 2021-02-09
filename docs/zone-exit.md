@@ -8,7 +8,7 @@ Exit declaration of a fishing zone
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                            |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :-------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [zone-exit.json](schemas/entry/zone-exit.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [zone-exit.json](schemas/entry/zone-exit.json "open original schema") |
 
 ## ZoneExit Type
 
@@ -31,6 +31,7 @@ all of
 | [effort_zone](#effort_zone)                             | `string`  | Optional | cannot be null | [ZoneExit](zone-enter-properties-effort-zone.md "https://poseidat.org/schema/enum/effort-zone.json#/properties/effort_zone")                           |
 | [trans_zonal_fishing](#trans_zonal_fishing)             | `boolean` | Optional | cannot be null | [ZoneExit](zone-exit-properties-trans_zonal_fishing.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing")             |
 | [trans_zonal_fishing_zones](#trans_zonal_fishing_zones) | `array`   | Optional | cannot be null | [ZoneExit](zone-exit-properties-trans-zonal-fishing-areas.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones") |
+| Additional Properties                                   | Any       | Optional | can be null    |                                                                                                                                                        |
 
 ## entry_type
 
@@ -244,3 +245,7 @@ The zones involved in trans-zonal fishing. NLD: NLTRZ
 ### trans_zonal_fishing_zones Type
 
 `object[]` ([Fishing zone](fishing-tow-properties-fishing-zone.md))
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

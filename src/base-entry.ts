@@ -1,7 +1,7 @@
 import { ErrorObject } from 'ajv';
-import { ICoreBaseEntry } from './schema/types';
+import { ICoreBaseEntry } from './schema-types';
 import { validateSchema } from './schema-validator';
-import { schemas } from './schema';
+import { schemas } from './schemas';
 
 /**
  * Convenience class for constructing and validating an Entry

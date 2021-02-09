@@ -8,7 +8,7 @@ Enter declaration of a fishing zone
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                              |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :---------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [zone-enter.json](schemas/entry/zone-enter.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [zone-enter.json](schemas/entry/zone-enter.json "open original schema") |
 
 ## ZoneEnter Type
 
@@ -31,6 +31,7 @@ all of
 | [directed_species](#directed_species)       | `string`  | Optional | cannot be null | [ZoneEnter](zone-enter-properties-directed_species.md "https://poseidat.org/schema/entry/zone-enter.json#/properties/directed_species")       |
 | [effort_zone](#effort_zone)                 | `string`  | Optional | cannot be null | [ZoneEnter](zone-enter-properties-effort-zone.md "https://poseidat.org/schema/enum/effort-zone.json#/properties/effort_zone")                 |
 | [trans_zonal_fishing](#trans_zonal_fishing) | `boolean` | Optional | cannot be null | [ZoneEnter](zone-enter-properties-trans_zonal_fishing.md "https://poseidat.org/schema/entry/zone-enter.json#/properties/trans_zonal_fishing") |
+| Additional Properties                       | Any       | Optional | can be null    |                                                                                                                                               |
 
 ## entry_type
 
@@ -244,3 +245,7 @@ Indicates the vessel has engaged in trans-zonal fishing: GRB: GBRTRZ
 ### trans_zonal_fishing Type
 
 `boolean`
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

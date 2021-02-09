@@ -21,7 +21,6 @@
   },
   "include": [
     "src/*",
-    "src/schema/*.ts",
     "src/schema/**/*.json",
   ],
   "exclude": [
