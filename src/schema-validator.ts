@@ -2,8 +2,8 @@ import Ajv, { ErrorObject } from 'ajv';
 import AjvFormats from 'ajv-formats';
 import AjvKeywords from 'ajv-keywords';
 import { JSONSchema7 } from 'json-schema';
-import { schemas } from './schema';
-import { ICoreBaseEntry, ICoreJournal } from './schema/types';
+import { schemas } from './schemas';
+import { ICoreBaseEntry, ICoreJournal } from './schema-types';
 
 // We will pre-load all the Journal related schemas into our validator
 // We need to take namespaces into account (core.equipment, etc)

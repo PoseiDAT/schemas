@@ -1,6 +1,6 @@
 import { BaseEntry } from './base-entry';
-import { schemas } from './schema';
-import { IEntryDeviceMeasurement } from './schema/types';
+import { schemas } from './schemas';
+import { IEntryDeviceMeasurement } from './schema-types';
 
 export class DeviceMeasurementEntry extends BaseEntry {
   constructor(

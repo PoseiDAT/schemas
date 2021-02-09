@@ -1,6 +1,6 @@
 import { BaseEntry } from './base-entry';
-import { schemas } from './schema';
-import { IEntryZoneExit } from './schema/types';
+import { schemas } from './schemas';
+import { IEntryZoneExit } from './schema-types';
 
 export class ZoneExitEntry extends BaseEntry {
   constructor(

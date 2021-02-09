@@ -1,6 +1,6 @@
 import { ErrorObject } from 'ajv';
-import { schemas } from './schema';
-import { ICoreJournal } from './schema/types';
+import { schemas } from './schemas';
+import { ICoreJournal } from './schema-types';
 import { validateSchema } from './schema-validator';
 
 /**

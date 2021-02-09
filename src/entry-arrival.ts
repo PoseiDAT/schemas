@@ -1,6 +1,6 @@
 import { BaseEntry } from './base-entry';
-import { schemas } from './schema';
-import { IEntryArrival } from './schema/types';
+import { schemas } from './schemas';
+import { IEntryArrival } from './schema-types';
 
 export class ArrivalEntry extends BaseEntry {
   constructor(

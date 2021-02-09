@@ -1,6 +1,6 @@
 import { BaseEntry } from './base-entry';
-import { schemas } from './schema';
-import { IEntryEquipmentInventory } from './schema/types';
+import { schemas } from './schemas';
+import { IEntryEquipmentInventory } from './schema-types';
 
 export class EquipmentInventoryEntry extends BaseEntry {
   constructor(
