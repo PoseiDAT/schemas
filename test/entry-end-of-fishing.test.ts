@@ -21,7 +21,7 @@ describe('EndOfFishingEntry', () => {
     expect(validationErrors.length).toBeGreaterThan(0);
   });
 
-  test('Validating an minimal EndOfFishingEntry should succeed', () => {
+  test('Validating a minimal EndOfFishingEntry should succeed', () => {
     const data: IEntryEndOfFishing =
       {
         journal_id: v4(),

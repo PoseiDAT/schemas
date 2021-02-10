@@ -21,7 +21,7 @@ describe('EquipmentInventoryEntry', () => {
     expect(validationErrors.length).toBeGreaterThan(0);
   });
 
-  test('Validating an minimal EquipmentInventoryEntry should succeed', () => {
+  test('Validating a minimal EquipmentInventoryEntry should succeed', () => {
     const data: IEntryEquipmentInventory =
       {
         journal_id: v4(),

@@ -21,7 +21,7 @@ describe('ArrivalEntry', () => {
     expect(validationErrors.length).toBeGreaterThan(0);
   });
 
-  test('Validating an minimal ArrivalEntry should succeed', () => {
+  test('Validating a minimal ArrivalEntry should succeed', () => {
     const data: IEntryArrival =
       {
         journal_id: v4(),

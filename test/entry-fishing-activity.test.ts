@@ -21,7 +21,7 @@ describe('FishingActivityEntry', () => {
     expect(validationErrors.length).toBeGreaterThan(0);
   });
 
-  test('Validating an minimal FishingActivityEntry should succeed', () => {
+  test('Validating a minimal FishingActivityEntry should succeed', () => {
     const data: IEntryFishingActivity =
       {
         journal_id: v4(),

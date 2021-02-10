@@ -21,7 +21,7 @@ describe('ZoneExitEntry', () => {
     expect(validationErrors.length).toBeGreaterThan(0);
   });
 
-  test('Validating an minimal ZoneExitEntry should succeed', () => {
+  test('Validating a minimal ZoneExitEntry should succeed', () => {
     const data: IEntryZoneExit =
       {
         entry_id: v4(),

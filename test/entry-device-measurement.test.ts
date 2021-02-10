@@ -21,7 +21,7 @@ describe('DeviceMeasurementEntry', () => {
     expect(validationErrors.length).toBeGreaterThan(0);
   });
 
-  test('Validating an minimal DeviceMeasurementEntry should succeed', () => {
+  test('Validating a minimal DeviceMeasurementEntry should succeed', () => {
     const data: IEntryDeviceMeasurement =
       {
         journal_id: v4(),
