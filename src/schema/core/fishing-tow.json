@@ -52,7 +52,7 @@
     }
   },
   "required": [
-    "activity_date",
+    "activity_date_start",
     "zone"
   ],
   "type": "object"

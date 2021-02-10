@@ -1,5 +1,6 @@
-import { IEntryEndOfFishing } from '../src/schema/types';
+import { v4 } from 'uuid';
 import { EndOfFishingEntry } from '../src/index';
+import { IEntryEndOfFishing } from '../src/schema-types';
 
 describe('EndOfFishingEntry', () => {
 
@@ -18,5 +19,28 @@ describe('EndOfFishingEntry', () => {
     const validationErrors = baseEntry.validate();
     expect(validationErrors).toBeDefined();
     expect(validationErrors.length).toBeGreaterThan(0);
+  });
+
+  test('Validating a minimal EndOfFishingEntry should succeed', () => {
+    const data: IEntryEndOfFishing =
+      {
+        journal_id: v4(),
+        entry_id: v4(),
+        entry_type: "end-of-fishing",
+        revision: "2021-01-01T01:00:00z",
+        immutable: false,
+        activity_date: "2021-01-01T01:00:00z",
+        trip : {
+          date: "2021-01-01T01:00:00z",
+          trip_nr: "NLD",
+          record_nr: "NLD"
+      },
+    };
+
+    const entry = new EndOfFishingEntry(data);
+
+    const validationErrors = entry.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
   });
 });

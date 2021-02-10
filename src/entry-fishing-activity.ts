@@ -6,6 +6,6 @@ export class FishingActivityEntry extends BaseEntry {
   constructor(
     public data: IEntryFishingActivity,
   ) {
-    super(data, schemas.entry.zoneEnter, 'fishing-activity');
+    super(data, schemas.entry.fishingActivity, 'fishing-activity');
   }
 }

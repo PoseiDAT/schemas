@@ -1,5 +1,6 @@
-import { IEntryDeparture } from '../src/schema/types';
+import { v4 } from 'uuid';
 import { DepartureEntry } from '../src/index';
+import { IEntryDeparture } from '../src/schema-types';
 
 describe('DepartureEntry', () => {
 
@@ -19,4 +20,31 @@ describe('DepartureEntry', () => {
     expect(validationErrors).toBeDefined();
     expect(validationErrors.length).toBeGreaterThan(0);
   });
+
+  test('Validating a minimal DepartureEntry should succeed', () => {
+    const data: IEntryDeparture =
+      {
+        journal_id: v4(),
+        entry_id: v4(),
+        entry_type: "departure",
+        revision: "2021-01-01T01:00:00z",
+        immutable: false,
+        activity_date: "2021-01-01T01:00:00z",
+        trip : {
+            date: "2021-01-01T01:00:00z",
+            trip_nr: "NLD",
+            record_nr: "NLD"
+        },
+        port: {
+            code: "NLURK"
+        }
+    };
+
+    const entry = new DepartureEntry(data);
+
+    const validationErrors = entry.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
+  });
+
 });

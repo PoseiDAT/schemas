@@ -1,6 +1,6 @@
 import { v4 } from 'uuid';
-import { ICoreJournal } from '../src/schema/types';
 import { Journal } from '../src/index';
+import { ICoreJournal } from '../src/schema-types';
 
 describe('Journal', () => {
 
@@ -25,7 +25,7 @@ describe('Journal', () => {
     expect(validationErrors[1].schemaPath).toEqual('#/required');
   });
 
-  test('Validating an minimal Journal should succeed', () => {
+  test('Validating a minimal Journal should succeed', () => {
     const data: ICoreJournal = {
       journal_id: v4(),
       vessel: {
