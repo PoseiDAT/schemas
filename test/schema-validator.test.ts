@@ -10,7 +10,7 @@ const minimalSchema: JSONSchema7 = {
     test: {
       type: 'string',
       description: 'Any string value will do'
-    }
+    },
   }
 };
 

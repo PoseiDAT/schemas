@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import { ICoreBaseEntry } from '../src/schema/types';
+import { ICoreBaseEntry } from '../src/schema-types';
 import { BaseEntry } from '../src/base-entry';
 
 describe('BaseEntry', () => {

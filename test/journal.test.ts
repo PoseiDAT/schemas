@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import { ICoreJournal } from '../src/schema/types';
+import { ICoreJournal } from '../src/schema-types';
 import { Journal } from '../src/index';
 
 describe('Journal', () => {
