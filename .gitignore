@@ -11,3 +11,6 @@ coverage
 # Ignore TS output
 lib
 tsconfig.tsbuildinfo
+
+# NPM pack output
+poseidat-schemas-*.tgz
