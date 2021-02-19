@@ -18,7 +18,7 @@ Fishing tow details
 
 | Property                                    | Type     | Required | Nullable       | Defined by                                                                                                                                                   |
 | :------------------------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [activity_date_start](#activity_date_start) | `string` | Optional | cannot be null | [Fishing tow](fishing-tow-properties-activity_date_start.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/activity_date_start")             |
+| [activity_date_start](#activity_date_start) | `string` | Required | cannot be null | [Fishing tow](fishing-tow-properties-activity_date_start.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/activity_date_start")             |
 | [activity_date_end](#activity_date_end)     | `string` | Optional | cannot be null | [Fishing tow](fishing-tow-properties-activity_date_end.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/activity_date_end")                 |
 | [location_start](#location_start)           | `object` | Optional | cannot be null | [Fishing tow](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location_start")                     |
 | [location_end](#location_end)               | `object` | Optional | cannot be null | [Fishing tow](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location_end")                       |
@@ -34,7 +34,7 @@ The datetime the tow started in UTC
 
 `activity_date_start`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 

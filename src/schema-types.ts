@@ -115,7 +115,7 @@ export interface ICoreFishingGear {
 
 /** Fishing tow details */
 export interface ICoreFishingTow {
-  /** The datetime the tow started in UTC */ activity_date_start?: string;
+  /** The datetime the tow started in UTC */ activity_date_start: string;
   /** The datetime the tow ended in UTC */ activity_date_end?: string;
   /** The geographical location where the tow started (if applicable) */ location_start?: IMeasurementPosition;
   /** The geographical location where the tow ended (if applicable) */ location_end?: IMeasurementPosition;
