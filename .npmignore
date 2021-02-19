@@ -1,3 +1,6 @@
 src
 test
+coverage
+docs
 tsconfig.json
+tsconfig.tsbuildinfo
