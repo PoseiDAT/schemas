@@ -4,3 +4,4 @@ coverage
 docs
 tsconfig.json
 tsconfig.tsbuildinfo
+poseidat-schemas-*.tgz
