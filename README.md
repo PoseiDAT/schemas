@@ -153,7 +153,68 @@ You can check the line based coverage after running `npm run test` by opening `c
 
 Documentation is generated on each build and hosted on [github pages](https://poseidat.github.io/schemas/). You can locally test them with `npm run docs`.
 
-## Usage
+## Installation
 
-Once the schemas have reached a usable state this repository can be published to NPM for direct consumption in other applications.
-At that time we can also export the json-schemas to other package managers and consider support libraries for other languages.
+Install the npm package by running the npm install command:
+
+```bash
+npm install @poseidat/schemas
+```
+
+### Usage
+
+Here is an example on how to use this package to create and validate an Arrival Entry by taking the following steps:
+
+* We import the necessary class and interface
+* We setup an empty object, this is where your data for the actual Arrival Entry would be
+* We create the PoseiDAT Arrival Entry
+* We validate the PoseiDAT Arrival Entry
+* We check if we have errors within the Arrival Entry
+
+```ts
+import {
+  ArrivalEntry,
+  IEntryArrival
+} from '@poseidat/schemas';
+
+const arrivalEntryData = {};
+
+const poseidatArrivalEntry = new ArrivalEntry(arrivalEntryData as IEntryArrival);
+
+const errors = poseidatArrivalEntry.validate();
+
+if (errors.length) {
+  // Handle errors
+}
+```
+
+And here is how you would create and validate a Journal, we use the [uuid package](https://www.npmjs.com/package/uuid) to generate the uuid that is required:
+
+```ts
+import {
+  Journal,
+  ICoreJournal
+} from '@poseidat/schemas';
+import { v4 as uuidv4 } from 'uuid';
+
+const journalData: ICoreJournal = {
+  journal_id: uuidv4(),
+  vessel: {
+      name: 'Amsterdam',
+      flag_state: 'NL',
+      cfr: 'NL00000001',
+      call_sign:'VOC001',
+      hull_number: 'VOC-1',
+      registration_date: '01-01-1748',
+      full_length: '48',
+    }
+};
+
+const poseidatJournal = new Journal(journalData);
+
+const errors = poseidatJournal.validate();
+
+if (errors.length) {
+  // Handle errors
+}
+```
