@@ -120,5 +120,55 @@ describe('DeviceMeasurementEntry', () => {
     expect(validationErrors.length).toEqual(0);
   });
 
+  test('Validating a scale DeviceMeasurementEntry with supported fish species should succeed', () => {
+    const data: IEntryDeviceMeasurement = {
+      journal_id: v4(),
+      entry_id: v4(),
+      revision: '2020-01-01T00:00:00Z',
+      immutable: false,
+      entry_type: 'device-measurement',
+      device_id: v4(),
+      value: {
+        type: 'SCALE',
+        scale: {
+          haul_number:1,
+          weight:1.1,
+          trip_number:1,
+          category: 'FISH',
+          product: 'ANF'
+        },
+      },
+    };
+    const measurementEntry = new DeviceMeasurementEntry(data);
+    const validationErrors = measurementEntry.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
+  });
+
+  test('Validating a scale DeviceMeasurementEntry with new fish species should succeed', () => {
+    const data: IEntryDeviceMeasurement = {
+      journal_id: v4(),
+      entry_id: v4(),
+      revision: '2020-01-01T00:00:00Z',
+      immutable: false,
+      entry_type: 'device-measurement',
+      device_id: v4(),
+      value: {
+        type: 'SCALE',
+        scale: {
+          haul_number:1,
+          weight:1.1,
+          trip_number:1,
+          category: 'FISH',
+          product: 'AAA'
+        },
+      },
+    };
+    const measurementEntry = new DeviceMeasurementEntry(data);
+    const validationErrors = measurementEntry.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
+  });
+
 
 });
