@@ -244,26 +244,6 @@ export interface IMeasurementMeasurementValue {
   /** The type of measurement */ type?: IEnumMeasurementType;
   /** A positional measurement */ position?: IMeasurementPosition;
   /** A numerical measurement */ numeric?: IMeasurementNumeric;
-  /** A trawl tension measurement */ trawl_tension?: IMeasurementTrawlTension;
-}
-
-/** A combination of sensor measurements for the trawl tension */
-export interface IMeasurementTrawlTension {
-  /** The shooted length at starboard side */ shooted_length_starboard: number;
-  /** The shooted length at port side */ shooted_length_port: number;
-  /** The shooted length at center side */ shooted_length_center: number;
-  /** The traction at starboard side */ traction_starboard: number;
-  /** The traction at port side */ traction_port: number;
-  /** The traction at center side */ traction_center: number;
-  /** The speed at starboard side */ speed_starboard?: number;
-  /** The speed at port side */ speed_port?: number;
-  /** The speed at center side */ speed_center?: number;
-  /** The pressure at starboard side */ pressure_starboard?: number;
-  /** The pressure at port side */ pressure_port?: number;
-  /** The pressure at center side */ pressure_center?: number;
-  /** The drum rotations at starboard side */ drum_rotations_starboard?: number;
-  /** The drum rotations at port side */ drum_rotations_port?: number;
-  /** The drum rotations at center side */ drum_rotations_center?: number;
 }
 
 /** A number representing a measurement from a sensor */

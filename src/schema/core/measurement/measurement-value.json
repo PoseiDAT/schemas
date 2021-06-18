@@ -15,16 +15,11 @@
     "numeric": {
       "description": "A numerical measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
-    },
-    "trawl_tension": {
-      "description": "A trawl tension measurement",
-      "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
     }
  },
  "oneOf": [
    { "required": [ "type", "numeric" ] },
-   { "required": [ "type", "position" ] },
-   { "required": [ "type", "trawl_tension" ] }
+   { "required": [ "type", "position" ] }
  ],
   "type": "object",
   "additionalProperties": false
