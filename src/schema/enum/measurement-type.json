@@ -21,7 +21,6 @@
     "CURRENT",
     "POWER",
     "ENERGY_CONSUMPTION",
-    "TRAWL_TENSION",
-    "SCALE"
+    "TRAWL_TENSION"
   ]
 }
