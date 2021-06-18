@@ -247,6 +247,24 @@ export interface IMeasurementMeasurementValue {
   /** A trawl tension measurement */ trawl_tension?: IMeasurementTrawlTension;
 }
 
+/** A number representing a measurement from a sensor */
+export interface IMeasurementNumeric {
+  /** The absolute measured value */ value: number;
+  /** The positive error on the measurement */ positiveError?: number;
+  /** The negative error on the measurement */ negativeError?: number;
+}
+
+/** A navigational position that can be used in an entry */
+export interface IMeasurementPosition {
+  /** The latitude of the geographical location */ latitude: number;
+  /** The longitude of the geographical location */ longitude: number;
+  /** The compass heading of the vessel in degrees */ heading?: number;
+  /** The direction in which the vessel is traveling, in degrees */ courseMadeGood?: number;
+  /** The velocity of the vessel in meters per second (m/s) over the ground */ speedOverGround?: number;
+  /** The velocity of the vessel in meters per second (m/s) through the water */ speedThroughWater?: number;
+  /** The number of satellites used to calculate the position */ numberOfSatellites?: number;
+}
+
 /** A combination of sensor measurements for the trawl tension */
 export interface IMeasurementTrawlTension {
   /** The shooted length at starboard side */ shooted_length_starboard: number;
@@ -264,24 +282,6 @@ export interface IMeasurementTrawlTension {
   /** The drum rotations at starboard side */ drum_rotations_starboard?: number;
   /** The drum rotations at port side */ drum_rotations_port?: number;
   /** The drum rotations at center side */ drum_rotations_center?: number;
-}
-
-/** A number representing a measurement from a sensor */
-export interface IMeasurementNumeric {
-  /** The absolute measured value */ value: number;
-  /** The positive error on the measurement */ positiveError?: number;
-  /** The negative error on the measurement */ negativeError?: number;
-}
-
-/** A navigational position that can be used in an entry */
-export interface IMeasurementPosition {
-  /** The latitude of the geographical location */ latitude: number;
-  /** The longitude of the geographical location */ longitude: number;
-  /** The compass heading of the vessel in degrees */ heading?: number;
-  /** The direction in which the vessel is traveling, in degrees */ courseMadeGood?: number;
-  /** The velocity of the vessel in meters per second (m/s) over the ground */ speedOverGround?: number;
-  /** The velocity of the vessel in meters per second (m/s) through the water */ speedThroughWater?: number;
-  /** The number of satellites used to calculate the position */ numberOfSatellites?: number;
 }
 
 /** The details of a (commercial) company */
