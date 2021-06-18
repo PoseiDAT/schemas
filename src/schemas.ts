@@ -27,6 +27,7 @@ import * as baseMeasurementValue from './schema/core/measurement/measurement-val
 import * as baseNumeric from './schema/core/measurement/numeric.json';
 import * as basePort from './schema/core/port.json';
 import * as basePosition from './schema/core/measurement/position.json';
+import * as baseTrawlTension from './schema/core/measurement/trawl-tension.json';
 import * as baseTripEntry from './schema/core/trip-entry.json';
 import * as baseVessel from './schema/core/vessel.json';
 import * as baseVesselInspection from './schema/core/vessel-inspection.json';
@@ -74,6 +75,7 @@ export const schemas = {
       measurementValue: baseMeasurementValue as JSONSchema7,
       numeric: baseNumeric as JSONSchema7,
       position: basePosition as JSONSchema7,
+      trawlTension: baseTrawlTension as JSONSchema7,
     },
     persona: {
       company: baseCompany as JSONSchema7,
