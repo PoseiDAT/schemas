@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/enum/scale-category.json",
+  "description": "The types of supported product categories to weigh",
+  "title": "Scale category",
+  "type": "string",
+  "enum": [
+    "FISH"
+  ]
+}
