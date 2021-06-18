@@ -80,6 +80,8 @@
 
 *   [Reason discard](./reason-discard.md "The reason for a vessel to discard caught fish") – `https://poseidat.org/schema/enum/reason-discard.json`
 
+*   [Trawl tension](./trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json`
+
 *   [Trip entry](./trip-entry.md "The trip related details of a journal entry") – `https://poseidat.org/schema/core/trip-entry.json`
 
 *   [Vessel](./vessel.md "The vessel information") – `https://poseidat.org/schema/core/vessel.json`
@@ -141,6 +143,8 @@
 *   [Port](./arrival-properties-port.md "Fishing port details") – `https://poseidat.org/schema/core/port.json#/properties/port`
 
 *   [Position](./trip-entry-properties-position.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/position.json#/properties/location`
+
+*   [Trawl tension](./measurement-value-properties-trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension`
 
 *   [Trip entry](./arrival-properties-trip-entry.md "The trip related details of a journal entry") – `https://poseidat.org/schema/core/trip-entry.json#/properties/trip`
 

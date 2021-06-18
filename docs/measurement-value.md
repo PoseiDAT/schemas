@@ -20,13 +20,16 @@ one (and only one) of
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-1.md "check type definition")
 
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-2.md "check type definition")
+
 # Measurement value Properties
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                      |
-| :-------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
-| [type](#type)         | `string` | Optional | cannot be null | [Measurement value](measurement-value-properties-measurement-type.md "https://poseidat.org/schema/enum/measurement-type.json#/properties/type") |
-| [position](#position) | `object` | Optional | cannot be null | [Measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")        |
-| [numeric](#numeric)   | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")    |
+| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                     |
+| :------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [type](#type)                   | `string` | Optional | cannot be null | [Measurement value](measurement-value-properties-measurement-type.md "https://poseidat.org/schema/enum/measurement-type.json#/properties/type")                |
+| [position](#position)           | `object` | Optional | cannot be null | [Measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")                       |
+| [numeric](#numeric)             | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")                   |
+| [trawl_tension](#trawl_tension) | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-trawl-tension.md "https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension") |
 
 ## type
 
@@ -105,3 +108,21 @@ A number representing a measurement from a sensor
 ### numeric Type
 
 `object` ([Numeric](measurement-value-properties-numeric.md))
+
+## trawl_tension
+
+A combination of sensor measurements for the trawl tension
+
+`trawl_tension`
+
+*   is optional
+
+*   Type: `object` ([Trawl tension](measurement-value-properties-trawl-tension.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](measurement-value-properties-trawl-tension.md "https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension")
+
+### trawl_tension Type
+
+`object` ([Trawl tension](measurement-value-properties-trawl-tension.md))
