@@ -15,11 +15,16 @@
     "numeric": {
       "description": "A numerical measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
+    },
+    "scale": {
+      "description": "A scale measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
     }
  },
  "oneOf": [
    { "required": [ "type", "numeric" ] },
-   { "required": [ "type", "position" ] }
+   { "required": [ "type", "position" ] },
+   { "required": [ "type", "scale" ] }
  ],
   "type": "object",
   "additionalProperties": false
