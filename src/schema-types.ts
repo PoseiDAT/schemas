@@ -244,7 +244,7 @@ export interface IMeasurementMeasurementValue {
   /** The type of measurement */ type?: IEnumMeasurementType;
   /** A positional measurement */ position?: IMeasurementPosition;
   /** A numerical measurement */ numeric?: IMeasurementNumeric;
-  /** A trawl tension measurement */ trawlTension?: IMeasurementTrawlTension;
+  /** A trawl tension measurement */ trawl_tension?: IMeasurementTrawlTension;
 }
 
 /** A combination of sensor measurements for the trawl tension */
