@@ -133,7 +133,6 @@ describe('DeviceMeasurementEntry', () => {
         scale: {
           haul_number:1,
           weight:1.1,
-          trip_number:1,
           category: 'FISH',
           product: 'ANF'
         },
@@ -158,7 +157,6 @@ describe('DeviceMeasurementEntry', () => {
         scale: {
           haul_number:1,
           weight:1.1,
-          trip_number:1,
           category: 'FISH',
           product: 'AAA'
         },

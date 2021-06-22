@@ -251,7 +251,6 @@ export interface IMeasurementMeasurementValue {
 export interface IMeasurementScale {
   /** The number of the haul the product was caught in */ haul_number: number;
   /** The weight of the product */ weight: number;
-  /** The number of the trip the scale product relates to */ trip_number: number;
   /** The category of the scaled product */ category: IEnumScaleCategory;
   /** The type of the product, e.g. a type of fish */ product: IEnumFishType | string;
 }

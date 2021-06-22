@@ -12,10 +12,6 @@
       "description": "The weight of the product",
       "type": "number"
     },
-    "trip_number": {
-      "description": "The number of the trip the scale product relates to",
-      "type": "number"
-    },
     "category": {
       "description": "The category of the scaled product",
       "$ref": "https://poseidat.org/schema/enum/scale-category.json"
@@ -34,7 +30,6 @@
   "required": [
     "haul_number",
     "weight",
-    "trip_number",
     "category",
     "product"
   ],
