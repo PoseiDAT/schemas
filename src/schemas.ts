@@ -28,6 +28,7 @@ import * as baseNumeric from './schema/core/measurement/numeric.json';
 import * as basePort from './schema/core/port.json';
 import * as basePosition from './schema/core/measurement/position.json';
 import * as baseTrawlTension from './schema/core/measurement/trawl-tension.json';
+import * as baseScale from './schema/core/measurement/scale.json';
 import * as baseTripEntry from './schema/core/trip-entry.json';
 import * as baseVessel from './schema/core/vessel.json';
 import * as baseVesselInspection from './schema/core/vessel-inspection.json';
@@ -56,6 +57,8 @@ import * as enumFishingGearType from './schema/enum/fishing-gear-type.json';
 import * as enumFishPackageType from './schema/enum/fish-package-type.json';
 import * as enumFishPresentation from './schema/enum/fish-presentation.json';
 import * as enumFishState from './schema/enum/fish-state.json';
+import * as enumFishType from './schema/enum/fish-type.json';
+import * as enumScaleCategory from './schema/enum/scale-category.json';
 import * as enumMeasurementType from './schema/enum/measurement-type.json';
 import * as enumReasonArrival from './schema/enum/reason-arrival.json';
 import * as enumReasonDeparture from './schema/enum/reason-departure.json';
@@ -76,6 +79,7 @@ export const schemas = {
       numeric: baseNumeric as JSONSchema7,
       position: basePosition as JSONSchema7,
       trawlTension: baseTrawlTension as JSONSchema7,
+      scale: baseScale as JSONSchema7,
     },
     persona: {
       company: baseCompany as JSONSchema7,
@@ -128,10 +132,12 @@ export const schemas = {
     fishPackageType: enumFishPackageType as JSONSchema7,
     fishPresentation: enumFishPresentation as JSONSchema7,
     fishState: enumFishState as JSONSchema7,
+    fishType: enumFishType as JSONSchema7,
     measurementType: enumMeasurementType as JSONSchema7,
     reasonArrival: enumReasonArrival as JSONSchema7,
     reasonDeparture: enumReasonDeparture as JSONSchema7,
     reasonDiscard: enumReasonDiscard as JSONSchema7,
+    scaleCategory: enumScaleCategory as JSONSchema7,
     vesselCompartment: enumVesselCompartment as JSONSchema7,
   }
 }

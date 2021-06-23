@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/scale.json",
+  "title": "Scale",
+  "description": "A navigational position that can be used in an entry",
+  "properties": {
+    "haul_number": {
+      "description": "The number of the haul the product was caught in",
+      "type": "number"
+    },
+    "weight": {
+      "description": "The weight of the product",
+      "type": "number"
+    },
+    "category": {
+      "description": "The category of the scaled product",
+      "$ref": "https://poseidat.org/schema/enum/scale-category.json"
+    },
+    "product": {
+      "description": "The type of the product, e.g. a type of fish",
+      "anyOf": [
+        { "$ref": "https://poseidat.org/schema/enum/fish-type.json" },
+        {
+          "type": "string",
+          "pattern": "^([A-Z]{3})$"
+        }
+      ]
+    }
+ },
+  "required": [
+    "haul_number",
+    "weight",
+    "category",
+    "product"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}
