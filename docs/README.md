@@ -82,7 +82,7 @@
 
 *   [Reason discard](./reason-discard.md "The reason for a vessel to discard caught fish") – `https://poseidat.org/schema/enum/reason-discard.json`
 
-*   [Scale](./scale.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/scale.json`
+*   [Scale](./scale.md "A scale measurement that can be used in an entry") – `https://poseidat.org/schema/core/measurement/scale.json`
 
 *   [Scale category](./scale-category.md "The types of supported product categories to weigh") – `https://poseidat.org/schema/enum/scale-category.json`
 
@@ -150,7 +150,7 @@
 
 *   [Position](./trip-entry-properties-position.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/position.json#/properties/location`
 
-*   [Scale](./measurement-value-properties-scale.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/scale.json#/properties/scale`
+*   [Scale](./measurement-value-properties-scale.md "A scale measurement that can be used in an entry") – `https://poseidat.org/schema/core/measurement/scale.json#/properties/scale`
 
 *   [Trawl tension](./measurement-value-properties-trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension`
 

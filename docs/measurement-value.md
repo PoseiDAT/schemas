@@ -133,7 +133,7 @@ A combination of sensor measurements for the trawl tension
 
 ## scale
 
-A navigational position that can be used in an entry
+A scale measurement that can be used in an entry
 
 `scale`
 

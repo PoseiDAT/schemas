@@ -4,7 +4,7 @@
 https://poseidat.org/schema/core/measurement/scale.json#/properties/scale
 ```
 
-A navigational position that can be used in an entry
+A scale measurement that can be used in an entry
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                        |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------------------------ |
