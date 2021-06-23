@@ -38,6 +38,8 @@
 
 *   [Fish state](./fish-state.md "The preservation states for processed fish species") – `https://poseidat.org/schema/enum/fish-state.json`
 
+*   [Fish type](./fish-type.md "The types of supported fish species") – `https://poseidat.org/schema/enum/fish-type.json`
+
 *   [Fishing activity](./fishing-activity.md "Notification of intent to cease all fishing activity for the trip") – `https://poseidat.org/schema/entry/fishing-activity.json`
 
 *   [Fishing catch](./fishing-catch.md "Details of caught fish") – `https://poseidat.org/schema/core/fishing-catch.json`
@@ -79,6 +81,10 @@
 *   [Reason departure](./reason-departure.md "The reason for the vessel to depart from port") – `https://poseidat.org/schema/enum/reason-departure.json`
 
 *   [Reason discard](./reason-discard.md "The reason for a vessel to discard caught fish") – `https://poseidat.org/schema/enum/reason-discard.json`
+
+*   [Scale](./scale.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/scale.json`
+
+*   [Scale category](./scale-category.md "The types of supported product categories to weigh") – `https://poseidat.org/schema/enum/scale-category.json`
 
 *   [Trawl tension](./trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json`
 
@@ -143,6 +149,8 @@
 *   [Port](./arrival-properties-port.md "Fishing port details") – `https://poseidat.org/schema/core/port.json#/properties/port`
 
 *   [Position](./trip-entry-properties-position.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/position.json#/properties/location`
+
+*   [Scale](./measurement-value-properties-scale.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/scale.json#/properties/scale`
 
 *   [Trawl tension](./measurement-value-properties-trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension`
 

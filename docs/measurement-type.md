@@ -37,3 +37,4 @@ The measurement types
 | `"POWER"`              |             |
 | `"ENERGY_CONSUMPTION"` |             |
 | `"TRAWL_TENSION"`      |             |
+| `"SCALE"`              |             |

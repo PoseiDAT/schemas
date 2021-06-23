@@ -22,6 +22,8 @@ one (and only one) of
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-2.md "check type definition")
 
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-3.md "check type definition")
+
 # value Properties
 
 | Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                     |
@@ -30,6 +32,7 @@ one (and only one) of
 | [position](#position)           | `object` | Optional | cannot be null | [Measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")                       |
 | [numeric](#numeric)             | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")                   |
 | [trawl_tension](#trawl_tension) | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-trawl-tension.md "https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension") |
+| [scale](#scale)                 | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-scale.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/scale")                         |
 
 ## type
 
@@ -72,6 +75,7 @@ The measurement types
 | `"POWER"`              |             |
 | `"ENERGY_CONSUMPTION"` |             |
 | `"TRAWL_TENSION"`      |             |
+| `"SCALE"`              |             |
 
 ## position
 
@@ -126,3 +130,21 @@ A combination of sensor measurements for the trawl tension
 ### trawl_tension Type
 
 `object` ([Trawl tension](measurement-value-properties-trawl-tension.md))
+
+## scale
+
+A navigational position that can be used in an entry
+
+`scale`
+
+*   is optional
+
+*   Type: `object` ([Scale](measurement-value-properties-scale.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](measurement-value-properties-scale.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/scale")
+
+### scale Type
+
+`object` ([Scale](measurement-value-properties-scale.md))
