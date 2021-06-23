@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/measurement/scale.json",
   "title": "Scale",
-  "description": "A navigational position that can be used in an entry",
+  "description": "A scale measurement that can be used in an entry",
   "properties": {
     "haul_number": {
       "description": "The number of the haul the product was caught in",

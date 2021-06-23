@@ -266,6 +266,14 @@ export interface IMeasurementPosition {
   /** The number of satellites used to calculate the position */ numberOfSatellites?: number;
 }
 
+/** A scale measurement that can be used in an entry */
+export interface IMeasurementScale {
+  /** The number of the haul the product was caught in */ haul_number: number;
+  /** The weight of the product */ weight: number;
+  /** The category of the scaled product */ category: IEnumScaleCategory;
+  /** The type of the product, e.g. a type of fish */ product: Array<IEnumFishType | string>;
+}
+
 /** A combination of sensor measurements for the trawl tension */
 export interface IMeasurementTrawlTension {
   /** The shooted length at starboard side */ shooted_length_starboard: number;
@@ -283,14 +291,6 @@ export interface IMeasurementTrawlTension {
   /** The drum rotations at starboard side */ drum_rotations_starboard?: number;
   /** The drum rotations at port side */ drum_rotations_port?: number;
   /** The drum rotations at center side */ drum_rotations_center?: number;
-}
-
-/** A scale measurement */
-export interface IMeasurementScale {
-  /** The number of the haul the product was caught in */ haul_number: number;
-  /** The weight of the product */ weight: number;
-  /** The category of the scaled product */ category: IEnumScaleCategory;
-  /** The type of the product, e.g. a type of fish */ product: IEnumFishType | string;
 }
 
 /** The details of a (commercial) company */
@@ -315,19 +315,19 @@ export type IEnumFishPresentation = "BMS" | "CBF" | "CLA" | "DWT" | "FIL" | "FIS
 
 export type IEnumFishState = "ALI" | "BOI" | "DRI" | "FRE" | "FRO" | "SAL" | "SMO";
 
+export type IEnumFishType = "ANF" | "BLL" | "BIB" | "COD" | "CRE" | "DAB" | "GUU" | "HAD" | "HKE" | "JOD" | "LEM" | "LEZ" | "LIN" | "MUR" | "OCZ" | "PLE" | "RJH" | "RJI" | "RJM" | "RSC" | "SCE" | "SOL" | "SYC" | "SYT" | "TUR" | "WHE" | "MAC" | "WIT" | "OCT" | "POL" | "CTC" | "SOX" | "SQU" | "COE" | "BSS" | "CAA" | "CRA" | "FLE" | "POK" | "RJC" | "RJN" | "WEG" | "NEP" | "IJS" | "WHG" | "RJB" | "SBR" | "SKH" | "SMD" | "SRX" | "TSD" | "WEX" | "GAG" | "GUG" | "GUR" | "HAL" | "LBE" | "LYY" | "MUL" | "OCC" | "PIL" | "BRB" | "REG";
+
 export type IEnumFishingGearType = "DRB" | "FIX" | "FPO" | "GEN" | "GN" | "GNC" | "GND" | "GNF" | "GNS" | "GTN" | "GTR" | "HMD" | "KRK" | "LA" | "LHM" | "LHP" | "LL" | "LLD" | "LLS" | "LTL" | "LX" | "MIS" | "NK" | "OTB" | "OTM" | "OTT" | "PS" | "PS1" | "PS2" | "PTB" | "PTM" | "PUL" | "RG" | "SDN" | "SPR" | "SSC" | "SV" | "SX" | "TB" | "TBB" | "TBN" | "TBS";
 
 export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 
-export type IEnumFishType = "ANF" | "BLL" | "BIB" | "COD" | "CRE" | "DAB" | "GUU" | "HAD" | "HKE" | "JOD" | "LEM" | "LEZ" | "LIN" | "MUR" | "OCZ" | "PLE" | "RJH" | "RJI" | "RJM" | "RSC" | "SCE" | "SOL" | "SYC" | "SYT" | "TUR" | "WHE" | "MAC" | "WIT" | "OCT" | "POL" | "CTC" | "SOX" | "SQU" | "COE" | "BSS" | "CAA" | "CRA" | "FLE" | "POK" | "RJC" | "RJN" | "WEG" | "NEP" | "IJS" | "WHG" | "RJB" | "SBR" | "SKH" | "SMD" | "SRX" | "TSD" | "WEX" | "GAG" | "GUG" | "GUR" | "HAL" | "LBE" | "LYY" | "MUL" | "OCC" | "PIL" | "BRB" | "REG";
-
-export type IEnumScaleCategory = "FISH";
-
 export type IEnumReasonDeparture = "FIS" | "GUD" | "OTH" | "SCR" | "STE" | "TST";
 
 export type IEnumReasonDiscard = "BAI" | "HSV" | "OTH" | "PDM" | "PRO" | "QEX";
+
+export type IEnumScaleCategory = "FISH";
 
 export type IEnumVesselCompartment = "DECK" | "BRIDGE" | "GALLEY" | "ENGINE_ROOM" | "FISH_HOLD" | "CABIN" | "BOW" | "STERN";
 
