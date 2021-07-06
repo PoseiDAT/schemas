@@ -1,8 +1,8 @@
 /** A street address */
 export interface ICoreAddress {
-  /** The street and number */ streetAddress: string;
-  /** An optional street and number extension */ streetAddressExtension?: string;
-  /** The postal or ZIP code of the city */ postalCode: string;
+  /** The street and number */ street_address: string;
+  /** An optional street and number extension */ street_address_extension?: string;
+  /** The postal or ZIP code of the city */ postal_code: string;
   /** The city or town */ city: string;
   /** The region or province */ region?: string;
   /** The country */ country: string;
@@ -221,8 +221,8 @@ export interface IEquipmentDevice {
   /** Name of the device */ name: string;
   /** The type of device */ type: IEnumDeviceType;
   /** The brand of the device */ brand?: string;
-  /** The product number of the device */ productNo?: string;
-  /** The serial number of the device */ serialNo?: string;
+  /** The product number of the device */ product_no?: string;
+  /** The serial number of the device */ serial_no?: string;
   /** The company which supplied the device */ supplier?: IPersonaCompany;
   /** The company which has installed the device */ installer?: IPersonaCompany;
   /** The company which maintains the device */ maintainer?: IPersonaCompany;
@@ -251,8 +251,6 @@ export interface IMeasurementMeasurementValue {
 /** A number representing a measurement from a sensor */
 export interface IMeasurementNumeric {
   /** The absolute measured value */ value: number;
-  /** The positive error on the measurement */ positiveError?: number;
-  /** The negative error on the measurement */ negativeError?: number;
 }
 
 /** A navigational position that can be used in an entry */
@@ -260,10 +258,10 @@ export interface IMeasurementPosition {
   /** The latitude of the geographical location */ latitude: number;
   /** The longitude of the geographical location */ longitude: number;
   /** The compass heading of the vessel in degrees */ heading?: number;
-  /** The direction in which the vessel is traveling, in degrees */ courseMadeGood?: number;
-  /** The velocity of the vessel in meters per second (m/s) over the ground */ speedOverGround?: number;
-  /** The velocity of the vessel in meters per second (m/s) through the water */ speedThroughWater?: number;
-  /** The number of satellites used to calculate the position */ numberOfSatellites?: number;
+  /** The direction in which the vessel is traveling, in degrees */ course_made_good?: number;
+  /** The velocity of the vessel in meters per second (m/s) over the ground */ speed_over_ground?: number;
+  /** The velocity of the vessel in meters per second (m/s) through the water */ speed_through_water?: number;
+  /** The number of satellites used to calculate the position */ number_of_satellites?: number;
 }
 
 /** A scale measurement that can be used in an entry */
@@ -271,7 +269,7 @@ export interface IMeasurementScale {
   /** The number of the haul the product was caught in */ haul_number: number;
   /** The weight of the product */ weight: number;
   /** The category of the scaled product */ category: IEnumScaleCategory;
-  /** The type of the product, e.g. a type of fish */ product: Array<IEnumFishType | string>;
+  /** The type of the product, e.g. a type of fish */ product: string;
 }
 
 /** A combination of sensor measurements for the trawl tension */

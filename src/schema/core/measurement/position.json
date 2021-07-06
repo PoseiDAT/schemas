@@ -16,23 +16,23 @@
       "description": "The compass heading of the vessel in degrees",
       "type": "number"
     },
-    "courseMadeGood": {
+    "course_made_good": {
       "description": "The direction in which the vessel is traveling, in degrees",
       "type": "number"
     },
-    "speedOverGround": {
+    "speed_over_ground": {
       "description": "The velocity of the vessel in meters per second (m/s) over the ground",
       "type": "number"
     },
-    "speedThroughWater": {
+    "speed_through_water": {
       "description": "The velocity of the vessel in meters per second (m/s) through the water",
       "type": "number"
     },
-    "numberOfSatellites": {
+    "number_of_satellites": {
       "description": "The number of satellites used to calculate the position",
       "type": "number"
     }
- },
+  },
   "required": [
     "latitude",
     "longitude"

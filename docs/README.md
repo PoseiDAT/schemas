@@ -168,9 +168,9 @@
 
 *   [Catch on board](./departure-properties-catch-on-board.md "The previously caught fish present on board the vessel") – `https://poseidat.org/schema/entry/departure.json#/properties/catch_on_board`
 
-*   [Catch on board](./zone-enter-properties-catch-on-board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board`
-
 *   [Catch on board](./zone-exit-properties-catch-on-board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board`
+
+*   [Catch on board](./zone-enter-properties-catch-on-board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board`
 
 *   [Caught fish](./fishing-tow-properties-caught-fish.md "The fish caught in this tow") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/catches`
 
