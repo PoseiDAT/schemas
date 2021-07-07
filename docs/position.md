@@ -16,15 +16,15 @@ A navigational position that can be used in an entry
 
 # Position Properties
 
-| Property                                  | Type     | Required | Nullable       | Defined by                                                                                                                                        |
-| :---------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [latitude](#latitude)                     | `number` | Required | cannot be null | [Position](position-properties-latitude.md "https://poseidat.org/schema/core/measurement/position.json#/properties/latitude")                     |
-| [longitude](#longitude)                   | `number` | Required | cannot be null | [Position](position-properties-longitude.md "https://poseidat.org/schema/core/measurement/position.json#/properties/longitude")                   |
-| [heading](#heading)                       | `number` | Optional | cannot be null | [Position](position-properties-heading.md "https://poseidat.org/schema/core/measurement/position.json#/properties/heading")                       |
-| [courseMadeGood](#coursemadegood)         | `number` | Optional | cannot be null | [Position](position-properties-coursemadegood.md "https://poseidat.org/schema/core/measurement/position.json#/properties/courseMadeGood")         |
-| [speedOverGround](#speedoverground)       | `number` | Optional | cannot be null | [Position](position-properties-speedoverground.md "https://poseidat.org/schema/core/measurement/position.json#/properties/speedOverGround")       |
-| [speedThroughWater](#speedthroughwater)   | `number` | Optional | cannot be null | [Position](position-properties-speedthroughwater.md "https://poseidat.org/schema/core/measurement/position.json#/properties/speedThroughWater")   |
-| [numberOfSatellites](#numberofsatellites) | `number` | Optional | cannot be null | [Position](position-properties-numberofsatellites.md "https://poseidat.org/schema/core/measurement/position.json#/properties/numberOfSatellites") |
+| Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                            |
+| :-------------------------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [latitude](#latitude)                         | `number` | Required | cannot be null | [Position](position-properties-latitude.md "https://poseidat.org/schema/core/measurement/position.json#/properties/latitude")                         |
+| [longitude](#longitude)                       | `number` | Required | cannot be null | [Position](position-properties-longitude.md "https://poseidat.org/schema/core/measurement/position.json#/properties/longitude")                       |
+| [heading](#heading)                           | `number` | Optional | cannot be null | [Position](position-properties-heading.md "https://poseidat.org/schema/core/measurement/position.json#/properties/heading")                           |
+| [course_made_good](#course_made_good)         | `number` | Optional | cannot be null | [Position](position-properties-course_made_good.md "https://poseidat.org/schema/core/measurement/position.json#/properties/course_made_good")         |
+| [speed_over_ground](#speed_over_ground)       | `number` | Optional | cannot be null | [Position](position-properties-speed_over_ground.md "https://poseidat.org/schema/core/measurement/position.json#/properties/speed_over_ground")       |
+| [speed_through_water](#speed_through_water)   | `number` | Optional | cannot be null | [Position](position-properties-speed_through_water.md "https://poseidat.org/schema/core/measurement/position.json#/properties/speed_through_water")   |
+| [number_of_satellites](#number_of_satellites) | `number` | Optional | cannot be null | [Position](position-properties-number_of_satellites.md "https://poseidat.org/schema/core/measurement/position.json#/properties/number_of_satellites") |
 
 ## latitude
 
@@ -80,11 +80,11 @@ The compass heading of the vessel in degrees
 
 `number`
 
-## courseMadeGood
+## course_made_good
 
 The direction in which the vessel is traveling, in degrees
 
-`courseMadeGood`
+`course_made_good`
 
 *   is optional
 
@@ -92,17 +92,17 @@ The direction in which the vessel is traveling, in degrees
 
 *   cannot be null
 
-*   defined in: [Position](position-properties-coursemadegood.md "https://poseidat.org/schema/core/measurement/position.json#/properties/courseMadeGood")
+*   defined in: [Position](position-properties-course_made_good.md "https://poseidat.org/schema/core/measurement/position.json#/properties/course_made_good")
 
-### courseMadeGood Type
+### course_made_good Type
 
 `number`
 
-## speedOverGround
+## speed_over_ground
 
 The velocity of the vessel in meters per second (m/s) over the ground
 
-`speedOverGround`
+`speed_over_ground`
 
 *   is optional
 
@@ -110,17 +110,17 @@ The velocity of the vessel in meters per second (m/s) over the ground
 
 *   cannot be null
 
-*   defined in: [Position](position-properties-speedoverground.md "https://poseidat.org/schema/core/measurement/position.json#/properties/speedOverGround")
+*   defined in: [Position](position-properties-speed_over_ground.md "https://poseidat.org/schema/core/measurement/position.json#/properties/speed_over_ground")
 
-### speedOverGround Type
+### speed_over_ground Type
 
 `number`
 
-## speedThroughWater
+## speed_through_water
 
 The velocity of the vessel in meters per second (m/s) through the water
 
-`speedThroughWater`
+`speed_through_water`
 
 *   is optional
 
@@ -128,17 +128,17 @@ The velocity of the vessel in meters per second (m/s) through the water
 
 *   cannot be null
 
-*   defined in: [Position](position-properties-speedthroughwater.md "https://poseidat.org/schema/core/measurement/position.json#/properties/speedThroughWater")
+*   defined in: [Position](position-properties-speed_through_water.md "https://poseidat.org/schema/core/measurement/position.json#/properties/speed_through_water")
 
-### speedThroughWater Type
+### speed_through_water Type
 
 `number`
 
-## numberOfSatellites
+## number_of_satellites
 
 The number of satellites used to calculate the position
 
-`numberOfSatellites`
+`number_of_satellites`
 
 *   is optional
 
@@ -146,8 +146,8 @@ The number of satellites used to calculate the position
 
 *   cannot be null
 
-*   defined in: [Position](position-properties-numberofsatellites.md "https://poseidat.org/schema/core/measurement/position.json#/properties/numberOfSatellites")
+*   defined in: [Position](position-properties-number_of_satellites.md "https://poseidat.org/schema/core/measurement/position.json#/properties/number_of_satellites")
 
-### numberOfSatellites Type
+### number_of_satellites Type
 
 `number`

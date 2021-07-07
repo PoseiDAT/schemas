@@ -4,15 +4,15 @@
   "title": "Address",
   "description": "A street address",
   "properties": {
-    "streetAddress": {
+    "street_address": {
       "description": "The street and number",
       "type": "string"
     },
-    "streetAddressExtension": {
+    "street_address_extension": {
       "description": "An optional street and number extension",
       "type": "string"
     },
-    "postalCode": {
+    "postal_code": {
       "description": "The postal or ZIP code of the city",
       "type": "string"
     },
@@ -30,8 +30,8 @@
     }
   },
   "required": [
-    "streetAddress",
-    "postalCode",
+    "street_address",
+    "postal_code",
     "city",
     "country"
   ],

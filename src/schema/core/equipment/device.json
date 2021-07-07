@@ -15,17 +15,17 @@
     },
     "type": {
       "description": "The type of device",
-      "$ref" : "https://poseidat.org/schema/enum/device-type.json"
+      "$ref": "https://poseidat.org/schema/enum/device-type.json"
     },
     "brand": {
       "description": "The brand of the device",
       "type": "string"
     },
-    "productNo": {
+    "product_no": {
       "description": "The product number of the device",
       "type": "string"
     },
-    "serialNo": {
+    "serial_no": {
       "description": "The serial number of the device",
       "type": "string"
     },
