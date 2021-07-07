@@ -1,4 +1,4 @@
-# Untitled string in Scale Schema
+# Untitled undefined type in Scale Schema
 
 ```txt
 https://poseidat.org/schema/core/measurement/scale.json#/properties/product/anyOf/1
@@ -12,7 +12,7 @@ https://poseidat.org/schema/core/measurement/scale.json#/properties/product/anyO
 
 ## 1 Type
 
-`string`
+unknown
 
 ## 1 Constraints
 
