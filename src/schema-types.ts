@@ -188,7 +188,7 @@ export interface ICoreVesselPartner {
 
 /** A section off a vessel, used to detail where objects are on the vessel */
 export interface ICoreVesselSection {
-  /** The unique identifier for the section (UUID v4) */ id: string;
+  /** The unique identifier for the section (UUID v4) */ vessel_section_id: string;
   /** The compartment this section is in */ compartment: IEnumVesselCompartment;
   /** The name of this section */ name?: string;
   /** The description of this section in the compartment */ description?: string;
@@ -217,7 +217,7 @@ export interface ICoreVessel {
 
 /** A device which is a part of a piece of equipment installed on a vessel */
 export interface IEquipmentDevice {
-  /** The unique identifier for the device (UUID v4) */ id: string;
+  /** The unique identifier for the device (UUID v4) */ device_id: string;
   /** Name of the device */ name: string;
   /** The type of device */ type: IEnumDeviceType;
   /** The brand of the device */ brand?: string;
@@ -230,7 +230,7 @@ export interface IEquipmentDevice {
 
 /** A piece of equipment installed on a vessel. Equipment is composed out of different devices */
 export interface IEquipmentEquipment {
-  /** The unique identifier for the equipment (UUID v4) */ id: string;
+  /** The unique identifier for the equipment (UUID v4) */ equipment_id: string;
   /** Name of the equipment */ name: string;
   /** The type of equipment */ type: IEnumEquipmentType;
   /** The company which supplied the equipment */ supplier?: IPersonaCompany;
