@@ -46,6 +46,7 @@
     "@adobe/jsonschema2md": "^6.0.3",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@types/jest": "^26.0.24",
     "@types/json-schema": "^7.0.8",
     "@types/uuid": "^8.3.1",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
