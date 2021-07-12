@@ -36,8 +36,8 @@ describe('Schema-validator', () => {
     const validationErrors = validateSchema( { object: testData, schema: minimalSchema } );
     expect(validationErrors).toBeDefined();
     expect(validationErrors.length).toEqual(1);
-    expect(validationErrors[0].message).toEqual('should be string');
+    expect(validationErrors[0].message).toEqual('must be string');
     expect(validationErrors[0].schemaPath).toEqual('#/properties/test/type');
-    expect(validationErrors[0].dataPath).toEqual('/test');
+    expect(validationErrors[0].instancePath).toEqual('/test');
   });
 });

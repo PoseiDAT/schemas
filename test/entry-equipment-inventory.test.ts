@@ -31,17 +31,17 @@ describe('EquipmentInventoryEntry', () => {
         immutable: false,
         equipment : [
           {
-            id: v4(),
+            equipment_id: v4(),
             name: 'Test equipment',
             type: 'SENSOR',
             devices: [
               {
-                id: v4(),
-                name: 'Test swtich',
+                device_id: v4(),
+                name: 'Test switch',
                 type: 'SWITCH'
               },
               {
-                id: v4(),
+                device_id: v4(),
                 name: 'Test modem',
                 type: 'MODEM'
               }

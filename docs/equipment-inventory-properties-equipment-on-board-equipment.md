@@ -16,21 +16,21 @@ A piece of equipment installed on a vessel. Equipment is composed out of differe
 
 # items Properties
 
-| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                   |
-| :------------------------ | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| [id](#id)                 | `string` | Required | cannot be null | [Equipment](equipment-properties-id.md "https://poseidat.org/schema/core/equipment/equipment.json#/properties/id")           |
-| [name](#name)             | `string` | Required | cannot be null | [Equipment](equipment-properties-name.md "https://poseidat.org/schema/core/equipment/equipment.json#/properties/name")       |
-| [type](#type)             | `string` | Required | cannot be null | [Equipment](equipment-properties-equipment-type.md "https://poseidat.org/schema/enum/equipment-type.json#/properties/type")  |
-| [supplier](#supplier)     | `object` | Optional | cannot be null | [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/supplier")    |
-| [installer](#installer)   | `object` | Optional | cannot be null | [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/installer")   |
-| [maintainer](#maintainer) | `object` | Optional | cannot be null | [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/maintainer")  |
-| [devices](#devices)       | `array`  | Required | cannot be null | [Equipment](equipment-properties-devices.md "https://poseidat.org/schema/core/equipment/equipment.json#/properties/devices") |
+| Property                      | Type     | Required | Nullable       | Defined by                                                                                                                             |
+| :---------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
+| [equipment_id](#equipment_id) | `string` | Required | cannot be null | [Equipment](equipment-properties-equipment_id.md "https://poseidat.org/schema/core/equipment/equipment.json#/properties/equipment_id") |
+| [name](#name)                 | `string` | Required | cannot be null | [Equipment](equipment-properties-name.md "https://poseidat.org/schema/core/equipment/equipment.json#/properties/name")                 |
+| [type](#type)                 | `string` | Required | cannot be null | [Equipment](equipment-properties-equipment-type.md "https://poseidat.org/schema/enum/equipment-type.json#/properties/type")            |
+| [supplier](#supplier)         | `object` | Optional | cannot be null | [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/supplier")              |
+| [installer](#installer)       | `object` | Optional | cannot be null | [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/installer")             |
+| [maintainer](#maintainer)     | `object` | Optional | cannot be null | [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/maintainer")            |
+| [devices](#devices)           | `array`  | Required | cannot be null | [Equipment](equipment-properties-devices.md "https://poseidat.org/schema/core/equipment/equipment.json#/properties/devices")           |
 
-## id
+## equipment_id
 
 The unique identifier for the equipment (UUID v4)
 
-`id`
+`equipment_id`
 
 *   is required
 
@@ -38,13 +38,13 @@ The unique identifier for the equipment (UUID v4)
 
 *   cannot be null
 
-*   defined in: [Equipment](equipment-properties-id.md "https://poseidat.org/schema/core/equipment/equipment.json#/properties/id")
+*   defined in: [Equipment](equipment-properties-equipment_id.md "https://poseidat.org/schema/core/equipment/equipment.json#/properties/equipment_id")
 
-### id Type
+### equipment_id Type
 
 `string`
 
-### id Constraints
+### equipment_id Constraints
 
 **UUID**: the string must be a UUID, according to [RFC 4122](https://tools.ietf.org/html/rfc4122 "check the specification")
 

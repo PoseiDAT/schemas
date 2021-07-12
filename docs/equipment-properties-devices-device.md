@@ -18,7 +18,7 @@ A device which is a part of a piece of equipment installed on a vessel
 
 | Property                  | Type     | Required | Nullable       | Defined by                                                                                                                |
 | :------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------ |
-| [id](#id)                 | `string` | Required | cannot be null | [Device](device-properties-id.md "https://poseidat.org/schema/core/equipment/device.json#/properties/id")                 |
+| [device_id](#device_id)   | `string` | Required | cannot be null | [Device](device-properties-device_id.md "https://poseidat.org/schema/core/equipment/device.json#/properties/device_id")   |
 | [name](#name)             | `string` | Required | cannot be null | [Device](device-properties-name.md "https://poseidat.org/schema/core/equipment/device.json#/properties/name")             |
 | [type](#type)             | `string` | Required | cannot be null | [Device](device-properties-device-type.md "https://poseidat.org/schema/enum/device-type.json#/properties/type")           |
 | [brand](#brand)           | `string` | Optional | cannot be null | [Device](device-properties-brand.md "https://poseidat.org/schema/core/equipment/device.json#/properties/brand")           |
@@ -28,11 +28,11 @@ A device which is a part of a piece of equipment installed on a vessel
 | [installer](#installer)   | `object` | Optional | cannot be null | [Device](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/installer")   |
 | [maintainer](#maintainer) | `object` | Optional | cannot be null | [Device](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/maintainer")  |
 
-## id
+## device_id
 
 The unique identifier for the device (UUID v4)
 
-`id`
+`device_id`
 
 *   is required
 
@@ -40,13 +40,13 @@ The unique identifier for the device (UUID v4)
 
 *   cannot be null
 
-*   defined in: [Device](device-properties-id.md "https://poseidat.org/schema/core/equipment/device.json#/properties/id")
+*   defined in: [Device](device-properties-device_id.md "https://poseidat.org/schema/core/equipment/device.json#/properties/device_id")
 
-### id Type
+### device_id Type
 
 `string`
 
-### id Constraints
+### device_id Constraints
 
 **UUID**: the string must be a UUID, according to [RFC 4122](https://tools.ietf.org/html/rfc4122 "check the specification")
 

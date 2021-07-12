@@ -4,7 +4,7 @@
   "title": "Equipment",
   "description": "A piece of equipment installed on a vessel. Equipment is composed out of different devices",
   "properties": {
-    "id": {
+    "equipment_id": {
       "description": "The unique identifier for the equipment (UUID v4)",
       "type": "string",
       "format": "uuid"
@@ -40,7 +40,7 @@
     }
   },
   "required": [
-    "id",
+    "equipment_id",
     "name",
     "type",
     "devices"
