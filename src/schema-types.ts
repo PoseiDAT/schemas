@@ -293,7 +293,7 @@ export interface IMeasurementTrawlTension {
 
 /** The details of a (commercial) company */
 export interface IPersonaCompany {
-  /** The unique identifier for the company (UUID v4) */ id: string;
+  /** The unique identifier for the company (UUID v4) */ company_id: string;
   /** The name of the company */ name: string;
   /** The address of the company */ address?: ICoreAddress;
   /** The contact details of the company */ contact?: ICoreContactDetails;

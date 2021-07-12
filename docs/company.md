@@ -16,18 +16,18 @@ The details of a (commercial) company
 
 # Company Properties
 
-| Property            | Type     | Required | Nullable       | Defined by                                                                                                                  |
-| :------------------ | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------- |
-| [id](#id)           | `string` | Required | cannot be null | [Company](company-properties-id.md "https://poseidat.org/schema/core/persona/company.json#/properties/id")                  |
-| [name](#name)       | `string` | Required | cannot be null | [Company](company-properties-name.md "https://poseidat.org/schema/core/persona/company.json#/properties/name")              |
-| [address](#address) | `object` | Optional | cannot be null | [Company](company-properties-address.md "https://poseidat.org/schema/core/address.json#/properties/address")                |
-| [contact](#contact) | `object` | Optional | cannot be null | [Company](company-properties-contactdetails.md "https://poseidat.org/schema/core/contact-details.json#/properties/contact") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                  |
+| :------------------------ | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| [company_id](#company_id) | `string` | Required | cannot be null | [Company](company-properties-company_id.md "https://poseidat.org/schema/core/persona/company.json#/properties/company_id")  |
+| [name](#name)             | `string` | Required | cannot be null | [Company](company-properties-name.md "https://poseidat.org/schema/core/persona/company.json#/properties/name")              |
+| [address](#address)       | `object` | Optional | cannot be null | [Company](company-properties-address.md "https://poseidat.org/schema/core/address.json#/properties/address")                |
+| [contact](#contact)       | `object` | Optional | cannot be null | [Company](company-properties-contactdetails.md "https://poseidat.org/schema/core/contact-details.json#/properties/contact") |
 
-## id
+## company_id
 
 The unique identifier for the company (UUID v4)
 
-`id`
+`company_id`
 
 *   is required
 
@@ -35,13 +35,13 @@ The unique identifier for the company (UUID v4)
 
 *   cannot be null
 
-*   defined in: [Company](company-properties-id.md "https://poseidat.org/schema/core/persona/company.json#/properties/id")
+*   defined in: [Company](company-properties-company_id.md "https://poseidat.org/schema/core/persona/company.json#/properties/company_id")
 
-### id Type
+### company_id Type
 
 `string`
 
-### id Constraints
+### company_id Constraints
 
 **UUID**: the string must be a UUID, according to [RFC 4122](https://tools.ietf.org/html/rfc4122 "check the specification")
 
