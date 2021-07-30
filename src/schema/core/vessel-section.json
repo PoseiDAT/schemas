@@ -4,7 +4,7 @@
   "description": "A section off a vessel, used to detail where objects are on the vessel",
   "title": "Vessel section",
   "properties": {
-    "id": {
+    "vessel_section_id": {
       "description": "The unique identifier for the section (UUID v4)",
       "type": "string",
       "format": "uuid"
@@ -36,7 +36,7 @@
   },
   "type": "object",
   "required": [
-    "id",
+    "vessel_section_id",
     "compartment"
   ]
 }

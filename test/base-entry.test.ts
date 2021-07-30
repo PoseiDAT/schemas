@@ -19,13 +19,13 @@ describe('BaseEntry', () => {
     const validationErrors = baseEntry.validate();
     expect(validationErrors).toBeDefined();
     expect(validationErrors.length).toEqual(4);
-    expect(validationErrors[0].message).toEqual('should have required property \'journal_id\'');
+    expect(validationErrors[0].message).toEqual('must have required property \'journal_id\'');
     expect(validationErrors[0].schemaPath).toEqual('#/required');
-    expect(validationErrors[1].message).toEqual('should have required property \'entry_id\'');
+    expect(validationErrors[1].message).toEqual('must have required property \'entry_id\'');
     expect(validationErrors[1].schemaPath).toEqual('#/required');
-    expect(validationErrors[2].message).toEqual('should have required property \'revision\'');
+    expect(validationErrors[2].message).toEqual('must have required property \'revision\'');
     expect(validationErrors[2].schemaPath).toEqual('#/required');
-    expect(validationErrors[3].message).toEqual('should have required property \'immutable\'');
+    expect(validationErrors[3].message).toEqual('must have required property \'immutable\'');
     expect(validationErrors[3].schemaPath).toEqual('#/required');
   });
 
