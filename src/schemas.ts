@@ -23,6 +23,7 @@ import * as baseFishingGearShot from './schema/core/fishing-gear-shot.json';
 import * as baseFishingTow from './schema/core/fishing-tow.json';
 import * as baseFishingZone from './schema/core/fishing-zone.json';
 import * as baseJournal from './schema/core/journal.json';
+import * as baseFuelConsumption from './schema/core/measurement/fuel-consumption.json';
 import * as baseMeasurementValue from './schema/core/measurement/measurement-value.json';
 import * as baseNumeric from './schema/core/measurement/numeric.json';
 import * as basePort from './schema/core/port.json';
@@ -77,6 +78,7 @@ export const schemas = {
       equipment: baseEquipment as JSONSchema7,
     },
     measurement: {
+      fuelConsumption: baseFuelConsumption as JSONSchema7,
       measurementValue: baseMeasurementValue as JSONSchema7,
       numeric: baseNumeric as JSONSchema7,
       position: basePosition as JSONSchema7,
