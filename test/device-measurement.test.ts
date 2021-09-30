@@ -62,10 +62,8 @@ describe('DeviceMeasurementEntry', () => {
         position: {
           latitude: 1.1,
           longitude: 1.1,
-          heading: 1.1,
           course_made_good: 1.1,
           speed_over_ground: 1.1,
-          speed_through_water: 1.1,
           number_of_satellites: 1,
         },
       },
