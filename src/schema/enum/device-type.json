@@ -19,6 +19,7 @@
     "CABLE",
     "ENCLOSURE",
     "CIRCUIT_BREAKER",
-    "ECONOMETER"
+    "ECONOMETER",
+    "SCALE"
   ]
 }
