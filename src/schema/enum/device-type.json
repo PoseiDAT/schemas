@@ -18,6 +18,7 @@
     "ACTUATOR",
     "CABLE",
     "ENCLOSURE",
-    "CIRCUIT_BREAKER"
+    "CIRCUIT_BREAKER",
+    "ECONOMETER"
   ]
 }
