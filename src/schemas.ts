@@ -23,6 +23,7 @@ import * as baseFishingGearShot from './schema/core/fishing-gear-shot.json';
 import * as baseFishingTow from './schema/core/fishing-tow.json';
 import * as baseFishingZone from './schema/core/fishing-zone.json';
 import * as baseJournal from './schema/core/journal.json';
+import * as baseFuelConsumption from './schema/core/measurement/fuel-consumption.json';
 import * as baseMeasurementValue from './schema/core/measurement/measurement-value.json';
 import * as baseNumeric from './schema/core/measurement/numeric.json';
 import * as basePort from './schema/core/port.json';
@@ -58,11 +59,13 @@ import * as enumFishPackageType from './schema/enum/fish-package-type.json';
 import * as enumFishPresentation from './schema/enum/fish-presentation.json';
 import * as enumFishState from './schema/enum/fish-state.json';
 import * as enumFishType from './schema/enum/fish-type.json';
-import * as enumScaleCategory from './schema/enum/scale-category.json';
+import * as enumGnssFixQuality from './schema/enum/gnss-fix-quality.json';
+import * as enumGnssFixType from './schema/enum/gnss-fix-type.json';
 import * as enumMeasurementType from './schema/enum/measurement-type.json';
 import * as enumReasonArrival from './schema/enum/reason-arrival.json';
 import * as enumReasonDeparture from './schema/enum/reason-departure.json';
 import * as enumReasonDiscard from './schema/enum/reason-discard.json';
+import * as enumScaleCategory from './schema/enum/scale-category.json';
 import * as enumVesselCompartment from './schema/enum/vessel-compartment.json';
 
 export const schemas = {
@@ -75,6 +78,7 @@ export const schemas = {
       equipment: baseEquipment as JSONSchema7,
     },
     measurement: {
+      fuelConsumption: baseFuelConsumption as JSONSchema7,
       measurementValue: baseMeasurementValue as JSONSchema7,
       numeric: baseNumeric as JSONSchema7,
       position: basePosition as JSONSchema7,
@@ -133,11 +137,13 @@ export const schemas = {
     fishPresentation: enumFishPresentation as JSONSchema7,
     fishState: enumFishState as JSONSchema7,
     fishType: enumFishType as JSONSchema7,
+    gnssFixQuality: enumGnssFixQuality as JSONSchema7,
+    gnssFixType: enumGnssFixType as JSONSchema7,
     measurementType: enumMeasurementType as JSONSchema7,
     reasonArrival: enumReasonArrival as JSONSchema7,
     reasonDeparture: enumReasonDeparture as JSONSchema7,
     reasonDiscard: enumReasonDiscard as JSONSchema7,
-    scaleCategory: enumScaleCategory as JSONSchema7,
     vesselCompartment: enumVesselCompartment as JSONSchema7,
+    scaleCategory: enumScaleCategory as JSONSchema7,
   }
 }
