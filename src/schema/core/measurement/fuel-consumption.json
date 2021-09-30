@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://poseidat.org/schema/core/measurement/fuel-consumption.json",
+    "title": "Fuel consumption",
+    "description": "Fuel consumption of a certain engine.",
+    "properties": {
+      "current_consumption": {
+        "description": "The current fuel consumption in liters per hour",
+        "type": "number"
+      },
+      "current_average_consumption": {
+        "description": "The current averaged fuel consumption in liters per hour",
+        "type": "number"
+      },
+      "current_peak_consumption": {
+        "description": "The current peak fuel consumption in liters per hour",
+        "type": "number"
+      },
+      "last_hour_consumption": {
+        "description": "The total number of liters consumed in the last hour",
+        "type": "number"
+      },
+      "last_day_consumption": {
+        "description": "The total number of liters consumed in the last 24 hours",
+        "type": "number"
+      }
+    },
+    "required": [
+      "current_consumption"
+    ],
+    "type": "object",
+    "additionalProperties": false
+  }
