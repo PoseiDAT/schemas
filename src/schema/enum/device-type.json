@@ -5,7 +5,6 @@
   "title": "Device type",
   "type": "string",
   "enum": [
-    "ANTENNA",
     "PUMP",
     "PROCESSOR",
     "DISPLAY",
@@ -16,10 +15,11 @@
     "SENSOR",
     "BRAKE",
     "ACTUATOR",
-    "CABLE",
-    "ENCLOSURE",
     "CIRCUIT_BREAKER",
     "ECONOMETER",
-    "SCALE"
+    "SCALE",
+    "RECEIVER",
+    "TRANSMITTER",
+    "TRANSCEIVER"
   ]
 }
