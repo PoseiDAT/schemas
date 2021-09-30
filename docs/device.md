@@ -106,6 +106,8 @@ The types of supported technical vessel devices.
 | `"CABLE"`           |             |
 | `"ENCLOSURE"`       |             |
 | `"CIRCUIT_BREAKER"` |             |
+| `"ECONOMETER"`      |             |
+| `"SCALE"`           |             |
 
 ## brand
 

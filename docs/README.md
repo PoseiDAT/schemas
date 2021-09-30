@@ -64,6 +64,12 @@
 
 *   [Fishing zone](./fishing-zone.md "Geographical zone for fishing activities") – `https://poseidat.org/schema/core/fishing-zone.json`
 
+*   [Fuel consumption](./fuel-consumption.md "Fuel consumption of a certain engine") – `https://poseidat.org/schema/core/measurement/fuel-consumption.json`
+
+*   [GNSS fix quality](./gnss-fix-quality.md "The quality of a GNSS receiver's fix") – `https://poseidat.org/schema/enum/gnss-fix-quality.json`
+
+*   [GNSS fix type](./gnss-fix-type.md "The type of a GNSS receiver's fix") – `https://poseidat.org/schema/enum/gnss-fix-type.json`
+
 *   [Journal](./journal.md "A trip journal") – `https://poseidat.org/schema/core/journal.json`
 
 *   [Measurement type](./measurement-type.md "The measurement types") – `https://poseidat.org/schema/enum/measurement-type.json`
@@ -141,6 +147,8 @@
 *   [Fishing tow](./fishing-activity-properties-fishing-tow.md "Fishing tow details") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/tow`
 
 *   [Fishing zone](./fishing-tow-properties-fishing-zone.md "Geographical zone for fishing activities") – `https://poseidat.org/schema/core/fishing-zone.json#/properties/zone`
+
+*   [Fuel consumption](./measurement-value-properties-fuel-consumption.md "Fuel consumption of a certain engine") – `https://poseidat.org/schema/core/measurement/fuel-consumption.json#/properties/fuel_consumption`
 
 *   [Measurement value](./device-measurement-properties-measurement-value.md "The value of a certain type of measurement") – `https://poseidat.org/schema/core/measurement/measurement-value.json#/properties/value`
 

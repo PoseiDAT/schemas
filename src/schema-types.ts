@@ -239,6 +239,15 @@ export interface IEquipmentEquipment {
   /** The collection of devices of which this equipment is composed */ devices: IEquipmentDevice[];
 }
 
+/** Fuel consumption of a certain engine. */
+export interface IMeasurementFuelConsumption {
+  /** The current fuel consumption in liters per hour */ current_consumption: number;
+  /** The current averaged fuel consumption in liters per hour */ current_average_consumption?: number;
+  /** The current peak fuel consumption in liters per hour */ current_peak_consumption?: number;
+  /** The total number of liters consumed in the last hour */ last_hour_consumption?: number;
+  /** The total number of liters consumed in the last 24 hours */ last_day_consumption?: number;
+}
+
 /** The value of a certain type of measurement */
 export interface IMeasurementMeasurementValue {
   /** The type of measurement */ type?: IEnumMeasurementType;
@@ -246,6 +255,7 @@ export interface IMeasurementMeasurementValue {
   /** A numerical measurement */ numeric?: IMeasurementNumeric;
   /** A trawl tension measurement */ trawl_tension?: IMeasurementTrawlTension;
   /** A scale measurement */ scale?: IMeasurementScale;
+  /** A fuel consumption measurement */ fuel_consumption?: IMeasurementFuelConsumption;
 }
 
 /** A number representing a measurement from a sensor */
@@ -257,11 +267,16 @@ export interface IMeasurementNumeric {
 export interface IMeasurementPosition {
   /** The latitude of the geographical location */ latitude: number;
   /** The longitude of the geographical location */ longitude: number;
-  /** The compass heading of the vessel in degrees */ heading?: number;
   /** The direction in which the vessel is traveling, in degrees */ course_made_good?: number;
   /** The velocity of the vessel in meters per second (m/s) over the ground */ speed_over_ground?: number;
-  /** The velocity of the vessel in meters per second (m/s) through the water */ speed_through_water?: number;
   /** The number of satellites used to calculate the position */ number_of_satellites?: number;
+  /** The fix quality as reported by an NMEA receiver (0 = invalid, 1 = GPS fix, 2 = DGPS fix) */ fix_quality?: IEnumGnssFixQuality;
+  /** The type of GPS fix. */ fix_type?: IEnumGnssFixType;
+  /** Relative accuracy of horizontal position */ hdop?: number;
+  /** The number of meters above mean sea level of the receiver antenna */ antenna_altitude?: number;
+  /** Height of geoid above WGS84 ellipsoid in meters */ geoidal_separation?: number;
+  /** The age of the DGPS data in seconds */ dgps_data_age?: number;
+  /** The station id of the used DGPS reference station */ dgps_station_id?: number;
 }
 
 /** A scale measurement that can be used in an entry */
@@ -299,11 +314,11 @@ export interface IPersonaCompany {
   /** The contact details of the company */ contact?: ICoreContactDetails;
 }
 
-export type IEnumDeviceType = "ANTENNA" | "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER";
+export type IEnumDeviceType = "ANTENNA" | "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER" | "ECONOMETER" | "SCALE";
 
 export type IEnumEffortZone = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y";
 
-export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "ECONOMETER" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR";
+export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR" | "SCALE";
 
 export type IEnumFishFreshness = "A" | "B" | "E" | "SO" | "V";
 
@@ -317,7 +332,11 @@ export type IEnumFishType = "ANF" | "BLL" | "BIB" | "COD" | "CRE" | "DAB" | "GUU
 
 export type IEnumFishingGearType = "DRB" | "FIX" | "FPO" | "GEN" | "GN" | "GNC" | "GND" | "GNF" | "GNS" | "GTN" | "GTR" | "HMD" | "KRK" | "LA" | "LHM" | "LHP" | "LL" | "LLD" | "LLS" | "LTL" | "LX" | "MIS" | "NK" | "OTB" | "OTM" | "OTT" | "PS" | "PS1" | "PS2" | "PTB" | "PTM" | "PUL" | "RG" | "SDN" | "SPR" | "SSC" | "SV" | "SX" | "TB" | "TBB" | "TBN" | "TBS";
 
-export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE";
+export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
+
+export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
+
+export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 

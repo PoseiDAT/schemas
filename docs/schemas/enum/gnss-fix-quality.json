@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://poseidat.org/schema/enum/gnss-fix-quality.json","description":"The quality of a GNSS receiver's fix.","title":"GNSS fix quality","type":"string","enum":["INVALID","GPS_FIX","DGPS_FIX"]}

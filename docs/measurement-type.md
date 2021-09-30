@@ -38,3 +38,4 @@ The measurement types
 | `"ENERGY_CONSUMPTION"` |             |
 | `"TRAWL_TENSION"`      |             |
 | `"SCALE"`              |             |
+| `"RPM"`                |             |

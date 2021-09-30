@@ -24,15 +24,18 @@ one (and only one) of
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-3.md "check type definition")
 
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-4.md "check type definition")
+
 # value Properties
 
-| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                     |
-| :------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [type](#type)                   | `string` | Optional | cannot be null | [Measurement value](measurement-value-properties-measurement-type.md "https://poseidat.org/schema/enum/measurement-type.json#/properties/type")                |
-| [position](#position)           | `object` | Optional | cannot be null | [Measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")                       |
-| [numeric](#numeric)             | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")                   |
-| [trawl_tension](#trawl_tension) | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-trawl-tension.md "https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension") |
-| [scale](#scale)                 | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-scale.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/scale")                         |
+| Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                              |
+| :------------------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [type](#type)                         | `string` | Optional | cannot be null | [Measurement value](measurement-value-properties-measurement-type.md "https://poseidat.org/schema/enum/measurement-type.json#/properties/type")                         |
+| [position](#position)                 | `object` | Optional | cannot be null | [Measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")                                |
+| [numeric](#numeric)                   | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")                            |
+| [trawl_tension](#trawl_tension)       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-trawl-tension.md "https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension")          |
+| [scale](#scale)                       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-scale.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/scale")                                  |
+| [fuel_consumption](#fuel_consumption) | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-fuel-consumption.md "https://poseidat.org/schema/core/measurement/fuel-consumption.json#/properties/fuel_consumption") |
 
 ## type
 
@@ -76,6 +79,7 @@ The measurement types
 | `"ENERGY_CONSUMPTION"` |             |
 | `"TRAWL_TENSION"`      |             |
 | `"SCALE"`              |             |
+| `"RPM"`                |             |
 
 ## position
 
@@ -148,3 +152,21 @@ A scale measurement that can be used in an entry
 ### scale Type
 
 `object` ([Scale](measurement-value-properties-scale.md))
+
+## fuel_consumption
+
+Fuel consumption of a certain engine.
+
+`fuel_consumption`
+
+*   is optional
+
+*   Type: `object` ([Fuel consumption](measurement-value-properties-fuel-consumption.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](measurement-value-properties-fuel-consumption.md "https://poseidat.org/schema/core/measurement/fuel-consumption.json#/properties/fuel_consumption")
+
+### fuel_consumption Type
+
+`object` ([Fuel consumption](measurement-value-properties-fuel-consumption.md))

@@ -25,7 +25,6 @@ The types of supported technical vessel equipment.
 | `"ECHO_SOUNDER"`     |             |
 | `"FISH_FINDER"`      |             |
 | `"AIS"`              |             |
-| `"ECONOMETER"`       |             |
 | `"TANK_LEVEL_METER"` |             |
 | `"TENSIOMETER"`      |             |
 | `"CHARGER"`          |             |
@@ -39,3 +38,4 @@ The types of supported technical vessel equipment.
 | `"PROPELLER"`        |             |
 | `"PUMP"`             |             |
 | `"SENSOR"`           |             |
+| `"SCALE"`            |             |
