@@ -12,10 +12,6 @@
       "description": "The longitude of the geographical location",
       "type": "number"
     },
-    "heading": {
-      "description": "The compass heading of the vessel in degrees",
-      "type": "number"
-    },
     "course_made_good": {
       "description": "The direction in which the vessel is traveling, in degrees",
       "type": "number"
@@ -24,12 +20,36 @@
       "description": "The velocity of the vessel in meters per second (m/s) over the ground",
       "type": "number"
     },
-    "speed_through_water": {
-      "description": "The velocity of the vessel in meters per second (m/s) through the water",
-      "type": "number"
-    },
     "number_of_satellites": {
       "description": "The number of satellites used to calculate the position",
+      "type": "number"
+    },
+    "fix_quality": {
+      "description": "The fix quality as reported by an NMEA receiver (0 = invalid, 1 = GPS fix, 2 = DGPS fix)",
+      "$ref": "https://poseidat.org/schema/enum/gnss-fix-quality.json"
+    },
+    "fix_type": {
+      "description": "The type of GPS fix.",
+      "$ref": "https://poseidat.org/schema/enum/gnss-fix-type.json"
+    },
+    "hdop": {
+      "description": "Relative accuracy of horizontal position",
+      "type": "number"
+    },
+    "antenna_altitude": {
+      "description": "The number of meters above mean sea level of the receiver antenna",
+      "type": "number"
+    },
+    "geoidal_separation": {
+      "description": "Height of geoid above WGS84 ellipsoid in meters",
+      "type": "number"
+    },
+    "dgps_data_age": {
+      "description": "The age of the DGPS data in seconds",
+      "type": "number"
+    },
+    "dgps_station_id": {
+      "description": "The station id of the used DGPS reference station",
       "type": "number"
     }
   },
