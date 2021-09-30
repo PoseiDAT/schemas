@@ -23,6 +23,7 @@
     "RUDDER",
     "PROPELLER",
     "PUMP",
-    "SENSOR"
+    "SENSOR",
+    "SCALE"
   ]
 }
