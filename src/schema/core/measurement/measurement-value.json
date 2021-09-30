@@ -23,13 +23,18 @@
     "scale": {
       "description": "A scale measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
+    },
+    "fuel_consumption": {
+      "description": "A fuel consumption measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
     }
  },
  "oneOf": [
    { "required": [ "type", "numeric" ] },
    { "required": [ "type", "position" ] },
    { "required": [ "type", "trawl_tension" ] },
-   { "required": [ "type", "scale" ] }
+   { "required": [ "type", "scale" ] },
+   { "required": [ "type", "fuel_consumption" ] }
  ],
   "type": "object",
   "additionalProperties": false
