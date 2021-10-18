@@ -151,6 +151,29 @@ export interface ICorePort {
   /** The geographical location of the port */ location?: IMeasurementPosition;
 }
 
+/** A waypoint which is part of a route. */
+export interface ICoreRouteWaypoint {
+  /** The id of the waypoint within a trip. */ id: number;
+  /** The name of the waypoint. */ name?: string;
+  /** The latitude of the waypoint. */ latitude: number;
+  /** The longitude of the waypoint. */ longitude: number;
+  /** The turn radius of the waypoint in nautical miles. */ turn_radius?: number;
+  /** The Cross-Track Distance at the port side in nautical miles on the route leg between the previous and this waypoint. */ portside_xtd?: number;
+  /** The Cross-Track Distance at the starboard side in nautical miles on the route leg between the previous and this waypoint. */ starboard_xtd?: number;
+  /** The safety contour in metres on the route leg between the previous and this waypoint. */ safety_contour?: number;
+  /** The safety depth in metres on the route leg between the previous and this waypoint. */ safety_depth?: number;
+  /** The geometry type of the route leg between the previous and this waypoint. */ geometry_type?: IEnumRouteGeometryType;
+  /** The lowest cruising speed in knots on the route leg between the previous and this waypoint. */ speed_min?: number;
+  /** The highest allowed cruising speed in knots on the route leg between the previous and this waypoint. */ speed_max?: number;
+  /** The static draught forward (bow) in metres on the route leg between the previous and this waypoint. */ draught_forward?: number;
+  /** The static draught aft (stern) in metres on the route leg between the previous and this waypoint. */ draught_aft?: number;
+  /** The minimum static Under Keel Clearance on the route leg between the previous and this waypoint. */ static_ukc?: number;
+  /** The minimum dynamic Under Keel Clearance on the route leg between the previous and this waypoint. */ dynamic_ukc?: number;
+  /** The height of the masthead on the route leg between the previous and this waypoint. */ masthead_height?: number;
+  /** The Estimated Time of Departure from this waypoint. */ etd?: string;
+  /** The Estimated Time of Arrival at this waypoint. */ eta?: string;
+}
+
 /** The trip related details of a journal entry */
 export interface ICoreTripEntry {
   /** The date the trip entry was created or sent at. All dates and times are UTC. GBR: DATI, NLD: DA */ date: string;
@@ -314,11 +337,11 @@ export interface IPersonaCompany {
   /** The contact details of the company */ contact?: ICoreContactDetails;
 }
 
-export type IEnumDeviceType = "ANTENNA" | "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER" | "ECONOMETER" | "SCALE";
+export type IEnumDeviceType = "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER" | "ECONOMETER" | "SCALE" | "RECEIVER" | "TRANSMITTER" | "TRANSCEIVER";
 
 export type IEnumEffortZone = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y";
 
-export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR" | "SCALE";
+export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR" | "SCALE" | "ECDIS" | "ECS";
 
 export type IEnumFishFreshness = "A" | "B" | "E" | "SO" | "V";
 
@@ -336,13 +359,15 @@ export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
 
 export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
 
-export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM";
+export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM" | "ROUTE";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 
 export type IEnumReasonDeparture = "FIS" | "GUD" | "OTH" | "SCR" | "STE" | "TST";
 
 export type IEnumReasonDiscard = "BAI" | "HSV" | "OTH" | "PDM" | "PRO" | "QEX";
+
+export type IEnumRouteGeometryType = "RHUMB_LINE_LOXODROME" | "GREAT_CICRLE_ORTHODROME";
 
 export type IEnumScaleCategory = "FISH";
 
@@ -400,6 +425,15 @@ export interface IEntryFishingActivity extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryFishingActivityEntryType;
   /** Trip related details for this entry */ trip: ICoreTripEntry;
   /** The fishing tow details */ tow: ICoreFishingTow;
+}
+
+export type IEntryRouteEntryType = "route";
+/** A route which was planned with an ECS/ECDIS system. */
+export interface IEntryRoute extends ICoreBaseEntry {
+  /** The journal entry type identifer */ entry_type: IEntryRouteEntryType;
+  /** The name of the route. */ name: string;
+  /** Generic route information. */ info?: string;
+  /** The collection of waypoints which make the route. */ waypoints: ICoreRouteWaypoint[];
 }
 
 export type IEntryZoneEnterEntryType = "zone-enter";

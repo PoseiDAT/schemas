@@ -80,6 +80,7 @@ The measurement types
 | `"TRAWL_TENSION"`      |             |
 | `"SCALE"`              |             |
 | `"RPM"`                |             |
+| `"ROUTE"`              |             |
 
 ## position
 

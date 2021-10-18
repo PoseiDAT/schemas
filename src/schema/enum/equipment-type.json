@@ -23,6 +23,8 @@
     "PROPELLER",
     "PUMP",
     "SENSOR",
-    "SCALE"
+    "SCALE",
+    "ECDIS",
+    "ECS"
   ]
 }

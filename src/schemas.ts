@@ -36,6 +36,7 @@ import * as baseVesselInspection from './schema/core/vessel-inspection.json';
 import * as baseVesselMaster from './schema/core/vessel-master.json';
 import * as baseVesselPartner from './schema/core/vessel-partner.json';
 import * as baseVesselSection from './schema/core/vessel-section.json';
+import * as baseRouteWaypoint from './schema/core/route-waypoint.json';
 
 // Entry schemas
 //
@@ -47,6 +48,7 @@ import * as entryEquipmentInventory from './schema/entry/equipment-inventory.jso
 import * as entryFishingActivity from './schema/entry/fishing-activity.json';
 import * as entryZoneEnter from './schema/entry/zone-enter.json';
 import * as entryZoneExit from './schema/entry/zone-exit.json';
+import * as entryRoute from './schema/entry/route.json';
 
 // Enum schemas
 //
@@ -67,6 +69,7 @@ import * as enumReasonDeparture from './schema/enum/reason-departure.json';
 import * as enumReasonDiscard from './schema/enum/reason-discard.json';
 import * as enumScaleCategory from './schema/enum/scale-category.json';
 import * as enumVesselCompartment from './schema/enum/vessel-compartment.json';
+import * as enumRouteGeometryType from './schema/enum/route-geometry-type.json';
 
 export const schemas = {
 
@@ -109,6 +112,7 @@ export const schemas = {
     vesselMaster: baseVesselMaster as JSONSchema7,
     vesselPartner: baseVesselPartner as JSONSchema7,
     vesselSection: baseVesselSection as JSONSchema7,
+    routeWaypoint: baseRouteWaypoint as JSONSchema7,
   },
 
   // Entry schemas
@@ -122,6 +126,7 @@ export const schemas = {
     fishingActivity: entryFishingActivity as JSONSchema7,
     zoneEnter: entryZoneEnter as JSONSchema7,
     zoneExit: entryZoneExit as JSONSchema7,
+    route: entryRoute as JSONSchema7,
   },
 
   // Enum schemas
@@ -145,5 +150,6 @@ export const schemas = {
     reasonDiscard: enumReasonDiscard as JSONSchema7,
     vesselCompartment: enumVesselCompartment as JSONSchema7,
     scaleCategory: enumScaleCategory as JSONSchema7,
+    routeGeometryType: enumRouteGeometryType as JSONSchema7,
   }
 }
