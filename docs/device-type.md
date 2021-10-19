@@ -20,7 +20,6 @@ The types of supported technical vessel devices.
 
 | Value               | Explanation |
 | :------------------ | :---------- |
-| `"ANTENNA"`         |             |
 | `"PUMP"`            |             |
 | `"PROCESSOR"`       |             |
 | `"DISPLAY"`         |             |
@@ -36,3 +35,6 @@ The types of supported technical vessel devices.
 | `"CIRCUIT_BREAKER"` |             |
 | `"ECONOMETER"`      |             |
 | `"SCALE"`           |             |
+| `"RECEIVER"`        |             |
+| `"TRANSMITTER"`     |             |
+| `"TRANSCEIVER"`     |             |

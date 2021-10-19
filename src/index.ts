@@ -18,6 +18,7 @@ export * from './entry-equipment-inventory';
 export * from './entry-fishing-activity';
 export * from './entry-zone-enter';
 export * from './entry-zone-exit';
+export * from './entry-route';
 
 // Supporting types
 //

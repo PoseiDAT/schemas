@@ -23,6 +23,7 @@
     "ENERGY_CONSUMPTION",
     "TRAWL_TENSION",
     "SCALE",
-    "RPM"
+    "RPM",
+    "ROUTE"
   ]
 }
