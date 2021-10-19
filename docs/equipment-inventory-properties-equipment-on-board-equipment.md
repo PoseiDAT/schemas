@@ -22,8 +22,8 @@ A piece of equipment installed on a vessel. Equipment is composed out of differe
 | [name](#name)                 | `string` | Required | cannot be null | [Equipment](equipment-properties-name.md "https://poseidat.org/schema/core/equipment/equipment.json#/properties/name")                 |
 | [type](#type)                 | `string` | Required | cannot be null | [Equipment](equipment-properties-equipment-type.md "https://poseidat.org/schema/enum/equipment-type.json#/properties/type")            |
 | [supplier](#supplier)         | `object` | Optional | cannot be null | [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/supplier")              |
-| [installer](#installer)       | `object` | Optional | cannot be null | [Equipment](equipment-properties-company-1.md "https://poseidat.org/schema/core/persona/company.json#/properties/installer")           |
-| [maintainer](#maintainer)     | `object` | Optional | cannot be null | [Equipment](equipment-properties-company-2.md "https://poseidat.org/schema/core/persona/company.json#/properties/maintainer")          |
+| [installer](#installer)       | `object` | Optional | cannot be null | [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/installer")             |
+| [maintainer](#maintainer)     | `object` | Optional | cannot be null | [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/maintainer")            |
 | [devices](#devices)           | `array`  | Required | cannot be null | [Equipment](equipment-properties-devices.md "https://poseidat.org/schema/core/equipment/equipment.json#/properties/devices")           |
 
 ## equipment_id
@@ -120,15 +120,15 @@ The details of a (commercial) company
 
 *   is optional
 
-*   Type: `object` ([Company](equipment-properties-company-2.md))
+*   Type: `object` ([Company](equipment-properties-company.md))
 
 *   cannot be null
 
-*   defined in: [Equipment](equipment-properties-company-2.md "https://poseidat.org/schema/core/persona/company.json#/properties/supplier")
+*   defined in: [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/supplier")
 
 ### supplier Type
 
-`object` ([Company](equipment-properties-company-2.md))
+`object` ([Company](equipment-properties-company.md))
 
 ## installer
 
@@ -138,15 +138,15 @@ The details of a (commercial) company
 
 *   is optional
 
-*   Type: `object` ([Company](equipment-properties-company-2.md))
+*   Type: `object` ([Company](equipment-properties-company.md))
 
 *   cannot be null
 
-*   defined in: [Equipment](equipment-properties-company-2.md "https://poseidat.org/schema/core/persona/company.json#/properties/installer")
+*   defined in: [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/installer")
 
 ### installer Type
 
-`object` ([Company](equipment-properties-company-2.md))
+`object` ([Company](equipment-properties-company.md))
 
 ## maintainer
 
@@ -156,15 +156,15 @@ The details of a (commercial) company
 
 *   is optional
 
-*   Type: `object` ([Company](equipment-properties-company-2.md))
+*   Type: `object` ([Company](equipment-properties-company.md))
 
 *   cannot be null
 
-*   defined in: [Equipment](equipment-properties-company-2.md "https://poseidat.org/schema/core/persona/company.json#/properties/maintainer")
+*   defined in: [Equipment](equipment-properties-company.md "https://poseidat.org/schema/core/persona/company.json#/properties/maintainer")
 
 ### maintainer Type
 
-`object` ([Company](equipment-properties-company-2.md))
+`object` ([Company](equipment-properties-company.md))
 
 ## devices
 

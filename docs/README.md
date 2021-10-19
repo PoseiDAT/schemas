@@ -122,7 +122,61 @@
 
 ### Objects
 
+*   [Address](./company-properties-address.md "A street address") – `https://poseidat.org/schema/core/address.json#/properties/address`
 
+*   [Base entry](./arrival-allof-base-entry.md "The shared properties for all entries") – `https://poseidat.org/schema/core/base-entry.json#/allOf/0`
+
+*   [Company](./equipment-properties-company.md "The details of a (commercial) company") – `https://poseidat.org/schema/core/persona/company.json#/properties/supplier`
+
+*   [ContactDetails](./company-properties-contactdetails.md "Contact information for persona") – `https://poseidat.org/schema/core/contact-details.json#/properties/contact`
+
+*   [Device](./equipment-properties-devices-device.md "A device which is a part of a piece of equipment installed on a vessel") – `https://poseidat.org/schema/core/equipment/device.json#/properties/devices/items`
+
+*   [Equipment](./equipment-inventory-properties-equipment-on-board-equipment.md "A piece of equipment installed on a vessel") – `https://poseidat.org/schema/core/equipment/equipment.json#/properties/equipment/items`
+
+*   [Fishing catch](./arrival-properties-catch-on-board-fishing-catch.md "Details of caught fish") – `https://poseidat.org/schema/core/fishing-catch.json#/properties/catch_on_board/items`
+
+*   [Fishing catch processed](./fishing-catch-properties-fishing-catch-processed.md "Details of caught fish after it has been processed") – `https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/processed`
+
+*   [Fishing gear](./departure-properties-gear-on-board-fishing-gear.md "Fishing gear details") – `https://poseidat.org/schema/core/fishing-gear.json#/properties/gear_on_board/items`
+
+*   [Fishing gear deployment](./fishing-tow-properties-fishing-gear-deployment.md "Fishing gear deployment details") – `https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_deployment`
+
+*   [Fishing gear gill net](./fishing-gear-deployment-properties-fishing-gear-gill-net.md "Deep Sea Permit requirements when using gill nets") – `https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/gill_net`
+
+*   [Fishing gear loss](./fishing-gear-deployment-properties-gear-loss-details-fishing-gear-loss.md "A gear loss event details") – `https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/gear_loss/items`
+
+*   [Fishing gear retrieve](./fishing-gear-deployment-properties-gear-retrieve-details-fishing-gear-retrieve.md "A gear retrieve event details") – `https://poseidat.org/schema/core/fishing-gear-retrieve.json#/properties/gear_retrieve/items`
+
+*   [Fishing gear shot](./fishing-gear-deployment-properties-gear-shot-details-fishing-gear-shot.md "A gear shot event details") – `https://poseidat.org/schema/core/fishing-gear-shot.json#/properties/gear_shot/items`
+
+*   [Fishing tow](./fishing-activity-properties-fishing-tow.md "Fishing tow details") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/tow`
+
+*   [Fishing zone](./fishing-tow-properties-fishing-zone.md "Geographical zone for fishing activities") – `https://poseidat.org/schema/core/fishing-zone.json#/properties/zone`
+
+*   [Fuel consumption](./measurement-value-properties-fuel-consumption.md "Fuel consumption of a certain engine") – `https://poseidat.org/schema/core/measurement/fuel-consumption.json#/properties/fuel_consumption`
+
+*   [Measurement value](./device-measurement-properties-measurement-value.md "The value of a certain type of measurement") – `https://poseidat.org/schema/core/measurement/measurement-value.json#/properties/value`
+
+*   [Numeric](./measurement-value-properties-numeric.md "A number representing a measurement from a sensor") – `https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric`
+
+*   [Port](./arrival-properties-port.md "Fishing port details") – `https://poseidat.org/schema/core/port.json#/properties/port`
+
+*   [Position](./trip-entry-properties-position.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/position.json#/properties/location`
+
+*   [Route waypoint](./route-properties-waypoints-route-waypoint.md "A waypoint which is part of a route") – `https://poseidat.org/schema/core/route-waypoint.json#/properties/waypoints/items`
+
+*   [Scale](./measurement-value-properties-scale.md "A scale measurement that can be used in an entry") – `https://poseidat.org/schema/core/measurement/scale.json#/properties/scale`
+
+*   [Trawl tension](./measurement-value-properties-trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension`
+
+*   [Trip entry](./arrival-properties-trip-entry.md "The trip related details of a journal entry") – `https://poseidat.org/schema/core/trip-entry.json#/properties/trip`
+
+*   [Vessel](./journal-properties-vessel.md "The vessel information") – `https://poseidat.org/schema/core/vessel.json#/properties/vessel`
+
+*   [Vessel master](./vessel-partner-properties-vessel-master.md "The vessel master details") – `https://poseidat.org/schema/core/vessel-master.json#/properties/master`
+
+*   [Vessel partner](./fishing-gear-deployment-properties-partnered-fishing-vessels-vessel-partner.md "Fishing vessel details for partnered fishing") – `https://poseidat.org/schema/core/vessel-partner.json#/properties/partnered_fishing_vessel/items`
 
 ### Arrays
 
