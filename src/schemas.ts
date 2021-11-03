@@ -48,7 +48,13 @@ import * as entryFishingActivity from "./schema/entry/fishing-activity.json";
 import * as entryRoute from "./schema/entry/route.json";
 import * as entryZoneEnter from "./schema/entry/zone-enter.json";
 import * as entryZoneExit from "./schema/entry/zone-exit.json";
+import * as enumAISCallsign from "./schema/enum/ais-callsign.json";
+import * as enumAISDTE from "./schema/enum/ais-DTE.json";
+import * as enumAISMeasurementType from "./schema/enum/ais-measurement-type.json";
+import * as enumAISPositionAccuracy from "./schema/enum/ais-position-accuracy.json";
+import * as enumAISPositionDeviceType from "./schema/enum/ais-position-device-type.json";
 import * as enumAISShipTypes from "./schema/enum/ais-ship-type.json";
+import * as enumAISSpecialManeuvre from "./schema/enum/ais-special-maneuvre.json";
 // Enum schemas
 //
 import * as enumDeviceType from "./schema/enum/device-type.json";
@@ -141,6 +147,13 @@ export const schemas = {
     fishState: enumFishState as JSONSchema7,
     fishType: enumFishType as JSONSchema7,
     aisShipTypes: enumAISShipTypes as JSONSchema7,
+    aisCallsign: enumAISCallsign as JSONSchema7,
+    aisDTE: enumAISDTE as JSONSchema7,
+    aisMeasurementType: enumAISMeasurementType as JSONSchema7,
+    aisSpecialManeuvre: enumAISSpecialManeuvre as JSONSchema7,
+    aisPositionDeviceType: enumAISPositionDeviceType as JSONSchema7,
+    aisPostionAccuracy: enumAISPositionAccuracy as JSONSchema7,
+
     gnssFixQuality: enumGnssFixQuality as JSONSchema7,
     gnssFixType: enumGnssFixType as JSONSchema7,
     measurementType: enumMeasurementType as JSONSchema7,
