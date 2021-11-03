@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/ais-measurement.json",
+  "title": "AIS Measurement value",
+  "description": "The value of a certain type of AIS measurement",
+  "properties": {
+    "type": {
+      "description": "The type of ais measurement",
+      "$ref": "https://poseidat.org/schema/enum/ais-measurement-type.json"
+    },
+    "position": {
+      "description": "A positional measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/position.json"
+    },
+    "numeric": {
+      "description": "A numerical measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
+    },
+    "ETA": {
+      "description": "Estimated time of arrival",
+      "type": "string",
+      "format": "date-time"
+    },
+    "destination": {
+      "description": "Destination of the vessel, Maximum 20 characters",
+      "type": "string",
+      "maxLength": 20
+    },
+    "special_maneuvre_indicator": {
+      "description": "Indicates whether an special maneuver is ongoing",
+      "$ref": "https://poseidat.org/schema/core/enum/ais-special-maneuvre.json",
+      "default": 0
+    },
+    "DTE": {
+      "description": "Data terminal equipment (DTE) ready",
+      "$ref": "https://poseidat.org/schema/core/enum/ais-DTE.json",
+      "default": 1
+    },
+    "position_accuracy": {
+      "description": "The accuracy of the given position",
+      "$ref": "https://poseidat.org/schema/core/enum/ais-position-accuracy.json",
+      "default": 0
+    }
+ },
+ "oneOf": [
+   { "required": [ "type", "numeric" ] },
+   { "required": [ "type", "DTE" ] },
+   { "required": [ "type", "destination" ] },
+   { "required": [ "type", "ETA" ] },
+   { "required": [ "type", "special_maneuvre_indicator" ] },
+   { "required": [ "type", "numeric" ] },
+   { "required": [ "type", "position", "position_accuracy"] }
+ ],
+  "type": "object",
+  "additionalProperties": false
+}

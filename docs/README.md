@@ -2,6 +2,14 @@
 
 ## Top-level Schemas
 
+*   [AIS callsign](./ais-callsign.md "The converted call sign given by an AIS measerement") – `https://poseidat.org/schema/enum/ais-callsign.json`
+
+*   [AIS entity](./ais-entity.md "An AIS ship with static related data") – `https://poseidat.org/schema/core/ais-entity.json`
+
+*   [AIS position device type](./ais-position-device-type.md "The converted type of the position device used on the AIS entity") – `https://poseidat.org/schema/enum/ais-position-device-type.json`
+
+*   [AIS ship type](./ais-ship-type.md "The converted names of the ais ship types") – `https://poseidat.org/schema/enum/ais-ship-type.json`
+
 *   [Address](./address.md "A street address") – `https://poseidat.org/schema/core/address.json`
 
 *   [Arrival](./arrival.md "A return to port event") – `https://poseidat.org/schema/entry/arrival.json`
@@ -83,6 +91,8 @@
 *   [Port](./port.md "Fishing port details") – `https://poseidat.org/schema/core/port.json`
 
 *   [Position](./position.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/position.json`
+
+*   [Position](./spatial-axes.md "The spatial axes for a given sensor") – `https://poseidat.org/schema/core/measurement/spatial-axes.json`
 
 *   [Reason arrival](./reason-arrival.md "The reason for the vessel to return to port") – `https://poseidat.org/schema/enum/reason-arrival.json`
 

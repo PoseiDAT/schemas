@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/ais-entity.json",
   "title": "AIS entity",
-  "description": "A vessel entity from the AIS",
+  "description": "An AIS ship with static relatedentity from the AIS",
   "properties": {
     "entity_id": {
       "description": "The unique MMSI number given by the AIS",
@@ -24,6 +24,11 @@
     "position_device_type": {
       "description": "Type of electronic position fixing device, defaults to 0 ('undefined (default)')",
       "$ref": "https://poseidat.org/schema/enum/ais-position-device-type.json",
+      "default": 0
+    },
+    "dimension_ship": {
+      "description": "Indicates the dimension of ship",
+      "type": "number",
       "default": 0
     }
   },
