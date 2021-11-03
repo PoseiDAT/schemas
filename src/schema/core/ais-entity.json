@@ -1,30 +1,34 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://poseidat.org/schema/entry/ais-entity.json",
+  "$id": "https://poseidat.org/schema/core/ais-entity.json",
   "title": "AIS entity",
-  "description": "Notification of intent to cease all fishing activity for the trip",
+  "description": "A vessel entity from the AIS",
   "properties": {
-    "entry_type": {
-      "description": "The journal entry type identifer",
-      "type": "string",
-      "enum": [
-        "fishing-activity"
-      ],
-      "default": "fishing-activity"
+    "entity_id": {
+      "description": "The unique MMSI number given by the AIS",
+      "type": "number"
     },
-    "trip": {
-      "description": "Trip related details for this entry",
-      "$ref": "https://poseidat.org/schema/core/trip-entry.json"
+    "call_sign": {
+      "description": "The call sign of the given AIS entity",
+      "type": "string"
     },
-    "tow": {
-      "description": "The fishing tow details",
-      "$ref": "https://poseidat.org/schema/core/fishing-tow.json"
+    "entity_name": {
+      "description": "The name of the AIS entity",
+      "type": "string"
+    },
+    "entity_type": {
+      "description": "The type of vessel given by the AIS, default is 0 ('Not available (default)')",
+      "$ref": "https://poseidat.org/schema/enum/ais-ship-type.json",
+      "default": 0
+    },
+    "position_device_type": {
+      "description": "Type of electronic position fixing device, defaults to 0 ('undefined (default)')",
+      "$ref": "https://poseidat.org/schema/enum/ais-position-device-type.json",
+      "default": 0
     }
   },
   "required": [
-    "entry_type",
-    "trip",
-    "tow"
+    "entity_id"
   ],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/base-entry.json" }

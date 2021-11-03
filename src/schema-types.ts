@@ -728,6 +728,21 @@ export interface IEntryZoneEnter extends ICoreBaseEntry {
 
 export type IEntryZoneExitEntryType = "zone-exit";
 /** Exit declaration of a fishing zone */
+
+export type IEntryAISMeasurementEntryType = "ais-measurement";
+/** TODO:
+ * In the case an AIS entity extends the base entry then an AIS entity would be only available to the journeal
+ * which collected this entry with his AIS.
+ *
+ * Maybe a journal is not needed and is this a collective dataset of collected AIS entities and measurements
+ * Since they share the same AIS identifier and are public available to the ones who can collect them
+ *
+ * For now I will keep it as an extention of the base entry, but maybe some brain food for the future
+ * */
+export interface IEntryAISEntity extends ICoreBaseEntry {
+  /** The ais measurement entry type identifer */ entry_type: IEntryAISMeasurementEntryType;
+}
+
 export interface IEntryZoneExit extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryZoneExitEntryType;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
@@ -739,13 +754,3 @@ export interface IEntryZoneExit extends ICoreBaseEntry {
   /** Indicates the vessel has engaged in trans-zonal fishing: GRB: GBRTRZ */ trans_zonal_fishing?: boolean;
   /** The zones involved in trans-zonal fishing. NLD: NLTRZ */ trans_zonal_fishing_zones?: ICoreFishingZone[];
 }
-
-export interface IEntryAISEntity extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryAISEntityEntryType;
-  /** The identifier for the ais entity */ entity_id: number;
-  /** The call sign of the ais entity */ call_sign?: string;
-  /** The name of the  */ entity_name?: string;
-  /** The name of the  */ entity_type?: number;
-}
-
-export type IEntryAISEntityEntryType = "ais-entity";
