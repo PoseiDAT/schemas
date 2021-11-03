@@ -4,7 +4,11 @@
 
 *   [AIS callsign](./ais-callsign.md "The converted call sign given by an AIS measerement") – `https://poseidat.org/schema/enum/ais-callsign.json`
 
-*   [AIS entity](./ais-entity.md "An AIS ship with static related data") – `https://poseidat.org/schema/core/ais-entity.json`
+*   [AIS entity](./ais-entity.md "An AIS ship with static relatedentity from the AIS") – `https://poseidat.org/schema/core/ais-entity.json`
+
+*   [AIS measurement type](./ais-measurement-type.md "The measurement types for the AIS") – `https://poseidat.org/schema/enum/ais-measurement-type.json`
+
+*   [AIS measurement value](./ais-measurement.md "The value of a certain type of AIS measurement") – `https://poseidat.org/schema/core/measurement/ais-measurement.json`
 
 *   [AIS position device type](./ais-position-device-type.md "The converted type of the position device used on the AIS entity") – `https://poseidat.org/schema/enum/ais-position-device-type.json`
 
@@ -19,6 +23,8 @@
 *   [Company](./company.md "The details of a (commercial) company") – `https://poseidat.org/schema/core/persona/company.json`
 
 *   [ContactDetails](./contact-details.md "Contact information for persona") – `https://poseidat.org/schema/core/contact-details.json`
+
+*   [DTE ready types](./ais-dte.md "Data terminal equipment (DTE) ready (0 = available, 1 = not available = default)") – `https://poseidat.org/schema/enum/ais-DTE.json`
 
 *   [Departure](./departure.md "A departure from port event") – `https://poseidat.org/schema/entry/departure.json`
 
@@ -92,7 +98,7 @@
 
 *   [Position](./position.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/position.json`
 
-*   [Position](./spatial-axes.md "The spatial axes for a given sensor") – `https://poseidat.org/schema/core/measurement/spatial-axes.json`
+*   [Position accuracy types](./ais-position-accuracy.md "Indicates the precision of a given position") – `https://poseidat.org/schema/enum/ais-position-accuracy.json`
 
 *   [Reason arrival](./reason-arrival.md "The reason for the vessel to return to port") – `https://poseidat.org/schema/enum/reason-arrival.json`
 
@@ -107,6 +113,10 @@
 *   [Scale](./scale.md "A scale measurement that can be used in an entry") – `https://poseidat.org/schema/core/measurement/scale.json`
 
 *   [Scale category](./scale-category.md "The types of supported product categories to weigh") – `https://poseidat.org/schema/enum/scale-category.json`
+
+*   [Spatial axes](./spatial-axes.md "The spatial axes for a given sensor") – `https://poseidat.org/schema/core/measurement/spatial-axes.json`
+
+*   [Special maneuvre indicator types](./ais-special-maneuvre.md "Indicates whether an special maneuver is ongoing") – `https://poseidat.org/schema/enum/ais-special-maneuvre.json`
 
 *   [Trawl tension](./trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json`
 

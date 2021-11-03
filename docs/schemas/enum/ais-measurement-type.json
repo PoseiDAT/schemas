@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://poseidat.org/schema/enum/ais-measurement-type.json","description":"The measurement types for the AIS","title":"AIS measurement type","type":"string","enum":["POSITION","DTE","ETA","DESTINATION","SOG","ROT","COG","TRUE_HEADING","SPECIAL_MANEUVRE_INDICATOR"]}

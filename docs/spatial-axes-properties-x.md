@@ -1,4 +1,4 @@
-# Untitled number in Position Schema
+# Untitled number in Spatial axes Schema
 
 ```txt
 https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/x

@@ -4,11 +4,11 @@
 https://poseidat.org/schema/core/ais-entity.json
 ```
 
-An AIS ship with static related data
+An AIS ship with static relatedentity from the AIS
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [ais-entity.json](schemas/core/ais-entity.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [ais-entity.json](schemas/core/ais-entity.json "open original schema") |
 
 ## AIS entity Type
 
@@ -27,7 +27,7 @@ all of
 | [entity_name](#entity_name)                   | `string` | Optional | cannot be null | [AIS entity](ais-entity-properties-entity_name.md "https://poseidat.org/schema/core/ais-entity.json#/properties/entity_name")                                     |
 | [entity_type](#entity_type)                   | `string` | Optional | cannot be null | [AIS entity](ais-entity-properties-ais-ship-type.md "https://poseidat.org/schema/enum/ais-ship-type.json#/properties/entity_type")                                |
 | [position_device_type](#position_device_type) | `string` | Optional | cannot be null | [AIS entity](ais-entity-properties-ais-position-device-type.md "https://poseidat.org/schema/enum/ais-position-device-type.json#/properties/position_device_type") |
-| Additional Properties                         | Any      | Optional | can be null    |                                                                                                                                                                   |
+| [dimension_ship](#dimension_ship)             | `number` | Optional | cannot be null | [AIS entity](ais-entity-properties-dimension_ship.md "https://poseidat.org/schema/core/ais-entity.json#/properties/dimension_ship")                               |
 
 ## entity_id
 
@@ -249,6 +249,20 @@ The converted type of the position device used on the AIS entity.
 | `"not used"`                     |             |
 | `"internal GNSS"`                |             |
 
-## Additional Properties
+## dimension_ship
 
-Additional properties are allowed and do not have to follow a specific schema
+Indicates the dimension of ship
+
+`dimension_ship`
+
+*   is optional
+
+*   Type: `number`
+
+*   cannot be null
+
+*   defined in: [AIS entity](ais-entity-properties-dimension_ship.md "https://poseidat.org/schema/core/ais-entity.json#/properties/dimension_ship")
+
+### dimension_ship Type
+
+`number`

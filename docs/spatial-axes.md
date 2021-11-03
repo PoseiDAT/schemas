@@ -1,4 +1,4 @@
-# Position Schema
+# Spatial axes Schema
 
 ```txt
 https://poseidat.org/schema/core/measurement/spatial-axes.json
@@ -10,17 +10,17 @@ The spatial axes for a given sensor
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [spatial-axes.json](schemas/core/measurement/spatial-axes.json "open original schema") |
 
-## Position Type
+## Spatial axes Type
 
-`object` ([Position](spatial-axes.md))
+`object` ([Spatial axes](spatial-axes.md))
 
-# Position Properties
+# Spatial axes Properties
 
-| Property | Type     | Required | Nullable       | Defined by                                                                                                              |
-| :------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| [x](#x)  | `number` | Required | cannot be null | [Position](spatial-axes-properties-x.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/x") |
-| [y](#y)  | `number` | Required | cannot be null | [Position](spatial-axes-properties-y.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/y") |
-| [z](#z)  | `number` | Required | cannot be null | [Position](spatial-axes-properties-z.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/z") |
+| Property | Type     | Required | Nullable       | Defined by                                                                                                                  |
+| :------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| [x](#x)  | `number` | Required | cannot be null | [Spatial axes](spatial-axes-properties-x.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/x") |
+| [y](#y)  | `number` | Required | cannot be null | [Spatial axes](spatial-axes-properties-y.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/y") |
+| [z](#z)  | `number` | Required | cannot be null | [Spatial axes](spatial-axes-properties-z.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/z") |
 
 ## x
 
@@ -34,7 +34,7 @@ The easting coordinate range
 
 *   cannot be null
 
-*   defined in: [Position](spatial-axes-properties-x.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/x")
+*   defined in: [Spatial axes](spatial-axes-properties-x.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/x")
 
 ### x Type
 
@@ -52,7 +52,7 @@ The northing coordinate range
 
 *   cannot be null
 
-*   defined in: [Position](spatial-axes-properties-y.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/y")
+*   defined in: [Spatial axes](spatial-axes-properties-y.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/y")
 
 ### y Type
 
@@ -70,7 +70,7 @@ The elevation of the coordinate range
 
 *   cannot be null
 
-*   defined in: [Position](spatial-axes-properties-z.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/z")
+*   defined in: [Spatial axes](spatial-axes-properties-z.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/z")
 
 ### z Type
 
