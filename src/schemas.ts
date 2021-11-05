@@ -22,6 +22,7 @@ import * as baseFishingGear from "./schema/core/fishing-gear.json";
 import * as baseFishingTow from "./schema/core/fishing-tow.json";
 import * as baseFishingZone from "./schema/core/fishing-zone.json";
 import * as baseJournal from "./schema/core/journal.json";
+import * as baseAISMeaserement from "./schema/core/measurement/ais-measurement.json";
 import * as baseFuelConsumption from "./schema/core/measurement/fuel-consumption.json";
 import * as baseMeasurementValue from "./schema/core/measurement/measurement-value.json";
 import * as baseNumeric from "./schema/core/measurement/numeric.json";
@@ -48,9 +49,9 @@ import * as entryFishingActivity from "./schema/entry/fishing-activity.json";
 import * as entryRoute from "./schema/entry/route.json";
 import * as entryZoneEnter from "./schema/entry/zone-enter.json";
 import * as entryZoneExit from "./schema/entry/zone-exit.json";
-import * as enumAISCallsign from "./schema/enum/ais-callsign.json";
 import * as enumAISDTE from "./schema/enum/ais-DTE.json";
 import * as enumAISMeasurementType from "./schema/enum/ais-measurement-type.json";
+import * as enumAISNavStatus from "./schema/enum/ais-nav-status.json";
 import * as enumAISPositionAccuracy from "./schema/enum/ais-position-accuracy.json";
 import * as enumAISPositionDeviceType from "./schema/enum/ais-position-device-type.json";
 import * as enumAISShipTypes from "./schema/enum/ais-ship-type.json";
@@ -91,6 +92,7 @@ export const schemas = {
       position: basePosition as JSONSchema7,
       trawlTension: baseTrawlTension as JSONSchema7,
       scale: baseScale as JSONSchema7,
+      aisMeaserement: baseAISMeaserement as JSONSchema7,
     },
     persona: {
       company: baseCompany as JSONSchema7,
@@ -147,7 +149,7 @@ export const schemas = {
     fishState: enumFishState as JSONSchema7,
     fishType: enumFishType as JSONSchema7,
     aisShipTypes: enumAISShipTypes as JSONSchema7,
-    aisCallsign: enumAISCallsign as JSONSchema7,
+    aisNavStatus: enumAISNavStatus as JSONSchema7,
     aisDTE: enumAISDTE as JSONSchema7,
     aisMeasurementType: enumAISMeasurementType as JSONSchema7,
     aisSpecialManeuvre: enumAISSpecialManeuvre as JSONSchema7,

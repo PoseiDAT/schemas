@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://poseidat.org/schema/enum/ais-callsign.json",
-  "description": "The converted call sign given by an AIS measerement.",
-  "title": "AIS callsign",
+  "$id": "https://poseidat.org/schema/enum/ais-nav-status.json",
+  "description": "The converted nav status given by an AIS measerement.",
+  "title": "AIS navigation status",
   "type": "string",
   "enum": [
      "Under way using engine",

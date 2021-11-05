@@ -16,7 +16,7 @@ An entry detailing the equipment installed on a vessel. One 1 should exist per j
 
 all of
 
-*   [Base entry](arrival-allof-base-entry.md "check type definition")
+*   [Base entry](ais-entity-allof-base-entry.md "check type definition")
 
 # Equipment inventory Properties
 

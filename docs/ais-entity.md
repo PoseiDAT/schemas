@@ -6,9 +6,9 @@ https://poseidat.org/schema/core/ais-entity.json
 
 An AIS ship with static relatedentity from the AIS
 
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
-| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [ais-entity.json](schemas/core/ais-entity.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                              |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :---------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [ais-entity.json](schemas/entry/ais-entity.json "open original schema") |
 
 ## AIS entity Type
 
@@ -16,7 +16,7 @@ An AIS ship with static relatedentity from the AIS
 
 all of
 
-*   [Base entry](arrival-allof-base-entry.md "check type definition")
+*   [Base entry](ais-entity-allof-base-entry.md "check type definition")
 
 # AIS entity Properties
 

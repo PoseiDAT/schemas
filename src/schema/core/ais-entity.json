@@ -10,11 +10,24 @@
     },
     "call_sign": {
       "description": "The call sign of the given AIS entity",
-      "type": "string"
+      "type": "string",
+      "default": "@@@@@@@"
     },
     "entity_name": {
       "description": "The name of the AIS entity",
-      "type": "string"
+      "type": "string",
+      "maximum": 20,
+      "default": "@@@@@@@@@@@@@@@@@@@@"
+    },
+    "IMO_number": {
+      "description": "The International Maritime Organization (IMO) number is a unique identifier for ships",
+      "type": "number",
+      "default": 0
+    },
+    "maximum_draught": {
+      "description": "Maximum present static draught in meters",
+      "type": "number",
+      "default": 0
     },
     "entity_type": {
       "description": "The type of vessel given by the AIS, default is 0 ('Not available (default)')",

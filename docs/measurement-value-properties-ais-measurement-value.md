@@ -1,18 +1,18 @@
 # AIS measurement value Schema
 
 ```txt
-https://poseidat.org/schema/core/measurement/ais-measurement.json
+https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/ais
 ```
 
 The value of a certain type of AIS measurement
 
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                   |
-| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [ais-measurement.json](schemas/core/measurement/ais-measurement.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                        |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------------------------ |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [measurement-value.json*](schemas/core/measurement/measurement-value.json "open original schema") |
 
-## AIS measurement value Type
+## ais Type
 
-`object` ([AIS measurement value](ais-measurement.md))
+`object` ([AIS measurement value](measurement-value-properties-ais-measurement-value.md))
 
 one (and only one) of
 
@@ -30,7 +30,7 @@ one (and only one) of
 
 *   [Untitled undefined type in AIS measurement value](ais-measurement-oneof-6.md "check type definition")
 
-# AIS measurement value Properties
+# ais Properties
 
 | Property                                                  | Type          | Required | Nullable       | Defined by                                                                                                                                                                                  |
 | :-------------------------------------------------------- | :------------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

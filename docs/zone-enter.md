@@ -16,7 +16,7 @@ Enter declaration of a fishing zone
 
 all of
 
-*   [Base entry](arrival-allof-base-entry.md "check type definition")
+*   [Base entry](ais-entity-allof-base-entry.md "check type definition")
 
 # ZoneEnter Properties
 

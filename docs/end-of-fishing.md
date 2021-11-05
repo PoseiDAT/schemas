@@ -16,7 +16,7 @@ Notification of intent to cease all fishing activity for the trip
 
 all of
 
-*   [Base entry](arrival-allof-base-entry.md "check type definition")
+*   [Base entry](ais-entity-allof-base-entry.md "check type definition")
 
 # End of fishing activity Properties
 
