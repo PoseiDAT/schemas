@@ -48,6 +48,58 @@ describe("DeviceMeasurementEntry", () => {
     expect(validationErrors[5].schemaPath).toEqual("#/required");
   });
 
+  /**
+   * TODO: i want to write more tests for the ais, but need to find a way to bind required properties
+   * to a certain message_type value
+   *
+   * Example schema code of how i wanted it to work:
+    "oneOf": [
+      {
+        "if": {
+          "properties": {
+            "message_type": {
+              "oneOf": [
+                { "const": 1},
+                { "const": 2},
+                { "const": 3}
+              ]
+            }
+          }
+        },
+        "then": {
+          "required": ["position", "RAIM_flag","COG","true_heading", "special_maneuvre_indicator",
+            "position_accuracy","ROT", "SOG", "timestamp"]
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "message_type": {
+              "oneOf": [
+                { "const": 4},
+                { "const": 11}
+              ]
+            }
+          }
+        },
+        "then": {
+          "required": ["position", "position_accuracy", "position_device_type","timestamp",  "RAIM_flag", "SOTDMA_communication_state"]
+        }
+      }
+
+      ...... etc.
+    ]
+
+    But this code does not work with json schemas so need to find something.
+    Maybe a way to do this is just to handle it in tests instead of json schemas.
+    Or write a different schema for each message_type, but this would make a lot of duplicate properties
+    in the total docs
+
+    Further my tests fail because it says 'can't resolve reference https://poseidat.org/schema/enum/ais/ais-message-type.json'
+    But I think the reason is that jest cant find my schemas since they arent yet on the live version.
+    So I think i cant test those until they are live
+   */
+
   test("Validating a AIS DeviceMeasurementEntry with supported message type should succeed", () => {
     const data: IEntryDeviceMeasurement = {
       journal_id: v4(),
