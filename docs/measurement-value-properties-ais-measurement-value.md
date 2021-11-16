@@ -19,8 +19,8 @@ The value of a certain type of AIS measurement
 | Property                                                  | Type     | Required | Nullable       | Defined by                                                                                                                                                                                        |
 | :-------------------------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [entity_id](#entity_id)                                   | `number` | Required | cannot be null | [AIS measurement value](ais-measurement-properties-entity_id.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/entity_id")                                        |
-| [message_type](#message_type)                             | `string` | Required | cannot be null | [AIS measurement value](ais-measurement-properties-ais-message-types.md "http://localhost:3000/schema/enum/ais/ais-message-type.json#/properties/message_type")                                   |
-| [requested_message_type](#requested_message_type)         | `string` | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-ais-message-types-1.md "http://localhost:3000/schema/enum/ais/ais-message-type.json#/properties/requested_message_type")                       |
+| [message_type](#message_type)                             | `string` | Required | cannot be null | [AIS measurement value](ais-measurement-properties-ais-message-types.md "https://poseidat.org/schema/enum/ais/ais-message-type.json#/properties/message_type")                                    |
+| [requested_message_type](#requested_message_type)         | `string` | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-ais-message-types-1.md "https://poseidat.org/schema/enum/ais/ais-message-type.json#/properties/requested_message_type")                        |
 | [nav_status](#nav_status)                                 | `string` | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-ais-navigation-status.md "https://poseidat.org/schema/enum/ais/ais-nav-status.json#/properties/nav_status")                                    |
 | [position_device_type](#position_device_type)             | `string` | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-ais-position-device-type.md "https://poseidat.org/schema/enum/ais/ais-position-device-type.json#/properties/position_device_type")             |
 | [repeat_indicator](#repeat_indicator)                     | `number` | Required | cannot be null | [AIS measurement value](ais-measurement-properties-repeat_indicator.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/repeat_indicator")                          |
@@ -59,7 +59,7 @@ The value of a certain type of AIS measurement
 
 ## entity_id
 
-The mmsi identifier (ais entity )this value is related to
+The mmsi identifier (ais entity) this value is related to
 
 `entity_id`
 
@@ -87,7 +87,7 @@ The available message types for an ais measurement, starts at 1
 
 *   cannot be null
 
-*   defined in: [AIS measurement value](ais-measurement-properties-ais-message-types-1.md "http://localhost:3000/schema/enum/ais/ais-message-type.json#/properties/message_type")
+*   defined in: [AIS measurement value](ais-measurement-properties-ais-message-types-1.md "https://poseidat.org/schema/enum/ais/ais-message-type.json#/properties/message_type")
 
 ### message_type Type
 
@@ -140,7 +140,7 @@ The available message types for an ais measurement, starts at 1
 
 *   cannot be null
 
-*   defined in: [AIS measurement value](ais-measurement-properties-ais-message-types-1.md "http://localhost:3000/schema/enum/ais/ais-message-type.json#/properties/requested_message_type")
+*   defined in: [AIS measurement value](ais-measurement-properties-ais-message-types-1.md "https://poseidat.org/schema/enum/ais/ais-message-type.json#/properties/requested_message_type")
 
 ### requested_message_type Type
 
@@ -539,7 +539,7 @@ The default value is:
 
 ## SOTDMA_communication_state
 
-Degrees (0-359) (511 indicates not available = default)
+The sotdma communication state
 
 `SOTDMA_communication_state`
 
@@ -554,14 +554,6 @@ Degrees (0-359) (511 indicates not available = default)
 ### SOTDMA_communication_state Type
 
 `number`
-
-### SOTDMA_communication_state Default Value
-
-The default value is:
-
-```json
-511
-```
 
 ## RAIM_flag
 

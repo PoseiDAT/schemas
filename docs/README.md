@@ -12,7 +12,7 @@
 
 *   [AIS measurement value](./ais-measurement.md "The value of a certain type of AIS measurement") – `https://poseidat.org/schema/core/measurement/ais-measurement.json`
 
-*   [AIS message types](./ais-message-type.md "The available message types for an ais measurement, starts at 1") – `http://localhost:3000/schema/enum/ais/ais-message-type.json`
+*   [AIS message types](./ais-message-type.md "The available message types for an ais measurement, starts at 1") – `https://poseidat.org/schema/enum/ais/ais-message-type.json`
 
 *   [AIS navigation status](./ais-nav-status.md "The converted nav status given by an AIS measerement") – `https://poseidat.org/schema/enum/ais/ais-nav-status.json`
 

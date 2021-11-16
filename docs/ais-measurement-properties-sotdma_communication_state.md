@@ -4,7 +4,7 @@
 https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/SOTDMA_communication_state
 ```
 
-Degrees (0-359) (511 indicates not available = default)
+The sotdma communication state
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                    |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :-------------------------------------------------------------------------------------------- |
@@ -13,11 +13,3 @@ Degrees (0-359) (511 indicates not available = default)
 ## SOTDMA_communication_state Type
 
 `number`
-
-## SOTDMA_communication_state Default Value
-
-The default value is:
-
-```json
-511
-```

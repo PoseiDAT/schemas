@@ -1,7 +1,7 @@
 # AIS message types Schema
 
 ```txt
-http://localhost:3000/schema/enum/ais/ais-message-type.json
+https://poseidat.org/schema/enum/ais/ais-message-type.json
 ```
 
 The available message types for an ais measurement, starts at 1
