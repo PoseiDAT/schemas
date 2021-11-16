@@ -8,6 +8,27 @@ export interface ICoreAddress {
   /** The country */ country: string;
 }
 
+/** AIS DGNSS data send with an AIS message */
+export interface ICoreAisDgnssData {
+  /** Time value in 0.6 s (0-3 599.4) */ z_count?: number;
+  /** Message sequence number (cyclic 0-7) */ sequence_number?: number;
+  /** The number of words in the GNSS data message */ number_of_words?: number;
+  /** The station health */ health?: number;
+  /** DGNSS message data words excluding parity */ DGNSS_data?: string;
+}
+
+/** An AIS ship with static relatedentity from the AIS */
+export interface ICoreAisEntity extends ICoreBaseEntry {
+  /** The unique MMSI number given by the AIS */ entity_id: number;
+  /** The call sign of the given AIS entity */ call_sign?: string;
+  /** The name of the AIS entity */ entity_name?: string;
+  /** The International Maritime Organization (IMO) number is a unique identifier for ships */ IMO_number?: number;
+  /** Maximum present static draught in meters */ maximum_draught?: number;
+  /** The type of vessel given by the AIS, default is 0 ('Not available (default)') */ entity_type?: IAisAisShipType;
+  /** Type of electronic position fixing device, defaults to 0 ('undefined (default)') */ position_device_type?: IAisAisPositionDeviceType;
+  /** Indicates the dimension of ship */ dimension_ship?: number;
+}
+
 /** The shared properties for all entries */
 export interface ICoreBaseEntry {
   /** The unique identifier of the journal (UUID v4) this entry belongs to */ journal_id: string;
@@ -23,17 +44,6 @@ export interface ICoreBaseEntry {
 export interface ICoreContactDetails {
   /** The phone number of the contact */ phone?: string;
   /** The email address of the contact */ email?: string;
-}
-
-/** Details of caught fish after it has been processed */
-export interface ICoreFishingCatchProcessed {
-  /** The fish presentation code. Known as PR. Examples: WHL, GUT, FIL */ fish_presentation: IEnumFishPresentation;
-  /** The fish preservation state. NLD: PS. Examples: FRO, ALI, SMO. */ fish_state: IEnumFishState;
-  /** The package type code. NLD: TY */ package_type?: IEnumFishPackageType;
-  /** The number of packages. NLD: NN */ number_of_packages?: number;
-  /** Average product weight, measured in Kg. NLD: AW */ average_package_weight?: number;
-  /** The fish freshness category. NLD: FF. Examples: A, E, V */ fish_freshness?: IEnumFishFreshness;
-  /** The conversion factor (ratio) from dead weight to live weight. Depends on combination of fish species, presentation and state. NLD: CF */ conversion_factor?: number;
 }
 
 export type ICoreFishingCatchMeansOfMeasuring = "EST" | "WGH";
@@ -52,6 +62,25 @@ export interface ICoreFishingCatch {
   /** The weighed or measured weight. Type depends on means_of_measuring value. NLD3.3: MM */ measured_weight?: string;
   /** Fish size category (1-8; one size or kg, g, cm, mm or number of fish per kg as appropriate). NLD3.3: SF */ fish_size?: string;
   /** Details of the fish after processing. NL: NLPRO, GBR: PRO (also contains SPE) */ processed?: ICoreFishingCatchProcessed;
+}
+
+/** Details of caught fish after it has been processed */
+export interface ICoreFishingCatchProcessed {
+  /** The fish presentation code. Known as PR. Examples: WHL, GUT, FIL */ fish_presentation: IEnumFishPresentation;
+  /** The fish preservation state. NLD: PS. Examples: FRO, ALI, SMO. */ fish_state: IEnumFishState;
+  /** The package type code. NLD: TY */ package_type?: IEnumFishPackageType;
+  /** The number of packages. NLD: NN */ number_of_packages?: number;
+  /** Average product weight, measured in Kg. NLD: AW */ average_package_weight?: number;
+  /** The fish freshness category. NLD: FF. Examples: A, E, V */ fish_freshness?: IEnumFishFreshness;
+  /** The conversion factor (ratio) from dead weight to live weight. Depends on combination of fish species, presentation and state. NLD: CF */ conversion_factor?: number;
+}
+
+/** Fishing gear details */
+export interface ICoreFishingGear {
+  /** Gear code corresponding to the FAO’s International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE */ code: IEnumFishingGearType;
+  /** The fishing gear mesh size measured in millimeters. NLD: ME, GBR: ME */ mesh_size?: number;
+  /** The number of fishing gear items. NLD: NN, GBR: GBRGNL */ amount?: number;
+  /** The total length of the fishing gear in meters. NLD: TL, GBR: GBRGNT */ length?: number;
 }
 
 /** Fishing gear deployment details */
@@ -103,14 +132,6 @@ export interface ICoreFishingGearShot {
   /** The geographical location where the gear shot took place */ location: IMeasurementPosition;
   /** The identification tag attached to the retrieved gear. NLD: NI, GBR: GBRGNFN */ identifier?: string;
   /** Indicator of where zone fishing will be commencing. Data recorded in accordance with Norwegian requirements. Known as GBRZO */ country_zones?: string;
-}
-
-/** Fishing gear details */
-export interface ICoreFishingGear {
-  /** Gear code corresponding to the FAO’s International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE */ code: IEnumFishingGearType;
-  /** The fishing gear mesh size measured in millimeters. NLD: ME, GBR: ME */ mesh_size?: number;
-  /** The number of fishing gear items. NLD: NN, GBR: GBRGNL */ amount?: number;
-  /** The total length of the fishing gear in meters. NLD: TL, GBR: GBRGNT */ length?: number;
 }
 
 /** Fishing tow details */
@@ -183,6 +204,24 @@ export interface ICoreTripEntry {
   /** The geographical location where the entry was created (for) */ location?: IMeasurementPosition;
 }
 
+/** The vessel information */
+export interface ICoreVessel {
+  /** The display name for the vessel */ name: string;
+  /** The vessels flag state and country to report ERS messages to. Should be a 3 letter ISO code. */ flag_state: string;
+  /** The vessel's Community Fleet Registration number. Fixed format defined by the pattern: "AAAXXXXXXXXX" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.). Known as CFR or IR */ cfr: string;
+  /** The vessels international radio call sign (RC) */ call_sign?: string;
+  /** The vessel's side (hull) registration number. Also known as XR or PLN. May contain dots or dashes */ hull_number: string;
+  /** GBR ONLY: The vessel's unique identity number as recorded by the UK Registrar of Seamen and Shipping */ gbr_rss?: string;
+  /** International Commission for the Conservation of Atlantic Tuna identifier */ iccat?: string;
+  /** Global Fisheries Council of the Mediterranean identifier */ gfcm?: string;
+  /** Unique Vessel Identifier (IMO number). A number issued by the tuna RFMOs or by ISSF. */ uvi?: string;
+  /** The unique identification of a vessel according to Lloyds register */ imo_code?: string;
+  /** The net loading capacity of the vessel, expressed in tons */ net_tonnage?: number;
+  /** The gross loading capacity of the vessel, expressed in tons */ gross_tonnage?: number;
+  /** The date the vessel was registered */ registration_date?: string;
+  /** The full length of the vessel in meters */ full_length?: number;
+}
+
 /** Vessel inspection details */
 export interface ICoreVesselInspection {
   /** The datetime the inspection took place */ date: string;
@@ -220,24 +259,6 @@ export interface ICoreVesselSection {
   /** The z position in cm, the position which is closest to the keel is 0cm */ pos_z?: number;
 }
 
-/** The vessel information */
-export interface ICoreVessel {
-  /** The display name for the vessel */ name: string;
-  /** The vessels flag state and country to report ERS messages to. Should be a 3 letter ISO code. */ flag_state: string;
-  /** The vessel's Community Fleet Registration number. Fixed format defined by the pattern: "AAAXXXXXXXXX" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.). Known as CFR or IR */ cfr: string;
-  /** The vessels international radio call sign (RC) */ call_sign?: string;
-  /** The vessel's side (hull) registration number. Also known as XR or PLN. May contain dots or dashes */ hull_number: string;
-  /** GBR ONLY: The vessel's unique identity number as recorded by the UK Registrar of Seamen and Shipping */ gbr_rss?: string;
-  /** International Commission for the Conservation of Atlantic Tuna identifier */ iccat?: string;
-  /** Global Fisheries Council of the Mediterranean identifier */ gfcm?: string;
-  /** Unique Vessel Identifier (IMO number). A number issued by the tuna RFMOs or by ISSF. */ uvi?: string;
-  /** The unique identification of a vessel according to Lloyds register */ imo_code?: string;
-  /** The net loading capacity of the vessel, expressed in tons */ net_tonnage?: number;
-  /** The gross loading capacity of the vessel, expressed in tons */ gross_tonnage?: number;
-  /** The date the vessel was registered */ registration_date?: string;
-  /** The full length of the vessel in meters */ full_length?: number;
-}
-
 /** A device which is a part of a piece of equipment installed on a vessel */
 export interface IEquipmentDevice {
   /** The unique identifier for the device (UUID v4) */ device_id: string;
@@ -262,6 +283,48 @@ export interface IEquipmentEquipment {
   /** The collection of devices of which this equipment is composed */ devices: IEquipmentDevice[];
 }
 
+/** The value of a certain type of AIS measurement */
+export interface IMeasurementAisMeasurement {
+  /** The mmsi identifier (ais entity) this value is related to */ entity_id: number;
+  /** the message type of the given AIS measurement */ message_type: IAisAisMessageType;
+  /** the requested message type used in message type 15 (interrogation); Can request up to two message types from two stations */ requested_message_type?: any[];
+  /** The status of navigation */ nav_status?: IAisAisNavStatus;
+  /** The type of navigation device */ position_device_type?: IAisAisPositionDeviceType;
+  /** The amount of times the message has been repeated (3 is do not repeat anymore) */ repeat_indicator: number;
+  /** The call sign of the given AIS entity, '@@@@@@@' is default */ callsign?: string;
+  /** The name of the AIS entity */ entity_name?: string;
+  /** The type of vessel given by the AIS, default is 0 ('Not available (default)') */ entity_type?: IAisAisShipType;
+  /** Indicates the dimension of ship */ ship_dimension?: number;
+  /** UTC timestamp in seconds of the ais message */ timestamp?: number;
+  /** The Speed over ground of the ship */ SOG?: number;
+  /** The Rate Of Turn of the ship in degrees, minus = turning left; plus = turning right; (128  no turn information available (default)) */ ROT?: number;
+  /** Degrees (0-359) (511 indicates not available = default) */ true_heading?: number;
+  /** The sotdma communication state */ SOTDMA_communication_state?: number;
+  /** Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device */ RAIM_flag?: IAisAisRaimFlag;
+  /** A positional measurement */ position?: IMeasurementPosition;
+  /** The accuracy of the given position */ position_accuracy?: IAisAisPositionAccuracy;
+  /** A numerical measurement */ binary_data?: IMeasurementNumeric;
+  /** A numerical measurement */ binary_data_array?: any[];
+  /** Estimated time of arrival */ ETA?: string;
+  /** The International Maritime Organization (IMO) number is a unique identifier for ships */ IMO_number?: number;
+  /** Maximum present static draught in meters */ maximum_draught?: number;
+  /** Altitude (derived from GNSS or barometric (see altitude sensor parameter below)) (m) (0-4 094 m) 4 095 = not available */ altitude?: number;
+  /** Destination of the vessel, Maximum 20 characters */ destination?: string;
+  /** Indicates whether an special maneuver is ongoing */ special_maneuvre_indicator?: IAisAisSpecialManeuvre;
+  /** Data terminal equipment (DTE) ready */ DTE?: IAisAisDte;
+  /** The course over ground (COG) of the vessel 0-3599 */ COG?: number;
+  /** Transmission control for long-range broadcast message */ control_long_range_message?: IAisAisControlLongRange;
+  /** The type of altitude sensore used on the ship */ altitude_sensor?: IAisAisAltitudeSensorType;
+  /** State of station if it is operating in autonomous or assigned mode */ assigned_mode_flag?: IAisAisAssignedModeFlag;
+  /** Communication state selector flag */ communication_state?: string;
+  /** The MMSI number where the ship is sending data to. */ destination_id?: number;
+  /** The MMSI numbers where the ship is sending data to. */ multiple_destination_id?: number[];
+  /** The addressed safety related message send by the ship */ safety_related_text?: string;
+  /** The DGNSS data object send in the AIS message type 17 */ DGNSS_data?: ICoreAisDgnssData;
+  AtoN_status?: string;
+  /** Name of the Aid to navigation extension */ aid_navigation_extension?: string;
+}
+
 /** Fuel consumption of a certain engine. */
 export interface IMeasurementFuelConsumption {
   /** The current fuel consumption in liters per hour */ current_consumption: number;
@@ -279,6 +342,7 @@ export interface IMeasurementMeasurementValue {
   /** A trawl tension measurement */ trawl_tension?: IMeasurementTrawlTension;
   /** A scale measurement */ scale?: IMeasurementScale;
   /** A fuel consumption measurement */ fuel_consumption?: IMeasurementFuelConsumption;
+  /** A AIS measurement */ ais?: IMeasurementAisMeasurement;
 }
 
 /** A number representing a measurement from a sensor */
@@ -310,6 +374,13 @@ export interface IMeasurementScale {
   /** The type of the product, e.g. a type of fish */ product: string;
 }
 
+/** The spatial axes for a given sensor */
+export interface IMeasurementSpatialAxes {
+  /** The easting coordinate range */ x: number;
+  /** The northing coordinate range */ y: number;
+  /** The elevation of the coordinate range */ z: number;
+}
+
 /** A combination of sensor measurements for the trawl tension */
 export interface IMeasurementTrawlTension {
   /** The shooted length at starboard side */ shooted_length_starboard: number;
@@ -337,317 +408,65 @@ export interface IPersonaCompany {
   /** The contact details of the company */ contact?: ICoreContactDetails;
 }
 
-export type IEnumDeviceType =
-  | "PUMP"
-  | "PROCESSOR"
-  | "DISPLAY"
-  | "HID"
-  | "ROUTER"
-  | "SWITCH"
-  | "MODEM"
-  | "SENSOR"
-  | "BRAKE"
-  | "ACTUATOR"
-  | "CABLE"
-  | "ENCLOSURE"
-  | "CIRCUIT_BREAKER"
-  | "ECONOMETER"
-  | "SCALE"
-  | "RECEIVER"
-  | "TRANSMITTER"
-  | "TRANSCEIVER";
+export type IEnumDeviceType = "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER" | "ECONOMETER" | "SCALE" | "RECEIVER" | "TRANSMITTER" | "TRANSCEIVER";
 
-export type IEnumEffortZone =
-  | "A"
-  | "B"
-  | "C"
-  | "D"
-  | "E"
-  | "F"
-  | "G"
-  | "H"
-  | "J"
-  | "K"
-  | "L"
-  | "M"
-  | "N"
-  | "O"
-  | "P"
-  | "Q"
-  | "R"
-  | "S"
-  | "T"
-  | "U"
-  | "V"
-  | "W"
-  | "X"
-  | "Y";
+export type IEnumEffortZone = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y";
 
-export type IEnumEquipmentType =
-  | "ENGINE"
-  | "GNSS"
-  | "ECHO_SOUNDER"
-  | "FISH_FINDER"
-  | "AIS"
-  | "TANK_LEVEL_METER"
-  | "TENSIOMETER"
-  | "CHARGER"
-  | "SEPARATOR"
-  | "COMPASS"
-  | "V_SAT"
-  | "REFRIGERATOR"
-  | "ICE_MAKER"
-  | "WINCH"
-  | "RUDDER"
-  | "PROPELLER"
-  | "PUMP"
-  | "SENSOR"
-  | "SCALE"
-  | "ECDIS"
-  | "ECS";
+export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR" | "SCALE" | "ECDIS" | "ECS";
 
 export type IEnumFishFreshness = "A" | "B" | "E" | "SO" | "V";
 
-export type IEnumFishPackageType =
-  | "CNT"
-  | "EC"
-  | "OK"
-  | "QS"
-  | "CN"
-  | "CT"
-  | "VO"
-  | "4H"
-  | "BX"
-  | "5H"
-  | "QR"
-  | "TB"
-  | "NF"
-  | "NG"
-  | "ZB";
+export type IEnumFishingGearType = "DRB" | "FIX" | "FPO" | "GEN" | "GN" | "GNC" | "GND" | "GNF" | "GNS" | "GTN" | "GTR" | "HMD" | "KRK" | "LA" | "LHM" | "LHP" | "LL" | "LLD" | "LLS" | "LTL" | "LX" | "MIS" | "NK" | "OTB" | "OTM" | "OTT" | "PS" | "PS1" | "PS2" | "PTB" | "PTM" | "PUL" | "RG" | "SDN" | "SPR" | "SSC" | "SV" | "SX" | "TB" | "TBB" | "TBN" | "TBS";
 
-export type IEnumFishPresentation =
-  | "BMS"
-  | "CBF"
-  | "CLA"
-  | "DWT"
-  | "FIL"
-  | "FIS"
-  | "FSB"
-  | "FSP"
-  | "GHT"
-  | "GTA"
-  | "GTF"
-  | "GUG"
-  | "GUH"
-  | "GUL"
-  | "GUS"
-  | "GUT"
-  | "HEA"
-  | "HET"
-  | "JAP"
-  | "JAT"
-  | "LAP"
-  | "LVR-C"
-  | "LVR"
-  | "OTH"
-  | "ROE-C"
-  | "ROE"
-  | "SAD"
-  | "SAL"
-  | "SGH"
-  | "SGT"
-  | "SKI"
-  | "SUR"
-  | "TAL"
-  | "TLD"
-  | "TNG-C"
-  | "TNG"
-  | "TUB"
-  | "WHL"
-  | "WNG"
-  | "WNG+SKI";
+export type IEnumFishPackageType = "CNT" | "EC" | "OK" | "QS" | "CN" | "CT" | "VO" | "4H" | "BX" | "5H" | "QR" | "TB" | "NF" | "NG" | "ZB";
 
-export type IEnumFishState =
-  | "ALI"
-  | "BOI"
-  | "DRI"
-  | "FRE"
-  | "FRO"
-  | "SAL"
-  | "SMO";
+export type IEnumFishPresentation = "BMS" | "CBF" | "CLA" | "DWT" | "FIL" | "FIS" | "FSB" | "FSP" | "GHT" | "GTA" | "GTF" | "GUG" | "GUH" | "GUL" | "GUS" | "GUT" | "HEA" | "HET" | "JAP" | "JAT" | "LAP" | "LVR-C" | "LVR" | "OTH" | "ROE-C" | "ROE" | "SAD" | "SAL" | "SGH" | "SGT" | "SKI" | "SUR" | "TAL" | "TLD" | "TNG-C" | "TNG" | "TUB" | "WHL" | "WNG" | "WNG+SKI";
 
-export type IEnumFishType =
-  | "ANF"
-  | "BLL"
-  | "BIB"
-  | "COD"
-  | "CRE"
-  | "DAB"
-  | "GUU"
-  | "HAD"
-  | "HKE"
-  | "JOD"
-  | "LEM"
-  | "LEZ"
-  | "LIN"
-  | "MUR"
-  | "OCZ"
-  | "PLE"
-  | "RJH"
-  | "RJI"
-  | "RJM"
-  | "RSC"
-  | "SCE"
-  | "SOL"
-  | "SYC"
-  | "SYT"
-  | "TUR"
-  | "WHE"
-  | "MAC"
-  | "WIT"
-  | "OCT"
-  | "POL"
-  | "CTC"
-  | "SOX"
-  | "SQU"
-  | "COE"
-  | "BSS"
-  | "CAA"
-  | "CRA"
-  | "FLE"
-  | "POK"
-  | "RJC"
-  | "RJN"
-  | "WEG"
-  | "NEP"
-  | "IJS"
-  | "WHG"
-  | "RJB"
-  | "SBR"
-  | "SKH"
-  | "SMD"
-  | "SRX"
-  | "TSD"
-  | "WEX"
-  | "GAG"
-  | "GUG"
-  | "GUR"
-  | "HAL"
-  | "LBE"
-  | "LYY"
-  | "MUL"
-  | "OCC"
-  | "PIL"
-  | "BRB"
-  | "REG";
+export type IEnumFishState = "ALI" | "BOI" | "DRI" | "FRE" | "FRO" | "SAL" | "SMO";
 
-export type IEnumFishingGearType =
-  | "DRB"
-  | "FIX"
-  | "FPO"
-  | "GEN"
-  | "GN"
-  | "GNC"
-  | "GND"
-  | "GNF"
-  | "GNS"
-  | "GTN"
-  | "GTR"
-  | "HMD"
-  | "KRK"
-  | "LA"
-  | "LHM"
-  | "LHP"
-  | "LL"
-  | "LLD"
-  | "LLS"
-  | "LTL"
-  | "LX"
-  | "MIS"
-  | "NK"
-  | "OTB"
-  | "OTM"
-  | "OTT"
-  | "PS"
-  | "PS1"
-  | "PS2"
-  | "PTB"
-  | "PTM"
-  | "PUL"
-  | "RG"
-  | "SDN"
-  | "SPR"
-  | "SSC"
-  | "SV"
-  | "SX"
-  | "TB"
-  | "TBB"
-  | "TBN"
-  | "TBS";
+export type IEnumFishType = "ANF" | "BLL" | "BIB" | "COD" | "CRE" | "DAB" | "GUU" | "HAD" | "HKE" | "JOD" | "LEM" | "LEZ" | "LIN" | "MUR" | "OCZ" | "PLE" | "RJH" | "RJI" | "RJM" | "RSC" | "SCE" | "SOL" | "SYC" | "SYT" | "TUR" | "WHE" | "MAC" | "WIT" | "OCT" | "POL" | "CTC" | "SOX" | "SQU" | "COE" | "BSS" | "CAA" | "CRA" | "FLE" | "POK" | "RJC" | "RJN" | "WEG" | "NEP" | "IJS" | "WHG" | "RJB" | "SBR" | "SKH" | "SMD" | "SRX" | "TSD" | "WEX" | "GAG" | "GUG" | "GUR" | "HAL" | "LBE" | "LYY" | "MUL" | "OCC" | "PIL" | "BRB" | "REG";
 
 export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
 
 export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
 
-export type IEnumMeasurementType =
-  | "POSITION"
-  | "TEMPERATURE"
-  | "HUMIDITY"
-  | "PRESSURE"
-  | "SPEED"
-  | "ONOFF"
-  | "FORCE"
-  | "FUEL_CONSUMPTION"
-  | "DEPTH"
-  | "ACCELERATION"
-  | "MAGNETISM"
-  | "ANGULAR_VELOCITY"
-  | "VOLTAGE"
-  | "CURRENT"
-  | "POWER"
-  | "ENERGY_CONSUMPTION"
-  | "TRAWL_TENSION"
-  | "SCALE"
-  | "RPM"
-  | "ROUTE";
+export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM" | "ROUTE" | "AIS";
 
-export type IEnumReasonArrival =
-  | "ECY"
-  | "GRD"
-  | "LAN"
-  | "OTH"
-  | "REF"
-  | "REP"
-  | "RES"
-  | "SCR"
-  | "SHE"
-  | "TRA";
+export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 
-export type IEnumReasonDeparture =
-  | "FIS"
-  | "GUD"
-  | "OTH"
-  | "SCR"
-  | "STE"
-  | "TST";
+export type IEnumReasonDeparture = "FIS" | "GUD" | "OTH" | "SCR" | "STE" | "TST";
 
 export type IEnumReasonDiscard = "BAI" | "HSV" | "OTH" | "PDM" | "PRO" | "QEX";
 
-export type IEnumRouteGeometryType =
-  | "RHUMB_LINE_LOXODROME"
-  | "GREAT_CICRLE_ORTHODROME";
+export type IEnumRouteGeometryType = "RHUMB_LINE_LOXODROME" | "GREAT_CICRLE_ORTHODROME";
 
 export type IEnumScaleCategory = "FISH";
 
-export type IEnumVesselCompartment =
-  | "DECK"
-  | "BRIDGE"
-  | "GALLEY"
-  | "ENGINE_ROOM"
-  | "FISH_HOLD"
-  | "CABIN"
-  | "BOW"
-  | "STERN";
+export type IEnumVesselCompartment = "DECK" | "BRIDGE" | "GALLEY" | "ENGINE_ROOM" | "FISH_HOLD" | "CABIN" | "BOW" | "STERN";
+
+export type IAisAisAltitudeSensorType = "GNSS" | "Barometric source";
+
+export type IAisAisAssignedModeFlag = "Station operating in autonomous and continuous mode" | "Station operating in assigned mode";
+
+export type IAisAisControlLongRange = "Class-A AIS station stops transmission of Message 27 within an AIS base station coverage area" | "Request Class-A station to transmit Message 27 within an AIS base station coverage area";
+
+export type IAisAisDte = "available" | "not available";
+
+export type IAisAisMeasurementType = "POSITION" | "DTE" | "ETA" | "DESTINATION" | "SOG" | "ROT" | "COG" | "TRUE_HEADING" | "SPECIAL_MANEUVRE_INDICATOR" | "TIMESTAMP" | "SOTDMA_COMMUNICATION_STATE";
+
+export type IAisAisMessageType = "Position report" | "Base station report" | "Static and voyage related data" | "Binary addressed message" | "Binary acknowledgement" | "Binary broadcast message" | "Standard SAR aircraft position report" | "UTC/date inquiry" | "UTC/date response" | "Addressed safety related message" | "Safety related acknowledgement" | "Safety related broadcast message" | "Interrogation" | "Assignment mode command" | "DGNSS broadcast binary message" | "Standard Class B equipment position report" | "Extended Class B equipment position report" | "Data link management message" | "Aids-to-navigation report" | "Channel management" | "Group assignment command" | "Static data report" | "Single slot binary message" | "Multiple slot binary message with Communications State" | "Position report for long range applications" | "Undefined; Reserved for future use";
+
+export type IAisAisNavStatus = "Under way using engine" | "At anchor" | "Not under command" | "Restricted manoeuverability" | "Constrained by her draught" | "Moored" | "Aground" | "Engaged in Fishing" | "Under way sailing" | "Reserved for future amendment of Navigational Status for HSC" | "Reserved for future amendment of Navigational Status for WIG" | "Reserved for future use" | "AIS-SART is active" | "Not defined (default)";
+
+export type IAisAisPositionAccuracy = "LOW (> 10 M)" | "HIGH (< 10 M)";
+
+export type IAisAisPositionDeviceType = "undefined (default)" | "GPS" | "GLONASS" | "combined GPS/GLONASS" | "Loran-C" | "Chayka" | "integrated navigation system" | "surveyed" | "Galileo" | "not used" | "internal GNSS";
+
+export type IAisAisRaimFlag = "RAIM not in use (default)" | "RAIM in use";
+
+export type IAisAisShipType = "Not available (default)" | "Reserved for future use" | "Wing in ground (WIG), all ships of this type" | "Fishing" | "Towing" | "Towing: length exceeds 200m or breadth exceeds 25m" | "Dredging or underwater ops" | "Diving ops" | "Military ops" | "Sailing" | "Pleasure Craft" | "Reserved" | "High speed craft (HSC), all ships of this type" | "High speed craft (HSC), Hazardous category A" | "High speed craft (HSC), Hazardous category B" | "High speed craft (HSC), Hazardous category C" | "High speed craft (HSC), Hazardous category D" | "High speed craft (HSC), Reserved for future use" | "High speed craft (HSC), No additional information" | "Pilot Vessel" | "Search and Rescue vessel" | "Tug" | "Port Tender" | "Anti-pollution equipment" | "Law Enforcement" | "Spare - Local Vessel" | "Medical Transport" | "Noncombatant ship according to RR Resolution No. 18" | "Passenger, all ships of this type" | "Passenger, Hazardous category A" | "Passenger, Hazardous category B" | "Passenger, Hazardous category C" | "Passenger, Hazardous category D" | "Passenger, Reserved for future use" | "Passenger, No additional information" | "Cargo, all ships of this type" | "Cargo, Hazardous category A" | "Cargo, Hazardous category B" | "Cargo, Hazardous category C" | "Cargo, Hazardous category D" | "Cargo, Reserved for future use" | "Cargo, No additional information" | "Tanker, all ships of this type" | "Tanker, Hazardous category A" | "Tanker, Hazardous category B" | "Tanker, Hazardous category C" | "Tanker, Hazardous category D" | "Tanker, Reserved for future use" | "Tanker, No additional information" | "Other Type, all ships of this type" | "Other Type, Hazardous category A" | "Other Type, Hazardous category B" | "Other Type, Hazardous category C" | "Other Type, Hazardous category D" | "Other Type, Reserved for future use" | "Other Type, no additional information";
+
+export type IAisAisSpecialManeuvre = "not available" | "not engaged in special maneuver" | "engaged in special maneuver";
 
 export type IEntryArrivalEntryType = "arrival";
 /** A return to port event */
@@ -728,7 +547,6 @@ export interface IEntryZoneEnter extends ICoreBaseEntry {
 
 export type IEntryZoneExitEntryType = "zone-exit";
 /** Exit declaration of a fishing zone */
-
 export interface IEntryZoneExit extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryZoneExitEntryType;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;

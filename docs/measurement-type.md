@@ -40,3 +40,4 @@ The measurement types
 | `"SCALE"`              |             |
 | `"RPM"`                |             |
 | `"ROUTE"`              |             |
+| `"AIS"`                |             |

@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://poseidat.org/schema/enum/ais/ais-position-accuracy.json","description":"Indicates the precision of a given position","title":"Position accuracy types","type":"string","enum":["LOW (> 10 M)","HIGH (< 10 M)"]}

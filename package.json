@@ -9,7 +9,7 @@
     "build:compile": "tsc -b --verbose",
     "build:copy-schema": "cp -r src/schema lib",
     "build:docs": "rm -rf docs/schemas && jsonschema2md -x docs/schemas -e json -d src/schema -o docs",
-    "build:typings": "jsonschema2typings --path-depth 2 --type-prefix I --export -o src/schema-types.ts ./src/schema/core/*.json ./src/schema/core/**/*.json ./src/schema/enum/*.json ./src/schema/entry/*.json",
+    "build:typings": "jsonschema2typings --path-depth 2 --type-prefix I --export -o src/schema-types.ts ./src/schema/core/*.json ./src/schema/core/**/*.json ./src/schema/enum/*.json ./src/schema/enum/**/*.json ./src/schema/entry/*.json",
     "build": "npm-run-all build:clean build:typings build:compile build:copy-schema build:docs",
     "clean": "rimraf lib",
     "docs:serve": "docsify serve docs",

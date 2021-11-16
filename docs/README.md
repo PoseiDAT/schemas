@@ -2,21 +2,31 @@
 
 ## Top-level Schemas
 
-*   [AIS callsign](./ais-callsign.md "The converted call sign given by an AIS measerement") – `https://poseidat.org/schema/enum/ais-callsign.json`
+*   [AIS DGNSS data](./ais-dgnss-data.md "AIS DGNSS data send with an AIS message") – `https://poseidat.org/schema/core/ais-DGNSS-data.json`
+
+*   [AIS RAIM flag flag](./ais-raim-flag.md "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device; 0 = RAIM not in use = default; 1 = RAIM in use") – `https://poseidat.org/schema/enum/ais/ais-RAIM-flag.json`
 
 *   [AIS entity](./ais-entity.md "An AIS ship with static relatedentity from the AIS") – `https://poseidat.org/schema/core/ais-entity.json`
 
-*   [AIS measurement type](./ais-measurement-type.md "The measurement types for the AIS") – `https://poseidat.org/schema/enum/ais-measurement-type.json`
+*   [AIS measurement type](./ais-measurement-type.md "The measurement types for the AIS") – `https://poseidat.org/schema/enum/ais/ais-measurement-type.json`
 
 *   [AIS measurement value](./ais-measurement.md "The value of a certain type of AIS measurement") – `https://poseidat.org/schema/core/measurement/ais-measurement.json`
 
-*   [AIS position device type](./ais-position-device-type.md "The converted type of the position device used on the AIS entity") – `https://poseidat.org/schema/enum/ais-position-device-type.json`
+*   [AIS message types](./ais-message-type.md "The available message types for an ais measurement, starts at 1") – `http://localhost:3000/schema/enum/ais/ais-message-type.json`
 
-*   [AIS ship type](./ais-ship-type.md "The converted names of the ais ship types") – `https://poseidat.org/schema/enum/ais-ship-type.json`
+*   [AIS navigation status](./ais-nav-status.md "The converted nav status given by an AIS measerement") – `https://poseidat.org/schema/enum/ais/ais-nav-status.json`
+
+*   [AIS position device type](./ais-position-device-type.md "The converted type of the position device used on the AIS entity") – `https://poseidat.org/schema/enum/ais/ais-position-device-type.json`
+
+*   [AIS ship type](./ais-ship-type.md "The converted names of the ais ship types") – `https://poseidat.org/schema/enum/ais/ais-ship-type.json`
 
 *   [Address](./address.md "A street address") – `https://poseidat.org/schema/core/address.json`
 
+*   [Altitude sensor type](./ais-altitude-sensor-type.md "The type altitude sensor used on the ship") – `https://poseidat.org/schema/enum/ais/ais-altitude-sensor-type.json`
+
 *   [Arrival](./arrival.md "A return to port event") – `https://poseidat.org/schema/entry/arrival.json`
+
+*   [Assigned mode flag](./ais-assigned-mode-flag.md "State of station if it is operating in autonomous or assigned mode; 0 is default") – `https://poseidat.org/schema/enum/ais/ais-assigned-mode-flag.json`
 
 *   [Base entry](./base-entry.md "The shared properties for all entries") – `https://poseidat.org/schema/core/base-entry.json`
 
@@ -24,7 +34,9 @@
 
 *   [ContactDetails](./contact-details.md "Contact information for persona") – `https://poseidat.org/schema/core/contact-details.json`
 
-*   [DTE ready types](./ais-dte.md "Data terminal equipment (DTE) ready (0 = available, 1 = not available = default)") – `https://poseidat.org/schema/enum/ais-DTE.json`
+*   [Control long range message types](./ais-control-long-range.md "Transmission control for long-range broadcast message") – `https://poseidat.org/schema/enum/ais/ais-control-long-range.json`
+
+*   [DTE ready types](./ais-dte.md "Data terminal equipment (DTE) ready (0 = available, 1 = not available = default)") – `https://poseidat.org/schema/enum/ais/ais-DTE.json`
 
 *   [Departure](./departure.md "A departure from port event") – `https://poseidat.org/schema/entry/departure.json`
 
@@ -98,7 +110,7 @@
 
 *   [Position](./position.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/position.json`
 
-*   [Position accuracy types](./ais-position-accuracy.md "Indicates the precision of a given position") – `https://poseidat.org/schema/enum/ais-position-accuracy.json`
+*   [Position accuracy types](./ais-position-accuracy.md "Indicates the precision of a given position") – `https://poseidat.org/schema/enum/ais/ais-position-accuracy.json`
 
 *   [Reason arrival](./reason-arrival.md "The reason for the vessel to return to port") – `https://poseidat.org/schema/enum/reason-arrival.json`
 
@@ -116,7 +128,7 @@
 
 *   [Spatial axes](./spatial-axes.md "The spatial axes for a given sensor") – `https://poseidat.org/schema/core/measurement/spatial-axes.json`
 
-*   [Special maneuvre indicator types](./ais-special-maneuvre.md "Indicates whether an special maneuver is ongoing") – `https://poseidat.org/schema/enum/ais-special-maneuvre.json`
+*   [Special maneuvre indicator types](./ais-special-maneuvre.md "Indicates whether an special maneuver is ongoing") – `https://poseidat.org/schema/enum/ais/ais-special-maneuvre.json`
 
 *   [Trawl tension](./trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json`
 
@@ -183,6 +195,10 @@
 *   [Partnered fishing vessels](./fishing-gear-deployment-properties-partnered-fishing-vessels.md "Details of partner vessels for pair fishing") – `https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/partnered_fishing_vessel`
 
 *   [Trans zonal fishing areas](./zone-exit-properties-trans-zonal-fishing-areas.md "The zones involved in trans-zonal fishing") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
+
+*   [Untitled array in AIS measurement value](./ais-measurement-properties-multiple_destination_id.md "The MMSI numbers where the ship is sending data to") – `https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/multiple_destination_id`
+
+*   [Untitled array in AIS measurement value](./ais-measurement-properties-multiple_destination_id.md "The MMSI numbers where the ship is sending data to") – `https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/multiple_destination_id`
 
 *   [Waypoints](./fishing-tow-properties-waypoints.md "The collection of geographical locations logged during the tow") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/waypoints`
 

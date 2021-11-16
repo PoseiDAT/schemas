@@ -49,13 +49,13 @@ import * as entryFishingActivity from "./schema/entry/fishing-activity.json";
 import * as entryRoute from "./schema/entry/route.json";
 import * as entryZoneEnter from "./schema/entry/zone-enter.json";
 import * as entryZoneExit from "./schema/entry/zone-exit.json";
-import * as enumAISDTE from "./schema/enum/ais-DTE.json";
-import * as enumAISMeasurementType from "./schema/enum/ais-measurement-type.json";
-import * as enumAISNavStatus from "./schema/enum/ais-nav-status.json";
-import * as enumAISPositionAccuracy from "./schema/enum/ais-position-accuracy.json";
-import * as enumAISPositionDeviceType from "./schema/enum/ais-position-device-type.json";
-import * as enumAISShipTypes from "./schema/enum/ais-ship-type.json";
-import * as enumAISSpecialManeuvre from "./schema/enum/ais-special-maneuvre.json";
+import * as enumAISDTE from "./schema/enum/ais/ais-DTE.json";
+import * as enumAISMeasurementType from "./schema/enum/ais/ais-measurement-type.json";
+import * as enumAISNavStatus from "./schema/enum/ais/ais-nav-status.json";
+import * as enumAISPositionAccuracy from "./schema/enum/ais/ais-position-accuracy.json";
+import * as enumAISPositionDeviceType from "./schema/enum/ais/ais-position-device-type.json";
+import * as enumAISShipTypes from "./schema/enum/ais/ais-ship-type.json";
+import * as enumAISSpecialManeuvre from "./schema/enum/ais/ais-special-maneuvre.json";
 // Enum schemas
 //
 import * as enumDeviceType from "./schema/enum/device-type.json";

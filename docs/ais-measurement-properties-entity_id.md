@@ -1,10 +1,10 @@
-# Untitled undefined type in AIS measurement value Schema
+# Untitled number in AIS measurement value Schema
 
 ```txt
 https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/entity_id
 ```
 
-
+The mmsi identifier (ais entity )this value is related to
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                    |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :-------------------------------------------------------------------------------------------- |
@@ -12,4 +12,4 @@ https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/en
 
 ## entity_id Type
 
-unknown
+`number`

@@ -16,7 +16,7 @@ A route which was planned with an ECS/ECDIS system.
 
 all of
 
-*   [Base entry](ais-entity-allof-base-entry.md "check type definition")
+*   [Base entry](arrival-allof-base-entry.md "check type definition")
 
 # Route Properties
 

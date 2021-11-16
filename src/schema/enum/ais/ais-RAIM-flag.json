@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/enum/ais/ais-RAIM-flag.json",
+  "description": "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device; 0 = RAIM not in use = default; 1 = RAIM in use.",
+  "title": "AIS RAIM flag flag",
+  "type": "string",
+  "enum": [
+    "RAIM not in use (default)",
+    "RAIM in use"
+  ]
+}

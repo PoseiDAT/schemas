@@ -24,6 +24,7 @@
     "TRAWL_TENSION",
     "SCALE",
     "RPM",
-    "ROUTE"
+    "ROUTE",
+    "AIS"
   ]
 }

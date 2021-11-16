@@ -1,14 +1,14 @@
 # AIS position device type Schema
 
 ```txt
-https://poseidat.org/schema/enum/ais-position-device-type.json
+https://poseidat.org/schema/enum/ais/ais-position-device-type.json
 ```
 
 The converted type of the position device used on the AIS entity.
 
-| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                         |
-| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [ais-position-device-type.json](schemas/enum/ais-position-device-type.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                             |
+| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [ais-position-device-type.json](schemas/enum/ais/ais-position-device-type.json "open original schema") |
 
 ## AIS position device type Type
 
@@ -29,10 +29,5 @@ The converted type of the position device used on the AIS entity.
 | `"integrated navigation system"` |             |
 | `"surveyed"`                     |             |
 | `"Galileo"`                      |             |
-| `"not used"`                     |             |
-| `"not used"`                     |             |
-| `"not used"`                     |             |
-| `"not used"`                     |             |
-| `"not used"`                     |             |
 | `"not used"`                     |             |
 | `"internal GNSS"`                |             |

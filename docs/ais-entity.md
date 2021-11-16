@@ -6,9 +6,9 @@ https://poseidat.org/schema/core/ais-entity.json
 
 An AIS ship with static relatedentity from the AIS
 
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                              |
-| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :---------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [ais-entity.json](schemas/entry/ais-entity.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [ais-entity.json](schemas/core/ais-entity.json "open original schema") |
 
 ## AIS entity Type
 
@@ -16,18 +16,20 @@ An AIS ship with static relatedentity from the AIS
 
 all of
 
-*   [Base entry](ais-entity-allof-base-entry.md "check type definition")
+*   [Base entry](arrival-allof-base-entry.md "check type definition")
 
 # AIS entity Properties
 
-| Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                                        |
-| :-------------------------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [entity_id](#entity_id)                       | `number` | Required | cannot be null | [AIS entity](ais-entity-properties-entity_id.md "https://poseidat.org/schema/core/ais-entity.json#/properties/entity_id")                                         |
-| [call_sign](#call_sign)                       | `string` | Optional | cannot be null | [AIS entity](ais-entity-properties-call_sign.md "https://poseidat.org/schema/core/ais-entity.json#/properties/call_sign")                                         |
-| [entity_name](#entity_name)                   | `string` | Optional | cannot be null | [AIS entity](ais-entity-properties-entity_name.md "https://poseidat.org/schema/core/ais-entity.json#/properties/entity_name")                                     |
-| [entity_type](#entity_type)                   | `string` | Optional | cannot be null | [AIS entity](ais-entity-properties-ais-ship-type.md "https://poseidat.org/schema/enum/ais-ship-type.json#/properties/entity_type")                                |
-| [position_device_type](#position_device_type) | `string` | Optional | cannot be null | [AIS entity](ais-entity-properties-ais-position-device-type.md "https://poseidat.org/schema/enum/ais-position-device-type.json#/properties/position_device_type") |
-| [dimension_ship](#dimension_ship)             | `number` | Optional | cannot be null | [AIS entity](ais-entity-properties-dimension_ship.md "https://poseidat.org/schema/core/ais-entity.json#/properties/dimension_ship")                               |
+| Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                                                 |
+| :-------------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [entity_id](#entity_id)                       | `number` | Required | cannot be null | [AIS entity](ais-entity-properties-entity_id.md "https://poseidat.org/schema/core/ais-entity.json#/properties/entity_id")                                                  |
+| [call_sign](#call_sign)                       | `string` | Optional | cannot be null | [AIS entity](ais-entity-properties-call_sign.md "https://poseidat.org/schema/core/ais-entity.json#/properties/call_sign")                                                  |
+| [entity_name](#entity_name)                   | `string` | Optional | cannot be null | [AIS entity](ais-entity-properties-entity_name.md "https://poseidat.org/schema/core/ais-entity.json#/properties/entity_name")                                              |
+| [IMO_number](#imo_number)                     | `number` | Optional | cannot be null | [AIS entity](ais-entity-properties-imo_number.md "https://poseidat.org/schema/core/ais-entity.json#/properties/IMO_number")                                                |
+| [maximum_draught](#maximum_draught)           | `number` | Optional | cannot be null | [AIS entity](ais-entity-properties-maximum_draught.md "https://poseidat.org/schema/core/ais-entity.json#/properties/maximum_draught")                                      |
+| [entity_type](#entity_type)                   | `string` | Optional | cannot be null | [AIS entity](ais-measurement-properties-ais-ship-type.md "https://poseidat.org/schema/enum/ais/ais-ship-type.json#/properties/entity_type")                                |
+| [position_device_type](#position_device_type) | `string` | Optional | cannot be null | [AIS entity](ais-measurement-properties-ais-position-device-type.md "https://poseidat.org/schema/enum/ais/ais-position-device-type.json#/properties/position_device_type") |
+| [dimension_ship](#dimension_ship)             | `number` | Optional | cannot be null | [AIS entity](ais-entity-properties-dimension_ship.md "https://poseidat.org/schema/core/ais-entity.json#/properties/dimension_ship")                                        |
 
 ## entity_id
 
@@ -65,6 +67,14 @@ The call sign of the given AIS entity
 
 `string`
 
+### call_sign Default Value
+
+The default value is:
+
+```json
+"@@@@@@@"
+```
+
 ## entity_name
 
 The name of the AIS entity
@@ -83,6 +93,54 @@ The name of the AIS entity
 
 `string`
 
+### entity_name Constraints
+
+**maximum**: the value of this number must smaller than or equal to: `20`
+
+### entity_name Default Value
+
+The default value is:
+
+```json
+"@@@@@@@@@@@@@@@@@@@@"
+```
+
+## IMO_number
+
+The International Maritime Organization (IMO) number is a unique identifier for ships
+
+`IMO_number`
+
+*   is optional
+
+*   Type: `number`
+
+*   cannot be null
+
+*   defined in: [AIS entity](ais-entity-properties-imo_number.md "https://poseidat.org/schema/core/ais-entity.json#/properties/IMO_number")
+
+### IMO_number Type
+
+`number`
+
+## maximum_draught
+
+Maximum present static draught in meters
+
+`maximum_draught`
+
+*   is optional
+
+*   Type: `number`
+
+*   cannot be null
+
+*   defined in: [AIS entity](ais-entity-properties-maximum_draught.md "https://poseidat.org/schema/core/ais-entity.json#/properties/maximum_draught")
+
+### maximum_draught Type
+
+`number`
+
 ## entity_type
 
 The converted names of the ais ship types.
@@ -91,15 +149,15 @@ The converted names of the ais ship types.
 
 *   is optional
 
-*   Type: `string` ([AIS ship type](ais-entity-properties-ais-ship-type.md))
+*   Type: `string` ([AIS ship type](ais-measurement-properties-ais-ship-type.md))
 
 *   cannot be null
 
-*   defined in: [AIS entity](ais-entity-properties-ais-ship-type.md "https://poseidat.org/schema/enum/ais-ship-type.json#/properties/entity_type")
+*   defined in: [AIS entity](ais-measurement-properties-ais-ship-type.md "https://poseidat.org/schema/enum/ais/ais-ship-type.json#/properties/entity_type")
 
 ### entity_type Type
 
-`string` ([AIS ship type](ais-entity-properties-ais-ship-type.md))
+`string` ([AIS ship type](ais-measurement-properties-ais-ship-type.md))
 
 ### entity_type Constraints
 
@@ -109,34 +167,7 @@ The converted names of the ais ship types.
 | :------------------------------------------------------ | :---------- |
 | `"Not available (default)"`                             |             |
 | `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
 | `"Wing in ground (WIG), all ships of this type"`        |             |
-| `"Wing in ground (WIG), Hazardous category A"`          |             |
-| `"Wing in ground (WIG), Hazardous category B"`          |             |
-| `"Wing in ground (WIG), Hazardous category C"`          |             |
-| `"Wing in ground (WIG), Hazardous category D"`          |             |
-| `"Wing in ground (WIG), Reserved for future use"`       |             |
-| `"Wing in ground (WIG), Reserved for future use"`       |             |
-| `"Wing in ground (WIG), Reserved for future use"`       |             |
-| `"Wing in ground (WIG), Reserved for future use"`       |             |
-| `"Wing in ground (WIG), Reserved for future use"`       |             |
 | `"Fishing"`                                             |             |
 | `"Towing"`                                              |             |
 | `"Towing: length exceeds 200m or breadth exceeds 25m"`  |             |
@@ -146,16 +177,11 @@ The converted names of the ais ship types.
 | `"Sailing"`                                             |             |
 | `"Pleasure Craft"`                                      |             |
 | `"Reserved"`                                            |             |
-| `"Reserved"`                                            |             |
 | `"High speed craft (HSC), all ships of this type"`      |             |
 | `"High speed craft (HSC), Hazardous category A"`        |             |
 | `"High speed craft (HSC), Hazardous category B"`        |             |
 | `"High speed craft (HSC), Hazardous category C"`        |             |
 | `"High speed craft (HSC), Hazardous category D"`        |             |
-| `"High speed craft (HSC), Reserved for future use"`     |             |
-| `"High speed craft (HSC), Reserved for future use"`     |             |
-| `"High speed craft (HSC), Reserved for future use"`     |             |
-| `"High speed craft (HSC), Reserved for future use"`     |             |
 | `"High speed craft (HSC), Reserved for future use"`     |             |
 | `"High speed craft (HSC), No additional information"`   |             |
 | `"Pilot Vessel"`                                        |             |
@@ -165,7 +191,6 @@ The converted names of the ais ship types.
 | `"Anti-pollution equipment"`                            |             |
 | `"Law Enforcement"`                                     |             |
 | `"Spare - Local Vessel"`                                |             |
-| `"Spare - Local Vessel"`                                |             |
 | `"Medical Transport"`                                   |             |
 | `"Noncombatant ship according to RR Resolution No. 18"` |             |
 | `"Passenger, all ships of this type"`                   |             |
@@ -174,18 +199,12 @@ The converted names of the ais ship types.
 | `"Passenger, Hazardous category C"`                     |             |
 | `"Passenger, Hazardous category D"`                     |             |
 | `"Passenger, Reserved for future use"`                  |             |
-| `"Passenger, Reserved for future use"`                  |             |
-| `"Passenger, Reserved for future use"`                  |             |
-| `"Passenger, Reserved for future use"`                  |             |
 | `"Passenger, No additional information"`                |             |
 | `"Cargo, all ships of this type"`                       |             |
 | `"Cargo, Hazardous category A"`                         |             |
 | `"Cargo, Hazardous category B"`                         |             |
 | `"Cargo, Hazardous category C"`                         |             |
 | `"Cargo, Hazardous category D"`                         |             |
-| `"Cargo, Reserved for future use"`                      |             |
-| `"Cargo, Reserved for future use"`                      |             |
-| `"Cargo, Reserved for future use"`                      |             |
 | `"Cargo, Reserved for future use"`                      |             |
 | `"Cargo, No additional information"`                    |             |
 | `"Tanker, all ships of this type"`                      |             |
@@ -194,17 +213,12 @@ The converted names of the ais ship types.
 | `"Tanker, Hazardous category C"`                        |             |
 | `"Tanker, Hazardous category D"`                        |             |
 | `"Tanker, Reserved for future use"`                     |             |
-| `"Tanker, Reserved for future use"`                     |             |
-| `"Tanker, Reserved for future use"`                     |             |
 | `"Tanker, No additional information"`                   |             |
 | `"Other Type, all ships of this type"`                  |             |
 | `"Other Type, Hazardous category A"`                    |             |
 | `"Other Type, Hazardous category B"`                    |             |
 | `"Other Type, Hazardous category C"`                    |             |
 | `"Other Type, Hazardous category D"`                    |             |
-| `"Other Type, Reserved for future use"`                 |             |
-| `"Other Type, Reserved for future use"`                 |             |
-| `"Other Type, Reserved for future use"`                 |             |
 | `"Other Type, Reserved for future use"`                 |             |
 | `"Other Type, no additional information"`               |             |
 
@@ -216,15 +230,15 @@ The converted type of the position device used on the AIS entity.
 
 *   is optional
 
-*   Type: `string` ([AIS position device type](ais-entity-properties-ais-position-device-type.md))
+*   Type: `string` ([AIS position device type](ais-measurement-properties-ais-position-device-type.md))
 
 *   cannot be null
 
-*   defined in: [AIS entity](ais-entity-properties-ais-position-device-type.md "https://poseidat.org/schema/enum/ais-position-device-type.json#/properties/position_device_type")
+*   defined in: [AIS entity](ais-measurement-properties-ais-position-device-type.md "https://poseidat.org/schema/enum/ais/ais-position-device-type.json#/properties/position_device_type")
 
 ### position_device_type Type
 
-`string` ([AIS position device type](ais-entity-properties-ais-position-device-type.md))
+`string` ([AIS position device type](ais-measurement-properties-ais-position-device-type.md))
 
 ### position_device_type Constraints
 
@@ -241,11 +255,6 @@ The converted type of the position device used on the AIS entity.
 | `"integrated navigation system"` |             |
 | `"surveyed"`                     |             |
 | `"Galileo"`                      |             |
-| `"not used"`                     |             |
-| `"not used"`                     |             |
-| `"not used"`                     |             |
-| `"not used"`                     |             |
-| `"not used"`                     |             |
 | `"not used"`                     |             |
 | `"internal GNSS"`                |             |
 

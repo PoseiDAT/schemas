@@ -1,14 +1,14 @@
 # DTE ready types Schema
 
 ```txt
-https://poseidat.org/schema/enum/ais-DTE.json
+https://poseidat.org/schema/enum/ais/ais-DTE.json
 ```
 
 Data terminal equipment (DTE) ready (0 = available, 1 = not available = default)
 
-| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                       |
-| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [ais-DTE.json](schemas/enum/ais-DTE.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                           |
+| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [ais-DTE.json](schemas/enum/ais/ais-DTE.json "open original schema") |
 
 ## DTE ready types Type
 

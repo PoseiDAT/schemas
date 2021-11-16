@@ -1,14 +1,14 @@
 # Special maneuvre indicator types Schema
 
 ```txt
-https://poseidat.org/schema/enum/ais-special-maneuvre.json
+https://poseidat.org/schema/enum/ais/ais-special-maneuvre.json
 ```
 
 Indicates whether an special maneuver is ongoing
 
-| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                 |
-| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [ais-special-maneuvre.json](schemas/enum/ais-special-maneuvre.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                     |
+| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [ais-special-maneuvre.json](schemas/enum/ais/ais-special-maneuvre.json "open original schema") |
 
 ## Special maneuvre indicator types Type
 

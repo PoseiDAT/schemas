@@ -31,12 +31,12 @@
     },
     "entity_type": {
       "description": "The type of vessel given by the AIS, default is 0 ('Not available (default)')",
-      "$ref": "https://poseidat.org/schema/enum/ais-ship-type.json",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-ship-type.json",
       "default": 0
     },
     "position_device_type": {
       "description": "Type of electronic position fixing device, defaults to 0 ('undefined (default)')",
-      "$ref": "https://poseidat.org/schema/enum/ais-position-device-type.json",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-position-device-type.json",
       "default": 0
     },
     "dimension_ship": {

@@ -5,20 +5,26 @@
   "description": "The value of a certain type of AIS measurement",
   "properties": {
     "entity_id": {
-      "description": "The mmsi identifier (ais entity )this value is related to",
+      "description": "The mmsi identifier (ais entity) this value is related to",
       "type": "number"
     },
     "message_type" :{
       "description": "the message type of the given AIS measurement",
-      "$ref": "https://poseidat.org/schema/enum/ais-message-type.json"
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-message-type.json"
+    },
+    "requested_message_type" :{
+      "description": "the requested message type used in message type 15 (interrogation); Can request up to two message types from two stations",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-message-type.json",
+      "type":"array",
+      "maximum": 2
     },
     "nav_status": {
       "description": "The status of navigation",
-      "$ref": "https://poseidat.org/schema/enum/ais-nav-status.json"
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-nav-status.json"
     },
     "position_device_type": {
       "description": "The type of navigation device",
-      "$ref": "https://poseidat.org/schema/enum/ais-position-device-type.json"
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-position-device-type.json"
     },
     "repeat_indicator": {
       "description": "The amount of times the message has been repeated (3 is do not repeat anymore)",
@@ -38,10 +44,10 @@
     },
     "entity_type": {
       "description": "The type of vessel given by the AIS, default is 0 ('Not available (default)')",
-      "$ref": "https://poseidat.org/schema/enum/ais-ship-type.json",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-ship-type.json",
       "default": 0
     },
-    "dimension_ship": {
+    "ship_dimension": {
       "description": "Indicates the dimension of ship",
       "type": "number",
       "default": 0
@@ -66,16 +72,17 @@
     "true_heading": {
       "description": "Degrees (0-359) (511 indicates not available = default)",
       "type": "number",
-      "default": 511
+      "default": 511,
+      "maximum": 511,
+      "minimum": 0
     },
     "SOTDMA_communication_state": {
-      "description": "Degrees (0-359) (511 indicates not available = default)",
-      "type": "number",
-      "default": 511
+      "description": "The sotdma communication state",
+      "type": "number"
     },
     "RAIM_flag": {
       "description": "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device",
-      "$ref": "https://poseidat.org/schema/enum/ais-special-maneuvre.json",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-RAIM-flag.json",
       "default": 0
     },
     "position": {
@@ -84,7 +91,7 @@
     },
     "position_accuracy": {
       "description": "The accuracy of the given position",
-      "$ref": "https://poseidat.org/schema/enum/ais-position-accuracy.json",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-position-accuracy.json",
       "default": 0
     },
     "binary_data": {
@@ -113,6 +120,11 @@
       "type": "number",
       "default": 0
     },
+    "altitude": {
+      "description": "Altitude (derived from GNSS or barometric (see altitude sensor parameter below)) (m) (0-4 094 m) 4 095 = not available",
+      "type": "number",
+      "default": 4095
+    },
     "destination": {
       "description": "Destination of the vessel, Maximum 20 characters",
       "type": "string",
@@ -120,96 +132,70 @@
     },
     "special_maneuvre_indicator": {
       "description": "Indicates whether an special maneuver is ongoing",
-      "$ref": "https://poseidat.org/schema/enum/ais-special-maneuvre.json",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-special-maneuvre.json",
       "default": 0
     },
     "DTE": {
       "description": "Data terminal equipment (DTE) ready",
-      "$ref": "https://poseidat.org/schema/enum/ais-DTE.json",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-DTE.json",
       "default": 1
+    },
+    "COG": {
+      "description": "The course over ground (COG) of the vessel 0-3599",
+      "type": "number",
+      "maximum": 3599,
+      "minimum": 1
     },
     "control_long_range_message": {
       "description": "Transmission control for long-range broadcast message",
-      "$ref": "https://poseidat.org/schema/enum/ais-control-long-range.json",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-control-long-range.json",
       "default": 0
+    },
+    "altitude_sensor": {
+      "description": "The type of altitude sensore used on the ship",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-altitude-sensor-type.json",
+      "default": 0
+    },
+    "assigned_mode_flag": {
+      "description": "State of station if it is operating in autonomous or assigned mode",
+      "$ref": "https://poseidat.org/schema/enum/ais/ais-assigned-mode-flag.json",
+      "default": 0
+    },
+    "communication_state": {
+      "description": "Communication state selector flag",
+      "type": "string"
+    },
+    "destination_id": {
+      "description": "The MMSI number where the ship is sending data to.",
+      "type": "number"
+    },
+    "multiple_destination_id": {
+      "description": "The MMSI numbers where the ship is sending data to.",
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "safety_related_text": {
+      "description": "The addressed safety related message send by the ship",
+      "type": "string"
+    },
+    "DGNSS_data": {
+      "description": "The DGNSS data object send in the AIS message type 17",
+      "$ref": "https://poseidat.org/schema/core/ais-DGNSS-data.json"
+    },
+    "AtoN_status": {
+      "description": "",
+      "default": "00000000",
+      "type": "string"
+    },
+    "aid_navigation_extension": {
+      "description": "Name of the Aid to navigation extension",
+      "type": "string",
+      "maximum": 20
     }
  },
- "required": ["entity_id", "message_type"],
- "oneOf": [
-  {
-    "if": {
-      "properties": {
-        "message_type": {
-          "oneOf": [
-            { "const": 1},
-            { "const": 2},
-            { "const": 3}
-          ]
-        }
-      }
-    },
-    "then": {
-      "required": ["position", "RAIM_flag","COG","true_heading", "special_maneuvre_indicator",
-        "position_accuracy","ROT", "SOG", "repeat_indicator", "timestamp"]
-    }
-  },
-  {
-    "if": {
-      "properties": {
-        "message_type": {
-          "oneOf": [
-            { "const": 4},
-            { "const": 11}
-          ]
-        }
-      }
-    },
-    "then": {
-      "required": ["position", "position_accuracy", "position_device_type","timestamp", "repeat_indicator", "RAIM_flag", "SOTDMA_communication_state"]
-    }
-  },
-  {
-    "if": {
-      "properties": {
-        "message_type": { "const": 5}
-      }
-    },
-    "then": {
-      "required": ["repeat_indicator", "maximum_draught", "IMO_number", "callsign", "entity_type", "entity_name", "dimension_ship", "position_device_type", "ETA", "destination", "DTE"]
-    }
-  },
-  {
-    "if": {
-      "properties": {
-        "message_type": {
-          "oneOf": [
-            { "const": 6},
-            { "const": 7},
-            { "const": 8 },
-            { "const": 25 },
-            { "const": 26 }
-          ]
-        }
-      }
-    },
-    "then": {
-      "oneOf": [
-        { "required": [ "repeat_indicator", "binary_data" ] },
-        { "required": [ "repeat_indicator", "binary_data_array" ] }
-      ]
-    }
-  },
-  {
-    "if": {
-      "properties": {
-        "message_type": { "const": 9}
-      }
-    },
-    "then": {
-      "required": ["repeat_indicator", "IMO_number", "callsign", "entity_type", "entity_name", "dimension_ship", "position_device_type", "ETA", "destination", "DTE"]
-    }
-  }
- ],
+ "required": ["entity_id", "message_type", "repeat_indicator"],
   "type": "object",
   "additionalProperties": false
 }

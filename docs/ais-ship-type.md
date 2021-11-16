@@ -1,14 +1,14 @@
 # AIS ship type Schema
 
 ```txt
-https://poseidat.org/schema/enum/ais-ship-type.json
+https://poseidat.org/schema/enum/ais/ais-ship-type.json
 ```
 
 The converted names of the ais ship types.
 
-| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                   |
-| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [ais-ship-type.json](schemas/enum/ais-ship-type.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                       |
+| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [ais-ship-type.json](schemas/enum/ais/ais-ship-type.json "open original schema") |
 
 ## AIS ship type Type
 
@@ -22,34 +22,7 @@ The converted names of the ais ship types.
 | :------------------------------------------------------ | :---------- |
 | `"Not available (default)"`                             |             |
 | `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
-| `"Reserved for future use"`                             |             |
 | `"Wing in ground (WIG), all ships of this type"`        |             |
-| `"Wing in ground (WIG), Hazardous category A"`          |             |
-| `"Wing in ground (WIG), Hazardous category B"`          |             |
-| `"Wing in ground (WIG), Hazardous category C"`          |             |
-| `"Wing in ground (WIG), Hazardous category D"`          |             |
-| `"Wing in ground (WIG), Reserved for future use"`       |             |
-| `"Wing in ground (WIG), Reserved for future use"`       |             |
-| `"Wing in ground (WIG), Reserved for future use"`       |             |
-| `"Wing in ground (WIG), Reserved for future use"`       |             |
-| `"Wing in ground (WIG), Reserved for future use"`       |             |
 | `"Fishing"`                                             |             |
 | `"Towing"`                                              |             |
 | `"Towing: length exceeds 200m or breadth exceeds 25m"`  |             |
@@ -59,16 +32,11 @@ The converted names of the ais ship types.
 | `"Sailing"`                                             |             |
 | `"Pleasure Craft"`                                      |             |
 | `"Reserved"`                                            |             |
-| `"Reserved"`                                            |             |
 | `"High speed craft (HSC), all ships of this type"`      |             |
 | `"High speed craft (HSC), Hazardous category A"`        |             |
 | `"High speed craft (HSC), Hazardous category B"`        |             |
 | `"High speed craft (HSC), Hazardous category C"`        |             |
 | `"High speed craft (HSC), Hazardous category D"`        |             |
-| `"High speed craft (HSC), Reserved for future use"`     |             |
-| `"High speed craft (HSC), Reserved for future use"`     |             |
-| `"High speed craft (HSC), Reserved for future use"`     |             |
-| `"High speed craft (HSC), Reserved for future use"`     |             |
 | `"High speed craft (HSC), Reserved for future use"`     |             |
 | `"High speed craft (HSC), No additional information"`   |             |
 | `"Pilot Vessel"`                                        |             |
@@ -78,7 +46,6 @@ The converted names of the ais ship types.
 | `"Anti-pollution equipment"`                            |             |
 | `"Law Enforcement"`                                     |             |
 | `"Spare - Local Vessel"`                                |             |
-| `"Spare - Local Vessel"`                                |             |
 | `"Medical Transport"`                                   |             |
 | `"Noncombatant ship according to RR Resolution No. 18"` |             |
 | `"Passenger, all ships of this type"`                   |             |
@@ -87,18 +54,12 @@ The converted names of the ais ship types.
 | `"Passenger, Hazardous category C"`                     |             |
 | `"Passenger, Hazardous category D"`                     |             |
 | `"Passenger, Reserved for future use"`                  |             |
-| `"Passenger, Reserved for future use"`                  |             |
-| `"Passenger, Reserved for future use"`                  |             |
-| `"Passenger, Reserved for future use"`                  |             |
 | `"Passenger, No additional information"`                |             |
 | `"Cargo, all ships of this type"`                       |             |
 | `"Cargo, Hazardous category A"`                         |             |
 | `"Cargo, Hazardous category B"`                         |             |
 | `"Cargo, Hazardous category C"`                         |             |
 | `"Cargo, Hazardous category D"`                         |             |
-| `"Cargo, Reserved for future use"`                      |             |
-| `"Cargo, Reserved for future use"`                      |             |
-| `"Cargo, Reserved for future use"`                      |             |
 | `"Cargo, Reserved for future use"`                      |             |
 | `"Cargo, No additional information"`                    |             |
 | `"Tanker, all ships of this type"`                      |             |
@@ -107,16 +68,11 @@ The converted names of the ais ship types.
 | `"Tanker, Hazardous category C"`                        |             |
 | `"Tanker, Hazardous category D"`                        |             |
 | `"Tanker, Reserved for future use"`                     |             |
-| `"Tanker, Reserved for future use"`                     |             |
-| `"Tanker, Reserved for future use"`                     |             |
 | `"Tanker, No additional information"`                   |             |
 | `"Other Type, all ships of this type"`                  |             |
 | `"Other Type, Hazardous category A"`                    |             |
 | `"Other Type, Hazardous category B"`                    |             |
 | `"Other Type, Hazardous category C"`                    |             |
 | `"Other Type, Hazardous category D"`                    |             |
-| `"Other Type, Reserved for future use"`                 |             |
-| `"Other Type, Reserved for future use"`                 |             |
-| `"Other Type, Reserved for future use"`                 |             |
 | `"Other Type, Reserved for future use"`                 |             |
 | `"Other Type, no additional information"`               |             |

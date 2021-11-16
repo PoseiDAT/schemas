@@ -16,7 +16,7 @@ A return to port event
 
 all of
 
-*   [Base entry](ais-entity-allof-base-entry.md "check type definition")
+*   [Base entry](arrival-allof-base-entry.md "check type definition")
 
 # Arrival Properties
 

@@ -1,14 +1,14 @@
 # AIS measurement type Schema
 
 ```txt
-https://poseidat.org/schema/enum/ais-measurement-type.json
+https://poseidat.org/schema/enum/ais/ais-measurement-type.json
 ```
 
 The measurement types for the AIS
 
-| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                 |
-| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [ais-measurement-type.json](schemas/enum/ais-measurement-type.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                     |
+| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [ais-measurement-type.json](schemas/enum/ais/ais-measurement-type.json "open original schema") |
 
 ## AIS measurement type Type
 
@@ -29,3 +29,5 @@ The measurement types for the AIS
 | `"COG"`                        |             |
 | `"TRUE_HEADING"`               |             |
 | `"SPECIAL_MANEUVRE_INDICATOR"` |             |
+| `"TIMESTAMP"`                  |             |
+| `"SOTDMA_COMMUNICATION_STATE"` |             |

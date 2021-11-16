@@ -38,7 +38,7 @@ one (and only one) of
 | [trawl_tension](#trawl_tension)       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-trawl-tension.md "https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension")          |
 | [scale](#scale)                       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-scale.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/scale")                                  |
 | [fuel_consumption](#fuel_consumption) | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-fuel-consumption.md "https://poseidat.org/schema/core/measurement/fuel-consumption.json#/properties/fuel_consumption") |
-| [ais](#ais)                           | Merged   | Optional | cannot be null | [Measurement value](measurement-value-properties-ais-measurement-value.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/ais")          |
+| [ais](#ais)                           | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-ais-measurement-value.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/ais")          |
 
 ## type
 
@@ -84,6 +84,7 @@ The measurement types
 | `"SCALE"`              |             |
 | `"RPM"`                |             |
 | `"ROUTE"`              |             |
+| `"AIS"`                |             |
 
 ## position
 
@@ -192,19 +193,3 @@ The value of a certain type of AIS measurement
 ### ais Type
 
 `object` ([AIS measurement value](measurement-value-properties-ais-measurement-value.md))
-
-one (and only one) of
-
-*   [Untitled undefined type in AIS measurement value](ais-measurement-oneof-0.md "check type definition")
-
-*   [Untitled undefined type in AIS measurement value](ais-measurement-oneof-1.md "check type definition")
-
-*   [Untitled undefined type in AIS measurement value](ais-measurement-oneof-2.md "check type definition")
-
-*   [Untitled undefined type in AIS measurement value](ais-measurement-oneof-3.md "check type definition")
-
-*   [Untitled undefined type in AIS measurement value](ais-measurement-oneof-4.md "check type definition")
-
-*   [Untitled undefined type in AIS measurement value](ais-measurement-oneof-5.md "check type definition")
-
-*   [Untitled undefined type in AIS measurement value](ais-measurement-oneof-6.md "check type definition")
