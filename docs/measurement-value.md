@@ -28,6 +28,8 @@ one (and only one) of
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-5.md "check type definition")
 
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-6.md "check type definition")
+
 # Measurement value Properties
 
 | Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                              |
@@ -39,6 +41,7 @@ one (and only one) of
 | [scale](#scale)                       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-scale.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/scale")                                  |
 | [fuel_consumption](#fuel_consumption) | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-fuel-consumption.md "https://poseidat.org/schema/core/measurement/fuel-consumption.json#/properties/fuel_consumption") |
 | [ais](#ais)                           | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-ais-measurement-value.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/ais")          |
+| [spatial_axes](#spatial_axes)         | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-spatial-axes.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/spatial_axes")             |
 
 ## type
 
@@ -85,6 +88,7 @@ The measurement types
 | `"RPM"`                |             |
 | `"ROUTE"`              |             |
 | `"AIS"`                |             |
+| `"SPATIAL_AXES"`       |             |
 
 ## position
 
@@ -193,3 +197,21 @@ The value of a certain type of AIS measurement
 ### ais Type
 
 `object` ([AIS measurement value](measurement-value-properties-ais-measurement-value.md))
+
+## spatial_axes
+
+The spatial axes for a given sensor
+
+`spatial_axes`
+
+*   is optional
+
+*   Type: `object` ([Spatial axes](measurement-value-properties-spatial-axes.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](measurement-value-properties-spatial-axes.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/spatial_axes")
+
+### spatial_axes Type
+
+`object` ([Spatial axes](measurement-value-properties-spatial-axes.md))

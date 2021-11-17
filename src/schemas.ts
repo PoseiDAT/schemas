@@ -23,6 +23,7 @@ import * as baseFishingTow from "./schema/core/fishing-tow.json";
 import * as baseFishingZone from "./schema/core/fishing-zone.json";
 import * as baseJournal from "./schema/core/journal.json";
 import * as baseAISMeaserement from "./schema/core/measurement/ais-measurement.json";
+import * as baseSpatialAxes from "./schema/core/measurement/spatial-axes.json";
 import * as baseFuelConsumption from "./schema/core/measurement/fuel-consumption.json";
 import * as baseMeasurementValue from "./schema/core/measurement/measurement-value.json";
 import * as baseNumeric from "./schema/core/measurement/numeric.json";
@@ -49,6 +50,9 @@ import * as entryFishingActivity from "./schema/entry/fishing-activity.json";
 import * as entryRoute from "./schema/entry/route.json";
 import * as entryZoneEnter from "./schema/entry/zone-enter.json";
 import * as entryZoneExit from "./schema/entry/zone-exit.json";
+
+// Enum schemas
+//
 import * as enumAISDTE from "./schema/enum/ais/ais-DTE.json";
 import * as enumAISMeasurementType from "./schema/enum/ais/ais-measurement-type.json";
 import * as enumAISNavStatus from "./schema/enum/ais/ais-nav-status.json";
@@ -56,8 +60,6 @@ import * as enumAISPositionAccuracy from "./schema/enum/ais/ais-position-accurac
 import * as enumAISPositionDeviceType from "./schema/enum/ais/ais-position-device-type.json";
 import * as enumAISShipTypes from "./schema/enum/ais/ais-ship-type.json";
 import * as enumAISSpecialManeuvre from "./schema/enum/ais/ais-special-maneuvre.json";
-// Enum schemas
-//
 import * as enumDeviceType from "./schema/enum/device-type.json";
 import * as enumEffortZone from "./schema/enum/effort-zone.json";
 import * as enumEquipmentType from "./schema/enum/equipment-type.json";
@@ -93,6 +95,7 @@ export const schemas = {
       trawlTension: baseTrawlTension as JSONSchema7,
       scale: baseScale as JSONSchema7,
       aisMeaserement: baseAISMeaserement as JSONSchema7,
+      spatialAxes: baseSpatialAxes as JSONSchema7,
     },
     persona: {
       company: baseCompany as JSONSchema7,

@@ -31,6 +31,10 @@
     "ais": {
       "description": "A AIS measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/ais-measurement.json"
+    },
+    "spatial_axes": {
+      "description": "A measurement to send spatial axes",
+      "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
     }
  },
  "oneOf": [
@@ -39,7 +43,8 @@
    { "required": [ "type", "trawl_tension" ] },
    { "required": [ "type", "scale" ] },
    { "required": [ "type", "fuel_consumption" ] },
-   { "required": [ "type", "ais" ] }
+   { "required": [ "type", "ais" ] },
+   { "required": [ "type", "spatial_axes" ] }
  ],
   "type": "object",
   "additionalProperties": false

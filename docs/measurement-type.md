@@ -41,3 +41,4 @@ The measurement types
 | `"RPM"`                |             |
 | `"ROUTE"`              |             |
 | `"AIS"`                |             |
+| `"SPATIAL_AXES"`       |             |

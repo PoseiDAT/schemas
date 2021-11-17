@@ -343,6 +343,7 @@ export interface IMeasurementMeasurementValue {
   /** A scale measurement */ scale?: IMeasurementScale;
   /** A fuel consumption measurement */ fuel_consumption?: IMeasurementFuelConsumption;
   /** A AIS measurement */ ais?: IMeasurementAisMeasurement;
+  /** A measurement to send spatial axes */ spatial_axes?: IMeasurementSpatialAxes;
 }
 
 /** A number representing a measurement from a sensor */
@@ -430,7 +431,7 @@ export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
 
 export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
 
-export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM" | "ROUTE" | "AIS";
+export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM" | "ROUTE" | "AIS" | "SPATIAL_AXES";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 

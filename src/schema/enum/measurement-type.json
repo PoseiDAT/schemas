@@ -25,6 +25,7 @@
     "SCALE",
     "RPM",
     "ROUTE",
-    "AIS"
+    "AIS",
+    "SPATIAL_AXES"
   ]
 }
