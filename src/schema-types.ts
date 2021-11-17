@@ -303,8 +303,8 @@ export interface IMeasurementAisMeasurement {
   /** Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device */ RAIM_flag?: IAisAisRaimFlag;
   /** A positional measurement */ position?: IMeasurementPosition;
   /** The accuracy of the given position */ position_accuracy?: IAisAisPositionAccuracy;
-  /** A numerical measurement */ binary_data?: IMeasurementNumeric;
-  /** A numerical measurement */ binary_data_array?: any[];
+  /** Binary data send in string */ binary_data?: string;
+  /** Multiple binary data send in array */ binary_data_array?: string[];
   /** Estimated time of arrival */ ETA?: string;
   /** The International Maritime Organization (IMO) number is a unique identifier for ships */ IMO_number?: number;
   /** Maximum present static draught in meters */ maximum_draught?: number;

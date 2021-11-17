@@ -36,8 +36,8 @@ The value of a certain type of AIS measurement
 | [RAIM_flag](#raim_flag)                                   | `string` | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-ais-raim-flag-flag.md "https://poseidat.org/schema/enum/ais/ais-RAIM-flag.json#/properties/RAIM_flag")                                         |
 | [position](#position)                                     | `object` | Optional | cannot be null | [AIS measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")                                                      |
 | [position_accuracy](#position_accuracy)                   | `string` | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-position-accuracy-types.md "https://poseidat.org/schema/enum/ais/ais-position-accuracy.json#/properties/position_accuracy")                    |
-| [binary_data](#binary_data)                               | `object` | Optional | cannot be null | [AIS measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/binary_data")                                              |
-| [binary_data_array](#binary_data_array)                   | `object` | Optional | cannot be null | [AIS measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/binary_data_array")                                        |
+| [binary_data](#binary_data)                               | `string` | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-binary_data.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/binary_data")                                    |
+| [binary_data_array](#binary_data_array)                   | `array`  | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-binary_data_array.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/binary_data_array")                        |
 | [ETA](#eta)                                               | `string` | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-eta.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/ETA")                                                    |
 | [IMO_number](#imo_number)                                 | `number` | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-imo_number.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/IMO_number")                                      |
 | [maximum_draught](#maximum_draught)                       | `number` | Optional | cannot be null | [AIS measurement value](ais-measurement-properties-maximum_draught.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/maximum_draught")                            |
@@ -629,39 +629,47 @@ Indicates the precision of a given position
 
 ## binary_data
 
-A number representing a measurement from a sensor
+Binary data send in string
 
 `binary_data`
 
 *   is optional
 
-*   Type: `object` ([Numeric](measurement-value-properties-numeric.md))
+*   Type: `string`
 
 *   cannot be null
 
-*   defined in: [AIS measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/binary_data")
+*   defined in: [AIS measurement value](ais-measurement-properties-binary_data.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/binary_data")
 
 ### binary_data Type
 
-`object` ([Numeric](measurement-value-properties-numeric.md))
+`string`
+
+### binary_data Default Value
+
+The default value is:
+
+```json
+"0"
+```
 
 ## binary_data_array
 
-A number representing a measurement from a sensor
+Multiple binary data send in array
 
 `binary_data_array`
 
 *   is optional
 
-*   Type: `object` ([Numeric](measurement-value-properties-numeric.md))
+*   Type: `string[]`
 
 *   cannot be null
 
-*   defined in: [AIS measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/binary_data_array")
+*   defined in: [AIS measurement value](ais-measurement-properties-binary_data_array.md "https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/binary_data_array")
 
 ### binary_data_array Type
 
-`object` ([Numeric](measurement-value-properties-numeric.md))
+`string[]`
 
 ## ETA
 

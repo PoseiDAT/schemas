@@ -196,7 +196,11 @@
 
 *   [Trans zonal fishing areas](./zone-exit-properties-trans-zonal-fishing-areas.md "The zones involved in trans-zonal fishing") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
 
+*   [Untitled array in AIS measurement value](./ais-measurement-properties-binary_data_array.md "Multiple binary data send in array") – `https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/binary_data_array`
+
 *   [Untitled array in AIS measurement value](./ais-measurement-properties-multiple_destination_id.md "The MMSI numbers where the ship is sending data to") – `https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/multiple_destination_id`
+
+*   [Untitled array in AIS measurement value](./ais-measurement-properties-binary_data_array.md "Multiple binary data send in array") – `https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/binary_data_array`
 
 *   [Untitled array in AIS measurement value](./ais-measurement-properties-multiple_destination_id.md "The MMSI numbers where the ship is sending data to") – `https://poseidat.org/schema/core/measurement/ais-measurement.json#/properties/multiple_destination_id`
 

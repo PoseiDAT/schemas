@@ -95,15 +95,16 @@
       "default": 0
     },
     "binary_data": {
-      "description": "A numerical measurement",
-      "$ref": "https://poseidat.org/schema/core/measurement/numeric.json",
-      "default": 0
+      "description": "Binary data send in string",
+      "type": "string",
+      "default": "0"
     },
     "binary_data_array": {
-      "description": "A numerical measurement",
-      "$ref": "https://poseidat.org/schema/core/measurement/numeric.json",
-      "default": 0,
-      "type": "array"
+      "description": "Multiple binary data send in array",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "ETA": {
       "description": "Estimated time of arrival",
