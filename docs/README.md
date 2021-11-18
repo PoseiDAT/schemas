@@ -98,6 +98,8 @@
 
 *   [Scale category](./scale-category.md "The types of supported product categories to weigh") – `https://poseidat.org/schema/enum/scale-category.json`
 
+*   [Spatial axes](./spatial-axes.md "The spatial axes for a given sensor") – `https://poseidat.org/schema/core/measurement/spatial-axes.json`
+
 *   [Trawl tension](./trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json`
 
 *   [Trip entry](./trip-entry.md "The trip related details of a journal entry") – `https://poseidat.org/schema/core/trip-entry.json`
