@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/enum/ais-altitude-sensor-type.json",
+  "description": "The type altitude sensor used on the ship",
+  "title": "Altitude sensor type",
+  "type": "string",
+  "enum": [
+    "GNSS",
+    "BAROMETRIC_SOURCE"
+  ]
+}

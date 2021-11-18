@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/enum/ais-special-maneuver.json",
+  "description": "Indicates whether an special maneuver is ongoing",
+  "title": "Special maneuvre indicator types",
+  "type": "string",
+  "enum": [
+    "NOT_AVAILABLE",
+    "NOT_ENGAGED_IN_SPECIAL_MANEUVER",
+    "ENGAGED_IN_SPECIAL_MANEUVER"
+  ]
+}

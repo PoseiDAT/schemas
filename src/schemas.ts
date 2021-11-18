@@ -7,6 +7,7 @@ import { JSONSchema7 } from "json-schema";
 // Core schemas
 //
 import * as baseAddress from "./schema/core/address.json";
+import * as baseAisMessage from "./schema/core/ais-message/ais-message.json";
 import * as baseCompany from "./schema/core/persona/company.json";
 import * as baseContactDetails from "./schema/core/contact-details.json";
 import * as baseDevice from "./schema/core/equipment/device.json";
@@ -28,6 +29,7 @@ import * as baseMeasurementValue from "./schema/core/measurement/measurement-val
 import * as baseNumeric from "./schema/core/measurement/numeric.json";
 import * as basePort from "./schema/core/port.json";
 import * as basePosition from "./schema/core/measurement/position.json";
+import * as basePositionReport from "./schema/core/ais-message/position-report.json";
 import * as baseTrawlTension from "./schema/core/measurement/trawl-tension.json";
 import * as baseScale from "./schema/core/measurement/scale.json";
 import * as baseSpatialAxes from "./schema/core/measurement/spatial-axes.json";
@@ -41,6 +43,7 @@ import * as baseRouteWaypoint from "./schema/core/route-waypoint.json";
 
 // Entry schemas
 //
+import * as entryBaseAisMessage from "./schema/entry/base-ais-message.json";
 import * as entryArrival from "./schema/entry/arrival.json";
 import * as entryDeparture from "./schema/entry/departure.json";
 import * as entryDeviceMeasurement from "./schema/entry/device-measurement.json";
@@ -53,6 +56,17 @@ import * as entryRoute from "./schema/entry/route.json";
 
 // Enum schemas
 //
+import * as enumAisAltitudeSensorType from "./schema/enum/ais-altitude-sensor-type.json";
+import * as enumAisAssignedModeFlag from "./schema/enum/ais-assigned-mode-flag.json";
+import * as enumAisDte from "./schema/enum/ais-DTE.json";
+import * as enumAisLongRangeControlType from "./schema/enum/ais-long-range-control-type.json";
+import * as enumAisMessageType from "./schema/enum/ais-message-type.json";
+import * as enumAisNavStatus from "./schema/enum/ais-nav-status.json";
+import * as enumAisPositionAccuracy from "./schema/enum/ais-position-accuracy.json";
+import * as enumAisPositionDeviceType from "./schema/enum/ais-position-device-type.json";
+import * as enumAisRaimFlag from "./schema/enum/ais-RAIM-flag.json";
+import * as enumAisShipTypes from "./schema/enum/ais-ship-type.json";
+import * as enumAisSpecialManeuver from "./schema/enum/ais-special-maneuver.json";
 import * as enumDeviceType from "./schema/enum/device-type.json";
 import * as enumEffortZone from "./schema/enum/effort-zone.json";
 import * as enumEquipmentType from "./schema/enum/equipment-type.json";
@@ -89,6 +103,10 @@ export const schemas = {
       scale: baseScale as JSONSchema7,
       spatialAxes: baseSpatialAxes as JSONSchema7,
     },
+    "ais-message": {
+      aisMessage: baseAisMessage as JSONSchema7,
+      positionReport: basePositionReport as JSONSchema7,
+    },
     persona: {
       company: baseCompany as JSONSchema7,
     },
@@ -119,6 +137,7 @@ export const schemas = {
   // Entry schemas
   //
   entry: {
+    aisMessage: entryBaseAisMessage as JSONSchema7,
     arrival: entryArrival as JSONSchema7,
     departure: entryDeparture as JSONSchema7,
     deviceMeasurement: entryDeviceMeasurement as JSONSchema7,
@@ -151,5 +170,16 @@ export const schemas = {
     vesselCompartment: enumVesselCompartment as JSONSchema7,
     scaleCategory: enumScaleCategory as JSONSchema7,
     routeGeometryType: enumRouteGeometryType as JSONSchema7,
+    aisAltitudeSensorType: enumAisAltitudeSensorType as JSONSchema7,
+    aisAssignedModeFlag: enumAisAssignedModeFlag as JSONSchema7,
+    aisDte: enumAisDte as JSONSchema7,
+    aisLongRangeControlType: enumAisLongRangeControlType as JSONSchema7,
+    aisMessageType: enumAisMessageType as JSONSchema7,
+    aisNavStatus: enumAisNavStatus as JSONSchema7,
+    aisPositionDeviceType: enumAisPositionDeviceType as JSONSchema7,
+    aisPostionAccuracy: enumAisPositionAccuracy as JSONSchema7,
+    aisRaimFlag: enumAisRaimFlag as JSONSchema7,
+    aisShipTypes: enumAisShipTypes as JSONSchema7,
+    aisSpecialManeuver: enumAisSpecialManeuver as JSONSchema7,
   },
 };

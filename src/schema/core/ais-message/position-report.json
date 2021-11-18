@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/ais-message/position-report.json",
+  "title": "Position report message from an AIS device",
+  "description": "A device measurement journal entry",
+  "properties": {
+    "position": {
+      "description": "A positional measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/position.json"
+    },
+    "position_accuracy": {
+      "description": "The accuracy of the given position",
+      "$ref": "https://poseidat.org/schema/enum/ais-position-accuracy.json",
+      "default": "LOW"
+    },
+    "speed_over_ground": {
+      "description": "The Speed Over Ground of the ship",
+      "type": "number",
+      "default": 0
+    },
+    "rate_of_turn": {
+      "description": "The Rate Of Turn of the ship in degrees, minus = turning left; plus = turning right; (-128  no turn information available (default))",
+      "type": "number",
+      "default": -128,
+      "minimum": -128,
+      "maximum": 127
+    },
+    "course_over_ground": {
+      "description": "The course over ground (COG) of the vessel 0-3599",
+      "type": "number",
+      "maximum": 3599,
+      "minimum": 0
+    },
+    "true_heading": {
+      "description": "Degrees (0-359) (511 indicates not available = default)",
+      "type": "number",
+      "default": 511,
+      "maximum": 511,
+      "minimum": 0
+    },
+    "raim_flag": {
+      "description": "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device",
+      "$ref": "https://poseidat.org/schema/enum/ais-raim-flag.json",
+      "default": "RAIM_NOT_IN_USE"
+    },
+    "special_maneuvre_indicator": {
+      "description": "Indicates whether an special maneuver is ongoing",
+      "$ref": "https://poseidat.org/schema/enum/ais-special-maneuver.json",
+      "default": "NOT_AVAILABLE"
+    },
+    "timestamp": {
+      "description": "UTC timestamp in seconds of the ais message",
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": ["message_type","position", "position_accuracy", "speed_over_ground",
+    "rate_of_turn", "course_over_ground", "true_heading",
+    "raim_flag", "special_maneuvre_indicator", "timestamp"],
+  "type": "object",
+  "additionalProperties": false
+}
