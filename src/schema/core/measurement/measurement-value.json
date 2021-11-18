@@ -27,6 +27,10 @@
     "fuel_consumption": {
       "description": "A fuel consumption measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
+    },
+    "spatial_axes": {
+      "description": "A fuel consumption measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
     }
  },
  "oneOf": [
@@ -34,7 +38,8 @@
    { "required": [ "type", "position" ] },
    { "required": [ "type", "trawl_tension" ] },
    { "required": [ "type", "scale" ] },
-   { "required": [ "type", "fuel_consumption" ] }
+   { "required": [ "type", "fuel_consumption" ] },
+   { "required": [ "type", "spatial_axes" ] }
  ],
   "type": "object",
   "additionalProperties": false

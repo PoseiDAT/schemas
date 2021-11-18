@@ -25,17 +25,6 @@ export interface ICoreContactDetails {
   /** The email address of the contact */ email?: string;
 }
 
-/** Details of caught fish after it has been processed */
-export interface ICoreFishingCatchProcessed {
-  /** The fish presentation code. Known as PR. Examples: WHL, GUT, FIL */ fish_presentation: IEnumFishPresentation;
-  /** The fish preservation state. NLD: PS. Examples: FRO, ALI, SMO. */ fish_state: IEnumFishState;
-  /** The package type code. NLD: TY */ package_type?: IEnumFishPackageType;
-  /** The number of packages. NLD: NN */ number_of_packages?: number;
-  /** Average product weight, measured in Kg. NLD: AW */ average_package_weight?: number;
-  /** The fish freshness category. NLD: FF. Examples: A, E, V */ fish_freshness?: IEnumFishFreshness;
-  /** The conversion factor (ratio) from dead weight to live weight. Depends on combination of fish species, presentation and state. NLD: CF */ conversion_factor?: number;
-}
-
 export type ICoreFishingCatchMeansOfMeasuring = "EST" | "WGH";
 /** Details of caught fish */
 export interface ICoreFishingCatch {
@@ -52,6 +41,25 @@ export interface ICoreFishingCatch {
   /** The weighed or measured weight. Type depends on means_of_measuring value. NLD3.3: MM */ measured_weight?: string;
   /** Fish size category (1-8; one size or kg, g, cm, mm or number of fish per kg as appropriate). NLD3.3: SF */ fish_size?: string;
   /** Details of the fish after processing. NL: NLPRO, GBR: PRO (also contains SPE) */ processed?: ICoreFishingCatchProcessed;
+}
+
+/** Details of caught fish after it has been processed */
+export interface ICoreFishingCatchProcessed {
+  /** The fish presentation code. Known as PR. Examples: WHL, GUT, FIL */ fish_presentation: IEnumFishPresentation;
+  /** The fish preservation state. NLD: PS. Examples: FRO, ALI, SMO. */ fish_state: IEnumFishState;
+  /** The package type code. NLD: TY */ package_type?: IEnumFishPackageType;
+  /** The number of packages. NLD: NN */ number_of_packages?: number;
+  /** Average product weight, measured in Kg. NLD: AW */ average_package_weight?: number;
+  /** The fish freshness category. NLD: FF. Examples: A, E, V */ fish_freshness?: IEnumFishFreshness;
+  /** The conversion factor (ratio) from dead weight to live weight. Depends on combination of fish species, presentation and state. NLD: CF */ conversion_factor?: number;
+}
+
+/** Fishing gear details */
+export interface ICoreFishingGear {
+  /** Gear code corresponding to the FAO’s International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE */ code: IEnumFishingGearType;
+  /** The fishing gear mesh size measured in millimeters. NLD: ME, GBR: ME */ mesh_size?: number;
+  /** The number of fishing gear items. NLD: NN, GBR: GBRGNL */ amount?: number;
+  /** The total length of the fishing gear in meters. NLD: TL, GBR: GBRGNT */ length?: number;
 }
 
 /** Fishing gear deployment details */
@@ -103,14 +111,6 @@ export interface ICoreFishingGearShot {
   /** The geographical location where the gear shot took place */ location: IMeasurementPosition;
   /** The identification tag attached to the retrieved gear. NLD: NI, GBR: GBRGNFN */ identifier?: string;
   /** Indicator of where zone fishing will be commencing. Data recorded in accordance with Norwegian requirements. Known as GBRZO */ country_zones?: string;
-}
-
-/** Fishing gear details */
-export interface ICoreFishingGear {
-  /** Gear code corresponding to the FAO’s International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE */ code: IEnumFishingGearType;
-  /** The fishing gear mesh size measured in millimeters. NLD: ME, GBR: ME */ mesh_size?: number;
-  /** The number of fishing gear items. NLD: NN, GBR: GBRGNL */ amount?: number;
-  /** The total length of the fishing gear in meters. NLD: TL, GBR: GBRGNT */ length?: number;
 }
 
 /** Fishing tow details */
@@ -183,6 +183,24 @@ export interface ICoreTripEntry {
   /** The geographical location where the entry was created (for) */ location?: IMeasurementPosition;
 }
 
+/** The vessel information */
+export interface ICoreVessel {
+  /** The display name for the vessel */ name: string;
+  /** The vessels flag state and country to report ERS messages to. Should be a 3 letter ISO code. */ flag_state: string;
+  /** The vessel's Community Fleet Registration number. Fixed format defined by the pattern: "AAAXXXXXXXXX" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.). Known as CFR or IR */ cfr: string;
+  /** The vessels international radio call sign (RC) */ call_sign?: string;
+  /** The vessel's side (hull) registration number. Also known as XR or PLN. May contain dots or dashes */ hull_number: string;
+  /** GBR ONLY: The vessel's unique identity number as recorded by the UK Registrar of Seamen and Shipping */ gbr_rss?: string;
+  /** International Commission for the Conservation of Atlantic Tuna identifier */ iccat?: string;
+  /** Global Fisheries Council of the Mediterranean identifier */ gfcm?: string;
+  /** Unique Vessel Identifier (IMO number). A number issued by the tuna RFMOs or by ISSF. */ uvi?: string;
+  /** The unique identification of a vessel according to Lloyds register */ imo_code?: string;
+  /** The net loading capacity of the vessel, expressed in tons */ net_tonnage?: number;
+  /** The gross loading capacity of the vessel, expressed in tons */ gross_tonnage?: number;
+  /** The date the vessel was registered */ registration_date?: string;
+  /** The full length of the vessel in meters */ full_length?: number;
+}
+
 /** Vessel inspection details */
 export interface ICoreVesselInspection {
   /** The datetime the inspection took place */ date: string;
@@ -218,24 +236,6 @@ export interface ICoreVesselSection {
   /** The x position in cm, the position which is closest to the port side is 0cm */ pos_x?: number;
   /** The y position in cm, the position which is closest to the stern is 0cm */ pos_y?: number;
   /** The z position in cm, the position which is closest to the keel is 0cm */ pos_z?: number;
-}
-
-/** The vessel information */
-export interface ICoreVessel {
-  /** The display name for the vessel */ name: string;
-  /** The vessels flag state and country to report ERS messages to. Should be a 3 letter ISO code. */ flag_state: string;
-  /** The vessel's Community Fleet Registration number. Fixed format defined by the pattern: "AAAXXXXXXXXX" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.). Known as CFR or IR */ cfr: string;
-  /** The vessels international radio call sign (RC) */ call_sign?: string;
-  /** The vessel's side (hull) registration number. Also known as XR or PLN. May contain dots or dashes */ hull_number: string;
-  /** GBR ONLY: The vessel's unique identity number as recorded by the UK Registrar of Seamen and Shipping */ gbr_rss?: string;
-  /** International Commission for the Conservation of Atlantic Tuna identifier */ iccat?: string;
-  /** Global Fisheries Council of the Mediterranean identifier */ gfcm?: string;
-  /** Unique Vessel Identifier (IMO number). A number issued by the tuna RFMOs or by ISSF. */ uvi?: string;
-  /** The unique identification of a vessel according to Lloyds register */ imo_code?: string;
-  /** The net loading capacity of the vessel, expressed in tons */ net_tonnage?: number;
-  /** The gross loading capacity of the vessel, expressed in tons */ gross_tonnage?: number;
-  /** The date the vessel was registered */ registration_date?: string;
-  /** The full length of the vessel in meters */ full_length?: number;
 }
 
 /** A device which is a part of a piece of equipment installed on a vessel */
@@ -279,6 +279,7 @@ export interface IMeasurementMeasurementValue {
   /** A trawl tension measurement */ trawl_tension?: IMeasurementTrawlTension;
   /** A scale measurement */ scale?: IMeasurementScale;
   /** A fuel consumption measurement */ fuel_consumption?: IMeasurementFuelConsumption;
+  /** A fuel consumption measurement */ spatial_axes?: IMeasurementSpatialAxes;
 }
 
 /** A number representing a measurement from a sensor */
@@ -308,6 +309,13 @@ export interface IMeasurementScale {
   /** The weight of the product */ weight: number;
   /** The category of the scaled product */ category: IEnumScaleCategory;
   /** The type of the product, e.g. a type of fish */ product: string;
+}
+
+/** The spatial axes for a given sensor */
+export interface IMeasurementSpatialAxes {
+  /** The easting coordinate range */ x: number;
+  /** The northing coordinate range */ y: number;
+  /** The elevation of the coordinate range */ z: number;
 }
 
 /** A combination of sensor measurements for the trawl tension */
@@ -345,6 +353,8 @@ export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FIND
 
 export type IEnumFishFreshness = "A" | "B" | "E" | "SO" | "V";
 
+export type IEnumFishingGearType = "DRB" | "FIX" | "FPO" | "GEN" | "GN" | "GNC" | "GND" | "GNF" | "GNS" | "GTN" | "GTR" | "HMD" | "KRK" | "LA" | "LHM" | "LHP" | "LL" | "LLD" | "LLS" | "LTL" | "LX" | "MIS" | "NK" | "OTB" | "OTM" | "OTT" | "PS" | "PS1" | "PS2" | "PTB" | "PTM" | "PUL" | "RG" | "SDN" | "SPR" | "SSC" | "SV" | "SX" | "TB" | "TBB" | "TBN" | "TBS";
+
 export type IEnumFishPackageType = "CNT" | "EC" | "OK" | "QS" | "CN" | "CT" | "VO" | "4H" | "BX" | "5H" | "QR" | "TB" | "NF" | "NG" | "ZB";
 
 export type IEnumFishPresentation = "BMS" | "CBF" | "CLA" | "DWT" | "FIL" | "FIS" | "FSB" | "FSP" | "GHT" | "GTA" | "GTF" | "GUG" | "GUH" | "GUL" | "GUS" | "GUT" | "HEA" | "HET" | "JAP" | "JAT" | "LAP" | "LVR-C" | "LVR" | "OTH" | "ROE-C" | "ROE" | "SAD" | "SAL" | "SGH" | "SGT" | "SKI" | "SUR" | "TAL" | "TLD" | "TNG-C" | "TNG" | "TUB" | "WHL" | "WNG" | "WNG+SKI";
@@ -353,13 +363,11 @@ export type IEnumFishState = "ALI" | "BOI" | "DRI" | "FRE" | "FRO" | "SAL" | "SM
 
 export type IEnumFishType = "ANF" | "BLL" | "BIB" | "COD" | "CRE" | "DAB" | "GUU" | "HAD" | "HKE" | "JOD" | "LEM" | "LEZ" | "LIN" | "MUR" | "OCZ" | "PLE" | "RJH" | "RJI" | "RJM" | "RSC" | "SCE" | "SOL" | "SYC" | "SYT" | "TUR" | "WHE" | "MAC" | "WIT" | "OCT" | "POL" | "CTC" | "SOX" | "SQU" | "COE" | "BSS" | "CAA" | "CRA" | "FLE" | "POK" | "RJC" | "RJN" | "WEG" | "NEP" | "IJS" | "WHG" | "RJB" | "SBR" | "SKH" | "SMD" | "SRX" | "TSD" | "WEX" | "GAG" | "GUG" | "GUR" | "HAL" | "LBE" | "LYY" | "MUL" | "OCC" | "PIL" | "BRB" | "REG";
 
-export type IEnumFishingGearType = "DRB" | "FIX" | "FPO" | "GEN" | "GN" | "GNC" | "GND" | "GNF" | "GNS" | "GTN" | "GTR" | "HMD" | "KRK" | "LA" | "LHM" | "LHP" | "LL" | "LLD" | "LLS" | "LTL" | "LX" | "MIS" | "NK" | "OTB" | "OTM" | "OTT" | "PS" | "PS1" | "PS2" | "PTB" | "PTM" | "PUL" | "RG" | "SDN" | "SPR" | "SSC" | "SV" | "SX" | "TB" | "TBB" | "TBN" | "TBS";
-
 export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
 
 export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
 
-export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM" | "ROUTE";
+export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM" | "ROUTE" | "SPATIAL_AXES";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 
