@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/ais-message/ais-message.json",
   "title": "Measurement value",
-  "description": "The value of a certain type of measurement",
+  "description": "The message that gets send by an AIS device. Most properties outside of 'entity_id', 'message_type' and 'repeat_indicator' are not required since the AIS device sets undefined values to a default value.",
   "properties": {
     "entity_id": {
       "description": "The mmsi identifier (ais entity) this value is related to",
@@ -17,13 +17,13 @@
       "type": "number",
       "default": 3
     },
-    "postion_report": {
+    "position_report": {
       "description": "An AIS position report message",
       "$ref": "https://poseidat.org/schema/core/ais-message/position-report.json"
     }
  },
  "oneOf": [
-   { "required": [ "entity_id", "message_type" , "repeat_indicator", "postion_report"] }
+   { "required": [ "entity_id", "message_type" , "repeat_indicator", "position_report"] }
  ],
   "type": "object",
   "additionalProperties": false

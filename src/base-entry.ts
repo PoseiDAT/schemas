@@ -11,17 +11,12 @@ import { schemas } from './schemas';
  * @class BaseEntry
  */
 export class BaseEntry {
-
   /**
    * Creates an instance of Entry
    *
    * @param {ICoreBaseEntry} [data={}] The data to initialize the Entry with
    */
-  constructor(
-    public data: ICoreBaseEntry,
-    protected schema = schemas.core.baseEntry,
-    entryType = 'base-entry',
-  ) {
+  constructor(public data: ICoreBaseEntry, protected schema = schemas.core.baseEntry, entryType = 'base-entry') {
     this.data.entry_type = entryType;
   }
 
@@ -31,6 +26,6 @@ export class BaseEntry {
    * @returns {ajv.ErrorObject[]}
    */
   public validate(): ErrorObject[] {
-    return validateSchema( { object: this.data, schema: this.schema } );
+    return validateSchema({ object: this.data, schema: this.schema });
   }
 }

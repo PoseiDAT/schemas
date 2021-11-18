@@ -2,21 +2,23 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/ais-message/position-report.json",
   "title": "Position report message from an AIS device",
-  "description": "A device measurement journal entry",
+  "description": "A position report message for the AIS.",
   "properties": {
     "position": {
-      "description": "A positional measurement",
+      "description": "The position of the AIS entity",
       "$ref": "https://poseidat.org/schema/core/measurement/position.json"
     },
     "position_accuracy": {
-      "description": "The accuracy of the given position",
+      "description": "The accuracy of the given AIS position",
       "$ref": "https://poseidat.org/schema/enum/ais-position-accuracy.json",
       "default": "LOW"
     },
     "speed_over_ground": {
-      "description": "The Speed Over Ground of the ship",
+      "description": "The Speed Over Ground of the ship in 1/10 knot steps (0-102.2 knots). 1 023 = not available, 1 022 = 102.2 knots or higher",
       "type": "number",
-      "default": 0
+      "minimum": 0,
+      "maximum": 1023,
+      "default": 1023
     },
     "rate_of_turn": {
       "description": "The Rate Of Turn of the ship in degrees, minus = turning left; plus = turning right; (-128  no turn information available (default))",
@@ -26,9 +28,10 @@
       "maximum": 127
     },
     "course_over_ground": {
-      "description": "The course over ground (COG) of the vessel 0-3599",
+      "description": "The course over ground (COG) of the vessel 0-3599. 3600 = not available = default.",
       "type": "number",
-      "maximum": 3599,
+      "maximum": 3600,
+      "default": 3600,
       "minimum": 0
     },
     "true_heading": {
@@ -47,16 +50,8 @@
       "description": "Indicates whether an special maneuver is ongoing",
       "$ref": "https://poseidat.org/schema/enum/ais-special-maneuver.json",
       "default": "NOT_AVAILABLE"
-    },
-    "timestamp": {
-      "description": "UTC timestamp in seconds of the ais message",
-      "type": "number",
-      "default": 0
     }
   },
-  "required": ["message_type","position", "position_accuracy", "speed_over_ground",
-    "rate_of_turn", "course_over_ground", "true_heading",
-    "raim_flag", "special_maneuvre_indicator", "timestamp"],
   "type": "object",
   "additionalProperties": false
 }

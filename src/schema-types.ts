@@ -25,7 +25,7 @@ export interface ICoreContactDetails {
   /** The email address of the contact */ email?: string;
 }
 
-export type ICoreFishingCatchMeansOfMeasuring = "EST" | "WGH";
+export type ICoreFishingCatchMeansOfMeasuring = 'EST' | 'WGH';
 /** Details of caught fish */
 export interface ICoreFishingCatch {
   /** The fish species code. NLD: SN, GBR: SN */ code: string;
@@ -238,25 +238,24 @@ export interface ICoreVesselSection {
   /** The z position in cm, the position which is closest to the keel is 0cm */ pos_z?: number;
 }
 
-/** The value of a certain type of measurement */
+/** The message that gets send by an AIS device. Most properties outside of 'entity_id', 'message_type' and 'repeat_indicator' are not required since the AIS device sets undefined values to a default value. */
 export interface IAisMessageAisMessage {
   /** The mmsi identifier (ais entity) this value is related to */ entity_id?: number;
   /** The message type of the given AIS measurement */ message_type?: IEnumAisMessageType;
   /** The amount of times the message has been repeated (3 is do not repeat anymore) */ repeat_indicator?: number;
-  /** An AIS position report message */ postion_report?: IAisMessagePositionReport;
+  /** An AIS position report message */ position_report?: IAisMessagePositionReport;
 }
 
-/** A device measurement journal entry */
+/** A position report message for the AIS. */
 export interface IAisMessagePositionReport {
-  /** A positional measurement */ position: IMeasurementPosition;
-  /** The accuracy of the given position */ position_accuracy: IEnumAisPositionAccuracy;
-  /** The Speed Over Ground of the ship */ speed_over_ground: number;
-  /** The Rate Of Turn of the ship in degrees, minus = turning left; plus = turning right; (-128  no turn information available (default)) */ rate_of_turn: number;
-  /** The course over ground (COG) of the vessel 0-3599 */ course_over_ground: number;
-  /** Degrees (0-359) (511 indicates not available = default) */ true_heading: number;
-  /** Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device */ raim_flag: IEnumAisRaimFlag;
-  /** Indicates whether an special maneuver is ongoing */ special_maneuvre_indicator: IEnumAisSpecialManeuver;
-  /** UTC timestamp in seconds of the ais message */ timestamp: number;
+  /** The position of the AIS entity */ position?: IMeasurementPosition;
+  /** The accuracy of the given AIS position */ position_accuracy?: IEnumAisPositionAccuracy;
+  /** The Speed Over Ground of the ship in 1/10 knot steps (0-102.2 knots). 1 023 = not available, 1 022 = 102.2 knots or higher */ speed_over_ground?: number;
+  /** The Rate Of Turn of the ship in degrees, minus = turning left; plus = turning right; (-128  no turn information available (default)) */ rate_of_turn?: number;
+  /** The course over ground (COG) of the vessel 0-3599. 3600 = not available = default. */ course_over_ground?: number;
+  /** Degrees (0-359) (511 indicates not available = default) */ true_heading?: number;
+  /** Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device */ raim_flag?: IEnumAisRaimFlag;
+  /** Indicates whether an special maneuver is ongoing */ special_maneuvre_indicator?: IEnumAisSpecialManeuver;
 }
 
 /** A device which is a part of a piece of equipment installed on a vessel */
@@ -366,65 +365,406 @@ export interface IPersonaCompany {
   /** The contact details of the company */ contact?: ICoreContactDetails;
 }
 
-export type IEnumAisAltitudeSensorType = "GNSS" | "BAROMETRIC_SOURCE";
+export type IEnumAisAltitudeSensorType = 'GNSS' | 'BAROMETRIC_SOURCE';
 
-export type IEnumAisAssignedModeFlag = "AUTONOMOUS_CONTINUOUS_MODE" | "ASSIGNED_MODE";
+export type IEnumAisAssignedModeFlag = 'AUTONOMOUS_CONTINUOUS_MODE' | 'ASSIGNED_MODE';
 
-export type IEnumAisDte = "AVAILABLE" | "NOT_AVAILABLE";
+export type IEnumAisDte = 'AVAILABLE' | 'NOT_AVAILABLE';
 
-export type IEnumAisLongRangeControlType = "STOP_TRANSMISSION_MESSAGE_27" | "REQUEST_TRANSMISSION_MESSAGE_27";
+export type IEnumAisLongRangeControlType = 'STOP_TRANSMISSION_MESSAGE_27' | 'REQUEST_TRANSMISSION_MESSAGE_27';
 
-export type IEnumAisMessageType = "POSITION_REPORT" | "BASE_STATION_REPORT" | "STATIC_AND_VOYAGE_DATA" | "BINARY_MESSAGE" | "BINARY_ACKNOWLEDGEMENT" | "BINARY_BROADCAST_MESSAGE" | "SAR_AIRCRAFT_POSITION_REPORT" | "UTC_DATE_INQUIRY" | "UTC_DATE_RESPONSE" | "ADDRESSED_SAFETY_RELATED_MESSAGE" | "SAFETY_RELATED_ACKNOWLEDGEMENT" | "SAFETY_RELATED_BROADCAST_MESSAGE" | "INTERROGATION" | "ASSIGNMENT_MODE_COMMAND" | "DGNSS_BROADCAST_BINARY_MESSAGE" | "CLASS_B_EQUIPMENT_POSITION_REPORT" | "EXTENDED_CLASS_B_EQUIPMENT_POSITION_REPORT" | "DATA_LINK_MANAGEMENT_MESSAGE" | "AIDS_TO_NAVIGATION_REPORT" | "CHANNEL_MANAGEMENT" | "GROUP_ASSIGNMENT_COMMAND" | "STATIC_DATA_REPORT" | "SINGLE_SLOT_BINARY_MESSAGE" | "MULTIPLE_SLOT_BINARY_MESSAGE" | "LONG_RANGE_APPLICATION_POSITION_REPORT" | "RESERVER_FOR_FUTURE_USE";
+export type IEnumAisMessageType =
+  | 'POSITION_REPORT'
+  | 'BASE_STATION_REPORT'
+  | 'STATIC_AND_VOYAGE_DATA'
+  | 'BINARY_MESSAGE'
+  | 'BINARY_ACKNOWLEDGEMENT'
+  | 'BINARY_BROADCAST_MESSAGE'
+  | 'SAR_AIRCRAFT_POSITION_REPORT'
+  | 'UTC_DATE_INQUIRY'
+  | 'UTC_DATE_RESPONSE'
+  | 'ADDRESSED_SAFETY_RELATED_MESSAGE'
+  | 'SAFETY_RELATED_ACKNOWLEDGEMENT'
+  | 'SAFETY_RELATED_BROADCAST_MESSAGE'
+  | 'INTERROGATION'
+  | 'ASSIGNMENT_MODE_COMMAND'
+  | 'DGNSS_BROADCAST_BINARY_MESSAGE'
+  | 'CLASS_B_EQUIPMENT_POSITION_REPORT'
+  | 'EXTENDED_CLASS_B_EQUIPMENT_POSITION_REPORT'
+  | 'DATA_LINK_MANAGEMENT_MESSAGE'
+  | 'AIDS_TO_NAVIGATION_REPORT'
+  | 'CHANNEL_MANAGEMENT'
+  | 'GROUP_ASSIGNMENT_COMMAND'
+  | 'STATIC_DATA_REPORT'
+  | 'SINGLE_SLOT_BINARY_MESSAGE'
+  | 'MULTIPLE_SLOT_BINARY_MESSAGE'
+  | 'LONG_RANGE_APPLICATION_POSITION_REPORT'
+  | 'RESERVER_FOR_FUTURE_USE';
 
-export type IEnumAisNavStatus = "UNDER_WAY_USING_ENGINE" | "AT_ANCHOR" | "NOT_UNDER_COMMAND" | "RESTRICTED_MANOEUVERABILITY" | "CONSTRAINED_BY_HER_DRAUGHT" | "MOORED" | "AGROUND" | "ENGAGED_IN_FISHING" | "UNDER_WAY_SAILING" | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_HSC" | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_WIG" | "RESERVED_FOR_FUTURE_USE" | "AIS_SART_ACTIVE" | "NOT_DEFINED (DEFAULT)";
+export type IEnumAisNavStatus =
+  | 'UNDER_WAY_USING_ENGINE'
+  | 'AT_ANCHOR'
+  | 'NOT_UNDER_COMMAND'
+  | 'RESTRICTED_MANOEUVERABILITY'
+  | 'CONSTRAINED_BY_HER_DRAUGHT'
+  | 'MOORED'
+  | 'AGROUND'
+  | 'ENGAGED_IN_FISHING'
+  | 'UNDER_WAY_SAILING'
+  | 'RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_HSC'
+  | 'RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_WIG'
+  | 'RESERVED_FOR_FUTURE_USE'
+  | 'AIS_SART_ACTIVE'
+  | 'NOT_DEFINED (DEFAULT)';
 
-export type IEnumAisPositionAccuracy = "LOW" | "HIGH";
+export type IEnumAisPositionAccuracy = 'LOW' | 'HIGH';
 
-export type IEnumAisPositionDeviceType = "UNDEFINED (DEFAULT)" | "GPS" | "GLONASS" | "COMBINED_GPS_GLONASS" | "LORAN_C" | "CHAYKA" | "INTEGRATED_NAVIGATION_SYSTEM" | "SURVEYED" | "GALILEO" | "NOT_USED" | "INTERNAL_GNSS";
+export type IEnumAisPositionDeviceType =
+  | 'UNDEFINED (DEFAULT)'
+  | 'GPS'
+  | 'GLONASS'
+  | 'COMBINED_GPS_GLONASS'
+  | 'LORAN_C'
+  | 'CHAYKA'
+  | 'INTEGRATED_NAVIGATION_SYSTEM'
+  | 'SURVEYED'
+  | 'GALILEO'
+  | 'NOT_USED'
+  | 'INTERNAL_GNSS';
 
-export type IEnumAisRaimFlag = "RAIM_NOT_IN_USE" | "RAIM_IN_USE";
+export type IEnumAisRaimFlag = 'RAIM_NOT_IN_USE' | 'RAIM_IN_USE';
 
-export type IEnumAisShipType = "NOT_AVAILABLE (DEFAULT)" | "RESERVED_FOR_FUTURE_USE" | "WING_IN_GROUND_ALL_SHIPS_OF_THIS_TYPE" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_A" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_B" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_C" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_D" | "WING_IN_GROUND_RESERVED_FOR_FUTURE_USE" | "FISHING" | "TOWING" | "TOWING_LENGTH_EXCEEDS_200M_OR_BREADTH_EXCEEDS_25M" | "DREDGING_OR_UNDERWATER_OPS" | "DIVING_OPS" | "MILITARY_OPS" | "SAILING" | "PLEASURE_CRAFT" | "RESERVED" | "HIGH_SPEED_CRAFT_ALL_SHIPS_OF_THIS_TYPE" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_A" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_B" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_C" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_D" | "HIGH_SPEED_CRAFT_RESERVED_FOR_FUTURE_USE" | "HIGH_SPEED_CRAFT_NO_ADDITIONAL_INFORMATION" | "PILOT_VESSEL" | "SEARCH_AND_RESCUE_VESSEL" | "TUG" | "PORT_TENDER" | "ANTI_POLLUTION_EQUIPMENT" | "LAW_ENFORCEMENT" | "SPARE_LOCAL_VESSEL" | "MEDICAL_TRANSPORT" | "NON_COMBATANT_SHIP" | "PASSENGER_ALL_SHIPS_OF_THIS_TYPE" | "PASSENGER_HAZARDOUS_CATEGORY_A" | "PASSENGER_HAZARDOUS_CATEGORY_B" | "PASSENGER_HAZARDOUS_CATEGORY_C" | "PASSENGER_HAZARDOUS_CATEGORY_D" | "PASSENGER_RESERVED_FOR_FUTURE_USE" | "PASSENGER_NO_ADDITIONAL_INFORMATION" | "CARGO_ALL_SHIPS_OF_THIS_TYPE" | "CARGO_HAZARDOUS_CATEGORY_A" | "CARGO_HAZARDOUS_CATEGORY_B" | "CARGO_HAZARDOUS_CATEGORY_C" | "CARGO_HAZARDOUS_CATEGORY_D" | "CARGO_RESERVED_FOR_FUTURE_USE" | "CARGO_NO_ADDITIONAL_INFORMATION" | "TANKER_ALL_SHIPS_OF_THIS_TYPE" | "TANKER_HAZARDOUS_CATEGORY_A" | "TANKER_HAZARDOUS_CATEGORY_B" | "TANKER_HAZARDOUS_CATEGORY_C" | "TANKER_HAZARDOUS_CATEGORY_D" | "TANKER_RESERVED_FOR_FUTURE_USE" | "TANKER_NO_ADDITIONAL_INFORMATION" | "OTHER_TYPE_ALL_SHIPS_OF_THIS_TYPE" | "OTHER_TYPE_HAZARDOUS_CATEGORY_A" | "OTHER_TYPE_HAZARDOUS_CATEGORY_B" | "OTHER_TYPE_HAZARDOUS_CATEGORY_C" | "OTHER_TYPE_HAZARDOUS_CATEGORY_D" | "OTHER_TYPE_RESERVED_FOR_FUTURE_USE" | "OTHER_TYPE_NO_ADDITIONAL_INFORMATION";
+export type IEnumAisShipType =
+  | 'NOT_AVAILABLE (DEFAULT)'
+  | 'RESERVED_FOR_FUTURE_USE'
+  | 'WING_IN_GROUND_ALL_SHIPS_OF_THIS_TYPE'
+  | 'WING_IN_GROUND_HAZARDOUS_CATEGORY_A'
+  | 'WING_IN_GROUND_HAZARDOUS_CATEGORY_B'
+  | 'WING_IN_GROUND_HAZARDOUS_CATEGORY_C'
+  | 'WING_IN_GROUND_HAZARDOUS_CATEGORY_D'
+  | 'WING_IN_GROUND_RESERVED_FOR_FUTURE_USE'
+  | 'FISHING'
+  | 'TOWING'
+  | 'TOWING_LENGTH_EXCEEDS_200M_OR_BREADTH_EXCEEDS_25M'
+  | 'DREDGING_OR_UNDERWATER_OPS'
+  | 'DIVING_OPS'
+  | 'MILITARY_OPS'
+  | 'SAILING'
+  | 'PLEASURE_CRAFT'
+  | 'RESERVED'
+  | 'HIGH_SPEED_CRAFT_ALL_SHIPS_OF_THIS_TYPE'
+  | 'HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_A'
+  | 'HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_B'
+  | 'HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_C'
+  | 'HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_D'
+  | 'HIGH_SPEED_CRAFT_RESERVED_FOR_FUTURE_USE'
+  | 'HIGH_SPEED_CRAFT_NO_ADDITIONAL_INFORMATION'
+  | 'PILOT_VESSEL'
+  | 'SEARCH_AND_RESCUE_VESSEL'
+  | 'TUG'
+  | 'PORT_TENDER'
+  | 'ANTI_POLLUTION_EQUIPMENT'
+  | 'LAW_ENFORCEMENT'
+  | 'SPARE_LOCAL_VESSEL'
+  | 'MEDICAL_TRANSPORT'
+  | 'NON_COMBATANT_SHIP'
+  | 'PASSENGER_ALL_SHIPS_OF_THIS_TYPE'
+  | 'PASSENGER_HAZARDOUS_CATEGORY_A'
+  | 'PASSENGER_HAZARDOUS_CATEGORY_B'
+  | 'PASSENGER_HAZARDOUS_CATEGORY_C'
+  | 'PASSENGER_HAZARDOUS_CATEGORY_D'
+  | 'PASSENGER_RESERVED_FOR_FUTURE_USE'
+  | 'PASSENGER_NO_ADDITIONAL_INFORMATION'
+  | 'CARGO_ALL_SHIPS_OF_THIS_TYPE'
+  | 'CARGO_HAZARDOUS_CATEGORY_A'
+  | 'CARGO_HAZARDOUS_CATEGORY_B'
+  | 'CARGO_HAZARDOUS_CATEGORY_C'
+  | 'CARGO_HAZARDOUS_CATEGORY_D'
+  | 'CARGO_RESERVED_FOR_FUTURE_USE'
+  | 'CARGO_NO_ADDITIONAL_INFORMATION'
+  | 'TANKER_ALL_SHIPS_OF_THIS_TYPE'
+  | 'TANKER_HAZARDOUS_CATEGORY_A'
+  | 'TANKER_HAZARDOUS_CATEGORY_B'
+  | 'TANKER_HAZARDOUS_CATEGORY_C'
+  | 'TANKER_HAZARDOUS_CATEGORY_D'
+  | 'TANKER_RESERVED_FOR_FUTURE_USE'
+  | 'TANKER_NO_ADDITIONAL_INFORMATION'
+  | 'OTHER_TYPE_ALL_SHIPS_OF_THIS_TYPE'
+  | 'OTHER_TYPE_HAZARDOUS_CATEGORY_A'
+  | 'OTHER_TYPE_HAZARDOUS_CATEGORY_B'
+  | 'OTHER_TYPE_HAZARDOUS_CATEGORY_C'
+  | 'OTHER_TYPE_HAZARDOUS_CATEGORY_D'
+  | 'OTHER_TYPE_RESERVED_FOR_FUTURE_USE'
+  | 'OTHER_TYPE_NO_ADDITIONAL_INFORMATION';
 
-export type IEnumAisSpecialManeuver = "NOT_AVAILABLE" | "NOT_ENGAGED_IN_SPECIAL_MANEUVER" | "ENGAGED_IN_SPECIAL_MANEUVER";
+export type IEnumAisSpecialManeuver = 'NOT_AVAILABLE' | 'NOT_ENGAGED_IN_SPECIAL_MANEUVER' | 'ENGAGED_IN_SPECIAL_MANEUVER';
 
-export type IEnumDeviceType = "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER" | "ECONOMETER" | "SCALE" | "RECEIVER" | "TRANSMITTER" | "TRANSCEIVER";
+export type IEnumDeviceType =
+  | 'PUMP'
+  | 'PROCESSOR'
+  | 'DISPLAY'
+  | 'HID'
+  | 'ROUTER'
+  | 'SWITCH'
+  | 'MODEM'
+  | 'SENSOR'
+  | 'BRAKE'
+  | 'ACTUATOR'
+  | 'CABLE'
+  | 'ENCLOSURE'
+  | 'CIRCUIT_BREAKER'
+  | 'ECONOMETER'
+  | 'SCALE'
+  | 'RECEIVER'
+  | 'TRANSMITTER'
+  | 'TRANSCEIVER';
 
-export type IEnumEffortZone = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y";
+export type IEnumEffortZone =
+  | 'A'
+  | 'B'
+  | 'C'
+  | 'D'
+  | 'E'
+  | 'F'
+  | 'G'
+  | 'H'
+  | 'J'
+  | 'K'
+  | 'L'
+  | 'M'
+  | 'N'
+  | 'O'
+  | 'P'
+  | 'Q'
+  | 'R'
+  | 'S'
+  | 'T'
+  | 'U'
+  | 'V'
+  | 'W'
+  | 'X'
+  | 'Y';
 
-export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR" | "SCALE" | "ECDIS" | "ECS";
+export type IEnumEquipmentType =
+  | 'ENGINE'
+  | 'GNSS'
+  | 'ECHO_SOUNDER'
+  | 'FISH_FINDER'
+  | 'AIS'
+  | 'TANK_LEVEL_METER'
+  | 'TENSIOMETER'
+  | 'CHARGER'
+  | 'SEPARATOR'
+  | 'COMPASS'
+  | 'V_SAT'
+  | 'REFRIGERATOR'
+  | 'ICE_MAKER'
+  | 'WINCH'
+  | 'RUDDER'
+  | 'PROPELLER'
+  | 'PUMP'
+  | 'SENSOR'
+  | 'SCALE'
+  | 'ECDIS'
+  | 'ECS';
 
-export type IEnumFishFreshness = "A" | "B" | "E" | "SO" | "V";
+export type IEnumFishFreshness = 'A' | 'B' | 'E' | 'SO' | 'V';
 
-export type IEnumFishingGearType = "DRB" | "FIX" | "FPO" | "GEN" | "GN" | "GNC" | "GND" | "GNF" | "GNS" | "GTN" | "GTR" | "HMD" | "KRK" | "LA" | "LHM" | "LHP" | "LL" | "LLD" | "LLS" | "LTL" | "LX" | "MIS" | "NK" | "OTB" | "OTM" | "OTT" | "PS" | "PS1" | "PS2" | "PTB" | "PTM" | "PUL" | "RG" | "SDN" | "SPR" | "SSC" | "SV" | "SX" | "TB" | "TBB" | "TBN" | "TBS";
+export type IEnumFishingGearType =
+  | 'DRB'
+  | 'FIX'
+  | 'FPO'
+  | 'GEN'
+  | 'GN'
+  | 'GNC'
+  | 'GND'
+  | 'GNF'
+  | 'GNS'
+  | 'GTN'
+  | 'GTR'
+  | 'HMD'
+  | 'KRK'
+  | 'LA'
+  | 'LHM'
+  | 'LHP'
+  | 'LL'
+  | 'LLD'
+  | 'LLS'
+  | 'LTL'
+  | 'LX'
+  | 'MIS'
+  | 'NK'
+  | 'OTB'
+  | 'OTM'
+  | 'OTT'
+  | 'PS'
+  | 'PS1'
+  | 'PS2'
+  | 'PTB'
+  | 'PTM'
+  | 'PUL'
+  | 'RG'
+  | 'SDN'
+  | 'SPR'
+  | 'SSC'
+  | 'SV'
+  | 'SX'
+  | 'TB'
+  | 'TBB'
+  | 'TBN'
+  | 'TBS';
 
-export type IEnumFishPackageType = "CNT" | "EC" | "OK" | "QS" | "CN" | "CT" | "VO" | "4H" | "BX" | "5H" | "QR" | "TB" | "NF" | "NG" | "ZB";
+export type IEnumFishPackageType = 'CNT' | 'EC' | 'OK' | 'QS' | 'CN' | 'CT' | 'VO' | '4H' | 'BX' | '5H' | 'QR' | 'TB' | 'NF' | 'NG' | 'ZB';
 
-export type IEnumFishPresentation = "BMS" | "CBF" | "CLA" | "DWT" | "FIL" | "FIS" | "FSB" | "FSP" | "GHT" | "GTA" | "GTF" | "GUG" | "GUH" | "GUL" | "GUS" | "GUT" | "HEA" | "HET" | "JAP" | "JAT" | "LAP" | "LVR-C" | "LVR" | "OTH" | "ROE-C" | "ROE" | "SAD" | "SAL" | "SGH" | "SGT" | "SKI" | "SUR" | "TAL" | "TLD" | "TNG-C" | "TNG" | "TUB" | "WHL" | "WNG" | "WNG+SKI";
+export type IEnumFishPresentation =
+  | 'BMS'
+  | 'CBF'
+  | 'CLA'
+  | 'DWT'
+  | 'FIL'
+  | 'FIS'
+  | 'FSB'
+  | 'FSP'
+  | 'GHT'
+  | 'GTA'
+  | 'GTF'
+  | 'GUG'
+  | 'GUH'
+  | 'GUL'
+  | 'GUS'
+  | 'GUT'
+  | 'HEA'
+  | 'HET'
+  | 'JAP'
+  | 'JAT'
+  | 'LAP'
+  | 'LVR-C'
+  | 'LVR'
+  | 'OTH'
+  | 'ROE-C'
+  | 'ROE'
+  | 'SAD'
+  | 'SAL'
+  | 'SGH'
+  | 'SGT'
+  | 'SKI'
+  | 'SUR'
+  | 'TAL'
+  | 'TLD'
+  | 'TNG-C'
+  | 'TNG'
+  | 'TUB'
+  | 'WHL'
+  | 'WNG'
+  | 'WNG+SKI';
 
-export type IEnumFishState = "ALI" | "BOI" | "DRI" | "FRE" | "FRO" | "SAL" | "SMO";
+export type IEnumFishState = 'ALI' | 'BOI' | 'DRI' | 'FRE' | 'FRO' | 'SAL' | 'SMO';
 
-export type IEnumFishType = "ANF" | "BLL" | "BIB" | "COD" | "CRE" | "DAB" | "GUU" | "HAD" | "HKE" | "JOD" | "LEM" | "LEZ" | "LIN" | "MUR" | "OCZ" | "PLE" | "RJH" | "RJI" | "RJM" | "RSC" | "SCE" | "SOL" | "SYC" | "SYT" | "TUR" | "WHE" | "MAC" | "WIT" | "OCT" | "POL" | "CTC" | "SOX" | "SQU" | "COE" | "BSS" | "CAA" | "CRA" | "FLE" | "POK" | "RJC" | "RJN" | "WEG" | "NEP" | "IJS" | "WHG" | "RJB" | "SBR" | "SKH" | "SMD" | "SRX" | "TSD" | "WEX" | "GAG" | "GUG" | "GUR" | "HAL" | "LBE" | "LYY" | "MUL" | "OCC" | "PIL" | "BRB" | "REG";
+export type IEnumFishType =
+  | 'ANF'
+  | 'BLL'
+  | 'BIB'
+  | 'COD'
+  | 'CRE'
+  | 'DAB'
+  | 'GUU'
+  | 'HAD'
+  | 'HKE'
+  | 'JOD'
+  | 'LEM'
+  | 'LEZ'
+  | 'LIN'
+  | 'MUR'
+  | 'OCZ'
+  | 'PLE'
+  | 'RJH'
+  | 'RJI'
+  | 'RJM'
+  | 'RSC'
+  | 'SCE'
+  | 'SOL'
+  | 'SYC'
+  | 'SYT'
+  | 'TUR'
+  | 'WHE'
+  | 'MAC'
+  | 'WIT'
+  | 'OCT'
+  | 'POL'
+  | 'CTC'
+  | 'SOX'
+  | 'SQU'
+  | 'COE'
+  | 'BSS'
+  | 'CAA'
+  | 'CRA'
+  | 'FLE'
+  | 'POK'
+  | 'RJC'
+  | 'RJN'
+  | 'WEG'
+  | 'NEP'
+  | 'IJS'
+  | 'WHG'
+  | 'RJB'
+  | 'SBR'
+  | 'SKH'
+  | 'SMD'
+  | 'SRX'
+  | 'TSD'
+  | 'WEX'
+  | 'GAG'
+  | 'GUG'
+  | 'GUR'
+  | 'HAL'
+  | 'LBE'
+  | 'LYY'
+  | 'MUL'
+  | 'OCC'
+  | 'PIL'
+  | 'BRB'
+  | 'REG';
 
-export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
+export type IEnumGnssFixQuality = 'INVALID' | 'GPS_FIX' | 'DGPS_FIX';
 
-export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
+export type IEnumGnssFixType = 'NOT_AVAILABLE' | '2D_FIX' | '3D_FIX';
 
-export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM" | "ROUTE" | "SPATIAL_AXES";
+export type IEnumMeasurementType =
+  | 'POSITION'
+  | 'TEMPERATURE'
+  | 'HUMIDITY'
+  | 'PRESSURE'
+  | 'SPEED'
+  | 'ONOFF'
+  | 'FORCE'
+  | 'FUEL_CONSUMPTION'
+  | 'DEPTH'
+  | 'ACCELERATION'
+  | 'MAGNETISM'
+  | 'ANGULAR_VELOCITY'
+  | 'VOLTAGE'
+  | 'CURRENT'
+  | 'POWER'
+  | 'ENERGY_CONSUMPTION'
+  | 'TRAWL_TENSION'
+  | 'SCALE'
+  | 'RPM'
+  | 'ROUTE'
+  | 'SPATIAL_AXES';
 
-export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
+export type IEnumReasonArrival = 'ECY' | 'GRD' | 'LAN' | 'OTH' | 'REF' | 'REP' | 'RES' | 'SCR' | 'SHE' | 'TRA';
 
-export type IEnumReasonDeparture = "FIS" | "GUD" | "OTH" | "SCR" | "STE" | "TST";
+export type IEnumReasonDeparture = 'FIS' | 'GUD' | 'OTH' | 'SCR' | 'STE' | 'TST';
 
-export type IEnumReasonDiscard = "BAI" | "HSV" | "OTH" | "PDM" | "PRO" | "QEX";
+export type IEnumReasonDiscard = 'BAI' | 'HSV' | 'OTH' | 'PDM' | 'PRO' | 'QEX';
 
-export type IEnumRouteGeometryType = "RHUMB_LINE_LOXODROME" | "GREAT_CICRLE_ORTHODROME";
+export type IEnumRouteGeometryType = 'RHUMB_LINE_LOXODROME' | 'GREAT_CICRLE_ORTHODROME';
 
-export type IEnumScaleCategory = "FISH";
+export type IEnumScaleCategory = 'FISH';
 
-export type IEnumVesselCompartment = "DECK" | "BRIDGE" | "GALLEY" | "ENGINE_ROOM" | "FISH_HOLD" | "CABIN" | "BOW" | "STERN";
+export type IEnumVesselCompartment = 'DECK' | 'BRIDGE' | 'GALLEY' | 'ENGINE_ROOM' | 'FISH_HOLD' | 'CABIN' | 'BOW' | 'STERN';
 
-export type IEntryArrivalEntryType = "arrival";
+export type IEntryArrivalEntryType = 'arrival';
 /** A return to port event */
 export interface IEntryArrival extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryArrivalEntryType;
@@ -435,7 +775,7 @@ export interface IEntryArrival extends ICoreBaseEntry {
   /** The caught fish present on board the vessel */ catch_on_board?: ICoreFishingCatch[];
 }
 
-export type IEntryBaseAisMessageEntryType = "ais-message";
+export type IEntryBaseAisMessageEntryType = 'ais-message';
 /** The message received or send by an AIS device */
 export interface IEntryBaseAisMessage extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryBaseAisMessageEntryType;
@@ -443,7 +783,7 @@ export interface IEntryBaseAisMessage extends ICoreBaseEntry {
   /** The registered measurement for the device */ message: IAisMessageAisMessage;
 }
 
-export type IEntryDepartureEntryType = "departure";
+export type IEntryDepartureEntryType = 'departure';
 /** A departure from port event */
 export interface IEntryDeparture extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryDepartureEntryType;
@@ -455,7 +795,7 @@ export interface IEntryDeparture extends ICoreBaseEntry {
   /** The previously caught fish present on board the vessel */ catch_on_board?: ICoreFishingCatch[];
 }
 
-export type IEntryDeviceMeasurementEntryType = "device-measurement";
+export type IEntryDeviceMeasurementEntryType = 'device-measurement';
 /** A device measurement journal entry */
 export interface IEntryDeviceMeasurement extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryDeviceMeasurementEntryType;
@@ -463,7 +803,7 @@ export interface IEntryDeviceMeasurement extends ICoreBaseEntry {
   /** The registered measurement for the device */ value: IMeasurementMeasurementValue;
 }
 
-export type IEntryEndOfFishingEntryType = "end-of-fishing";
+export type IEntryEndOfFishingEntryType = 'end-of-fishing';
 /** Notification of intent to cease all fishing activity for the trip */
 export interface IEntryEndOfFishing extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryEndOfFishingEntryType;
@@ -471,14 +811,14 @@ export interface IEntryEndOfFishing extends ICoreBaseEntry {
   /** The datetime of end of fishing in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
 }
 
-export type IEntryEquipmentInventoryEntryType = "equipment-inventory";
+export type IEntryEquipmentInventoryEntryType = 'equipment-inventory';
 /** An entry detailing the equipment installed on a vessel. One 1 should exist per journal */
 export interface IEntryEquipmentInventory extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryEquipmentInventoryEntryType;
   /** The collection of equipment for the vessel */ equipment: IEquipmentEquipment[];
 }
 
-export type IEntryFishingActivityEntryType = "fishing-activity";
+export type IEntryFishingActivityEntryType = 'fishing-activity';
 /** Notification of intent to cease all fishing activity for the trip */
 export interface IEntryFishingActivity extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryFishingActivityEntryType;
@@ -486,7 +826,7 @@ export interface IEntryFishingActivity extends ICoreBaseEntry {
   /** The fishing tow details */ tow: ICoreFishingTow;
 }
 
-export type IEntryRouteEntryType = "route";
+export type IEntryRouteEntryType = 'route';
 /** A route which was planned with an ECS/ECDIS system. */
 export interface IEntryRoute extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryRouteEntryType;
@@ -495,7 +835,7 @@ export interface IEntryRoute extends ICoreBaseEntry {
   /** The collection of waypoints which make the route. */ waypoints: ICoreRouteWaypoint[];
 }
 
-export type IEntryZoneEnterEntryType = "zone-enter";
+export type IEntryZoneEnterEntryType = 'zone-enter';
 /** Enter declaration of a fishing zone */
 export interface IEntryZoneEnter extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryZoneEnterEntryType;
@@ -509,7 +849,7 @@ export interface IEntryZoneEnter extends ICoreBaseEntry {
   /** Indicates the vessel has engaged in trans-zonal fishing: GRB: GBRTRZ */ trans_zonal_fishing?: boolean;
 }
 
-export type IEntryZoneExitEntryType = "zone-exit";
+export type IEntryZoneExitEntryType = 'zone-exit';
 /** Exit declaration of a fishing zone */
 export interface IEntryZoneExit extends ICoreBaseEntry {
   /** The journal entry type identifer */ entry_type: IEntryZoneExitEntryType;
