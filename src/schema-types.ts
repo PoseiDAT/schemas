@@ -279,7 +279,7 @@ export interface IMeasurementMeasurementValue {
   /** A trawl tension measurement */ trawl_tension?: IMeasurementTrawlTension;
   /** A scale measurement */ scale?: IMeasurementScale;
   /** A fuel consumption measurement */ fuel_consumption?: IMeasurementFuelConsumption;
-  /** A fuel consumption measurement */ spatial_axes?: IMeasurementSpatialAxes;
+  /** A spatial axes measurement */ spatial_axes?: IMeasurementSpatialAxes;
 }
 
 /** A number representing a measurement from a sensor */
