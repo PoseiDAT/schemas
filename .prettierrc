@@ -1,0 +1,10 @@
+{
+    "printWidth": 150,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "arrowParens": "always",
+    "overrides": [
+      { "files":["**/*.ts"], "excludeFiles":["src/interfaces/*.ts"]}
+    ]
+}

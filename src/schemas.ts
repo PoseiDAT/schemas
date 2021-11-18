@@ -78,7 +78,7 @@ export const schemas = {
   core: {
     equipment: {
       device: baseDevice as JSONSchema7,
-      equipment: baseEquipment as JSONSchema7,
+      equipment: baseEquipment as JSONSchema7
     },
     measurement: {
       fuelConsumption: baseFuelConsumption as JSONSchema7,
@@ -87,10 +87,10 @@ export const schemas = {
       position: basePosition as JSONSchema7,
       trawlTension: baseTrawlTension as JSONSchema7,
       scale: baseScale as JSONSchema7,
-      spatialAxes: baseSpatialAxes as JSONSchema7,
+      spatialAxes: baseSpatialAxes as JSONSchema7
     },
     persona: {
-      company: baseCompany as JSONSchema7,
+      company: baseCompany as JSONSchema7
     },
     address: baseAddress as JSONSchema7,
     baseEntry: baseEntry as JSONSchema7,
@@ -113,7 +113,7 @@ export const schemas = {
     vesselMaster: baseVesselMaster as JSONSchema7,
     vesselPartner: baseVesselPartner as JSONSchema7,
     vesselSection: baseVesselSection as JSONSchema7,
-    routeWaypoint: baseRouteWaypoint as JSONSchema7,
+    routeWaypoint: baseRouteWaypoint as JSONSchema7
   },
 
   // Entry schemas
@@ -127,7 +127,7 @@ export const schemas = {
     fishingActivity: entryFishingActivity as JSONSchema7,
     zoneEnter: entryZoneEnter as JSONSchema7,
     zoneExit: entryZoneExit as JSONSchema7,
-    route: entryRoute as JSONSchema7,
+    route: entryRoute as JSONSchema7
   },
 
   // Enum schemas
@@ -150,6 +150,6 @@ export const schemas = {
     reasonDiscard: enumReasonDiscard as JSONSchema7,
     vesselCompartment: enumVesselCompartment as JSONSchema7,
     scaleCategory: enumScaleCategory as JSONSchema7,
-    routeGeometryType: enumRouteGeometryType as JSONSchema7,
-  },
+    routeGeometryType: enumRouteGeometryType as JSONSchema7
+  }
 };
