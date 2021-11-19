@@ -111,6 +111,8 @@ one (and only one) of
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-5.md "check type definition")
 
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-6.md "check type definition")
+
 ## Additional Properties
 
 Additional properties are allowed and do not have to follow a specific schema

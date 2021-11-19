@@ -2,15 +2,35 @@
 
 ## Top-level Schemas
 
+*   [AIS RAIM flag flag](./ais-raim-flag.md "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device") – `https://poseidat.org/schema/enum/ais-raim-flag.json`
+
+*   [AIS message](./base-ais-message.md "The message received or send by an AIS device") – `https://poseidat.org/schema/core/entry/base-ais-message.json`
+
+*   [AIS message types](./ais-message-type.md "The available message types for an ais message") – `https://poseidat.org/schema/enum/ais-message-type.json`
+
+*   [AIS navigation status](./ais-nav-status.md "The converted nav status given by an AIS measerement") – `https://poseidat.org/schema/enum/ais-nav-status.json`
+
+*   [AIS position device type](./ais-position-device-type.md "The converted type of the position device used on the AIS entity") – `https://poseidat.org/schema/enum/ais-position-device-type.json`
+
+*   [AIS ship type](./ais-ship-type.md "The converted names of the ais ship types") – `https://poseidat.org/schema/enum/ais-ship-type.json`
+
 *   [Address](./address.md "A street address") – `https://poseidat.org/schema/core/address.json`
 
+*   [Altitude sensor type](./ais-altitude-sensor-type.md "The type altitude sensor used on the ship") – `https://poseidat.org/schema/enum/ais-altitude-sensor-type.json`
+
 *   [Arrival](./arrival.md "A return to port event") – `https://poseidat.org/schema/entry/arrival.json`
+
+*   [Assigned mode flag](./ais-assigned-mode-flag.md "State of station if it is operating in autonomous or assigned mode; 0 is default") – `https://poseidat.org/schema/enum/ais-assigned-mode-flag.json`
 
 *   [Base entry](./base-entry.md "The shared properties for all entries") – `https://poseidat.org/schema/core/base-entry.json`
 
 *   [Company](./company.md "The details of a (commercial) company") – `https://poseidat.org/schema/core/persona/company.json`
 
 *   [ContactDetails](./contact-details.md "Contact information for persona") – `https://poseidat.org/schema/core/contact-details.json`
+
+*   [Control long range message types](./ais-long-range-control-type.md "Transmission control for long-range broadcast message") – `https://poseidat.org/schema/enum/ais-long-range-control-type.json`
+
+*   [DTE ready types](./ais-dte.md "Data terminal equipment (DTE) ready (0 = available, 1 = not available = default)") – `https://poseidat.org/schema/enum/ais-dte.json`
 
 *   [Departure](./departure.md "A departure from port event") – `https://poseidat.org/schema/entry/departure.json`
 
@@ -78,11 +98,17 @@
 
 *   [Measurement value](./measurement-value.md "The value of a certain type of measurement") – `https://poseidat.org/schema/core/measurement/measurement-value.json`
 
+*   [Measurement value](./ais-message.md "The message that gets send by an AIS device") – `https://poseidat.org/schema/core/ais-message/ais-message.json`
+
 *   [Numeric](./numeric.md "A number representing a measurement from a sensor") – `https://poseidat.org/schema/core/measurement/numeric.json`
 
 *   [Port](./port.md "Fishing port details") – `https://poseidat.org/schema/core/port.json`
 
 *   [Position](./position.md "A navigational position that can be used in an entry") – `https://poseidat.org/schema/core/measurement/position.json`
+
+*   [Position accuracy types](./ais-position-accuracy.md "Indicates the precision of a given position") – `https://poseidat.org/schema/enum/ais-position-accuracy.json`
+
+*   [Position report message from an AIS device](./position-report.md "A position report message for the AIS") – `https://poseidat.org/schema/core/ais-message/position-report.json`
 
 *   [Reason arrival](./reason-arrival.md "The reason for the vessel to return to port") – `https://poseidat.org/schema/enum/reason-arrival.json`
 
@@ -99,6 +125,8 @@
 *   [Scale category](./scale-category.md "The types of supported product categories to weigh") – `https://poseidat.org/schema/enum/scale-category.json`
 
 *   [Spatial axes](./spatial-axes.md "The spatial axes for a given sensor") – `https://poseidat.org/schema/core/measurement/spatial-axes.json`
+
+*   [Special maneuvre indicator types](./ais-special-maneuver.md "Indicates whether an special maneuver is ongoing") – `https://poseidat.org/schema/enum/ais-special-maneuver.json`
 
 *   [Trawl tension](./trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json`
 

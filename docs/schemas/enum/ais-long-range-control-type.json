@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://poseidat.org/schema/enum/ais-long-range-control-type.json","description":"Transmission control for long-range broadcast message","title":"Control long range message types","type":"string","enum":["STOP_TRANSMISSION_MESSAGE_27","REQUEST_TRANSMISSION_MESSAGE_27"]}

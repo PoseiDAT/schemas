@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://poseidat.org/schema/enum/ais-raim-flag.json","description":"Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device.","title":"AIS RAIM flag flag","type":"string","enum":["RAIM_NOT_IN_USE","RAIM_IN_USE"]}

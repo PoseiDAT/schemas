@@ -28,6 +28,8 @@ one (and only one) of
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-5.md "check type definition")
 
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-6.md "check type definition")
+
 # value Properties
 
 | Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                              |
