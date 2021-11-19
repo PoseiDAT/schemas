@@ -24,10 +24,10 @@ describe('RouteEntry', () => {
     const data: IEntryRoute = {
       entry_id: v4(),
       journal_id: v4(),
-      entry_type: 'route',
-      revision: '2021-01-01T01:00:00z',
+      entry_type: "route",
+      revision: "2021-01-01T01:00:00z",
       immutable: false,
-      name: 'testroute',
+      name: "testroute",
       waypoints: [
         {
           id: 1,

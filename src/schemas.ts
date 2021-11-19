@@ -59,9 +59,9 @@ import * as entryRoute from './schema/entry/route.json';
 import * as enumAisAltitudeSensorType from './schema/enum/ais-altitude-sensor-type.json';
 import * as enumAisAssignedModeFlag from './schema/enum/ais-assigned-mode-flag.json';
 import * as enumAisDte from './schema/enum/ais-DTE.json';
-import * as enumAisLongRangeControlType from './schema/enum/ais-long-range-control-type.json';
 import * as enumAisMessageType from './schema/enum/ais-message-type.json';
 import * as enumAisNavStatus from './schema/enum/ais-nav-status.json';
+import * as enumAisLongRangeControlType from './schema/enum/ais-long-range-control-type.json';
 import * as enumAisPositionAccuracy from './schema/enum/ais-position-accuracy.json';
 import * as enumAisPositionDeviceType from './schema/enum/ais-position-device-type.json';
 import * as enumAisRaimFlag from './schema/enum/ais-RAIM-flag.json';
@@ -152,6 +152,17 @@ export const schemas = {
   // Enum schemas
   //
   enum: {
+    aisAltitudeSensorType: enumAisAltitudeSensorType as JSONSchema7,
+    aisAssignedModeFlag: enumAisAssignedModeFlag as JSONSchema7,
+    aisDte: enumAisDte as JSONSchema7,
+    aisMessageType: enumAisMessageType as JSONSchema7,
+    aisNavStatus: enumAisNavStatus as JSONSchema7,
+    aisLongRangeControlType: enumAisLongRangeControlType as JSONSchema7,
+    aisPositionDeviceType: enumAisPositionDeviceType as JSONSchema7,
+    aisPostionAccuracy: enumAisPositionAccuracy as JSONSchema7,
+    aisRaimFlag: enumAisRaimFlag as JSONSchema7,
+    aisShipTypes: enumAisShipTypes as JSONSchema7,
+    aisSpecialManeuver: enumAisSpecialManeuver as JSONSchema7,
     deviceType: enumDeviceType as JSONSchema7,
     effortZone: enumEffortZone as JSONSchema7,
     equipmentType: enumEquipmentType as JSONSchema7,
@@ -169,17 +180,6 @@ export const schemas = {
     reasonDiscard: enumReasonDiscard as JSONSchema7,
     vesselCompartment: enumVesselCompartment as JSONSchema7,
     scaleCategory: enumScaleCategory as JSONSchema7,
-    routeGeometryType: enumRouteGeometryType as JSONSchema7,
-    aisAltitudeSensorType: enumAisAltitudeSensorType as JSONSchema7,
-    aisAssignedModeFlag: enumAisAssignedModeFlag as JSONSchema7,
-    aisDte: enumAisDte as JSONSchema7,
-    aisLongRangeControlType: enumAisLongRangeControlType as JSONSchema7,
-    aisMessageType: enumAisMessageType as JSONSchema7,
-    aisNavStatus: enumAisNavStatus as JSONSchema7,
-    aisPositionDeviceType: enumAisPositionDeviceType as JSONSchema7,
-    aisPostionAccuracy: enumAisPositionAccuracy as JSONSchema7,
-    aisRaimFlag: enumAisRaimFlag as JSONSchema7,
-    aisShipTypes: enumAisShipTypes as JSONSchema7,
-    aisSpecialManeuver: enumAisSpecialManeuver as JSONSchema7
+    routeGeometryType: enumRouteGeometryType as JSONSchema7
   }
 };
