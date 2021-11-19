@@ -26,19 +26,32 @@ describe('AisMessageEntry', () => {
     expect(validationErrors[5].schemaPath).toEqual('#/required');
   });
 
-  test('Validating a empty position report AisMessageEntry should succeed', () => {
+  // Every property has his default value but is still required and should be send even if it is the default.
+  test('Validating a full position report AisMessageEntry should succeed', () => {
     const data: IEntryBaseAisMessage = {
       journal_id: v4(),
       entry_id: v4(),
-      revision: '2020-01-01T00:00:00Z',
+      revision: "2020-01-01T00:00:00Z",
       immutable: false,
-      entry_type: 'ais-message',
+      entry_type: "ais-message",
       device_id: v4(),
       message: {
         entity_id: 1,
-        message_type: 'POSITION_REPORT',
+        message_type: "POSITION_REPORT",
         repeat_indicator: 3,
-        position_report: {}
+        position_report: {
+          position: {
+            latitude: 1.1,
+            longitude: 1.1,
+            speed_over_ground: 3.3,
+            course_made_good: 3.3
+          },
+          position_accuracy: "LOW",
+          rate_of_turn: -128,
+          true_heading: 3,
+          raim_flag: "RAIM_IN_USE",
+          special_maneuvre_indicator: "ENGAGED_IN_SPECIAL_MANEUVER"
+        }
       }
     };
     const aisEntry = new AisMessageEntry(data);
@@ -47,37 +60,19 @@ describe('AisMessageEntry', () => {
     expect(validationErrors.length).toEqual(0);
   });
 
-  test('Validating a full position report AisMessageEntry should succeed', () => {
+  test('Validating an empty message of IEntryBaseAisMessage in AisMessageEntry should fail', () => {
     const data: IEntryBaseAisMessage = {
       journal_id: v4(),
       entry_id: v4(),
-      revision: '2020-01-01T00:00:00Z',
+      revision: "2020-01-01T00:00:00Z",
       immutable: false,
-      entry_type: 'ais-message',
+      entry_type: "ais-message",
       device_id: v4(),
-      message: {
-        entity_id: 1,
-        message_type: 'POSITION_REPORT',
-        repeat_indicator: 3,
-        position_report: {
-          position: {
-            latitude: 1.1,
-            longitude: 1.1
-          },
-          position_accuracy: 'LOW',
-          speed_over_ground: 3.3,
-          course_over_ground: 3,
-          rate_of_turn: -128,
-          true_heading: 3,
-          raim_flag: 'RAIM_IN_USE',
-          special_maneuvre_indicator: 'ENGAGED_IN_SPECIAL_MANEUVER'
-        }
-      }
+      message: {}
     };
     const aisEntry = new AisMessageEntry(data);
     const validationErrors = aisEntry.validate();
     expect(validationErrors).toBeDefined();
-    console.log(validationErrors);
-    expect(validationErrors.length).toEqual(0);
+    expect(validationErrors.length).toEqual(5);
   });
 });

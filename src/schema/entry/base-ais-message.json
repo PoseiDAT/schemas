@@ -17,7 +17,7 @@
       "description": "The unique identifier for the device"
     },
     "message": {
-      "description": "The registered measurement for the device",
+      "description": "The message send by the AIS device",
       "$ref": "https://poseidat.org/schema/core/ais-message/ais-message.json"
     }
  },
