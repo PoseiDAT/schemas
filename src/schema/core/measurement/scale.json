@@ -19,14 +19,9 @@
     "product": {
       "description": "The type of the product, e.g. a type of fish",
       "type": "string",
-      "anyOf": [
-        {
-          "$ref": "https://poseidat.org/schema/enum/fish-type.json"
-        },
-        {
-          "pattern": "^([A-Z]{3})$"
-        }
-      ]
+      "maxLength": 3,
+      "minLength": 3,
+      "pattern": "^([A-Z]{3})$"
     }
   },
   "required": [
