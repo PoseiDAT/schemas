@@ -5,7 +5,7 @@
   "title": "AIS position device type",
   "type": "string",
   "enum": [
-    	"UNDEFINED (DEFAULT)",
+    	"UNDEFINED",
       "GPS",
       "GLONASS",
       "COMBINED_GPS_GLONASS",

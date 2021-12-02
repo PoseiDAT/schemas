@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://poseidat.org/schema/core/ais-message/position-report.json",
+  "$id": "https://poseidat.org/schema/core/ais-message/base-station-report.json",
   "title": "Position report AIS",
   "description": "A position report message for the AIS.",
   "properties": {
@@ -8,9 +8,9 @@
       "description": "The message type of the given AIS measurement",
       "type": "string",
       "enum": [
-        "POSITION_REPORT"
+        "BASE_STATION_REPORT"
       ],
-      "default": "POSITION_REPORT"
+      "default": "BASE_STATION_REPORT"
     },
     "position": {
       "description": "The position of the AIS entity",
@@ -21,29 +21,20 @@
       "$ref": "https://poseidat.org/schema/enum/ais-position-accuracy.json",
       "default": "LOW"
     },
-    "rate_of_turn": {
-      "description": "The Rate Of Turn of the ship in degrees, minus = turning left; plus = turning right; (-128  no turn information available (default))",
-      "type": "number",
-      "default": -128,
-      "minimum": -128,
-      "maximum": 127
+    "position_device_type": {
+      "description": "The type of navigation device",
+      "$ref": "https://poseidat.org/schema/enum/ais-position-device-type.json",
+      "default": "UNDEFINED"
     },
-    "true_heading": {
-      "description": "Degrees (0-359) (511 indicates not available = default)",
-      "type": "number",
-      "default": 511,
-      "maximum": 511,
-      "minimum": 0
+    "control_long_range_message": {
+      "description": "Transmission control for long-range broadcast message",
+      "$ref": "https://poseidat.org/schema/enum/ais-long-range-control-type.json",
+      "default": "STOP_TRANSMISSION_MESSAGE_27"
     },
     "raim_flag": {
       "description": "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device",
       "$ref": "https://poseidat.org/schema/enum/ais-raim-flag.json",
       "default": "RAIM_NOT_IN_USE"
-    },
-    "special_maneuvre_indicator": {
-      "description": "Indicates whether an special maneuver is ongoing",
-      "$ref": "https://poseidat.org/schema/enum/ais-special-maneuver.json",
-      "default": "NOT_AVAILABLE"
     },
     "communication_state": {
       "description": "Communication state selector flag",
@@ -52,10 +43,10 @@
       "default": 0
     }
   },
-  "required": ["ais_message_type","position", "position_accuracy", "rate_of_turn", "true_heading", "raim_flag", "special_maneuvre_indicator", "communication_state"],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
   ],
+  "required": ["ais_message_type", "position", "position_accuracy", "position_device_type", "control_long_range_message", "raim_flag", "communication_state"],
   "type": "object",
   "additionalProperties": false
 }

@@ -239,21 +239,35 @@ export interface ICoreVesselSection {
 }
 
 /** The message that gets send by an AIS device. Values that are undefined should be set by the AIS device using the default */
-export interface IAisMessageAisMessage {
-  /** The mmsi identifier (ais entity) this value is related to */ entity_id?: number;
-  /** The message type of the given AIS measurement */ message_type?: IEnumAisMessageType;
-  /** The amount of times the message has been repeated (3 is do not repeat anymore) */ repeat_indicator?: number;
-  /** An AIS position report message */ position_report?: IAisMessagePositionReport;
+export interface IAisMessageBaseAisMessage extends IEntryAisMessage {
+  /** The mmsi identifier (ais entity) this value is related to */ entity_id: number;
+  /** The message type of the given AIS measurement */ ais_message_type: IEnumAisMessageType;
+  /** The amount of times the message has been repeated (3 is do not repeat anymore) */ repeat_indicator: number;
 }
 
+export type IAisMessageBaseStationReportAisMessageType = "BASE_STATION_REPORT";
 /** A position report message for the AIS. */
-export interface IAisMessagePositionReport {
+export interface IAisMessageBaseStationReport extends IAisMessageBaseAisMessage {
+  /** The message type of the given AIS measurement */ ais_message_type: IAisMessageBaseStationReportAisMessageType;
   /** The position of the AIS entity */ position: IMeasurementPosition;
-  /** The accuracy of the given AIS position. LOW is < 10 meters, HIGH is > 10 meters  */ position_accuracy: IEnumAisPositionAccuracy;
+  /** The accuracy of the given AIS position. LOW is > 10 meters, HIGH is <= 10 meters  */ position_accuracy: IEnumAisPositionAccuracy;
+  /** The type of navigation device */ position_device_type: IEnumAisPositionDeviceType;
+  /** Transmission control for long-range broadcast message */ control_long_range_message: IEnumAisLongRangeControlType;
+  /** Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device */ raim_flag: IEnumAisRaimFlag;
+  /** Communication state selector flag */ communication_state: number;
+}
+
+export type IAisMessagePositionReportAisMessageType = "POSITION_REPORT";
+/** A position report message for the AIS. */
+export interface IAisMessagePositionReport extends IAisMessageBaseAisMessage {
+  /** The message type of the given AIS measurement */ ais_message_type: IAisMessagePositionReportAisMessageType;
+  /** The position of the AIS entity */ position: IMeasurementPosition;
+  /** The accuracy of the given AIS position. LOW is > 10 meters, HIGH is <= 10 meters  */ position_accuracy: IEnumAisPositionAccuracy;
   /** The Rate Of Turn of the ship in degrees, minus = turning left; plus = turning right; (-128  no turn information available (default)) */ rate_of_turn: number;
   /** Degrees (0-359) (511 indicates not available = default) */ true_heading: number;
   /** Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device */ raim_flag: IEnumAisRaimFlag;
   /** Indicates whether an special maneuver is ongoing */ special_maneuvre_indicator: IEnumAisSpecialManeuver;
+  /** Communication state selector flag */ communication_state: number;
 }
 
 /** A device which is a part of a piece of equipment installed on a vessel */
@@ -373,15 +387,15 @@ export type IEnumAisLongRangeControlType = "STOP_TRANSMISSION_MESSAGE_27" | "REQ
 
 export type IEnumAisMessageType = "POSITION_REPORT" | "BASE_STATION_REPORT" | "STATIC_AND_VOYAGE_DATA" | "BINARY_MESSAGE" | "BINARY_ACKNOWLEDGEMENT" | "BINARY_BROADCAST_MESSAGE" | "SAR_AIRCRAFT_POSITION_REPORT" | "UTC_DATE_INQUIRY" | "UTC_DATE_RESPONSE" | "ADDRESSED_SAFETY_RELATED_MESSAGE" | "SAFETY_RELATED_ACKNOWLEDGEMENT" | "SAFETY_RELATED_BROADCAST_MESSAGE" | "INTERROGATION" | "ASSIGNMENT_MODE_COMMAND" | "DGNSS_BROADCAST_BINARY_MESSAGE" | "CLASS_B_EQUIPMENT_POSITION_REPORT" | "EXTENDED_CLASS_B_EQUIPMENT_POSITION_REPORT" | "DATA_LINK_MANAGEMENT_MESSAGE" | "AIDS_TO_NAVIGATION_REPORT" | "CHANNEL_MANAGEMENT" | "GROUP_ASSIGNMENT_COMMAND" | "STATIC_DATA_REPORT" | "SINGLE_SLOT_BINARY_MESSAGE" | "MULTIPLE_SLOT_BINARY_MESSAGE" | "LONG_RANGE_APPLICATION_POSITION_REPORT" | "RESERVER_FOR_FUTURE_USE";
 
-export type IEnumAisNavStatus = "UNDER_WAY_USING_ENGINE" | "AT_ANCHOR" | "NOT_UNDER_COMMAND" | "RESTRICTED_MANOEUVERABILITY" | "CONSTRAINED_BY_HER_DRAUGHT" | "MOORED" | "AGROUND" | "ENGAGED_IN_FISHING" | "UNDER_WAY_SAILING" | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_HSC" | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_WIG" | "RESERVED_FOR_FUTURE_USE" | "AIS_SART_ACTIVE" | "NOT_DEFINED (DEFAULT)";
+export type IEnumAisNavStatus = "UNDER_WAY_USING_ENGINE" | "AT_ANCHOR" | "NOT_UNDER_COMMAND" | "RESTRICTED_MANOEUVERABILITY" | "CONSTRAINED_BY_HER_DRAUGHT" | "MOORED" | "AGROUND" | "ENGAGED_IN_FISHING" | "UNDER_WAY_SAILING" | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_HSC" | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_WIG" | "RESERVED_FOR_FUTURE_USE" | "AIS_SART_ACTIVE" | "NOT_DEFINED";
 
 export type IEnumAisPositionAccuracy = "LOW" | "HIGH";
 
-export type IEnumAisPositionDeviceType = "UNDEFINED (DEFAULT)" | "GPS" | "GLONASS" | "COMBINED_GPS_GLONASS" | "LORAN_C" | "CHAYKA" | "INTEGRATED_NAVIGATION_SYSTEM" | "SURVEYED" | "GALILEO" | "NOT_USED" | "INTERNAL_GNSS";
+export type IEnumAisPositionDeviceType = "UNDEFINED" | "GPS" | "GLONASS" | "COMBINED_GPS_GLONASS" | "LORAN_C" | "CHAYKA" | "INTEGRATED_NAVIGATION_SYSTEM" | "SURVEYED" | "GALILEO" | "NOT_USED" | "INTERNAL_GNSS";
 
 export type IEnumAisRaimFlag = "RAIM_NOT_IN_USE" | "RAIM_IN_USE";
 
-export type IEnumAisShipType = "NOT_AVAILABLE (DEFAULT)" | "RESERVED_FOR_FUTURE_USE" | "WING_IN_GROUND_ALL_SHIPS_OF_THIS_TYPE" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_A" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_B" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_C" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_D" | "WING_IN_GROUND_RESERVED_FOR_FUTURE_USE" | "FISHING" | "TOWING" | "TOWING_LENGTH_EXCEEDS_200M_OR_BREADTH_EXCEEDS_25M" | "DREDGING_OR_UNDERWATER_OPS" | "DIVING_OPS" | "MILITARY_OPS" | "SAILING" | "PLEASURE_CRAFT" | "RESERVED" | "HIGH_SPEED_CRAFT_ALL_SHIPS_OF_THIS_TYPE" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_A" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_B" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_C" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_D" | "HIGH_SPEED_CRAFT_RESERVED_FOR_FUTURE_USE" | "HIGH_SPEED_CRAFT_NO_ADDITIONAL_INFORMATION" | "PILOT_VESSEL" | "SEARCH_AND_RESCUE_VESSEL" | "TUG" | "PORT_TENDER" | "ANTI_POLLUTION_EQUIPMENT" | "LAW_ENFORCEMENT" | "SPARE_LOCAL_VESSEL" | "MEDICAL_TRANSPORT" | "NON_COMBATANT_SHIP" | "PASSENGER_ALL_SHIPS_OF_THIS_TYPE" | "PASSENGER_HAZARDOUS_CATEGORY_A" | "PASSENGER_HAZARDOUS_CATEGORY_B" | "PASSENGER_HAZARDOUS_CATEGORY_C" | "PASSENGER_HAZARDOUS_CATEGORY_D" | "PASSENGER_RESERVED_FOR_FUTURE_USE" | "PASSENGER_NO_ADDITIONAL_INFORMATION" | "CARGO_ALL_SHIPS_OF_THIS_TYPE" | "CARGO_HAZARDOUS_CATEGORY_A" | "CARGO_HAZARDOUS_CATEGORY_B" | "CARGO_HAZARDOUS_CATEGORY_C" | "CARGO_HAZARDOUS_CATEGORY_D" | "CARGO_RESERVED_FOR_FUTURE_USE" | "CARGO_NO_ADDITIONAL_INFORMATION" | "TANKER_ALL_SHIPS_OF_THIS_TYPE" | "TANKER_HAZARDOUS_CATEGORY_A" | "TANKER_HAZARDOUS_CATEGORY_B" | "TANKER_HAZARDOUS_CATEGORY_C" | "TANKER_HAZARDOUS_CATEGORY_D" | "TANKER_RESERVED_FOR_FUTURE_USE" | "TANKER_NO_ADDITIONAL_INFORMATION" | "OTHER_TYPE_ALL_SHIPS_OF_THIS_TYPE" | "OTHER_TYPE_HAZARDOUS_CATEGORY_A" | "OTHER_TYPE_HAZARDOUS_CATEGORY_B" | "OTHER_TYPE_HAZARDOUS_CATEGORY_C" | "OTHER_TYPE_HAZARDOUS_CATEGORY_D" | "OTHER_TYPE_RESERVED_FOR_FUTURE_USE" | "OTHER_TYPE_NO_ADDITIONAL_INFORMATION";
+export type IEnumAisShipType = "NOT_AVAILABLE" | "RESERVED_FOR_FUTURE_USE" | "WING_IN_GROUND_ALL_SHIPS_OF_THIS_TYPE" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_A" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_B" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_C" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_D" | "WING_IN_GROUND_RESERVED_FOR_FUTURE_USE" | "FISHING" | "TOWING" | "TOWING_LENGTH_EXCEEDS_200M_OR_BREADTH_EXCEEDS_25M" | "DREDGING_OR_UNDERWATER_OPS" | "DIVING_OPS" | "MILITARY_OPS" | "SAILING" | "PLEASURE_CRAFT" | "RESERVED" | "HIGH_SPEED_CRAFT_ALL_SHIPS_OF_THIS_TYPE" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_A" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_B" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_C" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_D" | "HIGH_SPEED_CRAFT_RESERVED_FOR_FUTURE_USE" | "HIGH_SPEED_CRAFT_NO_ADDITIONAL_INFORMATION" | "PILOT_VESSEL" | "SEARCH_AND_RESCUE_VESSEL" | "TUG" | "PORT_TENDER" | "ANTI_POLLUTION_EQUIPMENT" | "LAW_ENFORCEMENT" | "SPARE_LOCAL_VESSEL" | "MEDICAL_TRANSPORT" | "NON_COMBATANT_SHIP" | "PASSENGER_ALL_SHIPS_OF_THIS_TYPE" | "PASSENGER_HAZARDOUS_CATEGORY_A" | "PASSENGER_HAZARDOUS_CATEGORY_B" | "PASSENGER_HAZARDOUS_CATEGORY_C" | "PASSENGER_HAZARDOUS_CATEGORY_D" | "PASSENGER_RESERVED_FOR_FUTURE_USE" | "PASSENGER_NO_ADDITIONAL_INFORMATION" | "CARGO_ALL_SHIPS_OF_THIS_TYPE" | "CARGO_HAZARDOUS_CATEGORY_A" | "CARGO_HAZARDOUS_CATEGORY_B" | "CARGO_HAZARDOUS_CATEGORY_C" | "CARGO_HAZARDOUS_CATEGORY_D" | "CARGO_RESERVED_FOR_FUTURE_USE" | "CARGO_NO_ADDITIONAL_INFORMATION" | "TANKER_ALL_SHIPS_OF_THIS_TYPE" | "TANKER_HAZARDOUS_CATEGORY_A" | "TANKER_HAZARDOUS_CATEGORY_B" | "TANKER_HAZARDOUS_CATEGORY_C" | "TANKER_HAZARDOUS_CATEGORY_D" | "TANKER_RESERVED_FOR_FUTURE_USE" | "TANKER_NO_ADDITIONAL_INFORMATION" | "OTHER_TYPE_ALL_SHIPS_OF_THIS_TYPE" | "OTHER_TYPE_HAZARDOUS_CATEGORY_A" | "OTHER_TYPE_HAZARDOUS_CATEGORY_B" | "OTHER_TYPE_HAZARDOUS_CATEGORY_C" | "OTHER_TYPE_HAZARDOUS_CATEGORY_D" | "OTHER_TYPE_RESERVED_FOR_FUTURE_USE" | "OTHER_TYPE_NO_ADDITIONAL_INFORMATION";
 
 export type IEnumAisSpecialManeuver = "NOT_AVAILABLE" | "NOT_ENGAGED_IN_SPECIAL_MANEUVER" | "ENGAGED_IN_SPECIAL_MANEUVER";
 
@@ -421,6 +435,13 @@ export type IEnumScaleCategory = "FISH";
 
 export type IEnumVesselCompartment = "DECK" | "BRIDGE" | "GALLEY" | "ENGINE_ROOM" | "FISH_HOLD" | "CABIN" | "BOW" | "STERN";
 
+export type IEntryAisMessageEntryType = "ais-message";
+/** The message received or send by an AIS device */
+export interface IEntryAisMessage extends ICoreBaseEntry {
+  /** The journal entry type identifer */ entry_type: IEntryAisMessageEntryType;
+  /** The unique identifier for the device */ device_id: string;
+}
+
 export type IEntryArrivalEntryType = "arrival";
 /** A return to port event */
 export interface IEntryArrival extends ICoreBaseEntry {
@@ -430,14 +451,6 @@ export interface IEntryArrival extends ICoreBaseEntry {
   /** The code of the port of arrival. These are 5 letter codes prefixed with a 2 letter country code and a 3 letter port identifier. Example: NLURK, BEANR */ port: ICorePort;
   /** The reason for the vessel to return to port. Please check the wiki for the meaning of these codes. */ reason_arrival: IEnumReasonArrival;
   /** The caught fish present on board the vessel */ catch_on_board?: ICoreFishingCatch[];
-}
-
-export type IEntryBaseAisMessageEntryType = "ais-message";
-/** The message received or send by an AIS device */
-export interface IEntryBaseAisMessage extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryBaseAisMessageEntryType;
-  /** The unique identifier for the device */ device_id: string;
-  /** The message send by the AIS device */ message: IAisMessageAisMessage;
 }
 
 export type IEntryDepartureEntryType = "departure";

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://poseidat.org/schema/core/entry/base-ais-message.json",
+  "$id": "https://poseidat.org/schema/core/entry/ais-message.json",
   "title": "AIS message",
   "description": "The message received or send by an AIS device",
   "properties": {
@@ -15,16 +15,11 @@
     "device_id": {
       "type": "string",
       "description": "The unique identifier for the device"
-    },
-    "message": {
-      "description": "The message send by the AIS device",
-      "$ref": "https://poseidat.org/schema/core/ais-message/ais-message.json"
     }
  },
   "required": [
     "entry_type",
-    "device_id",
-    "message"
+    "device_id"
   ],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/base-entry.json" }
