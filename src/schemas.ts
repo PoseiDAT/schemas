@@ -76,7 +76,6 @@ import * as enumFishingGearType from "./schema/enum/fishing-gear-type.json";
 import * as enumFishPackageType from "./schema/enum/fish-package-type.json";
 import * as enumFishPresentation from "./schema/enum/fish-presentation.json";
 import * as enumFishState from "./schema/enum/fish-state.json";
-import * as enumFishType from "./schema/enum/fish-type.json";
 import * as enumGnssFixQuality from "./schema/enum/gnss-fix-quality.json";
 import * as enumGnssFixType from "./schema/enum/gnss-fix-type.json";
 import * as enumMeasurementType from "./schema/enum/measurement-type.json";
@@ -173,7 +172,6 @@ export const schemas = {
     fishPackageType: enumFishPackageType as JSONSchema7,
     fishPresentation: enumFishPresentation as JSONSchema7,
     fishState: enumFishState as JSONSchema7,
-    fishType: enumFishType as JSONSchema7,
     gnssFixQuality: enumGnssFixQuality as JSONSchema7,
     gnssFixType: enumGnssFixType as JSONSchema7,
     measurementType: enumMeasurementType as JSONSchema7,

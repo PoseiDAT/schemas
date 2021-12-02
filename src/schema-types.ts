@@ -247,7 +247,8 @@ export interface IAisMessageBaseAisMessage extends IEntryAisMessage {
 
 export type IAisMessageBaseStationReportAisMessageType = "BASE_STATION_REPORT";
 /** A position report message for the AIS. */
-export interface IAisMessageBaseStationReport extends IAisMessageBaseAisMessage {
+export interface IAisMessageBaseStationReport
+  extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessageBaseStationReportAisMessageType;
   /** The position of the AIS entity */ position: IMeasurementPosition;
   /** The accuracy of the given AIS position. LOW is > 10 meters, HIGH is <= 10 meters  */ position_accuracy: IEnumAisPositionAccuracy;
@@ -379,61 +380,436 @@ export interface IPersonaCompany {
 
 export type IEnumAisAltitudeSensorType = "GNSS" | "BAROMETRIC_SOURCE";
 
-export type IEnumAisAssignedModeFlag = "AUTONOMOUS_CONTINUOUS_MODE" | "ASSIGNED_MODE";
+export type IEnumAisAssignedModeFlag =
+  | "AUTONOMOUS_CONTINUOUS_MODE"
+  | "ASSIGNED_MODE";
 
 export type IEnumAisDte = "AVAILABLE" | "NOT_AVAILABLE";
 
-export type IEnumAisLongRangeControlType = "STOP_TRANSMISSION_MESSAGE_27" | "REQUEST_TRANSMISSION_MESSAGE_27";
+export type IEnumAisLongRangeControlType =
+  | "STOP_TRANSMISSION_MESSAGE_27"
+  | "REQUEST_TRANSMISSION_MESSAGE_27";
 
-export type IEnumAisMessageType = "POSITION_REPORT" | "BASE_STATION_REPORT" | "STATIC_AND_VOYAGE_DATA" | "BINARY_MESSAGE" | "BINARY_ACKNOWLEDGEMENT" | "BINARY_BROADCAST_MESSAGE" | "SAR_AIRCRAFT_POSITION_REPORT" | "UTC_DATE_INQUIRY" | "UTC_DATE_RESPONSE" | "ADDRESSED_SAFETY_RELATED_MESSAGE" | "SAFETY_RELATED_ACKNOWLEDGEMENT" | "SAFETY_RELATED_BROADCAST_MESSAGE" | "INTERROGATION" | "ASSIGNMENT_MODE_COMMAND" | "DGNSS_BROADCAST_BINARY_MESSAGE" | "CLASS_B_EQUIPMENT_POSITION_REPORT" | "EXTENDED_CLASS_B_EQUIPMENT_POSITION_REPORT" | "DATA_LINK_MANAGEMENT_MESSAGE" | "AIDS_TO_NAVIGATION_REPORT" | "CHANNEL_MANAGEMENT" | "GROUP_ASSIGNMENT_COMMAND" | "STATIC_DATA_REPORT" | "SINGLE_SLOT_BINARY_MESSAGE" | "MULTIPLE_SLOT_BINARY_MESSAGE" | "LONG_RANGE_APPLICATION_POSITION_REPORT" | "RESERVER_FOR_FUTURE_USE";
+export type IEnumAisMessageType =
+  | "POSITION_REPORT"
+  | "BASE_STATION_REPORT"
+  | "STATIC_AND_VOYAGE_DATA"
+  | "BINARY_MESSAGE"
+  | "BINARY_ACKNOWLEDGEMENT"
+  | "BINARY_BROADCAST_MESSAGE"
+  | "SAR_AIRCRAFT_POSITION_REPORT"
+  | "UTC_DATE_INQUIRY"
+  | "UTC_DATE_RESPONSE"
+  | "ADDRESSED_SAFETY_RELATED_MESSAGE"
+  | "SAFETY_RELATED_ACKNOWLEDGEMENT"
+  | "SAFETY_RELATED_BROADCAST_MESSAGE"
+  | "INTERROGATION"
+  | "ASSIGNMENT_MODE_COMMAND"
+  | "DGNSS_BROADCAST_BINARY_MESSAGE"
+  | "CLASS_B_EQUIPMENT_POSITION_REPORT"
+  | "EXTENDED_CLASS_B_EQUIPMENT_POSITION_REPORT"
+  | "DATA_LINK_MANAGEMENT_MESSAGE"
+  | "AIDS_TO_NAVIGATION_REPORT"
+  | "CHANNEL_MANAGEMENT"
+  | "GROUP_ASSIGNMENT_COMMAND"
+  | "STATIC_DATA_REPORT"
+  | "SINGLE_SLOT_BINARY_MESSAGE"
+  | "MULTIPLE_SLOT_BINARY_MESSAGE"
+  | "LONG_RANGE_APPLICATION_POSITION_REPORT"
+  | "RESERVER_FOR_FUTURE_USE";
 
-export type IEnumAisNavStatus = "UNDER_WAY_USING_ENGINE" | "AT_ANCHOR" | "NOT_UNDER_COMMAND" | "RESTRICTED_MANOEUVERABILITY" | "CONSTRAINED_BY_HER_DRAUGHT" | "MOORED" | "AGROUND" | "ENGAGED_IN_FISHING" | "UNDER_WAY_SAILING" | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_HSC" | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_WIG" | "RESERVED_FOR_FUTURE_USE" | "AIS_SART_ACTIVE" | "NOT_DEFINED";
+export type IEnumAisNavStatus =
+  | "UNDER_WAY_USING_ENGINE"
+  | "AT_ANCHOR"
+  | "NOT_UNDER_COMMAND"
+  | "RESTRICTED_MANOEUVERABILITY"
+  | "CONSTRAINED_BY_HER_DRAUGHT"
+  | "MOORED"
+  | "AGROUND"
+  | "ENGAGED_IN_FISHING"
+  | "UNDER_WAY_SAILING"
+  | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_HSC"
+  | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_WIG"
+  | "RESERVED_FOR_FUTURE_USE"
+  | "AIS_SART_ACTIVE"
+  | "NOT_DEFINED";
 
 export type IEnumAisPositionAccuracy = "LOW" | "HIGH";
 
-export type IEnumAisPositionDeviceType = "UNDEFINED" | "GPS" | "GLONASS" | "COMBINED_GPS_GLONASS" | "LORAN_C" | "CHAYKA" | "INTEGRATED_NAVIGATION_SYSTEM" | "SURVEYED" | "GALILEO" | "NOT_USED" | "INTERNAL_GNSS";
+export type IEnumAisPositionDeviceType =
+  | "UNDEFINED"
+  | "GPS"
+  | "GLONASS"
+  | "COMBINED_GPS_GLONASS"
+  | "LORAN_C"
+  | "CHAYKA"
+  | "INTEGRATED_NAVIGATION_SYSTEM"
+  | "SURVEYED"
+  | "GALILEO"
+  | "NOT_USED"
+  | "INTERNAL_GNSS";
 
 export type IEnumAisRaimFlag = "RAIM_NOT_IN_USE" | "RAIM_IN_USE";
 
-export type IEnumAisShipType = "NOT_AVAILABLE" | "RESERVED_FOR_FUTURE_USE" | "WING_IN_GROUND_ALL_SHIPS_OF_THIS_TYPE" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_A" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_B" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_C" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_D" | "WING_IN_GROUND_RESERVED_FOR_FUTURE_USE" | "FISHING" | "TOWING" | "TOWING_LENGTH_EXCEEDS_200M_OR_BREADTH_EXCEEDS_25M" | "DREDGING_OR_UNDERWATER_OPS" | "DIVING_OPS" | "MILITARY_OPS" | "SAILING" | "PLEASURE_CRAFT" | "RESERVED" | "HIGH_SPEED_CRAFT_ALL_SHIPS_OF_THIS_TYPE" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_A" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_B" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_C" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_D" | "HIGH_SPEED_CRAFT_RESERVED_FOR_FUTURE_USE" | "HIGH_SPEED_CRAFT_NO_ADDITIONAL_INFORMATION" | "PILOT_VESSEL" | "SEARCH_AND_RESCUE_VESSEL" | "TUG" | "PORT_TENDER" | "ANTI_POLLUTION_EQUIPMENT" | "LAW_ENFORCEMENT" | "SPARE_LOCAL_VESSEL" | "MEDICAL_TRANSPORT" | "NON_COMBATANT_SHIP" | "PASSENGER_ALL_SHIPS_OF_THIS_TYPE" | "PASSENGER_HAZARDOUS_CATEGORY_A" | "PASSENGER_HAZARDOUS_CATEGORY_B" | "PASSENGER_HAZARDOUS_CATEGORY_C" | "PASSENGER_HAZARDOUS_CATEGORY_D" | "PASSENGER_RESERVED_FOR_FUTURE_USE" | "PASSENGER_NO_ADDITIONAL_INFORMATION" | "CARGO_ALL_SHIPS_OF_THIS_TYPE" | "CARGO_HAZARDOUS_CATEGORY_A" | "CARGO_HAZARDOUS_CATEGORY_B" | "CARGO_HAZARDOUS_CATEGORY_C" | "CARGO_HAZARDOUS_CATEGORY_D" | "CARGO_RESERVED_FOR_FUTURE_USE" | "CARGO_NO_ADDITIONAL_INFORMATION" | "TANKER_ALL_SHIPS_OF_THIS_TYPE" | "TANKER_HAZARDOUS_CATEGORY_A" | "TANKER_HAZARDOUS_CATEGORY_B" | "TANKER_HAZARDOUS_CATEGORY_C" | "TANKER_HAZARDOUS_CATEGORY_D" | "TANKER_RESERVED_FOR_FUTURE_USE" | "TANKER_NO_ADDITIONAL_INFORMATION" | "OTHER_TYPE_ALL_SHIPS_OF_THIS_TYPE" | "OTHER_TYPE_HAZARDOUS_CATEGORY_A" | "OTHER_TYPE_HAZARDOUS_CATEGORY_B" | "OTHER_TYPE_HAZARDOUS_CATEGORY_C" | "OTHER_TYPE_HAZARDOUS_CATEGORY_D" | "OTHER_TYPE_RESERVED_FOR_FUTURE_USE" | "OTHER_TYPE_NO_ADDITIONAL_INFORMATION";
+export type IEnumAisShipType =
+  | "NOT_AVAILABLE"
+  | "RESERVED_FOR_FUTURE_USE"
+  | "WING_IN_GROUND_ALL_SHIPS_OF_THIS_TYPE"
+  | "WING_IN_GROUND_HAZARDOUS_CATEGORY_A"
+  | "WING_IN_GROUND_HAZARDOUS_CATEGORY_B"
+  | "WING_IN_GROUND_HAZARDOUS_CATEGORY_C"
+  | "WING_IN_GROUND_HAZARDOUS_CATEGORY_D"
+  | "WING_IN_GROUND_RESERVED_FOR_FUTURE_USE"
+  | "FISHING"
+  | "TOWING"
+  | "TOWING_LENGTH_EXCEEDS_200M_OR_BREADTH_EXCEEDS_25M"
+  | "DREDGING_OR_UNDERWATER_OPS"
+  | "DIVING_OPS"
+  | "MILITARY_OPS"
+  | "SAILING"
+  | "PLEASURE_CRAFT"
+  | "RESERVED"
+  | "HIGH_SPEED_CRAFT_ALL_SHIPS_OF_THIS_TYPE"
+  | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_A"
+  | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_B"
+  | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_C"
+  | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_D"
+  | "HIGH_SPEED_CRAFT_RESERVED_FOR_FUTURE_USE"
+  | "HIGH_SPEED_CRAFT_NO_ADDITIONAL_INFORMATION"
+  | "PILOT_VESSEL"
+  | "SEARCH_AND_RESCUE_VESSEL"
+  | "TUG"
+  | "PORT_TENDER"
+  | "ANTI_POLLUTION_EQUIPMENT"
+  | "LAW_ENFORCEMENT"
+  | "SPARE_LOCAL_VESSEL"
+  | "MEDICAL_TRANSPORT"
+  | "NON_COMBATANT_SHIP"
+  | "PASSENGER_ALL_SHIPS_OF_THIS_TYPE"
+  | "PASSENGER_HAZARDOUS_CATEGORY_A"
+  | "PASSENGER_HAZARDOUS_CATEGORY_B"
+  | "PASSENGER_HAZARDOUS_CATEGORY_C"
+  | "PASSENGER_HAZARDOUS_CATEGORY_D"
+  | "PASSENGER_RESERVED_FOR_FUTURE_USE"
+  | "PASSENGER_NO_ADDITIONAL_INFORMATION"
+  | "CARGO_ALL_SHIPS_OF_THIS_TYPE"
+  | "CARGO_HAZARDOUS_CATEGORY_A"
+  | "CARGO_HAZARDOUS_CATEGORY_B"
+  | "CARGO_HAZARDOUS_CATEGORY_C"
+  | "CARGO_HAZARDOUS_CATEGORY_D"
+  | "CARGO_RESERVED_FOR_FUTURE_USE"
+  | "CARGO_NO_ADDITIONAL_INFORMATION"
+  | "TANKER_ALL_SHIPS_OF_THIS_TYPE"
+  | "TANKER_HAZARDOUS_CATEGORY_A"
+  | "TANKER_HAZARDOUS_CATEGORY_B"
+  | "TANKER_HAZARDOUS_CATEGORY_C"
+  | "TANKER_HAZARDOUS_CATEGORY_D"
+  | "TANKER_RESERVED_FOR_FUTURE_USE"
+  | "TANKER_NO_ADDITIONAL_INFORMATION"
+  | "OTHER_TYPE_ALL_SHIPS_OF_THIS_TYPE"
+  | "OTHER_TYPE_HAZARDOUS_CATEGORY_A"
+  | "OTHER_TYPE_HAZARDOUS_CATEGORY_B"
+  | "OTHER_TYPE_HAZARDOUS_CATEGORY_C"
+  | "OTHER_TYPE_HAZARDOUS_CATEGORY_D"
+  | "OTHER_TYPE_RESERVED_FOR_FUTURE_USE"
+  | "OTHER_TYPE_NO_ADDITIONAL_INFORMATION";
 
-export type IEnumAisSpecialManeuver = "NOT_AVAILABLE" | "NOT_ENGAGED_IN_SPECIAL_MANEUVER" | "ENGAGED_IN_SPECIAL_MANEUVER";
+export type IEnumAisSpecialManeuver =
+  | "NOT_AVAILABLE"
+  | "NOT_ENGAGED_IN_SPECIAL_MANEUVER"
+  | "ENGAGED_IN_SPECIAL_MANEUVER";
 
-export type IEnumDeviceType = "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER" | "ECONOMETER" | "SCALE" | "RECEIVER" | "TRANSMITTER" | "TRANSCEIVER";
+export type IEnumDeviceType =
+  | "PUMP"
+  | "PROCESSOR"
+  | "DISPLAY"
+  | "HID"
+  | "ROUTER"
+  | "SWITCH"
+  | "MODEM"
+  | "SENSOR"
+  | "BRAKE"
+  | "ACTUATOR"
+  | "CABLE"
+  | "ENCLOSURE"
+  | "CIRCUIT_BREAKER"
+  | "ECONOMETER"
+  | "SCALE"
+  | "RECEIVER"
+  | "TRANSMITTER"
+  | "TRANSCEIVER";
 
-export type IEnumEffortZone = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y";
+export type IEnumEffortZone =
+  | "A"
+  | "B"
+  | "C"
+  | "D"
+  | "E"
+  | "F"
+  | "G"
+  | "H"
+  | "J"
+  | "K"
+  | "L"
+  | "M"
+  | "N"
+  | "O"
+  | "P"
+  | "Q"
+  | "R"
+  | "S"
+  | "T"
+  | "U"
+  | "V"
+  | "W"
+  | "X"
+  | "Y";
 
-export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR" | "SCALE" | "ECDIS" | "ECS";
+export type IEnumEquipmentType =
+  | "ENGINE"
+  | "GNSS"
+  | "ECHO_SOUNDER"
+  | "FISH_FINDER"
+  | "AIS"
+  | "TANK_LEVEL_METER"
+  | "TENSIOMETER"
+  | "CHARGER"
+  | "SEPARATOR"
+  | "COMPASS"
+  | "V_SAT"
+  | "REFRIGERATOR"
+  | "ICE_MAKER"
+  | "WINCH"
+  | "RUDDER"
+  | "PROPELLER"
+  | "PUMP"
+  | "SENSOR"
+  | "SCALE"
+  | "ECDIS"
+  | "ECS";
 
 export type IEnumFishFreshness = "A" | "B" | "E" | "SO" | "V";
 
-export type IEnumFishingGearType = "DRB" | "FIX" | "FPO" | "GEN" | "GN" | "GNC" | "GND" | "GNF" | "GNS" | "GTN" | "GTR" | "HMD" | "KRK" | "LA" | "LHM" | "LHP" | "LL" | "LLD" | "LLS" | "LTL" | "LX" | "MIS" | "NK" | "OTB" | "OTM" | "OTT" | "PS" | "PS1" | "PS2" | "PTB" | "PTM" | "PUL" | "RG" | "SDN" | "SPR" | "SSC" | "SV" | "SX" | "TB" | "TBB" | "TBN" | "TBS";
+export type IEnumFishingGearType =
+  | "DRB"
+  | "FIX"
+  | "FPO"
+  | "GEN"
+  | "GN"
+  | "GNC"
+  | "GND"
+  | "GNF"
+  | "GNS"
+  | "GTN"
+  | "GTR"
+  | "HMD"
+  | "KRK"
+  | "LA"
+  | "LHM"
+  | "LHP"
+  | "LL"
+  | "LLD"
+  | "LLS"
+  | "LTL"
+  | "LX"
+  | "MIS"
+  | "NK"
+  | "OTB"
+  | "OTM"
+  | "OTT"
+  | "PS"
+  | "PS1"
+  | "PS2"
+  | "PTB"
+  | "PTM"
+  | "PUL"
+  | "RG"
+  | "SDN"
+  | "SPR"
+  | "SSC"
+  | "SV"
+  | "SX"
+  | "TB"
+  | "TBB"
+  | "TBN"
+  | "TBS";
 
-export type IEnumFishPackageType = "CNT" | "EC" | "OK" | "QS" | "CN" | "CT" | "VO" | "4H" | "BX" | "5H" | "QR" | "TB" | "NF" | "NG" | "ZB";
+export type IEnumFishPackageType =
+  | "CNT"
+  | "EC"
+  | "OK"
+  | "QS"
+  | "CN"
+  | "CT"
+  | "VO"
+  | "4H"
+  | "BX"
+  | "5H"
+  | "QR"
+  | "TB"
+  | "NF"
+  | "NG"
+  | "ZB";
 
-export type IEnumFishPresentation = "BMS" | "CBF" | "CLA" | "DWT" | "FIL" | "FIS" | "FSB" | "FSP" | "GHT" | "GTA" | "GTF" | "GUG" | "GUH" | "GUL" | "GUS" | "GUT" | "HEA" | "HET" | "JAP" | "JAT" | "LAP" | "LVR-C" | "LVR" | "OTH" | "ROE-C" | "ROE" | "SAD" | "SAL" | "SGH" | "SGT" | "SKI" | "SUR" | "TAL" | "TLD" | "TNG-C" | "TNG" | "TUB" | "WHL" | "WNG" | "WNG+SKI";
+export type IEnumFishPresentation =
+  | "BMS"
+  | "CBF"
+  | "CLA"
+  | "DWT"
+  | "FIL"
+  | "FIS"
+  | "FSB"
+  | "FSP"
+  | "GHT"
+  | "GTA"
+  | "GTF"
+  | "GUG"
+  | "GUH"
+  | "GUL"
+  | "GUS"
+  | "GUT"
+  | "HEA"
+  | "HET"
+  | "JAP"
+  | "JAT"
+  | "LAP"
+  | "LVR-C"
+  | "LVR"
+  | "OTH"
+  | "ROE-C"
+  | "ROE"
+  | "SAD"
+  | "SAL"
+  | "SGH"
+  | "SGT"
+  | "SKI"
+  | "SUR"
+  | "TAL"
+  | "TLD"
+  | "TNG-C"
+  | "TNG"
+  | "TUB"
+  | "WHL"
+  | "WNG"
+  | "WNG+SKI";
 
-export type IEnumFishState = "ALI" | "BOI" | "DRI" | "FRE" | "FRO" | "SAL" | "SMO";
+export type IEnumFishState =
+  | "ALI"
+  | "BOI"
+  | "DRI"
+  | "FRE"
+  | "FRO"
+  | "SAL"
+  | "SMO";
 
-export type IEnumFishType = "ANF" | "BLL" | "BIB" | "COD" | "CRE" | "DAB" | "GUU" | "HAD" | "HKE" | "JOD" | "LEM" | "LEZ" | "LIN" | "MUR" | "OCZ" | "PLE" | "RJH" | "RJI" | "RJM" | "RSC" | "SCE" | "SOL" | "SYC" | "SYT" | "TUR" | "WHE" | "MAC" | "WIT" | "OCT" | "POL" | "CTC" | "SOX" | "SQU" | "COE" | "BSS" | "CAA" | "CRA" | "FLE" | "POK" | "RJC" | "RJN" | "WEG" | "NEP" | "IJS" | "WHG" | "RJB" | "SBR" | "SKH" | "SMD" | "SRX" | "TSD" | "WEX" | "GAG" | "GUG" | "GUR" | "HAL" | "LBE" | "LYY" | "MUL" | "OCC" | "PIL" | "BRB" | "REG";
+export type IEnumFishingGearType =
+  | "DRB"
+  | "FIX"
+  | "FPO"
+  | "GEN"
+  | "GN"
+  | "GNC"
+  | "GND"
+  | "GNF"
+  | "GNS"
+  | "GTN"
+  | "GTR"
+  | "HMD"
+  | "KRK"
+  | "LA"
+  | "LHM"
+  | "LHP"
+  | "LL"
+  | "LLD"
+  | "LLS"
+  | "LTL"
+  | "LX"
+  | "MIS"
+  | "NK"
+  | "OTB"
+  | "OTM"
+  | "OTT"
+  | "PS"
+  | "PS1"
+  | "PS2"
+  | "PTB"
+  | "PTM"
+  | "PUL"
+  | "RG"
+  | "SDN"
+  | "SPR"
+  | "SSC"
+  | "SV"
+  | "SX"
+  | "TB"
+  | "TBB"
+  | "TBN"
+  | "TBS";
 
 export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
 
 export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
 
-export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM" | "ROUTE" | "SPATIAL_AXES";
+export type IEnumMeasurementType =
+  | "POSITION"
+  | "TEMPERATURE"
+  | "HUMIDITY"
+  | "PRESSURE"
+  | "SPEED"
+  | "ONOFF"
+  | "FORCE"
+  | "FUEL_CONSUMPTION"
+  | "DEPTH"
+  | "ACCELERATION"
+  | "MAGNETISM"
+  | "ANGULAR_VELOCITY"
+  | "VOLTAGE"
+  | "CURRENT"
+  | "POWER"
+  | "ENERGY_CONSUMPTION"
+  | "TRAWL_TENSION"
+  | "SCALE"
+  | "RPM"
+  | "ROUTE"
+  | "SPATIAL_AXES";
 
-export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
+export type IEnumReasonArrival =
+  | "ECY"
+  | "GRD"
+  | "LAN"
+  | "OTH"
+  | "REF"
+  | "REP"
+  | "RES"
+  | "SCR"
+  | "SHE"
+  | "TRA";
 
-export type IEnumReasonDeparture = "FIS" | "GUD" | "OTH" | "SCR" | "STE" | "TST";
+export type IEnumReasonDeparture =
+  | "FIS"
+  | "GUD"
+  | "OTH"
+  | "SCR"
+  | "STE"
+  | "TST";
 
 export type IEnumReasonDiscard = "BAI" | "HSV" | "OTH" | "PDM" | "PRO" | "QEX";
 
-export type IEnumRouteGeometryType = "RHUMB_LINE_LOXODROME" | "GREAT_CICRLE_ORTHODROME";
+export type IEnumRouteGeometryType =
+  | "RHUMB_LINE_LOXODROME"
+  | "GREAT_CICRLE_ORTHODROME";
 
 export type IEnumScaleCategory = "FISH";
 
-export type IEnumVesselCompartment = "DECK" | "BRIDGE" | "GALLEY" | "ENGINE_ROOM" | "FISH_HOLD" | "CABIN" | "BOW" | "STERN";
+export type IEnumVesselCompartment =
+  | "DECK"
+  | "BRIDGE"
+  | "GALLEY"
+  | "ENGINE_ROOM"
+  | "FISH_HOLD"
+  | "CABIN"
+  | "BOW"
+  | "STERN";
 
 export type IEntryAisMessageEntryType = "ais-message";
 /** The message received or send by an AIS device */

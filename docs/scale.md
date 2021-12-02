@@ -21,7 +21,7 @@ A scale measurement that can be used in an entry
 | [haul_number](#haul_number) | `number` | Required | cannot be null | [Scale](scale-properties-haul_number.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/haul_number") |
 | [weight](#weight)           | `number` | Required | cannot be null | [Scale](scale-properties-weight.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/weight")           |
 | [category](#category)       | `string` | Required | cannot be null | [Scale](scale-properties-scale-category.md "https://poseidat.org/schema/enum/scale-category.json#/properties/category")    |
-| [product](#product)         | Merged   | Required | cannot be null | [Scale](scale-properties-product.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/product")         |
+| [product](#product)         | `string` | Required | cannot be null | [Scale](scale-properties-product.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/product")         |
 
 ## haul_number
 
@@ -93,7 +93,7 @@ The type of the product, e.g. a type of fish
 
 *   is required
 
-*   Type: `string` ([Details](scale-properties-product.md))
+*   Type: `string`
 
 *   cannot be null
 
@@ -101,10 +101,18 @@ The type of the product, e.g. a type of fish
 
 ### product Type
 
-`string` ([Details](scale-properties-product.md))
+`string`
 
-any of
+### product Constraints
 
-*   [Fish type](scale-properties-product-anyof-fish-type.md "check type definition")
+**maximum length**: the maximum number of characters for this string is: `3`
 
-*   [Untitled undefined type in Scale](scale-properties-product-anyof-1.md "check type definition")
+**minimum length**: the minimum number of characters for this string is: `3`
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^([A-Z]{3})$
+```
+
+[try pattern](https://regexr.com/?expression=%5E\(%5BA-Z%5D%7B3%7D\)%24 "try regular expression with regexr.com")

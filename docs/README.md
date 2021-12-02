@@ -58,8 +58,6 @@
 
 *   [Fish state](./fish-state.md "The preservation states for processed fish species") – `https://poseidat.org/schema/enum/fish-state.json`
 
-*   [Fish type](./fish-type.md "The types of supported fish species") – `https://poseidat.org/schema/enum/fish-type.json`
-
 *   [Fishing activity](./fishing-activity.md "Notification of intent to cease all fishing activity for the trip") – `https://poseidat.org/schema/entry/fishing-activity.json`
 
 *   [Fishing catch](./fishing-catch.md "Details of caught fish") – `https://poseidat.org/schema/core/fishing-catch.json`
