@@ -6,7 +6,7 @@
   "properties": {
     "entity_id": {
       "description": "The mmsi identifier (ais entity) this value is related to",
-      "type": "number"
+      "type": "integer"
     },
     "ais_message_type" :{
       "description": "The message type of the given AIS measurement",
@@ -14,14 +14,20 @@
     },
     "repeat_indicator": {
       "description": "The amount of times the message has been repeated (3 is do not repeat anymore)",
-      "type": "number",
+      "type": "integer",
       "default": 3
+    },
+    "priority": {
+      "description": "The priority of the send AIS message",
+      "minimum": 1,
+      "type": "integer",
+      "default": 1
     }
  },
   "allOf": [
     { "$ref": "https://poseidat.org/schema/entry/ais-message.json" }
   ],
-  "required": [ "entity_id", "repeat_indicator", "ais_message_type"],
+  "required": [ "entity_id", "repeat_indicator", "ais_message_type", "priority"],
   "type": "object",
   "additionalProperties": true
 }

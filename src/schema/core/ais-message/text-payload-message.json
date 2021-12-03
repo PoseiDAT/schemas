@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/ais-message/text-payload-message.json",
+  "title": "AIS message with string as payload",
+  "description": "Contains text or binary message as payload.",
+  "properties": {
+    "ais_message_type": {
+      "description": "The message type of the given AIS measurement",
+      "type": "string",
+      "enum": [
+        "ASSIGNMENT_MODE_COMMAND",
+        "SAFETY_ACKNOWLEDGEMENT",
+        "BINARY_ACKNOWLEDGEMENT"
+      ],
+      "default": "ASSIGNMENT_MODE_COMMAND"
+    },
+    "payload": {
+      "description": "The text or binary data send as payload",
+      "type": "string",
+      "default": ""
+    }
+  },
+  "required": ["ais_message_type", "payload"],
+  "allOf": [
+    { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

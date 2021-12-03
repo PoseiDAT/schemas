@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/ais-message/sar-aircraft-position-report.json",
+  "title": "Position report for an Search and Rescue Aircraft AIS",
+  "description": "A standard Search And Rescue Aircraft position report.",
+  "properties": {
+    "ais_message_type": {
+      "description": "The message type of the given AIS measurement",
+      "type": "string",
+      "enum": [
+        "SAR_AIRCRAFT_POSITION_REPORT"
+      ],
+      "default": "SAR_AIRCRAFT_POSITION_REPORT"
+    },
+    "position": {
+      "description": "The position of the AIS entity",
+      "$ref": "https://poseidat.org/schema/core/measurement/position.json"
+    },
+    "position_accuracy": {
+      "description": "The accuracy of the given AIS position. LOW is > 10 meters, HIGH is <= 10 meters ",
+      "$ref": "https://poseidat.org/schema/enum/ais-position-accuracy.json",
+      "default": "LOW"
+    },
+    "altitude": {
+      "description": "Altitude (derived from GNSS or barometric (see altitude sensor parameter below)) (m) (0-4 094 m) 4 095 = not available",
+      "type": "integer",
+      "default": 4095
+    },
+    "altitude_sensor": {
+      "description": "The type of altitude sensore used on the ship",
+      "$ref": "https://poseidat.org/schema/enum/ais-altitude-sensor-type.json",
+      "default": "GNSS"
+    },
+    "data_terminal_equipment": {
+      "description": "Data terminal equipment (DTE) ready",
+      "$ref": "https://poseidat.org/schema/enum/ais-dte.json",
+      "default": "NOT_AVAILABLE"
+    },
+    "assigned_mode_flag": {
+      "description": "State of station if it is operating in autonomous or assigned mode",
+      "$ref": "https://poseidat.org/schema/enum/ais-assigned-mode-flag.json",
+      "default": "AUTONOMOUS_CONTINUOUS_MODE"
+    },
+    "raim_flag": {
+      "description": "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device",
+      "$ref": "https://poseidat.org/schema/enum/ais-raim-flag.json",
+      "default": "RAIM_NOT_IN_USE"
+    },
+    "communication_state_selected": {
+      "description": "The selected state for communication",
+      "$ref": "https://poseidat.org/schema/enum/ais-communication-state-selected.json",
+      "default": "SOTDMA"
+    },
+    "communication_state": {
+      "description": "Communication state selector flag",
+      "type": "integer"
+    }
+  },
+  "required": ["ais_message_type", "position", "position_accuracy", "altitude", "altitude_sensor",
+    "data_terminal_equipment", "assigned_mode_flag", "raim_flag", "communication_state_selected", "communication_state" ],
+  "allOf": [
+    { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

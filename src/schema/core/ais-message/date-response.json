@@ -1,16 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://poseidat.org/schema/core/ais-message/base-station-report.json",
-  "title": "Position report AIS",
-  "description": "A position report message for the AIS.",
+  "$id": "https://poseidat.org/schema/core/ais-message/date-response.json",
+  "title": "Binary broadcast message send by the AIS",
+  "description": "This message type is used to send and array of binary data as a broadcast",
   "properties": {
     "ais_message_type": {
       "description": "The message type of the given AIS measurement",
       "type": "string",
       "enum": [
-        "BASE_STATION_REPORT"
+        "UTC_DATE_RESPONSE"
       ],
-      "default": "BASE_STATION_REPORT"
+      "default": "UTC_DATE_RESPONSE"
+    },
+    "date_time_response": {
+      "description": "The send UTC date time response from the destination ship",
+      "type": "string",
+      "format": "date-time"
     },
     "position": {
       "description": "The position of the AIS entity",
@@ -35,16 +40,13 @@
       "description": "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device",
       "$ref": "https://poseidat.org/schema/enum/ais-raim-flag.json",
       "default": "RAIM_NOT_IN_USE"
-    },
-    "communication_state": {
-      "description": "Communication state selector flag",
-      "type": "integer"
     }
   },
+  "required": ["ais_message_type", "date_time_response", "position", "position_accuracy",
+    "position_device_type", "control_long_range_message", "raim_flag"],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
   ],
-  "required": ["ais_message_type", "position", "position_accuracy", "position_device_type", "control_long_range_message", "raim_flag", "communication_state"],
   "type": "object",
   "additionalProperties": false
 }

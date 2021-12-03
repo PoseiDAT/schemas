@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/enum/ais-version-indicator.json",
+  "description": "An indicator for the version the user has on his AIS device.",
+  "title": "AIS version indicator",
+  "type": "string",
+  "enum": [
+    "COMPLIANT_WITH_ITU_R_M_1371_1",
+    "COMPLIANT_WITH_ITU_R_M_1371_3_OR_HIGHER",
+    "COMPLIANT_WITH_ITU_R_M_1371_5_OR_HIGHER",
+    "COMPLIANT_WITH_FUTURE_EDITIONS"
+  ]
+}

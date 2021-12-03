@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/enum/ais-class-b-display-flag.json",
+  "description": "The display flag used by a Class B ship",
+  "title": "Class B display flag",
+  "type": "string",
+  "enum": [
+    "NO_DISPLAY",
+    "DISPLAY_EQUIPPED"
+  ]
+}

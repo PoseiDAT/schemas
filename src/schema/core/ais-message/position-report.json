@@ -47,9 +47,8 @@
     },
     "communication_state": {
       "description": "Communication state selector flag",
-      "type": "number",
-      "minimum": 0,
-      "default": 0
+      "type": "integer",
+      "minimum": 0
     }
   },
   "required": ["ais_message_type","position", "position_accuracy", "rate_of_turn", "true_heading", "raim_flag", "special_maneuvre_indicator", "communication_state"],

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/ais-message/binary-or-safety-message.json",
+  "title": "Binary or safety message send by the AIS",
+  "description": "This message type is used to send binary data or safety related text to another AIS device",
+  "properties": {
+    "ais_message_type": {
+      "description": "The message type of the given AIS measurement",
+      "type": "string",
+      "enum": [
+        "BINARY_OR_SAFETY_MESSAGE"
+      ],
+      "default": "BINARY_OR_SAFETY_MESSAGE"
+    },
+    "sequence_number" : {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "destination_id": {
+      "description": "The MMSI number where the ship is sending data to.",
+      "type": "integer"
+    },
+    "message_text": {
+      "description": "Message send in text or in binary",
+      "type": "string"
+    }
+  },
+  "required": ["ais_message_type", "sequence_number", "destination_id", "message_text"],
+  "allOf": [
+    { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

@@ -8,8 +8,14 @@ import { JSONSchema7 } from "json-schema";
 //
 import * as baseAddress from "./schema/core/address.json";
 import * as baseAisMessage from "./schema/core/ais-message/base-ais-message.json";
+import * as baseBinaryOrSafetyBroadcast from "./schema/core/ais-message/binary-or-safety-broadcast.json";
+import * as baseBinaryOrSafetyMessage from "./schema/core/ais-message/binary-or-safety-message.json";
 import * as baseCompany from "./schema/core/persona/company.json";
 import * as baseContactDetails from "./schema/core/contact-details.json";
+import * as baseDateInquiry from "./schema/core/ais-message/date-inquiry.json";
+import * as baseDateResponse from "./schema/core/ais-message/date-response.json";
+import * as baseDgnssBroadcastMessage from "./schema/core/ais-message/dgnss-broadcast-message.json";
+import * as baseExtendedClassBReport from "./schema/core/ais-message/extended-class-b-report.json";
 import * as baseDevice from "./schema/core/equipment/device.json";
 import * as baseEntry from "./schema/core/base-entry.json";
 import * as baseEquipment from "./schema/core/equipment/equipment.json";
@@ -23,6 +29,7 @@ import * as baseFishingGearRetrieve from "./schema/core/fishing-gear-retrieve.js
 import * as baseFishingGearShot from "./schema/core/fishing-gear-shot.json";
 import * as baseFishingTow from "./schema/core/fishing-tow.json";
 import * as baseFishingZone from "./schema/core/fishing-zone.json";
+import * as baseInterrogation from "./schema/core/ais-message/interrogation.json";
 import * as baseJournal from "./schema/core/journal.json";
 import * as baseFuelConsumption from "./schema/core/measurement/fuel-consumption.json";
 import * as baseMeasurementValue from "./schema/core/measurement/measurement-value.json";
@@ -30,8 +37,11 @@ import * as baseNumeric from "./schema/core/measurement/numeric.json";
 import * as basePort from "./schema/core/port.json";
 import * as basePosition from "./schema/core/measurement/position.json";
 import * as basePositionReport from "./schema/core/ais-message/position-report.json";
+import * as baseStaticVoyageData from "./schema/core/ais-message/static-voyage-data.json";
 import * as baseStationReport from "./schema/core/ais-message/base-station-report.json";
+import * as baseTextMessageAcknowledgement from "./schema/core/ais-message/text-payload-message.json";
 import * as baseTrawlTension from "./schema/core/measurement/trawl-tension.json";
+import * as baseSarAircraftPositionReport from "./schema/core/ais-message/sar-aircraft-position-report.json";
 import * as baseScale from "./schema/core/measurement/scale.json";
 import * as baseSpatialAxes from "./schema/core/measurement/spatial-axes.json";
 import * as baseTripEntry from "./schema/core/trip-entry.json";
@@ -59,6 +69,12 @@ import * as entryRoute from "./schema/entry/route.json";
 //
 import * as enumAisAltitudeSensorType from "./schema/enum/ais-altitude-sensor-type.json";
 import * as enumAisAssignedModeFlag from "./schema/enum/ais-assigned-mode-flag.json";
+import * as enumAisClassBandFlag from "./schema/enum/ais-class-b-band-flag.json";
+import * as enumAisClassDisplayFlag from "./schema/enum/ais-class-b-display-flag.json";
+import * as enumAisClassDscFlag from "./schema/enum/ais-class-b-dsc-flag.json";
+import * as enumAisClassMessageFlag from "./schema/enum/ais-class-b-message-flag.json";
+import * as enumAisClassUnitFlag from "./schema/enum/ais-class-b-unit-flag.json";
+import * as enumAisCommuncationStateSelected from "./schema/enum/ais-communication-state-selected.json";
 import * as enumAisDte from "./schema/enum/ais-DTE.json";
 import * as enumAisMessageType from "./schema/enum/ais-message-type.json";
 import * as enumAisNavStatus from "./schema/enum/ais-nav-status.json";
@@ -68,6 +84,7 @@ import * as enumAisPositionDeviceType from "./schema/enum/ais-position-device-ty
 import * as enumAisRaimFlag from "./schema/enum/ais-RAIM-flag.json";
 import * as enumAisShipTypes from "./schema/enum/ais-ship-type.json";
 import * as enumAisSpecialManeuver from "./schema/enum/ais-special-maneuver.json";
+import * as enumAisVersionIndicator from "./schema/enum/ais-version-indicator.json";
 import * as enumDeviceType from "./schema/enum/device-type.json";
 import * as enumEffortZone from "./schema/enum/effort-zone.json";
 import * as enumEquipmentType from "./schema/enum/equipment-type.json";
@@ -105,8 +122,19 @@ export const schemas = {
     },
     "ais-message": {
       aisMessage: baseAisMessage as JSONSchema7,
-      positionReport: basePositionReport as JSONSchema7,
       baseStationReport: baseStationReport as JSONSchema7,
+      binaryOrSafetyMessage: baseBinaryOrSafetyMessage as JSONSchema7,
+      binaryOrSafetyBroadcastMessage:
+        baseBinaryOrSafetyBroadcast as JSONSchema7,
+      dateInquiry: baseDateInquiry as JSONSchema7,
+      dateResponse: baseDateResponse as JSONSchema7,
+      dgnssBroadcastMessage: baseDgnssBroadcastMessage as JSONSchema7,
+      extendedClassBReport: baseExtendedClassBReport as JSONSchema7,
+      interrogation: baseInterrogation as JSONSchema7,
+      positionReport: basePositionReport as JSONSchema7,
+      staticVoyageData: baseStaticVoyageData as JSONSchema7,
+      sarAircraftPositionReport: baseSarAircraftPositionReport as JSONSchema7,
+      textMessageAcknowledgement: baseTextMessageAcknowledgement as JSONSchema7,
     },
     persona: {
       company: baseCompany as JSONSchema7,
@@ -155,6 +183,13 @@ export const schemas = {
   enum: {
     aisAltitudeSensorType: enumAisAltitudeSensorType as JSONSchema7,
     aisAssignedModeFlag: enumAisAssignedModeFlag as JSONSchema7,
+    aisClassBandFlag: enumAisClassBandFlag as JSONSchema7,
+    aisClassDisplayFlag: enumAisClassDisplayFlag as JSONSchema7,
+    aisClassDscFlag: enumAisClassDscFlag as JSONSchema7,
+    aisClassMessageFlag: enumAisClassMessageFlag as JSONSchema7,
+    aisClassUnitFlag: enumAisClassUnitFlag as JSONSchema7,
+    aisCommunicationStateSelected:
+      enumAisCommuncationStateSelected as JSONSchema7,
     aisDte: enumAisDte as JSONSchema7,
     aisMessageType: enumAisMessageType as JSONSchema7,
     aisNavStatus: enumAisNavStatus as JSONSchema7,
@@ -164,6 +199,7 @@ export const schemas = {
     aisRaimFlag: enumAisRaimFlag as JSONSchema7,
     aisShipTypes: enumAisShipTypes as JSONSchema7,
     aisSpecialManeuver: enumAisSpecialManeuver as JSONSchema7,
+    aisVersionIndicator: enumAisVersionIndicator as JSONSchema7,
     deviceType: enumDeviceType as JSONSchema7,
     effortZone: enumEffortZone as JSONSchema7,
     equipmentType: enumEquipmentType as JSONSchema7,

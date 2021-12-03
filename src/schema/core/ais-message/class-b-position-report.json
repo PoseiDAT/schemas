@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/ais-message/class-b-position-report.json",
+  "title": "Class B position report AIS",
+  "description": "A position report message for the AIS for a class b ship.",
+  "properties": {
+    "ais_message_type": {
+      "description": "The message type of the given AIS measurement",
+      "type": "string",
+      "enum": [
+        "CLASS_B_EQUIPMENT_POSITION_REPORT"
+      ],
+      "default": "CLASS_B_EQUIPMENT_POSITION_REPORT"
+    },
+    "position": {
+      "description": "The position of the AIS entity",
+      "$ref": "https://poseidat.org/schema/core/measurement/position.json"
+    },
+    "position_accuracy": {
+      "description": "The accuracy of the given AIS position. LOW is > 10 meters, HIGH is <= 10 meters ",
+      "$ref": "https://poseidat.org/schema/enum/ais-position-accuracy.json",
+      "default": "LOW"
+    },
+    "true_heading": {
+      "description": "Degrees (0-359) (511 indicates not available = default)",
+      "type": "number",
+      "default": 511,
+      "maximum": 511,
+      "minimum": 0
+    },
+    "unit_flag": {
+      "description": "Type class B unit flag",
+      "$ref": "https://poseidat.org/schema/enum/ais-class-b-unit-flag.json",
+      "default": "CS"
+    },
+    "display_flag": {
+      "description": "Flag to indicate if display is integrated for messages 12 and 14",
+      "$ref": "https://poseidat.org/schema/enum/ais-class-b-display-flag.json",
+      "default": "NO_DISPLAY"
+    },
+    "dsc_flag": {
+      "description": "Indicates whether ship is equipped with DSC function",
+      "$ref": "https://poseidat.org/schema/enum/ais-class-b-dsc-flag.json",
+      "default": "NO_DSC_FUNCTION"
+    },
+    "band_flag": {
+      "description": "Capable of operating over the upper 525 kHz band of the marine band or the whole marine band",
+      "$ref": "https://poseidat.org/schema/enum/ais-class-b-band-flag.json",
+      "default": "CAPABLE_OPERATING_525_OVER_KHZ"
+    },
+    "message_flag": {
+      "description": "Indicates if frequencycan be managed via message 22",
+      "$ref": "https://poseidat.org/schema/enum/ais-class-b-message-flag.json",
+      "default": "NO_FREQUENCY_VIA_MESSAGE_22"
+    },
+    "assigned_mode_flag": {
+      "description": "State of station if it is operating in autonomous or assigned mode",
+      "$ref": "https://poseidat.org/schema/enum/ais-assigned-mode-flag.json",
+      "default": "AUTONOMOUS_CONTINUOUS_MODE"
+    },
+    "raim_flag": {
+      "description": "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device",
+      "$ref": "https://poseidat.org/schema/enum/ais-raim-flag.json",
+      "default": "RAIM_NOT_IN_USE"
+    },
+    "communication_state_selected": {
+      "description": "The selected state for communication",
+      "$ref": "https://poseidat.org/schema/enum/ais-communication-state-selected.json",
+      "default": "SOTDMA"
+    },
+    "communication_state": {
+      "description": "Communication state selector flag",
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": ["ais_message_type", "position", "position_accuracy", "true_heading", "unit_flag", "display_flag", "dsc_flag", "band_flag",
+  "message_flag", "assigned_mode_flag", "raim_flag", "communication_state_selected", "communication_state"],
+  "allOf": [
+    { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
+  ],
+  "type": "object",
+  "additionalProperties": true
+}
