@@ -27,6 +27,30 @@
       "$ref": "https://poseidat.org/schema/enum/ais-position-accuracy.json",
       "default": "LOW"
     },
+    "aid_type": {
+      "description": "The type of aid from this entity",
+      "$ref": "https://poseidat.org/schema/enum/ais-aid-type.json",
+      "default": "NOT_AVAILABLE"
+    },
+    "aid_name_extension": {
+      "description": "Extends the aids to navigation name of the entity",
+      "type": "string"
+    },
+    "aton_status": {
+      "description": "indication of the AtoN status",
+      "type": "string",
+      "default": "00000000"
+    },
+    "off_position_indicator": {
+      "description": "Indicates if the AtoN is on or off position",
+      "$ref": "https://poseidat.org/schema/enum/ais-off-position-indicator.json",
+      "default": "REAL_ATON"
+    },
+    "virtual_aton_flag": {
+      "description": "indicates if the AtoN physically exists or if it is simulated",
+      "$ref": "https://poseidat.org/schema/enum/ais-aid-virtual-flag.json",
+      "default": "ON_POSITION"
+    },
     "dimension_to_bow": {
       "description": "Indicates the dimension of ship",
       "type": "integer",
@@ -50,7 +74,7 @@
     "position_device_type": {
       "description": "The type of navigation device",
       "$ref": "https://poseidat.org/schema/enum/ais-position-device-type.json",
-      "default": "UNDEFINED"
+      "default": "SURVEYED"
     },
     "raim_flag": {
       "description": "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device",
@@ -63,7 +87,9 @@
       "default": "AUTONOMOUS_CONTINUOUS_MODE"
     }
   },
-  "required": ["ais_message_type","position", "position_accuracy", "rate_of_turn", "true_heading", "raim_flag", "special_maneuvre_indicator", "communication_state"],
+  "required": [ "ais_message_type", "entity_name", "position", "position_accuracy", "aid_type" , "aid_name_extension",
+    "aton_status", "off_position_indicator", "virtual_aton_flag", "dimension_to_bow", "dimension_to_stern", "dimension_to_port",
+  "dimension_to_starboard", "position_device_type", "raim_flag", "assigned_mode_flag"],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
   ],

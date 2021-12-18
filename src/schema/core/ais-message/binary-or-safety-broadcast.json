@@ -8,7 +8,9 @@
       "description": "The message type of the given AIS measurement",
       "type": "string",
       "enum": [
-        "BINARY_OR_SAFETY_BROADCAST"
+        "BINARY_OR_SAFETY_BROADCAST",
+        "SINGLE_SLOT_BINARY_MESSAGE",
+        "MULTIPLE_SLOT_BINARY_MESSAGE"
       ],
       "default": "BINARY_OR_SAFETY_BROADCAST"
     },

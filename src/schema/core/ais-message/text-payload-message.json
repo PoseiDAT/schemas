@@ -10,7 +10,8 @@
       "enum": [
         "ASSIGNMENT_MODE_COMMAND",
         "SAFETY_ACKNOWLEDGEMENT",
-        "BINARY_ACKNOWLEDGEMENT"
+        "BINARY_ACKNOWLEDGEMENT",
+        "DATA_LINK_MANAGEMENT_MESSAGE"
       ],
       "default": "ASSIGNMENT_MODE_COMMAND"
     },

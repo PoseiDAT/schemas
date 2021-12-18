@@ -1,15 +1,20 @@
 import {
+  IAisMessageAidsToNavigationReport,
   IAisMessageBaseStationReport,
   IAisMessageBinaryOrSafetyBroadcast,
   IAisMessageBinaryOrSafetyMessage,
+  IAisMessageChannelManagement,
   IAisMessageClassBPositionReport,
   IAisMessageDateInquiry,
   IAisMessageDateResponse,
   IAisMessageDgnssBroadcastMessage,
   IAisMessageExtendedClassBReport,
+  IAisMessageGroupAssignmentCommand,
   IAisMessageInterrogation,
+  IAisMessageLongRangeApplicationPositionReport,
   IAisMessagePositionReport,
   IAisMessageSarAircraftPositionReport,
+  IAisMessageStaticDataReport,
   IAisMessageStaticVoyageData,
   IAisMessageTextPayloadMessage,
   IEntryAisMessage,
@@ -111,6 +116,7 @@ describe("AisMessageEntry", () => {
       raim_flag: "RAIM_IN_USE",
       communication_state: 0,
       priority: 1,
+      nav_status: "UNDEFINED",
     };
     const aisEntry = new AisMessageEntry(data);
     const validationErrors = aisEntry.validate();
@@ -133,7 +139,7 @@ describe("AisMessageEntry", () => {
       imo_number: "0001000001",
       callsign: "UK-999",
       entity_name: "BOAT",
-      entity_type: "NOT_AVAILABLE",
+      ship_type: "NOT_AVAILABLE",
       eta: "2020-01-01T00:00:00Z",
       max_draught: 0,
       destination: "URK",
@@ -417,7 +423,7 @@ describe("AisMessageEntry", () => {
       position_accuracy: "LOW",
       true_heading: 0,
       entity_name: "UK-199",
-      entity_type: "NOT_AVAILABLE",
+      ship_type: "NOT_AVAILABLE",
       dimension_to_bow: 0,
       dimension_to_stern: 0,
       dimension_to_port: 0,
@@ -425,6 +431,161 @@ describe("AisMessageEntry", () => {
       position_device_type: "UNDEFINED",
       assigned_mode_flag: "AUTONOMOUS_CONTINUOUS_MODE",
       raim_flag: "RAIM_NOT_IN_USE",
+    };
+    const aisEntry = new AisMessageEntry(data);
+    const validationErrors = aisEntry.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
+  });
+
+  test("Validating a IAisMessageAidsToNavigationReport should succeed", () => {
+    const data: IAisMessageAidsToNavigationReport = {
+      journal_id: v4(),
+      entry_id: v4(),
+      revision: "2020-01-01T00:00:00Z",
+      immutable: false,
+      entry_type: "ais-message",
+      device_id: v4(),
+      entity_id: 1,
+      repeat_indicator: 0,
+      priority: 1,
+      ais_message_type: "AIDS_TO_NAVIGATION_REPORT",
+      position: {
+        latitude: 1.1,
+        longitude: 1.1,
+        speed_over_ground: 3.3,
+        course_made_good: 3.3,
+      },
+      position_accuracy: "LOW",
+      raim_flag: "RAIM_NOT_IN_USE",
+      aid_type: "NOT_AVAILABLE",
+      aid_name_extension: "TEXT",
+      dimension_to_bow: 0,
+      dimension_to_stern: 0,
+      dimension_to_port: 0,
+      dimension_to_starboard: 0,
+      aton_status: "00000000",
+      off_position_indicator: "ON_POSITION",
+      virtual_aton_flag: "REAL_ATON",
+      entity_name: "NAME",
+      position_device_type: "UNDEFINED",
+      assigned_mode_flag: "AUTONOMOUS_CONTINUOUS_MODE",
+    };
+    const aisEntry = new AisMessageEntry(data);
+    const validationErrors = aisEntry.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
+  });
+
+  test("Validating a IAisMessageChannelManagement should succeed", () => {
+    const data: IAisMessageChannelManagement = {
+      journal_id: v4(),
+      entry_id: v4(),
+      revision: "2020-01-01T00:00:00Z",
+      immutable: false,
+      entry_type: "ais-message",
+      device_id: v4(),
+      entity_id: 1,
+      repeat_indicator: 0,
+      priority: 1,
+      ais_message_type: "CHANNEL_MANAGEMENT",
+      channel_a_frequency: 161.975,
+      channel_b_frequency: 162.025,
+      channel_a_bandwidth: 25,
+      channel_b_bandwidth: 25,
+      power: "HIGH",
+      north_east_longtitude: 0,
+      north_east_latitude: 0,
+      south_west_longtitude: 0,
+      south_west_latitude: 0,
+      zone_size: 0,
+      addressed_or_broadcast: "BROADCAST",
+      transmit_receive_mode: "TXA_AND_TXB_OR_RXA_AND_RXB",
+    };
+    const aisEntry = new AisMessageEntry(data);
+    const validationErrors = aisEntry.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
+  });
+
+  test("Validating a IAisMessageStaticDataReport should succeed", () => {
+    const data: IAisMessageGroupAssignmentCommand = {
+      journal_id: v4(),
+      entry_id: v4(),
+      revision: "2020-01-01T00:00:00Z",
+      immutable: false,
+      entry_type: "ais-message",
+      device_id: v4(),
+      entity_id: 1,
+      repeat_indicator: 0,
+      priority: 1,
+      ais_message_type: "GROUP_ASSIGNMENT_COMMAND",
+      north_east_longtitude: 0,
+      north_east_latitude: 0,
+      south_west_longtitude: 0,
+      south_west_latitude: 0,
+      transmit_receive_mode: "TXA_AND_TXB_OR_RXA_AND_RXB",
+      quiet_time: 0,
+      ship_type: "NOT_AVAILABLE",
+      station_type: "",
+      report_interval: 0,
+    };
+    const aisEntry = new AisMessageEntry(data);
+    const validationErrors = aisEntry.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
+  });
+
+  test("Validating a IAisMessageStaticDataReport should succeed", () => {
+    const data: IAisMessageStaticDataReport = {
+      journal_id: v4(),
+      entry_id: v4(),
+      revision: "2020-01-01T00:00:00Z",
+      immutable: false,
+      entry_type: "ais-message",
+      device_id: v4(),
+      entity_id: 1,
+      repeat_indicator: 0,
+      priority: 1,
+      ais_message_type: "STATIC_DATA_REPORT",
+      callsign: "@@@@@",
+      vendor_id: "@@@@@",
+      entity_name: "@@@@@@@@@@@@@@@",
+      dimension_to_bow: 0,
+      dimension_to_stern: 0,
+      dimension_to_port: 0,
+      dimension_to_starboard: 0,
+      position_device_type: "UNDEFINED",
+      ship_type: "NOT_AVAILABLE",
+    };
+    const aisEntry = new AisMessageEntry(data);
+    const validationErrors = aisEntry.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
+  });
+
+  test("Validating a IAisMessageLongRangeApplicationPositionReport should succeed", () => {
+    const data: IAisMessageLongRangeApplicationPositionReport = {
+      journal_id: v4(),
+      entry_id: v4(),
+      revision: "2020-01-01T00:00:00Z",
+      immutable: false,
+      entry_type: "ais-message",
+      device_id: v4(),
+      entity_id: 1,
+      repeat_indicator: 0,
+      priority: 1,
+      ais_message_type: "LONG_RANGE_APPLICATION_POSITION_REPORT",
+      nav_status: "UNDER_WAY_USING_ENGINE",
+      position: {
+        latitude: 1.1,
+        longitude: 1.1,
+        speed_over_ground: 3.3,
+        course_made_good: 3.3,
+      },
+      position_accuracy: "LOW",
+      raim_flag: "RAIM_NOT_IN_USE",
+      position_latency: "LESS_THAN_5_SECONDS",
     };
     const aisEntry = new AisMessageEntry(data);
     const validationErrors = aisEntry.validate();

@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/ais-message/group-assignment-command.json",
+  "title": "Group assignment command",
+  "description": "Assignment of a specific report behaviour by competent authority using a Base station to a specific group of mobiles",
+  "properties": {
+    "ais_message_type": {
+      "description": "The message type of the given AIS measurement",
+      "type": "string",
+      "enum": [
+        "GROUP_ASSIGNMENT_COMMAND"
+      ],
+      "default": "GROUP_ASSIGNMENT_COMMAND"
+    },
+    "north_east_longtitude": {
+      "description": "Region defining latitudes and longitudes",
+      "type": "number"
+    },
+    "north_east_latitude": {
+      "description": "Region defining latitudes and longitudes",
+      "type": "number"
+    },
+    "south_west_longtitude": {
+      "description": "Region defining latitudes and longitudes",
+      "type": "number"
+    },
+    "south_west_latitude": {
+      "description": "Region defining latitudes and longitudes",
+      "type": "number"
+    },
+    "transmit_receive_mode": {
+      "type": "string",
+      "description": "The mode the transmittor is using",
+      "enum": [
+        "TXA_AND_TXB_OR_RXA_AND_RXB",
+        "TXA_OR_RXA_AND_RXB",
+        "TXB_OR_RXA_AND_RXB"
+      ],
+      "default": "TXA_AND_TXB_OR_RXA_AND_RXB"
+    },
+    "quiet_time":{
+      "description": "The amount of minutes quiet commanded",
+      "type": "number",
+      "default": 0
+    },
+    "ship_type": {
+      "description": "The type of vessel given by the AIS, default is 0 ('Not available')",
+      "$ref": "https://poseidat.org/schema/enum/ais-ship-type.json",
+      "default": "NOT_AVAILABLE"
+    },
+    "station_type": {
+      "type": "string"
+    },
+    "report_interval": {
+      "type": "number"
+    }
+  },
+  "required": ["ais_message_type", "north_east_longtitude", "north_east_latitude", "south_west_longtitude", "south_west_latitude",
+  "transmit_receive_mode", "quiet_time", "ship_type", "station_type", "report_interval"],
+  "allOf": [
+    { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

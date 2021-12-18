@@ -1,16 +1,16 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://poseidat.org/schema/core/ais-message/base-station-report.json",
-  "title": "Position report AIS",
-  "description": "A position report message for the AIS.",
+  "$id": "https://poseidat.org/schema/core/ais-message/long-range-application-position-report.json",
+  "title": "Long range position report AIS",
+  "description": "A long range position report message for the AIS.",
   "properties": {
     "ais_message_type": {
       "description": "The message type of the given AIS measurement",
       "type": "string",
       "enum": [
-        "BASE_STATION_REPORT"
+        "LONG_RANGE_APPLICATION_POSITION_REPORT"
       ],
-      "default": "BASE_STATION_REPORT"
+      "default": "LONG_RANGE_APPLICATION_POSITION_REPORT"
     },
     "nav_status": {
       "description": "The navigational status of the current entity",
@@ -26,30 +26,22 @@
       "$ref": "https://poseidat.org/schema/enum/ais-position-accuracy.json",
       "default": "LOW"
     },
-    "position_device_type": {
-      "description": "The type of navigation device",
-      "$ref": "https://poseidat.org/schema/enum/ais-position-device-type.json",
-      "default": "UNDEFINED"
-    },
-    "control_long_range_message": {
-      "description": "Transmission control for long-range broadcast message",
-      "$ref": "https://poseidat.org/schema/enum/ais-long-range-control-type.json",
-      "default": "STOP_TRANSMISSION_MESSAGE_27"
+    "position_latency": {
+      "description": "The latency of which the position was send",
+      "$ref": "https://poseidat.org/schema/enum/ais-position-latency.json",
+      "default": "GREATER_THAN_5_SECONDS"
     },
     "raim_flag": {
       "description": "Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device",
       "$ref": "https://poseidat.org/schema/enum/ais-raim-flag.json",
       "default": "RAIM_NOT_IN_USE"
-    },
-    "communication_state": {
-      "description": "Communication state selector flag",
-      "type": "integer"
     }
+
   },
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
   ],
-  "required": ["ais_message_type", "nav_status", "position", "position_accuracy", "position_device_type", "control_long_range_message", "raim_flag", "communication_state"],
+  "required": ["ais_message_type", "nav_status", "position", "position_accuracy", "position_latency", "raim_flag"],
   "type": "object",
   "additionalProperties": false
 }

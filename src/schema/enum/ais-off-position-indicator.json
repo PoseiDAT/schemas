@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/enum/ais-off-position-indicator.json",
+  "description": "Indicates if the AtoN is on or off position",
+  "title": "AtoN off position indicator",
+  "type": "string",
+  "enum": [
+    "ON_POSITION",
+    "OFF_POSITION"
+  ]
+}

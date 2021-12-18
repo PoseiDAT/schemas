@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/ais-message/static-data-report.json",
+  "title": "Static data report AIS message",
+  "description": "Additional data assigned to an MMSI.",
+  "properties": {
+    "ais_message_type": {
+      "description": "The message type of the given AIS measurement",
+      "type": "string",
+      "enum": [
+        "STATIC_DATA_REPORT"
+      ],
+      "default": "STATIC_DATA_REPORT"
+    },
+    "callsign": {
+      "description": "The call sign of the given AIS entity, '@@@@@@@' is default",
+      "type": "string",
+      "default": "@@@@@@@"
+    },
+    "vendor_id": {
+      "description": "Unique identification of the Unit by a number as defined by the manufacturer",
+      "type": "string",
+      "maximum": 20,
+      "default": "@@@@@@@"
+    },
+    "entity_name": {
+      "description": "The name of the AIS entity",
+      "type": "string",
+      "maximum": 20,
+      "default": "@@@@@@@@@@@@@@@@@@@@"
+    },
+    "ship_type": {
+      "description": "The type of vessel given by the AIS, default is 0 ('Not available')",
+      "$ref": "https://poseidat.org/schema/enum/ais-ship-type.json",
+      "default": "NOT_AVAILABLE"
+    },
+    "dimension_to_bow": {
+      "description": "Indicates the dimension of ship",
+      "type": "integer",
+      "default": 0
+    },
+    "dimension_to_stern": {
+      "description": "Indicates the dimension of ship",
+      "type": "integer",
+      "default": 0
+    },
+    "dimension_to_port": {
+      "description": "Indicates the dimension of ship",
+      "type": "integer",
+      "default": 0
+    },
+    "dimension_to_starboard": {
+      "description": "Indicates the dimension of ship",
+      "type": "integer",
+      "default": 0
+    },
+    "position_device_type": {
+      "description": "The type of navigation device",
+      "$ref": "https://poseidat.org/schema/enum/ais-position-device-type.json",
+      "default": "UNDEFINED"
+    }
+  },
+  "required": ["ais_message_type", "dimension_to_stern", "dimension_to_port","dimension_to_starboard", "dimension_to_bow", "callsign",
+    "entity_name", "ship_type", "vendor_id", "position_device_type"],
+  "allOf": [
+    { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

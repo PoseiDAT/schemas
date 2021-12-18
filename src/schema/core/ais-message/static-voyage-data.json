@@ -32,7 +32,7 @@
       "maximum": 20,
       "default": "@@@@@@@@@@@@@@@@@@@@"
     },
-    "entity_type": {
+    "ship_type": {
       "description": "The type of vessel given by the AIS, default is 0 ('Not available')",
       "$ref": "https://poseidat.org/schema/enum/ais-ship-type.json",
       "default": "NOT_AVAILABLE"
@@ -79,7 +79,7 @@
     }
   },
   "required": ["ais_message_type", "dimension_to_stern", "dimension_to_port","dimension_to_starboard", "dimension_to_bow", "ais_version_indicator", "imo_number", "callsign",
-    "entity_name", "entity_type", "eta", "max_draught", "destination", "dte"],
+    "entity_name", "ship_type", "eta", "max_draught", "destination", "dte"],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
   ],

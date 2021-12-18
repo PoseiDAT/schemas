@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/ais-message/channel-management.json",
+  "title": "Management of channel",
+  "description": "Management of channels and transceiver modes by a Base station",
+  "properties": {
+    "ais_message_type": {
+      "description": "The message type of the given AIS measurement",
+      "type": "string",
+      "enum": [
+        "CHANNEL_MANAGEMENT"
+      ],
+      "default": "CHANNEL_MANAGEMENT"
+    },
+    "channel_a_frequency": {
+      "description": "frequency of the primary operating channel (in MHz)",
+      "type": "number",
+      "default": 161.975
+    },
+    "channel_b_frequency": {
+      "description": "frequency of the primary operating channel (in MHz)",
+      "type": "number",
+      "default": 162.025
+    },
+    "channel_a_bandwidth": {
+      "description": "frequency of the primary operating channel (in kHz)",
+      "type": "number",
+      "default": 25
+    },
+    "channel_b_bandwidth": {
+      "description": "frequency of the secondary operating channel (in kHz)",
+      "type": "number",
+      "default": 25
+    },
+    "power": {
+      "description": "Transmitter Power Mode ",
+      "type": "string",
+      "enum": [
+        "HIGH",
+        "LOW"
+      ],
+      "default": "HIGH"
+    },
+    "north_east_longtitude": {
+      "description": "Region defining latitudes and longitudes",
+      "type": "number"
+    },
+    "north_east_latitude": {
+      "description": "Region defining latitudes and longitudes",
+      "type": "number"
+    },
+    "south_west_longtitude": {
+      "description": "Region defining latitudes and longitudes",
+      "type": "number"
+    },
+    "south_west_latitude": {
+      "description": "Region defining latitudes and longitudes",
+      "type": "number"
+    },
+    "zone_size": {
+      "description": "The size of the transitional zone",
+      "type": "number",
+      "default": 5
+    },
+    "transmit_receive_mode": {
+      "type": "string",
+      "description": "The mode the transmittor is using",
+      "enum": [
+        "TXA_AND_TXB_OR_RXA_AND_RXB",
+        "TXA_OR_RXA_AND_RXB",
+        "TXB_OR_RXA_AND_RXB"
+      ],
+      "default": "TXA_AND_TXB_OR_RXA_AND_RXB"
+    },
+    "addressed_or_broadcast": {
+      "description": "Addressed or Broadcast Message Indicator",
+      "type": "string",
+      "enum": [
+        "BROADCAST",
+        "ADDRESSED"
+      ],
+      "default": "BROADCAST"
+    }
+
+  },
+  "required": ["ais_message_type", "channel_a_frequency", "channel_b_frequency", "channel_a_bandwidth", "channel_b_bandwidth",
+    "power", "north_east_longtitude", "north_east_latitude", "south_west_longtitude", "south_west_latitude", "zone_size",
+    "transmit_receive_mode", "addressed_or_broadcast"],
+  "allOf": [
+    { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

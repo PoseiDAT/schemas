@@ -34,7 +34,7 @@
       "maximum": 20,
       "default": "@@@@@@@@@@@@@@@@@@@@"
     },
-    "entity_type": {
+    "ship_type": {
       "description": "The type of vessel given by the AIS, default is 0 ('Not available')",
       "$ref": "https://poseidat.org/schema/enum/ais-ship-type.json",
       "default": "NOT_AVAILABLE"
@@ -75,7 +75,7 @@
       "default": "RAIM_NOT_IN_USE"
     }
   },
-  "required": ["ais_message_type", "position", "position_accuracy", "true_heading", "entity_name", "entity_type",
+  "required": ["ais_message_type", "position", "position_accuracy", "true_heading", "entity_name", "ship_type",
     "dimension_to_stern", "dimension_to_port","dimension_to_starboard", "dimension_to_bow", "position_device_type", "assigned_mode_flag", "raim_flag"],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
