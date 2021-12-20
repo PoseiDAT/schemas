@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/ais-message/date-response.json",
-  "title": "Binary broadcast message send by the AIS",
-  "description": "This message type is used to send and array of binary data as a broadcast",
+  "title": "Date response AIS",
+  "description": "This message contains the position and date requested by another ship.",
   "properties": {
     "ais_message_type": {
       "description": "The message type of the given AIS measurement",

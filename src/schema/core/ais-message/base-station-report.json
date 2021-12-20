@@ -12,10 +12,10 @@
       ],
       "default": "BASE_STATION_REPORT"
     },
-    "nav_status": {
-      "description": "The navigational status of the current entity",
-      "$ref": "https://poseidat.org/schema/enum/ais-nav-status.json",
-      "default": "UNDEFINED"
+    "date": {
+      "description": "The date and time when the AIS message was created.",
+      "type": "string",
+      "format": "date-time"
     },
     "position": {
       "description": "The position of the AIS entity",
@@ -49,7 +49,7 @@
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
   ],
-  "required": ["ais_message_type", "nav_status", "position", "position_accuracy", "position_device_type", "control_long_range_message", "raim_flag", "communication_state"],
+  "required": ["ais_message_type", "date", "position", "position_accuracy", "position_device_type", "control_long_range_message", "raim_flag", "communication_state"],
   "type": "object",
   "additionalProperties": false
 }

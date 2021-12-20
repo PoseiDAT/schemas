@@ -28,7 +28,11 @@
     },
     "position_latency": {
       "description": "The latency of which the position was send",
-      "$ref": "https://poseidat.org/schema/enum/ais-position-latency.json",
+      "type": "string",
+      "enum": [
+        "LESS_THAN_5_SECONDS",
+        "GREATER_THAN_5_SECONDS"
+      ],
       "default": "GREATER_THAN_5_SECONDS"
     },
     "raim_flag": {

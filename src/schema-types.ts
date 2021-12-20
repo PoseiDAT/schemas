@@ -239,6 +239,8 @@ export interface ICoreVesselSection {
 }
 
 export type IAisMessageAidsToNavigationReportAisMessageType = "AIDS_TO_NAVIGATION_REPORT";
+export type IAisMessageAidsToNavigationReportOffPositionIndicator = "ON_POSITION" | "OFF_POSITION";
+export type IAisMessageAidsToNavigationReportVirtualAtonFlag = "REAL_ATON" | "VIRTUAL_ATON";
 /** Position and status report for aids-to-navigation */
 export interface IAisMessageAidsToNavigationReport extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessageAidsToNavigationReportAisMessageType;
@@ -248,8 +250,8 @@ export interface IAisMessageAidsToNavigationReport extends IAisMessageBaseAisMes
   /** The type of aid from this entity */ aid_type: IEnumAisAidType;
   /** Extends the aids to navigation name of the entity */ aid_name_extension: string;
   /** indication of the AtoN status */ aton_status: string;
-  /** Indicates if the AtoN is on or off position */ off_position_indicator: IEnumAisOffPositionIndicator;
-  /** indicates if the AtoN physically exists or if it is simulated */ virtual_aton_flag: IEnumAisAidVirtualFlag;
+  /** Indicates if the AtoN is on or off position */ off_position_indicator: IAisMessageAidsToNavigationReportOffPositionIndicator;
+  /** indicates if the AtoN physically exists or if it is simulated */ virtual_aton_flag: IAisMessageAidsToNavigationReportVirtualAtonFlag;
   /** Indicates the dimension of ship */ dimension_to_bow: number;
   /** Indicates the dimension of ship */ dimension_to_stern: number;
   /** Indicates the dimension of ship */ dimension_to_port: number;
@@ -259,7 +261,7 @@ export interface IAisMessageAidsToNavigationReport extends IAisMessageBaseAisMes
   /** State of station if it is operating in autonomous or assigned mode */ assigned_mode_flag: IEnumAisAssignedModeFlag;
 }
 
-/** The message that gets send by an AIS device. Values that are undefined should be set by the AIS device using the default */
+/** The message that gets send by an AIS device */
 export interface IAisMessageBaseAisMessage extends IEntryAisMessage {
   /** The mmsi identifier (ais entity) this value is related to */ entity_id: number;
   /** The message type of the given AIS measurement */ ais_message_type: IEnumAisMessageType;
@@ -271,7 +273,7 @@ export type IAisMessageBaseStationReportAisMessageType = "BASE_STATION_REPORT";
 /** A position report message for the AIS. */
 export interface IAisMessageBaseStationReport extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessageBaseStationReportAisMessageType;
-  /** The navigational status of the current entity */ nav_status: IEnumAisNavStatus;
+  /** The date and time when the AIS message was created. */ date: string;
   /** The position of the AIS entity */ position: IMeasurementPosition;
   /** The accuracy of the given AIS position. LOW is > 10 meters, HIGH is <= 10 meters  */ position_accuracy: IEnumAisPositionAccuracy;
   /** The type of navigation device */ position_device_type: IEnumAisPositionDeviceType;
@@ -298,7 +300,6 @@ export interface IAisMessageBinaryOrSafetyMessage extends IAisMessageBaseAisMess
 
 export type IAisMessageChannelManagementAisMessageType = "CHANNEL_MANAGEMENT";
 export type IAisMessageChannelManagementPower = "HIGH" | "LOW";
-export type IAisMessageChannelManagementTransmitReceiveMode = "TXA_AND_TXB_OR_RXA_AND_RXB" | "TXA_OR_RXA_AND_RXB" | "TXB_OR_RXA_AND_RXB";
 export type IAisMessageChannelManagementAddressedOrBroadcast = "BROADCAST" | "ADDRESSED";
 /** Management of channels and transceiver modes by a Base station */
 export interface IAisMessageChannelManagement extends IAisMessageBaseAisMessage {
@@ -313,22 +314,28 @@ export interface IAisMessageChannelManagement extends IAisMessageBaseAisMessage 
   /** Region defining latitudes and longitudes */ south_west_longtitude: number;
   /** Region defining latitudes and longitudes */ south_west_latitude: number;
   /** The size of the transitional zone */ zone_size: number;
-  /** The mode the transmittor is using */ transmit_receive_mode: IAisMessageChannelManagementTransmitReceiveMode;
+  /** The mode the transmittor is using */ transmit_receive_mode: IEnumAisTransmitReceiveMode;
   /** Addressed or Broadcast Message Indicator */ addressed_or_broadcast: IAisMessageChannelManagementAddressedOrBroadcast;
 }
 
 export type IAisMessageClassBPositionReportAisMessageType = "CLASS_B_EQUIPMENT_POSITION_REPORT";
+export type IAisMessageClassBPositionReportUnitFlag = "SOTDMA" | "CS";
+export type IAisMessageClassBPositionReportDisplayFlag = "NO_DISPLAY" | "DISPLAY_EQUIPPED";
+export type IAisMessageClassBPositionReportDscFlag = "NO_DSC_FUNCTION" | "DSC_FUNCTION_EQUIPPED";
+export type IAisMessageClassBPositionReportBandFlag = "CAPABLE_OPERATING_525_OVER_KHZ" | "CAPABLE_OPERATING_OVER_MARINE_BAND";
+export type IAisMessageClassBPositionReportMessageFlag = "NO_FREQUENCY_VIA_MESSAGE_22" | "FREQUENCY_MANAGEMENT_VIA_MESSAGE_22";
 /** A position report message for the AIS for a class b ship. */
 export interface IAisMessageClassBPositionReport extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessageClassBPositionReportAisMessageType;
   /** The position of the AIS entity */ position: IMeasurementPosition;
   /** The accuracy of the given AIS position. LOW is > 10 meters, HIGH is <= 10 meters  */ position_accuracy: IEnumAisPositionAccuracy;
   /** Degrees (0-359) (511 indicates not available = default) */ true_heading: number;
-  /** Type class B unit flag */ unit_flag: IEnumAisClassBUnitFlag;
-  /** Flag to indicate if display is integrated for messages 12 and 14 */ display_flag: IEnumAisClassBDisplayFlag;
-  /** Indicates whether ship is equipped with DSC function */ dsc_flag: IEnumAisClassBDscFlag;
-  /** Capable of operating over the upper 525 kHz band of the marine band or the whole marine band */ band_flag: IEnumAisClassBBandFlag;
-  /** Indicates if frequencycan be managed via message 22 */ message_flag: IEnumAisClassBMessageFlag;
+  /** The date and time when the AIS message was created. */ date: string;
+  /** Type class B unit flag */ unit_flag: IAisMessageClassBPositionReportUnitFlag;
+  /** Flag to indicate if display is integrated for messages 12 and 14 */ display_flag: IAisMessageClassBPositionReportDisplayFlag;
+  /** Indicates whether ship is equipped with DSC function */ dsc_flag: IAisMessageClassBPositionReportDscFlag;
+  /** Capable of operating over the upper 525 kHz band of the marine band or the whole marine band */ band_flag: IAisMessageClassBPositionReportBandFlag;
+  /** Indicates if frequencycan be managed via message 22 */ message_flag: IAisMessageClassBPositionReportMessageFlag;
   /** State of station if it is operating in autonomous or assigned mode */ assigned_mode_flag: IEnumAisAssignedModeFlag;
   /** Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device */ raim_flag: IEnumAisRaimFlag;
   /** The selected state for communication */ communication_state_selected: IEnumAisCommunicationStateSelected;
@@ -343,7 +350,7 @@ export interface IAisMessageDateInquiry extends IAisMessageBaseAisMessage {
 }
 
 export type IAisMessageDateResponseAisMessageType = "UTC_DATE_RESPONSE";
-/** This message type is used to send and array of binary data as a broadcast */
+/** This message contains the position and date requested by another ship. */
 export interface IAisMessageDateResponse extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessageDateResponseAisMessageType;
   /** The send UTC date time response from the destination ship */ date_time_response: string;
@@ -355,10 +362,11 @@ export interface IAisMessageDateResponse extends IAisMessageBaseAisMessage {
 }
 
 export type IAisMessageDgnssBroadcastMessageAisMessageType = "DGNSS_BROADCAST_MESSAGE";
-/** This differential GNSS broadcast message should be transmitted by a base station, which is connected to a DGNSS reference source */
+/** Global navigation satellite system corrections provided by a base station */
 export interface IAisMessageDgnssBroadcastMessage extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessageDgnssBroadcastMessageAisMessageType;
   /** The position of the AIS entity */ position: IMeasurementPosition;
+  /** DGNSS correction data in text */ data: string;
 }
 
 export type IAisMessageExtendedClassBReportAisMessageType = "CLASS_B_EQUIPMENT_POSITION_REPORT";
@@ -380,7 +388,6 @@ export interface IAisMessageExtendedClassBReport extends IAisMessageBaseAisMessa
 }
 
 export type IAisMessageGroupAssignmentCommandAisMessageType = "GROUP_ASSIGNMENT_COMMAND";
-export type IAisMessageGroupAssignmentCommandTransmitReceiveMode = "TXA_AND_TXB_OR_RXA_AND_RXB" | "TXA_OR_RXA_AND_RXB" | "TXB_OR_RXA_AND_RXB";
 /** Assignment of a specific report behaviour by competent authority using a Base station to a specific group of mobiles */
 export interface IAisMessageGroupAssignmentCommand extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessageGroupAssignmentCommandAisMessageType;
@@ -388,7 +395,7 @@ export interface IAisMessageGroupAssignmentCommand extends IAisMessageBaseAisMes
   /** Region defining latitudes and longitudes */ north_east_latitude: number;
   /** Region defining latitudes and longitudes */ south_west_longtitude: number;
   /** Region defining latitudes and longitudes */ south_west_latitude: number;
-  /** The mode the transmittor is using */ transmit_receive_mode: IAisMessageGroupAssignmentCommandTransmitReceiveMode;
+  /** The mode the transmittor is using */ transmit_receive_mode: IEnumAisTransmitReceiveMode;
   /** The amount of minutes quiet commanded */ quiet_time: number;
   /** The type of vessel given by the AIS, default is 0 ('Not available') */ ship_type: IEnumAisShipType;
   station_type: string;
@@ -404,42 +411,47 @@ export interface IAisMessageInterrogation extends IAisMessageBaseAisMessage {
 }
 
 export type IAisMessageLongRangeApplicationPositionReportAisMessageType = "LONG_RANGE_APPLICATION_POSITION_REPORT";
+export type IAisMessageLongRangeApplicationPositionReportPositionLatency = "LESS_THAN_5_SECONDS" | "GREATER_THAN_5_SECONDS";
 /** A long range position report message for the AIS. */
 export interface IAisMessageLongRangeApplicationPositionReport extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessageLongRangeApplicationPositionReportAisMessageType;
   /** The navigational status of the current entity */ nav_status: IEnumAisNavStatus;
   /** The position of the AIS entity */ position: IMeasurementPosition;
   /** The accuracy of the given AIS position. LOW is > 10 meters, HIGH is <= 10 meters  */ position_accuracy: IEnumAisPositionAccuracy;
-  /** The latency of which the position was send */ position_latency: IEnumAisPositionLatency;
+  /** The latency of which the position was send */ position_latency: IAisMessageLongRangeApplicationPositionReportPositionLatency;
   /** Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device */ raim_flag: IEnumAisRaimFlag;
 }
 
 export type IAisMessagePositionReportAisMessageType = "POSITION_REPORT";
+export type IAisMessagePositionReportSpecialManeuvreIndicator = "NOT_AVAILABLE" | "NOT_ENGAGED_IN_SPECIAL_MANEUVER" | "ENGAGED_IN_SPECIAL_MANEUVER";
 /** A position report message for the AIS. */
 export interface IAisMessagePositionReport extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessagePositionReportAisMessageType;
+  /** The navigational status of the current entity */ nav_status: IEnumAisNavStatus;
   /** The position of the AIS entity */ position: IMeasurementPosition;
   /** The accuracy of the given AIS position. LOW is > 10 meters, HIGH is <= 10 meters  */ position_accuracy: IEnumAisPositionAccuracy;
   /** The Rate Of Turn of the ship in degrees, minus = turning left; plus = turning right; (-128  no turn information available (default)) */ rate_of_turn: number;
   /** Degrees (0-359) (511 indicates not available = default) */ true_heading: number;
   /** Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device */ raim_flag: IEnumAisRaimFlag;
-  /** Indicates whether an special maneuver is ongoing */ special_maneuvre_indicator: IEnumAisSpecialManeuver;
+  /** Indicates whether an special maneuver is ongoing */ special_maneuvre_indicator: IAisMessagePositionReportSpecialManeuvreIndicator;
   /** Communication state selector flag */ communication_state: number;
 }
 
 export type IAisMessageSarAircraftPositionReportAisMessageType = "SAR_AIRCRAFT_POSITION_REPORT";
+export type IAisMessageSarAircraftPositionReportAltitudeSensor = "GNSS" | "BAROMETRIC_SOURCE";
 /** A standard Search And Rescue Aircraft position report. */
 export interface IAisMessageSarAircraftPositionReport extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessageSarAircraftPositionReportAisMessageType;
   /** The position of the AIS entity */ position: IMeasurementPosition;
   /** The accuracy of the given AIS position. LOW is > 10 meters, HIGH is <= 10 meters  */ position_accuracy: IEnumAisPositionAccuracy;
   /** Altitude (derived from GNSS or barometric (see altitude sensor parameter below)) (m) (0-4 094 m) 4 095 = not available */ altitude: number;
-  /** The type of altitude sensore used on the ship */ altitude_sensor: IEnumAisAltitudeSensorType;
+  /** The type of altitude sensore used on the ship */ altitude_sensor: IAisMessageSarAircraftPositionReportAltitudeSensor;
   /** Data terminal equipment (DTE) ready */ data_terminal_equipment: IEnumAisDte;
   /** State of station if it is operating in autonomous or assigned mode */ assigned_mode_flag: IEnumAisAssignedModeFlag;
   /** Receiver autonomous integrity monitoring (RAIM) flag of electronic position fixing device */ raim_flag: IEnumAisRaimFlag;
   /** The selected state for communication */ communication_state_selected: IEnumAisCommunicationStateSelected;
   /** Communication state selector flag */ communication_state: number;
+  /** The date and time when the AIS message was created. */ date: string;
 }
 
 export type IAisMessageStaticDataReportAisMessageType = "STATIC_DATA_REPORT";
@@ -458,10 +470,11 @@ export interface IAisMessageStaticDataReport extends IAisMessageBaseAisMessage {
 }
 
 export type IAisMessageStaticVoyageDataAisMessageType = "STATIC_AND_VOYAGE_DATA";
+export type IAisMessageStaticVoyageDataAisVersionIndicator = "COMPLIANT_WITH_ITU_R_M_1371_1" | "COMPLIANT_WITH_ITU_R_M_1371_3_OR_HIGHER" | "COMPLIANT_WITH_ITU_R_M_1371_5_OR_HIGHER" | "COMPLIANT_WITH_FUTURE_EDITIONS";
 /** An AIS message used to report static or voyage related data. */
 export interface IAisMessageStaticVoyageData extends IAisMessageBaseAisMessage {
   /** The message type of the given AIS measurement */ ais_message_type: IAisMessageStaticVoyageDataAisMessageType;
-  /** An indicator for the version the user has on his AIS device. */ ais_version_indicator: IEnumAisVersionIndicator;
+  /** An indicator for the version the user has on his AIS device. */ ais_version_indicator: IAisMessageStaticVoyageDataAisVersionIndicator;
   /** The International Maritime Organization (IMO) number is a unique identifier for ships */ imo_number: string;
   /** The call sign of the given AIS entity, '@@@@@@@' is default */ callsign: string;
   /** The name of the AIS entity */ entity_name: string;
@@ -592,21 +605,7 @@ export interface IPersonaCompany {
 
 export type IEnumAisAidType = "NOT_AVAILABLE" | "REFERENCE_POINT" | "RACON" | "FIXED_STRUCTURES_OFF_SHORE" | "EMERGENCY_WRECK_MARKING_BUOY" | "LIGHT_WITHOUT_SECTORS" | "LIGHT_WITH_SECTORS" | "LEADING_LIGHT_FRONT" | "LEADING_LIGHT_REAR" | "BEACON_CARDINAL_NORTH" | "BEACON_CARDINAL_SOUTH" | "BEACON_CARDINAL_EAST" | "BEACON_CARDINAL_WEST" | "BEACON_PORT_HAND" | "BEACON_STARBOARD_HAND" | "BEACON_PREFERRED_CHANNEL_PORT_HAND" | "BEACON_PREFERRED_CHANNEL_STARBOARD_HAND" | "BEACON_ISOLATED_DANGER" | "BEACON_SAFE_WATER" | "BEACON_SPECIAL_MARKER" | "CARDINAL_MARK_NORTH" | "CARDINAL_MARK_SOUTH" | "CARDINAL_MARK_WEST" | "CARDINAL_MARK_EAST" | "PORT_HAND_MARK" | "STARBOARD_HAND_MARK" | "PREFERRED_CHANNEL_PORT_HAND" | "PREFERRED_CHANNEL_STARBOARD_HAND" | "ISOLATED_DANGER" | "SAFE_WATER" | "SPECIAL_MARK" | "LANBY";
 
-export type IEnumAisAidVirtualFlag = "REAL_ATON" | "VIRTUAL_ATON";
-
-export type IEnumAisAltitudeSensorType = "GNSS" | "BAROMETRIC_SOURCE";
-
 export type IEnumAisAssignedModeFlag = "AUTONOMOUS_CONTINUOUS_MODE" | "ASSIGNED_MODE";
-
-export type IEnumAisClassBBandFlag = "CAPABLE_OPERATING_525_OVER_KHZ" | "CAPABLE_OPERATING_OVER_MARINE_BAND";
-
-export type IEnumAisClassBDisplayFlag = "NO_DISPLAY" | "DISPLAY_EQUIPPED";
-
-export type IEnumAisClassBDscFlag = "NO_DSC_FUNCTION" | "DSC_FUNCTION_EQUIPPED";
-
-export type IEnumAisClassBMessageFlag = "NO_FREQUENCY_VIA_MESSAGE_22" | "FREQUENCY_MANAGEMENT_VIA_MESSAGE_22";
-
-export type IEnumAisClassBUnitFlag = "SOTDMA" | "CS";
 
 export type IEnumAisCommunicationStateSelected = "SOTDMA" | "ITDMA";
 
@@ -618,21 +617,15 @@ export type IEnumAisMessageType = "POSITION_REPORT" | "BASE_STATION_REPORT" | "S
 
 export type IEnumAisNavStatus = "UNDER_WAY_USING_ENGINE" | "AT_ANCHOR" | "NOT_UNDER_COMMAND" | "RESTRICTED_MANOEUVERABILITY" | "CONSTRAINED_BY_HER_DRAUGHT" | "MOORED" | "AGROUND" | "ENGAGED_IN_FISHING" | "UNDER_WAY_SAILING" | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_HSC" | "RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_WIG" | "RESERVED_FOR_FUTURE_USE" | "AIS_SART_ACTIVE" | "UNDEFINED";
 
-export type IEnumAisOffPositionIndicator = "ON_POSITION" | "OFF_POSITION";
-
 export type IEnumAisPositionAccuracy = "LOW" | "HIGH";
 
 export type IEnumAisPositionDeviceType = "UNDEFINED" | "GPS" | "GLONASS" | "COMBINED_GPS_GLONASS" | "LORAN_C" | "CHAYKA" | "INTEGRATED_NAVIGATION_SYSTEM" | "SURVEYED" | "GALILEO" | "NOT_USED" | "INTERNAL_GNSS";
-
-export type IEnumAisPositionLatency = "LESS_THAN_5_SECONDS" | "GREATER_THAN_5_SECONDS";
 
 export type IEnumAisRaimFlag = "RAIM_NOT_IN_USE" | "RAIM_IN_USE";
 
 export type IEnumAisShipType = "NOT_AVAILABLE" | "RESERVED_FOR_FUTURE_USE" | "WING_IN_GROUND_ALL_SHIPS_OF_THIS_TYPE" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_A" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_B" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_C" | "WING_IN_GROUND_HAZARDOUS_CATEGORY_D" | "WING_IN_GROUND_RESERVED_FOR_FUTURE_USE" | "FISHING" | "TOWING" | "TOWING_LENGTH_EXCEEDS_200M_OR_BREADTH_EXCEEDS_25M" | "DREDGING_OR_UNDERWATER_OPS" | "DIVING_OPS" | "MILITARY_OPS" | "SAILING" | "PLEASURE_CRAFT" | "RESERVED" | "HIGH_SPEED_CRAFT_ALL_SHIPS_OF_THIS_TYPE" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_A" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_B" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_C" | "HIGH_SPEED_CRAFT_HAZARDOUS_CATEGORY_D" | "HIGH_SPEED_CRAFT_RESERVED_FOR_FUTURE_USE" | "HIGH_SPEED_CRAFT_NO_ADDITIONAL_INFORMATION" | "PILOT_VESSEL" | "SEARCH_AND_RESCUE_VESSEL" | "TUG" | "PORT_TENDER" | "ANTI_POLLUTION_EQUIPMENT" | "LAW_ENFORCEMENT" | "SPARE_LOCAL_VESSEL" | "MEDICAL_TRANSPORT" | "NON_COMBATANT_SHIP" | "PASSENGER_ALL_SHIPS_OF_THIS_TYPE" | "PASSENGER_HAZARDOUS_CATEGORY_A" | "PASSENGER_HAZARDOUS_CATEGORY_B" | "PASSENGER_HAZARDOUS_CATEGORY_C" | "PASSENGER_HAZARDOUS_CATEGORY_D" | "PASSENGER_RESERVED_FOR_FUTURE_USE" | "PASSENGER_NO_ADDITIONAL_INFORMATION" | "CARGO_ALL_SHIPS_OF_THIS_TYPE" | "CARGO_HAZARDOUS_CATEGORY_A" | "CARGO_HAZARDOUS_CATEGORY_B" | "CARGO_HAZARDOUS_CATEGORY_C" | "CARGO_HAZARDOUS_CATEGORY_D" | "CARGO_RESERVED_FOR_FUTURE_USE" | "CARGO_NO_ADDITIONAL_INFORMATION" | "TANKER_ALL_SHIPS_OF_THIS_TYPE" | "TANKER_HAZARDOUS_CATEGORY_A" | "TANKER_HAZARDOUS_CATEGORY_B" | "TANKER_HAZARDOUS_CATEGORY_C" | "TANKER_HAZARDOUS_CATEGORY_D" | "TANKER_RESERVED_FOR_FUTURE_USE" | "TANKER_NO_ADDITIONAL_INFORMATION" | "OTHER_TYPE_ALL_SHIPS_OF_THIS_TYPE" | "OTHER_TYPE_HAZARDOUS_CATEGORY_A" | "OTHER_TYPE_HAZARDOUS_CATEGORY_B" | "OTHER_TYPE_HAZARDOUS_CATEGORY_C" | "OTHER_TYPE_HAZARDOUS_CATEGORY_D" | "OTHER_TYPE_RESERVED_FOR_FUTURE_USE" | "OTHER_TYPE_NO_ADDITIONAL_INFORMATION";
 
-export type IEnumAisSpecialManeuver = "NOT_AVAILABLE" | "NOT_ENGAGED_IN_SPECIAL_MANEUVER" | "ENGAGED_IN_SPECIAL_MANEUVER";
-
-export type IEnumAisVersionIndicator = "COMPLIANT_WITH_ITU_R_M_1371_1" | "COMPLIANT_WITH_ITU_R_M_1371_3_OR_HIGHER" | "COMPLIANT_WITH_ITU_R_M_1371_5_OR_HIGHER" | "COMPLIANT_WITH_FUTURE_EDITIONS";
+export type IEnumAisTransmitReceiveMode = "TXA_AND_TXB_OR_RXA_AND_RXB" | "TXA_OR_RXA_AND_RXB" | "TXB_OR_RXA_AND_RXB";
 
 export type IEnumDeviceType = "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER" | "ECONOMETER" | "SCALE" | "RECEIVER" | "TRANSMITTER" | "TRANSCEIVER";
 

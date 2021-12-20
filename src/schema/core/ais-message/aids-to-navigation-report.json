@@ -43,13 +43,21 @@
     },
     "off_position_indicator": {
       "description": "Indicates if the AtoN is on or off position",
-      "$ref": "https://poseidat.org/schema/enum/ais-off-position-indicator.json",
-      "default": "REAL_ATON"
+      "enum":  [
+        "ON_POSITION",
+        "OFF_POSITION"
+      ],
+      "type": "string",
+     "default": "ON_POSITION"
     },
     "virtual_aton_flag": {
       "description": "indicates if the AtoN physically exists or if it is simulated",
-      "$ref": "https://poseidat.org/schema/enum/ais-aid-virtual-flag.json",
-      "default": "ON_POSITION"
+      "enum": [
+        "REAL_ATON",
+        "VIRTUAL_ATON"
+      ],
+      "type": "string",
+      "default": "REAL_ATON"
     },
     "dimension_to_bow": {
       "description": "Indicates the dimension of ship",

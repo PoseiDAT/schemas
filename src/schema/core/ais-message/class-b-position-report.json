@@ -28,29 +28,49 @@
       "maximum": 511,
       "minimum": 0
     },
+    "date": {
+      "description": "The date and time when the AIS message was created.",
+      "type": "string",
+      "format": "date-time"
+    },
     "unit_flag": {
       "description": "Type class B unit flag",
-      "$ref": "https://poseidat.org/schema/enum/ais-class-b-unit-flag.json",
+      "type": "string",
+      "enum": [
+        "SOTDMA",
+        "CS"],
       "default": "CS"
     },
     "display_flag": {
       "description": "Flag to indicate if display is integrated for messages 12 and 14",
-      "$ref": "https://poseidat.org/schema/enum/ais-class-b-display-flag.json",
+      "type": "string",
+      "enum": [
+        "NO_DISPLAY",
+        "DISPLAY_EQUIPPED"],
       "default": "NO_DISPLAY"
     },
     "dsc_flag": {
       "description": "Indicates whether ship is equipped with DSC function",
-      "$ref": "https://poseidat.org/schema/enum/ais-class-b-dsc-flag.json",
+      "type": "string",
+      "enum": [
+        "NO_DSC_FUNCTION",
+        "DSC_FUNCTION_EQUIPPED"],
       "default": "NO_DSC_FUNCTION"
     },
     "band_flag": {
       "description": "Capable of operating over the upper 525 kHz band of the marine band or the whole marine band",
-      "$ref": "https://poseidat.org/schema/enum/ais-class-b-band-flag.json",
+      "type": "string",
+      "enum": [
+        "CAPABLE_OPERATING_525_OVER_KHZ",
+        "CAPABLE_OPERATING_OVER_MARINE_BAND"],
       "default": "CAPABLE_OPERATING_525_OVER_KHZ"
     },
     "message_flag": {
       "description": "Indicates if frequencycan be managed via message 22",
-      "$ref": "https://poseidat.org/schema/enum/ais-class-b-message-flag.json",
+      "type": "string",
+      "enum": [
+        "NO_FREQUENCY_VIA_MESSAGE_22",
+        "FREQUENCY_MANAGEMENT_VIA_MESSAGE_22"],
       "default": "NO_FREQUENCY_VIA_MESSAGE_22"
     },
     "assigned_mode_flag": {
@@ -74,7 +94,7 @@
       "minimum": 0
     }
   },
-  "required": ["ais_message_type", "position", "position_accuracy", "true_heading", "unit_flag", "display_flag", "dsc_flag", "band_flag",
+  "required": ["ais_message_type","date", "position", "position_accuracy", "true_heading", "unit_flag", "display_flag", "dsc_flag", "band_flag",
   "message_flag", "assigned_mode_flag", "raim_flag", "communication_state_selected", "communication_state"],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }

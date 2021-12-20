@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/ais-message/base-ais-message.json",
-  "title": "Measurement value",
-  "description": "The message that gets send by an AIS device. Values that are undefined should be set by the AIS device using the default",
+  "title": "Ais message",
+  "description": "The message that gets send by an AIS device",
   "properties": {
     "entity_id": {
       "description": "The mmsi identifier (ais entity) this value is related to",

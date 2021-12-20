@@ -28,7 +28,11 @@
     },
     "altitude_sensor": {
       "description": "The type of altitude sensore used on the ship",
-      "$ref": "https://poseidat.org/schema/enum/ais-altitude-sensor-type.json",
+      "type": "string",
+      "enum":  [
+        "GNSS",
+        "BAROMETRIC_SOURCE"
+      ],
       "default": "GNSS"
     },
     "data_terminal_equipment": {
@@ -54,10 +58,15 @@
     "communication_state": {
       "description": "Communication state selector flag",
       "type": "integer"
+    },
+    "date": {
+      "description": "The date and time when the AIS message was created.",
+      "type": "string",
+      "format": "date-time"
     }
   },
   "required": ["ais_message_type", "position", "position_accuracy", "altitude", "altitude_sensor",
-    "data_terminal_equipment", "assigned_mode_flag", "raim_flag", "communication_state_selected", "communication_state" ],
+    "data_terminal_equipment", "assigned_mode_flag", "raim_flag", "communication_state_selected", "communication_state", "date" ],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
   ],

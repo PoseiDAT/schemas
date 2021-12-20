@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/core/ais-message/dgnss-broadcast-message.json",
   "title": "DGNSS corrections provided by a base station",
-  "description": "This differential GNSS broadcast message should be transmitted by a base station, which is connected to a DGNSS reference source",
+  "description": "Global navigation satellite system corrections provided by a base station",
   "properties": {
     "ais_message_type": {
       "description": "The message type of the given AIS measurement",
@@ -15,9 +15,13 @@
     "position": {
       "description": "The position of the AIS entity",
       "$ref": "https://poseidat.org/schema/core/measurement/position.json"
+    },
+    "data": {
+      "description": "DGNSS correction data in text",
+      "type": "string"
     }
   },
-  "required": ["ais_message_type", "position"],
+  "required": ["ais_message_type", "position", "data"],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
   ],

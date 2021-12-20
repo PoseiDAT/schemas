@@ -14,7 +14,13 @@
     },
     "ais_version_indicator": {
       "description": "An indicator for the version the user has on his AIS device.",
-      "$ref": "https://poseidat.org/schema/enum/ais-version-indicator.json"
+      "type": "string",
+      "enum": [
+        "COMPLIANT_WITH_ITU_R_M_1371_1",
+        "COMPLIANT_WITH_ITU_R_M_1371_3_OR_HIGHER",
+        "COMPLIANT_WITH_ITU_R_M_1371_5_OR_HIGHER",
+        "COMPLIANT_WITH_FUTURE_EDITIONS"
+      ]
     },
     "imo_number": {
       "description": "The International Maritime Organization (IMO) number is a unique identifier for ships",

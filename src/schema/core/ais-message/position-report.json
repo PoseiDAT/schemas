@@ -12,6 +12,11 @@
       ],
       "default": "POSITION_REPORT"
     },
+    "nav_status": {
+      "description": "The navigational status of the current entity",
+      "$ref": "https://poseidat.org/schema/enum/ais-nav-status.json",
+      "default": "UNDEFINED"
+    },
     "position": {
       "description": "The position of the AIS entity",
       "$ref": "https://poseidat.org/schema/core/measurement/position.json"
@@ -42,7 +47,12 @@
     },
     "special_maneuvre_indicator": {
       "description": "Indicates whether an special maneuver is ongoing",
-      "$ref": "https://poseidat.org/schema/enum/ais-special-maneuver.json",
+      "type": "string",
+      "enum": [
+        "NOT_AVAILABLE",
+        "NOT_ENGAGED_IN_SPECIAL_MANEUVER",
+        "ENGAGED_IN_SPECIAL_MANEUVER"
+      ],
       "default": "NOT_AVAILABLE"
     },
     "communication_state": {
@@ -51,7 +61,7 @@
       "minimum": 0
     }
   },
-  "required": ["ais_message_type","position", "position_accuracy", "rate_of_turn", "true_heading", "raim_flag", "special_maneuvre_indicator", "communication_state"],
+  "required": ["ais_message_type", "nav_status", "position", "position_accuracy", "rate_of_turn", "true_heading", "raim_flag", "special_maneuvre_indicator", "communication_state"],
   "allOf": [
     { "$ref": "https://poseidat.org/schema/core/ais-message/base-ais-message.json" }
   ],

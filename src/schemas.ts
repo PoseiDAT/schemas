@@ -2,117 +2,107 @@
 // The schema-validator will pre-load these
 // This file will need to be manually updated with all schemas that are ready for consumption
 //
-import { JSONSchema7 } from "json-schema";
+import { JSONSchema7 } from 'json-schema';
 
 // Core schemas
 //
-import * as baseAddress from "./schema/core/address.json";
-import * as baseAidsToNavigationReport from "./schema/core/ais-message/aids-to-navigation-report.json";
-import * as baseAisMessage from "./schema/core/ais-message/base-ais-message.json";
-import * as baseBinaryOrSafetyBroadcast from "./schema/core/ais-message/binary-or-safety-broadcast.json";
-import * as baseBinaryOrSafetyMessage from "./schema/core/ais-message/binary-or-safety-message.json";
-import * as baseChannelManagement from "./schema/core/ais-message/channel-management.json";
-import * as baseClassBPositionReport from "./schema/core/ais-message/class-b-position-report.json";
-import * as baseCompany from "./schema/core/persona/company.json";
-import * as baseContactDetails from "./schema/core/contact-details.json";
-import * as baseDateInquiry from "./schema/core/ais-message/date-inquiry.json";
-import * as baseDateResponse from "./schema/core/ais-message/date-response.json";
-import * as baseDgnssBroadcastMessage from "./schema/core/ais-message/dgnss-broadcast-message.json";
-import * as baseExtendedClassBReport from "./schema/core/ais-message/extended-class-b-report.json";
-import * as baseGroupAssignmentCommand from "./schema/core/ais-message/group-assignment-command.json";
-import * as baseDevice from "./schema/core/equipment/device.json";
-import * as baseEntry from "./schema/core/base-entry.json";
-import * as baseEquipment from "./schema/core/equipment/equipment.json";
-import * as baseFishingCatch from "./schema/core/fishing-catch.json";
-import * as baseFishingCatchProcessed from "./schema/core/fishing-catch-processed.json";
-import * as baseFishingGear from "./schema/core/fishing-gear.json";
-import * as baseFishingGearDeployment from "./schema/core/fishing-gear-deployment.json";
-import * as baseFishingGearGillNet from "./schema/core/fishing-gear-gill-net.json";
-import * as baseFishingGearLoss from "./schema/core/fishing-gear-loss.json";
-import * as baseFishingGearRetrieve from "./schema/core/fishing-gear-retrieve.json";
-import * as baseFishingGearShot from "./schema/core/fishing-gear-shot.json";
-import * as baseFishingTow from "./schema/core/fishing-tow.json";
-import * as baseFishingZone from "./schema/core/fishing-zone.json";
-import * as baseInterrogation from "./schema/core/ais-message/interrogation.json";
-import * as baseJournal from "./schema/core/journal.json";
-import * as baseFuelConsumption from "./schema/core/measurement/fuel-consumption.json";
-import * as baseLongRangePositionReport from "./schema/core/ais-message/long-range-application-position-report.json";
-import * as baseMeasurementValue from "./schema/core/measurement/measurement-value.json";
-import * as baseNumeric from "./schema/core/measurement/numeric.json";
-import * as basePort from "./schema/core/port.json";
-import * as basePosition from "./schema/core/measurement/position.json";
-import * as basePositionReport from "./schema/core/ais-message/position-report.json";
-import * as baseStaticDataReport from "./schema/core/ais-message/static-data-report.json";
-import * as baseStaticVoyageData from "./schema/core/ais-message/static-voyage-data.json";
-import * as baseStationReport from "./schema/core/ais-message/base-station-report.json";
-import * as baseTextPayloadMessage from "./schema/core/ais-message/text-payload-message.json";
-import * as baseTrawlTension from "./schema/core/measurement/trawl-tension.json";
-import * as baseSarAircraftPositionReport from "./schema/core/ais-message/sar-aircraft-position-report.json";
-import * as baseScale from "./schema/core/measurement/scale.json";
-import * as baseSpatialAxes from "./schema/core/measurement/spatial-axes.json";
-import * as baseTripEntry from "./schema/core/trip-entry.json";
-import * as baseVessel from "./schema/core/vessel.json";
-import * as baseVesselInspection from "./schema/core/vessel-inspection.json";
-import * as baseVesselMaster from "./schema/core/vessel-master.json";
-import * as baseVesselPartner from "./schema/core/vessel-partner.json";
-import * as baseVesselSection from "./schema/core/vessel-section.json";
-import * as baseRouteWaypoint from "./schema/core/route-waypoint.json";
+import * as baseAddress from './schema/core/address.json';
+import * as baseAidsToNavigationReport from './schema/core/ais-message/aids-to-navigation-report.json';
+import * as baseAisMessage from './schema/core/ais-message/base-ais-message.json';
+import * as baseBinaryOrSafetyBroadcast from './schema/core/ais-message/binary-or-safety-broadcast.json';
+import * as baseBinaryOrSafetyMessage from './schema/core/ais-message/binary-or-safety-message.json';
+import * as baseChannelManagement from './schema/core/ais-message/channel-management.json';
+import * as baseClassBPositionReport from './schema/core/ais-message/class-b-position-report.json';
+import * as baseCompany from './schema/core/persona/company.json';
+import * as baseContactDetails from './schema/core/contact-details.json';
+import * as baseDateInquiry from './schema/core/ais-message/date-inquiry.json';
+import * as baseDateResponse from './schema/core/ais-message/date-response.json';
+import * as baseDevice from './schema/core/equipment/device.json';
+import * as baseDgnssBroadcastMessage from './schema/core/ais-message/dgnss-broadcast-message.json';
+import * as baseEntry from './schema/core/base-entry.json';
+import * as baseEquipment from './schema/core/equipment/equipment.json';
+import * as baseExtendedClassBReport from './schema/core/ais-message/extended-class-b-report.json';
+import * as baseFishingCatch from './schema/core/fishing-catch.json';
+import * as baseFishingCatchProcessed from './schema/core/fishing-catch-processed.json';
+import * as baseFishingGear from './schema/core/fishing-gear.json';
+import * as baseFishingGearDeployment from './schema/core/fishing-gear-deployment.json';
+import * as baseFishingGearGillNet from './schema/core/fishing-gear-gill-net.json';
+import * as baseFishingGearLoss from './schema/core/fishing-gear-loss.json';
+import * as baseFishingGearRetrieve from './schema/core/fishing-gear-retrieve.json';
+import * as baseFishingGearShot from './schema/core/fishing-gear-shot.json';
+import * as baseFishingTow from './schema/core/fishing-tow.json';
+import * as baseFishingZone from './schema/core/fishing-zone.json';
+import * as baseFuelConsumption from './schema/core/measurement/fuel-consumption.json';
+import * as baseGroupAssignmentCommand from './schema/core/ais-message/group-assignment-command.json';
+import * as baseInterrogation from './schema/core/ais-message/interrogation.json';
+import * as baseJournal from './schema/core/journal.json';
+import * as baseLongRangePositionReport from './schema/core/ais-message/long-range-application-position-report.json';
+import * as baseMeasurementValue from './schema/core/measurement/measurement-value.json';
+import * as baseNumeric from './schema/core/measurement/numeric.json';
+import * as basePort from './schema/core/port.json';
+import * as basePosition from './schema/core/measurement/position.json';
+import * as basePositionReport from './schema/core/ais-message/position-report.json';
+import * as baseRouteWaypoint from './schema/core/route-waypoint.json';
+import * as baseSarAircraftPositionReport from './schema/core/ais-message/sar-aircraft-position-report.json';
+import * as baseScale from './schema/core/measurement/scale.json';
+import * as baseSpatialAxes from './schema/core/measurement/spatial-axes.json';
+import * as baseStaticDataReport from './schema/core/ais-message/static-data-report.json';
+import * as baseStaticVoyageData from './schema/core/ais-message/static-voyage-data.json';
+import * as baseStationReport from './schema/core/ais-message/base-station-report.json';
+import * as baseTextPayloadMessage from './schema/core/ais-message/text-payload-message.json';
+import * as baseTrawlTension from './schema/core/measurement/trawl-tension.json';
+import * as baseTripEntry from './schema/core/trip-entry.json';
+import * as baseVessel from './schema/core/vessel.json';
+import * as baseVesselInspection from './schema/core/vessel-inspection.json';
+import * as baseVesselMaster from './schema/core/vessel-master.json';
+import * as baseVesselPartner from './schema/core/vessel-partner.json';
+import * as baseVesselSection from './schema/core/vessel-section.json';
 
 // Entry schemas
 //
-import * as entryAisMessage from "./schema/entry/ais-message.json";
-import * as entryArrival from "./schema/entry/arrival.json";
-import * as entryDeparture from "./schema/entry/departure.json";
-import * as entryDeviceMeasurement from "./schema/entry/device-measurement.json";
-import * as entryEndOfFishing from "./schema/entry/end-of-fishing.json";
-import * as entryEquipmentInventory from "./schema/entry/equipment-inventory.json";
-import * as entryFishingActivity from "./schema/entry/fishing-activity.json";
-import * as entryZoneEnter from "./schema/entry/zone-enter.json";
-import * as entryZoneExit from "./schema/entry/zone-exit.json";
-import * as entryRoute from "./schema/entry/route.json";
+import * as entryAisMessage from './schema/entry/ais-message.json';
+import * as entryArrival from './schema/entry/arrival.json';
+import * as entryDeparture from './schema/entry/departure.json';
+import * as entryDeviceMeasurement from './schema/entry/device-measurement.json';
+import * as entryEndOfFishing from './schema/entry/end-of-fishing.json';
+import * as entryEquipmentInventory from './schema/entry/equipment-inventory.json';
+import * as entryFishingActivity from './schema/entry/fishing-activity.json';
+import * as entryZoneEnter from './schema/entry/zone-enter.json';
+import * as entryZoneExit from './schema/entry/zone-exit.json';
+import * as entryRoute from './schema/entry/route.json';
 
 // Enum schemas
 //
 
-import * as enumAisAidType from "./schema/enum/ais-aid-type.json";
-import * as enumAisAidVirtualFlag from "./schema/enum/ais-aid-virtual-flag.json";
-import * as enumAisAltitudeSensorType from "./schema/enum/ais-altitude-sensor-type.json";
-import * as enumAisAssignedModeFlag from "./schema/enum/ais-assigned-mode-flag.json";
-import * as enumAisClassBandFlag from "./schema/enum/ais-class-b-band-flag.json";
-import * as enumAisClassDisplayFlag from "./schema/enum/ais-class-b-display-flag.json";
-import * as enumAisClassDscFlag from "./schema/enum/ais-class-b-dsc-flag.json";
-import * as enumAisClassMessageFlag from "./schema/enum/ais-class-b-message-flag.json";
-import * as enumAisClassUnitFlag from "./schema/enum/ais-class-b-unit-flag.json";
-import * as enumAisCommuncationStateSelected from "./schema/enum/ais-communication-state-selected.json";
-import * as enumAisDte from "./schema/enum/ais-DTE.json";
-import * as enumAisLongRangeControlType from "./schema/enum/ais-long-range-control-type.json";
-import * as enumAisMessageType from "./schema/enum/ais-message-type.json";
-import * as enumAisNavStatus from "./schema/enum/ais-nav-status.json";
-import * as enumAisOffPositionIndicator from "./schema/enum/ais-off-position-indicator.json";
-import * as enumAisPositionAccuracy from "./schema/enum/ais-position-accuracy.json";
-import * as enumAisPositionDeviceType from "./schema/enum/ais-position-device-type.json";
-import * as enumAisPositionLatency from "./schema/enum/ais-position-latency.json";
-import * as enumAisRaimFlag from "./schema/enum/ais-RAIM-flag.json";
-import * as enumAisShipTypes from "./schema/enum/ais-ship-type.json";
-import * as enumAisSpecialManeuver from "./schema/enum/ais-special-maneuver.json";
-import * as enumAisVersionIndicator from "./schema/enum/ais-version-indicator.json";
-import * as enumDeviceType from "./schema/enum/device-type.json";
-import * as enumEffortZone from "./schema/enum/effort-zone.json";
-import * as enumEquipmentType from "./schema/enum/equipment-type.json";
-import * as enumFishFreshness from "./schema/enum/fish-freshness.json";
-import * as enumFishingGearType from "./schema/enum/fishing-gear-type.json";
-import * as enumFishPackageType from "./schema/enum/fish-package-type.json";
-import * as enumFishPresentation from "./schema/enum/fish-presentation.json";
-import * as enumFishState from "./schema/enum/fish-state.json";
-import * as enumGnssFixQuality from "./schema/enum/gnss-fix-quality.json";
-import * as enumGnssFixType from "./schema/enum/gnss-fix-type.json";
-import * as enumMeasurementType from "./schema/enum/measurement-type.json";
-import * as enumReasonArrival from "./schema/enum/reason-arrival.json";
-import * as enumReasonDeparture from "./schema/enum/reason-departure.json";
-import * as enumReasonDiscard from "./schema/enum/reason-discard.json";
-import * as enumScaleCategory from "./schema/enum/scale-category.json";
-import * as enumVesselCompartment from "./schema/enum/vessel-compartment.json";
-import * as enumRouteGeometryType from "./schema/enum/route-geometry-type.json";
+import * as enumAisAidType from './schema/enum/ais-aid-type.json';
+import * as enumAisAssignedModeFlag from './schema/enum/ais-assigned-mode-flag.json';
+import * as enumAisCommuncationStateSelected from './schema/enum/ais-communication-state-selected.json';
+import * as enumAisDte from './schema/enum/ais-DTE.json';
+import * as enumAisLongRangeControlType from './schema/enum/ais-long-range-control-type.json';
+import * as enumAisMessageType from './schema/enum/ais-message-type.json';
+import * as enumAisNavStatus from './schema/enum/ais-nav-status.json';
+import * as enumAisPositionAccuracy from './schema/enum/ais-position-accuracy.json';
+import * as enumAisPositionDeviceType from './schema/enum/ais-position-device-type.json';
+import * as enumAisRaimFlag from './schema/enum/ais-RAIM-flag.json';
+import * as enumAisShipTypes from './schema/enum/ais-ship-type.json';
+import * as enumAisTransmitReceiveMode from './schema/enum/ais-transmit-receive-mode.json';
+import * as enumDeviceType from './schema/enum/device-type.json';
+import * as enumEffortZone from './schema/enum/effort-zone.json';
+import * as enumEquipmentType from './schema/enum/equipment-type.json';
+import * as enumFishFreshness from './schema/enum/fish-freshness.json';
+import * as enumFishingGearType from './schema/enum/fishing-gear-type.json';
+import * as enumFishPackageType from './schema/enum/fish-package-type.json';
+import * as enumFishPresentation from './schema/enum/fish-presentation.json';
+import * as enumFishState from './schema/enum/fish-state.json';
+import * as enumGnssFixQuality from './schema/enum/gnss-fix-quality.json';
+import * as enumGnssFixType from './schema/enum/gnss-fix-type.json';
+import * as enumMeasurementType from './schema/enum/measurement-type.json';
+import * as enumReasonArrival from './schema/enum/reason-arrival.json';
+import * as enumReasonDeparture from './schema/enum/reason-departure.json';
+import * as enumReasonDiscard from './schema/enum/reason-discard.json';
+import * as enumScaleCategory from './schema/enum/scale-category.json';
+import * as enumVesselCompartment from './schema/enum/vessel-compartment.json';
+import * as enumRouteGeometryType from './schema/enum/route-geometry-type.json';
 
 export const schemas = {
   // Base schemas
@@ -131,7 +121,7 @@ export const schemas = {
       scale: baseScale as JSONSchema7,
       spatialAxes: baseSpatialAxes as JSONSchema7,
     },
-    "ais-message": {
+    'ais-message': {
       aidsToNavigationReport: baseAidsToNavigationReport as JSONSchema7,
       aisMessage: baseAisMessage as JSONSchema7,
       baseStationReport: baseStationReport as JSONSchema7,
@@ -148,9 +138,9 @@ export const schemas = {
       interrogation: baseInterrogation as JSONSchema7,
       longRangePositionReport: baseLongRangePositionReport as JSONSchema7,
       positionReport: basePositionReport as JSONSchema7,
+      sarAircraftPositionReport: baseSarAircraftPositionReport as JSONSchema7,
       staticDataReport: baseStaticDataReport as JSONSchema7,
       staticVoyageData: baseStaticVoyageData as JSONSchema7,
-      sarAircraftPositionReport: baseSarAircraftPositionReport as JSONSchema7,
       textPayloadMessage: baseTextPayloadMessage as JSONSchema7,
     },
     persona: {
@@ -199,28 +189,18 @@ export const schemas = {
   //
   enum: {
     aisAidType: enumAisAidType as JSONSchema7,
-    aisAidVirtualFlag: enumAisAidVirtualFlag as JSONSchema7,
-    aisAltitudeSensorType: enumAisAltitudeSensorType as JSONSchema7,
     aisAssignedModeFlag: enumAisAssignedModeFlag as JSONSchema7,
-    aisClassBandFlag: enumAisClassBandFlag as JSONSchema7,
-    aisClassDisplayFlag: enumAisClassDisplayFlag as JSONSchema7,
-    aisClassDscFlag: enumAisClassDscFlag as JSONSchema7,
-    aisClassMessageFlag: enumAisClassMessageFlag as JSONSchema7,
-    aisClassUnitFlag: enumAisClassUnitFlag as JSONSchema7,
     aisCommunicationStateSelected:
       enumAisCommuncationStateSelected as JSONSchema7,
     aisDte: enumAisDte as JSONSchema7,
+    aisLongRangeControlType: enumAisLongRangeControlType as JSONSchema7,
     aisMessageType: enumAisMessageType as JSONSchema7,
     aisNavStatus: enumAisNavStatus as JSONSchema7,
-    aisOffPositionIndicator: enumAisOffPositionIndicator as JSONSchema7,
-    aisLongRangeControlType: enumAisLongRangeControlType as JSONSchema7,
     aisPostionAccuracy: enumAisPositionAccuracy as JSONSchema7,
     aisPositionDeviceType: enumAisPositionDeviceType as JSONSchema7,
-    aisPositionLatency: enumAisPositionLatency as JSONSchema7,
     aisRaimFlag: enumAisRaimFlag as JSONSchema7,
     aisShipTypes: enumAisShipTypes as JSONSchema7,
-    aisSpecialManeuver: enumAisSpecialManeuver as JSONSchema7,
-    aisVersionIndicator: enumAisVersionIndicator as JSONSchema7,
+    aisTransmitReceiveMode: enumAisTransmitReceiveMode as JSONSchema7,
     deviceType: enumDeviceType as JSONSchema7,
     effortZone: enumEffortZone as JSONSchema7,
     equipmentType: enumEquipmentType as JSONSchema7,
