@@ -10,17 +10,17 @@ import { ICoreBaseEntry, ICoreJournal } from './schema-types';
 // Extracting schemas can be done by looking for presence of $schema property
 //
 const findSchemas = (schemaSection: Record<string, unknown>[]) => {
-  const schemas = schemaSection.filter(schema => schema.$schema !== undefined);
-  const namespaces = schemaSection.filter(schema => schema.$schema === undefined);
+  const schemas = schemaSection.filter((schema) => schema.$schema !== undefined);
+  const namespaces = schemaSection.filter((schema) => schema.$schema === undefined);
 
   // Recursively check namespace children
   //
-  for ( const namespace of namespaces ) {
-    schemas.push(...findSchemas(Object.values(namespace) as Record<string, unknown>[] ));
+  for (const namespace of namespaces) {
+    schemas.push(...findSchemas(Object.values(namespace) as Record<string, unknown>[]));
   }
 
   return schemas;
-}
+};
 
 const jsonSchemas = findSchemas(Object.values(schemas));
 
@@ -29,7 +29,7 @@ const jsonSchemas = findSchemas(Object.values(schemas));
 const validator = new Ajv({
   $data: true,
   allErrors: true,
-  schemas: jsonSchemas,
+  schemas: jsonSchemas
 });
 
 // Extend AJV with formats and keyword validation
@@ -45,16 +45,13 @@ AjvKeywords(validator);
  * @param {*} schema The JSON schema to use for validation. Defaults to journal schema
  * @returns {Ajv.ErrorObject[]}
  */
-export function validateSchema(
-  {
-    object,
-    schema
-  }:
-  {
-    object: Record<string, unknown>|ICoreJournal|ICoreBaseEntry,
-    schema: JSONSchema7
-  }
-): ErrorObject[] {
+export function validateSchema({
+  object,
+  schema
+}: {
+  object: Record<string, unknown> | ICoreJournal | ICoreBaseEntry;
+  schema: JSONSchema7;
+}): ErrorObject[] {
   const validate = validator.compile(schema);
   validate(object);
   return validate.errors || [];

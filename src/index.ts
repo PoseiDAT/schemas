@@ -10,6 +10,8 @@ export { Journal } from './journal';
 
 // The entry type classes
 //
+
+export * from './entry-ais-message';
 export * from './entry-arrival';
 export * from './entry-departure';
 export * from './entry-device-measurement';

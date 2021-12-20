@@ -39,7 +39,8 @@
    { "required": [ "type", "trawl_tension" ] },
    { "required": [ "type", "scale" ] },
    { "required": [ "type", "fuel_consumption" ] },
-   { "required": [ "type", "spatial_axes" ] }
+   { "required": [ "type", "spatial_axes" ] },
+   { "required": [ "type", "ais_message" ] }
  ],
   "type": "object",
   "additionalProperties": false

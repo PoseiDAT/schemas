@@ -16,7 +16,7 @@ A device measurement journal entry
 
 all of
 
-*   [Base entry](arrival-allof-base-entry.md "check type definition")
+*   [Base entry](ais-message-allof-base-entry.md "check type definition")
 
 # Device measurement Properties
 
@@ -110,6 +110,8 @@ one (and only one) of
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-4.md "check type definition")
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-5.md "check type definition")
+
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-6.md "check type definition")
 
 ## Additional Properties
 

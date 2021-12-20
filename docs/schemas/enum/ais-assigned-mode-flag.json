@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://poseidat.org/schema/enum/ais-assigned-mode-flag.json","description":"State of station if it is operating in autonomous or assigned mode; 0 is default.","title":"Assigned mode flag","type":"string","enum":["AUTONOMOUS_CONTINUOUS_MODE","ASSIGNED_MODE"]}

@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://poseidat.org/schema/enum/ais-transmit-receive-mode.json","description":"The transmit receive mode selected","title":"The mode the transmittor is using","type":"string","enum":["TXA_AND_TXB_OR_RXA_AND_RXB","TXA_OR_RXA_AND_RXB","TXB_OR_RXA_AND_RXB"]}

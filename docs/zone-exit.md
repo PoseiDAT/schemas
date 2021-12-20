@@ -16,7 +16,7 @@ Exit declaration of a fishing zone
 
 all of
 
-*   [Base entry](arrival-allof-base-entry.md "check type definition")
+*   [Base entry](ais-message-allof-base-entry.md "check type definition")
 
 # ZoneExit Properties
 
