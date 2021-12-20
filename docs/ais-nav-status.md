@@ -33,4 +33,4 @@ The converted nav status given by an AIS measerement.
 | `"RESERVED_FOR_FUTURE_AMENDMENT_OF_NAV_STATUS_WIG"` |             |
 | `"RESERVED_FOR_FUTURE_USE"`                         |             |
 | `"AIS_SART_ACTIVE"`                                 |             |
-| `"NOT_DEFINED (DEFAULT)"`                           |             |
+| `"UNDEFINED"`                                       |             |

@@ -20,7 +20,7 @@ The converted names of the ais ship types.
 
 | Value                                                 | Explanation |
 | :---------------------------------------------------- | :---------- |
-| `"NOT_AVAILABLE (DEFAULT)"`                           |             |
+| `"NOT_AVAILABLE"`                                     |             |
 | `"RESERVED_FOR_FUTURE_USE"`                           |             |
 | `"WING_IN_GROUND_ALL_SHIPS_OF_THIS_TYPE"`             |             |
 | `"WING_IN_GROUND_HAZARDOUS_CATEGORY_A"`               |             |

@@ -16,7 +16,7 @@ A device measurement journal entry
 
 all of
 
-*   [Base entry](arrival-allof-base-entry.md "check type definition")
+*   [Base entry](ais-message-allof-base-entry.md "check type definition")
 
 # Device measurement Properties
 

@@ -20,7 +20,7 @@ The converted type of the position device used on the AIS entity.
 
 | Value                            | Explanation |
 | :------------------------------- | :---------- |
-| `"UNDEFINED (DEFAULT)"`          |             |
+| `"UNDEFINED"`                    |             |
 | `"GPS"`                          |             |
 | `"GLONASS"`                      |             |
 | `"COMBINED_GPS_GLONASS"`         |             |

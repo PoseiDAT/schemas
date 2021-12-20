@@ -1,141 +1,83 @@
-# Measurement value Schema
+# AIS message Schema
 
 ```txt
-https://poseidat.org/schema/core/ais-message/ais-message.json
+https://poseidat.org/schema/core/entry/ais-message.json
 ```
 
-The message that gets send by an AIS device. Values that are undefined should be set by the AIS device using the default
+The message received or send by an AIS device
 
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                           |
-| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [ais-message.json](schemas/core/ais-message/ais-message.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------ |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [ais-message.json](schemas/entry/ais-message.json "open original schema") |
 
-## Measurement value Type
+## AIS message Type
 
-`object` ([Measurement value](ais-message.md))
+`object` ([AIS message](ais-message.md))
 
-one (and only one) of
+all of
 
-*   [Untitled undefined type in Measurement value](ais-message-oneof-0.md "check type definition")
+*   [Base entry](ais-message-allof-base-entry.md "check type definition")
 
-# Measurement value Properties
+# AIS message Properties
 
-| Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                |
-| :------------------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [entity_id](#entity_id)               | `number` | Optional | cannot be null | [Measurement value](ais-message-properties-entity_id.md "https://poseidat.org/schema/core/ais-message/ais-message.json#/properties/entity_id")                                            |
-| [message_type](#message_type)         | `string` | Optional | cannot be null | [Measurement value](ais-message-properties-ais-message-types.md "https://poseidat.org/schema/enum/ais-message-type.json#/properties/message_type")                                        |
-| [repeat_indicator](#repeat_indicator) | `number` | Optional | cannot be null | [Measurement value](ais-message-properties-repeat_indicator.md "https://poseidat.org/schema/core/ais-message/ais-message.json#/properties/repeat_indicator")                              |
-| [position_report](#position_report)   | `object` | Optional | cannot be null | [Measurement value](ais-message-properties-position-report-message-from-an-ais-device.md "https://poseidat.org/schema/core/ais-message/position-report.json#/properties/position_report") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                           |
+| :------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| [entry_type](#entry_type) | `string` | Required | cannot be null | [AIS message](ais-message-properties-entry_type.md "https://poseidat.org/schema/core/entry/ais-message.json#/properties/entry_type") |
+| [device_id](#device_id)   | `string` | Required | cannot be null | [AIS message](ais-message-properties-device_id.md "https://poseidat.org/schema/core/entry/ais-message.json#/properties/device_id")   |
+| Additional Properties     | Any      | Optional | can be null    |                                                                                                                                      |
 
-## entity_id
+## entry_type
 
-The mmsi identifier (ais entity) this value is related to
+The journal entry type identifer
 
-`entity_id`
+`entry_type`
 
-*   is optional
+*   is required
 
-*   Type: `number`
-
-*   cannot be null
-
-*   defined in: [Measurement value](ais-message-properties-entity_id.md "https://poseidat.org/schema/core/ais-message/ais-message.json#/properties/entity_id")
-
-### entity_id Type
-
-`number`
-
-## message_type
-
-The available message types for an ais message
-
-`message_type`
-
-*   is optional
-
-*   Type: `string` ([AIS message types](ais-message-properties-ais-message-types.md))
+*   Type: `string`
 
 *   cannot be null
 
-*   defined in: [Measurement value](ais-message-properties-ais-message-types.md "https://poseidat.org/schema/enum/ais-message-type.json#/properties/message_type")
+*   defined in: [AIS message](ais-message-properties-entry_type.md "https://poseidat.org/schema/core/entry/ais-message.json#/properties/entry_type")
 
-### message_type Type
+### entry_type Type
 
-`string` ([AIS message types](ais-message-properties-ais-message-types.md))
+`string`
 
-### message_type Constraints
+### entry_type Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                                          | Explanation |
-| :--------------------------------------------- | :---------- |
-| `"POSITION_REPORT"`                            |             |
-| `"BASE_STATION_REPORT"`                        |             |
-| `"STATIC_AND_VOYAGE_DATA"`                     |             |
-| `"BINARY_MESSAGE"`                             |             |
-| `"BINARY_ACKNOWLEDGEMENT"`                     |             |
-| `"BINARY_BROADCAST_MESSAGE"`                   |             |
-| `"SAR_AIRCRAFT_POSITION_REPORT"`               |             |
-| `"UTC_DATE_INQUIRY"`                           |             |
-| `"UTC_DATE_RESPONSE"`                          |             |
-| `"ADDRESSED_SAFETY_RELATED_MESSAGE"`           |             |
-| `"SAFETY_RELATED_ACKNOWLEDGEMENT"`             |             |
-| `"SAFETY_RELATED_BROADCAST_MESSAGE"`           |             |
-| `"INTERROGATION"`                              |             |
-| `"ASSIGNMENT_MODE_COMMAND"`                    |             |
-| `"DGNSS_BROADCAST_BINARY_MESSAGE"`             |             |
-| `"CLASS_B_EQUIPMENT_POSITION_REPORT"`          |             |
-| `"EXTENDED_CLASS_B_EQUIPMENT_POSITION_REPORT"` |             |
-| `"DATA_LINK_MANAGEMENT_MESSAGE"`               |             |
-| `"AIDS_TO_NAVIGATION_REPORT"`                  |             |
-| `"CHANNEL_MANAGEMENT"`                         |             |
-| `"GROUP_ASSIGNMENT_COMMAND"`                   |             |
-| `"STATIC_DATA_REPORT"`                         |             |
-| `"SINGLE_SLOT_BINARY_MESSAGE"`                 |             |
-| `"MULTIPLE_SLOT_BINARY_MESSAGE"`               |             |
-| `"LONG_RANGE_APPLICATION_POSITION_REPORT"`     |             |
-| `"RESERVER_FOR_FUTURE_USE"`                    |             |
+| Value           | Explanation |
+| :-------------- | :---------- |
+| `"ais-message"` |             |
 
-## repeat_indicator
-
-The amount of times the message has been repeated (3 is do not repeat anymore)
-
-`repeat_indicator`
-
-*   is optional
-
-*   Type: `number`
-
-*   cannot be null
-
-*   defined in: [Measurement value](ais-message-properties-repeat_indicator.md "https://poseidat.org/schema/core/ais-message/ais-message.json#/properties/repeat_indicator")
-
-### repeat_indicator Type
-
-`number`
-
-### repeat_indicator Default Value
+### entry_type Default Value
 
 The default value is:
 
 ```json
-3
+"ais-message"
 ```
 
-## position_report
+## device_id
 
-A position report message for the AIS.
+The unique identifier for the device
 
-`position_report`
+`device_id`
 
-*   is optional
+*   is required
 
-*   Type: `object` ([Position report message from an AIS device](ais-message-properties-position-report-message-from-an-ais-device.md))
+*   Type: `string`
 
 *   cannot be null
 
-*   defined in: [Measurement value](ais-message-properties-position-report-message-from-an-ais-device.md "https://poseidat.org/schema/core/ais-message/position-report.json#/properties/position_report")
+*   defined in: [AIS message](ais-message-properties-device_id.md "https://poseidat.org/schema/core/entry/ais-message.json#/properties/device_id")
 
-### position_report Type
+### device_id Type
 
-`object` ([Position report message from an AIS device](ais-message-properties-position-report-message-from-an-ais-device.md))
+`string`
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

@@ -1,4 +1,4 @@
-# Untitled number in Position report message from an AIS device Schema
+# Untitled number in Position report AIS Schema
 
 ```txt
 https://poseidat.org/schema/core/ais-message/position-report.json#/properties/rate_of_turn
