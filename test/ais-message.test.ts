@@ -94,7 +94,7 @@ describe('AisMessageEntry', () => {
     expect(validationErrors.length).toEqual(0);
   });
 
-  test('Validating a IAisMessagePositionReport should succeed', () => {
+  test('Validating a IAisMessageBaseStationReport should succeed', () => {
     const data: IAisMessageBaseStationReport = {
       journal_id: v4(),
       entry_id: v4(),
@@ -125,7 +125,7 @@ describe('AisMessageEntry', () => {
     expect(validationErrors.length).toEqual(0);
   });
 
-  test('Validating a IAisMessagePositionReport should succeed', () => {
+  test('Validating a IAisMessageStaticVoyageData should succeed', () => {
     const data: IAisMessageStaticVoyageData = {
       journal_id: v4(),
       entry_id: v4(),
@@ -512,7 +512,7 @@ describe('AisMessageEntry', () => {
     expect(validationErrors.length).toEqual(0);
   });
 
-  test('Validating a IAisMessageStaticDataReport should succeed', () => {
+  test('Validating a IAisMessageGroupAssignmentCommand should succeed', () => {
     const data: IAisMessageGroupAssignmentCommand = {
       journal_id: v4(),
       entry_id: v4(),
