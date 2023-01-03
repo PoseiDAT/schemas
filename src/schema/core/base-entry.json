@@ -15,7 +15,7 @@
       "format": "uuid"
     },
     "entry_type": {
-      "description": "The journal entry type identifer",
+      "description": "The journal entry type identifier",
       "type": "string"
     },
     "entry_datetime": {

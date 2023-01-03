@@ -225,4 +225,35 @@ describe('DeviceMeasurementEntry', () => {
     expect(validationErrors).toBeDefined();
     expect(validationErrors.length).toEqual(0);
   });
+
+  test('Validating a subsurface DeviceMeasurementEntry should succeed', () => {
+    const data: IEntryDeviceMeasurement = {
+      journal_id: v4(),
+      entry_id: v4(),
+      revision: "2020-01-01T00:00:00Z",
+      immutable: false,
+      entry_type: "device-measurement",
+      device_id: v4(),
+      value: {
+        type: "SUBSURFACE",
+        subsurface: {
+          samples: [{
+            temp: 5.936999797821045,
+            conductivity: 20.009000778198242,
+            salinity: 19.340999603271484,
+            time: "2022-12-29T14:18:15Z",
+            latitude: 53.181148529052734,
+            longitude: 5.417250156402588,
+            depth: 5.90500020980835
+          }],
+          metadata: "METADATA",
+        }
+      }
+    };
+    const measurementEntry = new DeviceMeasurementEntry(data);
+    const validationErrors = measurementEntry.validate();
+    console.error(validationErrors);
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
+  });
 });

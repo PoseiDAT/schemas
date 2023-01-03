@@ -12,7 +12,7 @@ export interface ICoreAddress {
 export interface ICoreBaseEntry {
   /** The unique identifier of the journal (UUID v4) this entry belongs to */ journal_id: string;
   /** The unique identifier for the entry (UUID v4) */ entry_id: string;
-  /** The journal entry type identifer */ entry_type: string;
+  /** The journal entry type identifier */ entry_type: string;
   /** The date and time the entry was logged in UTC in RFC3339 format */ entry_datetime?: string;
   /** The revision timestamp of this entry. Should be the time it was created. */ revision: string;
   /** Indicates this entry cannot be replaced with future revisions (default) */ immutable: boolean;
@@ -280,6 +280,7 @@ export interface IMeasurementMeasurementValue {
   /** A scale measurement */ scale?: IMeasurementScale;
   /** A fuel consumption measurement */ fuel_consumption?: IMeasurementFuelConsumption;
   /** A spatial axes measurement */ spatial_axes?: IMeasurementSpatialAxes;
+  /** A subsurface measurement */ subsurface?: IMeasurementSubsurface;
 }
 
 /** A number representing a measurement from a sensor */
@@ -316,6 +317,23 @@ export interface IMeasurementSpatialAxes {
   /** The easting coordinate range */ x: number;
   /** The northing coordinate range */ y: number;
   /** The elevation of the coordinate range */ z: number;
+}
+
+/** A subsurface sample measurement */
+export interface IMeasurementSubsurfaceSample {
+  /** The conductivity of the sample measurement (TBD: unit) */ conductivity: number;
+  /** The depth of the sample measurement in meters */ depth: number;
+  /** The latitude of the sample measurement */ latitude: number;
+  /** The longitude of the sample measurement */ longitude: number;
+  /** The salinity of the sample measurement (TBD: unit) */ salinity: number;
+  /** The temperature of the sample measurement in degrees celsius */ temp: number;
+  /** The date and time of the sample measurement as an RFC string */ time: string;
+}
+
+/** A collection of subsurface samples measurements */
+export interface IMeasurementSubsurface {
+  /** The collection of subsurface measurement samples */ samples: IMeasurementSubsurfaceSample[];
+  /** The sensors technical metadata */ metadata?: string;
 }
 
 /** A combination of sensor measurements for the trawl tension */
@@ -365,7 +383,7 @@ export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
 
 export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
 
-export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM" | "ROUTE" | "SPATIAL_AXES";
+export type IEnumMeasurementType = "ACCELERATION" | "ANGULAR_VELOCITY" | "CURRENT" | "DEPTH" | "ENERGY_CONSUMPTION" | "FORCE" | "FUEL_CONSUMPTION" | "HUMIDITY" | "MAGNETISM" | "ONOFF" | "POSITION" | "POWER" | "PRESSURE" | "ROUTE" | "RPM" | "SCALE" | "SPATIAL_AXES" | "SPEED" | "SUBSURFACE" | "TEMPERATURE" | "TRAWL_TENSION" | "VOLTAGE";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 
@@ -382,7 +400,7 @@ export type IEnumVesselCompartment = "DECK" | "BRIDGE" | "GALLEY" | "ENGINE_ROOM
 export type IEntryArrivalEntryType = "arrival";
 /** A return to port event */
 export interface IEntryArrival extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryArrivalEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryArrivalEntryType;
   /** Trip related details for this  entry */ trip: ICoreTripEntry;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The code of the port of arrival. These are 5 letter codes prefixed with a 2 letter country code and a 3 letter port identifier. Example: NLURK, BEANR */ port: ICorePort;
@@ -393,7 +411,7 @@ export interface IEntryArrival extends ICoreBaseEntry {
 export type IEntryDepartureEntryType = "departure";
 /** A departure from port event */
 export interface IEntryDeparture extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryDepartureEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryDepartureEntryType;
   /** Trip related details for this  entry */ trip: ICoreTripEntry;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The code of the port of departure. These are 5 letter codes prefixed with a 2 letter country code and a 3 letter port identifier. Example: NLURK, BEANR */ port: ICorePort;
@@ -405,7 +423,7 @@ export interface IEntryDeparture extends ICoreBaseEntry {
 export type IEntryDeviceMeasurementEntryType = "device-measurement";
 /** A device measurement journal entry */
 export interface IEntryDeviceMeasurement extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryDeviceMeasurementEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryDeviceMeasurementEntryType;
   /** The unique identifier for the device */ device_id: string;
   /** The registered measurement for the device */ value: IMeasurementMeasurementValue;
 }
@@ -413,7 +431,7 @@ export interface IEntryDeviceMeasurement extends ICoreBaseEntry {
 export type IEntryEndOfFishingEntryType = "end-of-fishing";
 /** Notification of intent to cease all fishing activity for the trip */
 export interface IEntryEndOfFishing extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryEndOfFishingEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryEndOfFishingEntryType;
   /** Trip related details for this entry */ trip: ICoreTripEntry;
   /** The datetime of end of fishing in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
 }
@@ -421,14 +439,14 @@ export interface IEntryEndOfFishing extends ICoreBaseEntry {
 export type IEntryEquipmentInventoryEntryType = "equipment-inventory";
 /** An entry detailing the equipment installed on a vessel. One 1 should exist per journal */
 export interface IEntryEquipmentInventory extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryEquipmentInventoryEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryEquipmentInventoryEntryType;
   /** The collection of equipment for the vessel */ equipment: IEquipmentEquipment[];
 }
 
 export type IEntryFishingActivityEntryType = "fishing-activity";
 /** Notification of intent to cease all fishing activity for the trip */
 export interface IEntryFishingActivity extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryFishingActivityEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryFishingActivityEntryType;
   /** Trip related details for this entry */ trip: ICoreTripEntry;
   /** The fishing tow details */ tow: ICoreFishingTow;
 }
@@ -436,7 +454,7 @@ export interface IEntryFishingActivity extends ICoreBaseEntry {
 export type IEntryRouteEntryType = "route";
 /** A route which was planned with an ECS/ECDIS system. */
 export interface IEntryRoute extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryRouteEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryRouteEntryType;
   /** The name of the route. */ name: string;
   /** Generic route information. */ info?: string;
   /** The collection of waypoints which make the route. */ waypoints: ICoreRouteWaypoint[];
@@ -445,7 +463,7 @@ export interface IEntryRoute extends ICoreBaseEntry {
 export type IEntryZoneEnterEntryType = "zone-enter";
 /** Enter declaration of a fishing zone */
 export interface IEntryZoneEnter extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryZoneEnterEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryZoneEnterEntryType;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The zone being entered */ zone: ICoreFishingZone;
   /** The geographical location where the entry took place */ location: IMeasurementPosition;
@@ -459,7 +477,7 @@ export interface IEntryZoneEnter extends ICoreBaseEntry {
 export type IEntryZoneExitEntryType = "zone-exit";
 /** Exit declaration of a fishing zone */
 export interface IEntryZoneExit extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryZoneExitEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryZoneExitEntryType;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The zone being entered */ zone: ICoreFishingZone;
   /** The geographical location where the entry took place */ location: IMeasurementPosition;

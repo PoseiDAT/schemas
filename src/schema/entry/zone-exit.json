@@ -5,7 +5,7 @@
   "title": "ZoneExit",
   "properties": {
     "entry_type": {
-      "description": "The journal entry type identifer",
+      "description": "The journal entry type identifier",
       "type": "string",
       "enum": [
         "zone-exit"
