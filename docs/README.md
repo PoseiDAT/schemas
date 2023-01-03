@@ -98,6 +98,10 @@
 
 *   [Spatial axes](./spatial-axes.md "The spatial axes for a given sensor") – `https://poseidat.org/schema/core/measurement/spatial-axes.json`
 
+*   [Subsurface measurements](./subsurface.md "A collection of subsurface samples measurements") – `https://poseidat.org/schema/core/measurement/subsurface.json`
+
+*   [Subsurface sample value](./subsurface-sample.md "A subsurface sample measurement") – `https://poseidat.org/schema/core/measurement/subsurface-sample.json`
+
 *   [Trawl tension](./trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json`
 
 *   [Trip entry](./trip-entry.md "The trip related details of a journal entry") – `https://poseidat.org/schema/core/trip-entry.json`
@@ -161,6 +165,10 @@
 *   [Partnered fishing vessels](./fishing-gear-deployment-properties-partnered-fishing-vessels.md "Details of partner vessels for pair fishing") – `https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/partnered_fishing_vessel`
 
 *   [Partnered fishing vessels](./fishing-gear-deployment-properties-partnered-fishing-vessels.md "Details of partner vessels for pair fishing") – `https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/partnered_fishing_vessel`
+
+*   [Subsurface measurement samples](./subsurface-properties-subsurface-measurement-samples.md "The collection of subsurface measurement samples") – `https://poseidat.org/schema/core/measurement/subsurface.json#/properties/samples`
+
+*   [Subsurface measurement samples](./subsurface-properties-subsurface-measurement-samples.md "The collection of subsurface measurement samples") – `https://poseidat.org/schema/core/measurement/subsurface.json#/properties/samples`
 
 *   [Trans zonal fishing areas](./zone-exit-properties-trans-zonal-fishing-areas.md "The zones involved in trans-zonal fishing") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
 

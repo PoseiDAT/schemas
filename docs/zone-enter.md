@@ -35,7 +35,7 @@ all of
 
 ## entry_type
 
-The journal entry type identifer
+The journal entry type identifier
 
 `entry_type`
 
