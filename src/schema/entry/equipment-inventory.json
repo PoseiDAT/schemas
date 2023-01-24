@@ -5,7 +5,7 @@
   "description": "An entry detailing the equipment installed on a vessel. One 1 should exist per journal",
   "properties": {
     "entry_type": {
-      "description": "The journal entry type identifer",
+      "description": "The journal entry type identifier",
       "type": "string",
       "enum": [
         "equipment-inventory"

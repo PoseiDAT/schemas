@@ -20,22 +20,25 @@ The measurement types
 
 | Value                  | Explanation |
 | :--------------------- | :---------- |
-| `"POSITION"`           |             |
-| `"TEMPERATURE"`        |             |
-| `"HUMIDITY"`           |             |
-| `"PRESSURE"`           |             |
-| `"SPEED"`              |             |
-| `"ONOFF"`              |             |
+| `"ACCELERATION"`       |             |
+| `"ANGULAR_VELOCITY"`   |             |
+| `"CURRENT"`            |             |
+| `"DEPTH"`              |             |
+| `"ENERGY_CONSUMPTION"` |             |
 | `"FORCE"`              |             |
 | `"FUEL_CONSUMPTION"`   |             |
-| `"DEPTH"`              |             |
-| `"ACCELERATION"`       |             |
+| `"HUMIDITY"`           |             |
 | `"MAGNETISM"`          |             |
-| `"ANGULAR_VELOCITY"`   |             |
-| `"VOLTAGE"`            |             |
-| `"CURRENT"`            |             |
+| `"ONOFF"`              |             |
+| `"POSITION"`           |             |
 | `"POWER"`              |             |
-| `"ENERGY_CONSUMPTION"` |             |
-| `"TRAWL_TENSION"`      |             |
-| `"SCALE"`              |             |
+| `"PRESSURE"`           |             |
+| `"ROUTE"`              |             |
 | `"RPM"`                |             |
+| `"SCALE"`              |             |
+| `"SPATIAL_AXES"`       |             |
+| `"SPEED"`              |             |
+| `"SUBSURFACE"`         |             |
+| `"TEMPERATURE"`        |             |
+| `"TRAWL_TENSION"`      |             |
+| `"VOLTAGE"`            |             |

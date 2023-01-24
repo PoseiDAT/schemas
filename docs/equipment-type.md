@@ -39,3 +39,5 @@ The types of supported technical vessel equipment.
 | `"PUMP"`             |             |
 | `"SENSOR"`           |             |
 | `"SCALE"`            |             |
+| `"ECDIS"`            |             |
+| `"ECS"`              |             |

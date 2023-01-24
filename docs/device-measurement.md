@@ -29,7 +29,7 @@ all of
 
 ## entry_type
 
-The journal entry type identifer
+The journal entry type identifier
 
 `entry_type`
 
@@ -108,6 +108,10 @@ one (and only one) of
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-3.md "check type definition")
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-4.md "check type definition")
+
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-5.md "check type definition")
+
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-6.md "check type definition")
 
 ## Additional Properties
 

@@ -4,7 +4,7 @@
 https://poseidat.org/schema/entry/departure.json#/properties/entry_type
 ```
 
-The journal entry type identifer
+The journal entry type identifier
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |

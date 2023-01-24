@@ -12,7 +12,7 @@ export interface ICoreAddress {
 export interface ICoreBaseEntry {
   /** The unique identifier of the journal (UUID v4) this entry belongs to */ journal_id: string;
   /** The unique identifier for the entry (UUID v4) */ entry_id: string;
-  /** The journal entry type identifer */ entry_type: string;
+  /** The journal entry type identifier */ entry_type: string;
   /** The date and time the entry was logged in UTC in RFC3339 format */ entry_datetime?: string;
   /** The revision timestamp of this entry. Should be the time it was created. */ revision: string;
   /** Indicates this entry cannot be replaced with future revisions (default) */ immutable: boolean;
@@ -151,6 +151,29 @@ export interface ICorePort {
   /** The geographical location of the port */ location?: IMeasurementPosition;
 }
 
+/** A waypoint which is part of a route. */
+export interface ICoreRouteWaypoint {
+  /** The id of the waypoint within a trip. */ id: number;
+  /** The name of the waypoint. */ name?: string;
+  /** The latitude of the waypoint. */ latitude: number;
+  /** The longitude of the waypoint. */ longitude: number;
+  /** The turn radius of the waypoint in nautical miles. */ turn_radius?: number;
+  /** The Cross-Track Distance at the port side in nautical miles on the route leg between the previous and this waypoint. */ portside_xtd?: number;
+  /** The Cross-Track Distance at the starboard side in nautical miles on the route leg between the previous and this waypoint. */ starboard_xtd?: number;
+  /** The safety contour in metres on the route leg between the previous and this waypoint. */ safety_contour?: number;
+  /** The safety depth in metres on the route leg between the previous and this waypoint. */ safety_depth?: number;
+  /** The geometry type of the route leg between the previous and this waypoint. */ geometry_type?: IEnumRouteGeometryType;
+  /** The lowest cruising speed in knots on the route leg between the previous and this waypoint. */ speed_min?: number;
+  /** The highest allowed cruising speed in knots on the route leg between the previous and this waypoint. */ speed_max?: number;
+  /** The static draught forward (bow) in metres on the route leg between the previous and this waypoint. */ draught_forward?: number;
+  /** The static draught aft (stern) in metres on the route leg between the previous and this waypoint. */ draught_aft?: number;
+  /** The minimum static Under Keel Clearance on the route leg between the previous and this waypoint. */ static_ukc?: number;
+  /** The minimum dynamic Under Keel Clearance on the route leg between the previous and this waypoint. */ dynamic_ukc?: number;
+  /** The height of the masthead on the route leg between the previous and this waypoint. */ masthead_height?: number;
+  /** The Estimated Time of Departure from this waypoint. */ etd?: string;
+  /** The Estimated Time of Arrival at this waypoint. */ eta?: string;
+}
+
 /** The trip related details of a journal entry */
 export interface ICoreTripEntry {
   /** The date the trip entry was created or sent at. All dates and times are UTC. GBR: DATI, NLD: DA */ date: string;
@@ -256,6 +279,8 @@ export interface IMeasurementMeasurementValue {
   /** A trawl tension measurement */ trawl_tension?: IMeasurementTrawlTension;
   /** A scale measurement */ scale?: IMeasurementScale;
   /** A fuel consumption measurement */ fuel_consumption?: IMeasurementFuelConsumption;
+  /** A spatial axes measurement */ spatial_axes?: IMeasurementSpatialAxes;
+  /** A subsurface measurement */ subsurface?: IMeasurementSubsurface;
 }
 
 /** A number representing a measurement from a sensor */
@@ -287,6 +312,30 @@ export interface IMeasurementScale {
   /** The type of the product, e.g. a type of fish */ product: string;
 }
 
+/** The spatial axes for a given sensor */
+export interface IMeasurementSpatialAxes {
+  /** The easting coordinate range */ x: number;
+  /** The northing coordinate range */ y: number;
+  /** The elevation of the coordinate range */ z: number;
+}
+
+/** A subsurface sample measurement */
+export interface IMeasurementSubsurfaceSample {
+  /** The conductivity of the sample measurement (TBD: unit) */ conductivity: number;
+  /** The depth of the sample measurement in meters */ depth: number;
+  /** The latitude of the sample measurement */ latitude: number;
+  /** The longitude of the sample measurement */ longitude: number;
+  /** The salinity of the sample measurement (TBD: unit) */ salinity: number;
+  /** The temperature of the sample measurement in degrees celsius */ temp: number;
+  /** The date and time of the sample measurement as an RFC string */ time: string;
+}
+
+/** A collection of subsurface samples measurements */
+export interface IMeasurementSubsurface {
+  /** The collection of subsurface measurement samples */ samples: IMeasurementSubsurfaceSample[];
+  /** The sensors technical metadata */ metadata?: string;
+}
+
 /** A combination of sensor measurements for the trawl tension */
 export interface IMeasurementTrawlTension {
   /** The shooted length at starboard side */ shooted_length_starboard: number;
@@ -314,11 +363,11 @@ export interface IPersonaCompany {
   /** The contact details of the company */ contact?: ICoreContactDetails;
 }
 
-export type IEnumDeviceType = "ANTENNA" | "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER" | "ECONOMETER" | "SCALE";
+export type IEnumDeviceType = "PUMP" | "PROCESSOR" | "DISPLAY" | "HID" | "ROUTER" | "SWITCH" | "MODEM" | "SENSOR" | "BRAKE" | "ACTUATOR" | "CABLE" | "ENCLOSURE" | "CIRCUIT_BREAKER" | "ECONOMETER" | "SCALE" | "RECEIVER" | "TRANSMITTER" | "TRANSCEIVER";
 
 export type IEnumEffortZone = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y";
 
-export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR" | "SCALE";
+export type IEnumEquipmentType = "ENGINE" | "GNSS" | "ECHO_SOUNDER" | "FISH_FINDER" | "AIS" | "TANK_LEVEL_METER" | "TENSIOMETER" | "CHARGER" | "SEPARATOR" | "COMPASS" | "V_SAT" | "REFRIGERATOR" | "ICE_MAKER" | "WINCH" | "RUDDER" | "PROPELLER" | "PUMP" | "SENSOR" | "SCALE" | "ECDIS" | "ECS";
 
 export type IEnumFishFreshness = "A" | "B" | "E" | "SO" | "V";
 
@@ -328,21 +377,21 @@ export type IEnumFishPresentation = "BMS" | "CBF" | "CLA" | "DWT" | "FIL" | "FIS
 
 export type IEnumFishState = "ALI" | "BOI" | "DRI" | "FRE" | "FRO" | "SAL" | "SMO";
 
-export type IEnumFishType = "ANF" | "BLL" | "BIB" | "COD" | "CRE" | "DAB" | "GUU" | "HAD" | "HKE" | "JOD" | "LEM" | "LEZ" | "LIN" | "MUR" | "OCZ" | "PLE" | "RJH" | "RJI" | "RJM" | "RSC" | "SCE" | "SOL" | "SYC" | "SYT" | "TUR" | "WHE" | "MAC" | "WIT" | "OCT" | "POL" | "CTC" | "SOX" | "SQU" | "COE" | "BSS" | "CAA" | "CRA" | "FLE" | "POK" | "RJC" | "RJN" | "WEG" | "NEP" | "IJS" | "WHG" | "RJB" | "SBR" | "SKH" | "SMD" | "SRX" | "TSD" | "WEX" | "GAG" | "GUG" | "GUR" | "HAL" | "LBE" | "LYY" | "MUL" | "OCC" | "PIL" | "BRB" | "REG";
-
 export type IEnumFishingGearType = "DRB" | "FIX" | "FPO" | "GEN" | "GN" | "GNC" | "GND" | "GNF" | "GNS" | "GTN" | "GTR" | "HMD" | "KRK" | "LA" | "LHM" | "LHP" | "LL" | "LLD" | "LLS" | "LTL" | "LX" | "MIS" | "NK" | "OTB" | "OTM" | "OTT" | "PS" | "PS1" | "PS2" | "PTB" | "PTM" | "PUL" | "RG" | "SDN" | "SPR" | "SSC" | "SV" | "SX" | "TB" | "TBB" | "TBN" | "TBS";
 
 export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
 
 export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
 
-export type IEnumMeasurementType = "POSITION" | "TEMPERATURE" | "HUMIDITY" | "PRESSURE" | "SPEED" | "ONOFF" | "FORCE" | "FUEL_CONSUMPTION" | "DEPTH" | "ACCELERATION" | "MAGNETISM" | "ANGULAR_VELOCITY" | "VOLTAGE" | "CURRENT" | "POWER" | "ENERGY_CONSUMPTION" | "TRAWL_TENSION" | "SCALE" | "RPM";
+export type IEnumMeasurementType = "ACCELERATION" | "ANGULAR_VELOCITY" | "CURRENT" | "DEPTH" | "ENERGY_CONSUMPTION" | "FORCE" | "FUEL_CONSUMPTION" | "HUMIDITY" | "MAGNETISM" | "ONOFF" | "POSITION" | "POWER" | "PRESSURE" | "ROUTE" | "RPM" | "SCALE" | "SPATIAL_AXES" | "SPEED" | "SUBSURFACE" | "TEMPERATURE" | "TRAWL_TENSION" | "VOLTAGE";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 
 export type IEnumReasonDeparture = "FIS" | "GUD" | "OTH" | "SCR" | "STE" | "TST";
 
 export type IEnumReasonDiscard = "BAI" | "HSV" | "OTH" | "PDM" | "PRO" | "QEX";
+
+export type IEnumRouteGeometryType = "RHUMB_LINE_LOXODROME" | "GREAT_CICRLE_ORTHODROME";
 
 export type IEnumScaleCategory = "FISH";
 
@@ -351,7 +400,7 @@ export type IEnumVesselCompartment = "DECK" | "BRIDGE" | "GALLEY" | "ENGINE_ROOM
 export type IEntryArrivalEntryType = "arrival";
 /** A return to port event */
 export interface IEntryArrival extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryArrivalEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryArrivalEntryType;
   /** Trip related details for this  entry */ trip: ICoreTripEntry;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The code of the port of arrival. These are 5 letter codes prefixed with a 2 letter country code and a 3 letter port identifier. Example: NLURK, BEANR */ port: ICorePort;
@@ -362,7 +411,7 @@ export interface IEntryArrival extends ICoreBaseEntry {
 export type IEntryDepartureEntryType = "departure";
 /** A departure from port event */
 export interface IEntryDeparture extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryDepartureEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryDepartureEntryType;
   /** Trip related details for this  entry */ trip: ICoreTripEntry;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The code of the port of departure. These are 5 letter codes prefixed with a 2 letter country code and a 3 letter port identifier. Example: NLURK, BEANR */ port: ICorePort;
@@ -374,7 +423,7 @@ export interface IEntryDeparture extends ICoreBaseEntry {
 export type IEntryDeviceMeasurementEntryType = "device-measurement";
 /** A device measurement journal entry */
 export interface IEntryDeviceMeasurement extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryDeviceMeasurementEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryDeviceMeasurementEntryType;
   /** The unique identifier for the device */ device_id: string;
   /** The registered measurement for the device */ value: IMeasurementMeasurementValue;
 }
@@ -382,7 +431,7 @@ export interface IEntryDeviceMeasurement extends ICoreBaseEntry {
 export type IEntryEndOfFishingEntryType = "end-of-fishing";
 /** Notification of intent to cease all fishing activity for the trip */
 export interface IEntryEndOfFishing extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryEndOfFishingEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryEndOfFishingEntryType;
   /** Trip related details for this entry */ trip: ICoreTripEntry;
   /** The datetime of end of fishing in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
 }
@@ -390,22 +439,31 @@ export interface IEntryEndOfFishing extends ICoreBaseEntry {
 export type IEntryEquipmentInventoryEntryType = "equipment-inventory";
 /** An entry detailing the equipment installed on a vessel. One 1 should exist per journal */
 export interface IEntryEquipmentInventory extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryEquipmentInventoryEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryEquipmentInventoryEntryType;
   /** The collection of equipment for the vessel */ equipment: IEquipmentEquipment[];
 }
 
 export type IEntryFishingActivityEntryType = "fishing-activity";
 /** Notification of intent to cease all fishing activity for the trip */
 export interface IEntryFishingActivity extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryFishingActivityEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryFishingActivityEntryType;
   /** Trip related details for this entry */ trip: ICoreTripEntry;
   /** The fishing tow details */ tow: ICoreFishingTow;
+}
+
+export type IEntryRouteEntryType = "route";
+/** A route which was planned with an ECS/ECDIS system. */
+export interface IEntryRoute extends ICoreBaseEntry {
+  /** The journal entry type identifier */ entry_type: IEntryRouteEntryType;
+  /** The name of the route. */ name: string;
+  /** Generic route information. */ info?: string;
+  /** The collection of waypoints which make the route. */ waypoints: ICoreRouteWaypoint[];
 }
 
 export type IEntryZoneEnterEntryType = "zone-enter";
 /** Enter declaration of a fishing zone */
 export interface IEntryZoneEnter extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryZoneEnterEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryZoneEnterEntryType;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The zone being entered */ zone: ICoreFishingZone;
   /** The geographical location where the entry took place */ location: IMeasurementPosition;
@@ -419,7 +477,7 @@ export interface IEntryZoneEnter extends ICoreBaseEntry {
 export type IEntryZoneExitEntryType = "zone-exit";
 /** Exit declaration of a fishing zone */
 export interface IEntryZoneExit extends ICoreBaseEntry {
-  /** The journal entry type identifer */ entry_type: IEntryZoneExitEntryType;
+  /** The journal entry type identifier */ entry_type: IEntryZoneExitEntryType;
   /** The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA */ activity_date: string;
   /** The zone being entered */ zone: ICoreFishingZone;
   /** The geographical location where the entry took place */ location: IMeasurementPosition;

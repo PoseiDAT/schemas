@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/subsurface-sample.json",
+  "title": "Subsurface sample value",
+  "description": "A subsurface sample measurement",
+  "properties": {
+    "conductivity": {
+      "description": "The conductivity of the sample measurement (TBD: unit)",
+      "type": "number"
+    },
+    "depth": {
+      "description": "The depth of the sample measurement in meters",
+      "type": "number"
+    },
+    "latitude": {
+      "description": "The latitude of the sample measurement",
+      "type": "number"
+    },
+    "longitude": {
+      "description": "The longitude of the sample measurement",
+      "type": "number"
+    },
+    "salinity": {
+      "description": "The salinity of the sample measurement (TBD: unit)",
+      "type": "number"
+    },
+    "temp": {
+      "description": "The temperature of the sample measurement in degrees celsius",
+      "type": "number"
+    },
+    "time": {
+      "description": "The date and time of the sample measurement as an RFC string",
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "conductivity",
+    "depth",
+    "latitude",
+    "longitude",
+    "salinity",
+    "temp",
+    "time"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}
