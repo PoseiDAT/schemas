@@ -24,6 +24,13 @@
       "description": "Average product weight, measured in Kg. NLD: AW",
       "type": "number"
     },
+    "package_labels": {
+      "description": "An array of strings with the package labels for each package",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "fish_freshness": {
       "description": "The fish freshness category. NLD: FF. Examples: A, E, V",
       "$ref": "https://poseidat.org/schema/enum/fish-freshness.json"

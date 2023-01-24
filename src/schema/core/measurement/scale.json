@@ -4,6 +4,16 @@
   "title": "Scale",
   "description": "A scale measurement that can be used in an entry",
   "properties": {
+    "haul_date_start": {
+      "description": "The datetime the haul started in UTC",
+      "type": "string",
+      "format": "date-time"
+    },
+    "haul_date_end": {
+      "description": "The datetime the haul ended in UTC",
+      "type": "string",
+      "format": "date-time"
+    },
     "haul_number": {
       "description": "The number of the haul the product was caught in",
       "type": "number"
@@ -22,6 +32,10 @@
       "maxLength": 3,
       "minLength": 3,
       "pattern": "^([A-Z]{3})$"
+    },
+    "processed": {
+      "description": "Details of caught fish after it has been processed",
+      "$ref": "https://poseidat.org/schema/core/fishing-catch-processed.json"
     }
   },
   "required": [
