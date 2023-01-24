@@ -23,6 +23,7 @@ Details of caught fish after it has been processed
 | [package_type](#package_type)                     | `string` | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-fish-package-type.md "https://poseidat.org/schema/enum/fish-package-type.json#/properties/package_type")                      |
 | [number_of_packages](#number_of_packages)         | `number` | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-number_of_packages.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/number_of_packages")         |
 | [average_package_weight](#average_package_weight) | `number` | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-average_package_weight.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/average_package_weight") |
+| [package_labels](#package_labels)                 | `array`  | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-package_labels.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels")                 |
 | [fish_freshness](#fish_freshness)                 | `string` | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-fish-freshness.md "https://poseidat.org/schema/enum/fish-freshness.json#/properties/fish_freshness")                          |
 | [conversion_factor](#conversion_factor)           | `number` | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-conversion_factor.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/conversion_factor")           |
 
@@ -198,6 +199,24 @@ Average product weight, measured in Kg. NLD: AW
 ### average_package_weight Type
 
 `number`
+
+## package_labels
+
+An array of strings with the package labels for each package
+
+`package_labels`
+
+*   is optional
+
+*   Type: `string[]`
+
+*   cannot be null
+
+*   defined in: [Fishing catch processed](fishing-catch-processed-properties-package_labels.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels")
+
+### package_labels Type
+
+`string[]`
 
 ## fish_freshness
 

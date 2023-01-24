@@ -172,6 +172,10 @@
 
 *   [Trans zonal fishing areas](./zone-exit-properties-trans-zonal-fishing-areas.md "The zones involved in trans-zonal fishing") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
 
+*   [Untitled array in Fishing catch processed](./fishing-catch-processed-properties-package_labels.md "An array of strings with the package labels for each package") – `https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels`
+
+*   [Untitled array in Fishing catch processed](./fishing-catch-processed-properties-package_labels.md "An array of strings with the package labels for each package") – `https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels`
+
 *   [Waypoints](./fishing-tow-properties-waypoints.md "The collection of geographical locations logged during the tow") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/waypoints`
 
 *   [Waypoints](./route-properties-waypoints.md "The collection of waypoints which make the route") – `https://poseidat.org/schema/entry/route.json#/properties/waypoints`

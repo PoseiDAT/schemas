@@ -32,6 +32,7 @@ export interface ICoreFishingCatchProcessed {
   /** The package type code. NLD: TY */ package_type?: IEnumFishPackageType;
   /** The number of packages. NLD: NN */ number_of_packages?: number;
   /** Average product weight, measured in Kg. NLD: AW */ average_package_weight?: number;
+  /** An array of strings with the package labels for each package */ package_labels?: string[];
   /** The fish freshness category. NLD: FF. Examples: A, E, V */ fish_freshness?: IEnumFishFreshness;
   /** The conversion factor (ratio) from dead weight to live weight. Depends on combination of fish species, presentation and state. NLD: CF */ conversion_factor?: number;
 }
@@ -306,10 +307,13 @@ export interface IMeasurementPosition {
 
 /** A scale measurement that can be used in an entry */
 export interface IMeasurementScale {
+  /** The datetime the haul started in UTC */ haul_date_start?: string;
+  /** The datetime the haul ended in UTC */ haul_date_end?: string;
   /** The number of the haul the product was caught in */ haul_number: number;
   /** The weight of the product */ weight: number;
   /** The category of the scaled product */ category: IEnumScaleCategory;
   /** The type of the product, e.g. a type of fish */ product: string;
+  /** Details of caught fish after it has been processed */ processed?: ICoreFishingCatchProcessed;
 }
 
 /** The spatial axes for a given sensor */
