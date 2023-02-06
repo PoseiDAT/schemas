@@ -98,6 +98,8 @@
 
 *   [Spatial axes](./spatial-axes.md "The spatial axes for a given sensor") – `https://poseidat.org/schema/core/measurement/spatial-axes.json`
 
+*   [Speedlog](./speedlog.md "A combination of all posible speedlog measurements") – `https://poseidat.org/schema/core/measurement/speedlog.json`
+
 *   [Subsurface measurements](./subsurface.md "A collection of subsurface samples measurements") – `https://poseidat.org/schema/core/measurement/subsurface.json`
 
 *   [Subsurface sample value](./subsurface-sample.md "A subsurface sample measurement") – `https://poseidat.org/schema/core/measurement/subsurface-sample.json`

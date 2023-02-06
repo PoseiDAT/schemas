@@ -31,6 +31,7 @@ import * as basePosition from './schema/core/measurement/position.json';
 import * as baseTrawlTension from './schema/core/measurement/trawl-tension.json';
 import * as baseScale from './schema/core/measurement/scale.json';
 import * as baseSpatialAxes from './schema/core/measurement/spatial-axes.json';
+import * as baseSpeedlog from './schema/core/measurement/speedlog.json';
 import * as baseSubsurface from './schema/core/measurement/subsurface.json';
 import * as baseSubsurfaceSample from './schema/core/measurement/subsurface-sample.json';
 import * as baseTripEntry from './schema/core/trip-entry.json';
@@ -91,6 +92,7 @@ export const schemas = {
       spatialAxes: baseSpatialAxes as JSONSchema7,
       subsurface: baseSubsurface as JSONSchema7,
       subsurfaceSample: baseSubsurfaceSample as JSONSchema7,
+      speedlog: baseSpeedlog as JSONSchema7
     },
     persona: {
       company: baseCompany as JSONSchema7
