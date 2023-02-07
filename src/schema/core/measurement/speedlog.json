@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://poseidat.org/schema/core/measurement/speedlog.json",
+    "title": "Speedlog",
+    "description": "A combination of all posible speedlog measurements",
+    "properties": {
+      "longitudinal_water_speed": {
+        "description": "The longitudinal water speed",
+        "type": "number"
+      },
+      "transverse_water_speed": {
+        "description": "The transverse water speed",
+        "type": "number"
+      },
+      "longitudinal_ground_speed": {
+        "description": "The longitudinal ground speed",
+        "type": "number"
+      },
+      "transverse_ground_speed": {
+        "description": "The transverse ground speed",
+        "type": "number"
+      },
+      "stern_transverse_water_speed": {
+        "description": "The stern transverse water speed",
+        "type": "number"
+      },
+      "stern_transverse_ground_speed": {
+        "description": "The stern transverse ground speed",
+        "type": "number"
+      },
+      "total_cumulative_water_distance": {
+        "description": "The total cumulative water distance",
+        "type": "number"
+      },
+      "total_cumulative_ground_distance": {
+        "description": "The total cumulative ground distance",
+        "type": "number"
+      }
+    },
+    "required": [
+      "longitudinal_water_speed"
+    ],
+    "type": "object",
+    "additionalProperties": false
+  }
+  

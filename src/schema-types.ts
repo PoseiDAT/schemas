@@ -282,6 +282,7 @@ export interface IMeasurementMeasurementValue {
   /** A fuel consumption measurement */ fuel_consumption?: IMeasurementFuelConsumption;
   /** A spatial axes measurement */ spatial_axes?: IMeasurementSpatialAxes;
   /** A subsurface measurement */ subsurface?: IMeasurementSubsurface;
+  /** A speedlog measurement */ speedlog?: IMeasurementSpeedlog;
 }
 
 /** A number representing a measurement from a sensor */
@@ -321,6 +322,18 @@ export interface IMeasurementSpatialAxes {
   /** The easting coordinate range */ x: number;
   /** The northing coordinate range */ y: number;
   /** The elevation of the coordinate range */ z: number;
+}
+
+/** A combination of all posible speedlog measurements */
+export interface IMeasurementSpeedlog {
+  /** The longitudinal water speed */ longitudinal_water_speed: number;
+  /** The transverse water speed */ transverse_water_speed?: number;
+  /** The longitudinal ground speed */ longitudinal_ground_speed?: number;
+  /** The transverse ground speed */ transverse_ground_speed?: number;
+  /** The stern transverse water speed */ stern_transverse_water_speed?: number;
+  /** The stern transverse ground speed */ stern_transverse_ground_speed?: number;
+  /** The total cumulative water distance */ total_cumulative_water_distance?: number;
+  /** The total cumulative ground distance */ total_cumulative_ground_distance?: number;
 }
 
 /** A subsurface sample measurement */
@@ -387,7 +400,7 @@ export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
 
 export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
 
-export type IEnumMeasurementType = "ACCELERATION" | "ANGULAR_VELOCITY" | "CURRENT" | "DEPTH" | "ENERGY_CONSUMPTION" | "FORCE" | "FUEL_CONSUMPTION" | "HUMIDITY" | "MAGNETISM" | "ONOFF" | "POSITION" | "POWER" | "PRESSURE" | "ROUTE" | "RPM" | "SCALE" | "SPATIAL_AXES" | "SPEED" | "SUBSURFACE" | "TEMPERATURE" | "TRAWL_TENSION" | "VOLTAGE";
+export type IEnumMeasurementType = "ACCELERATION" | "ANGULAR_VELOCITY" | "CURRENT" | "DEPTH" | "ENERGY_CONSUMPTION" | "FORCE" | "FUEL_CONSUMPTION" | "HUMIDITY" | "MAGNETISM" | "ONOFF" | "POSITION" | "POWER" | "PRESSURE" | "ROUTE" | "RPM" | "SCALE" | "SPATIAL_AXES" | "SPEED" | "SUBSURFACE" | "TEMPERATURE" | "TRAWL_TENSION" | "VOLTAGE" | "SPEEDLOG";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 

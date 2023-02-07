@@ -26,6 +26,7 @@
     "SUBSURFACE",
     "TEMPERATURE",
     "TRAWL_TENSION",
-    "VOLTAGE"
+    "VOLTAGE",
+    "SPEEDLOG"
   ]
 }

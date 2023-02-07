@@ -30,6 +30,8 @@ one (and only one) of
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-6.md "check type definition")
 
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-7.md "check type definition")
+
 # value Properties
 
 | Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                              |
@@ -42,6 +44,7 @@ one (and only one) of
 | [fuel_consumption](#fuel_consumption) | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-fuel-consumption.md "https://poseidat.org/schema/core/measurement/fuel-consumption.json#/properties/fuel_consumption") |
 | [spatial_axes](#spatial_axes)         | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-spatial-axes.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/spatial_axes")             |
 | [subsurface](#subsurface)             | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-subsurface-measurements.md "https://poseidat.org/schema/core/measurement/subsurface.json#/properties/subsurface")      |
+| [speedlog](#speedlog)                 | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-speedlog.md "https://poseidat.org/schema/core/measurement/speedlog.json#/properties/speedlog")                         |
 
 ## type
 
@@ -89,6 +92,7 @@ The measurement types
 | `"TEMPERATURE"`        |             |
 | `"TRAWL_TENSION"`      |             |
 | `"VOLTAGE"`            |             |
+| `"SPEEDLOG"`           |             |
 
 ## position
 
@@ -215,3 +219,21 @@ A collection of subsurface samples measurements
 ### subsurface Type
 
 `object` ([Subsurface measurements](measurement-value-properties-subsurface-measurements.md))
+
+## speedlog
+
+A combination of all posible speedlog measurements
+
+`speedlog`
+
+*   is optional
+
+*   Type: `object` ([Speedlog](measurement-value-properties-speedlog.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](measurement-value-properties-speedlog.md "https://poseidat.org/schema/core/measurement/speedlog.json#/properties/speedlog")
+
+### speedlog Type
+
+`object` ([Speedlog](measurement-value-properties-speedlog.md))

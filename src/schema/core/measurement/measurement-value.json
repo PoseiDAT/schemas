@@ -35,6 +35,10 @@
     "subsurface": {
       "description": "A subsurface measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
+    },
+    "speedlog": {
+      "description": "A speedlog measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
     }
  },
  "oneOf": [
@@ -44,7 +48,8 @@
    { "required": [ "type", "scale" ] },
    { "required": [ "type", "fuel_consumption" ] },
    { "required": [ "type", "spatial_axes" ] },
-   { "required": [ "type", "subsurface" ] }
+   { "required": [ "type", "subsurface" ] },
+   { "required": [ "type", "speedlog" ] }
  ],
   "type": "object",
   "additionalProperties": false
