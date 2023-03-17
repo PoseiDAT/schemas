@@ -4,7 +4,7 @@
 https://poseidat.org/schema/core/measurement/subsurface-sample.json#/properties/salinity
 ```
 
-The salinity of the sample measurement (TBD: unit)
+The salinity of the sample measurement in Practical Salinity Units
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                        |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------------------------ |

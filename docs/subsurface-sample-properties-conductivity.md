@@ -4,7 +4,7 @@
 https://poseidat.org/schema/core/measurement/subsurface-sample.json#/properties/conductivity
 ```
 
-The conductivity of the sample measurement (TBD: unit)
+The conductivity of the sample measurement in Siemens per meter
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                        |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------------------------ |

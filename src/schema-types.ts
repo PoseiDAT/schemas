@@ -338,11 +338,11 @@ export interface IMeasurementSpeedlog {
 
 /** A subsurface sample measurement */
 export interface IMeasurementSubsurfaceSample {
-  /** The conductivity of the sample measurement (TBD: unit) */ conductivity: number;
+  /** The conductivity of the sample measurement in Siemens per meter */ conductivity: number;
   /** The depth of the sample measurement in meters */ depth: number;
   /** The latitude of the sample measurement */ latitude: number;
   /** The longitude of the sample measurement */ longitude: number;
-  /** The salinity of the sample measurement (TBD: unit) */ salinity: number;
+  /** The salinity of the sample measurement in Practical Salinity Units */ salinity: number;
   /** The temperature of the sample measurement in degrees celsius */ temp: number;
   /** The date and time of the sample measurement as an RFC string */ time: string;
 }

@@ -28,7 +28,7 @@ A subsurface sample measurement
 
 ## conductivity
 
-The conductivity of the sample measurement (TBD: unit)
+The conductivity of the sample measurement in Siemens per meter
 
 `conductivity`
 
@@ -100,7 +100,7 @@ The longitude of the sample measurement
 
 ## salinity
 
-The salinity of the sample measurement (TBD: unit)
+The salinity of the sample measurement in Practical Salinity Units
 
 `salinity`
 
