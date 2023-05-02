@@ -43,3 +43,4 @@ The measurement types
 | `"TRAWL_TENSION"`      |             |
 | `"VOLTAGE"`            |             |
 | `"SPEEDLOG"`           |             |
+| `"WEATHER"`            |             |

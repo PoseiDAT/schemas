@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://poseidat.org/schema/core/measurement/weather.json",
+    "title": "Weather",
+    "description": "A combination of all posible weather station measurements",
+    "properties": {
+      "air_pressure": {
+        "description": "The air pressure in bar",
+        "type": "number"
+      },
+      "air_temperature": {
+        "description": "The air temperature in degrees Celsius",
+        "type": "number"
+      },
+      "water_temperature": {
+        "description": "The temperature of the surface water in degrees Celsius",
+        "type": "number"
+      },
+      "relative_humidity": {
+        "description": "The relative air humidity in percent",
+        "type": "number"
+      },
+      "absolute_humidity": {
+        "description": "The absolute air humidity in percent",
+        "type": "number"
+      },
+      "dew_point": {
+        "description": "The dew point in degrees Celsius",
+        "type": "number"
+      },
+      "wind_dir_true": {
+        "description": "The wind direction relative to the true north in degrees",
+        "type": "number"
+      },
+      "wind_dir_magnetic": {
+        "description": "The wind direction relative to magnetic north in degrees",
+        "type": "number"
+      },
+      "wind_speed": {
+        "description": "The wind speed in meters per second",
+        "type": "number"
+      },
+      "relative_wind_chill_temp": {
+        "description": "The relative wind chill temperature in degrees Celsius",
+        "type": "number"
+      },
+      "theoretical_wind_chill_temp": {
+        "description": "The theoretical wind chill temperature in degrees Celsius",
+        "type": "number"
+      },
+      "rain_intensity": {
+        "description": "The rain intensity in l/m2 per hour",
+        "type": "number"
+      },
+      "wave_height": {
+        "description": "The wave height in meters",
+        "type": "number"
+      }
+    },
+    "required": [
+    ],
+    "type": "object",
+    "additionalProperties": false
+  }
+  
