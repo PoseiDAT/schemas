@@ -32,6 +32,8 @@ one (and only one) of
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-7.md "check type definition")
 
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-8.md "check type definition")
+
 # value Properties
 
 | Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                              |
@@ -45,6 +47,7 @@ one (and only one) of
 | [spatial_axes](#spatial_axes)         | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-spatial-axes.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/spatial_axes")             |
 | [subsurface](#subsurface)             | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-subsurface-measurements.md "https://poseidat.org/schema/core/measurement/subsurface.json#/properties/subsurface")      |
 | [speedlog](#speedlog)                 | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-speedlog.md "https://poseidat.org/schema/core/measurement/speedlog.json#/properties/speedlog")                         |
+| [weather](#weather)                   | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-weather.md "https://poseidat.org/schema/core/measurement/weather.json#/properties/weather")                            |
 
 ## type
 
@@ -93,6 +96,7 @@ The measurement types
 | `"TRAWL_TENSION"`      |             |
 | `"VOLTAGE"`            |             |
 | `"SPEEDLOG"`           |             |
+| `"WEATHER"`            |             |
 
 ## position
 
@@ -237,3 +241,21 @@ A combination of all posible speedlog measurements
 ### speedlog Type
 
 `object` ([Speedlog](measurement-value-properties-speedlog.md))
+
+## weather
+
+A combination of all posible weather station measurements
+
+`weather`
+
+*   is optional
+
+*   Type: `object` ([Weather](measurement-value-properties-weather.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](measurement-value-properties-weather.md "https://poseidat.org/schema/core/measurement/weather.json#/properties/weather")
+
+### weather Type
+
+`object` ([Weather](measurement-value-properties-weather.md))

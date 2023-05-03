@@ -27,6 +27,7 @@
     "TEMPERATURE",
     "TRAWL_TENSION",
     "VOLTAGE",
-    "SPEEDLOG"
+    "SPEEDLOG",
+    "WEATHER"
   ]
 }

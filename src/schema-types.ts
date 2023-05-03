@@ -283,6 +283,7 @@ export interface IMeasurementMeasurementValue {
   /** A spatial axes measurement */ spatial_axes?: IMeasurementSpatialAxes;
   /** A subsurface measurement */ subsurface?: IMeasurementSubsurface;
   /** A speedlog measurement */ speedlog?: IMeasurementSpeedlog;
+  /** A weather station measurement */ weather?: IMeasurementWeather;
 }
 
 /** A number representing a measurement from a sensor */
@@ -372,6 +373,23 @@ export interface IMeasurementTrawlTension {
   /** The drum rotations at center side */ drum_rotations_center?: number;
 }
 
+/** A combination of all posible weather station measurements */
+export interface IMeasurementWeather {
+  /** The air pressure in bar */ air_pressure?: number;
+  /** The air temperature in degrees Celsius */ air_temperature?: number;
+  /** The temperature of the surface water in degrees Celsius */ water_temperature?: number;
+  /** The relative air humidity in percent */ relative_humidity?: number;
+  /** The absolute air humidity in percent */ absolute_humidity?: number;
+  /** The dew point in degrees Celsius */ dew_point?: number;
+  /** The wind direction relative to the true north in degrees */ wind_dir_true?: number;
+  /** The wind direction relative to magnetic north in degrees */ wind_dir_magnetic?: number;
+  /** The wind speed in meters per second */ wind_speed?: number;
+  /** The relative wind chill temperature in degrees Celsius */ relative_wind_chill_temp?: number;
+  /** The theoretical wind chill temperature in degrees Celsius */ theoretical_wind_chill_temp?: number;
+  /** The rain intensity in l/m2 per hour */ rain_intensity?: number;
+  /** The wave height in meters */ wave_height?: number;
+}
+
 /** The details of a (commercial) company */
 export interface IPersonaCompany {
   /** The unique identifier for the company (UUID v4) */ company_id: string;
@@ -400,7 +418,7 @@ export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
 
 export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
 
-export type IEnumMeasurementType = "ACCELERATION" | "ANGULAR_VELOCITY" | "CURRENT" | "DEPTH" | "ENERGY_CONSUMPTION" | "FORCE" | "FUEL_CONSUMPTION" | "HUMIDITY" | "MAGNETISM" | "ONOFF" | "POSITION" | "POWER" | "PRESSURE" | "ROUTE" | "RPM" | "SCALE" | "SPATIAL_AXES" | "SPEED" | "SUBSURFACE" | "TEMPERATURE" | "TRAWL_TENSION" | "VOLTAGE" | "SPEEDLOG";
+export type IEnumMeasurementType = "ACCELERATION" | "ANGULAR_VELOCITY" | "CURRENT" | "DEPTH" | "ENERGY_CONSUMPTION" | "FORCE" | "FUEL_CONSUMPTION" | "HUMIDITY" | "MAGNETISM" | "ONOFF" | "POSITION" | "POWER" | "PRESSURE" | "ROUTE" | "RPM" | "SCALE" | "SPATIAL_AXES" | "SPEED" | "SUBSURFACE" | "TEMPERATURE" | "TRAWL_TENSION" | "VOLTAGE" | "SPEEDLOG" | "WEATHER";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 

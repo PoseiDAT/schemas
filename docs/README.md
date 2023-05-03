@@ -120,6 +120,8 @@
 
 *   [Vessel section](./vessel-section.md "A section off a vessel, used to detail where objects are on the vessel") – `https://poseidat.org/schema/core/vessel-section.json`
 
+*   [Weather](./weather.md "A combination of all posible weather station measurements") – `https://poseidat.org/schema/core/measurement/weather.json`
+
 *   [ZoneEnter](./zone-enter.md "Enter declaration of a fishing zone") – `https://poseidat.org/schema/entry/zone-enter.json`
 
 *   [ZoneExit](./zone-exit.md "Exit declaration of a fishing zone") – `https://poseidat.org/schema/entry/zone-exit.json`

@@ -39,6 +39,10 @@
     "speedlog": {
       "description": "A speedlog measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
+    },
+    "weather": {
+      "description": "A weather station measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
     }
  },
  "oneOf": [
@@ -49,7 +53,8 @@
    { "required": [ "type", "fuel_consumption" ] },
    { "required": [ "type", "spatial_axes" ] },
    { "required": [ "type", "subsurface" ] },
-   { "required": [ "type", "speedlog" ] }
+   { "required": [ "type", "speedlog" ] },
+   { "required": [ "type", "weather" ] }
  ],
   "type": "object",
   "additionalProperties": false
