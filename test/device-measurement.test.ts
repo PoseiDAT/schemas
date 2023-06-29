@@ -94,6 +94,27 @@ describe('DeviceMeasurementEntry', () => {
     expect(validationErrors.length).toEqual(0);
   });
 
+  test('Validating a minimal text DeviceMeasurementEntry should succeed', () => {
+    const data: IEntryDeviceMeasurement = {
+      journal_id: v4(),
+      entry_id: v4(),
+      revision: "2020-01-01T00:00:00Z",
+      immutable: false,
+      entry_type: "device-measurement",
+      device_id: v4(),
+      value: {
+        type: "NMEA",
+        text: {
+          value: "STRING"
+        }
+      }
+    };
+    const measurementEntry = new DeviceMeasurementEntry(data);
+    const validationErrors = measurementEntry.validate();
+    expect(validationErrors).toBeDefined();
+    expect(validationErrors.length).toEqual(0);
+  });
+
   test('Validating a minimal trawl tension DeviceMeasurementEntry should succeed', () => {
     const data: IEntryDeviceMeasurement = {
       journal_id: v4(),

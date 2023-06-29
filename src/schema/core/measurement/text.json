@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/text.json",
+  "title": "Text",
+  "description": "A string or piece of text representing a measurement from a sensor",
+  "properties": {
+    "value": {
+      "description": "The string value send by the sensor",
+      "type": "string"
+    }
+  },
+  "required": ["value"],
+  "type": "object",
+  "additionalProperties": false
+}

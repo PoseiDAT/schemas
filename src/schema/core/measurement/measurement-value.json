@@ -16,6 +16,10 @@
       "description": "A numerical measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
     },
+    "text": {
+      "description": "A text measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/text.json"
+    },
     "trawl_tension": {
       "description": "A trawl tension measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
@@ -44,18 +48,19 @@
       "description": "A weather station measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
     }
- },
- "oneOf": [
-   { "required": [ "type", "numeric" ] },
-   { "required": [ "type", "position" ] },
-   { "required": [ "type", "trawl_tension" ] },
-   { "required": [ "type", "scale" ] },
-   { "required": [ "type", "fuel_consumption" ] },
-   { "required": [ "type", "spatial_axes" ] },
-   { "required": [ "type", "subsurface" ] },
-   { "required": [ "type", "speedlog" ] },
-   { "required": [ "type", "weather" ] }
- ],
+  },
+  "oneOf": [
+    { "required": ["type", "numeric"] },
+    { "required": ["type", "position"] },
+    { "required": ["type", "trawl_tension"] },
+    { "required": ["type", "scale"] },
+    { "required": ["type", "fuel_consumption"] },
+    { "required": ["type", "spatial_axes"] },
+    { "required": ["type", "subsurface"] },
+    { "required": ["type", "speedlog"] },
+    { "required": ["type", "weather"] },
+    { "required": ["type", "text"] }
+  ],
   "type": "object",
   "additionalProperties": false
 }

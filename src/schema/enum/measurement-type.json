@@ -28,6 +28,7 @@
     "TRAWL_TENSION",
     "VOLTAGE",
     "SPEEDLOG",
-    "WEATHER"
+    "WEATHER",
+    "NMEA"
   ]
 }
