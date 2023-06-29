@@ -34,6 +34,8 @@ one (and only one) of
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-8.md "check type definition")
 
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-9.md "check type definition")
+
 # value Properties
 
 | Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                              |
@@ -41,6 +43,7 @@ one (and only one) of
 | [type](#type)                         | `string` | Optional | cannot be null | [Measurement value](measurement-value-properties-measurement-type.md "https://poseidat.org/schema/enum/measurement-type.json#/properties/type")                         |
 | [position](#position)                 | `object` | Optional | cannot be null | [Measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")                                |
 | [numeric](#numeric)                   | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")                            |
+| [text](#text)                         | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-text.md "https://poseidat.org/schema/core/measurement/text.json#/properties/text")                                     |
 | [trawl_tension](#trawl_tension)       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-trawl-tension.md "https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension")          |
 | [scale](#scale)                       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-scale.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/scale")                                  |
 | [fuel_consumption](#fuel_consumption) | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-fuel-consumption.md "https://poseidat.org/schema/core/measurement/fuel-consumption.json#/properties/fuel_consumption") |
@@ -97,6 +100,7 @@ The measurement types
 | `"VOLTAGE"`            |             |
 | `"SPEEDLOG"`           |             |
 | `"WEATHER"`            |             |
+| `"NMEA"`               |             |
 
 ## position
 
@@ -133,6 +137,24 @@ A number representing a measurement from a sensor
 ### numeric Type
 
 `object` ([Numeric](measurement-value-properties-numeric.md))
+
+## text
+
+A string or piece of text representing a measurement from a sensor
+
+`text`
+
+*   is optional
+
+*   Type: `object` ([Text](measurement-value-properties-text.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](measurement-value-properties-text.md "https://poseidat.org/schema/core/measurement/text.json#/properties/text")
+
+### text Type
+
+`object` ([Text](measurement-value-properties-text.md))
 
 ## trawl_tension
 

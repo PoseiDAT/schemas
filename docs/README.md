@@ -104,6 +104,8 @@
 
 *   [Subsurface sample value](./subsurface-sample.md "A subsurface sample measurement") – `https://poseidat.org/schema/core/measurement/subsurface-sample.json`
 
+*   [Text](./text.md "A string or piece of text representing a measurement from a sensor") – `https://poseidat.org/schema/core/measurement/text.json`
+
 *   [Trawl tension](./trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json`
 
 *   [Trip entry](./trip-entry.md "The trip related details of a journal entry") – `https://poseidat.org/schema/core/trip-entry.json`

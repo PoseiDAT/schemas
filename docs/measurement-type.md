@@ -44,3 +44,4 @@ The measurement types
 | `"VOLTAGE"`            |             |
 | `"SPEEDLOG"`           |             |
 | `"WEATHER"`            |             |
+| `"NMEA"`               |             |

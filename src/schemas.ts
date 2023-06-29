@@ -26,6 +26,7 @@ import * as baseJournal from './schema/core/journal.json';
 import * as baseFuelConsumption from './schema/core/measurement/fuel-consumption.json';
 import * as baseMeasurementValue from './schema/core/measurement/measurement-value.json';
 import * as baseNumeric from './schema/core/measurement/numeric.json';
+import * as baseText from './schema/core/measurement/text.json';
 import * as basePort from './schema/core/port.json';
 import * as basePosition from './schema/core/measurement/position.json';
 import * as baseTrawlTension from './schema/core/measurement/trawl-tension.json';
@@ -87,6 +88,7 @@ export const schemas = {
       fuelConsumption: baseFuelConsumption as JSONSchema7,
       measurementValue: baseMeasurementValue as JSONSchema7,
       numeric: baseNumeric as JSONSchema7,
+      text: baseText as JSONSchema7,
       position: basePosition as JSONSchema7,
       trawlTension: baseTrawlTension as JSONSchema7,
       scale: baseScale as JSONSchema7,
