@@ -4,7 +4,7 @@
 https://poseidat.org/schema/entry/equipment-inventory.json
 ```
 
-An entry detailing the equipment installed on a vessel. One 1 should exist per journal
+An entry detailing the equipment installed on a vessel. Only 1 should exist per journal
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :---------------------------------------------------------------------------------------- |

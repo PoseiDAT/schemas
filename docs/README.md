@@ -118,6 +118,8 @@
 
 *   [Vessel partner](./vessel-partner.md "Fishing vessel details for partnered fishing") – `https://poseidat.org/schema/core/vessel-partner.json`
 
+*   [Vessel registration](./vessel-registration.md "An entry detailing the registered details of a vessel like hull number, flag state, etc") – `https://poseidat.org/schema/entry/vessel-registration.json`
+
 *   [Vessel section](./vessel-section.md "A section off a vessel, used to detail where objects are on the vessel") – `https://poseidat.org/schema/core/vessel-section.json`
 
 *   [Weather](./weather.md "A combination of all posible weather station measurements") – `https://poseidat.org/schema/core/measurement/weather.json`

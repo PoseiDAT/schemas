@@ -16,10 +16,10 @@ A trip journal
 
 # Journal Properties
 
-| Property                  | Type     | Required | Nullable       | Defined by                                                                                                         |
-| :------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------- |
-| [journal_id](#journal_id) | `string` | Required | cannot be null | [Journal](journal-properties-journal_id.md "https://poseidat.org/schema/core/journal.json#/properties/journal_id") |
-| [vessel](#vessel)         | `object` | Required | cannot be null | [Journal](journal-properties-vessel.md "https://poseidat.org/schema/core/vessel.json#/properties/vessel")          |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                            |
+| :------------------------ | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| [journal_id](#journal_id) | `string` | Required | cannot be null | [Journal](journal-properties-journal_id.md "https://poseidat.org/schema/core/journal.json#/properties/journal_id")    |
+| [vessel](#vessel)         | `object` | Required | cannot be null | [Journal](vessel-registration-properties-vessel.md "https://poseidat.org/schema/core/vessel.json#/properties/vessel") |
 
 ## journal_id
 
@@ -51,12 +51,12 @@ The vessel information
 
 *   is required
 
-*   Type: `object` ([Vessel](journal-properties-vessel.md))
+*   Type: `object` ([Vessel](vessel-registration-properties-vessel.md))
 
 *   cannot be null
 
-*   defined in: [Journal](journal-properties-vessel.md "https://poseidat.org/schema/core/vessel.json#/properties/vessel")
+*   defined in: [Journal](vessel-registration-properties-vessel.md "https://poseidat.org/schema/core/vessel.json#/properties/vessel")
 
 ### vessel Type
 
-`object` ([Vessel](journal-properties-vessel.md))
+`object` ([Vessel](vessel-registration-properties-vessel.md))
