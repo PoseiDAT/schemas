@@ -1,20 +1,20 @@
 # Vessel Schema
 
 ```txt
-https://poseidat.org/schema/core/vessel.json
+https://poseidat.org/schema/core/vessel.json#/properties/vessel
 ```
 
 The vessel information
 
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                     |
-| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [vessel.json](schemas/core/vessel.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                                 |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [vessel-registration.json*](schemas/entry/vessel-registration.json "open original schema") |
 
-## Vessel Type
+## vessel Type
 
-`object` ([Vessel](vessel.md))
+`object` ([Vessel](vessel-registration-properties-vessel.md))
 
-# Vessel Properties
+# vessel Properties
 
 | Property                                | Type     | Required | Nullable       | Defined by                                                                                                                    |
 | :-------------------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------- |

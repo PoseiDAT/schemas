@@ -17,7 +17,7 @@ On the other end of the spectrum organizations such as [ICES](http://www.ices.dk
 These surveys are more focussed on a certain subject and may not have enough relational markers for commercial business analysis.
 
 The PoseiDAT initiative was created to create something we call the `vessel journal`.
-This is the super set of data that brings together all the data collected during a vessels lifetime.
+This is the super set of data that brings together all the data collected during a vessels lifetime (or specific ownership period).
 A journal is comprised of `entries` that can be sent and collected piecemeal.
 An entry is time based log which can contain one or more `events`.
 The addition of entries can occur both on board a vessel and at a central land based location by the commercial entity running the vessel.
@@ -54,6 +54,7 @@ An entry should at least contains the following:
 We currently support the following entry types:
 
 * EquipmentInventory (1)
+* VesselRegistration (1)
 * ServiceHistory (1...n)
 * PersonalRoster (1)
 * Events (1...n)
@@ -63,13 +64,21 @@ We currently support the following entry types:
 There should only be 1 `EquipmentInventory` which will be updated with new revisions when equipment is installed, replaced or decommissioned.
 Since `equipment` can be referenced by event entries (for sensory data) they should never be removed but marked with a status (installed, replaced, etc).
 
+### VesselRegistration
+
+There should only be 1 `VesselRegistration` which will be updated with new revisions when vessel registration details are updated.
+
 ### ServiceHistory
+
+> Not implemented yet
 
 Every time vessel or equipment maintenance is carried out a `ServiceHistory` entry should be added to the journal.
 The service entry will reference any equipment and/or devices involved and who performed the work.
 This entry can also be used to mark the next maintenance interval (if applicable).
 
 ### PersonalRoster
+
+> Not implemented yet
 
 The person roster details the current human beings involved with the vessel in some capacity.
 Involvement could be anything from captain to passenger.
@@ -110,7 +119,9 @@ So even though a new revision can be made the original entry is not modified but
 ### Archiving entries
 
 Because of the append only nature of the journal removing entries is not supported.
-There is however an `archived` flag present which marks an entry as obsolete.
+There is however an `archived` flag present in journal server implementations which marks an entry as obsolete.
+Note that this is not a property in the entry schema itself but should be a characteristic of the storage system (database) of the entries.
+Archiving an entry does not alter the original entry data itself because of append only nature of journal entries.
 When exporting data to external systems these archived entries can be skipped.
 However for journal integrity and auditing purposes no information should be deleted.
 
@@ -128,7 +139,7 @@ These will evolve as the project continues.
 * Identifiers should be UUID v4
 * Entities should never be copied but referenced by identifier (ex. source device details for a measurement event)
 * Any referenced identifier may never be removed/archived from the journal (referential integrity)
-* A journal is unique to a vessel (registration changes make it a new vessel)
+* A journal is unique to a vessel (vessel ownership changes may warrant a new journal for the same vessel)
 
 ## Development
 

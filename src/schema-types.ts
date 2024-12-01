@@ -225,7 +225,7 @@ export interface ICoreVesselSection {
 export interface ICoreVessel {
   /** The display name for the vessel */ name: string;
   /** The vessels flag state and country to report ERS messages to. Should be a 3 letter ISO code. */ flag_state: string;
-  /** The vessel's Community Fleet Registration number. Fixed format defined by the pattern: "AAAXXXXXXXXX" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.). Known as CFR or IR */ cfr: string;
+  /** The vessel's Community Fleet Registration number. Fixed format defined by the pattern: "AAAXXXXXXXXX" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.). Known as CFR or IR */ cfr?: string;
   /** The vessels international radio call sign (RC) */ call_sign?: string;
   /** The vessel's side (hull) registration number. Also known as XR or PLN. May contain dots or dashes */ hull_number: string;
   /** GBR ONLY: The vessel's unique identity number as recorded by the UK Registrar of Seamen and Shipping */ gbr_rss?: string;
@@ -472,7 +472,7 @@ export interface IEntryEndOfFishing extends ICoreBaseEntry {
 }
 
 export type IEntryEquipmentInventoryEntryType = "equipment-inventory";
-/** An entry detailing the equipment installed on a vessel. One 1 should exist per journal */
+/** An entry detailing the equipment installed on a vessel. Only 1 should exist per journal */
 export interface IEntryEquipmentInventory extends ICoreBaseEntry {
   /** The journal entry type identifier */ entry_type: IEntryEquipmentInventoryEntryType;
   /** The collection of equipment for the vessel */ equipment: IEquipmentEquipment[];
@@ -493,6 +493,13 @@ export interface IEntryRoute extends ICoreBaseEntry {
   /** The name of the route. */ name: string;
   /** Generic route information. */ info?: string;
   /** The collection of waypoints which make the route. */ waypoints: ICoreRouteWaypoint[];
+}
+
+export type IEntryVesselRegistrationEntryType = "vessel-registration";
+/** An entry detailing the registered details of a vessel like hull number, flag state, etc. Only 1 should exist per journal */
+export interface IEntryVesselRegistration extends ICoreBaseEntry {
+  /** The journal entry type identifier */ entry_type: IEntryVesselRegistrationEntryType;
+  vessel: ICoreVessel;
 }
 
 export type IEntryZoneEnterEntryType = "zone-enter";

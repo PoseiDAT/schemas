@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://poseidat.org/schema/entry/equipment-inventory.json",
   "title": "Equipment inventory",
-  "description": "An entry detailing the equipment installed on a vessel. One 1 should exist per journal",
+  "description": "An entry detailing the equipment installed on a vessel. Only 1 should exist per journal",
   "properties": {
     "entry_type": {
       "description": "The journal entry type identifier",

@@ -64,7 +64,6 @@
   },
   "required": [
     "name",
-    "cfr",
     "hull_number",
     "flag_state"
   ],
