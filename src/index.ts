@@ -16,9 +16,10 @@ export * from './entry-device-measurement';
 export * from './entry-end-of-fishing';
 export * from './entry-equipment-inventory';
 export * from './entry-fishing-activity';
+export * from './entry-route';
+export * from './entry-vessel-registration';
 export * from './entry-zone-enter';
 export * from './entry-zone-exit';
-export * from './entry-route';
 
 // Supporting types
 //

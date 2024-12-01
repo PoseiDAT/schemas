@@ -472,7 +472,7 @@ export interface IEntryEndOfFishing extends ICoreBaseEntry {
 }
 
 export type IEntryEquipmentInventoryEntryType = "equipment-inventory";
-/** An entry detailing the equipment installed on a vessel. One 1 should exist per journal */
+/** An entry detailing the equipment installed on a vessel. Only 1 should exist per journal */
 export interface IEntryEquipmentInventory extends ICoreBaseEntry {
   /** The journal entry type identifier */ entry_type: IEntryEquipmentInventoryEntryType;
   /** The collection of equipment for the vessel */ equipment: IEquipmentEquipment[];
@@ -493,6 +493,13 @@ export interface IEntryRoute extends ICoreBaseEntry {
   /** The name of the route. */ name: string;
   /** Generic route information. */ info?: string;
   /** The collection of waypoints which make the route. */ waypoints: ICoreRouteWaypoint[];
+}
+
+export type IEntryVesselRegistrationEntryType = "vessel-registration";
+/** An entry detailing the registered details of a vessel like hull number, flag state, etc. Only 1 should exist per journal */
+export interface IEntryVesselRegistration extends ICoreBaseEntry {
+  /** The journal entry type identifier */ entry_type: IEntryVesselRegistrationEntryType;
+  vessel: ICoreVessel;
 }
 
 export type IEntryZoneEnterEntryType = "zone-enter";
