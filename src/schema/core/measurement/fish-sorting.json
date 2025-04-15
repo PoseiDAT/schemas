@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/fish-sorting.json",
+  "title": "A fish sorting detection measurement",
+  "description": "The results of a set of detection runs to sort fish by species and weight using images, video frames or other sensor data",
+  "properties": {
+    "means_of_measuring": {
+      "description": "Means of weight measuring. E.g.: camera/visual based detection (VISION).",
+      "type": "string",
+      "enum": [
+        "VISION"
+      ]
+    },
+    "regulatory_framework": {
+      "description": "The regulatory framework applicable for the fish sorting measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/fish-sorting-regulatory-framework.json"
+    },
+    "scans": {
+      "description": "The individual fish sorting scans collected during the fish sorting measurement",
+      "type": "array",
+      "items": {
+        "$ref": "https://poseidat.org/schema/core/measurement/fish-sorting-scan.json"
+      }
+    },
+    "summary": {
+      "description": "The summary of the fish sorting measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/fish-sorting-summary.json"
+    }
+  },
+  "required": [
+    "scans",
+    "summary"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

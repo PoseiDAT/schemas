@@ -53,7 +53,6 @@ describe('EquipmentInventoryEntry', () => {
     const entry = new EquipmentInventoryEntry(data);
 
     const validationErrors = entry.validate();
-    console.log(validationErrors);
     expect(validationErrors).toBeDefined();
     expect(validationErrors.length).toEqual(0);
   });

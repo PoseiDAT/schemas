@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/fish-sorting-summary.json",
+  "title": "The summary for a fish sorting measurement",
+  "description": "Contains the amount, types and estimated weights of fish sorted during a fish sorting measurement",
+  "properties": {
+    "amount": {
+      "description": "The amount of detected individual fish during the sorting measurement",
+      "type": "number"
+    },
+    "weight": {
+      "description": "The measured, estimated or calculated total weight of the fish",
+      "type": "number"
+    },
+    "average_confidence": {
+      "description": "The average of the confidence scores for the detections of the fish species and weight during the sorting measurement",
+      "type": "number"
+    },
+    "fish_species": {
+      "description": "The total amount of fish detected for a specific species",
+      "type": "array",
+      "items": {
+        "description": "The fish species and the total amount detected for that species",
+        "properties": {
+          "amount": {
+            "description": "The total amount of fish detected for the species",
+            "type": "number"
+          },
+          "weight": {
+            "description": "The total weight of fish detected for the species",
+            "type": "number"
+          },
+          "species_code": {
+            "description": "The type of the product, e.g. a type of fish. This is a 3-letter FAO fish species code",
+            "type": "string",
+            "maxLength": 3,
+            "minLength": 3,
+            "pattern": "^([A-Z]{3})$"
+          }
+        },
+        "required": [
+          "species_code"
+        ],
+        "type": "object",
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "amount",
+    "weight"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

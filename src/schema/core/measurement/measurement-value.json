@@ -43,6 +43,10 @@
     "weather": {
       "description": "A weather station measurement",
       "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
+    },
+    "fish_sorting": {
+      "description": "A weather station measurement",
+      "$ref": "https://poseidat.org/schema/core/measurement/fish-sorting.json"
     }
  },
  "oneOf": [
@@ -54,7 +58,8 @@
    { "required": [ "type", "spatial_axes" ] },
    { "required": [ "type", "subsurface" ] },
    { "required": [ "type", "speedlog" ] },
-   { "required": [ "type", "weather" ] }
+   { "required": [ "type", "weather" ] },
+   { "required": [ "type", "fish_sorting" ] }
  ],
   "type": "object",
   "additionalProperties": false

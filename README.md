@@ -229,3 +229,11 @@ if (errors.length) {
   // Handle errors
 }
 ```
+
+### Unit testing
+
+You can run the entire suite using `npm run test`.
+
+You can run an individual test suite with `npx jest test/suite-name.test.ts`
+
+If you only want to run a single test within a suite change the `test(...)` call to `test.only(...)`.

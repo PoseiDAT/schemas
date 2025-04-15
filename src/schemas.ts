@@ -22,26 +22,30 @@ import * as baseFishingGearRetrieve from './schema/core/fishing-gear-retrieve.js
 import * as baseFishingGearShot from './schema/core/fishing-gear-shot.json';
 import * as baseFishingTow from './schema/core/fishing-tow.json';
 import * as baseFishingZone from './schema/core/fishing-zone.json';
-import * as baseJournal from './schema/core/journal.json';
+import * as baseFishSortingRegulatoryFramework from './schema/core/measurement/fish-sorting-regulatory-framework.json';
+import * as baseFishSortingScan from './schema/core/measurement/fish-sorting-scan.json';
+import * as baseFishSortingSummary from './schema/core/measurement/fish-sorting-summary.json';
+import * as baseFishSorting from './schema/core/measurement/fish-sorting.json';
 import * as baseFuelConsumption from './schema/core/measurement/fuel-consumption.json';
+import * as baseJournal from './schema/core/journal.json';
 import * as baseMeasurementValue from './schema/core/measurement/measurement-value.json';
 import * as baseNumeric from './schema/core/measurement/numeric.json';
 import * as basePort from './schema/core/port.json';
 import * as basePosition from './schema/core/measurement/position.json';
-import * as baseTrawlTension from './schema/core/measurement/trawl-tension.json';
+import * as baseRouteWaypoint from './schema/core/route-waypoint.json';
 import * as baseScale from './schema/core/measurement/scale.json';
 import * as baseSpatialAxes from './schema/core/measurement/spatial-axes.json';
 import * as baseSpeedlog from './schema/core/measurement/speedlog.json';
-import * as baseWeather from './schema/core/measurement/weather.json';
 import * as baseSubsurface from './schema/core/measurement/subsurface.json';
 import * as baseSubsurfaceSample from './schema/core/measurement/subsurface-sample.json';
+import * as baseTrawlTension from './schema/core/measurement/trawl-tension.json';
 import * as baseTripEntry from './schema/core/trip-entry.json';
 import * as baseVessel from './schema/core/vessel.json';
 import * as baseVesselInspection from './schema/core/vessel-inspection.json';
 import * as baseVesselMaster from './schema/core/vessel-master.json';
 import * as baseVesselPartner from './schema/core/vessel-partner.json';
 import * as baseVesselSection from './schema/core/vessel-section.json';
-import * as baseRouteWaypoint from './schema/core/route-waypoint.json';
+import * as baseWeather from './schema/core/measurement/weather.json';
 
 // Entry schemas
 //
@@ -85,16 +89,20 @@ export const schemas = {
       equipment: baseEquipment as JSONSchema7
     },
     measurement: {
+      baseFishSortingRegulatoryFramework: baseFishSortingRegulatoryFramework as JSONSchema7,
+      fishSortingScan: baseFishSortingScan as JSONSchema7,
+      fishSortingSummary: baseFishSortingSummary as JSONSchema7,
+      fishSorting: baseFishSorting as JSONSchema7,
       fuelConsumption: baseFuelConsumption as JSONSchema7,
       measurementValue: baseMeasurementValue as JSONSchema7,
       numeric: baseNumeric as JSONSchema7,
       position: basePosition as JSONSchema7,
-      trawlTension: baseTrawlTension as JSONSchema7,
       scale: baseScale as JSONSchema7,
       spatialAxes: baseSpatialAxes as JSONSchema7,
+      speedlog: baseSpeedlog as JSONSchema7,
       subsurface: baseSubsurface as JSONSchema7,
       subsurfaceSample: baseSubsurfaceSample as JSONSchema7,
-      speedlog: baseSpeedlog as JSONSchema7,
+      trawlTension: baseTrawlTension as JSONSchema7,
       weather: baseWeather as JSONSchema7
     },
     persona: {

@@ -2,6 +2,10 @@
 
 ## Top-level Schemas
 
+*   [A fish sorting detection measurement](./fish-sorting.md "The results of a set of detection runs to sort fish by species and weight using images, video frames or other sensor data") – `https://poseidat.org/schema/core/measurement/fish-sorting.json`
+
+*   [A fish sorting scan detection measurement](./fish-sorting-scan.md "The result of a measurement scan to sort fish by species and weight using images, video frames or other sensor data") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json`
+
 *   [Address](./address.md "A street address") – `https://poseidat.org/schema/core/address.json`
 
 *   [Arrival](./arrival.md "A return to port event") – `https://poseidat.org/schema/entry/arrival.json`
@@ -104,6 +108,10 @@
 
 *   [Subsurface sample value](./subsurface-sample.md "A subsurface sample measurement") – `https://poseidat.org/schema/core/measurement/subsurface-sample.json`
 
+*   [The regulatory framework for fish sorting measurements](./fish-sorting-regulatory-framework.md "Contains information about the regulating body and guidelines for conducting fish sorting measurements") – `https://poseidat.org/schema/core/measurement/fish-sorting-regulatory-framework.json`
+
+*   [The summary for a fish sorting measurement](./fish-sorting-summary.md "Contains the amount, types and estimated weights of fish sorted during a fish sorting measurement") – `https://poseidat.org/schema/core/measurement/fish-sorting-summary.json`
+
 *   [Trawl tension](./trawl-tension.md "A combination of sensor measurements for the trawl tension") – `https://poseidat.org/schema/core/measurement/trawl-tension.json`
 
 *   [Trip entry](./trip-entry.md "The trip related details of a journal entry") – `https://poseidat.org/schema/core/trip-entry.json`
@@ -132,7 +140,25 @@
 
 ### Objects
 
+*   [Untitled object in A fish sorting scan detection measurement](./fish-sorting-scan-properties-spatial_data.md "The spatial data of the fish in the detection source") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/spatial_data`
 
+*   [Untitled object in A fish sorting scan detection measurement](./fish-sorting-scan-properties-fish.md "All the details related to the detected fish in this scan") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/fish`
+
+*   [Untitled object in A fish sorting scan detection measurement](./fish-sorting-scan-properties-validation.md "The validation details of the fish sorting detection") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/validation`
+
+*   [Untitled object in A fish sorting scan detection measurement](./fish-sorting-scan-properties-spatial_data.md "The spatial data of the fish in the detection source") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/spatial_data`
+
+*   [Untitled object in A fish sorting scan detection measurement](./fish-sorting-scan-properties-fish.md "All the details related to the detected fish in this scan") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/fish`
+
+*   [Untitled object in A fish sorting scan detection measurement](./fish-sorting-scan-properties-validation.md "The validation details of the fish sorting detection") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/validation`
+
+*   [Untitled object in The regulatory framework for fish sorting measurements](./fish-sorting-regulatory-framework-properties-minimum_landing_sizes-items.md "The fish species and its minimum landing size") – `https://poseidat.org/schema/core/measurement/fish-sorting-regulatory-framework.json#/properties/minimum_landing_sizes/items`
+
+*   [Untitled object in The regulatory framework for fish sorting measurements](./fish-sorting-regulatory-framework-properties-minimum_landing_sizes-items.md "The fish species and its minimum landing size") – `https://poseidat.org/schema/core/measurement/fish-sorting-regulatory-framework.json#/properties/minimum_landing_sizes/items`
+
+*   [Untitled object in The summary for a fish sorting measurement](./fish-sorting-summary-properties-fish_species-items.md "The fish species and the total amount detected for that species") – `https://poseidat.org/schema/core/measurement/fish-sorting-summary.json#/properties/fish_species/items`
+
+*   [Untitled object in The summary for a fish sorting measurement](./fish-sorting-summary-properties-fish_species-items.md "The fish species and the total amount detected for that species") – `https://poseidat.org/schema/core/measurement/fish-sorting-summary.json#/properties/fish_species/items`
 
 ### Arrays
 
@@ -178,9 +204,33 @@
 
 *   [Trans zonal fishing areas](./zone-exit-properties-trans-zonal-fishing-areas.md "The zones involved in trans-zonal fishing") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
 
+*   [Untitled array in A fish sorting detection measurement](./fish-sorting-properties-scans.md "The individual fish sorting scans collected during the fish sorting measurement") – `https://poseidat.org/schema/core/measurement/fish-sorting.json#/properties/scans`
+
+*   [Untitled array in A fish sorting detection measurement](./fish-sorting-properties-scans.md "The individual fish sorting scans collected during the fish sorting measurement") – `https://poseidat.org/schema/core/measurement/fish-sorting.json#/properties/scans`
+
+*   [Untitled array in A fish sorting scan detection measurement](./fish-sorting-scan-properties-spatial_data-properties-bounding_box.md "The bounding box of the fish in the image") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/spatial_data/properties/bounding_box`
+
+*   [Untitled array in A fish sorting scan detection measurement](./fish-sorting-scan-properties-spatial_data-properties-polygons.md "The polygons of the fish in the image") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/spatial_data/properties/polygons`
+
+*   [Untitled array in A fish sorting scan detection measurement](./fish-sorting-scan-properties-spatial_data-properties-polygons-items.md "The detected polygon of the fish in the detection source") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/spatial_data/properties/polygons/items`
+
+*   [Untitled array in A fish sorting scan detection measurement](./fish-sorting-scan-properties-spatial_data-properties-bounding_box.md "The bounding box of the fish in the image") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/spatial_data/properties/bounding_box`
+
+*   [Untitled array in A fish sorting scan detection measurement](./fish-sorting-scan-properties-spatial_data-properties-polygons.md "The polygons of the fish in the image") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/spatial_data/properties/polygons`
+
+*   [Untitled array in A fish sorting scan detection measurement](./fish-sorting-scan-properties-spatial_data-properties-polygons-items.md "The detected polygon of the fish in the detection source") – `https://poseidat.org/schema/core/measurement/fish-sorting-scan.json#/properties/spatial_data/properties/polygons/items`
+
 *   [Untitled array in Fishing catch processed](./fishing-catch-processed-properties-package_labels.md "An array of strings with the package labels for each package") – `https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels`
 
 *   [Untitled array in Fishing catch processed](./fishing-catch-processed-properties-package_labels.md "An array of strings with the package labels for each package") – `https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels`
+
+*   [Untitled array in The regulatory framework for fish sorting measurements](./fish-sorting-regulatory-framework-properties-minimum_landing_sizes.md "The minimum landing sizes for different fish species") – `https://poseidat.org/schema/core/measurement/fish-sorting-regulatory-framework.json#/properties/minimum_landing_sizes`
+
+*   [Untitled array in The regulatory framework for fish sorting measurements](./fish-sorting-regulatory-framework-properties-minimum_landing_sizes.md "The minimum landing sizes for different fish species") – `https://poseidat.org/schema/core/measurement/fish-sorting-regulatory-framework.json#/properties/minimum_landing_sizes`
+
+*   [Untitled array in The summary for a fish sorting measurement](./fish-sorting-summary-properties-fish_species.md "The total amount of fish detected for a specific species") – `https://poseidat.org/schema/core/measurement/fish-sorting-summary.json#/properties/fish_species`
+
+*   [Untitled array in The summary for a fish sorting measurement](./fish-sorting-summary-properties-fish_species.md "The total amount of fish detected for a specific species") – `https://poseidat.org/schema/core/measurement/fish-sorting-summary.json#/properties/fish_species`
 
 *   [Waypoints](./fishing-tow-properties-waypoints.md "The collection of geographical locations logged during the tow") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/waypoints`
 

@@ -40,7 +40,6 @@ describe('VesselRegistrationEntry', () => {
     const entry = new VesselRegistrationEntry(data);
 
     const validationErrors = entry.validate();
-    console.log(validationErrors);
     expect(validationErrors).toBeDefined();
     expect(validationErrors.length).toEqual(0);
   });

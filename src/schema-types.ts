@@ -263,6 +263,43 @@ export interface IEquipmentEquipment {
   /** The collection of devices of which this equipment is composed */ devices: IEquipmentDevice[];
 }
 
+/** Contains information about the regulating body and guidelines for conducting fish sorting measurements */
+export interface IMeasurementFishSortingRegulatoryFramework {
+  /** The jurisdiction under which the fish sorting measurement is conducted, e.g. EU, US, etc. */ jurisdiction: string;
+  /** The specific regulation or guideline reference that applies to the fish sorting measurement (eg. EU Reg 2019/1241) */ regulation_reference?: string;
+  /** The minimum landing sizes for different fish species */ minimum_landing_sizes?: any[];
+}
+
+export type IMeasurementFishSortingScanOcclusionType = "fully_visible" | "partially_visible" | "immeasurable";
+/** The result of a measurement scan to sort fish by species and weight using images, video frames or other sensor data */
+export interface IMeasurementFishSortingScan {
+  /** The unique identifier for the fish sorting scan */ identifier: string;
+  /** The date and time the fish sorting scan started in UTC in RFC3339 format */ start_datetime: string;
+  /** The date and time the fish sorting scan ended in UTC in RFC3339 format */ end_datetime?: string;
+  /** The spatial data of the fish in the detection source */ spatial_data: any;
+  /** Indicates the fish is below the minimum measurement size */ below_minimum_size?: boolean;
+  /** The detected occlusion type of the fish in the image */ occlusion_type?: IMeasurementFishSortingScanOcclusionType;
+  /** All the details related to the detected fish in this scan */ fish: any;
+  /** The validation details of the fish sorting detection */ validation?: any;
+}
+
+/** Contains the amount, types and estimated weights of fish sorted during a fish sorting measurement */
+export interface IMeasurementFishSortingSummary {
+  /** The amount of detected individual fish during the sorting measurement */ amount: number;
+  /** The measured, estimated or calculated total weight of the fish */ weight: number;
+  /** The average of the confidence scores for the detections of the fish species and weight during the sorting measurement */ average_confidence?: number;
+  /** The total amount of fish detected for a specific species */ fish_species?: any[];
+}
+
+export type IMeasurementFishSortingMeansOfMeasuring = "VISION";
+/** The results of a set of detection runs to sort fish by species and weight using images, video frames or other sensor data */
+export interface IMeasurementFishSorting {
+  /** Means of weight measuring. E.g.: camera/visual based detection (VISION). */ means_of_measuring?: IMeasurementFishSortingMeansOfMeasuring;
+  /** The regulatory framework applicable for the fish sorting measurement */ regulatory_framework?: IMeasurementFishSortingRegulatoryFramework;
+  /** The individual fish sorting scans collected during the fish sorting measurement */ scans: IMeasurementFishSortingScan[];
+  /** The summary of the fish sorting measurement */ summary: IMeasurementFishSortingSummary;
+}
+
 /** Fuel consumption of a certain engine. */
 export interface IMeasurementFuelConsumption {
   /** The current fuel consumption in liters per hour */ current_consumption: number;
@@ -284,6 +321,7 @@ export interface IMeasurementMeasurementValue {
   /** A subsurface measurement */ subsurface?: IMeasurementSubsurface;
   /** A speedlog measurement */ speedlog?: IMeasurementSpeedlog;
   /** A weather station measurement */ weather?: IMeasurementWeather;
+  /** A weather station measurement */ fish_sorting?: IMeasurementFishSorting;
 }
 
 /** A number representing a measurement from a sensor */
@@ -418,7 +456,7 @@ export type IEnumGnssFixQuality = "INVALID" | "GPS_FIX" | "DGPS_FIX";
 
 export type IEnumGnssFixType = "NOT_AVAILABLE" | "2D_FIX" | "3D_FIX";
 
-export type IEnumMeasurementType = "ACCELERATION" | "ANGULAR_VELOCITY" | "CURRENT" | "DEPTH" | "ENERGY_CONSUMPTION" | "FORCE" | "FUEL_CONSUMPTION" | "HUMIDITY" | "MAGNETISM" | "ONOFF" | "POSITION" | "POWER" | "PRESSURE" | "ROUTE" | "RPM" | "SCALE" | "SPATIAL_AXES" | "SPEED" | "SUBSURFACE" | "TEMPERATURE" | "TRAWL_TENSION" | "VOLTAGE" | "SPEEDLOG" | "WEATHER";
+export type IEnumMeasurementType = "ACCELERATION" | "ANGULAR_VELOCITY" | "CURRENT" | "DEPTH" | "ENERGY_CONSUMPTION" | "FISH_SORTING" | "FORCE" | "FUEL_CONSUMPTION" | "HUMIDITY" | "MAGNETISM" | "ONOFF" | "POSITION" | "POWER" | "PRESSURE" | "ROUTE" | "RPM" | "SCALE" | "SPATIAL_AXES" | "SPEED" | "SPEEDLOG" | "SUBSURFACE" | "TEMPERATURE" | "TRAWL_TENSION" | "VOLTAGE" | "WEATHER";
 
 export type IEnumReasonArrival = "ECY" | "GRD" | "LAN" | "OTH" | "REF" | "REP" | "RES" | "SCR" | "SHE" | "TRA";
 

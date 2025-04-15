@@ -25,6 +25,7 @@ The measurement types
 | `"CURRENT"`            |             |
 | `"DEPTH"`              |             |
 | `"ENERGY_CONSUMPTION"` |             |
+| `"FISH_SORTING"`       |             |
 | `"FORCE"`              |             |
 | `"FUEL_CONSUMPTION"`   |             |
 | `"HUMIDITY"`           |             |
@@ -38,9 +39,9 @@ The measurement types
 | `"SCALE"`              |             |
 | `"SPATIAL_AXES"`       |             |
 | `"SPEED"`              |             |
+| `"SPEEDLOG"`           |             |
 | `"SUBSURFACE"`         |             |
 | `"TEMPERATURE"`        |             |
 | `"TRAWL_TENSION"`      |             |
 | `"VOLTAGE"`            |             |
-| `"SPEEDLOG"`           |             |
 | `"WEATHER"`            |             |

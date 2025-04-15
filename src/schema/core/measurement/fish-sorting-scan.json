@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/fish-sorting-scan.json",
+  "title": "A fish sorting scan detection measurement",
+  "description": "The result of a measurement scan to sort fish by species and weight using images, video frames or other sensor data",
+  "properties": {
+    "identifier": {
+      "description": "The unique identifier for the fish sorting scan",
+      "type": "string"
+    },
+    "start_datetime": {
+      "description": "The date and time the fish sorting scan started in UTC in RFC3339 format",
+      "type": "string",
+      "format": "date-time"
+    },
+    "end_datetime": {
+      "description": "The date and time the fish sorting scan ended in UTC in RFC3339 format",
+      "type": "string",
+      "format": "date-time"
+    },
+    "spatial_data": {
+      "type": "object",
+      "description": "The spatial data of the fish in the detection source",
+      "properties": {
+        "bounding_box": {
+          "description": "The bounding box of the fish in the image",
+          "type": "array",
+          "items": {
+            "description": "The detected bounding box of the fish in the detection source",
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "polygons": {
+          "description": "The polygons of the fish in the image",
+          "type": "array",
+          "items": {
+            "description": "The detected polygon of the fish in the detection source",
+            "type": "array",
+            "items": {
+              "description": "The detected polygon point of the fish in the detection source",
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "below_minimum_size": {
+      "description": "Indicates the fish is below the minimum measurement size",
+      "type": "boolean",
+      "default": false
+    },
+    "occlusion_type": {
+      "description": "The detected occlusion type of the fish in the image",
+      "type": "string",
+      "enum": [
+        "fully_visible",
+        "partially_visible",
+        "immeasurable"
+      ]
+    },
+    "fish": {
+      "description": "All the details related to the detected fish in this scan",
+      "type": "object",
+      "properties": {
+        "condition_score": {
+          "description": "The condition score of the fish on a scale from 1 to 10",
+          "type": "number",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "estimated_age": {
+          "description": "The estimated age of the fish in years",
+          "type": "number"
+        },
+        "length": {
+          "description": "The detected length of the fish in meters",
+          "type": "number"
+        },
+        "species_code": {
+          "description": "The type of fish species. This is a 3-letter FAO fish species code",
+          "type": "string",
+          "maxLength": 3,
+          "minLength": 3,
+          "pattern": "^([A-Z]{3})$"
+        },
+        "species_confidence": {
+          "description": "The confidence score for the detection of the fish species and weight in the image",
+          "type": "number"
+        },
+        "sex": {
+          "description": "The detected sex of the fish",
+          "type": "string",
+          "enum": [
+            "male",
+            "female",
+            "unknown"
+          ]
+        },
+        "weight": {
+          "description": "The measured, estimated or calculated weight of the fish",
+          "type": "number"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "species_code",
+        "species_confidence"
+      ]
+    },
+    "validation": {
+      "description": "The validation details of the fish sorting detection",
+      "type": "object",
+      "properties": {
+        "actor": {
+          "description": "The actor performing the validation, e.g. machine or human",
+          "type": "string",
+          "enum": [
+            "machine",
+            "human"
+          ]
+        },
+        "status": {
+          "description": "The validation status of the fish sorting detection",
+          "type": "string",
+          "enum": [
+            "pending",
+            "human_verified",
+            "rejected"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "actor",
+        "status"
+      ]
+    }
+  },
+  "required": [
+    "identifier",
+    "start_datetime",
+    "spatial_data",
+    "fish"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

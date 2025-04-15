@@ -34,20 +34,23 @@ one (and only one) of
 
 *   [Untitled undefined type in Measurement value](measurement-value-oneof-8.md "check type definition")
 
+*   [Untitled undefined type in Measurement value](measurement-value-oneof-9.md "check type definition")
+
 # value Properties
 
-| Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                              |
-| :------------------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [type](#type)                         | `string` | Optional | cannot be null | [Measurement value](measurement-value-properties-measurement-type.md "https://poseidat.org/schema/enum/measurement-type.json#/properties/type")                         |
-| [position](#position)                 | `object` | Optional | cannot be null | [Measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")                                |
-| [numeric](#numeric)                   | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")                            |
-| [trawl_tension](#trawl_tension)       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-trawl-tension.md "https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension")          |
-| [scale](#scale)                       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-scale.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/scale")                                  |
-| [fuel_consumption](#fuel_consumption) | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-fuel-consumption.md "https://poseidat.org/schema/core/measurement/fuel-consumption.json#/properties/fuel_consumption") |
-| [spatial_axes](#spatial_axes)         | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-spatial-axes.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/spatial_axes")             |
-| [subsurface](#subsurface)             | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-subsurface-measurements.md "https://poseidat.org/schema/core/measurement/subsurface.json#/properties/subsurface")      |
-| [speedlog](#speedlog)                 | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-speedlog.md "https://poseidat.org/schema/core/measurement/speedlog.json#/properties/speedlog")                         |
-| [weather](#weather)                   | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-weather.md "https://poseidat.org/schema/core/measurement/weather.json#/properties/weather")                            |
+| Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                          |
+| :------------------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [type](#type)                         | `string` | Optional | cannot be null | [Measurement value](measurement-value-properties-measurement-type.md "https://poseidat.org/schema/enum/measurement-type.json#/properties/type")                                     |
+| [position](#position)                 | `object` | Optional | cannot be null | [Measurement value](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/position")                                            |
+| [numeric](#numeric)                   | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-numeric.md "https://poseidat.org/schema/core/measurement/numeric.json#/properties/numeric")                                        |
+| [trawl_tension](#trawl_tension)       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-trawl-tension.md "https://poseidat.org/schema/core/measurement/trawl-tension.json#/properties/trawl_tension")                      |
+| [scale](#scale)                       | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-scale.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/scale")                                              |
+| [fuel_consumption](#fuel_consumption) | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-fuel-consumption.md "https://poseidat.org/schema/core/measurement/fuel-consumption.json#/properties/fuel_consumption")             |
+| [spatial_axes](#spatial_axes)         | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-spatial-axes.md "https://poseidat.org/schema/core/measurement/spatial-axes.json#/properties/spatial_axes")                         |
+| [subsurface](#subsurface)             | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-subsurface-measurements.md "https://poseidat.org/schema/core/measurement/subsurface.json#/properties/subsurface")                  |
+| [speedlog](#speedlog)                 | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-speedlog.md "https://poseidat.org/schema/core/measurement/speedlog.json#/properties/speedlog")                                     |
+| [weather](#weather)                   | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-weather.md "https://poseidat.org/schema/core/measurement/weather.json#/properties/weather")                                        |
+| [fish_sorting](#fish_sorting)         | `object` | Optional | cannot be null | [Measurement value](measurement-value-properties-a-fish-sorting-detection-measurement.md "https://poseidat.org/schema/core/measurement/fish-sorting.json#/properties/fish_sorting") |
 
 ## type
 
@@ -78,6 +81,7 @@ The measurement types
 | `"CURRENT"`            |             |
 | `"DEPTH"`              |             |
 | `"ENERGY_CONSUMPTION"` |             |
+| `"FISH_SORTING"`       |             |
 | `"FORCE"`              |             |
 | `"FUEL_CONSUMPTION"`   |             |
 | `"HUMIDITY"`           |             |
@@ -91,11 +95,11 @@ The measurement types
 | `"SCALE"`              |             |
 | `"SPATIAL_AXES"`       |             |
 | `"SPEED"`              |             |
+| `"SPEEDLOG"`           |             |
 | `"SUBSURFACE"`         |             |
 | `"TEMPERATURE"`        |             |
 | `"TRAWL_TENSION"`      |             |
 | `"VOLTAGE"`            |             |
-| `"SPEEDLOG"`           |             |
 | `"WEATHER"`            |             |
 
 ## position
@@ -259,3 +263,21 @@ A combination of all posible weather station measurements
 ### weather Type
 
 `object` ([Weather](measurement-value-properties-weather.md))
+
+## fish_sorting
+
+The results of a set of detection runs to sort fish by species and weight using images, video frames or other sensor data
+
+`fish_sorting`
+
+*   is optional
+
+*   Type: `object` ([A fish sorting detection measurement](measurement-value-properties-a-fish-sorting-detection-measurement.md))
+
+*   cannot be null
+
+*   defined in: [Measurement value](measurement-value-properties-a-fish-sorting-detection-measurement.md "https://poseidat.org/schema/core/measurement/fish-sorting.json#/properties/fish_sorting")
+
+### fish_sorting Type
+
+`object` ([A fish sorting detection measurement](measurement-value-properties-a-fish-sorting-detection-measurement.md))

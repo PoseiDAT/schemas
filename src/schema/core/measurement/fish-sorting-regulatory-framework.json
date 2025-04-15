@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/fish-sorting-regulatory-framework.json",
+  "title": "The regulatory framework for fish sorting measurements",
+  "description": "Contains information about the regulating body and guidelines for conducting fish sorting measurements",
+  "properties": {
+    "jurisdiction": {
+      "description": "The jurisdiction under which the fish sorting measurement is conducted, e.g. EU, US, etc.",
+      "type": "string",
+      "maxLength": 2,
+      "minLength": 2,
+      "pattern": "^([A-Z]{2})$"
+    },
+    "regulation_reference": {
+      "description": "The specific regulation or guideline reference that applies to the fish sorting measurement (eg. EU Reg 2019/1241)",
+      "type": "string"
+    },
+    "minimum_landing_sizes": {
+      "description": "The minimum landing sizes for different fish species",
+      "type": "array",
+      "items": {
+        "description": "The fish species and its minimum landing size",
+        "properties": {
+          "size": {
+            "description": "The minimum landing size for the species in meters",
+            "type": "number"
+          },
+          "fish_species": {
+            "description": "The type of the product, e.g. a type of fish. This is a 3-letter FAO fish species code",
+            "type": "string",
+            "maxLength": 3,
+            "minLength": 3,
+            "pattern": "^([A-Z]{3})$"
+          }
+        },
+        "required": [
+          "fish_species",
+          "size"
+        ],
+        "type": "object",
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "jurisdiction"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}
