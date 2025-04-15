@@ -7,11 +7,32 @@ describe('DeviceMeasurementEntry (SCALE)', () => {
   test('Validating a DeviceMeasurementEntry of type SCALE should succeed', () => {
 
     const scaleData: IMeasurementScale = {
-      haul_number: 1,
-      haul_date_start: '2025-04-15T15:00:00Z',
-      haul_date_end: '2025-04-15T15:00:00Z',
+      tow: {
+        activity_date_start: '2025-04-15T15:00:00Z',
+        activity_date_end: '2025-04-15T15:00:00Z',
+        sequence_number: 1,
+        reference: 'HAUL_REF_001',
+        location_start: {
+          latitude: 54.1234,
+          longitude: 3.1234,
+        },
+        zone: {
+          economical_zone: 'NLD',
+          fao_area: '27.4.c',
+          fao_subarea: '4',
+          fao_division: 'c',
+          ices_rectangle: '35F6',
+          effort_zone: 'A',
+          regional_body: 'NEAFC'
+        },
+        fishing_gear: {
+          code: 'DRB',
+          mesh_size: 80,
+        },
+      },
       category: 'FISH',
       product: 'COD',
+      product_description: 'Unsorted cod bits',
       processed: {
         fish_presentation: 'WHL',
         fish_state: 'FRO',

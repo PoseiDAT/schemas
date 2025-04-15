@@ -4,7 +4,7 @@
 https://poseidat.org/schema/core/fishing-tow.json
 ```
 
-Fishing tow details
+Fishing tow (or haul) details
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                               |
 | :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------- |
@@ -27,6 +27,8 @@ Fishing tow details
 | [fishing_gear](#fishing_gear)               | `object` | Optional | cannot be null | [Fishing tow](departure-properties-gear-on-board-fishing-gear.md "https://poseidat.org/schema/core/fishing-gear.json#/properties/fishing_gear")              |
 | [gear_deployment](#gear_deployment)         | `object` | Optional | cannot be null | [Fishing tow](fishing-tow-properties-fishing-gear-deployment.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_deployment") |
 | [catches](#catches)                         | `array`  | Optional | cannot be null | [Fishing tow](fishing-tow-properties-caught-fish.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/catches")                                 |
+| [sequence_number](#sequence_number)         | `number` | Optional | cannot be null | [Fishing tow](fishing-tow-properties-sequence_number.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/sequence_number")                     |
+| [reference](#reference)                     | `string` | Optional | cannot be null | [Fishing tow](fishing-tow-properties-reference.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/reference")                                 |
 
 ## activity_date_start
 
@@ -197,3 +199,39 @@ The fish caught in this tow
 ### catches Type
 
 `object[]` ([Fishing catch](arrival-properties-catch-on-board-fishing-catch.md))
+
+## sequence_number
+
+The sequence number of the tow
+
+`sequence_number`
+
+*   is optional
+
+*   Type: `number`
+
+*   cannot be null
+
+*   defined in: [Fishing tow](fishing-tow-properties-sequence_number.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/sequence_number")
+
+### sequence_number Type
+
+`number`
+
+## reference
+
+A reference identifier for the tow which can be a source record number or similar. This is a free form text value whose purpose and format is dictated by the data source.
+
+`reference`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Fishing tow](fishing-tow-properties-reference.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/reference")
+
+### reference Type
+
+`string`

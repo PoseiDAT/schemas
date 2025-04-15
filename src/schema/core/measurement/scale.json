@@ -4,19 +4,9 @@
   "title": "Scale",
   "description": "A scale measurement that can be used in an entry",
   "properties": {
-    "haul_date_start": {
-      "description": "The datetime the haul started in UTC",
-      "type": "string",
-      "format": "date-time"
-    },
-    "haul_date_end": {
-      "description": "The datetime the haul ended in UTC",
-      "type": "string",
-      "format": "date-time"
-    },
-    "haul_number": {
-      "description": "The number of the haul the product was caught in",
-      "type": "number"
+    "tow": {
+      "description": "The fishing tow (or haul) details",
+      "$ref": "https://poseidat.org/schema/core/fishing-tow.json"
     },
     "weight": {
       "description": "The weight of the product",
@@ -33,13 +23,16 @@
       "minLength": 3,
       "pattern": "^([A-Z]{3})$"
     },
+    "product_description": {
+      "description": "A description of the products appearance, sorting, quality or other grading information that is could be of importance. This is a free form text value whose purpose and format is dictated by the data source.",
+      "type": "string"
+    },
     "processed": {
       "description": "Details of caught fish after it has been processed",
       "$ref": "https://poseidat.org/schema/core/fishing-catch-processed.json"
     }
   },
   "required": [
-    "haul_number",
     "weight",
     "category",
     "product"

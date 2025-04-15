@@ -24,7 +24,7 @@ all of
 | :------------------------ | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | [entry_type](#entry_type) | `string` | Required | cannot be null | [Fishing activity](fishing-activity-properties-entry_type.md "https://poseidat.org/schema/entry/fishing-activity.json#/properties/entry_type") |
 | [trip](#trip)             | `object` | Required | cannot be null | [Fishing activity](arrival-properties-trip-entry.md "https://poseidat.org/schema/core/trip-entry.json#/properties/trip")                       |
-| [tow](#tow)               | `object` | Required | cannot be null | [Fishing activity](fishing-activity-properties-fishing-tow.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/tow")             |
+| [tow](#tow)               | `object` | Required | cannot be null | [Fishing activity](scale-properties-fishing-tow.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/tow")                        |
 | Additional Properties     | Any      | Optional | can be null    |                                                                                                                                                |
 
 ## entry_type
@@ -81,21 +81,21 @@ The trip related details of a journal entry
 
 ## tow
 
-Fishing tow details
+Fishing tow (or haul) details
 
 `tow`
 
 *   is required
 
-*   Type: `object` ([Fishing tow](fishing-activity-properties-fishing-tow.md))
+*   Type: `object` ([Fishing tow](scale-properties-fishing-tow.md))
 
 *   cannot be null
 
-*   defined in: [Fishing activity](fishing-activity-properties-fishing-tow.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/tow")
+*   defined in: [Fishing activity](scale-properties-fishing-tow.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/tow")
 
 ### tow Type
 
-`object` ([Fishing tow](fishing-activity-properties-fishing-tow.md))
+`object` ([Fishing tow](scale-properties-fishing-tow.md))
 
 ## Additional Properties
 

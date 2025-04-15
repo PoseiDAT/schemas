@@ -108,13 +108,13 @@ export interface ICoreFishingGearShot {
 
 /** Fishing gear details */
 export interface ICoreFishingGear {
-  /** Gear code corresponding to the FAO’s International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE */ code: IEnumFishingGearType;
+  /** Gear code corresponding to the FAO's International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE */ code: IEnumFishingGearType;
   /** The fishing gear mesh size measured in millimeters. NLD: ME, GBR: ME */ mesh_size?: number;
   /** The number of fishing gear items. NLD: NN, GBR: GBRGNL */ amount?: number;
   /** The total length of the fishing gear in meters. NLD: TL, GBR: GBRGNT */ length?: number;
 }
 
-/** Fishing tow details */
+/** Fishing tow (or haul) details */
 export interface ICoreFishingTow {
   /** The datetime the tow started in UTC */ activity_date_start: string;
   /** The datetime the tow ended in UTC */ activity_date_end?: string;
@@ -125,6 +125,8 @@ export interface ICoreFishingTow {
   /** The fishing gear used for this tow */ fishing_gear?: ICoreFishingGear;
   /** The details of how the gear was used for the tow */ gear_deployment?: ICoreFishingGearDeployment;
   /** The fish caught in this tow */ catches?: ICoreFishingCatch[];
+  /** The sequence number of the tow */ sequence_number?: number;
+  /** A reference identifier for the tow which can be a source record number or similar. This is a free form text value whose purpose and format is dictated by the data source. */ reference?: string;
 }
 
 /** Geographical zone for fishing activities */
@@ -309,12 +311,11 @@ export interface IMeasurementPosition {
 
 /** A scale measurement that can be used in an entry */
 export interface IMeasurementScale {
-  /** The datetime the haul started in UTC */ haul_date_start?: string;
-  /** The datetime the haul ended in UTC */ haul_date_end?: string;
-  /** The number of the haul the product was caught in */ haul_number: number;
+  /** The fishing tow (or haul) details */ tow?: ICoreFishingTow;
   /** The weight of the product */ weight: number;
   /** The category of the scaled product */ category: IEnumScaleCategory;
   /** The type of the product, e.g. a type of fish */ product: string;
+  /** A description of the products appearance, sorting, quality or other grading information that is could be of importance. This is a free form text value whose purpose and format is dictated by the data source. */ product_description?: string;
   /** Details of caught fish after it has been processed */ processed?: ICoreFishingCatchProcessed;
 }
 
