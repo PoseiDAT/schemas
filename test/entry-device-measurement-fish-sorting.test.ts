@@ -94,8 +94,6 @@ describe('DeviceMeasurementEntry (FISH_SORTING)', () => {
 
     const entry = new DeviceMeasurementEntry(data);
 
-    console.log(JSON.stringify(entry.data, null, 2));
-
     const validationErrors = entry.validate();
     expect(validationErrors).toBeDefined();
     expect(validationErrors.length).toEqual(0);
