@@ -4,9 +4,10 @@
   "title": "Scale",
   "description": "A scale measurement that can be used in an entry",
   "properties": {
-    "tow": {
-      "description": "The fishing tow (or haul) details",
-      "$ref": "https://poseidat.org/schema/core/fishing-tow.json"
+    "tow_entry_id": {
+      "description": "The journal entry identifier of the fishing tow (or haul) associated with this scale measurement",
+      "type": "string",
+      "format": "uuid"
     },
     "weight": {
       "description": "The weight of the product",

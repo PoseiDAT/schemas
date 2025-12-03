@@ -166,15 +166,7 @@ describe('DeviceMeasurementEntry', () => {
       value: {
         type: "SCALE",
         scale: {
-          tow: {
-            activity_date_start: "2020-01-01T00:00:00Z",
-            zone: {
-              fao_area: "27",
-              fao_subarea: "4",
-              fao_division: "C"
-            },
-            sequence_number: 1,
-          },
+          tow_entry_id: v4(),
           weight: 1.1,
           category: "FISH",
           product: "ANF"
@@ -198,15 +190,7 @@ describe('DeviceMeasurementEntry', () => {
       value: {
         type: "SCALE",
         scale: {
-          tow: {
-            activity_date_start: "2020-01-01T00:00:00Z",
-            zone: {
-              fao_area: "27",
-              fao_subarea: "4",
-              fao_division: "C"
-            },
-            sequence_number: 1,
-          },
+          tow_entry_id: v4(),
           weight: 1.1,
           category: "FISH",
           product: "AAA"

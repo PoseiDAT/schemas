@@ -18,30 +18,34 @@ A scale measurement that can be used in an entry
 
 | Property                                    | Type     | Required | Nullable       | Defined by                                                                                                                                         |
 | :------------------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [tow](#tow)                                 | `object` | Optional | cannot be null | [Scale](scale-properties-fishing-tow.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/tow")                                       |
+| [tow_entry_id](#tow_entry_id)               | `string` | Optional | cannot be null | [Scale](scale-properties-tow_entry_id.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/tow_entry_id")                       |
 | [weight](#weight)                           | `number` | Required | cannot be null | [Scale](scale-properties-weight.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/weight")                                   |
 | [category](#category)                       | `string` | Required | cannot be null | [Scale](scale-properties-scale-category.md "https://poseidat.org/schema/enum/scale-category.json#/properties/category")                            |
 | [product](#product)                         | `string` | Required | cannot be null | [Scale](scale-properties-product.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/product")                                 |
 | [product_description](#product_description) | `string` | Optional | cannot be null | [Scale](scale-properties-product_description.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/product_description")         |
 | [processed](#processed)                     | `object` | Optional | cannot be null | [Scale](fishing-catch-properties-fishing-catch-processed.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/processed") |
 
-## tow
+## tow_entry_id
 
-Fishing tow (or haul) details
+The journal entry identifier of the fishing tow (or haul) associated with this scale measurement
 
-`tow`
+`tow_entry_id`
 
 *   is optional
 
-*   Type: `object` ([Fishing tow](scale-properties-fishing-tow.md))
+*   Type: `string`
 
 *   cannot be null
 
-*   defined in: [Scale](scale-properties-fishing-tow.md "https://poseidat.org/schema/core/fishing-tow.json#/properties/tow")
+*   defined in: [Scale](scale-properties-tow_entry_id.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/tow_entry_id")
 
-### tow Type
+### tow_entry_id Type
 
-`object` ([Fishing tow](scale-properties-fishing-tow.md))
+`string`
+
+### tow_entry_id Constraints
+
+**UUID**: the string must be a UUID, according to [RFC 4122](https://tools.ietf.org/html/rfc4122 "check the specification")
 
 ## weight
 

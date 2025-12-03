@@ -311,7 +311,7 @@ export interface IMeasurementPosition {
 
 /** A scale measurement that can be used in an entry */
 export interface IMeasurementScale {
-  /** The fishing tow (or haul) details */ tow?: ICoreFishingTow;
+  /** The journal entry identifier of the fishing tow (or haul) associated with this scale measurement */ tow_entry_id?: string;
   /** The weight of the product */ weight: number;
   /** The category of the scaled product */ category: IEnumScaleCategory;
   /** The type of the product, e.g. a type of fish */ product: string;
