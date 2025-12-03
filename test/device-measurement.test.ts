@@ -166,7 +166,7 @@ describe('DeviceMeasurementEntry', () => {
       value: {
         type: "SCALE",
         scale: {
-          haul_number: 1,
+          tow_entry_id: v4(),
           weight: 1.1,
           category: "FISH",
           product: "ANF"
@@ -190,7 +190,7 @@ describe('DeviceMeasurementEntry', () => {
       value: {
         type: "SCALE",
         scale: {
-          haul_number: 1,
+          tow_entry_id: v4(),
           weight: 1.1,
           category: "FISH",
           product: "AAA"

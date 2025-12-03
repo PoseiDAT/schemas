@@ -34,7 +34,15 @@ describe('ZoneEnterEntry', () => {
           latitude: 1,
           longitude: 2
         },
-        zone: {}
+        zone: {
+          economical_zone: 'NLD',
+          fao_area: '27.4.c',
+          fao_subarea: '4',
+          fao_division: 'c',
+          ices_rectangle: '35F6',
+          effort_zone: 'A',
+          regional_body: 'NEAFC'
+        }
     };
 
     const entry = new ZoneEnterEntry(data);

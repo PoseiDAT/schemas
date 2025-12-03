@@ -7,11 +7,10 @@ describe('DeviceMeasurementEntry (SCALE)', () => {
   test('Validating a DeviceMeasurementEntry of type SCALE should succeed', () => {
 
     const scaleData: IMeasurementScale = {
-      haul_number: 1,
-      haul_date_start: '2025-04-15T15:00:00Z',
-      haul_date_end: '2025-04-15T15:00:00Z',
+      tow_entry_id: v4(),
       category: 'FISH',
       product: 'COD',
+      product_description: 'Unsorted cod bits',
       processed: {
         fish_presentation: 'WHL',
         fish_state: 'FRO',

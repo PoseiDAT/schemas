@@ -16,43 +16,20 @@ A scale measurement that can be used in an entry
 
 # scale Properties
 
-| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                         |
-| :---------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [haul_date_start](#haul_date_start) | `string` | Optional | cannot be null | [Scale](scale-properties-haul_date_start.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/haul_date_start")                 |
-| [haul_date_end](#haul_date_end)     | `string` | Optional | cannot be null | [Scale](scale-properties-haul_date_end.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/haul_date_end")                     |
-| [haul_number](#haul_number)         | `number` | Required | cannot be null | [Scale](scale-properties-haul_number.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/haul_number")                         |
-| [weight](#weight)                   | `number` | Required | cannot be null | [Scale](scale-properties-weight.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/weight")                                   |
-| [category](#category)               | `string` | Required | cannot be null | [Scale](scale-properties-scale-category.md "https://poseidat.org/schema/enum/scale-category.json#/properties/category")                            |
-| [product](#product)                 | `string` | Required | cannot be null | [Scale](scale-properties-product.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/product")                                 |
-| [processed](#processed)             | `object` | Optional | cannot be null | [Scale](fishing-catch-properties-fishing-catch-processed.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/processed") |
+| Property                                    | Type     | Required | Nullable       | Defined by                                                                                                                                         |
+| :------------------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [tow_entry_id](#tow_entry_id)               | `string` | Optional | cannot be null | [Scale](scale-properties-tow_entry_id.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/tow_entry_id")                       |
+| [weight](#weight)                           | `number` | Required | cannot be null | [Scale](scale-properties-weight.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/weight")                                   |
+| [category](#category)                       | `string` | Required | cannot be null | [Scale](scale-properties-scale-category.md "https://poseidat.org/schema/enum/scale-category.json#/properties/category")                            |
+| [product](#product)                         | `string` | Required | cannot be null | [Scale](scale-properties-product.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/product")                                 |
+| [product_description](#product_description) | `string` | Optional | cannot be null | [Scale](scale-properties-product_description.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/product_description")         |
+| [processed](#processed)                     | `object` | Optional | cannot be null | [Scale](fishing-catch-properties-fishing-catch-processed.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/processed") |
 
-## haul_date_start
+## tow_entry_id
 
-The datetime the haul started in UTC
+The journal entry identifier of the fishing tow (or haul) associated with this scale measurement
 
-`haul_date_start`
-
-*   is optional
-
-*   Type: `string`
-
-*   cannot be null
-
-*   defined in: [Scale](scale-properties-haul_date_start.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/haul_date_start")
-
-### haul_date_start Type
-
-`string`
-
-### haul_date_start Constraints
-
-**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
-
-## haul_date_end
-
-The datetime the haul ended in UTC
-
-`haul_date_end`
+`tow_entry_id`
 
 *   is optional
 
@@ -60,33 +37,15 @@ The datetime the haul ended in UTC
 
 *   cannot be null
 
-*   defined in: [Scale](scale-properties-haul_date_end.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/haul_date_end")
+*   defined in: [Scale](scale-properties-tow_entry_id.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/tow_entry_id")
 
-### haul_date_end Type
+### tow_entry_id Type
 
 `string`
 
-### haul_date_end Constraints
+### tow_entry_id Constraints
 
-**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
-
-## haul_number
-
-The number of the haul the product was caught in
-
-`haul_number`
-
-*   is required
-
-*   Type: `number`
-
-*   cannot be null
-
-*   defined in: [Scale](scale-properties-haul_number.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/haul_number")
-
-### haul_number Type
-
-`number`
+**UUID**: the string must be a UUID, according to [RFC 4122](https://tools.ietf.org/html/rfc4122 "check the specification")
 
 ## weight
 
@@ -163,6 +122,24 @@ The type of the product, e.g. a type of fish
 ```
 
 [try pattern](https://regexr.com/?expression=%5E\(%5BA-Z%5D%7B3%7D\)%24 "try regular expression with regexr.com")
+
+## product_description
+
+A description of the products appearance, sorting, quality or other grading information that is could be of importance. This is a free form text value whose purpose and format is dictated by the data source.
+
+`product_description`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Scale](scale-properties-product_description.md "https://poseidat.org/schema/core/measurement/scale.json#/properties/product_description")
+
+### product_description Type
+
+`string`
 
 ## processed
 

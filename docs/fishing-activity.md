@@ -81,7 +81,7 @@ The trip related details of a journal entry
 
 ## tow
 
-Fishing tow details
+Fishing tow (or haul) details
 
 `tow`
 

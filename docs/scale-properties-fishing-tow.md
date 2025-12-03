@@ -6,13 +6,13 @@ https://poseidat.org/schema/core/fishing-tow.json#/properties/tow
 
 Fishing tow (or haul) details
 
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                           |
-| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [fishing-activity.json*](schemas/entry/fishing-activity.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------ |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [scale.json*](schemas/core/measurement/scale.json "open original schema") |
 
 ## tow Type
 
-`object` ([Fishing tow](fishing-activity-properties-fishing-tow.md))
+`object` ([Fishing tow](scale-properties-fishing-tow.md))
 
 # tow Properties
 

@@ -58,7 +58,7 @@
 
 *   [Fishing gear type](./fishing-gear-type.md "Fishing gear type codes") – `https://poseidat.org/schema/enum/fishing-gear-type.json`
 
-*   [Fishing tow](./fishing-tow.md "Fishing tow details") – `https://poseidat.org/schema/core/fishing-tow.json`
+*   [Fishing tow](./fishing-tow.md "Fishing tow (or haul) details") – `https://poseidat.org/schema/core/fishing-tow.json`
 
 *   [Fishing zone](./fishing-zone.md "Geographical zone for fishing activities") – `https://poseidat.org/schema/core/fishing-zone.json`
 
