@@ -1,4 +1,13 @@
-import { measurementValueSchema } from '../../src/validators';
+import * as z from 'zod';
+import { measurementTypeSchema, measurementValueSchema } from '../../src/validators';
+
+test('measurement-value type branches exhaust measurement types', () => {
+  const measurementValueTypes = measurementValueSchema.options.flatMap(({ shape }) => (
+    shape.type instanceof z.ZodEnum ? shape.type.options : [...shape.type.values]
+  ));
+
+  expect(measurementValueTypes.sort()).toEqual([...measurementTypeSchema.options].sort());
+});
 
 test('POSITION + position payload is valid', () => {
   expect(measurementValueSchema.safeParse({

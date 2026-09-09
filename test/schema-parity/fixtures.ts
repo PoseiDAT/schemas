@@ -226,6 +226,18 @@ const validCases: SchemaFixture[] = [
     },
     valid: true,
   },
+  {
+    name: 'device-measurement / type TEMPERATURE with numeric payload',
+    schemaId: SchemaId.deviceMeasurement,
+    data: {
+      ...clone(validDeviceMeasurementPosition),
+      value: {
+        type: 'TEMPERATURE',
+        numeric: { value: 1 },
+      },
+    },
+    valid: true,
+  },
 ];
 
 const emptyObjectCases: SchemaFixture[] = Object.values(SchemaId).map((schemaId) => ({
@@ -359,6 +371,15 @@ const invalidCases: SchemaFixture[] = [
     data: {
       ...clone(validArrival),
       catch_on_board: [{ code: 'COD', weight: 100, number_of_fish: 12 }],
+    },
+    valid: false,
+  },
+  {
+    name: 'arrival / catch with neither quantity',
+    schemaId: SchemaId.arrival,
+    data: {
+      ...clone(validArrival),
+      catch_on_board: [{ code: 'COD' }],
     },
     valid: false,
   },
