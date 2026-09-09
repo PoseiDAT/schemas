@@ -15,6 +15,12 @@ import './enum/reason-discard';
 import './enum/route-geometry-type';
 import './enum/scale-category';
 import './enum/vessel-compartment';
+import './core/measurement/position';
+import './core/vessel';
+import './core/port';
+import './core/journal';
+import './core/trip-entry';
+import './core/base-entry';
 
 export { poseidatRegistry, poseidatId, registerSchema } from './registry';
 export { poseidatDateTime, poseidatDate, poseidatUuid } from './formats';
@@ -35,3 +41,12 @@ export { reasonDiscardSchema, type IEnumReasonDiscard } from './enum/reason-disc
 export { routeGeometryTypeSchema, type IEnumRouteGeometryType } from './enum/route-geometry-type';
 export { scaleCategorySchema, type IEnumScaleCategory } from './enum/scale-category';
 export { vesselCompartmentSchema, type IEnumVesselCompartment } from './enum/vessel-compartment';
+export {
+  positionSchema,
+  type IMeasurementPosition,
+} from './core/measurement/position';
+export { vesselSchema, type ICoreVessel } from './core/vessel';
+export { portSchema, type ICorePort } from './core/port';
+export { journalSchema, type ICoreJournal } from './core/journal';
+export { tripEntrySchema, type ICoreTripEntry } from './core/trip-entry';
+export { baseEntrySchema, type ICoreBaseEntry } from './core/base-entry';
