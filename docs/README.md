@@ -136,13 +136,13 @@
 
 ### Arrays
 
-*   [Catch on board](./arrival-properties-catch-on-board.md "The caught fish present on board the vessel") – `https://poseidat.org/schema/entry/arrival.json#/properties/catch_on_board`
+*   [Catch on board](./arrival-properties-catch_on_board.md "The caught fish present on board the vessel") – `https://poseidat.org/schema/entry/arrival.json#/properties/catch_on_board`
 
-*   [Catch on board](./departure-properties-catch-on-board.md "The previously caught fish present on board the vessel") – `https://poseidat.org/schema/entry/departure.json#/properties/catch_on_board`
+*   [Catch on board](./departure-properties-catch_on_board.md "The previously caught fish present on board the vessel") – `https://poseidat.org/schema/entry/departure.json#/properties/catch_on_board`
 
-*   [Catch on board](./zone-enter-properties-catch-on-board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board`
+*   [Catch on board](./zone-enter-properties-catch_on_board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board`
 
-*   [Catch on board](./zone-exit-properties-catch-on-board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board`
+*   [Catch on board](./zone-exit-properties-catch_on_board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board`
 
 *   [Caught fish](./fishing-tow-properties-caught-fish.md "The fish caught in this tow") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/catches`
 
@@ -152,13 +152,13 @@
 
 *   [Devices](./equipment-properties-devices.md "The collection of devices of which this equipment is composed") – `https://poseidat.org/schema/core/equipment/equipment.json#/properties/devices`
 
-*   [Equipment on board](./equipment-inventory-properties-equipment-on-board.md "The collection of equipment for the vessel") – `https://poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment`
+*   [Equipment on board](./equipment-inventory-properties-equipment.md "The collection of equipment for the vessel") – `https://poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment`
 
 *   [Gear loss details](./fishing-gear-deployment-properties-gear-loss-details.md "All gear loss even details") – `https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_loss`
 
 *   [Gear loss details](./fishing-gear-deployment-properties-gear-loss-details.md "All gear loss even details") – `https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_loss`
 
-*   [Gear on board](./departure-properties-gear-on-board.md "The gear present on board the vessel") – `https://poseidat.org/schema/entry/departure.json#/properties/gear_on_board`
+*   [Gear on board](./departure-properties-gear_on_board.md "The gear present on board the vessel") – `https://poseidat.org/schema/entry/departure.json#/properties/gear_on_board`
 
 *   [Gear retrieve details](./fishing-gear-deployment-properties-gear-retrieve-details.md "All gear retrieve even details") – `https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_retrieve`
 
@@ -176,7 +176,7 @@
 
 *   [Subsurface measurement samples](./subsurface-properties-subsurface-measurement-samples.md "The collection of subsurface measurement samples") – `https://poseidat.org/schema/core/measurement/subsurface.json#/properties/samples`
 
-*   [Trans zonal fishing areas](./zone-exit-properties-trans-zonal-fishing-areas.md "The zones involved in trans-zonal fishing") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
+*   [Trans zonal fishing areas](./zone-exit-properties-trans_zonal_fishing_zones.md "The zones involved in trans-zonal fishing") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
 
 *   [Untitled array in Fishing catch processed](./fishing-catch-processed-properties-package_labels.md "An array of strings with the package labels for each package") – `https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels`
 
