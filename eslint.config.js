@@ -8,4 +8,10 @@ module.exports = tseslint.config(
       parserOptions: { project: false },
     },
   },
+  {
+    files: ['eslint.config.js'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
 );
