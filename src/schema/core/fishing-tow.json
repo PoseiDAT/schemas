@@ -7,12 +7,14 @@
     "activity_date_start": {
       "description": "The datetime the tow started in UTC",
       "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
     },
     "activity_date_end": {
       "description": "The datetime the tow ended in UTC",
       "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
     },
     "location_start": {
       "description": "The geographical location where the tow started (if applicable)",

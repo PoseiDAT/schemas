@@ -7,7 +7,8 @@
     "date": {
       "description": "The date the trip entry was created or sent at. All dates and times are UTC. GBR: DATI, NLD: DA",
       "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
     },
     "trip_nr": {
       "description": "The trip number this entry belongs to. NLD: TN, GBR: GBRLOGNO",

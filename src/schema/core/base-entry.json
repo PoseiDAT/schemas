@@ -21,12 +21,14 @@
     "entry_datetime": {
       "description": "The date and time the entry was logged in UTC in RFC3339 format",
       "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
     },
     "revision": {
       "description": "The revision timestamp of this entry. Should be the time it was created.",
       "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
     },
     "immutable": {
       "description": "Indicates this entry cannot be replaced with future revisions (default)",
@@ -37,7 +39,7 @@
       "description": "Free form remarks that are to be added to this journal entry",
       "type": "string"
     }
- },
+  },
   "required": [
     "journal_id",
     "entry_id",

@@ -7,7 +7,8 @@
     "date": {
       "description": "The datetime the gear shot took place. GBR: DATI, NLD2: DA + TI, NLD3: DA",
       "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
     },
     "location": {
       "$ref": "https://poseidat.org/schema/core/measurement/position.json",

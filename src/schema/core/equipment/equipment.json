@@ -15,7 +15,7 @@
     },
     "type": {
       "description": "The type of equipment",
-      "$ref" : "https://poseidat.org/schema/enum/equipment-type.json"
+      "$ref": "https://poseidat.org/schema/enum/equipment-type.json"
     },
     "supplier": {
       "description": "The company which supplied the equipment",
