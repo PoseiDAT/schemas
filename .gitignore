@@ -14,3 +14,5 @@ tsconfig.tsbuildinfo
 
 # NPM pack output
 poseidat-schemas-*.tgz
+
+docs/superpowers/*
