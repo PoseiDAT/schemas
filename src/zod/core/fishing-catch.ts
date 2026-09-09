@@ -2,6 +2,8 @@ import * as z from 'zod';
 import { poseidatId, registerSchema } from '../registry';
 import { fishingCatchProcessedSchema } from './fishing-catch-processed';
 
+export const fishingCatchMeansOfMeasuringSchema = z.enum(['EST', 'WGH']);
+
 const payload = z.looseObject({
   code: z.string().meta({ description: 'The fish species code. NLD: SN, GBR: SN' }),
   weight: z.number().meta({ description: 'Weight of fish in kg (see context) Depending on context this item will be either (1): Total weight of fish (in kilograms) in catch period. (2): Total weight of fish (in kilograms) on board (aggregate) or (3): Total weight of fish (in kilograms) landed (4): Total weight of fish discarded or used as a live bait. NLD: WT, GBR: WT' }).optional(),
@@ -12,7 +14,7 @@ const payload = z.looseObject({
   landing_number: z.number().meta({ description: 'Total number of fish to be landed or transshipped. NLD: NF, GBR: LNF, EU3: FL' }).optional(),
   juvenile: z.boolean().default(false).meta({ description: 'Indicates the catch is considered a juvenile. NLD3.3+: MV, GBR: GBRJUV' }).optional(),
   fish_farming: z.boolean().default(false).meta({ description: 'Indicator for farmed fish (Dutch: kweekvis). NLD: KV' }).optional(),
-  means_of_measuring: z.enum(['EST', 'WGH']).meta({ description: 'Means of weight measuring: estimation (EST), weighing on board (WGH). EU3: MM' }).optional(),
+  means_of_measuring: fishingCatchMeansOfMeasuringSchema.meta({ description: 'Means of weight measuring: estimation (EST), weighing on board (WGH). EU3: MM' }).optional(),
   measured_weight: z.string().meta({ description: 'The weighed or measured weight. Type depends on means_of_measuring value. NLD3.3: MM' }).optional(),
   fish_size: z.string().meta({ description: 'Fish size category (1-8; one size or kg, g, cm, mm or number of fish per kg as appropriate). NLD3.3: SF' }).optional(),
   processed: fishingCatchProcessedSchema.meta({ description: 'Details of the fish after processing. NL: NLPRO, GBR: PRO (also contains SPE)' }).optional(),
@@ -31,3 +33,6 @@ export const fishingCatchSchema = registerSchema(
 );
 
 export type ICoreFishingCatch = z.infer<typeof fishingCatchSchema>;
+export type ICoreFishingCatchMeansOfMeasuring = z.infer<
+  typeof fishingCatchMeansOfMeasuringSchema
+>;

@@ -107,7 +107,12 @@ export { companySchema, type ICorePersonaCompany } from './core/persona/company'
 export { deviceSchema, type ICoreEquipmentDevice } from './core/equipment/device';
 export { equipmentSchema, type ICoreEquipment } from './core/equipment/equipment';
 export { fishingCatchProcessedSchema, type ICoreFishingCatchProcessed } from './core/fishing-catch-processed';
-export { fishingCatchSchema, type ICoreFishingCatch } from './core/fishing-catch';
+export {
+  fishingCatchSchema,
+  fishingCatchMeansOfMeasuringSchema,
+  type ICoreFishingCatch,
+  type ICoreFishingCatchMeansOfMeasuring,
+} from './core/fishing-catch';
 export { fishingGearSchema, type ICoreFishingGear } from './core/fishing-gear';
 export { fishingGearGillNetSchema, type ICoreFishingGearGillNet } from './core/fishing-gear-gill-net';
 export { fishingGearLossSchema, type ICoreFishingGearLoss } from './core/fishing-gear-loss';
@@ -179,4 +184,3 @@ export type { ICoreEquipmentDevice as IEquipmentDevice } from './core/equipment/
 export type { ICoreEquipment as IEquipmentEquipment } from './core/equipment/equipment';
 export type { IMeasurementValue as IMeasurementMeasurementValue } from './core/measurement/measurement-value';
 export type { ICorePersonaCompany as IPersonaCompany } from './core/persona/company';
-export type ICoreFishingCatchMeansOfMeasuring = 'EST' | 'WGH';
