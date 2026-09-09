@@ -24,8 +24,6 @@ export type SchemaSuite = {
 };
 
 export const CURRENT_SCHEMA_DIR = join(process.cwd(), 'src', 'schema');
-export const GENERATED_2020_12_DIR = join(process.cwd(), 'generated', 'json-schema', '2020-12');
-export const GENERATED_DRAFT_07_DIR = join(process.cwd(), 'generated', 'json-schema', 'draft-07');
 
 const ajvOptions = {
   $data: true,

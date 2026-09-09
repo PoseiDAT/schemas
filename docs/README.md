@@ -24,6 +24,8 @@
 
 *   [End of fishing activity](./end-of-fishing.md "Notification of intent to cease all fishing activity for the trip") – `https://poseidat.org/schema/entry/end-of-fishing.json`
 
+*   [Entry](./entry.md "Any journal entry") – `https://poseidat.org/schema/entry.json`
+
 *   [Equipment](./equipment.md "A piece of equipment installed on a vessel") – `https://poseidat.org/schema/core/equipment/equipment.json`
 
 *   [Equipment inventory](./equipment-inventory.md "An entry detailing the equipment installed on a vessel") – `https://poseidat.org/schema/entry/equipment-inventory.json`
@@ -132,18 +134,44 @@
 
 ### Objects
 
+*   [Untitled object in Measurement value](./measurement-value-oneof-0.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/0`
 
+*   [Untitled object in Measurement value](./measurement-value-oneof-1.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/1`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-2.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/2`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-3.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/3`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-4.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/4`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-5.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/5`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-6.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/6`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-7.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/7`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-8.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/8`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-0.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/0`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-1.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/1`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-2.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/2`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-3.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/3`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-4.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/4`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-5.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/5`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-6.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/6`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-7.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/7`
+
+*   [Untitled object in Measurement value](./measurement-value-oneof-8.md) – `https://poseidat.org/schema/core/measurement/measurement-value.json#/oneOf/8`
 
 ### Arrays
 
-*   [Catch on board](./arrival-properties-catch_on_board.md "The caught fish present on board the vessel") – `https://poseidat.org/schema/entry/arrival.json#/properties/catch_on_board`
-
-*   [Catch on board](./departure-properties-catch_on_board.md "The previously caught fish present on board the vessel") – `https://poseidat.org/schema/entry/departure.json#/properties/catch_on_board`
-
-*   [Catch on board](./zone-enter-properties-catch_on_board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board`
-
-*   [Catch on board](./zone-exit-properties-catch_on_board.md "The previously caught fish present on the vessel at the time of entry") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board`
-
 *   [Caught fish](./fishing-tow-properties-caught-fish.md "The fish caught in this tow") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/catches`
 
 *   [Caught fish](./fishing-tow-properties-caught-fish.md "The fish caught in this tow") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/catches`
@@ -152,13 +180,9 @@
 
 *   [Devices](./equipment-properties-devices.md "The collection of devices of which this equipment is composed") – `https://poseidat.org/schema/core/equipment/equipment.json#/properties/devices`
 
-*   [Equipment on board](./equipment-inventory-properties-equipment.md "The collection of equipment for the vessel") – `https://poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment`
-
 *   [Gear loss details](./fishing-gear-deployment-properties-gear-loss-details.md "All gear loss even details") – `https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_loss`
 
 *   [Gear loss details](./fishing-gear-deployment-properties-gear-loss-details.md "All gear loss even details") – `https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_loss`
-
-*   [Gear on board](./departure-properties-gear_on_board.md "The gear present on board the vessel") – `https://poseidat.org/schema/entry/departure.json#/properties/gear_on_board`
 
 *   [Gear retrieve details](./fishing-gear-deployment-properties-gear-retrieve-details.md "All gear retrieve even details") – `https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_retrieve`
 
@@ -176,18 +200,46 @@
 
 *   [Subsurface measurement samples](./subsurface-properties-subsurface-measurement-samples.md "The collection of subsurface measurement samples") – `https://poseidat.org/schema/core/measurement/subsurface.json#/properties/samples`
 
-*   [Trans zonal fishing areas](./zone-exit-properties-trans_zonal_fishing_zones.md "The zones involved in trans-zonal fishing") – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
+*   [Untitled array in Arrival](./arrival-properties-catch_on_board.md) – `https://poseidat.org/schema/entry/arrival.json#/properties/catch_on_board`
+
+*   [Untitled array in Arrival](./arrival-properties-catch_on_board.md) – `https://poseidat.org/schema/entry/arrival.json#/properties/catch_on_board`
+
+*   [Untitled array in Departure](./departure-properties-gear_on_board.md) – `https://poseidat.org/schema/entry/departure.json#/properties/gear_on_board`
+
+*   [Untitled array in Departure](./departure-properties-catch_on_board.md) – `https://poseidat.org/schema/entry/departure.json#/properties/catch_on_board`
+
+*   [Untitled array in Departure](./departure-properties-gear_on_board.md) – `https://poseidat.org/schema/entry/departure.json#/properties/gear_on_board`
+
+*   [Untitled array in Departure](./departure-properties-catch_on_board.md) – `https://poseidat.org/schema/entry/departure.json#/properties/catch_on_board`
+
+*   [Untitled array in Equipment inventory](./equipment-inventory-properties-equipment.md) – `https://poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment`
+
+*   [Untitled array in Equipment inventory](./equipment-inventory-properties-equipment.md) – `https://poseidat.org/schema/entry/equipment-inventory.json#/properties/equipment`
 
 *   [Untitled array in Fishing catch processed](./fishing-catch-processed-properties-package_labels.md "An array of strings with the package labels for each package") – `https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels`
 
 *   [Untitled array in Fishing catch processed](./fishing-catch-processed-properties-package_labels.md "An array of strings with the package labels for each package") – `https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels`
+
+*   [Untitled array in Route](./route-properties-waypoints.md) – `https://poseidat.org/schema/entry/route.json#/properties/waypoints`
+
+*   [Untitled array in Route](./route-properties-waypoints.md) – `https://poseidat.org/schema/entry/route.json#/properties/waypoints`
+
+*   [Untitled array in ZoneEnter](./zone-enter-properties-catch_on_board.md) – `https://poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board`
+
+*   [Untitled array in ZoneEnter](./zone-enter-properties-catch_on_board.md) – `https://poseidat.org/schema/entry/zone-enter.json#/properties/catch_on_board`
+
+*   [Untitled array in ZoneExit](./zone-exit-properties-catch_on_board.md) – `https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board`
+
+*   [Untitled array in ZoneExit](./zone-exit-properties-trans_zonal_fishing_zones.md) – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
+
+*   [Untitled array in ZoneExit](./zone-exit-properties-catch_on_board.md) – `https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board`
+
+*   [Untitled array in ZoneExit](./zone-exit-properties-trans_zonal_fishing_zones.md) – `https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones`
 
 *   [Waypoints](./fishing-tow-properties-waypoints.md "The collection of geographical locations logged during the tow") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/waypoints`
-
-*   [Waypoints](./route-properties-waypoints.md "The collection of waypoints which make the route") – `https://poseidat.org/schema/entry/route.json#/properties/waypoints`
 
 *   [Waypoints](./fishing-tow-properties-waypoints.md "The collection of geographical locations logged during the tow") – `https://poseidat.org/schema/core/fishing-tow.json#/properties/waypoints`
 
 ## Version Note
 
-The schemas linked above follow the JSON Schema Spec version: `http://json-schema.org/draft-07/schema#`
+The schemas linked above follow the JSON Schema Spec version: `https://json-schema.org/draft/2020-12/schema`

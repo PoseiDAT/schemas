@@ -2,7 +2,6 @@ import { mkdirSync, writeFileSync, rmSync } from 'fs';
 import { dirname, join } from 'path';
 import * as z from 'zod';
 import { poseidatRegistry } from '../src/validators';
-import '../src/validators';
 import { jsonSchemaOverride } from './json-schema-overrides';
 
 const ORIGIN = 'https://poseidat.org/schema/';
