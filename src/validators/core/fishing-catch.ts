@@ -21,10 +21,11 @@ const payload = z.looseObject({
 });
 
 export const fishingCatchSchema = registerSchema(
-  z.union([
-    payload.required({ weight: true }),
-    payload.required({ number_of_fish: true }),
-  ]),
+  payload.refine(
+    (value) =>
+      (value.weight !== undefined) !== (value.number_of_fish !== undefined),
+    { message: 'Exactly one of weight or number_of_fish is required' },
+  ),
   {
     id: poseidatId('core/fishing-catch.json'),
     title: 'Fishing catch',
