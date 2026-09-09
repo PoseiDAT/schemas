@@ -16,7 +16,6 @@
     "docs": "npm-run-all build:docs docs:serve",
     "generate:json-schema": "tsx scripts/generate-json-schema.ts",
     "lint": "eslint .",
-    "prepublishOnly": "npm run build",
     "rebuild": "npm-run-all clean build:compile",
     "typecheck": "tsc -p tsconfig.spec.json --pretty false",
     "test:schema-fresh": "git add --intent-to-add -- src/schema && git diff --exit-code -- src/schema",

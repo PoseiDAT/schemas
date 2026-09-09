@@ -20,7 +20,7 @@ The type of the product, e.g. a type of fish
 
 **minimum length**: the minimum number of characters for this string is: `3`
 
-**pattern**: the string must match the following regular expression:
+**pattern**: the string must match the following regular expression: 
 
 ```regexp
 ^([A-Z]{3})$

@@ -15,6 +15,10 @@ const pathFromId = (id: string): string => {
   return id.slice(ORIGIN.length);
 };
 
+/**
+ * Shared emitter: turn the PoseiDAT Zod registry into JSON Schema files.
+ * Wipes outDir, runs z.toJSONSchema with shared overrides, writes one file per $id.
+ */
 export const emitJsonSchema = ({
   target,
   outDir,
