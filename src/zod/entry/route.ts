@@ -2,6 +2,7 @@ import * as z from 'zod';
 import { baseEntrySchema } from '../core/base-entry';
 import { routeWaypointSchema } from '../core/route-waypoint';
 import { poseidatId, registerSchema } from '../registry';
+import { uniqueArray } from '../unique-array';
 
 export const routeSchema = registerSchema(
   baseEntrySchema
@@ -9,7 +10,7 @@ export const routeSchema = registerSchema(
       entry_type: z.literal('route'),
       name: z.string(),
       info: z.string().optional(),
-      waypoints: z.array(routeWaypointSchema).min(1),
+      waypoints: uniqueArray(z.array(routeWaypointSchema).min(1)),
     })
     .loose(),
   {

@@ -1,8 +1,12 @@
 import {
   schemaFixtures,
   validArrival,
+  validDeparture,
   validDeviceMeasurementPosition,
+  validEquipmentInventory,
+  validRoute,
 } from '../schema-parity/fixtures';
+import { SchemaId } from '../schema-parity/schema-ids';
 import { zodBySchemaId } from '../../src/zod/by-id';
 import { entryUnionSchema } from '../../src/zod/entry';
 
@@ -19,4 +23,36 @@ test('entry union accepts arrival and rejects unknown type', () => {
       entry_type: 'not-an-entry-type',
     }).success,
   ).toBe(false);
+});
+
+test.each([
+  {
+    name: 'departure gear_on_board',
+    schemaId: SchemaId.departure,
+    data: {
+      ...validDeparture,
+      gear_on_board: [{ code: 'TBB' }, { code: 'TBB' }],
+    },
+  },
+  {
+    name: 'equipment inventory equipment',
+    schemaId: SchemaId.equipmentInventory,
+    data: {
+      ...validEquipmentInventory,
+      equipment: [
+        validEquipmentInventory.equipment[0],
+        { ...validEquipmentInventory.equipment[0] },
+      ],
+    },
+  },
+  {
+    name: 'route waypoints',
+    schemaId: SchemaId.route,
+    data: {
+      ...validRoute,
+      waypoints: [validRoute.waypoints[0], { ...validRoute.waypoints[0] }],
+    },
+  },
+])('zod rejects deeply equal items in $name', ({ schemaId, data }) => {
+  expect(zodBySchemaId[schemaId].safeParse(data).success).toBe(false);
 });

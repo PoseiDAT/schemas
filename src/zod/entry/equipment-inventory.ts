@@ -2,12 +2,13 @@ import * as z from 'zod';
 import { baseEntrySchema } from '../core/base-entry';
 import { equipmentSchema } from '../core/equipment/equipment';
 import { poseidatId, registerSchema } from '../registry';
+import { uniqueArray } from '../unique-array';
 
 export const equipmentInventorySchema = registerSchema(
   baseEntrySchema
     .extend({
       entry_type: z.literal('equipment-inventory'),
-      equipment: z.array(equipmentSchema).min(1),
+      equipment: uniqueArray(z.array(equipmentSchema).min(1)),
     })
     .loose(),
   {

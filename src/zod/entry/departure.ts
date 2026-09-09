@@ -7,6 +7,7 @@ import { tripEntrySchema } from '../core/trip-entry';
 import { reasonDepartureSchema } from '../enum/reason-departure';
 import { poseidatDateTime } from '../formats';
 import { poseidatId, registerSchema } from '../registry';
+import { uniqueArray } from '../unique-array';
 
 export const departureSchema = registerSchema(
   baseEntrySchema
@@ -16,7 +17,7 @@ export const departureSchema = registerSchema(
       activity_date: poseidatDateTime,
       port: portSchema,
       anticipated_activity: reasonDepartureSchema.optional(),
-      gear_on_board: z.array(fishingGearSchema).optional(),
+      gear_on_board: uniqueArray(z.array(fishingGearSchema)).optional(),
       catch_on_board: z.array(fishingCatchSchema).optional(),
     })
     .loose(),
