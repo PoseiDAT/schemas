@@ -56,3 +56,15 @@ test.each([
 ])('zod rejects deeply equal items in $name', ({ schemaId, data }) => {
   expect(zodBySchemaId[schemaId].safeParse(data).success).toBe(false);
 });
+
+test('route waypoints treat 0 and -0 as equal for uniqueItems', () => {
+  const result = zodBySchemaId[SchemaId.route].safeParse({
+    ...validRoute,
+    waypoints: [
+      { id: 1, latitude: 0, longitude: 1 },
+      { id: 1, latitude: -0, longitude: 1 },
+    ],
+  });
+
+  expect(result.success).toBe(false);
+});
