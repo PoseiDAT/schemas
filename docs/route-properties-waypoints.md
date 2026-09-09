@@ -1,10 +1,10 @@
-# Waypoints Schema
+# Untitled array in Route Schema
 
 ```txt
 https://poseidat.org/schema/entry/route.json#/properties/waypoints
 ```
 
-The collection of waypoints which make the route.
+
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------- |

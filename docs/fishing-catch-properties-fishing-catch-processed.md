@@ -16,16 +16,17 @@ Details of caught fish after it has been processed
 
 # processed Properties
 
-| Property                                          | Type     | Required | Nullable       | Defined by                                                                                                                                                                                 |
-| :------------------------------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [fish_presentation](#fish_presentation)           | `string` | Required | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-fish-presentation.md "https://poseidat.org/schema/enum/fish-presentation.json#/properties/fish_presentation")                 |
-| [fish_state](#fish_state)                         | `string` | Required | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-fish-state.md "https://poseidat.org/schema/enum/fish-state.json#/properties/fish_state")                                      |
-| [package_type](#package_type)                     | `string` | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-fish-package-type.md "https://poseidat.org/schema/enum/fish-package-type.json#/properties/package_type")                      |
-| [number_of_packages](#number_of_packages)         | `number` | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-number_of_packages.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/number_of_packages")         |
-| [average_package_weight](#average_package_weight) | `number` | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-average_package_weight.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/average_package_weight") |
-| [package_labels](#package_labels)                 | `array`  | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-package_labels.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels")                 |
-| [fish_freshness](#fish_freshness)                 | `string` | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-fish-freshness.md "https://poseidat.org/schema/enum/fish-freshness.json#/properties/fish_freshness")                          |
-| [conversion_factor](#conversion_factor)           | `number` | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-conversion_factor.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/conversion_factor")           |
+| Property                                          | Type          | Required | Nullable       | Defined by                                                                                                                                                                                 |
+| :------------------------------------------------ | :------------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [fish_presentation](#fish_presentation)           | `string`      | Required | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-fish-presentation.md "https://poseidat.org/schema/enum/fish-presentation.json#/properties/fish_presentation")                 |
+| [fish_state](#fish_state)                         | `string`      | Required | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-fish-state.md "https://poseidat.org/schema/enum/fish-state.json#/properties/fish_state")                                      |
+| [package_type](#package_type)                     | `string`      | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-fish-package-type.md "https://poseidat.org/schema/enum/fish-package-type.json#/properties/package_type")                      |
+| [number_of_packages](#number_of_packages)         | `number`      | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-number_of_packages.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/number_of_packages")         |
+| [average_package_weight](#average_package_weight) | `number`      | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-average_package_weight.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/average_package_weight") |
+| [package_labels](#package_labels)                 | `array`       | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-package_labels.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/package_labels")                 |
+| [fish_freshness](#fish_freshness)                 | `string`      | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-fish-freshness.md "https://poseidat.org/schema/enum/fish-freshness.json#/properties/fish_freshness")                          |
+| [conversion_factor](#conversion_factor)           | `number`      | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-properties-conversion_factor.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/properties/conversion_factor")           |
+| Additional Properties                             | Not specified | Optional | cannot be null | [Fishing catch processed](fishing-catch-processed-additionalproperties.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/additionalProperties")                           |
 
 ## fish_presentation
 
@@ -265,3 +266,21 @@ The conversion factor (ratio) from dead weight to live weight. Depends on combin
 ### conversion_factor Type
 
 `number`
+
+## Additional Properties
+
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: unknown
+
+*   cannot be null
+
+*   defined in: [Fishing catch processed](fishing-catch-processed-additionalproperties.md "https://poseidat.org/schema/core/fishing-catch-processed.json#/additionalProperties")
+
+### additionalProperties Type
+
+unknown

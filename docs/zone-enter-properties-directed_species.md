@@ -4,7 +4,7 @@
 https://poseidat.org/schema/entry/zone-enter.json#/properties/directed_species
 ```
 
-An indication of the directed species for the fishing activity. GBR: GBRDS
+
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                               |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------- |

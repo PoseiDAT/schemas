@@ -4,7 +4,7 @@
 https://poseidat.org/schema/entry/route.json#/properties/info
 ```
 
-Generic route information.
+
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------- |

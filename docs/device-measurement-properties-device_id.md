@@ -4,7 +4,7 @@
 https://poseidat.org/schema/entry/device-measurement.json#/properties/device_id
 ```
 
-The unique identifier for the device
+
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                               |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------------------------- |

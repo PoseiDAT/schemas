@@ -4,7 +4,7 @@
 https://poseidat.org/schema/entry/zone-exit.json#/properties/target_species
 ```
 
-An indication of the target species for the fishing activity. Only GBR: TS
+
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |

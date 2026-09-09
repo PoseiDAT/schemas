@@ -4,7 +4,7 @@
 https://poseidat.org/schema/entry/route.json#/properties/name
 ```
 
-The name of the route.
+
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                     |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------- |

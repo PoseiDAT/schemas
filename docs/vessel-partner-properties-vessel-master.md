@@ -16,11 +16,12 @@ The vessel master details. Usually one per entry but can differ in a single trip
 
 # master Properties
 
-| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                           |
-| :------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
-| [name](#name)             | `string` | Required | cannot be null | [Vessel master](vessel-master-properties-name.md "https://poseidat.org/schema/core/vessel-master.json#/properties/name")             |
-| [address](#address)       | `string` | Optional | cannot be null | [Vessel master](vessel-master-properties-address.md "https://poseidat.org/schema/core/vessel-master.json#/properties/address")       |
-| [identifier](#identifier) | `string` | Optional | cannot be null | [Vessel master](vessel-master-properties-identifier.md "https://poseidat.org/schema/core/vessel-master.json#/properties/identifier") |
+| Property                  | Type          | Required | Nullable       | Defined by                                                                                                                           |
+| :------------------------ | :------------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| [name](#name)             | `string`      | Required | cannot be null | [Vessel master](vessel-master-properties-name.md "https://poseidat.org/schema/core/vessel-master.json#/properties/name")             |
+| [address](#address)       | `string`      | Optional | cannot be null | [Vessel master](vessel-master-properties-address.md "https://poseidat.org/schema/core/vessel-master.json#/properties/address")       |
+| [identifier](#identifier) | `string`      | Optional | cannot be null | [Vessel master](vessel-master-properties-identifier.md "https://poseidat.org/schema/core/vessel-master.json#/properties/identifier") |
+| Additional Properties     | Not specified | Optional | cannot be null | [Vessel master](vessel-master-additionalproperties.md "https://poseidat.org/schema/core/vessel-master.json#/additionalProperties")   |
 
 ## name
 
@@ -75,3 +76,21 @@ Can be used to store any (external) identifier of the master
 ### identifier Type
 
 `string`
+
+## Additional Properties
+
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: unknown
+
+*   cannot be null
+
+*   defined in: [Vessel master](vessel-master-additionalproperties.md "https://poseidat.org/schema/core/vessel-master.json#/additionalProperties")
+
+### additionalProperties Type
+
+unknown

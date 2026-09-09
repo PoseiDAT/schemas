@@ -16,27 +16,28 @@ A waypoint which is part of a route.
 
 # items Properties
 
-| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                         |
-| :---------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [id](#id)                           | `number` | Required | cannot be null | [Route waypoint](route-waypoint-properties-id.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/id")                            |
-| [name](#name)                       | `string` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-name.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/name")                        |
-| [latitude](#latitude)               | `number` | Required | cannot be null | [Route waypoint](route-waypoint-properties-latitude.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/latitude")                |
-| [longitude](#longitude)             | `number` | Required | cannot be null | [Route waypoint](route-waypoint-properties-longitude.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/longitude")              |
-| [turn_radius](#turn_radius)         | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-turn_radius.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/turn_radius")          |
-| [portside_xtd](#portside_xtd)       | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-portside_xtd.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/portside_xtd")        |
-| [starboard_xtd](#starboard_xtd)     | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-starboard_xtd.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/starboard_xtd")      |
-| [safety_contour](#safety_contour)   | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-safety_contour.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/safety_contour")    |
-| [safety_depth](#safety_depth)       | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-safety_depth.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/safety_depth")        |
-| [geometry_type](#geometry_type)     | `string` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-geometry-type.md "https://poseidat.org/schema/enum/route-geometry-type.json#/properties/geometry_type") |
-| [speed_min](#speed_min)             | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-speed_min.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/speed_min")              |
-| [speed_max](#speed_max)             | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-speed_max.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/speed_max")              |
-| [draught_forward](#draught_forward) | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-draught_forward.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/draught_forward")  |
-| [draught_aft](#draught_aft)         | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-draught_aft.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/draught_aft")          |
-| [static_ukc](#static_ukc)           | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-static_ukc.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/static_ukc")            |
-| [dynamic_ukc](#dynamic_ukc)         | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-dynamic_ukc.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/dynamic_ukc")          |
-| [masthead_height](#masthead_height) | `number` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-masthead_height.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/masthead_height")  |
-| [etd](#etd)                         | `string` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-etd.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/etd")                          |
-| [eta](#eta)                         | `string` | Optional | cannot be null | [Route waypoint](route-waypoint-properties-eta.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/eta")                          |
+| Property                            | Type          | Required | Nullable       | Defined by                                                                                                                                         |
+| :---------------------------------- | :------------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [id](#id)                           | `number`      | Required | cannot be null | [Route waypoint](route-waypoint-properties-id.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/id")                            |
+| [name](#name)                       | `string`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-name.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/name")                        |
+| [latitude](#latitude)               | `number`      | Required | cannot be null | [Route waypoint](route-waypoint-properties-latitude.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/latitude")                |
+| [longitude](#longitude)             | `number`      | Required | cannot be null | [Route waypoint](route-waypoint-properties-longitude.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/longitude")              |
+| [turn_radius](#turn_radius)         | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-turn_radius.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/turn_radius")          |
+| [portside_xtd](#portside_xtd)       | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-portside_xtd.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/portside_xtd")        |
+| [starboard_xtd](#starboard_xtd)     | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-starboard_xtd.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/starboard_xtd")      |
+| [safety_contour](#safety_contour)   | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-safety_contour.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/safety_contour")    |
+| [safety_depth](#safety_depth)       | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-safety_depth.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/safety_depth")        |
+| [geometry_type](#geometry_type)     | `string`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-geometry-type.md "https://poseidat.org/schema/enum/route-geometry-type.json#/properties/geometry_type") |
+| [speed_min](#speed_min)             | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-speed_min.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/speed_min")              |
+| [speed_max](#speed_max)             | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-speed_max.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/speed_max")              |
+| [draught_forward](#draught_forward) | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-draught_forward.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/draught_forward")  |
+| [draught_aft](#draught_aft)         | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-draught_aft.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/draught_aft")          |
+| [static_ukc](#static_ukc)           | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-static_ukc.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/static_ukc")            |
+| [dynamic_ukc](#dynamic_ukc)         | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-dynamic_ukc.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/dynamic_ukc")          |
+| [masthead_height](#masthead_height) | `number`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-masthead_height.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/masthead_height")  |
+| [etd](#etd)                         | `string`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-etd.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/etd")                          |
+| [eta](#eta)                         | `string`      | Optional | cannot be null | [Route waypoint](route-waypoint-properties-eta.md "https://poseidat.org/schema/core/route-waypoint.json#/properties/eta")                          |
+| Additional Properties               | Not specified | Optional | cannot be null | [Route waypoint](route-waypoint-additionalproperties.md "https://poseidat.org/schema/core/route-waypoint.json#/additionalProperties")              |
 
 ## id
 
@@ -373,6 +374,14 @@ The Estimated Time of Departure from this waypoint.
 
 ### etd Constraints
 
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:[0-5]\d(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B4%7D-%5Cd%7B2%7D-%5Cd%7B2%7DT%5Cd%7B2%7D%3A%5Cd%7B2%7D%3A%5B0-5%5D%5Cd\(%3F%3A%5C.%5Cd%2B\)%3F\(%3F%3AZ%7C%5B%2B-%5D%5Cd%7B2%7D%3A%5Cd%7B2%7D\)%24 "try regular expression with regexr.com")
+
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
 ## eta
@@ -395,4 +404,30 @@ The Estimated Time of Arrival at this waypoint.
 
 ### eta Constraints
 
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:[0-5]\d(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B4%7D-%5Cd%7B2%7D-%5Cd%7B2%7DT%5Cd%7B2%7D%3A%5Cd%7B2%7D%3A%5B0-5%5D%5Cd\(%3F%3A%5C.%5Cd%2B\)%3F\(%3F%3AZ%7C%5B%2B-%5D%5Cd%7B2%7D%3A%5Cd%7B2%7D\)%24 "try regular expression with regexr.com")
+
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+## Additional Properties
+
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: unknown
+
+*   cannot be null
+
+*   defined in: [Route waypoint](route-waypoint-additionalproperties.md "https://poseidat.org/schema/core/route-waypoint.json#/additionalProperties")
+
+### additionalProperties Type
+
+unknown

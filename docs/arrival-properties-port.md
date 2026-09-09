@@ -16,10 +16,11 @@ Fishing port details
 
 # port Properties
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                                  |
-| :-------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------- |
-| [code](#code)         | `string` | Required | cannot be null | [Port](port-properties-code.md "https://poseidat.org/schema/core/port.json#/properties/code")                               |
-| [location](#location) | `object` | Optional | cannot be null | [Port](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location") |
+| Property              | Type          | Required | Nullable       | Defined by                                                                                                                  |
+| :-------------------- | :------------ | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| [code](#code)         | `string`      | Required | cannot be null | [Port](port-properties-code.md "https://poseidat.org/schema/core/port.json#/properties/code")                               |
+| [location](#location) | `object`      | Optional | cannot be null | [Port](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location") |
+| Additional Properties | Not specified | Optional | cannot be null | [Port](port-additionalproperties.md "https://poseidat.org/schema/core/port.json#/additionalProperties")                     |
 
 ## code
 
@@ -62,3 +63,21 @@ A navigational position that can be used in an entry
 ### location Type
 
 `object` ([Position](trip-entry-properties-position.md))
+
+## Additional Properties
+
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: unknown
+
+*   cannot be null
+
+*   defined in: [Port](port-additionalproperties.md "https://poseidat.org/schema/core/port.json#/additionalProperties")
+
+### additionalProperties Type
+
+unknown

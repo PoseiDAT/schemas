@@ -16,23 +16,24 @@ Fishing gear deployment details
 
 # gear_deployment Properties
 
-| Property                                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                      |
-| :---------------------------------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [duration](#duration)                                 | `number` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-duration.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/duration")                                  |
-| [unit_of_time](#unit_of_time)                         | `string` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-unit_of_time.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/unit_of_time")                          |
-| [fishing_operations](#fishing_operations)             | `number` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-fishing_operations.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/fishing_operations")              |
-| [fishing_depth](#fishing_depth)                       | `number` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-fishing_depth.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/fishing_depth")                        |
-| [gear_component_count](#gear_component_count)         | `number` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_component_count.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_component_count")          |
-| [gear_specification](#gear_specification)             | `number` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_specification.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_specification")              |
-| [gear_problems](#gear_problems)                       | `number` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_problems.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_problems")                        |
-| [gill_net](#gill_net)                                 | `object` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-fishing-gear-gill-net.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/gill_net")                       |
-| [gear_capacity](#gear_capacity)                       | `string` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_capacity.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_capacity")                        |
-| [gear_hook_count](#gear_hook_count)                   | `number` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_hook_count.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_hook_count")                    |
-| [gear_dredger_count](#gear_dredger_count)             | `number` | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_dredger_count.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_dredger_count")              |
-| [gear_shot](#gear_shot)                               | `array`  | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear-shot-details.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_shot")                        |
-| [gear_retrieve](#gear_retrieve)                       | `array`  | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear-retrieve-details.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_retrieve")                |
-| [gear_loss](#gear_loss)                               | `array`  | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear-loss-details.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_loss")                        |
-| [partnered_fishing_vessel](#partnered_fishing_vessel) | `array`  | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-partnered-fishing-vessels.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/partnered_fishing_vessel") |
+| Property                                              | Type          | Required | Nullable       | Defined by                                                                                                                                                                                      |
+| :---------------------------------------------------- | :------------ | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [duration](#duration)                                 | `number`      | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-duration.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/duration")                                  |
+| [unit_of_time](#unit_of_time)                         | `string`      | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-unit_of_time.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/unit_of_time")                          |
+| [fishing_operations](#fishing_operations)             | `number`      | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-fishing_operations.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/fishing_operations")              |
+| [fishing_depth](#fishing_depth)                       | `number`      | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-fishing_depth.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/fishing_depth")                        |
+| [gear_component_count](#gear_component_count)         | `number`      | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_component_count.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_component_count")          |
+| [gear_specification](#gear_specification)             | Merged        | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_specification.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_specification")              |
+| [gear_problems](#gear_problems)                       | Merged        | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_problems.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_problems")                        |
+| [gill_net](#gill_net)                                 | `object`      | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-fishing-gear-gill-net.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/gill_net")                       |
+| [gear_capacity](#gear_capacity)                       | `string`      | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_capacity.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_capacity")                        |
+| [gear_hook_count](#gear_hook_count)                   | `number`      | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_hook_count.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_hook_count")                    |
+| [gear_dredger_count](#gear_dredger_count)             | `number`      | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear_dredger_count.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_dredger_count")              |
+| [gear_shot](#gear_shot)                               | `array`       | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear-shot-details.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_shot")                        |
+| [gear_retrieve](#gear_retrieve)                       | `array`       | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear-retrieve-details.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_retrieve")                |
+| [gear_loss](#gear_loss)                               | `array`       | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-gear-loss-details.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_loss")                        |
+| [partnered_fishing_vessel](#partnered_fishing_vessel) | `array`       | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-properties-partnered-fishing-vessels.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/partnered_fishing_vessel") |
+| Additional Properties                                 | Not specified | Optional | cannot be null | [Fishing gear deployment](fishing-gear-deployment-additionalproperties.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/additionalProperties")                                |
 
 ## duration
 
@@ -132,7 +133,7 @@ Norwegian requirement - gear specification (trawls: 1=single, 2=double, 3=triple
 
 *   is optional
 
-*   Type: `number`
+*   Type: merged type ([Details](fishing-gear-deployment-properties-gear_specification.md))
 
 *   cannot be null
 
@@ -140,17 +141,15 @@ Norwegian requirement - gear specification (trawls: 1=single, 2=double, 3=triple
 
 ### gear_specification Type
 
-`number`
+merged type ([Details](fishing-gear-deployment-properties-gear_specification.md))
 
-### gear_specification Constraints
+any of
 
-**enum**: the value of this property must be equal to one of the following values:
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_specification-anyof-0.md "check type definition")
 
-| Value | Explanation |
-| :---- | :---------- |
-| `1`   |             |
-| `2`   |             |
-| `3`   |             |
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_specification-anyof-1.md "check type definition")
+
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_specification-anyof-2.md "check type definition")
 
 ## gear_problems
 
@@ -160,7 +159,7 @@ Norwegian requirement - gear problems (1=empty net, 2=net burst, 3=net split, 4=
 
 *   is optional
 
-*   Type: `number`
+*   Type: merged type ([Details](fishing-gear-deployment-properties-gear_problems.md))
 
 *   cannot be null
 
@@ -168,20 +167,21 @@ Norwegian requirement - gear problems (1=empty net, 2=net burst, 3=net split, 4=
 
 ### gear_problems Type
 
-`number`
+merged type ([Details](fishing-gear-deployment-properties-gear_problems.md))
 
-### gear_problems Constraints
+any of
 
-**enum**: the value of this property must be equal to one of the following values:
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-0.md "check type definition")
 
-| Value | Explanation |
-| :---- | :---------- |
-| `1`   |             |
-| `2`   |             |
-| `3`   |             |
-| `4`   |             |
-| `5`   |             |
-| `6`   |             |
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-1.md "check type definition")
+
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-2.md "check type definition")
+
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-3.md "check type definition")
+
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-4.md "check type definition")
+
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-5.md "check type definition")
 
 ## gill_net
 
@@ -326,3 +326,21 @@ Details of partner vessels for pair fishing. BR: PFP, NLD: NLSPN
 ### partnered_fishing_vessel Type
 
 `object[]` ([Vessel partner](fishing-gear-deployment-properties-partnered-fishing-vessels-vessel-partner.md))
+
+## Additional Properties
+
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: unknown
+
+*   cannot be null
+
+*   defined in: [Fishing gear deployment](fishing-gear-deployment-additionalproperties.md "https://poseidat.org/schema/core/fishing-gear-deployment.json#/additionalProperties")
+
+### additionalProperties Type
+
+unknown

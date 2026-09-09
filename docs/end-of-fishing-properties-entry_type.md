@@ -4,7 +4,7 @@
 https://poseidat.org/schema/entry/end-of-fishing.json#/properties/entry_type
 ```
 
-The journal entry type identifier
+
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                       |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------------- |
@@ -16,15 +16,7 @@ The journal entry type identifier
 
 ## entry_type Constraints
 
-**enum**: the value of this property must be equal to one of the following values:
-
-| Value              | Explanation |
-| :----------------- | :---------- |
-| `"end-of-fishing"` |             |
-
-## entry_type Default Value
-
-The default value is:
+**constant**: the value of this property must be equal to:
 
 ```json
 "end-of-fishing"

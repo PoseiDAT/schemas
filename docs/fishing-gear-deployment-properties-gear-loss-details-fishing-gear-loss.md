@@ -16,13 +16,15 @@ A gear loss event details
 
 # items Properties
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                         |
-| :-------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [date](#date)               | `string` | Optional | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-date.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/date")               |
-| [location](#location)       | `object` | Required | cannot be null | [Fishing gear loss](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location")           |
-| [identifier](#identifier)   | `string` | Required | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-identifier.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/identifier")   |
-| [remarks](#remarks)         | `string` | Optional | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-remarks.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/remarks")         |
-| [amount_lost](#amount_lost) | `number` | Optional | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-amount_lost.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/amount_lost") |
+| Property                    | Type          | Required | Nullable       | Defined by                                                                                                                                         |
+| :-------------------------- | :------------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [date](#date)               | `string`      | Optional | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-date.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/date")               |
+| [data](#data)               | Not specified | Required | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-data.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/data")               |
+| [location](#location)       | `object`      | Required | cannot be null | [Fishing gear loss](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location")           |
+| [identifier](#identifier)   | `string`      | Required | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-identifier.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/identifier")   |
+| [remarks](#remarks)         | `string`      | Optional | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-remarks.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/remarks")         |
+| [amount_lost](#amount_lost) | `number`      | Optional | cannot be null | [Fishing gear loss](fishing-gear-loss-properties-amount_lost.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/amount_lost") |
+| Additional Properties       | Not specified | Optional | cannot be null | [Fishing gear loss](fishing-gear-loss-additionalproperties.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/additionalProperties")     |
 
 ## date
 
@@ -44,7 +46,33 @@ The datetime the gear loss took place
 
 ### date Constraints
 
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:[0-5]\d(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B4%7D-%5Cd%7B2%7D-%5Cd%7B2%7DT%5Cd%7B2%7D%3A%5Cd%7B2%7D%3A%5B0-5%5D%5Cd\(%3F%3A%5C.%5Cd%2B\)%3F\(%3F%3AZ%7C%5B%2B-%5D%5Cd%7B2%7D%3A%5Cd%7B2%7D\)%24 "try regular expression with regexr.com")
+
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+## data
+
+
+
+`data`
+
+*   is required
+
+*   Type: unknown
+
+*   cannot be null
+
+*   defined in: [Fishing gear loss](fishing-gear-loss-properties-data.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/properties/data")
+
+### data Type
+
+unknown
 
 ## location
 
@@ -117,3 +145,21 @@ The amount of gear items lost, GBR: NN
 ### amount_lost Type
 
 `number`
+
+## Additional Properties
+
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: unknown
+
+*   cannot be null
+
+*   defined in: [Fishing gear loss](fishing-gear-loss-additionalproperties.md "https://poseidat.org/schema/core/fishing-gear-loss.json#/additionalProperties")
+
+### additionalProperties Type
+
+unknown

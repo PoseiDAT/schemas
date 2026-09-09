@@ -14,28 +14,74 @@ Exit declaration of a fishing zone
 
 `object` ([ZoneExit](zone-exit.md))
 
-all of
-
-*   [Base entry](arrival-allof-base-entry.md "check type definition")
-
 # ZoneExit Properties
 
-| Property                                                | Type      | Required | Nullable       | Defined by                                                                                                                                             |
-| :------------------------------------------------------ | :-------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [entry_type](#entry_type)                               | `string`  | Required | cannot be null | [ZoneExit](zone-exit-properties-entry_type.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/entry_type")                               |
-| [activity_date](#activity_date)                         | `string`  | Required | cannot be null | [ZoneExit](zone-exit-properties-activity_date.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/activity_date")                         |
-| [zone](#zone)                                           | `object`  | Required | cannot be null | [ZoneExit](fishing-tow-properties-fishing-zone.md "https://poseidat.org/schema/core/fishing-zone.json#/properties/zone")                               |
-| [location](#location)                                   | `object`  | Required | cannot be null | [ZoneExit](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location")                        |
-| [catch_on_board](#catch_on_board)                       | `array`   | Optional | cannot be null | [ZoneExit](zone-exit-properties-catch-on-board.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board")                       |
-| [target_species](#target_species)                       | `string`  | Optional | cannot be null | [ZoneExit](zone-exit-properties-target_species.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/target_species")                       |
-| [effort_zone](#effort_zone)                             | `string`  | Optional | cannot be null | [ZoneExit](zone-enter-properties-effort-zone.md "https://poseidat.org/schema/enum/effort-zone.json#/properties/effort_zone")                           |
-| [trans_zonal_fishing](#trans_zonal_fishing)             | `boolean` | Optional | cannot be null | [ZoneExit](zone-exit-properties-trans_zonal_fishing.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing")             |
-| [trans_zonal_fishing_zones](#trans_zonal_fishing_zones) | `array`   | Optional | cannot be null | [ZoneExit](zone-exit-properties-trans-zonal-fishing-areas.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones") |
-| Additional Properties                                   | Any       | Optional | can be null    |                                                                                                                                                        |
+| Property                                                | Type          | Required | Nullable       | Defined by                                                                                                                                             |
+| :------------------------------------------------------ | :------------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [journal_id](#journal_id)                               | `string`      | Required | cannot be null | [ZoneExit](zone-exit-properties-journal_id.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/journal_id")                               |
+| [entry_id](#entry_id)                                   | `string`      | Required | cannot be null | [ZoneExit](zone-exit-properties-entry_id.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/entry_id")                                   |
+| [entry_type](#entry_type)                               | `string`      | Required | cannot be null | [ZoneExit](zone-exit-properties-entry_type.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/entry_type")                               |
+| [entry_datetime](#entry_datetime)                       | `string`      | Optional | cannot be null | [ZoneExit](zone-exit-properties-entry_datetime.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/entry_datetime")                       |
+| [revision](#revision)                                   | `string`      | Required | cannot be null | [ZoneExit](zone-exit-properties-revision.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/revision")                                   |
+| [immutable](#immutable)                                 | `boolean`     | Required | cannot be null | [ZoneExit](zone-exit-properties-immutable.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/immutable")                                 |
+| [remarks](#remarks)                                     | `string`      | Optional | cannot be null | [ZoneExit](zone-exit-properties-remarks.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/remarks")                                     |
+| [activity_date](#activity_date)                         | `string`      | Required | cannot be null | [ZoneExit](zone-exit-properties-activity_date.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/activity_date")                         |
+| [zone](#zone)                                           | `object`      | Required | cannot be null | [ZoneExit](fishing-tow-properties-fishing-zone.md "https://poseidat.org/schema/core/fishing-zone.json#/properties/zone")                               |
+| [location](#location)                                   | `object`      | Required | cannot be null | [ZoneExit](trip-entry-properties-position.md "https://poseidat.org/schema/core/measurement/position.json#/properties/location")                        |
+| [catch_on_board](#catch_on_board)                       | `array`       | Optional | cannot be null | [ZoneExit](zone-exit-properties-catch_on_board.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board")                       |
+| [target_species](#target_species)                       | `string`      | Optional | cannot be null | [ZoneExit](zone-exit-properties-target_species.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/target_species")                       |
+| [effort_zone](#effort_zone)                             | `string`      | Optional | cannot be null | [ZoneExit](zone-enter-properties-effort-zone.md "https://poseidat.org/schema/enum/effort-zone.json#/properties/effort_zone")                           |
+| [trans_zonal_fishing](#trans_zonal_fishing)             | `boolean`     | Optional | cannot be null | [ZoneExit](zone-exit-properties-trans_zonal_fishing.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing")             |
+| [trans_zonal_fishing_zones](#trans_zonal_fishing_zones) | `array`       | Optional | cannot be null | [ZoneExit](zone-exit-properties-trans_zonal_fishing_zones.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones") |
+| Additional Properties                                   | Not specified | Optional | cannot be null | [ZoneExit](zone-exit-additionalproperties.md "https://poseidat.org/schema/entry/zone-exit.json#/additionalProperties")                                 |
+
+## journal_id
+
+The unique identifier of the journal (UUID v4) this entry belongs to
+
+`journal_id`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [ZoneExit](zone-exit-properties-journal_id.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/journal_id")
+
+### journal_id Type
+
+`string`
+
+### journal_id Constraints
+
+**UUID**: the string must be a UUID, according to [RFC 4122](https://tools.ietf.org/html/rfc4122 "check the specification")
+
+## entry_id
+
+The unique identifier for the entry (UUID v4)
+
+`entry_id`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [ZoneExit](zone-exit-properties-entry_id.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/entry_id")
+
+### entry_id Type
+
+`string`
+
+### entry_id Constraints
+
+**UUID**: the string must be a UUID, according to [RFC 4122](https://tools.ietf.org/html/rfc4122 "check the specification")
 
 ## entry_type
 
-The journal entry type identifier
+
 
 `entry_type`
 
@@ -53,23 +99,111 @@ The journal entry type identifier
 
 ### entry_type Constraints
 
-**enum**: the value of this property must be equal to one of the following values:
-
-| Value         | Explanation |
-| :------------ | :---------- |
-| `"zone-exit"` |             |
-
-### entry_type Default Value
-
-The default value is:
+**constant**: the value of this property must be equal to:
 
 ```json
 "zone-exit"
 ```
 
+## entry_datetime
+
+The date and time the entry was logged in UTC in RFC3339 format
+
+`entry_datetime`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [ZoneExit](zone-exit-properties-entry_datetime.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/entry_datetime")
+
+### entry_datetime Type
+
+`string`
+
+### entry_datetime Constraints
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:[0-5]\d(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B4%7D-%5Cd%7B2%7D-%5Cd%7B2%7DT%5Cd%7B2%7D%3A%5Cd%7B2%7D%3A%5B0-5%5D%5Cd\(%3F%3A%5C.%5Cd%2B\)%3F\(%3F%3AZ%7C%5B%2B-%5D%5Cd%7B2%7D%3A%5Cd%7B2%7D\)%24 "try regular expression with regexr.com")
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+## revision
+
+The revision timestamp of this entry. Should be the time it was created.
+
+`revision`
+
+*   is required
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [ZoneExit](zone-exit-properties-revision.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/revision")
+
+### revision Type
+
+`string`
+
+### revision Constraints
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:[0-5]\d(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B4%7D-%5Cd%7B2%7D-%5Cd%7B2%7DT%5Cd%7B2%7D%3A%5Cd%7B2%7D%3A%5B0-5%5D%5Cd\(%3F%3A%5C.%5Cd%2B\)%3F\(%3F%3AZ%7C%5B%2B-%5D%5Cd%7B2%7D%3A%5Cd%7B2%7D\)%24 "try regular expression with regexr.com")
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+## immutable
+
+Indicates this entry cannot be replaced with future revisions (default)
+
+`immutable`
+
+*   is required
+
+*   Type: `boolean`
+
+*   cannot be null
+
+*   defined in: [ZoneExit](zone-exit-properties-immutable.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/immutable")
+
+### immutable Type
+
+`boolean`
+
+## remarks
+
+Free form remarks that are to be added to this journal entry
+
+`remarks`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [ZoneExit](zone-exit-properties-remarks.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/remarks")
+
+### remarks Type
+
+`string`
+
 ## activity_date
 
-The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA
+
 
 `activity_date`
 
@@ -86,6 +220,14 @@ The datetime of the arrival in UTC. GBR: DATI, NLD2: DA + TI, NLD3: DA
 `string`
 
 ### activity_date Constraints
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:[0-5]\d(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B4%7D-%5Cd%7B2%7D-%5Cd%7B2%7DT%5Cd%7B2%7D%3A%5Cd%7B2%7D%3A%5B0-5%5D%5Cd\(%3F%3A%5C.%5Cd%2B\)%3F\(%3F%3AZ%7C%5B%2B-%5D%5Cd%7B2%7D%3A%5Cd%7B2%7D\)%24 "try regular expression with regexr.com")
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
@@ -127,25 +269,25 @@ A navigational position that can be used in an entry
 
 ## catch_on_board
 
-The previously caught fish present on the vessel at the time of entry
+
 
 `catch_on_board`
 
 *   is optional
 
-*   Type: `object[]` ([Fishing catch](arrival-properties-catch-on-board-fishing-catch.md))
+*   Type: `object[]` ([Fishing catch](arrival-properties-catch_on_board-fishing-catch.md))
 
 *   cannot be null
 
-*   defined in: [ZoneExit](zone-exit-properties-catch-on-board.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board")
+*   defined in: [ZoneExit](zone-exit-properties-catch_on_board.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/catch_on_board")
 
 ### catch_on_board Type
 
-`object[]` ([Fishing catch](arrival-properties-catch-on-board-fishing-catch.md))
+`object[]` ([Fishing catch](arrival-properties-catch_on_board-fishing-catch.md))
 
 ## target_species
 
-An indication of the target species for the fishing activity. Only GBR: TS
+
 
 `target_species`
 
@@ -212,7 +354,7 @@ The fishing effort zone. Example: A (ICES V-VI)
 
 ## trans_zonal_fishing
 
-Indicates the vessel has engaged in trans-zonal fishing: GRB: GBRTRZ
+
 
 `trans_zonal_fishing`
 
@@ -230,7 +372,7 @@ Indicates the vessel has engaged in trans-zonal fishing: GRB: GBRTRZ
 
 ## trans_zonal_fishing_zones
 
-The zones involved in trans-zonal fishing. NLD: NLTRZ
+
 
 `trans_zonal_fishing_zones`
 
@@ -240,7 +382,7 @@ The zones involved in trans-zonal fishing. NLD: NLTRZ
 
 *   cannot be null
 
-*   defined in: [ZoneExit](zone-exit-properties-trans-zonal-fishing-areas.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones")
+*   defined in: [ZoneExit](zone-exit-properties-trans_zonal_fishing_zones.md "https://poseidat.org/schema/entry/zone-exit.json#/properties/trans_zonal_fishing_zones")
 
 ### trans_zonal_fishing_zones Type
 
@@ -248,4 +390,18 @@ The zones involved in trans-zonal fishing. NLD: NLTRZ
 
 ## Additional Properties
 
-Additional properties are allowed and do not have to follow a specific schema
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: unknown
+
+*   cannot be null
+
+*   defined in: [ZoneExit](zone-exit-additionalproperties.md "https://poseidat.org/schema/entry/zone-exit.json#/additionalProperties")
+
+### additionalProperties Type
+
+unknown

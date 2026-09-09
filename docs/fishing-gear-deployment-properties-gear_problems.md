@@ -1,4 +1,4 @@
-# Untitled number in Fishing gear deployment Schema
+# Untitled undefined type in Fishing gear deployment Schema
 
 ```txt
 https://poseidat.org/schema/core/fishing-gear-deployment.json#/properties/gear_problems
@@ -12,17 +12,18 @@ Norwegian requirement - gear problems (1=empty net, 2=net burst, 3=net split, 4=
 
 ## gear_problems Type
 
-`number`
+merged type ([Details](fishing-gear-deployment-properties-gear_problems.md))
 
-## gear_problems Constraints
+any of
 
-**enum**: the value of this property must be equal to one of the following values:
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-0.md "check type definition")
 
-| Value | Explanation |
-| :---- | :---------- |
-| `1`   |             |
-| `2`   |             |
-| `3`   |             |
-| `4`   |             |
-| `5`   |             |
-| `6`   |             |
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-1.md "check type definition")
+
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-2.md "check type definition")
+
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-3.md "check type definition")
+
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-4.md "check type definition")
+
+*   [Untitled number in Fishing gear deployment](fishing-gear-deployment-properties-gear_problems-anyof-5.md "check type definition")

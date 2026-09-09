@@ -12,4 +12,4 @@ The fish caught in this tow
 
 ## catches Type
 
-`object[]` ([Fishing catch](arrival-properties-catch-on-board-fishing-catch.md))
+`object[]` ([Fishing catch](arrival-properties-catch_on_board-fishing-catch.md))

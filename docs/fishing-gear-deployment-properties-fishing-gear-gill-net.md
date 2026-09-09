@@ -16,12 +16,13 @@ Deep Sea Permit requirements when using gill nets
 
 # gill_net Properties
 
-| Property                                    | Type     | Required | Nullable       | Defined by                                                                                                                                                                     |
-| :------------------------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [average_gear_length](#average_gear_length) | `number` | Required | cannot be null | [Fishing gear gill net](fishing-gear-gill-net-properties-average_gear_length.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/average_gear_length") |
-| [average_gear_height](#average_gear_height) | `number` | Required | cannot be null | [Fishing gear gill net](fishing-gear-gill-net-properties-average_gear_height.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/average_gear_height") |
-| [nominal_gear_length](#nominal_gear_length) | `number` | Optional | cannot be null | [Fishing gear gill net](fishing-gear-gill-net-properties-nominal_gear_length.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/nominal_gear_length") |
-| [number_of_nets](#number_of_nets)           | `number` | Required | cannot be null | [Fishing gear gill net](fishing-gear-gill-net-properties-number_of_nets.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/number_of_nets")           |
+| Property                                    | Type          | Required | Nullable       | Defined by                                                                                                                                                                     |
+| :------------------------------------------ | :------------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [average_gear_length](#average_gear_length) | `number`      | Required | cannot be null | [Fishing gear gill net](fishing-gear-gill-net-properties-average_gear_length.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/average_gear_length") |
+| [average_gear_height](#average_gear_height) | `number`      | Required | cannot be null | [Fishing gear gill net](fishing-gear-gill-net-properties-average_gear_height.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/average_gear_height") |
+| [nominal_gear_length](#nominal_gear_length) | `number`      | Optional | cannot be null | [Fishing gear gill net](fishing-gear-gill-net-properties-nominal_gear_length.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/nominal_gear_length") |
+| [number_of_nets](#number_of_nets)           | `number`      | Required | cannot be null | [Fishing gear gill net](fishing-gear-gill-net-properties-number_of_nets.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/properties/number_of_nets")           |
+| Additional Properties                       | Not specified | Optional | cannot be null | [Fishing gear gill net](fishing-gear-gill-net-additionalproperties.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/additionalProperties")                     |
 
 ## average_gear_length
 
@@ -94,3 +95,21 @@ Number of nets present in the fleet. NLD: VN, GBR: GNNN
 ### number_of_nets Type
 
 `number`
+
+## Additional Properties
+
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: unknown
+
+*   cannot be null
+
+*   defined in: [Fishing gear gill net](fishing-gear-gill-net-additionalproperties.md "https://poseidat.org/schema/core/fishing-gear-gill-net.json#/additionalProperties")
+
+### additionalProperties Type
+
+unknown

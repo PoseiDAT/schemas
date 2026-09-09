@@ -16,15 +16,16 @@ Fishing vessel details for partnered fishing
 
 # items Properties
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                |
-| :-------------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
-| [hull_number](#hull_number) | `string` | Required | cannot be null | [Vessel partner](vessel-partner-properties-hull_number.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/hull_number") |
-| [rss](#rss)                 | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-rss.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/rss")                 |
-| [cfr](#cfr)                 | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-cfr.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/cfr")                 |
-| [call_sign](#call_sign)     | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-call_sign.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/call_sign")     |
-| [flag_state](#flag_state)   | `string` | Required | cannot be null | [Vessel partner](vessel-partner-properties-flag_state.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/flag_state")   |
-| [name](#name)               | `string` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-name.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/name")               |
-| [master](#master)           | `object` | Optional | cannot be null | [Vessel partner](vessel-partner-properties-vessel-master.md "https://poseidat.org/schema/core/vessel-master.json#/properties/master")     |
+| Property                    | Type          | Required | Nullable       | Defined by                                                                                                                                |
+| :-------------------------- | :------------ | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| [hull_number](#hull_number) | `string`      | Required | cannot be null | [Vessel partner](vessel-partner-properties-hull_number.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/hull_number") |
+| [rss](#rss)                 | `string`      | Optional | cannot be null | [Vessel partner](vessel-partner-properties-rss.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/rss")                 |
+| [cfr](#cfr)                 | `string`      | Optional | cannot be null | [Vessel partner](vessel-partner-properties-cfr.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/cfr")                 |
+| [call_sign](#call_sign)     | `string`      | Optional | cannot be null | [Vessel partner](vessel-partner-properties-call_sign.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/call_sign")     |
+| [flag_state](#flag_state)   | `string`      | Required | cannot be null | [Vessel partner](vessel-partner-properties-flag_state.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/flag_state")   |
+| [name](#name)               | `string`      | Optional | cannot be null | [Vessel partner](vessel-partner-properties-name.md "https://poseidat.org/schema/core/vessel-partner.json#/properties/name")               |
+| [master](#master)           | `object`      | Optional | cannot be null | [Vessel partner](vessel-partner-properties-vessel-master.md "https://poseidat.org/schema/core/vessel-master.json#/properties/master")     |
+| Additional Properties       | Not specified | Optional | cannot be null | [Vessel partner](vessel-partner-additionalproperties.md "https://poseidat.org/schema/core/vessel-partner.json#/additionalProperties")     |
 
 ## hull_number
 
@@ -151,3 +152,21 @@ The vessel master details. Usually one per entry but can differ in a single trip
 ### master Type
 
 `object` ([Vessel master](vessel-partner-properties-vessel-master.md))
+
+## Additional Properties
+
+Additional properties are allowed, as long as they follow this schema:
+
+
+
+*   is optional
+
+*   Type: unknown
+
+*   cannot be null
+
+*   defined in: [Vessel partner](vessel-partner-additionalproperties.md "https://poseidat.org/schema/core/vessel-partner.json#/additionalProperties")
+
+### additionalProperties Type
+
+unknown

@@ -1,0 +1,15 @@
+# Untitled undefined type in Trip entry Schema
+
+```txt
+https://poseidat.org/schema/core/trip-entry.json#/additionalProperties
+```
+
+
+
+| Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                              |
+| :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :---------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [trip-entry.json*](schemas/core/trip-entry.json "open original schema") |
+
+## additionalProperties Type
+
+unknown
