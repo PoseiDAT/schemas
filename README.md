@@ -153,16 +153,21 @@ git clone git@github.com:PoseiDAT/schemas.git
 npm install
 ```
 
-The schemas themselves are found in `src/core-schema`.
-The `src/core-schema/index.ts` needs to be updated to export new schemas when they are added.
-The `src/core-schema/types.ts` is generated form the json schemas when doing an `npm run test` or an `npm run build`.
-Should the need arise to only update the typings run `npm run build:typings`
+Author Zod modules under `src/zod/`, mirroring the JSON under `src/schema/`. `I*` TypeScript types are inferred from those Zod schemas. Run `npm run generate:json-schema` to emit draft-07 and 2020-12 trees under `generated/json-schema/`. `npm test` regenerates those trees and fails if the committed copies are stale.
 
 Please be liberal in adding unit tests in the `test` folder for your schemas and data validation.
 All the code and unit tests are written in TypeScript targeted for NodeJS.
 You can check the line based coverage after running `npm run test` by opening `coverage/lcov-report/index.html` in a web browser.
 
 Documentation is generated on each build and hosted on [github pages](https://poseidat.github.io/schemas/). You can locally test them with `npm run docs`.
+
+## Validation API
+
+`Journal.validate()`, `*Entry.validate()`, `validateEntry()`, and `validateSchema()` use Zod `safeParse` and return an array of Zod issues (empty when valid). They do not throw.
+
+`validateSchema({ object, schema })` takes a Zod schema, not a JSON Schema document. `zod` is a runtime dependency. TypeScript `I*` types are inferred from those Zod schemas.
+
+JSON Schema consumers should bring their own validator (for example AJV) and load schemas from the published `lib/schema` tree, which is still the hand-authored draft-07 copy.
 
 ## Installation
 

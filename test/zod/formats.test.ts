@@ -19,6 +19,10 @@ describe('poseidatUuid', () => {
     expect(poseidatUuid.safeParse('11111111-1111-4111-8111-111111111111').success).toBe(true);
   });
 
+  test('accepts a hex UUID that is not RFC version 4', () => {
+    expect(poseidatUuid.safeParse('11111111-1111-1111-1111-111111111111').success).toBe(true);
+  });
+
   test('rejects a non-uuid', () => {
     expect(poseidatUuid.safeParse('not-a-uuid').success).toBe(false);
   });

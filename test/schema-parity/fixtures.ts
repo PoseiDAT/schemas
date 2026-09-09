@@ -255,6 +255,12 @@ const invalidCases: SchemaFixture[] = [
     valid: false,
   },
   {
+    name: 'journal / hex uuid without RFC version nibble',
+    schemaId: SchemaId.journal,
+    data: { ...clone(validJournal), journal_id: '11111111-1111-1111-1111-111111111111' },
+    valid: true,
+  },
+  {
     name: 'arrival / trip.date is a date not a date-time',
     schemaId: SchemaId.arrival,
     data: {

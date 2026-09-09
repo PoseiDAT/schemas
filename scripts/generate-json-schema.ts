@@ -35,6 +35,11 @@ export const generateJsonSchema = (outputRoot = ROOT): void => {
           ctx.jsonSchema.format = 'date';
           delete (ctx.jsonSchema as { pattern?: string }).pattern;
         }
+        if (ctx.jsonSchema.format === 'uuid') {
+          ctx.jsonSchema.type = 'string';
+          ctx.jsonSchema.format = 'uuid';
+          delete (ctx.jsonSchema as { pattern?: string }).pattern;
+        }
       },
     });
 

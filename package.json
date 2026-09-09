@@ -17,8 +17,10 @@
     "lint": "eslint .",
     "prepare": "npm run build",
     "rebuild": "npm-run-all clean build:compile",
+    "typecheck": "tsc -p tsconfig.spec.json --pretty false",
+    "test:generated-fresh": "git diff --exit-code -- generated/json-schema",
     "test:jest": "jest --silent --coverage test/",
-    "test": "npm-run-all generate:json-schema test:jest",
+    "test": "npm-run-all generate:json-schema test:generated-fresh typecheck test:jest",
     "watch": "tsc -b src/ --watch"
   },
   "repository": {

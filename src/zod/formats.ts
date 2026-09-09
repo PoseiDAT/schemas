@@ -15,4 +15,10 @@ export const poseidatDate = z.string().regex(DATE).meta({
   format: 'date',
 });
 
-export const poseidatUuid = z.uuid();
+// AJV `format: uuid` accepts any hex UUID shape, not only RFC version/variant nibbles.
+const UUID =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+export const poseidatUuid = z.string().regex(UUID).meta({
+  format: 'uuid',
+});

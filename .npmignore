@@ -2,6 +2,8 @@ src
 test
 coverage
 docs
+scripts
+generated
 tsconfig.json
 tsconfig.tsbuildinfo
 poseidat-schemas-*.tgz
