@@ -1,4 +1,8 @@
-import { poseidatDateTime, poseidatUuid } from "../../src/validators/formats";
+import {
+  POSEIDAT_DATE_TIME_PATTERN,
+  poseidatDateTime,
+  poseidatUuid,
+} from "../../src/validators/formats";
 
 describe("poseidatDateTime", () => {
   test("accepts uppercase Z", () => {
@@ -31,6 +35,16 @@ describe("poseidatDateTime", () => {
 
   test("rejects a date without a time", () => {
     expect(poseidatDateTime.safeParse("2021-01-01").success).toBe(false);
+  });
+
+  test("pattern rejects a leap second", () => {
+    expect(
+      new RegExp(POSEIDAT_DATE_TIME_PATTERN).test("2021-01-01T23:59:60Z"),
+    ).toBe(false);
+  });
+
+  test("rejects a leap second timestamp", () => {
+    expect(poseidatDateTime.safeParse("2021-01-01T23:59:60Z").success).toBe(false);
   });
 });
 

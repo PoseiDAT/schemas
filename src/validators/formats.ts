@@ -1,7 +1,7 @@
 import * as z from 'zod';
 
 export const POSEIDAT_DATE_TIME_PATTERN =
-  '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$';
+  '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:[0-5]\\d(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$';
 
 const isRealCalendarDate = (value: string): boolean => {
   const datePart = value.split('T')[0];
