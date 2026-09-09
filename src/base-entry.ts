@@ -1,7 +1,7 @@
-import * as z from 'zod';
-import { ICoreBaseEntry } from './schema-types';
-import { validateSchema, ValidationIssue } from './schema-validator';
-import { baseEntrySchema } from './zod/core/base-entry';
+import * as z from "zod";
+import { ICoreBaseEntry } from "./schema-types";
+import { validateSchema, ValidationIssue } from "./schema-validator";
+import { baseEntrySchema } from "./validators/core/base-entry";
 
 /**
  * Convenience class for constructing and validating an Entry
@@ -11,7 +11,6 @@ import { baseEntrySchema } from './zod/core/base-entry';
  * @class BaseEntry
  */
 export class BaseEntry {
-
   /**
    * Creates an instance of Entry
    *
@@ -20,7 +19,7 @@ export class BaseEntry {
   constructor(
     public data: ICoreBaseEntry,
     protected schema: z.ZodType = baseEntrySchema,
-    entryType = 'base-entry',
+    entryType = "base-entry",
   ) {
     this.data.entry_type = entryType;
   }
@@ -31,6 +30,6 @@ export class BaseEntry {
    * @returns {ValidationIssue[]}
    */
   public validate(): ValidationIssue[] {
-    return validateSchema( { object: this.data, schema: this.schema } );
+    return validateSchema({ object: this.data, schema: this.schema });
   }
 }

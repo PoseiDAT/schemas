@@ -6,7 +6,9 @@ export const POSEIDAT_DATE_TIME_PATTERN =
 const isRealCalendarDate = (value: string): boolean => {
   const datePart = value.split('T')[0];
   const [year, month, day] = datePart.split('-').map(Number);
-  const utc = new Date(Date.UTC(year, month - 1, day));
+  const utc = new Date(0);
+  utc.setUTCHours(0, 0, 0, 0);
+  utc.setUTCFullYear(year, month - 1, day);
   return (
     utc.getUTCFullYear() === year &&
     utc.getUTCMonth() === month - 1 &&

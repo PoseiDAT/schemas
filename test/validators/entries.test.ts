@@ -5,37 +5,37 @@ import {
   validDeviceMeasurementPosition,
   validEquipmentInventory,
   validRoute,
-} from '../schema-parity/fixtures';
-import { SchemaId } from '../schema-parity/schema-ids';
-import { zodBySchemaId } from '../../src/zod/by-id';
-import { entryUnionSchema } from '../../src/zod/entry';
+} from "../schema-parity/fixtures";
+import { SchemaId } from "../schema-parity/schema-ids";
+import { zodBySchemaId } from "../../src/validators/by-id";
+import { entryUnionSchema } from "../../src/validators/entry";
 
-test.each(schemaFixtures)('zod $name', (fixture) => {
+test.each(schemaFixtures)("zod $name", (fixture) => {
   const schema = zodBySchemaId[fixture.schemaId];
   expect(schema.safeParse(fixture.data).success).toBe(fixture.valid);
 });
 
-test('entry union accepts arrival and rejects unknown type', () => {
+test("entry union accepts arrival and rejects unknown type", () => {
   expect(entryUnionSchema.safeParse(validArrival).success).toBe(true);
   expect(
     entryUnionSchema.safeParse({
       ...validDeviceMeasurementPosition,
-      entry_type: 'not-an-entry-type',
+      entry_type: "not-an-entry-type",
     }).success,
   ).toBe(false);
 });
 
 test.each([
   {
-    name: 'departure gear_on_board',
+    name: "departure gear_on_board",
     schemaId: SchemaId.departure,
     data: {
       ...validDeparture,
-      gear_on_board: [{ code: 'TBB' }, { code: 'TBB' }],
+      gear_on_board: [{ code: "TBB" }, { code: "TBB" }],
     },
   },
   {
-    name: 'equipment inventory equipment',
+    name: "equipment inventory equipment",
     schemaId: SchemaId.equipmentInventory,
     data: {
       ...validEquipmentInventory,
@@ -46,18 +46,18 @@ test.each([
     },
   },
   {
-    name: 'route waypoints',
+    name: "route waypoints",
     schemaId: SchemaId.route,
     data: {
       ...validRoute,
       waypoints: [validRoute.waypoints[0], { ...validRoute.waypoints[0] }],
     },
   },
-])('zod rejects deeply equal items in $name', ({ schemaId, data }) => {
+])("zod rejects deeply equal items in $name", ({ schemaId, data }) => {
   expect(zodBySchemaId[schemaId].safeParse(data).success).toBe(false);
 });
 
-test('route waypoints treat 0 and -0 as equal for uniqueItems', () => {
+test("route waypoints treat 0 and -0 as equal for uniqueItems", () => {
   const result = zodBySchemaId[SchemaId.route].safeParse({
     ...validRoute,
     waypoints: [

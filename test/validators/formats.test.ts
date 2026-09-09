@@ -9,6 +9,10 @@ describe("poseidatDateTime", () => {
     expect(poseidatDateTime.safeParse("2021-01-01T01:00:00+01:00").success).toBe(true);
   });
 
+  test("accepts a year between 0001 and 0099", () => {
+    expect(poseidatDateTime.safeParse("0001-01-01T00:00:00Z").success).toBe(true);
+  });
+
   test("rejects lowercase z", () => {
     expect(poseidatDateTime.safeParse("2021-01-01T01:00:00z").success).toBe(false);
   });

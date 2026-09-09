@@ -1,18 +1,15 @@
-import * as z from 'zod';
-import { entryUnionSchema } from './zod/entry';
+import * as z from "zod";
+import { entryUnionSchema } from "./validators/entry";
 
 export type ValidationIssue = z.core.$ZodIssue;
 
-export function validateSchema(
-  {
-    object,
-    schema,
-  }:
-  {
-    object: unknown;
-    schema: z.ZodType;
-  },
-): ValidationIssue[] {
+export function validateSchema({
+  object,
+  schema,
+}: {
+  object: unknown;
+  schema: z.ZodType;
+}): ValidationIssue[] {
   const result = schema.safeParse(object);
   return result.success ? [] : result.error.issues;
 }
