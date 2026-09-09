@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "target": "es5",
+    "ignoreDeprecations": "6.0",
+    "target": "ES2018",
     "module": "commonjs",
-    "lib": [
-      "es5"
-    ],
+    "lib": ["ES2018"],
     "esModuleInterop": true,
     "strict": true,
     "declaration": true,
@@ -16,16 +15,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
+    "types": ["node"],
     "outDir": "lib",
     "rootDir": "src"
   },
-  "include": [
-    "src/*",
-    "src/schema/**/*.json",
-  ],
-  "exclude": [
-    "node_modules",
-    "test",
-    "rollup.config.ts"
-  ]
+  "include": ["src/**/*.ts", "src/schema/**/*.json"],
+  "exclude": ["node_modules", "test", "scripts"]
 }
