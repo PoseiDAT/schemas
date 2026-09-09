@@ -19,11 +19,8 @@ const pathFromId = (id: string): string => {
   return id.slice(ORIGIN.length);
 };
 
-export const generateJsonSchema = (): void => {
-  for (const dialect of dialects) {
-    const outRoot = join(ROOT, dialect.dir);
-    rmSync(outRoot, { recursive: true, force: true });
-
+export const generateJsonSchema = (outputRoot = ROOT): void => {
+  const generated = dialects.map((dialect) => {
     const result = z.toJSONSchema(poseidatRegistry, {
       target: dialect.target,
       uri: (id) => id,
@@ -42,10 +39,21 @@ export const generateJsonSchema = (): void => {
     });
 
     const schemas = result.schemas as Record<string, { $id?: string }>;
-    for (const [key, schema] of Object.entries(schemas)) {
-      if (key === '__shared') continue;
-      const id = schema.$id ?? key;
-      const rel = pathFromId(id);
+    const files = Object.entries(schemas)
+      .filter(([key]) => key !== '__shared')
+      .map(([key, schema]) => ({
+        rel: pathFromId(schema.$id ?? key),
+        schema,
+      }));
+
+    return { dialect, files };
+  });
+
+  for (const { dialect, files } of generated) {
+    const outRoot = join(outputRoot, dialect.dir);
+    rmSync(outRoot, { recursive: true, force: true });
+
+    for (const { rel, schema } of files) {
       const file = join(outRoot, rel);
       mkdirSync(dirname(file), { recursive: true });
       writeFileSync(file, `${JSON.stringify(schema, null, 2)}\n`, 'utf8');
