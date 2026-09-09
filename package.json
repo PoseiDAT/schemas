@@ -14,6 +14,7 @@
     "clean": "rimraf lib",
     "docs:serve": "docsify serve docs",
     "docs": "npm-run-all build:docs docs:serve",
+    "generate:json-schema": "tsx scripts/generate-json-schema.ts",
     "lint": "eslint .",
     "prepare": "npm run build",
     "rebuild": "npm-run-all clean build:compile",
