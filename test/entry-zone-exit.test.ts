@@ -27,9 +27,9 @@ describe('ZoneExitEntry', () => {
         entry_id: v4(),
         journal_id: v4(),
         entry_type: "zone-exit",
-        revision: "2021-01-01T01:00:00z",
+        revision: "2021-01-01T01:00:00Z",
         immutable: false,
-        activity_date: "2021-01-01T01:00:00z",
+        activity_date: "2021-01-01T01:00:00Z",
         location: {
           latitude: 1,
           longitude: 2

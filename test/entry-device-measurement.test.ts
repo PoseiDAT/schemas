@@ -27,7 +27,7 @@ describe('DeviceMeasurementEntry', () => {
         journal_id: v4(),
         entry_id: v4(),
         entry_type: "device-measurement",
-        revision: "2021-01-01T01:00:00z",
+        revision: "2021-01-01T01:00:00Z",
         immutable: false,
         device_id: "DEVICE_ID_STRING",
         value : {

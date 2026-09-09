@@ -169,6 +169,14 @@ Documentation is generated on each build and hosted on [github pages](https://po
 
 JSON Schema consumers should bring their own validator (for example AJV) and load schemas from the published `lib/schema` tree, which is still the hand-authored draft-07 copy.
 
+## Breaking changes (0.1.0)
+
+Validation is the intersection of AJV and Zod. These inputs that used to pass now fail:
+
+- Date-times must use uppercase `T` and either uppercase `Z` or an offset with a colon (`2021-01-01T01:00:00Z`, `2021-01-01T01:00:00+01:00`). Lowercase `z` or `t`, offsets like `+0100`, and impossible calendar dates are invalid.
+- `measurement-value` `type` must match the payload key (`POSITION` with `position`, `SCALE` with `scale`, and so on). Types without a dedicated object use `numeric`. `{ "type": "POSITION", "numeric": { "value": 1 } }` is invalid.
+- `fishing-catch` must have exactly one of `weight` or `number_of_fish`, not both.
+
 ## Installation
 
 Install the npm package by running the npm install command:

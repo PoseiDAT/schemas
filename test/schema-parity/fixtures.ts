@@ -211,6 +211,21 @@ const validCases: SchemaFixture[] = [
   { name: 'vessel-registration / minimal', schemaId: SchemaId.vesselRegistration, data: validVesselRegistration, valid: true },
   { name: 'zone-enter / minimal', schemaId: SchemaId.zoneEnter, data: validZoneEnter, valid: true },
   { name: 'zone-exit / minimal', schemaId: SchemaId.zoneExit, data: validZoneExit, valid: true },
+  {
+    name: 'arrival / offset with colon',
+    schemaId: SchemaId.arrival,
+    data: { ...clone(validArrival), activity_date: '2021-01-01T01:00:00+01:00' },
+    valid: true,
+  },
+  {
+    name: 'arrival / catch number_of_fish only',
+    schemaId: SchemaId.arrival,
+    data: {
+      ...clone(validArrival),
+      catch_on_board: [{ code: 'COD', number_of_fish: 12 }],
+    },
+    valid: true,
+  },
 ];
 
 const emptyObjectCases: SchemaFixture[] = Object.values(SchemaId).map((schemaId) => ({
@@ -288,7 +303,7 @@ const invalidCases: SchemaFixture[] = [
     valid: false,
   },
   {
-    name: 'device-measurement / type POSITION with numeric payload (current oneOf allows this)',
+    name: 'device-measurement / type POSITION with numeric payload',
     schemaId: SchemaId.deviceMeasurement,
     data: {
       ...clone(validDeviceMeasurementPosition),
@@ -297,7 +312,7 @@ const invalidCases: SchemaFixture[] = [
         numeric: { value: 1 },
       },
     },
-    valid: true,
+    valid: false,
   },
   {
     name: 'device-measurement / value missing payload',
@@ -312,6 +327,39 @@ const invalidCases: SchemaFixture[] = [
     name: 'route / no waypoints',
     schemaId: SchemaId.route,
     data: { ...clone(validRoute), waypoints: [] },
+    valid: false,
+  },
+  {
+    name: 'arrival / lowercase z activity_date',
+    schemaId: SchemaId.arrival,
+    data: { ...clone(validArrival), activity_date: '2021-01-01T01:00:00z' },
+    valid: false,
+  },
+  {
+    name: 'arrival / lowercase t activity_date',
+    schemaId: SchemaId.arrival,
+    data: { ...clone(validArrival), activity_date: '2021-01-01t01:00:00Z' },
+    valid: false,
+  },
+  {
+    name: 'arrival / offset without colon',
+    schemaId: SchemaId.arrival,
+    data: { ...clone(validArrival), activity_date: '2021-01-01T01:00:00+0100' },
+    valid: false,
+  },
+  {
+    name: 'arrival / impossible calendar date',
+    schemaId: SchemaId.arrival,
+    data: { ...clone(validArrival), activity_date: '2021-02-30T00:00:00Z' },
+    valid: false,
+  },
+  {
+    name: 'arrival / catch with weight and number_of_fish',
+    schemaId: SchemaId.arrival,
+    data: {
+      ...clone(validArrival),
+      catch_on_board: [{ code: 'COD', weight: 100, number_of_fish: 12 }],
+    },
     valid: false,
   },
 ];

@@ -27,7 +27,7 @@ describe('VesselRegistrationEntry', () => {
         journal_id: v4(),
         entry_id: v4(),
         entry_type: "vessel-registration",
-        revision: "2021-01-01T01:00:00z",
+        revision: "2021-01-01T01:00:00Z",
         immutable: false,
         vessel: {
           name: 'SeaDragon',

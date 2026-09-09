@@ -27,7 +27,7 @@ describe('EquipmentInventoryEntry', () => {
         journal_id: v4(),
         entry_id: v4(),
         entry_type: "equipment-inventory",
-        revision: "2021-01-01T01:00:00z",
+        revision: "2021-01-01T01:00:00Z",
         immutable: false,
         equipment : [
           {

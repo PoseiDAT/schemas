@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync, rmSync } from "fs";
 import { dirname, join } from "path";
 import * as z from "zod";
 import {
+  fishingCatchSchema,
   POSEIDAT_DATE_TIME_PATTERN,
   poseidatDate,
   poseidatRegistry,
@@ -38,6 +39,12 @@ export const generateJsonSchema = (outputRoot = ROOT): void => {
           ctx.jsonSchema.type = "string";
           ctx.jsonSchema.format = "date";
           delete (ctx.jsonSchema as { pattern?: string }).pattern;
+        }
+        if (ctx.zodSchema === fishingCatchSchema) {
+          ctx.jsonSchema.oneOf = [
+            { required: ["weight"] },
+            { required: ["number_of_fish"] },
+          ];
         }
         if (ctx.jsonSchema.format === "uuid") {
           ctx.jsonSchema.type = "string";

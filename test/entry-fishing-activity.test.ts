@@ -27,15 +27,15 @@ describe('FishingActivityEntry', () => {
         journal_id: v4(),
         entry_id: v4(),
         entry_type: "fishing-activity",
-        revision: "2021-01-01T01:00:00z",
+        revision: "2021-01-01T01:00:00Z",
         immutable: false,
         trip : {
-            date: "2021-01-01T01:00:00z",
+            date: "2021-01-01T01:00:00Z",
             trip_nr: "NLD",
             record_nr: "NLD"
         },
         tow: {
-          activity_date_start: "2021-01-01T01:00:00z",
+          activity_date_start: "2021-01-01T01:00:00Z",
           zone: {}
         }
     };

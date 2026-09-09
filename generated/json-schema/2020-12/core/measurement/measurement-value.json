@@ -1,79 +1,16 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/measurement/measurement-value.json",
-  "anyOf": [
+  "oneOf": [
     {
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "https://poseidat.org/schema/enum/measurement-type.json"
+          "type": "string",
+          "const": "POSITION"
         },
         "position": {
           "$ref": "https://poseidat.org/schema/core/measurement/position.json"
-        },
-        "numeric": {
-          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
-        },
-        "trawl_tension": {
-          "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
-        },
-        "scale": {
-          "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
-        },
-        "fuel_consumption": {
-          "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
-        },
-        "spatial_axes": {
-          "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
-        },
-        "subsurface": {
-          "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
-        },
-        "speedlog": {
-          "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
-        },
-        "weather": {
-          "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
-        }
-      },
-      "required": [
-        "type",
-        "numeric"
-      ],
-      "additionalProperties": false
-    },
-    {
-      "type": "object",
-      "properties": {
-        "type": {
-          "$ref": "https://poseidat.org/schema/enum/measurement-type.json"
-        },
-        "position": {
-          "$ref": "https://poseidat.org/schema/core/measurement/position.json"
-        },
-        "numeric": {
-          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
-        },
-        "trawl_tension": {
-          "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
-        },
-        "scale": {
-          "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
-        },
-        "fuel_consumption": {
-          "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
-        },
-        "spatial_axes": {
-          "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
-        },
-        "subsurface": {
-          "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
-        },
-        "speedlog": {
-          "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
-        },
-        "weather": {
-          "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
         }
       },
       "required": [
@@ -86,74 +23,11 @@
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "https://poseidat.org/schema/enum/measurement-type.json"
-        },
-        "position": {
-          "$ref": "https://poseidat.org/schema/core/measurement/position.json"
-        },
-        "numeric": {
-          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
-        },
-        "trawl_tension": {
-          "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
+          "type": "string",
+          "const": "SCALE"
         },
         "scale": {
           "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
-        },
-        "fuel_consumption": {
-          "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
-        },
-        "spatial_axes": {
-          "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
-        },
-        "subsurface": {
-          "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
-        },
-        "speedlog": {
-          "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
-        },
-        "weather": {
-          "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
-        }
-      },
-      "required": [
-        "type",
-        "trawl_tension"
-      ],
-      "additionalProperties": false
-    },
-    {
-      "type": "object",
-      "properties": {
-        "type": {
-          "$ref": "https://poseidat.org/schema/enum/measurement-type.json"
-        },
-        "position": {
-          "$ref": "https://poseidat.org/schema/core/measurement/position.json"
-        },
-        "numeric": {
-          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
-        },
-        "trawl_tension": {
-          "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
-        },
-        "scale": {
-          "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
-        },
-        "fuel_consumption": {
-          "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
-        },
-        "spatial_axes": {
-          "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
-        },
-        "subsurface": {
-          "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
-        },
-        "speedlog": {
-          "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
-        },
-        "weather": {
-          "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
         }
       },
       "required": [
@@ -166,34 +40,11 @@
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "https://poseidat.org/schema/enum/measurement-type.json"
-        },
-        "position": {
-          "$ref": "https://poseidat.org/schema/core/measurement/position.json"
-        },
-        "numeric": {
-          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
-        },
-        "trawl_tension": {
-          "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
-        },
-        "scale": {
-          "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
+          "type": "string",
+          "const": "FUEL_CONSUMPTION"
         },
         "fuel_consumption": {
           "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
-        },
-        "spatial_axes": {
-          "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
-        },
-        "subsurface": {
-          "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
-        },
-        "speedlog": {
-          "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
-        },
-        "weather": {
-          "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
         }
       },
       "required": [
@@ -206,34 +57,28 @@
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "https://poseidat.org/schema/enum/measurement-type.json"
-        },
-        "position": {
-          "$ref": "https://poseidat.org/schema/core/measurement/position.json"
-        },
-        "numeric": {
-          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
+          "type": "string",
+          "const": "TRAWL_TENSION"
         },
         "trawl_tension": {
           "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
-        },
-        "scale": {
-          "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
-        },
-        "fuel_consumption": {
-          "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
+        }
+      },
+      "required": [
+        "type",
+        "trawl_tension"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "SPATIAL_AXES"
         },
         "spatial_axes": {
           "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
-        },
-        "subsurface": {
-          "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
-        },
-        "speedlog": {
-          "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
-        },
-        "weather": {
-          "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
         }
       },
       "required": [
@@ -246,34 +91,11 @@
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "https://poseidat.org/schema/enum/measurement-type.json"
-        },
-        "position": {
-          "$ref": "https://poseidat.org/schema/core/measurement/position.json"
-        },
-        "numeric": {
-          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
-        },
-        "trawl_tension": {
-          "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
-        },
-        "scale": {
-          "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
-        },
-        "fuel_consumption": {
-          "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
-        },
-        "spatial_axes": {
-          "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
+          "type": "string",
+          "const": "SUBSURFACE"
         },
         "subsurface": {
           "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
-        },
-        "speedlog": {
-          "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
-        },
-        "weather": {
-          "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
         }
       },
       "required": [
@@ -286,34 +108,11 @@
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "https://poseidat.org/schema/enum/measurement-type.json"
-        },
-        "position": {
-          "$ref": "https://poseidat.org/schema/core/measurement/position.json"
-        },
-        "numeric": {
-          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
-        },
-        "trawl_tension": {
-          "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
-        },
-        "scale": {
-          "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
-        },
-        "fuel_consumption": {
-          "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
-        },
-        "spatial_axes": {
-          "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
-        },
-        "subsurface": {
-          "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
+          "type": "string",
+          "const": "SPEEDLOG"
         },
         "speedlog": {
           "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
-        },
-        "weather": {
-          "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
         }
       },
       "required": [
@@ -326,31 +125,8 @@
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "https://poseidat.org/schema/enum/measurement-type.json"
-        },
-        "position": {
-          "$ref": "https://poseidat.org/schema/core/measurement/position.json"
-        },
-        "numeric": {
-          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
-        },
-        "trawl_tension": {
-          "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
-        },
-        "scale": {
-          "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
-        },
-        "fuel_consumption": {
-          "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
-        },
-        "spatial_axes": {
-          "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
-        },
-        "subsurface": {
-          "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
-        },
-        "speedlog": {
-          "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
+          "type": "string",
+          "const": "WEATHER"
         },
         "weather": {
           "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
@@ -359,6 +135,40 @@
       "required": [
         "type",
         "weather"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "ACCELERATION",
+            "ANGULAR_VELOCITY",
+            "CURRENT",
+            "DEPTH",
+            "ENERGY_CONSUMPTION",
+            "FORCE",
+            "HUMIDITY",
+            "MAGNETISM",
+            "ONOFF",
+            "POWER",
+            "PRESSURE",
+            "ROUTE",
+            "RPM",
+            "SPEED",
+            "TEMPERATURE",
+            "VOLTAGE"
+          ]
+        },
+        "numeric": {
+          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
+        }
+      },
+      "required": [
+        "type",
+        "numeric"
       ],
       "additionalProperties": false
     }
