@@ -2,7 +2,7 @@
 // Could be handy when people are building parts of an entry and want to validate
 // them before creating the entire entry
 //
-export { validateSchema } from './schema-validator';
+export { validateSchema, validateEntry } from './schema-validator';
 
 // The main journal class
 //
@@ -24,3 +24,4 @@ export * from './entry-zone-exit';
 // Supporting types
 //
 export * from './schema-types';
+export * from './zod';

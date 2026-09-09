@@ -9,8 +9,7 @@
     "build:compile": "tsc -b --verbose",
     "build:copy-schema": "cp -r src/schema lib",
     "build:docs": "rm -rf docs/schemas && jsonschema2md -x docs/schemas -e json -d src/schema -o docs",
-    "build:typings": "jsonschema2typings --path-depth 2 --type-prefix I --export -o src/schema-types.ts ./src/schema/core/*.json ./src/schema/core/**/*.json ./src/schema/enum/*.json ./src/schema/entry/*.json",
-    "build": "npm-run-all build:clean build:typings build:compile build:copy-schema build:docs",
+    "build": "npm-run-all build:clean build:compile build:copy-schema build:docs",
     "clean": "rimraf lib",
     "docs:serve": "docsify serve docs",
     "docs": "npm-run-all build:docs docs:serve",
@@ -19,7 +18,7 @@
     "prepare": "npm run build",
     "rebuild": "npm-run-all clean build:compile",
     "test:jest": "jest --silent --coverage test/",
-    "test": "npm-run-all generate:json-schema build:typings test:jest",
+    "test": "npm-run-all generate:json-schema test:jest",
     "watch": "tsc -b src/ --watch"
   },
   "repository": {
@@ -59,7 +58,6 @@
     "eslint": "^9.39.5",
     "husky": "^7.0.2",
     "jest": "^30.5.1",
-    "jsonschema-to-typings": "^0.2.14",
     "lint-staged": "^11.2.3",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",

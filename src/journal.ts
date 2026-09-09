@@ -1,7 +1,6 @@
-import { ErrorObject } from 'ajv';
-import { schemas } from './schemas';
 import { ICoreJournal } from './schema-types';
-import { validateSchema } from './schema-validator';
+import { validateSchema, ValidationIssue } from './schema-validator';
+import { journalSchema } from './zod/core/journal';
 
 /**
  * Convenience class for constructing and validating a Journal
@@ -21,9 +20,9 @@ export class Journal {
   /**
    * Validates the current Journal data against the core schema
    *
-   * @returns {ajv.ErrorObject[]}
+   * @returns {ValidationIssue[]}
    */
-  public validate(): ErrorObject[] {
-    return validateSchema( { object: this.data, schema: schemas.core.journal } );
+  public validate(): ValidationIssue[] {
+    return validateSchema( { object: this.data, schema: journalSchema } );
   }
 }

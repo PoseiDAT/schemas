@@ -18,11 +18,9 @@ describe('Journal', () => {
 
     const validationErrors = journal.validate();
     expect(validationErrors).toBeDefined();
-    expect(validationErrors.length).toEqual(2);
-    expect(validationErrors[0].message).toEqual('must have required property \'journal_id\'');
-    expect(validationErrors[0].schemaPath).toEqual('#/required');
-    expect(validationErrors[1].message).toEqual('must have required property \'vessel\'');
-    expect(validationErrors[1].schemaPath).toEqual('#/required');
+    expect(validationErrors.length).toBeGreaterThan(0);
+    expect(validationErrors.some((issue) => issue.path.join('/') === 'journal_id')).toBe(true);
+    expect(validationErrors.some((issue) => issue.path.join('/') === 'vessel')).toBe(true);
   });
 
   test('Validating a minimal Journal should succeed', () => {

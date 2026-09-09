@@ -1,11 +1,11 @@
 import { BaseEntry } from './base-entry';
-import { schemas } from './schemas';
 import { IEntryZoneExit } from './schema-types';
+import { zoneExitSchema } from './zod/entry/zone-exit';
 
 export class ZoneExitEntry extends BaseEntry {
   constructor(
     public data: IEntryZoneExit,
   ) {
-    super(data, schemas.entry.zoneExit, 'zone-exit');
+    super(data, zoneExitSchema, 'zone-exit');
   }
 }

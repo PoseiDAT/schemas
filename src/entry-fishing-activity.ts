@@ -1,11 +1,11 @@
 import { BaseEntry } from './base-entry';
-import { schemas } from './schemas';
 import { IEntryFishingActivity } from './schema-types';
+import { fishingActivitySchema } from './zod/entry/fishing-activity';
 
 export class FishingActivityEntry extends BaseEntry {
   constructor(
     public data: IEntryFishingActivity,
   ) {
-    super(data, schemas.entry.fishingActivity, 'fishing-activity');
+    super(data, fishingActivitySchema, 'fishing-activity');
   }
 }

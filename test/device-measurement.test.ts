@@ -11,19 +11,10 @@ describe('DeviceMeasurementEntry', () => {
     const measurementEntry = new DeviceMeasurementEntry({} as IEntryDeviceMeasurement);
     const validationErrors = measurementEntry.validate();
     expect(validationErrors).toBeDefined();
-    expect(validationErrors.length).toEqual(6);
-    expect(validationErrors[0].message).toEqual("must have required property 'journal_id'");
-    expect(validationErrors[0].schemaPath).toEqual('https://poseidat.org/schema/core/base-entry.json/required');
-    expect(validationErrors[1].message).toEqual("must have required property 'entry_id'");
-    expect(validationErrors[1].schemaPath).toEqual('https://poseidat.org/schema/core/base-entry.json/required');
-    expect(validationErrors[2].message).toEqual("must have required property 'revision'");
-    expect(validationErrors[2].schemaPath).toEqual('https://poseidat.org/schema/core/base-entry.json/required');
-    expect(validationErrors[3].message).toEqual("must have required property 'immutable'");
-    expect(validationErrors[3].schemaPath).toEqual('https://poseidat.org/schema/core/base-entry.json/required');
-    expect(validationErrors[4].message).toEqual("must have required property 'device_id'");
-    expect(validationErrors[4].schemaPath).toEqual('#/required');
-    expect(validationErrors[5].message).toEqual("must have required property 'value'");
-    expect(validationErrors[5].schemaPath).toEqual('#/required');
+    expect(validationErrors.length).toBeGreaterThan(0);
+    for (const path of ['journal_id', 'entry_id', 'revision', 'immutable', 'device_id', 'value']) {
+      expect(validationErrors.some((issue) => issue.path.join('/') === path)).toBe(true);
+    }
   });
 
   test('Validating a minimal position DeviceMeasurementEntry should succeed', () => {

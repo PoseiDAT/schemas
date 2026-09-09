@@ -1,43 +1,21 @@
-import { JSONSchema7 } from 'json-schema';
+import * as z from 'zod';
 import { validateSchema } from '../src/index';
 
-const minimalSchema: JSONSchema7 = {
-  $schema: 'http://json-schema.org/draft-07/schema#',
-  $id: 'https://poseidat.org/schema/unit-test.json',
-  title: 'UnitTest',
-  description: 'A minimal schema for unit testing purposes',
-  properties: {
-    test: {
-      type: 'string',
-      description: 'Any string value will do'
-    },
-  }
-};
+const minimalSchema = z.object({ test: z.string() });
 
 describe('Schema-validator', () => {
-
   test('Validate function needs to be defined', () => {
     expect(validateSchema).toBeDefined();
   });
 
-  test('Validate a minimal JSON schema with valid data', () => {
-    const testData = {
-      test: "yes"
-    };
-    const validationErrors = validateSchema( { object: testData, schema: minimalSchema } );
-    expect(validationErrors).toBeDefined();
-    expect(validationErrors.length).toEqual(0);
+  test('Validate a minimal schema with valid data', () => {
+    const errors = validateSchema({ object: { test: 'yes' }, schema: minimalSchema });
+    expect(errors.length).toEqual(0);
   });
 
-  test('Validate a minimal JSON schema with invalid data', () => {
-    const testData = {
-      test: 0
-    };
-    const validationErrors = validateSchema( { object: testData, schema: minimalSchema } );
-    expect(validationErrors).toBeDefined();
-    expect(validationErrors.length).toEqual(1);
-    expect(validationErrors[0].message).toEqual('must be string');
-    expect(validationErrors[0].schemaPath).toEqual('#/properties/test/type');
-    expect(validationErrors[0].instancePath).toEqual('/test');
+  test('Validate a minimal schema with invalid data', () => {
+    const errors = validateSchema({ object: { test: 0 }, schema: minimalSchema });
+    expect(errors.length).toBeGreaterThan(0);
+    expect(errors.some((issue) => issue.path.join('/') === 'test')).toBe(true);
   });
 });
