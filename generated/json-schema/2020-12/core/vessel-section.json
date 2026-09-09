@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poseidat.org/schema/core/vessel-section.json",
+  "type": "object",
+  "properties": {
+    "vessel_section_id": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$",
+      "description": "The unique identifier for the section (UUID v4)"
+    },
+    "compartment": {
+      "description": "The compartment this section is in",
+      "$ref": "https://poseidat.org/schema/enum/vessel-compartment.json"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of this section"
+    },
+    "description": {
+      "type": "string",
+      "description": "The description of this section in the compartment"
+    },
+    "pos_x": {
+      "type": "number",
+      "description": "The x position in cm, the position which is closest to the port side is 0cm"
+    },
+    "pos_y": {
+      "type": "number",
+      "description": "The y position in cm, the position which is closest to the stern is 0cm"
+    },
+    "pos_z": {
+      "type": "number",
+      "description": "The z position in cm, the position which is closest to the keel is 0cm"
+    }
+  },
+  "required": [
+    "vessel_section_id",
+    "compartment"
+  ],
+  "additionalProperties": {},
+  "title": "Vessel section",
+  "description": "A section off a vessel, used to detail where objects are on the vessel"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/numeric.json",
+  "type": "object",
+  "properties": {
+    "value": {
+      "type": "number",
+      "description": "The absolute measured value"
+    }
+  },
+  "required": [
+    "value"
+  ],
+  "additionalProperties": false,
+  "title": "Numeric",
+  "description": "A number representing a measurement from a sensor"
+}

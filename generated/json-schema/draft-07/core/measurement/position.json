@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/position.json",
+  "type": "object",
+  "properties": {
+    "latitude": {
+      "type": "number",
+      "description": "The latitude of the geographical location"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "The longitude of the geographical location"
+    },
+    "course_made_good": {
+      "type": "number",
+      "description": "The direction in which the vessel is traveling, in degrees"
+    },
+    "speed_over_ground": {
+      "type": "number",
+      "description": "The velocity of the vessel in meters per second (m/s) over the ground"
+    },
+    "number_of_satellites": {
+      "type": "number",
+      "description": "The number of satellites used to calculate the position"
+    },
+    "fix_quality": {
+      "description": "The fix quality as reported by an NMEA receiver (0 = invalid, 1 = GPS fix, 2 = DGPS fix)",
+      "allOf": [
+        {
+          "$ref": "https://poseidat.org/schema/enum/gnss-fix-quality.json"
+        }
+      ]
+    },
+    "fix_type": {
+      "description": "The type of GPS fix.",
+      "allOf": [
+        {
+          "$ref": "https://poseidat.org/schema/enum/gnss-fix-type.json"
+        }
+      ]
+    },
+    "hdop": {
+      "type": "number",
+      "description": "Relative accuracy of horizontal position"
+    },
+    "antenna_altitude": {
+      "type": "number",
+      "description": "The number of meters above mean sea level of the receiver antenna"
+    },
+    "geoidal_separation": {
+      "type": "number",
+      "description": "Height of geoid above WGS84 ellipsoid in meters"
+    },
+    "dgps_data_age": {
+      "type": "number",
+      "description": "The age of the DGPS data in seconds"
+    },
+    "dgps_station_id": {
+      "type": "number",
+      "description": "The station id of the used DGPS reference station"
+    }
+  },
+  "required": [
+    "latitude",
+    "longitude"
+  ],
+  "additionalProperties": false,
+  "title": "Position",
+  "description": "A navigational position that can be used in an entry"
+}

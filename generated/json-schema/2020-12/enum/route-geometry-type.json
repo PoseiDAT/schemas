@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poseidat.org/schema/enum/route-geometry-type.json",
+  "type": "string",
+  "enum": [
+    "RHUMB_LINE_LOXODROME",
+    "GREAT_CICRLE_ORTHODROME"
+  ],
+  "title": "Geometry Type",
+  "description": "The types of geometry used to calculate the distance between two positions."
+}

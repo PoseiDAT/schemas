@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/enum/device-type.json",
+  "type": "string",
+  "enum": [
+    "PUMP",
+    "PROCESSOR",
+    "DISPLAY",
+    "HID",
+    "ROUTER",
+    "SWITCH",
+    "MODEM",
+    "SENSOR",
+    "BRAKE",
+    "ACTUATOR",
+    "CABLE",
+    "ENCLOSURE",
+    "CIRCUIT_BREAKER",
+    "ECONOMETER",
+    "SCALE",
+    "RECEIVER",
+    "TRANSMITTER",
+    "TRANSCEIVER"
+  ],
+  "title": "Device type",
+  "description": "The types of supported technical vessel devices."
+}

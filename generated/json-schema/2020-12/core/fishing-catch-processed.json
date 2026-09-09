@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poseidat.org/schema/core/fishing-catch-processed.json",
+  "type": "object",
+  "properties": {
+    "fish_presentation": {
+      "description": "The fish presentation code. Known as PR. Examples: WHL, GUT, FIL",
+      "$ref": "https://poseidat.org/schema/enum/fish-presentation.json"
+    },
+    "fish_state": {
+      "description": "The fish preservation state. NLD: PS. Examples: FRO, ALI, SMO.",
+      "$ref": "https://poseidat.org/schema/enum/fish-state.json"
+    },
+    "package_type": {
+      "description": "The package type code. NLD: TY",
+      "$ref": "https://poseidat.org/schema/enum/fish-package-type.json"
+    },
+    "number_of_packages": {
+      "type": "number",
+      "description": "The number of packages. NLD: NN"
+    },
+    "average_package_weight": {
+      "type": "number",
+      "description": "Average product weight, measured in Kg. NLD: AW"
+    },
+    "package_labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "An array of strings with the package labels for each package"
+    },
+    "fish_freshness": {
+      "description": "The fish freshness category. NLD: FF. Examples: A, E, V",
+      "$ref": "https://poseidat.org/schema/enum/fish-freshness.json"
+    },
+    "conversion_factor": {
+      "type": "number",
+      "description": "The conversion factor (ratio) from dead weight to live weight. Depends on combination of fish species, presentation and state. NLD: CF"
+    }
+  },
+  "required": [
+    "fish_presentation",
+    "fish_state"
+  ],
+  "additionalProperties": {},
+  "title": "Fishing catch processed",
+  "description": "Details of caught fish after it has been processed"
+}

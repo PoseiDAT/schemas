@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poseidat.org/schema/enum/reason-departure.json",
+  "type": "string",
+  "enum": [
+    "FIS",
+    "GUD",
+    "OTH",
+    "SCR",
+    "STE",
+    "TST"
+  ],
+  "title": "Reason departure",
+  "description": "The reason for the vessel to depart from port. Please check the wiki for the meaning of these codes."
+}

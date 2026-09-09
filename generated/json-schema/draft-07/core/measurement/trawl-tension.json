@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://poseidat.org/schema/core/measurement/trawl-tension.json",
+  "type": "object",
+  "properties": {
+    "shooted_length_starboard": {
+      "type": "number",
+      "description": "The shooted length at starboard side"
+    },
+    "shooted_length_port": {
+      "type": "number",
+      "description": "The shooted length at port side"
+    },
+    "shooted_length_center": {
+      "type": "number",
+      "description": "The shooted length at center side"
+    },
+    "traction_starboard": {
+      "type": "number",
+      "description": "The traction at starboard side"
+    },
+    "traction_port": {
+      "type": "number",
+      "description": "The traction at port side"
+    },
+    "traction_center": {
+      "type": "number",
+      "description": "The traction at center side"
+    },
+    "speed_starboard": {
+      "type": "number",
+      "description": "The speed at starboard side"
+    },
+    "speed_port": {
+      "type": "number",
+      "description": "The speed at port side"
+    },
+    "speed_center": {
+      "type": "number",
+      "description": "The speed at center side"
+    },
+    "pressure_starboard": {
+      "type": "number",
+      "description": "The pressure at starboard side"
+    },
+    "pressure_port": {
+      "type": "number",
+      "description": "The pressure at port side"
+    },
+    "pressure_center": {
+      "type": "number",
+      "description": "The pressure at center side"
+    },
+    "drum_rotations_starboard": {
+      "type": "number",
+      "description": "The drum rotations at starboard side"
+    },
+    "drum_rotations_port": {
+      "type": "number",
+      "description": "The drum rotations at port side"
+    },
+    "drum_rotations_center": {
+      "type": "number",
+      "description": "The drum rotations at center side"
+    }
+  },
+  "required": [
+    "shooted_length_starboard",
+    "shooted_length_port",
+    "shooted_length_center",
+    "traction_starboard",
+    "traction_port",
+    "traction_center"
+  ],
+  "additionalProperties": false,
+  "title": "Trawl tension",
+  "description": "A combination of sensor measurements for the trawl tension"
+}

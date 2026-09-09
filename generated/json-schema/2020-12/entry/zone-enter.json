@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poseidat.org/schema/entry/zone-enter.json",
+  "type": "object",
+  "properties": {
+    "journal_id": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$",
+      "description": "The unique identifier of the journal (UUID v4) this entry belongs to"
+    },
+    "entry_id": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$",
+      "description": "The unique identifier for the entry (UUID v4)"
+    },
+    "entry_type": {
+      "type": "string",
+      "const": "zone-enter"
+    },
+    "entry_datetime": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:z|Z|[+-]\\d{2}:\\d{2})$",
+      "format": "date-time",
+      "description": "The date and time the entry was logged in UTC in RFC3339 format"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:z|Z|[+-]\\d{2}:\\d{2})$",
+      "format": "date-time",
+      "description": "The revision timestamp of this entry. Should be the time it was created."
+    },
+    "immutable": {
+      "type": "boolean",
+      "description": "Indicates this entry cannot be replaced with future revisions (default)"
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Free form remarks that are to be added to this journal entry"
+    },
+    "activity_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "zone": {
+      "$ref": "https://poseidat.org/schema/core/fishing-zone.json"
+    },
+    "location": {
+      "$ref": "https://poseidat.org/schema/core/measurement/position.json"
+    },
+    "catch_on_board": {
+      "type": "array",
+      "items": {
+        "$ref": "https://poseidat.org/schema/core/fishing-catch.json"
+      }
+    },
+    "target_species": {
+      "type": "string"
+    },
+    "directed_species": {
+      "type": "string"
+    },
+    "effort_zone": {
+      "$ref": "https://poseidat.org/schema/enum/effort-zone.json"
+    },
+    "trans_zonal_fishing": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "journal_id",
+    "entry_id",
+    "entry_type",
+    "revision",
+    "immutable",
+    "activity_date",
+    "zone",
+    "location"
+  ],
+  "additionalProperties": {},
+  "title": "ZoneEnter",
+  "description": "Enter declaration of a fishing zone"
+}

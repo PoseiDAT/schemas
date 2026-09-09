@@ -19,7 +19,7 @@
     "prepare": "npm run build",
     "rebuild": "npm-run-all clean build:compile",
     "test:jest": "jest --silent --coverage test/",
-    "test": "npm-run-all build:typings test:jest",
+    "test": "npm-run-all generate:json-schema build:typings test:jest",
     "watch": "tsc -b src/ --watch"
   },
   "repository": {
