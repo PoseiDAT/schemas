@@ -51,6 +51,17 @@ import './core/fishing-tow';
 import './core/route-waypoint';
 import './core/vessel-inspection';
 import './core/vessel-section';
+import './entry/arrival';
+import './entry/departure';
+import './entry/device-measurement';
+import './entry/end-of-fishing';
+import './entry/equipment-inventory';
+import './entry/fishing-activity';
+import './entry/route';
+import './entry/vessel-registration';
+import './entry/zone-enter';
+import './entry/zone-exit';
+import './entry';
 
 export { poseidatRegistry, poseidatId, registerSchema } from './registry';
 export { poseidatDateTime, poseidatDate, poseidatUuid } from './formats';
@@ -110,3 +121,55 @@ export { vesselInspectionSchema, type ICoreVesselInspection } from './core/vesse
 export { vesselMasterSchema, type ICoreVesselMaster } from './core/vessel-master';
 export { vesselPartnerSchema, type ICoreVesselPartner } from './core/vessel-partner';
 export { vesselSectionSchema, type ICoreVesselSection } from './core/vessel-section';
+export {
+  arrivalSchema,
+  type IEntryArrival,
+  type IEntryArrivalEntryType,
+} from './entry/arrival';
+export {
+  departureSchema,
+  type IEntryDeparture,
+  type IEntryDepartureEntryType,
+} from './entry/departure';
+export {
+  deviceMeasurementSchema,
+  type IEntryDeviceMeasurement,
+  type IEntryDeviceMeasurementEntryType,
+} from './entry/device-measurement';
+export {
+  endOfFishingSchema,
+  type IEntryEndOfFishing,
+  type IEntryEndOfFishingEntryType,
+} from './entry/end-of-fishing';
+export {
+  equipmentInventorySchema,
+  type IEntryEquipmentInventory,
+  type IEntryEquipmentInventoryEntryType,
+} from './entry/equipment-inventory';
+export {
+  fishingActivitySchema,
+  type IEntryFishingActivity,
+  type IEntryFishingActivityEntryType,
+} from './entry/fishing-activity';
+export {
+  routeSchema,
+  type IEntryRoute,
+  type IEntryRouteEntryType,
+} from './entry/route';
+export {
+  vesselRegistrationSchema,
+  type IEntryVesselRegistration,
+  type IEntryVesselRegistrationEntryType,
+} from './entry/vessel-registration';
+export {
+  zoneEnterSchema,
+  type IEntryZoneEnter,
+  type IEntryZoneEnterEntryType,
+} from './entry/zone-enter';
+export {
+  zoneExitSchema,
+  type IEntryZoneExit,
+  type IEntryZoneExitEntryType,
+} from './entry/zone-exit';
+export { entryUnionSchema, type IEntry } from './entry';
+export { zodBySchemaId } from './by-id';
