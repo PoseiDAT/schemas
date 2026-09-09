@@ -1,5 +1,4 @@
 import * as z from 'zod';
-import { measurementTypeSchema } from '../../enum/measurement-type';
 import { poseidatId, registerSchema } from '../../registry';
 import { fuelConsumptionSchema } from './fuel-consumption';
 import { numericSchema } from './numeric';
@@ -11,30 +10,36 @@ import { subsurfaceSchema } from './subsurface';
 import { trawlTensionSchema } from './trawl-tension';
 import { weatherSchema } from './weather';
 
-const payload = z.strictObject({
-  type: measurementTypeSchema,
-  position: positionSchema.optional(),
-  numeric: numericSchema.optional(),
-  trawl_tension: trawlTensionSchema.optional(),
-  scale: scaleSchema.optional(),
-  fuel_consumption: fuelConsumptionSchema.optional(),
-  spatial_axes: spatialAxesSchema.optional(),
-  subsurface: subsurfaceSchema.optional(),
-  speedlog: speedlogSchema.optional(),
-  weather: weatherSchema.optional(),
-});
+const numericMeasurementType = z.enum([
+  'ACCELERATION',
+  'ANGULAR_VELOCITY',
+  'CURRENT',
+  'DEPTH',
+  'ENERGY_CONSUMPTION',
+  'FORCE',
+  'HUMIDITY',
+  'MAGNETISM',
+  'ONOFF',
+  'POWER',
+  'PRESSURE',
+  'ROUTE',
+  'RPM',
+  'SPEED',
+  'TEMPERATURE',
+  'VOLTAGE',
+]);
 
 export const measurementValueSchema = registerSchema(
-  z.union([
-    payload.required({ type: true, numeric: true }),
-    payload.required({ type: true, position: true }),
-    payload.required({ type: true, trawl_tension: true }),
-    payload.required({ type: true, scale: true }),
-    payload.required({ type: true, fuel_consumption: true }),
-    payload.required({ type: true, spatial_axes: true }),
-    payload.required({ type: true, subsurface: true }),
-    payload.required({ type: true, speedlog: true }),
-    payload.required({ type: true, weather: true }),
+  z.discriminatedUnion('type', [
+    z.strictObject({ type: z.literal('POSITION'), position: positionSchema }),
+    z.strictObject({ type: z.literal('SCALE'), scale: scaleSchema }),
+    z.strictObject({ type: z.literal('FUEL_CONSUMPTION'), fuel_consumption: fuelConsumptionSchema }),
+    z.strictObject({ type: z.literal('TRAWL_TENSION'), trawl_tension: trawlTensionSchema }),
+    z.strictObject({ type: z.literal('SPATIAL_AXES'), spatial_axes: spatialAxesSchema }),
+    z.strictObject({ type: z.literal('SUBSURFACE'), subsurface: subsurfaceSchema }),
+    z.strictObject({ type: z.literal('SPEEDLOG'), speedlog: speedlogSchema }),
+    z.strictObject({ type: z.literal('WEATHER'), weather: weatherSchema }),
+    z.strictObject({ type: numericMeasurementType, numeric: numericSchema }),
   ]),
   {
     id: poseidatId('core/measurement/measurement-value.json'),
