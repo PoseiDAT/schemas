@@ -16,3 +16,6 @@ tsconfig.tsbuildinfo
 poseidat-schemas-*.tgz
 
 docs/superpowers/*
+
+# Multi-dialect JSON Schema emit (CI/CD only; not committed)
+generated
