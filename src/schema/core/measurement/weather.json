@@ -1,63 +1,62 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/measurement/weather.json",
-  "title": "Weather",
-  "description": "A combination of all posible weather station measurements",
+  "type": "object",
   "properties": {
     "air_pressure": {
-      "description": "The air pressure in bar",
-      "type": "number"
+      "type": "number",
+      "description": "The air pressure in bar"
     },
     "air_temperature": {
-      "description": "The air temperature in degrees Celsius",
-      "type": "number"
+      "type": "number",
+      "description": "The air temperature in degrees Celsius"
     },
     "water_temperature": {
-      "description": "The temperature of the surface water in degrees Celsius",
-      "type": "number"
+      "type": "number",
+      "description": "The temperature of the surface water in degrees Celsius"
     },
     "relative_humidity": {
-      "description": "The relative air humidity in percent",
-      "type": "number"
+      "type": "number",
+      "description": "The relative air humidity in percent"
     },
     "absolute_humidity": {
-      "description": "The absolute air humidity in percent",
-      "type": "number"
+      "type": "number",
+      "description": "The absolute air humidity in percent"
     },
     "dew_point": {
-      "description": "The dew point in degrees Celsius",
-      "type": "number"
+      "type": "number",
+      "description": "The dew point in degrees Celsius"
     },
     "wind_dir_true": {
-      "description": "The wind direction relative to the true north in degrees",
-      "type": "number"
+      "type": "number",
+      "description": "The wind direction relative to the true north in degrees"
     },
     "wind_dir_magnetic": {
-      "description": "The wind direction relative to magnetic north in degrees",
-      "type": "number"
+      "type": "number",
+      "description": "The wind direction relative to magnetic north in degrees"
     },
     "wind_speed": {
-      "description": "The wind speed in meters per second",
-      "type": "number"
+      "type": "number",
+      "description": "The wind speed in meters per second"
     },
     "relative_wind_chill_temp": {
-      "description": "The relative wind chill temperature in degrees Celsius",
-      "type": "number"
+      "type": "number",
+      "description": "The relative wind chill temperature in degrees Celsius"
     },
     "theoretical_wind_chill_temp": {
-      "description": "The theoretical wind chill temperature in degrees Celsius",
-      "type": "number"
+      "type": "number",
+      "description": "The theoretical wind chill temperature in degrees Celsius"
     },
     "rain_intensity": {
-      "description": "The rain intensity in l/m2 per hour",
-      "type": "number"
+      "type": "number",
+      "description": "The rain intensity in l/m2 per hour"
     },
     "wave_height": {
-      "description": "The wave height in meters",
-      "type": "number"
+      "type": "number",
+      "description": "The wave height in meters"
     }
   },
-  "required": [],
-  "type": "object",
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "Weather",
+  "description": "A combination of all posible weather station measurements"
 }

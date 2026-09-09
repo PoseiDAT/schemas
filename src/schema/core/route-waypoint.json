@@ -1,88 +1,87 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/route-waypoint.json",
-  "description": "A waypoint which is part of a route.",
-  "title": "Route waypoint",
+  "type": "object",
   "properties": {
     "id": {
-      "description": "The id of the waypoint within a trip.",
-      "type": "number"
+      "type": "number",
+      "description": "The id of the waypoint within a trip."
     },
     "name": {
-      "description": "The name of the waypoint.",
-      "type": "string"
+      "type": "string",
+      "description": "The name of the waypoint."
     },
     "latitude": {
-      "description": "The latitude of the waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The latitude of the waypoint."
     },
     "longitude": {
-      "description": "The longitude of the waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The longitude of the waypoint."
     },
     "turn_radius": {
-      "description": "The turn radius of the waypoint in nautical miles.",
-      "type": "number"
+      "type": "number",
+      "description": "The turn radius of the waypoint in nautical miles."
     },
     "portside_xtd": {
-      "description": "The Cross-Track Distance at the port side in nautical miles on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The Cross-Track Distance at the port side in nautical miles on the route leg between the previous and this waypoint."
     },
     "starboard_xtd": {
-      "description": "The Cross-Track Distance at the starboard side in nautical miles on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The Cross-Track Distance at the starboard side in nautical miles on the route leg between the previous and this waypoint."
     },
     "safety_contour": {
-      "description": "The safety contour in metres on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The safety contour in metres on the route leg between the previous and this waypoint."
     },
     "safety_depth": {
-      "description": "The safety depth in metres on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The safety depth in metres on the route leg between the previous and this waypoint."
     },
     "geometry_type": {
       "description": "The geometry type of the route leg between the previous and this waypoint.",
       "$ref": "https://poseidat.org/schema/enum/route-geometry-type.json"
     },
     "speed_min": {
-      "description": "The lowest cruising speed in knots on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The lowest cruising speed in knots on the route leg between the previous and this waypoint."
     },
     "speed_max": {
-      "description": "The highest allowed cruising speed in knots on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The highest allowed cruising speed in knots on the route leg between the previous and this waypoint."
     },
     "draught_forward": {
-      "description": "The static draught forward (bow) in metres on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The static draught forward (bow) in metres on the route leg between the previous and this waypoint."
     },
     "draught_aft": {
-      "description": "The static draught aft (stern) in metres on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The static draught aft (stern) in metres on the route leg between the previous and this waypoint."
     },
     "static_ukc": {
-      "description": "The minimum static Under Keel Clearance on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The minimum static Under Keel Clearance on the route leg between the previous and this waypoint."
     },
     "dynamic_ukc": {
-      "description": "The minimum dynamic Under Keel Clearance on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The minimum dynamic Under Keel Clearance on the route leg between the previous and this waypoint."
     },
     "masthead_height": {
-      "description": "The height of the masthead on the route leg between the previous and this waypoint.",
-      "type": "number"
+      "type": "number",
+      "description": "The height of the masthead on the route leg between the previous and this waypoint."
     },
     "etd": {
-      "description": "The Estimated Time of Departure from this waypoint.",
       "type": "string",
       "format": "date-time",
-      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:[0-5]\\d(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "description": "The Estimated Time of Departure from this waypoint."
     },
     "eta": {
-      "description": "The Estimated Time of Arrival at this waypoint.",
       "type": "string",
       "format": "date-time",
-      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:[0-5]\\d(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "description": "The Estimated Time of Arrival at this waypoint."
     }
   },
   "required": [
@@ -90,5 +89,7 @@
     "latitude",
     "longitude"
   ],
-  "type": "object"
+  "additionalProperties": {},
+  "title": "Route waypoint",
+  "description": "A waypoint which is part of a route."
 }

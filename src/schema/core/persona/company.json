@@ -1,17 +1,16 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/persona/company.json",
-  "title": "Company",
-  "description": "The details of a (commercial) company",
+  "type": "object",
   "properties": {
     "company_id": {
-      "description": "The unique identifier for the company (UUID v4)",
       "type": "string",
-      "format": "uuid"
+      "format": "uuid",
+      "description": "The unique identifier for the company (UUID v4)"
     },
     "name": {
-      "description": "The name of the company",
-      "type": "string"
+      "type": "string",
+      "description": "The name of the company"
     },
     "address": {
       "description": "The address of the company",
@@ -26,6 +25,7 @@
     "company_id",
     "name"
   ],
-  "type": "object",
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "Company",
+  "description": "The details of a (commercial) company"
 }

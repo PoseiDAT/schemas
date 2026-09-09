@@ -1,32 +1,31 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/vessel-partner.json",
-  "description": "Fishing vessel details for partnered fishing",
-  "title": "Vessel partner",
+  "type": "object",
   "properties": {
     "hull_number": {
-      "description": "The external markings of the vessel. NLD2+: XR, GBR: PXR",
-      "type": "string"
+      "type": "string",
+      "description": "The external markings of the vessel. NLD2+: XR, GBR: PXR"
     },
     "rss": {
-      "description": "The RSS identification code for the vessel. GBR: GBRPRSSNO",
-      "type": "string"
+      "type": "string",
+      "description": "The RSS identification code for the vessel. GBR: GBRPRSSNO"
     },
     "cfr": {
-      "description": "The code of federal regulation for the vessel. GBR: PIR",
-      "type": "string"
+      "type": "string",
+      "description": "The code of federal regulation for the vessel. GBR: PIR"
     },
     "call_sign": {
-      "description": "The international radio call sign for the vessel. GBR: PRC",
-      "type": "string"
+      "type": "string",
+      "description": "The international radio call sign for the vessel. GBR: PRC"
     },
     "flag_state": {
-      "description": "Flag state of vessel registration. NLD2+: FS, GBR: PFS",
-      "type": "string"
+      "type": "string",
+      "description": "Flag state of vessel registration. NLD2+: FS, GBR: PFS"
     },
     "name": {
-      "description": "The name of the vessel. NLD3+: NA, GBR: PNA",
-      "type": "string"
+      "type": "string",
+      "description": "The name of the vessel. NLD3+: NA, GBR: PNA"
     },
     "master": {
       "description": "The vessel master (captain)",
@@ -37,5 +36,7 @@
     "hull_number",
     "flag_state"
   ],
-  "type": "object"
+  "additionalProperties": {},
+  "title": "Vessel partner",
+  "description": "Fishing vessel details for partnered fishing"
 }

@@ -1,28 +1,29 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/fishing-gear.json",
-  "description": "Fishing gear details",
-  "title": "Fishing gear",
+  "type": "object",
   "properties": {
     "code": {
-      "description": "Gear code corresponding to the FAO\u2019s International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE",
+      "description": "Gear code corresponding to the FAO’s International Standard Statistical Classification of the Fishing Gear. NLD: GE, GBR: GE",
       "$ref": "https://poseidat.org/schema/enum/fishing-gear-type.json"
     },
     "mesh_size": {
-      "description": "The fishing gear mesh size measured in millimeters. NLD: ME, GBR: ME",
-      "type": "number"
+      "type": "number",
+      "description": "The fishing gear mesh size measured in millimeters. NLD: ME, GBR: ME"
     },
     "amount": {
-      "description": "The number of fishing gear items. NLD: NN, GBR: GBRGNL",
-      "type": "number"
+      "type": "number",
+      "description": "The number of fishing gear items. NLD: NN, GBR: GBRGNL"
     },
     "length": {
-      "description": "The total length of the fishing gear in meters. NLD: TL, GBR: GBRGNT",
-      "type": "number"
+      "type": "number",
+      "description": "The total length of the fishing gear in meters. NLD: TL, GBR: GBRGNT"
     }
   },
   "required": [
     "code"
   ],
-  "type": "object"
+  "additionalProperties": {},
+  "title": "Fishing gear",
+  "description": "Fishing gear details"
 }

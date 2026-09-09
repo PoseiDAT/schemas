@@ -1,8 +1,7 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/equipment/device.json",
-  "title": "Device",
-  "description": "A device which is a part of a piece of equipment installed on a vessel",
+  "type": "object",
   "properties": {
     "device_id": {
       "type": "string",
@@ -10,24 +9,24 @@
       "description": "The unique identifier for the device (UUID v4)"
     },
     "name": {
-      "description": "Name of the device",
-      "type": "string"
+      "type": "string",
+      "description": "Name of the device"
     },
     "type": {
       "description": "The type of device",
       "$ref": "https://poseidat.org/schema/enum/device-type.json"
     },
     "brand": {
-      "description": "The brand of the device",
-      "type": "string"
+      "type": "string",
+      "description": "The brand of the device"
     },
     "product_no": {
-      "description": "The product number of the device",
-      "type": "string"
+      "type": "string",
+      "description": "The product number of the device"
     },
     "serial_no": {
-      "description": "The serial number of the device",
-      "type": "string"
+      "type": "string",
+      "description": "The serial number of the device"
     },
     "supplier": {
       "description": "The company which supplied the device",
@@ -47,6 +46,7 @@
     "name",
     "type"
   ],
-  "type": "object",
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "Device",
+  "description": "A device which is a part of a piece of equipment installed on a vessel"
 }

@@ -1,9 +1,7 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/entry.json",
-  "title": "Entry",
-  "description": "Any journal entry. Exactly one of the known entry types must match, discriminated by entry_type.",
-  "oneOf": [
+  "anyOf": [
     {
       "$ref": "https://poseidat.org/schema/entry/arrival.json"
     },
@@ -34,5 +32,7 @@
     {
       "$ref": "https://poseidat.org/schema/entry/zone-exit.json"
     }
-  ]
+  ],
+  "title": "Entry",
+  "description": "Any journal entry. Exactly one of the known entry types must match, discriminated by entry_type."
 }

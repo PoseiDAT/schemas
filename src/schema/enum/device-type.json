@@ -1,8 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/enum/device-type.json",
-  "description": "The types of supported technical vessel devices.",
-  "title": "Device type",
   "type": "string",
   "enum": [
     "PUMP",
@@ -23,5 +21,7 @@
     "RECEIVER",
     "TRANSMITTER",
     "TRANSCEIVER"
-  ]
+  ],
+  "title": "Device type",
+  "description": "The types of supported technical vessel devices."
 }

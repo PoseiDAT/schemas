@@ -1,8 +1,7 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/journal.json",
-  "title": "Journal",
-  "description": "A trip journal",
+  "type": "object",
   "properties": {
     "journal_id": {
       "type": "string",
@@ -18,6 +17,7 @@
     "journal_id",
     "vessel"
   ],
-  "type": "object",
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "Journal",
+  "description": "A trip journal"
 }

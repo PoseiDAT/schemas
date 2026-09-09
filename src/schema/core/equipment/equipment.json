@@ -1,17 +1,16 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/equipment/equipment.json",
-  "title": "Equipment",
-  "description": "A piece of equipment installed on a vessel. Equipment is composed out of different devices",
+  "type": "object",
   "properties": {
     "equipment_id": {
-      "description": "The unique identifier for the equipment (UUID v4)",
       "type": "string",
-      "format": "uuid"
+      "format": "uuid",
+      "description": "The unique identifier for the equipment (UUID v4)"
     },
     "name": {
-      "description": "Name of the equipment",
-      "type": "string"
+      "type": "string",
+      "description": "Name of the equipment"
     },
     "type": {
       "description": "The type of equipment",
@@ -30,13 +29,13 @@
       "$ref": "https://poseidat.org/schema/core/persona/company.json"
     },
     "devices": {
-      "description": "The collection of devices of which this equipment is composed",
-      "type": "array",
       "minItems": 2,
-      "title": "Devices",
+      "type": "array",
       "items": {
         "$ref": "https://poseidat.org/schema/core/equipment/device.json"
-      }
+      },
+      "title": "Devices",
+      "description": "The collection of devices of which this equipment is composed"
     }
   },
   "required": [
@@ -45,6 +44,7 @@
     "type",
     "devices"
   ],
-  "type": "object",
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "Equipment",
+  "description": "A piece of equipment installed on a vessel. Equipment is composed out of different devices"
 }

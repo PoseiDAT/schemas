@@ -1,20 +1,19 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/measurement/spatial-axes.json",
-  "title": "Spatial axes",
-  "description": "The spatial axes for a given sensor",
+  "type": "object",
   "properties": {
     "x": {
-      "description": "The easting coordinate range",
-      "type": "number"
+      "type": "number",
+      "description": "The easting coordinate range"
     },
     "y": {
-      "description": "The northing coordinate range",
-      "type": "number"
+      "type": "number",
+      "description": "The northing coordinate range"
     },
     "z": {
-      "description": "The elevation of the coordinate range",
-      "type": "number"
+      "type": "number",
+      "description": "The elevation of the coordinate range"
     }
   },
   "required": [
@@ -22,6 +21,7 @@
     "y",
     "z"
   ],
-  "type": "object",
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "Spatial axes",
+  "description": "The spatial axes for a given sensor"
 }

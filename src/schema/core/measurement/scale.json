@@ -1,42 +1,40 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/measurement/scale.json",
-  "title": "Scale",
-  "description": "A scale measurement that can be used in an entry",
+  "type": "object",
   "properties": {
     "haul_date_start": {
-      "description": "The datetime the haul started in UTC",
       "type": "string",
       "format": "date-time",
-      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:[0-5]\\d(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "description": "The datetime the haul started in UTC"
     },
     "haul_date_end": {
-      "description": "The datetime the haul ended in UTC",
       "type": "string",
       "format": "date-time",
-      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:[0-5]\\d(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "description": "The datetime the haul ended in UTC"
     },
     "haul_number": {
-      "description": "The number of the haul the product was caught in",
-      "type": "number"
+      "type": "number",
+      "description": "The number of the haul the product was caught in"
     },
     "weight": {
-      "description": "The weight of the product",
-      "type": "number"
+      "type": "number",
+      "description": "The weight of the product"
     },
     "category": {
       "description": "The category of the scaled product",
       "$ref": "https://poseidat.org/schema/enum/scale-category.json"
     },
     "product": {
-      "description": "The type of the product, e.g. a type of fish",
       "type": "string",
-      "maxLength": 3,
       "minLength": 3,
-      "pattern": "^([A-Z]{3})$"
+      "maxLength": 3,
+      "pattern": "^([A-Z]{3})$",
+      "description": "The type of the product, e.g. a type of fish"
     },
     "processed": {
-      "description": "Details of caught fish after it has been processed",
       "$ref": "https://poseidat.org/schema/core/fishing-catch-processed.json"
     }
   },
@@ -46,6 +44,7 @@
     "category",
     "product"
   ],
-  "type": "object",
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "Scale",
+  "description": "A scale measurement that can be used in an entry"
 }

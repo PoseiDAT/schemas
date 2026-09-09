@@ -1,8 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/enum/fish-freshness.json",
-  "description": "The freshness indication for processed fish species. Please check the wiki for the meaning of these codes.",
-  "title": "Fish freshness",
   "type": "string",
   "enum": [
     "A",
@@ -10,5 +8,7 @@
     "E",
     "SO",
     "V"
-  ]
+  ],
+  "title": "Fish freshness",
+  "description": "The freshness indication for processed fish species. Please check the wiki for the meaning of these codes."
 }

@@ -1,24 +1,25 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/vessel-master.json",
-  "description": "The vessel master details. Usually one per entry but can differ in a single trip",
-  "title": "Vessel master",
+  "type": "object",
   "properties": {
     "name": {
-      "description": "The name of the vessel master",
-      "type": "string"
+      "type": "string",
+      "description": "The name of the vessel master"
     },
     "address": {
-      "description": "The (abbreviated) address of the vessel master. Required in all but NLD",
-      "type": "string"
+      "type": "string",
+      "description": "The (abbreviated) address of the vessel master. Required in all but NLD"
     },
     "identifier": {
-      "description": "Can be used to store any (external) identifier of the master",
-      "type": "string"
+      "type": "string",
+      "description": "Can be used to store any (external) identifier of the master"
     }
   },
-  "type": "object",
   "required": [
     "name"
-  ]
+  ],
+  "additionalProperties": {},
+  "title": "Vessel master",
+  "description": "The vessel master details. Usually one per entry but can differ in a single trip"
 }

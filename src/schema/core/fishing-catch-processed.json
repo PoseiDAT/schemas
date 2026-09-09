@@ -1,8 +1,7 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/fishing-catch-processed.json",
-  "description": "Details of caught fish after it has been processed",
-  "title": "Fishing catch processed",
+  "type": "object",
   "properties": {
     "fish_presentation": {
       "description": "The fish presentation code. Known as PR. Examples: WHL, GUT, FIL",
@@ -17,32 +16,34 @@
       "$ref": "https://poseidat.org/schema/enum/fish-package-type.json"
     },
     "number_of_packages": {
-      "description": "The number of packages. NLD: NN",
-      "type": "number"
+      "type": "number",
+      "description": "The number of packages. NLD: NN"
     },
     "average_package_weight": {
-      "description": "Average product weight, measured in Kg. NLD: AW",
-      "type": "number"
+      "type": "number",
+      "description": "Average product weight, measured in Kg. NLD: AW"
     },
     "package_labels": {
-      "description": "An array of strings with the package labels for each package",
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "description": "An array of strings with the package labels for each package"
     },
     "fish_freshness": {
       "description": "The fish freshness category. NLD: FF. Examples: A, E, V",
       "$ref": "https://poseidat.org/schema/enum/fish-freshness.json"
     },
     "conversion_factor": {
-      "description": "The conversion factor (ratio) from dead weight to live weight. Depends on combination of fish species, presentation and state. NLD: CF",
-      "type": "number"
+      "type": "number",
+      "description": "The conversion factor (ratio) from dead weight to live weight. Depends on combination of fish species, presentation and state. NLD: CF"
     }
   },
   "required": [
     "fish_presentation",
     "fish_state"
   ],
-  "type": "object"
+  "additionalProperties": {},
+  "title": "Fishing catch processed",
+  "description": "Details of caught fish after it has been processed"
 }

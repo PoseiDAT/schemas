@@ -1,25 +1,25 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/measurement/subsurface.json",
-  "title": "Subsurface measurements",
-  "description": "A collection of subsurface samples measurements",
+  "type": "object",
   "properties": {
     "samples": {
-      "description": "The collection of subsurface measurement samples",
-      "title": "Subsurface measurement samples",
+      "type": "array",
       "items": {
         "$ref": "https://poseidat.org/schema/core/measurement/subsurface-sample.json"
       },
-      "type": "array"
+      "title": "Subsurface measurement samples",
+      "description": "The collection of subsurface measurement samples"
     },
     "metadata": {
-      "description": "The sensors technical metadata",
-      "type": "string"
+      "type": "string",
+      "description": "The sensors technical metadata"
     }
   },
   "required": [
     "samples"
   ],
-  "type": "object",
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "Subsurface measurements",
+  "description": "A collection of subsurface samples measurements"
 }

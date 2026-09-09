@@ -1,38 +1,37 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/measurement/subsurface-sample.json",
-  "title": "Subsurface sample value",
-  "description": "A subsurface sample measurement",
+  "type": "object",
   "properties": {
     "conductivity": {
-      "description": "The conductivity of the sample measurement in Siemens per meter",
-      "type": "number"
+      "type": "number",
+      "description": "The conductivity of the sample measurement in Siemens per meter"
     },
     "depth": {
-      "description": "The depth of the sample measurement in meters",
-      "type": "number"
+      "type": "number",
+      "description": "The depth of the sample measurement in meters"
     },
     "latitude": {
-      "description": "The latitude of the sample measurement",
-      "type": "number"
+      "type": "number",
+      "description": "The latitude of the sample measurement"
     },
     "longitude": {
-      "description": "The longitude of the sample measurement",
-      "type": "number"
+      "type": "number",
+      "description": "The longitude of the sample measurement"
     },
     "salinity": {
-      "description": "The salinity of the sample measurement in Practical Salinity Units",
-      "type": "number"
+      "type": "number",
+      "description": "The salinity of the sample measurement in Practical Salinity Units"
     },
     "temp": {
-      "description": "The temperature of the sample measurement in degrees celsius",
-      "type": "number"
+      "type": "number",
+      "description": "The temperature of the sample measurement in degrees celsius"
     },
     "time": {
-      "description": "The date and time of the sample measurement as an RFC string",
-      "format": "date-time",
       "type": "string",
-      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:[0-5]\\d(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "description": "The date and time of the sample measurement as an RFC string"
     }
   },
   "required": [
@@ -44,6 +43,7 @@
     "temp",
     "time"
   ],
-  "type": "object",
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "Subsurface sample value",
+  "description": "A subsurface sample measurement"
 }

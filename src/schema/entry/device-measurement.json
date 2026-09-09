@@ -1,36 +1,59 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/entry/device-measurement.json",
-  "title": "Device measurement",
-  "description": "A device measurement journal entry",
+  "type": "object",
   "properties": {
-    "entry_type": {
-      "description": "The journal entry type identifier",
+    "journal_id": {
       "type": "string",
-      "enum": [
-        "device-measurement"
-      ],
-      "default": "device-measurement"
+      "format": "uuid",
+      "description": "The unique identifier of the journal (UUID v4) this entry belongs to"
+    },
+    "entry_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The unique identifier for the entry (UUID v4)"
+    },
+    "entry_type": {
+      "type": "string",
+      "const": "device-measurement"
+    },
+    "entry_datetime": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:[0-5]\\d(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "description": "The date and time the entry was logged in UTC in RFC3339 format"
+    },
+    "revision": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:[0-5]\\d(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "description": "The revision timestamp of this entry. Should be the time it was created."
+    },
+    "immutable": {
+      "type": "boolean",
+      "description": "Indicates this entry cannot be replaced with future revisions (default)"
+    },
+    "remarks": {
+      "type": "string",
+      "description": "Free form remarks that are to be added to this journal entry"
     },
     "device_id": {
-      "type": "string",
-      "description": "The unique identifier for the device"
+      "type": "string"
     },
     "value": {
-      "description": "The registered measurement for the device",
       "$ref": "https://poseidat.org/schema/core/measurement/measurement-value.json"
     }
   },
   "required": [
+    "journal_id",
+    "entry_id",
     "entry_type",
+    "revision",
+    "immutable",
     "device_id",
     "value"
   ],
-  "allOf": [
-    {
-      "$ref": "https://poseidat.org/schema/core/base-entry.json"
-    }
-  ],
-  "type": "object",
-  "additionalProperties": true
+  "additionalProperties": {},
+  "title": "Device measurement",
+  "description": "A device measurement journal entry"
 }

@@ -1,22 +1,23 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/port.json",
-  "description": "Fishing port details",
-  "title": "Port",
+  "type": "object",
   "properties": {
     "code": {
-      "description": "The international port code. Format is 2 letter country code and 3 letter port code. Example: NLURK, BEANR, GBHUL",
       "type": "string",
+      "minLength": 5,
       "maxLength": 5,
-      "minLength": 5
+      "description": "The international port code. Format is 2 letter country code and 3 letter port code. Example: NLURK, BEANR, GBHUL"
     },
     "location": {
-      "$ref": "https://poseidat.org/schema/core/measurement/position.json",
-      "description": "The geographical location of the port"
+      "description": "The geographical location of the port",
+      "$ref": "https://poseidat.org/schema/core/measurement/position.json"
     }
   },
   "required": [
     "code"
   ],
-  "type": "object"
+  "additionalProperties": {},
+  "title": "Port",
+  "description": "Fishing port details"
 }

@@ -1,32 +1,31 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/address.json",
-  "title": "Address",
-  "description": "A street address",
+  "type": "object",
   "properties": {
     "street_address": {
-      "description": "The street and number",
-      "type": "string"
+      "type": "string",
+      "description": "The street and number"
     },
     "street_address_extension": {
-      "description": "An optional street and number extension",
-      "type": "string"
+      "type": "string",
+      "description": "An optional street and number extension"
     },
     "postal_code": {
-      "description": "The postal or ZIP code of the city",
-      "type": "string"
+      "type": "string",
+      "description": "The postal or ZIP code of the city"
     },
     "city": {
-      "description": "The city or town",
-      "type": "string"
+      "type": "string",
+      "description": "The city or town"
     },
     "region": {
-      "description": "The region or province",
-      "type": "string"
+      "type": "string",
+      "description": "The region or province"
     },
     "country": {
-      "description": "The country",
-      "type": "string"
+      "type": "string",
+      "description": "The country"
     }
   },
   "required": [
@@ -35,6 +34,7 @@
     "city",
     "country"
   ],
-  "type": "object",
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "Address",
+  "description": "A street address"
 }

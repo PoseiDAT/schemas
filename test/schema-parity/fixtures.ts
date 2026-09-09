@@ -366,6 +366,12 @@ const invalidCases: SchemaFixture[] = [
     valid: false,
   },
   {
+    name: 'arrival / leap second activity_date',
+    schemaId: SchemaId.arrival,
+    data: { ...clone(validArrival), activity_date: '2021-01-01T23:59:60Z' },
+    valid: false,
+  },
+  {
     name: 'arrival / catch with weight and number_of_fish',
     schemaId: SchemaId.arrival,
     data: {

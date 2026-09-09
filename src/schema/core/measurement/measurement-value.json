@@ -1,88 +1,148 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://poseidat.org/schema/core/measurement/measurement-value.json",
-  "title": "Measurement value",
-  "description": "The value of a certain type of measurement",
-  "type": "object",
   "oneOf": [
     {
       "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "position"],
-      "properties": {
-        "type": { "const": "POSITION" },
-        "position": { "$ref": "https://poseidat.org/schema/core/measurement/position.json" }
-      }
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "scale"],
-      "properties": {
-        "type": { "const": "SCALE" },
-        "scale": { "$ref": "https://poseidat.org/schema/core/measurement/scale.json" }
-      }
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "fuel_consumption"],
-      "properties": {
-        "type": { "const": "FUEL_CONSUMPTION" },
-        "fuel_consumption": { "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json" }
-      }
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "trawl_tension"],
-      "properties": {
-        "type": { "const": "TRAWL_TENSION" },
-        "trawl_tension": { "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json" }
-      }
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "spatial_axes"],
-      "properties": {
-        "type": { "const": "SPATIAL_AXES" },
-        "spatial_axes": { "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json" }
-      }
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "subsurface"],
-      "properties": {
-        "type": { "const": "SUBSURFACE" },
-        "subsurface": { "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json" }
-      }
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "speedlog"],
-      "properties": {
-        "type": { "const": "SPEEDLOG" },
-        "speedlog": { "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json" }
-      }
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "weather"],
-      "properties": {
-        "type": { "const": "WEATHER" },
-        "weather": { "$ref": "https://poseidat.org/schema/core/measurement/weather.json" }
-      }
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "numeric"],
       "properties": {
         "type": {
+          "type": "string",
+          "const": "POSITION"
+        },
+        "position": {
+          "$ref": "https://poseidat.org/schema/core/measurement/position.json"
+        }
+      },
+      "required": [
+        "type",
+        "position"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "SCALE"
+        },
+        "scale": {
+          "$ref": "https://poseidat.org/schema/core/measurement/scale.json"
+        }
+      },
+      "required": [
+        "type",
+        "scale"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "FUEL_CONSUMPTION"
+        },
+        "fuel_consumption": {
+          "$ref": "https://poseidat.org/schema/core/measurement/fuel-consumption.json"
+        }
+      },
+      "required": [
+        "type",
+        "fuel_consumption"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "TRAWL_TENSION"
+        },
+        "trawl_tension": {
+          "$ref": "https://poseidat.org/schema/core/measurement/trawl-tension.json"
+        }
+      },
+      "required": [
+        "type",
+        "trawl_tension"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "SPATIAL_AXES"
+        },
+        "spatial_axes": {
+          "$ref": "https://poseidat.org/schema/core/measurement/spatial-axes.json"
+        }
+      },
+      "required": [
+        "type",
+        "spatial_axes"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "SUBSURFACE"
+        },
+        "subsurface": {
+          "$ref": "https://poseidat.org/schema/core/measurement/subsurface.json"
+        }
+      },
+      "required": [
+        "type",
+        "subsurface"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "SPEEDLOG"
+        },
+        "speedlog": {
+          "$ref": "https://poseidat.org/schema/core/measurement/speedlog.json"
+        }
+      },
+      "required": [
+        "type",
+        "speedlog"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "WEATHER"
+        },
+        "weather": {
+          "$ref": "https://poseidat.org/schema/core/measurement/weather.json"
+        }
+      },
+      "required": [
+        "type",
+        "weather"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
           "enum": [
             "ACCELERATION",
             "ANGULAR_VELOCITY",
@@ -102,8 +162,17 @@
             "VOLTAGE"
           ]
         },
-        "numeric": { "$ref": "https://poseidat.org/schema/core/measurement/numeric.json" }
-      }
+        "numeric": {
+          "$ref": "https://poseidat.org/schema/core/measurement/numeric.json"
+        }
+      },
+      "required": [
+        "type",
+        "numeric"
+      ],
+      "additionalProperties": false
     }
-  ]
+  ],
+  "title": "Measurement value",
+  "description": "The value of a certain type of measurement"
 }
