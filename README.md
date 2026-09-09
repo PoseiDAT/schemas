@@ -153,7 +153,7 @@ git clone git@github.com:PoseiDAT/schemas.git
 npm install
 ```
 
-Author Zod modules under `src/zod/`, mirroring the JSON under `src/schema/`. `I*` TypeScript types are inferred from those Zod schemas. Run `npm run generate:json-schema` to emit draft-07 and 2020-12 trees under `generated/json-schema/`. `npm test` regenerates those trees and fails if the committed copies are stale.
+Author Zod modules under `src/validators/`. `I*` TypeScript types are inferred from those Zod schemas. `src/schema` is generated JSON Schema **2020-12** from Zod — do not hand-edit it. `npm test` regenerates `src/schema` and fails if the committed copy is stale. After clone, `npm install` does not build `lib/`; run `npm run build` when you need the compiled package or local `lib/schema`. `npm run generate:json-schema` emits draft-07 and 2020-12 trees under `generated/json-schema/` for CI/CD release artefacts (gitignored; not part of the local test gate).
 
 Please be liberal in adding unit tests in the `test` folder for your schemas and data validation.
 All the code and unit tests are written in TypeScript targeted for NodeJS.
@@ -167,7 +167,7 @@ Documentation is generated on each build and hosted on [github pages](https://po
 
 `validateSchema({ object, schema })` takes a Zod schema, not a JSON Schema document. `zod` is a runtime dependency. TypeScript `I*` types are inferred from those Zod schemas.
 
-JSON Schema consumers should bring their own validator (for example AJV) and load schemas from the published `lib/schema` tree, which is still the hand-authored draft-07 copy.
+JSON Schema consumers should bring their own validator (for example AJV with the 2020-12 dialect) and load schemas from the published `lib/schema` tree (JSON Schema 2020-12 generated from Zod).
 
 ## Breaking changes (0.1.0)
 
@@ -176,6 +176,14 @@ Validation is the intersection of AJV and Zod. These inputs that used to pass no
 - Date-times must use uppercase `T` and either uppercase `Z` or an offset with a colon (`2021-01-01T01:00:00Z`, `2021-01-01T01:00:00+01:00`). Lowercase `z` or `t`, offsets like `+0100`, and impossible calendar dates are invalid.
 - `measurement-value` `type` must match the payload key (`POSITION` with `position`, `SCALE` with `scale`, and so on). Types without a dedicated object use `numeric`. `{ "type": "POSITION", "numeric": { "value": 1 } }` is invalid.
 - `fishing-catch` must have exactly one of `weight` or `number_of_fish`, not both.
+
+## Breaking changes (0.2.0)
+
+Package JSON Schema publish path (documenting the upcoming 0.2.0 line; package version may still read 0.1.0 until release tagging):
+
+- Published `lib/schema` is JSON Schema **2020-12** generated from Zod, not hand-authored draft-07. Loaders that only understand draft-07 meta-schemas must upgrade.
+- Entry schema documents no longer compose via `allOf` base-entry; base fields are inlined in the emitted entry schemas. Boolean validation for complete entries remains, but schema structure and docs pages change.
+- Leap-second timestamps such as `2021-01-01T23:59:60Z` are invalid in both Zod and JSON Schema.
 
 ## Installation
 
